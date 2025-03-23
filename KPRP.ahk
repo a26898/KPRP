@@ -546,7 +546,6 @@ Gui, 15:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\Progra
 
 
 Gui, 15:Add, Picture, x10 y40 w128 w96  +BackgroundTrans gLaziness7, C:\ProgramData\KPRP\KPRP-main\Sobes.png
-Gui, 15:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness25, C:\ProgramData\KPRP\KPRP-main\Prizyvpng.png
 Gui, 15:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine81, C:\ProgramData\KPRP\KPRP-main\Cards.png
 Gui, 15:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine79, C:\ProgramData\KPRP\KPRP-main\Oath.png
 Gui, 15:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine33, C:\ProgramData\KPRP\KPRP-main\Feelings.png
@@ -570,7 +569,7 @@ Gui, 15:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\Progra
 
 
 Gui, 15:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\Call.png
-Gui, 15:Add, Picture, x130 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
+Gui, 15:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
 
 
 Gui, 15:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
@@ -10759,13 +10758,13 @@ Gui, 7:Add, Picture, x0 y10 w475   h672 +BackgroundTrans, C:\ProgramData\KPRP\KP
 Gui, 7:Add, Picture, x470 y600 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 7:Font, S15 C%Tsvet_1% Bold, Consolas
-Gui, 7:Add, ComboBox, x90 y40  w295  vJWI, %JWI%||Интерн|Фельдшер|Лаборант|Врач-стажер|Врач-участковый|Врач-терапевт|Врач-хирург|Заведующая Отделением|Заведующий Отделением|Заместитель Главного Врача|Главный врач|Студент|Ректор ГМУ|Проректор по учебной работе|Проректор по административной работе|Декан факультетa|Преподаватель|Cтудент|Командир ГВМУ|Заместитель командира ГВМУ|Военный хирург|Военный терапевт|Военный фельдшер 
-Gui, 7:Add, Edit, x90 y130 w295 vTAG, %TAG%
-Gui, 7:Add, Edit, x90 y230 w295 vName, %Name%
-Gui, 7:Add, Edit, x90 y320 w295 vSurname, %Surname%
-Gui, 7:Add, Edit, x90 y420 w295 vMiddle_Name, %Middle_Name%
-Gui, 7:Add, DropDownList, x90 y510 w295 vBol_ro, %Bol_ro%||ОКБ-М|ЦГБ-Н|ЦГБ-П|ГМУ
-Gui, 7:Add, DropDownList, x90 y610  w295 vpol,%pol%||Мужской|Женский
+Gui, 7:Add, ComboBox, x90 y40  w425  vJWI, %JWI%||Интерн|Фельдшер|Лаборант|Врач-стажер|Врач-участковый|Врач-терапевт|Врач-хирург|Заведующая Отделением|Заведующий Отделением|Заместитель Главного Врача|Главный врач|Ректор ГМУ|Проректор по учебной работе|Проректор по административной работе|Преподаватель|Cтудент
+Gui, 7:Add, ComboBox, x90 y130 w425 vTAG, %TAG%||ГМУ|МЦО|ЗГВ|ГВ
+Gui, 7:Add, Edit, x90 y230 w425 vName, %Name%
+Gui, 7:Add, Edit, x90 y320 w425 vSurname, %Surname%
+Gui, 7:Add, Edit, x90 y420 w425 vMiddle_Name, %Middle_Name%
+Gui, 7:Add, DropDownList, x90 y510 w425 vBol_ro, %Bol_ro%||ОКБ-М|ЦГБ-Н|ЦГБ-П|ГМУ
+Gui, 7:Add, DropDownList, x90 y610  w225 vpol,%pol%||Мужской|Женский
 
 Gui, 7:show, center , Данные
 Return
