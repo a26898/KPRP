@@ -517,14 +517,68 @@ Greeting()
 }
 
 
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
-
-
-
-
 KPRPico = C:\ProgramData\KPRP\KPRP-main\KPRP.ico
 IfExist, %KPRPico%
 Menu, Tray, Icon, %KPRPico%
+
+selectedFile := "C:\ProgramData\KPRP\KPRP-main\selected.ini"
+
+; Словарь соответствий (русский -> английская метка)
+unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
+
+; Проверяем, есть ли сохраненный выбор
+if FileExist(selectedFile) {
+    FileRead, SelectedItem, %selectedFile%
+    SelectedItem := Trim(SelectedItem)  ; Убираем пробелы/переносы строк
+    if (SelectedItem != "" && unitMap.HasKey(SelectedItem)) {
+        Gosub, % unitMap[SelectedItem]  ; Переходим к нужной метке
+        ExitApp
+    }
+}
+
+
+Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
+Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
+Gui, 2:Add, Picture, x100 y50 w64 h64   +BackgroundTrans gSaveSelection, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 2:Show, w250 h120, Выбор организации
+Return
+
+SaveSelection:
+Gui, 2:Submit, NoHide
+
+; Сохраняем выбор в файл
+FileAppend, %SelectedItem%, %selectedFile%
+
+; Закрываем GUI и переходим к выбранной метке
+Gui, 2:Destroy
+if (unitMap.HasKey(SelectedItem)) {
+    Gosub, % unitMap[SelectedItem]
+}
+Return
+
+
+UZ:
+MsgBox, Функционал на данный момент отсутствует.
+FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+Return
+GUVD:
+MsgBox, Функционал на данный момент отсутствует.
+FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+Return
+GIBDD:
+MsgBox, Функционал на данный момент отсутствует.
+FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+Return
+Army:
+MsgBox, Функционал на данный момент отсутствует.
+FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+Return
+
+
+
+MZ:
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+
 
 Gui, 15:show,  center h650 w1200 , AНК для министерства здравоохранения 
 if (FonVybor="ERROR" or FonVybor=""){
