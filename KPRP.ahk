@@ -59,6 +59,57 @@ IniRead, 261MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
 IniRead, 271MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
 IniRead, 281MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
 
+IniRead, 11Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
+IniRead, 21Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
+IniRead, 31Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 31Redakt
+IniRead, 41Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 41Redakt
+IniRead, 51Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 51Redakt
+IniRead, 61Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 61Redakt
+IniRead, 71Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 71Redakt
+IniRead, 81Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 81Redakt
+IniRead, 91Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 91Redakt
+IniRead, 101Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 101Redakt
+IniRead, 111Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 111Redakt
+IniRead, 121Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 121Redakt
+IniRead, 131Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 131Redakt
+IniRead, 141Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 141Redakt
+IniRead, 151Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 151Redakt
+IniRead, 161Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 161Redakt
+IniRead, 171Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 171Redakt
+IniRead, 181Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 181Redakt
+IniRead, 191Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 191Redakt
+IniRead, 201Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 201Redakt
+IniRead, 211Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 211Redakt
+IniRead, 221Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 221Redakt
+IniRead, 231Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 231Redakt
+IniRead, 241Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 241Redakt
+IniRead, 251Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 251Redakt
+IniRead, 261Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 261Redakt
+IniRead, 271Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 271Redakt
+IniRead, 281Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 281Redakt
+IniRead, 291Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 291Redakt
+IniRead, 301Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 301Redakt
+IniRead, 311Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 311Redakt
+IniRead, 321Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 321Redakt
+IniRead, 331Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 331Redakt
+IniRead, 341Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 341Redakt
+IniRead, 351Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 351Redakt
+IniRead, 361Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 361Redakt
+IniRead, 371Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 371Redakt
+IniRead, 381Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 381Redakt
+IniRead, 391Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 391Redakt
+IniRead, 401Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 401Redakt
+IniRead, 411Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 411Redakt
+IniRead, 421Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 421Redakt
+IniRead, 431Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 431Redakt
+IniRead, 441Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 441Redakt
+IniRead, 451Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 451Redakt
+IniRead, 461Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 461Redakt
+IniRead, 471Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 471Redakt
+IniRead, 481Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 481Redakt
+IniRead, 491Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 491Redakt
+IniRead, 501Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 501Redakt
+
 odinMZ7 = %11MZ7%
 dvaMZ7 = %21MZ7%
 triMZ7 = %31MZ7%
@@ -87,6 +138,59 @@ dvadcatpyatMZ7 = %251MZ7%
 dvadcatshestMZ7 = %261MZ7%
 dvadcatsemMZ7 = %271MZ7%
 dvadcatvosemMZ7 = %281MZ7%
+
+
+odinRedakt = %11Redakt%
+dvaRedakt = %21Redakt%
+triRedakt = %31Redakt%
+chetireRedakt = %41Redakt%
+pyatRedakt = %51Redakt%
+shestRedakt = %61Redakt%
+semRedakt = %71Redakt%
+vosemRedakt = %81Redakt%
+devyatRedakt = %91Redakt%
+desyatRedakt = %101Redakt%
+odinadcatRedakt = %111Redakt%
+dvinadcatRedakt = %121Redakt%
+trinadcatRedakt = %131Redakt%
+chetirnadcatRedakt = %141Redakt%
+pyatnadcatRedakt = %151Redakt%
+shestnadcatRedakt = %161Redakt%
+semnagcatRedakt = %171Redakt%
+vosemnagcatRedakt = %181Redakt%
+devyatnadcatRedakt = %191Redakt%
+dvadcatRedakt = %201Redakt%
+dvadcatodinRedakt = %211Redakt%
+dvadcatdvaRedakt = %221Redakt%
+dvadcattriRedakt = %231Redakt%
+dvadcatchetireRedakt = %241Redakt%
+dvadcatpyatRedakt = %251Redakt%
+dvadcatshestRedakt = %261Redakt%
+dvadcatsemRedakt = %271Redakt%
+dvadcatvosemRedakt = %281Redakt%
+dvadcatdevyatRedakt = %291Redakt%
+tricatRedakt = %301Redakt%
+tricatodinRedakt = %311Redakt%
+tricatdvaRedakt = %321Redakt%
+tricatctriRedakt = %331Redakt%
+tricathetireRedakt = %341Redakt%
+tricatpyatRedakt = %351Redakt%
+tricatshestRedakt = %361Redakt%
+tricatsemRedakt = %371Redakt%
+tricatvosemRedakt = %381Redakt%
+tricatdevyatRedakt = %391Redakt%
+corokRedakt = %401Redakt%
+corokodinRedakt = %411Redakt%
+corokdvaRedakt = %421Redakt%
+coroktriRedakt = %431Redakt%
+corokhetireRedakt = %441Redakt%
+corokpyatRedakt = %451Redakt%
+corokshestRedakt = %461Redakt%
+coroksemRedakt = %471Redakt%
+corokvosemRedakt = %481Redakt%
+corokdevyatRedakt = %491Redakt%
+pyatdesyatRedakt = %501Redakt%
+
 
 Hotkey, %odinMZ7%, Off, UseErrorLevel
 Hotkey, %dvaMZ7%, Off, UseErrorLevel
@@ -117,6 +221,60 @@ Hotkey, %dvadcatshestMZ7%, Off, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, Off, UseErrorLevel
 Hotkey, %dvadcatvosemMZ7%, Off, UseErrorLevel
 
+
+
+Hotkey, %odinRedakt%, Off, UseErrorLevel
+Hotkey, %dvaRedakt%, Off, UseErrorLevel
+Hotkey, %triRedakt%, Off, UseErrorLevel
+Hotkey, %chetireRedakt%, Off, UseErrorLevel
+Hotkey, %pyatRedakt%, Off, UseErrorLevel
+Hotkey, %shestRedakt%, Off, UseErrorLevel
+Hotkey, %semRedakt%, Off, UseErrorLevel
+Hotkey, %vosemRedakt%, Off, UseErrorLevel
+Hotkey, %devyatRedakt%, Off, UseErrorLevel
+Hotkey, %desyatRedakt%, Off, UseErrorLevel
+Hotkey, %odinadcatRedakt%, Off, UseErrorLevel
+Hotkey, %dvinadcatRedakt%, Off, UseErrorLevel
+Hotkey, %trinadcatRedakt%, Off, UseErrorLevel
+Hotkey, %chetirnadcatRedakt%, Off, UseErrorLevel
+Hotkey, %pyatnadcatRedakt%, Off, UseErrorLevel
+Hotkey, %shestnadcatRedakt%, Off, UseErrorLevel
+Hotkey, %semnagcatRedakt%, Off, UseErrorLevel
+Hotkey, %vosemnagcatRedakt%, Off, UseErrorLevel
+Hotkey, %devyatnadcatRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatodinRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatdvaRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcattriRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatchetireRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatpyatRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatshestRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatsemRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatvosemRedakt%, Off, UseErrorLevel
+Hotkey, %dvadcatdevyatRedakt%, Off, UseErrorLevel
+Hotkey, %tricatRedakt%, Off, UseErrorLevel
+Hotkey, %tricatodinRedakt%, Off, UseErrorLevel
+Hotkey, %tricatdvaRedakt%, Off, UseErrorLevel
+Hotkey, %tricatctriRedakt%, Off, UseErrorLevel
+Hotkey, %tricathetireRedakt%, Off, UseErrorLevel
+Hotkey, %tricatpyatRedakt%, Off, UseErrorLevel
+Hotkey, %tricatshestRedakt%, Off, UseErrorLevel
+Hotkey, %tricatsemRedakt%, Off, UseErrorLevel
+Hotkey, %tricatvosemRedakt%, Off, UseErrorLevel
+Hotkey, %tricatdevyatRedakt%, Off, UseErrorLevel
+Hotkey, %corokRedakt%, Off, UseErrorLevel
+Hotkey, %corokodinRedakt%, Off, UseErrorLevel
+Hotkey, %corokdvaRedakt%, Off, UseErrorLevel
+Hotkey, %coroktriRedakt%, Off, UseErrorLevel
+Hotkey, %corokhetireRedakt%, Off, UseErrorLevel
+Hotkey, %corokpyatRedakt%, Off, UseErrorLevel
+Hotkey, %corokshestRedakt%, Off, UseErrorLevel
+Hotkey, %coroksemRedakt%, Off, UseErrorLevel
+Hotkey, %corokvosemRedakt%, Off, UseErrorLevel
+Hotkey, %corokdevyatRedakt%, Off, UseErrorLevel
+Hotkey, %pyatdesyatRedakt%, Off, UseErrorLevel
+
+
 Gui, Submit, NoHide
 Hotkey, %odinMZ7%, 0001MZ7, On, UseErrorLevel
 Hotkey, %dvaMZ7%, 0002MZ7, On, UseErrorLevel
@@ -146,6 +304,58 @@ Hotkey, %dvadcatpyatMZ7%, 0025MZ7, On, UseErrorLevel
 Hotkey, %dvadcatshestMZ7%, 0026MZ7, On, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, 0027MZ7, On, UseErrorLevel
 Hotkey, %dvadcatvosemMZ7%, 0028MZ7, On, UseErrorLevel
+
+Hotkey, %odinRedakt%, 0001Redakt, On, UseErrorLevel
+Hotkey, %dvaRedakt%, 0002Redakt, On, UseErrorLevel
+Hotkey, %triRedakt%, 0003Redakt, On, UseErrorLevel
+Hotkey, %chetireRedakt%, 0004Redakt, On, UseErrorLevel
+Hotkey, %pyatRedakt%, 0005Redakt, On, UseErrorLevel
+Hotkey, %shestRedakt%, 0006Redakt, On, UseErrorLevel
+Hotkey, %semRedakt%, 0007Redakt, On, UseErrorLevel
+Hotkey, %vosemRedakt%, 0008Redakt, On, UseErrorLevel
+Hotkey, %devyatRedakt%, 0009Redakt, On, UseErrorLevel
+Hotkey, %desyatRedakt%, 0010Redakt, On, UseErrorLevel
+Hotkey, %odinadcatRedakt%, 0011Redakt, On, UseErrorLevel
+Hotkey, %dvinadcatRedakt%, 0012Redakt, On, UseErrorLevel
+Hotkey, %trinadcatRedakt%, 0013Redakt, On, UseErrorLevel
+Hotkey, %chetirnadcatRedakt%, 0014Redakt, On, UseErrorLevel
+Hotkey, %pyatnadcatRedakt%, 0015Redakt, UseErrorLevel
+Hotkey, %shestnadcatRedakt%, 0016Redakt, On, UseErrorLevel
+Hotkey, %semnagcatRedakt%, 0017Redakt, On, UseErrorLevel
+Hotkey, %vosemnagcatRedakt%, 0018Redakt, On, UseErrorLevel
+Hotkey, %devyatnadcatRedakt%, 0019Redakt, On, UseErrorLevel
+Hotkey, %dvadcatRedakt%, 0020Redakt, On, UseErrorLevel
+Hotkey, %dvadcatodinRedakt%, 0021Redakt, On, UseErrorLevel
+Hotkey, %dvadcatdvaRedakt%, 0022Redakt, On, UseErrorLevel
+Hotkey, %dvadcattriRedakt%, 0023Redakt, On, UseErrorLevel
+Hotkey, %dvadcatchetireRedakt%, 0024, On, UseErrorLevel
+Hotkey, %dvadcatpyatRedakt%, 0025Redakt, On, UseErrorLevel
+Hotkey, %dvadcatshestRedakt%, 0026Redakt, On, UseErrorLevel
+Hotkey, %dvadcatsemRedakt%, 0027Redakt, On, UseErrorLevel
+Hotkey, %dvadcatvosemRedakt%, 0028Redakt, On, UseErrorLevel
+Hotkey, %dvadcatdevyatRedakt%, 0029Redakt, On, UseErrorLevel
+Hotkey, %tricatRedakt%, 0030Redakt, On, UseErrorLevel
+Hotkey, %tricatodinRedakt%, 0031Redakt, On, UseErrorLevel
+Hotkey, %tricatdvaRedakt%, 0032Redakt, On, UseErrorLevel
+Hotkey, %tricatctriRedakt%, 0033Redakt, On, UseErrorLevel
+Hotkey, %tricathetireRedakt%, 0034Redakt, On, UseErrorLevel
+Hotkey, %tricatpyatRedakt%, 0035Redakt, On, UseErrorLevel
+Hotkey, %tricatshestRedakt%, 0036Redakt, On, UseErrorLevel
+Hotkey, %tricatsemRedakt%, 0037Redakt, On, UseErrorLevel
+Hotkey, %tricatvosemRedakt%, 0038Redakt, On, UseErrorLevel
+Hotkey, %tricatdevyatRedakt%, 0039Redakt, On, UseErrorLevel
+Hotkey, %corokRedakt%, 0040Redakt, On, UseErrorLevel
+Hotkey, %corokodinRedakt%, 0041Redakt, On, UseErrorLevel
+Hotkey, %corokdvaRedakt%, 0042Redakt, On, UseErrorLevel
+Hotkey, %coroktriRedakt%, 0043Redakt, On, UseErrorLevel
+Hotkey, %corokhetireRedakt%, 0044Redakt, On, UseErrorLevel
+Hotkey, %corokpyatRedakt%, 0045Redakt, On, UseErrorLevel
+Hotkey, %corokshestRedakt%, 0046Redakt, On, UseErrorLevel
+Hotkey, %coroksemRedakt%, 0047Redakt, On, UseErrorLevel
+Hotkey, %corokvosemRedakt%, 0048Redakt, On, UseErrorLevel
+Hotkey, %corokdevyatRedakt%, 0049Redakt, On, UseErrorLevel
+Hotkey, %pyatdesyatRedakt%, 0050Redakt, On, UseErrorLevel
+
 
 
 odin = %11% & %12%
@@ -278,6 +488,207 @@ stodvadcatsem = %1271% & %1272%
 stodvadcatsem = %1281% & %1282%
 
 
+IniRead, Svoye_1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_1
+IniRead, Svoye_2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_2
+IniRead, Svoye_3, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_3
+IniRead, Svoye_4, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_4
+IniRead, Svoye_5, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_5
+IniRead, Svoye_6, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_6
+IniRead, Svoye_7, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_7
+IniRead, Svoye_8, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_8
+IniRead, Svoye_9, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_9
+IniRead, Svoye_10, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_10
+IniRead, Svoye_11, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_11
+IniRead, Svoye_12, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_12
+IniRead, Svoye_13, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_13
+IniRead, Svoye_14, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_14
+IniRead, Svoye_15, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_15
+IniRead, Svoye_16, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_16
+IniRead, Svoye_17, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_17
+IniRead, Svoye_18, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_18
+IniRead, Svoye_19, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_19
+IniRead, Svoye_20, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_20
+IniRead, Svoye_21, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_21
+IniRead, Svoye_22, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_22
+IniRead, Svoye_23, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_23
+IniRead, Svoye_24, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_24
+IniRead, Svoye_25, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_25
+IniRead, Svoye_26, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_26
+IniRead, Svoye_27, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_27
+IniRead, Svoye_28, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_28
+IniRead, Svoye_29, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_29
+IniRead, Svoye_30, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_30
+IniRead, Svoye_31, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_31
+IniRead, Svoye_32, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_32
+IniRead, Svoye_33, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_33
+IniRead, Svoye_34, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_34
+IniRead, Svoye_35, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_35
+IniRead, Svoye_36, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_36
+IniRead, Svoye_37, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_37
+IniRead, Svoye_38, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_38
+IniRead, Svoye_39, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_39
+IniRead, Svoye_40, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_40
+IniRead, Svoye_41, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_41
+IniRead, Svoye_42, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_42
+IniRead, Svoye_43, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_43
+IniRead, Svoye_44, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_44
+IniRead, Svoye_45, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_45
+IniRead, Svoye_46, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_46
+IniRead, Svoye_47, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_47
+IniRead, Svoye_48, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_48
+IniRead, Svoye_49, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_49
+IniRead, Svoye_50, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_50
+
+IniRead, Svoye_51,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_51
+IniRead, Svoye_52,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_52
+IniRead, Svoye_53,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_53
+IniRead, Svoye_54,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_54
+IniRead, Svoye_55,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_55
+IniRead, Svoye_56,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_56
+IniRead, Svoye_57,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_57
+IniRead, Svoye_58,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_58
+IniRead, Svoye_59,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_59
+IniRead, Svoye_60,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_60
+IniRead, Svoye_61,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_61
+IniRead, Svoye_62,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_62
+IniRead, Svoye_63,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_63
+IniRead, Svoye_64,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_64
+IniRead, Svoye_65,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_65
+IniRead, Svoye_66,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_66
+IniRead, Svoye_67,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_67
+IniRead, Svoye_68,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_68
+IniRead, Svoye_69,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_69
+IniRead, Svoye_70,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_70
+IniRead, Svoye_71,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_71
+IniRead, Svoye_72,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_72
+IniRead, Svoye_73,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_73
+IniRead, Svoye_74,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_74
+IniRead, Svoye_75,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_75
+IniRead, Svoye_76,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_76
+IniRead, Svoye_77,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_77
+IniRead, Svoye_78,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_78
+IniRead, Svoye_79,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_79
+IniRead, Svoye_80,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_80
+IniRead, Svoye_81,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_81
+IniRead, Svoye_82,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_82
+IniRead, Svoye_83,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_83
+IniRead, Svoye_84,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_84
+IniRead, Svoye_85,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_85
+IniRead, Svoye_86,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_86
+IniRead, Svoye_87,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_87
+IniRead, Svoye_88,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_88
+IniRead, Svoye_89,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_89
+IniRead, Svoye_90,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_90
+IniRead, Svoye_91,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_91
+IniRead, Svoye_92,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_92
+IniRead, Svoye_93,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_93
+IniRead, Svoye_94,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_94
+IniRead, Svoye_95,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_95
+IniRead, Svoye_96,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_96
+IniRead, Svoye_97,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_97
+
+
+IniRead, Objects1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
+IniRead, Objects2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
+IniRead, Objects3, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects3
+IniRead, Objects4, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects4
+IniRead, Objects5, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects5
+IniRead, Objects6, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects6
+IniRead, Objects7, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects7
+IniRead, Objects8, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects8
+IniRead, Objects9, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects9
+IniRead, Objects10, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects10
+IniRead, Objects11, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects11
+IniRead, Objects12, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects12
+IniRead, Objects13, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects13
+IniRead, Objects14, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects14
+IniRead, Objects15, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects15
+IniRead, Objects16, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects16
+IniRead, Objects17, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects17
+IniRead, Objects18, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects18
+IniRead, Objects19, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects19
+IniRead, Objects20, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects20
+IniRead, Objects21, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects21
+IniRead, Objects22, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects22
+IniRead, Objects23, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects23
+IniRead, Objects24, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects24
+IniRead, Objects25, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects25
+IniRead, Objects26, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects26
+IniRead, Objects27, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects27
+IniRead, Objects28, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects28
+IniRead, Objects29, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects29
+IniRead, Objects30, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects30
+IniRead, Objects31, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects31
+IniRead, Objects32, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects32
+IniRead, Objects33, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects33
+IniRead, Objects34, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects34
+IniRead, Objects35, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects35
+IniRead, Objects36, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects36
+IniRead, Objects37, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects37
+IniRead, Objects38, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects38
+IniRead, Objects39, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects39
+IniRead, Objects40, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects40
+IniRead, Objects41, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects41
+IniRead, Objects42, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects42
+IniRead, Objects43, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects43
+IniRead, Objects44, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects44
+IniRead, Objects45, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects45
+IniRead, Objects46, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects46
+IniRead, Objects47, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects47
+IniRead, Objects48, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects48
+IniRead, Objects49, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects49
+IniRead, Objects50, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects50
+
+IniRead, Objects51, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects51
+IniRead, Objects52, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects52
+IniRead, Objects53, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects53
+IniRead, Objects54, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects54
+IniRead, Objects55, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects55
+IniRead, Objects56, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects56
+IniRead, Objects57, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects57
+IniRead, Objects58, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects58
+IniRead, Objects59, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects59
+IniRead, Objects60, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects60
+IniRead, Objects61, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects61
+IniRead, Objects62, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects62
+IniRead, Objects63, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects63
+IniRead, Objects64, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects64
+IniRead, Objects65, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects65
+IniRead, Objects66, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects66
+IniRead, Objects67, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects67
+IniRead, Objects68, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects68
+IniRead, Objects69, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects69
+IniRead, Objects70, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects70
+IniRead, Objects71, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects71
+IniRead, Objects72, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects72
+IniRead, Objects73, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects73
+IniRead, Objects74, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects74
+IniRead, Objects75, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects75
+IniRead, Objects76, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects76
+IniRead, Objects77, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects77
+IniRead, Objects78, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects78
+IniRead, Objects79, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects79
+IniRead, Objects70, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects80
+IniRead, Objects81, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects81
+IniRead, Objects82, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects82
+IniRead, Objects83, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects83
+IniRead, Objects84, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects84
+IniRead, Objects86, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects86
+IniRead, Objects87, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects87
+IniRead, Objects88, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects88
+IniRead, Objects89, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects89
+IniRead, Objects90, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects90
+IniRead, Objects91, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects91
+IniRead, Objects92, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects92
+IniRead, Objects93, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects93
+IniRead, Objects94, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects94
+IniRead, Objects95, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects95
+IniRead, Objects96, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects96
+IniRead, Objects97, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects97
+
+
+
+
 IniRead, JWI, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniRead, TAG, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniRead, Name, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -294,6 +705,202 @@ IniRead, Shrift, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniRead, Tsvet, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
+
+
+if Svoye_1=ERROR
+Svoye_1=Описание
+if Svoye_2=ERROR
+Svoye_2=Описание
+if Svoye_3=ERROR
+Svoye_3=Описание
+if Svoye_4=ERROR
+Svoye_4=Описание
+if Svoye_5=ERROR
+Svoye_5=Описание
+if Svoye_6=ERROR
+Svoye_6=Описание
+if Svoye_7=ERROR
+Svoye_7=Описание
+if Svoye_8=ERROR
+Svoye_8=Описание
+if Svoye_9=ERROR
+Svoye_9=Описание
+if Svoye_10=ERROR
+Svoye_10=Описание
+if Svoye_11=ERROR
+Svoye_11=Описание
+if Svoye_12=ERROR
+Svoye_12=Описание
+if Svoye_13=ERROR
+Svoye_13=Описание
+if Svoye_14=ERROR
+Svoye_14=Описание
+if Svoye_15=ERROR
+Svoye_15=Описание
+if Svoye_16=ERROR
+Svoye_16=Описание
+if Svoye_17=ERROR
+Svoye_17=Описание
+if Svoye_18=ERROR
+Svoye_18=Описание
+if Svoye_19=ERROR
+Svoye_19=Описание
+if Svoye_20=ERROR
+Svoye_20=Описание
+if Svoye_21=ERROR
+Svoye_21=Описание
+if Svoye_22=ERROR
+Svoye_22=Описание
+if Svoye_23=ERROR
+Svoye_23=Описание
+if Svoye_24=ERROR
+Svoye_24=Описание
+if Svoye_25=ERROR
+Svoye_25=Описание
+if Svoye_26=ERROR
+Svoye_26=Описание
+if Svoye_27=ERROR
+Svoye_27=Описание
+if Svoye_28=ERROR
+Svoye_28=Описание
+if Svoye_29=ERROR
+Svoye_29=Описание
+if Svoye_30=ERROR
+Svoye_30=Описание
+if Svoye_31=ERROR
+Svoye_31=Описание
+if Svoye_32=ERROR
+Svoye_32=Описание
+if Svoye_33=ERROR
+Svoye_33=Описание
+if Svoye_34=ERROR
+Svoye_34=Описание
+if Svoye_35=ERROR
+Svoye_35=Описание
+if Svoye_36=ERROR
+Svoye_36=Описание
+if Svoye_37=ERROR
+Svoye_37=Описание
+if Svoye_38=ERROR
+Svoye_38=Описание
+if Svoye_39=ERROR
+Svoye_39=Описание
+if Svoye_40=ERROR
+Svoye_40=Описание
+if Svoye_41=ERROR
+Svoye_41=Описание
+if Svoye_42=ERROR
+Svoye_42=Описание
+if Svoye_43=ERROR
+Svoye_43=Описание
+if Svoye_44=ERROR
+Svoye_44=Описание
+if Svoye_45=ERROR
+Svoye_45=Описание
+if Svoye_46=ERROR
+Svoye_46=Описание
+if Svoye_47=ERROR
+Svoye_47=Описание
+if Svoye_48=ERROR
+Svoye_48=Описание
+if Svoye_49=ERROR
+Svoye_49=Описание
+if Svoye_50=ERROR
+Svoye_50=Описание
+if Svoye_51=ERROR
+Svoye_51=Описание
+if Svoye_52=ERROR
+Svoye_52=Описание
+if Svoye_53=ERROR
+Svoye_53=Описание
+if Svoye_54=ERROR
+Svoye_54=Описание
+if Svoye_55=ERROR
+Svoye_55=Описание
+if Svoye_56=ERROR
+Svoye_56=Описание
+if Svoye_57=ERROR
+Svoye_57=Описание
+if Svoye_58=ERROR
+Svoye_58=Описание
+if Svoye_59=ERROR
+Svoye_59=Описание
+if Svoye_60=ERROR
+Svoye_60=Описание
+if Svoye_61=ERROR
+Svoye_61=Описание
+if Svoye_62=ERROR
+Svoye_62=Описание
+if Svoye_63=ERROR
+Svoye_63=Описание
+if Svoye_64=ERROR
+Svoye_64=Описание
+if Svoye_65=ERROR
+Svoye_65=Описание
+if Svoye_66=ERROR
+Svoye_66=Описание
+if Svoye_67=ERROR
+Svoye_67=Описание
+if Svoye_68=ERROR
+Svoye_68=Описание
+if Svoye_69=ERROR
+Svoye_69=Описание
+if Svoye_70=ERROR
+Svoye_70=Описание
+if Svoye_71=ERROR
+Svoye_71=Описание
+if Svoye_72=ERROR
+Svoye_72=Описание
+if Svoye_73=ERROR
+Svoye_73=Описание
+if Svoye_74=ERROR
+Svoye_74=Описание
+if Svoye_75=ERROR
+Svoye_75=Описание
+if Svoye_76=ERROR
+Svoye_76=Описание
+if Svoye_77=ERROR
+Svoye_77=Описание
+if Svoye_78=ERROR
+Svoye_78=Описание
+Svoye_79=Описание
+if Svoye_80=ERROR
+Svoye_80=Описание
+if Svoye_81=ERROR
+Svoye_81=Описание
+if Svoye_82=ERROR
+Svoye_82=Описание
+if Svoye_83=ERROR
+Svoye_83=Описание
+if Svoye_84=ERROR
+Svoye_84=Описание
+if Svoye_85=ERROR
+Svoye_85=Описание
+if Svoye_86=ERROR
+Svoye_86=Описание
+if Svoye_87=ERROR
+Svoye_87=Описание
+if Svoye_88=ERROR
+Svoye_88=Описание
+if Svoye_89=ERROR
+Svoye_89=Описание
+if Svoye_90=ERROR
+Svoye_90=Описание
+if Svoye_91=ERROR
+Svoye_91=Описание
+if Svoye_92=ERROR
+Svoye_92=Описание
+if Svoye_93=ERROR
+Svoye_93=Описание
+if Svoye_94=ERROR
+Svoye_94=Описание
+if Svoye_95=ERROR
+Svoye_95=Описание
+if Svoye_96=ERROR
+Svoye_96=Описание
+if Svoye_97=ERROR
+Svoye_97=Описание
+
 
 if JWI=ERROR
 JWI=Студент
@@ -600,6 +1207,1283 @@ Return
 MZ:
 #Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartMZ.ahk
 
+0001Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects1%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0002Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects2%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0003Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects3%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0004Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects4%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0005Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects5%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0006Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects6%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0007Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects7%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0008Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects8%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0009Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects9%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0010Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects10%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0011Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects11%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0012Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects12%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0013Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects13%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0014Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects14%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0015Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects15%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0016Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects16%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0017Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects17%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0018Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects18%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0019Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects19%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0020Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects20%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0021Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects21%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0022Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects22%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0023Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects23%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0024Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects24%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0025Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects25%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0026Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects26%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0027Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects27%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0028Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects28%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0029Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects29%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0030Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects30%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0031Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects31%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0032Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects32%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0033Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects33%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0034Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects34%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0035Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects35%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0036Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects36%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0037Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects37%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0038Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects38%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0039Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects39%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0040Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects40%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0041Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects41%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0042Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects42%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0043Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects43%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0044Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects44%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+0045Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects45%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0046Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects46%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0047Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects47%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0048Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects48%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0049Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects49%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+0050Redakt:
+Sleep 150
+SendInput, {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects50%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+
+:?:/РП_51::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects51%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_52::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects52%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_53::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects53%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_54::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects54%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_55::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects55%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_56::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects56%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_57::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects57%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_58::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects58%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_59::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects59%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_60::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects60%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+:?:/РП_61::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects61%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_62::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects62%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+:?:/РП_63::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects63%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+:?:/РП_64::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects64%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_65::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects65%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_66::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects66%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_67::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects67%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_68::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects68%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_69::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects69%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+
+:?:/РП_70::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects70%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_71%::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects71%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_72::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects72%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_73::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects73%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_74::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects74%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_75::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects75%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_76::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects76%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_77::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects77%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_78::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects78%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_79::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects79%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_80::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects80%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_81::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects81%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_82::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects82%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_83::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects83%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_84::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects84%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_85::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects85%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_86::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects86%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_87::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects87%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_88::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects88%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_89::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects89%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_90::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects90%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_91::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects91%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_92::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects92%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_93::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects93%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_94::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects94%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_95::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects95%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+
+:?:/РП_96::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects96%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
+:?:/РП_97::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+Loop, read, %Objects97%
+{
+Loop, parse, A_LoopReadLine, %A_Tab%
+{
+SendChat("" A_LoopField "", "  " zaderzhka " ")
+}
+}
+Return
+
 
 
 
@@ -669,7 +2553,912 @@ Return
 Run https://vk.com/im?media=&sel=-187717337
 Return
 
+Offers:
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
+Gui, 10:Destroy,
+
+
+IniWrite, %11Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
+IniWrite, %21Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
+IniWrite, %31Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 31Redakt
+IniWrite, %41Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 41Redakt
+IniWrite, %51Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 51Redakt
+IniWrite, %61Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 61Redakt
+IniWrite, %71Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 71Redakt
+IniWrite, %81Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 81Redakt
+IniWrite, %91Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 91Redakt
+IniWrite, %101Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 101Redakt
+IniWrite, %111Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 111Redakt
+IniWrite, %121Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 121Redakt
+IniWrite, %131Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 131Redakt
+IniWrite, %141Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 141Redakt
+IniWrite, %151Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 151Redakt
+IniWrite, %161Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 161Redakt
+IniWrite, %171Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 171Redakt
+IniWrite, %181Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 181Redakt
+IniWrite, %191Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 191Redakt
+IniWrite, %201Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 201Redakt
+IniWrite, %211Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 211Redakt
+IniWrite, %221Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 221Redakt
+IniWrite, %231Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 231Redakt
+IniWrite, %241Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 241Redakt
+IniWrite, %251Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 251Redakt
+IniWrite, %261Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 261Redakt
+IniWrite, %271Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 271Redakt
+IniWrite, %281Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 281Redakt
+IniWrite, %291Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 291Redakt
+IniWrite, %301Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 301Redakt
+IniWrite, %311Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 311Redakt
+IniWrite, %321Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 321Redakt
+IniWrite, %331Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 331Redakt
+IniWrite, %341Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 341Redakt
+IniWrite, %351Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 351Redakt
+IniWrite, %361Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 361Redakt
+IniWrite, %371Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 371Redakt
+IniWrite, %381Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 381Redakt
+IniWrite, %391Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 391Redakt
+IniWrite, %401Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 401Redakt
+IniWrite, %411Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 411Redakt
+IniWrite, %421Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 421Redakt
+IniWrite, %431Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 431Redakt
+IniWrite, %441Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 441Redakt
+IniWrite, %451Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 451Redakt
+IniWrite, %461Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 461Redakt
+IniWrite, %471Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 471Redakt
+IniWrite, %481Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 481Redakt
+
+
+
+Gui, 10:Font, S11 C000000 Bold, Arial
+
+Gui, 10:Add, Hotkey, x10 y15 w150 v11Redakt, %odinRedakt%
+Gui, 10:Add, Hotkey, x10 y55 w150 v21Redakt, %dvaRedakt%
+Gui, 10:Add, Hotkey, x10 y95 w150 v31Redakt, %triRedakt%
+Gui, 10:Add, Hotkey, x10 y135 w150 v41Redakt, %chetireRedakt%
+Gui, 10:Add, Hotkey, x10 y175 w150 v51Redakt, %pyatRedakt%
+Gui, 10:Add, Hotkey, x10 y215 w150 v61Redakt, %shestRedakt%
+Gui, 10:Add, Hotkey, x10 y255 w150 v71Redakt, %semRedakt%
+Gui, 10:Add, Hotkey, x10 y295 w150 v81Redakt, %vosemRedakt%
+Gui, 10:Add, Hotkey, x10 y335 w150 v91Redakt, %devyatRedakt%
+Gui, 10:Add, Hotkey, x10 y375 w150 v101Redakt, %desyatRedakt%
+Gui, 10:Add, Hotkey, x10 y415 w150 v111Redakt, %odinadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y455 w150 v121Redakt, %dvinadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y495 w150 v131Redakt, %trinadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y535 w150 v141Redakt, %chetirnadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y575 w150 v151Redakt, %pyatnadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y615 w150 v161Redakt, %shestnadcatRedakt%
+Gui, 10:Add, Hotkey, x10 y655 w150 v491Redakt, %corokdevyatRedakt%
+
+Gui, 10:Add, Edit, x170 y15 w150  vSvoye_1, %Svoye_1%
+Gui, 10:Add, Edit, x170 y55 w150  vSvoye_2, %Svoye_2%
+Gui, 10:Add, Edit, x170 y95 w150  vSvoye_3, %Svoye_3%
+Gui, 10:Add, Edit, x170 y135 w150 vSvoye_4, %Svoye_4%
+Gui, 10:Add, Edit, x170 y175 w150 vSvoye_5, %Svoye_5%
+Gui, 10:Add, Edit, x170 y215 w150 vSvoye_6, %Svoye_6%
+Gui, 10:Add, Edit, x170 y255 w150 vSvoye_7, %Svoye_7%
+Gui, 10:Add, Edit, x170 y295 w150 vSvoye_8, %Svoye_8%
+Gui, 10:Add, Edit, x170 y335 w150 vSvoye_9, %Svoye_9%
+Gui, 10:Add, Edit, x170 y375 w150 vSvoye_10, %Svoye_10%
+Gui, 10:Add, Edit, x170 y415 w150 vSvoye_11, %Svoye_11%
+Gui, 10:Add, Edit, x170 y455 w150 vSvoye_12, %Svoye_12%
+Gui, 10:Add, Edit, x170 y495 w150 vSvoye_13, %Svoye_13%
+Gui, 10:Add, Edit, x170 y535 w150 vSvoye_14, %Svoye_14%
+Gui, 10:Add, Edit, x170 y575 w150 vSvoye_15, %Svoye_15%
+Gui, 10:Add, Edit, x170 y615 w150 vSvoye_16, %Svoye_16%
+Gui, 10:Add, Edit, x170 y655 w150 vSvoye_49, %Svoye_49%
+
+Gui, 10:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects1,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects2,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects3,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects4 ,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects5,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects6,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects7,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects8,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects9,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects10,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects11,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects12,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects13,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects14,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects15,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects16,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y647 w48 w48 +BackgroundTrans gSelectObjects49,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+
+Gui, 10:Add, Hotkey, x400 y15 w150 v171Redakt, %semnagcatRedakt%
+Gui, 10:Add, Hotkey, x400 y55 w150 v181Redakt, %vosemnagcatRedakt%
+Gui, 10:Add, Hotkey, x400 y95 w150 v191Redakt, %devyatnadcatRedakt%
+Gui, 10:Add, Hotkey, x400 y135 w150 v201Redakt, %dvadcatRedakt%
+Gui, 10:Add, Hotkey, x400 y175 w150 v211Redakt, %dvadcatodinRedakt%
+Gui, 10:Add, Hotkey, x400 y215 w150 v221Redakt, %dvadcatdvaRedakt%
+Gui, 10:Add, Hotkey, x400 y255 w150 v231Redakt, %dvadcattriRedakt%
+Gui, 10:Add, Hotkey, x400 y295 w150 v241Redakt, %dvadcatchetireRedakt%
+Gui, 10:Add, Hotkey, x400 y335 w150 v251Redakt, %dvadcatpyatRedakt%
+Gui, 10:Add, Hotkey, x400 y375 w150 v261Redakt, %dvadcatshestRedakt%
+Gui, 10:Add, Hotkey, x400 y415 w150 v271Redakt, %dvadcatsemRedakt%
+Gui, 10:Add, Hotkey, x400 y455 w150 v281Redakt, %dvadcatvosemRedakt%
+Gui, 10:Add, Hotkey, x400 y495 w150 v291Redakt, %dvadcatdevyatRedakt%
+Gui, 10:Add, Hotkey, x400 y535 w150 v301Redakt, %tricatRedakt%
+Gui, 10:Add, Hotkey, x400 y575 w150 v311Redakt, %tricatodinRedakt%
+Gui, 10:Add, Hotkey, x400 y615 w150 v321Redakt, %tricatdvaRedakt%
+Gui, 10:Add, Hotkey, x400 y655 w150 v501Redakt, %pyatdesyatRedakt%
+
+Gui, 10:Add, Edit, x560 y15 w150 vSvoye_17, %Svoye_17%
+Gui, 10:Add, Edit, x560 y55 w150 vSvoye_18, %Svoye_18%
+Gui, 10:Add, Edit, x560 y95 w150 vSvoye_19, %Svoye_19%
+Gui, 10:Add, Edit, x560 y135 w150 vSvoye_20, %Svoye_20%
+Gui, 10:Add, Edit, x560 y175 w150 vSvoye_21, %Svoye_21%
+Gui, 10:Add, Edit, x560 y215 w150 vSvoye_22, %Svoye_22%
+Gui, 10:Add, Edit, x560 y255 w150 vSvoye_23, %Svoye_23%
+Gui, 10:Add, Edit, x560 y295 w150 vSvoye_24, %Svoye_24%
+Gui, 10:Add, Edit, x560 y335 w150 vSvoye_25, %Svoye_25%
+Gui, 10:Add, Edit, x560 y375 w150 vSvoye_26, %Svoye_26%
+Gui, 10:Add, Edit, x560 y415 w150 vSvoye_27, %Svoye_27%
+Gui, 10:Add, Edit, x560 y455 w150 vSvoye_28, %Svoye_28%
+Gui, 10:Add, Edit, x560 y495 w150 vSvoye_29, %Svoye_29%
+Gui, 10:Add, Edit, x560 y535 w150 vSvoye_30, %Svoye_30%
+Gui, 10:Add, Edit, x560 y575 w150 vSvoye_31, %Svoye_31%
+Gui, 10:Add, Edit, x560 y615 w150 vSvoye_32, %Svoye_32%
+Gui, 10:Add, Edit, x560 y655 w150 vSvoye_50, %Svoye_50%
+
+
+
+
+Gui, 10:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects17,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects18,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects19,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects20 ,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects21,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects22,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects23,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects24,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects25,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects26,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects27,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects28,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects29,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects30,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects31,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects32,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y647 w48 w48 +BackgroundTrans gSelectObjects50,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+
+Gui, 10:Add, Hotkey, x790 y15 w150 v331Redakt, %tricatctriRedakt%
+Gui, 10:Add, Hotkey, x790 y55 w150 v341Redakt, %tricathetireRedakt%
+Gui, 10:Add, Hotkey, x790 y95 w150 v351Redakt, %tricatpyatRedakt%
+Gui, 10:Add, Hotkey, x790 y135 w150 v361Redakt, %tricatshestRedakt%
+Gui, 10:Add, Hotkey, x790 y175 w150 v371Redakt, %tricatsemRedakt%
+Gui, 10:Add, Hotkey, x790 y215 w150 v381Redakt, %tricatvosemRedakt%
+Gui, 10:Add, Hotkey, x790 y255 w150 v391Redakt, %tricatdevyatRedakt%
+Gui, 10:Add, Hotkey, x790 y295 w150 v401Redakt, %corokRedakt%
+Gui, 10:Add, Hotkey, x790 y335 w150 v411Redakt, %corokodinRedakt%
+Gui, 10:Add, Hotkey, x790 y375 w150 v421Redakt, %corokdvaRedakt%
+Gui, 10:Add, Hotkey, x790 y415 w150 v431Redakt, %coroktriRedakt%
+Gui, 10:Add, Hotkey, x790 y455 w150 v441Redakt, %corokhetireRedakt%
+Gui, 10:Add, Hotkey, x790 y495 w150 v451Redakt, %corokpyatRedakt%
+Gui, 10:Add, Hotkey, x790 y535 w150 v461Redakt, %corokshestRedakt%
+Gui, 10:Add, Hotkey, x790 y575 w150 v471Redakt, %coroksemRedakt%
+Gui, 10:Add, Hotkey, x790 y615 w150 v481Redakt, %corokvosemRedakt%
+
+Gui, 10:Add, Edit, x950 y15 w150  vSvoye_33, %Svoye_33%
+Gui, 10:Add, Edit, x950 y55 w150  vSvoye_34, %Svoye_34%
+Gui, 10:Add, Edit, x950 y95 w150  vSvoye_35, %Svoye_35%
+Gui, 10:Add, Edit, x950 y135 w150 vSvoye_36, %Svoye_36%
+Gui, 10:Add, Edit, x950 y175 w150 vSvoye_37, %Svoye_37%
+Gui, 10:Add, Edit, x950 y215 w150 vSvoye_38, %Svoye_38%
+Gui, 10:Add, Edit, x950 y255 w150 vSvoye_39, %Svoye_39%
+Gui, 10:Add, Edit, x950 y295 w150 vSvoye_40, %Svoye_40%
+Gui, 10:Add, Edit, x950 y335 w150 vSvoye_41, %Svoye_41%
+Gui, 10:Add, Edit, x950 y375 w150 vSvoye_42, %Svoye_42%
+Gui, 10:Add, Edit, x950 y415 w150 vSvoye_43, %Svoye_43%
+Gui, 10:Add, Edit, x950 y455 w150 vSvoye_44, %Svoye_44%
+Gui, 10:Add, Edit, x950 y495 w150 vSvoye_45, %Svoye_45%
+Gui, 10:Add, Edit, x950 y535 w150 vSvoye_46, %Svoye_46%
+Gui, 10:Add, Edit, x950 y575 w150 vSvoye_47, %Svoye_47%
+Gui, 10:Add, Edit, x950 y615 w150 vSvoye_48, %Svoye_48%
+
+
+Gui, 10:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects33,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects34,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects35,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects36,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects37,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects38,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects39,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects40,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects41,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects42,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects43,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects44,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects45,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects46,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects47,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y607 w48 w48 +BackgroundTrans gSelectObjects48,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+Gui, 10:Add, Picture, x1110 y635 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+
+Gui, 10:Show, w1200 h700, Редактор отыгровок сочетание клавиш
+Return
+
+
+
+
+Editor:
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+
+Gui, 11:Destroy,
+
+
+Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
+
+Gui, 11:Add, Text, x10 y17 w150 , /РП_51
+Gui, 11:Add, Text, x10 y57 w150 , /РП_52
+Gui, 11:Add, Text, x10 y97 w150 , /РП_53
+Gui, 11:Add, Text, x10 y137 w150 , /РП_54
+Gui, 11:Add, Text, x10 y177 w150 , /РП_55
+Gui, 11:Add, Text, x10 y217 w150 , /РП_56
+Gui, 11:Add, Text, x10 y257 w150 , /РП_57
+Gui, 11:Add, Text, x10 y297 w150 , /РП_58
+Gui, 11:Add, Text, x10 y337 w150 , /РП_59
+Gui, 11:Add, Text, x10 y377 w150 , /РП_60
+Gui, 11:Add, Text, x10 y417 w150 , /РП_61
+Gui, 11:Add, Text, x10 y457 w150 , /РП_62
+Gui, 11:Add, Text, x10 y497 w150 , /РП_63
+Gui, 11:Add, Text, x10 y537 w150 , /РП_64
+Gui, 11:Add, Text, x10 y577 w150 , /РП_65
+Gui, 11:Add, Text, x10 y617 w150 , /РП_66
+
+Gui,11:Font, S11 C%Tsvet_1% Bold, %Shrift%
+Gui, 11:Add, Edit, x70 y15 w250  vSvoye_51, %Svoye_51%
+Gui, 11:Add, Edit, x70 y55 w250  vSvoye_52, %Svoye_52%
+Gui, 11:Add, Edit, x70 y95 w250  vSvoye_53, %Svoye_53%
+Gui, 11:Add, Edit, x70 y135 w250 vSvoye_54, %Svoye_54%
+Gui, 11:Add, Edit, x70 y175 w250 vSvoye_55, %Svoye_55%
+Gui, 11:Add, Edit, x70 y215 w250 vSvoye_56, %Svoye_56%
+Gui, 11:Add, Edit, x70 y255 w250 vSvoye_57, %Svoye_57%
+Gui, 11:Add, Edit, x70 y295 w250 vSvoye_58, %Svoye_58%
+Gui, 11:Add, Edit, x70 y335 w250 vSvoye_59, %Svoye_59%
+Gui, 11:Add, Edit, x70 y375 w250 vSvoye_60, %Svoye_60%
+Gui, 11:Add, Edit, x70 y415 w250 vSvoye_61, %Svoye_61%
+Gui, 11:Add, Edit, x70 y455 w250 vSvoye_62, %Svoye_62%
+Gui, 11:Add, Edit, x70 y495 w250 vSvoye_63, %Svoye_63%
+Gui, 11:Add, Edit, x70 y535 w250 vSvoye_64, %Svoye_64%
+Gui, 11:Add, Edit, x70 y575 w250 vSvoye_65, %Svoye_65%
+Gui, 11:Add, Edit, x70 y615 w250 vSvoye_66, %Svoye_66%
+
+
+Gui, 11:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects51, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects52, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects53, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects54 , C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects55, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects56, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects57, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects58, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects59, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects60, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects61, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects62, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects63, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects64, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects65, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects66, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+
+Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
+Gui, 11:Add, Text, x400 y17 w150 , /РП_67
+Gui, 11:Add, Text, x400 y57 w150 , /РП_68
+Gui, 11:Add, Text, x400 y97 w150 , /РП_69
+Gui, 11:Add, Text, x400 y137 w150 , /РП_70
+Gui, 11:Add, Text, x400 y177 w150 , /РП_71
+Gui, 11:Add, Text, x400 y217 w150 , /РП_72
+Gui, 11:Add, Text, x400 y257 w150 , /РП_73
+Gui, 11:Add, Text, x400 y297 w150 , /РП_74
+Gui, 11:Add, Text, x400 y337 w150 , /РП_75
+Gui, 11:Add, Text, x400 y377 w150 , /РП_76
+Gui, 11:Add, Text, x400 y417 w150 , /РП_77
+Gui, 11:Add, Text, x400 y457 w150 , /РП_78
+Gui, 11:Add, Text, x400 y497 w150 , /РП_79
+Gui, 11:Add, Text, x400 y537 w150 , /РП_80
+Gui, 11:Add, Text, x400 y577 w150 , /РП_81
+Gui, 11:Add, Text, x400 y617 w150 , /РП_82
+
+Gui,11:Font, S11 C%Tsvet_1% Bold, %Shrift%
+Gui, 11:Add, Edit, x460 y15 w250 vSvoye_67, %Svoye_67%
+Gui, 11:Add, Edit, x460 y55 w250 vSvoye_18, %Svoye_68%
+Gui, 11:Add, Edit, x460 y95 w250 vSvoye_69, %Svoye_69%
+Gui, 11:Add, Edit, x460 y135 w250 vSvoye_70, %Svoye_70%
+Gui, 11:Add, Edit, x460 y175 w250 vSvoye_71, %Svoye_71%
+Gui, 11:Add, Edit, x460 y215 w250 vSvoye_72, %Svoye_72%
+Gui, 11:Add, Edit, x460 y255 w250 vSvoye_73, %Svoye_73%
+Gui, 11:Add, Edit, x460 y295 w250 vSvoye_74, %Svoye_74%
+Gui, 11:Add, Edit, x460 y335 w250 vSvoye_75, %Svoye_75%
+Gui, 11:Add, Edit, x460 y375 w250 vSvoye_76, %Svoye_76%
+Gui, 11:Add, Edit, x460 y415 w250 vSvoye_77, %Svoye_77%
+Gui, 11:Add, Edit, x460 y455 w250 vSvoye_78, %Svoye_78%
+Gui, 11:Add, Edit, x460 y495 w250 vSvoye_79, %Svoye_79%
+Gui, 11:Add, Edit, x460 y535 w250 vSvoye_80, %Svoye_80%
+Gui, 11:Add, Edit, x460 y575 w250 vSvoye_81, %Svoye_81%
+Gui, 11:Add, Edit, x460 y615 w250 vSvoye_82, %Svoye_82%
+
+
+Gui, 11:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects67, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects68, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects69, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects70 , C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects71, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects72, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects73, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects74, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects75, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects76, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects77, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects78, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects79, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects80, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects81, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects82, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+
+Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
+Gui, 11:Add, Text, x790 y17 w150 , /РП_83
+Gui, 11:Add, Text, x790 y57 w150 , /РП_84
+Gui, 11:Add, Text, x790 y97 w150 , /РП_85
+Gui, 11:Add, Text, x790 y137 w150 , /РП_86
+Gui, 11:Add, Text, x790 y177 w150 , /РП_87
+Gui, 11:Add, Text, x790 y217 w150 , /РП_88
+Gui, 11:Add, Text, x790 y257 w150 , /РП_89
+Gui, 11:Add, Text, x790 y297 w150 , /РП_90
+Gui, 11:Add, Text, x790 y337 w150 , /РП_91
+Gui, 11:Add, Text, x790 y377 w150 , /РП_92
+Gui, 11:Add, Text, x790 y417 w150 , /РП_93
+Gui, 11:Add, Text, x790 y457 w150 , /РП_94
+Gui, 11:Add, Text, x790 y497 w150 , /РП_95
+Gui, 11:Add, Text, x790 y537 w150 , /РП_96
+Gui, 11:Add, Text, x790 y577 w150 , /РП_97
+
+Gui,11:Font, S11 C%Tsvet_1% Bold, %Shrift%
+Gui, 11:Add, Edit, x850 y15 w250  vSvoye_83, %Svoye_83%
+Gui, 11:Add, Edit, x850 y55 w250  vSvoye_84, %Svoye_84%
+Gui, 11:Add, Edit, x850 y95 w250  vSvoye_85, %Svoye_85%
+Gui, 11:Add, Edit, x850 y135 w250 vSvoye_86, %Svoye_86%
+Gui, 11:Add, Edit, x850 y175 w250 vSvoye_87, %Svoye_87%
+Gui, 11:Add, Edit, x850 y215 w250 vSvoye_88, %Svoye_88%
+Gui, 11:Add, Edit, x850 y255 w250 vSvoye_89, %Svoye_89%
+Gui, 11:Add, Edit, x850 y295 w250 vSvoye_90, %Svoye_90%
+Gui, 11:Add, Edit, x850 y335 w250 vSvoye_91, %Svoye_91%
+Gui, 11:Add, Edit, x850 y375 w250 vSvoye_92, %Svoye_92%
+Gui, 11:Add, Edit, x850 y415 w250 vSvoye_93, %Svoye_93%
+Gui, 11:Add, Edit, x850 y455 w250 vSvoye_94, %Svoye_94%
+Gui, 11:Add, Edit, x850 y495 w250 vSvoye_95, %Svoye_95%
+Gui, 11:Add, Edit, x850 y535 w250 vSvoye_96, %Svoye_96%
+Gui, 11:Add, Edit, x850 y575 w250 vSvoye_97, %Svoye_97%
+
+
+
+Gui, 11:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects83, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects84, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects85, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects86, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects87, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects88, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects89, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects90, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects91, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects92, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects93, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects94, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects95, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects96, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects97, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+
+
+Gui, 11:Add, Picture, x1115 y605 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+
+Gui, 11:Show, w1200 h670, Редактор отыгровок команды
+return
+
+SelectObjects1:
+{
+FileSelectFile, Objects1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects2:
+{
+FileSelectFile, Objects2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects3:
+{
+FileSelectFile, Objects3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects4:
+{
+FileSelectFile, Objects4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects5:
+{
+FileSelectFile, Objects5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects6:
+{
+FileSelectFile, Objects6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects7:
+{
+FileSelectFile, Objects7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects8:
+{
+FileSelectFile, Objects8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects9:
+{
+FileSelectFile, Objects9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects10:
+{
+FileSelectFile, Objects10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects11:
+{
+FileSelectFile, Objects11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects12:
+{
+FileSelectFile, Objects12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects13:
+{
+FileSelectFile, Objects13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects14:
+{
+FileSelectFile, Objects13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects15:
+{
+FileSelectFile, Objects15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects16:
+{
+FileSelectFile, Objects16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects17:
+{
+FileSelectFile, Objects17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects18:
+{
+FileSelectFile, Objects18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects19:
+{
+FileSelectFile, Objects19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects20:
+{
+FileSelectFile, Objects20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects21:
+{
+FileSelectFile, Objects21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects22:
+{
+FileSelectFile, Objects22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects23:
+{
+FileSelectFile, Objects23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects24:
+{
+FileSelectFile, Objects24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects25:
+{
+FileSelectFile, Objects25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects26:
+{
+FileSelectFile, Objects26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects27:
+{
+FileSelectFile, Objects27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects28:
+{
+FileSelectFile, Objects28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects29:
+{
+FileSelectFile, Objects29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects30:
+{
+FileSelectFile, Objects30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects31:
+{
+FileSelectFile, Objects31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects32:
+{
+FileSelectFile, Objects32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects33:
+{
+FileSelectFile, Objects33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects34:
+{
+FileSelectFile, Objects34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects35:
+{
+FileSelectFile, Objects35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects36:
+{
+FileSelectFile, Objects36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects37:
+{
+FileSelectFile, Objects37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects38:
+{
+FileSelectFile, Objects38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects39:
+{
+FileSelectFile, Objects39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects40:
+{
+FileSelectFile, Objects40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects41:
+{
+FileSelectFile, Objects41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects42:
+{
+FileSelectFile, Objects42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects43:
+{
+FileSelectFile, Objects43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects44:
+{
+FileSelectFile, Objects44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects45:
+{
+FileSelectFile, Objects45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects46:
+{
+FileSelectFile, Objects46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects47:
+{
+FileSelectFile, Objects47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects48:
+{
+FileSelectFile, Objects48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+SelectObjects49:
+{
+FileSelectFile, Objects49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+SelectObjects50:
+{
+FileSelectFile, Objects50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+
+
+
+SelectObjects51:
+{
+FileSelectFile, Objects51, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects52:
+{
+FileSelectFile, Objects52, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects53:
+{
+FileSelectFile, Objects53, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects54:
+{
+FileSelectFile, Objects54, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects55:
+{
+FileSelectFile, Objects55, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects56:
+{
+FileSelectFile, Objects56, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects57:
+{
+FileSelectFile, Objects57, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects58:
+{
+FileSelectFile, Objects58, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects59:
+{
+FileSelectFile, Objects59, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+Return
+SelectObjects60:
+{
+FileSelectFile, Objects60, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects61:
+{
+FileSelectFile, Objects61, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects62:
+{
+FileSelectFile, Objects62, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects63:
+{
+FileSelectFile, Objects63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects64:
+{
+FileSelectFile, Objects63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects65:
+{
+FileSelectFile, Objects65, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects66:
+{
+FileSelectFile, Objects66, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects67:
+{
+FileSelectFile, Objects67, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects68:
+{
+FileSelectFile, Objects68, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects69:
+{
+FileSelectFile, Objects69, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects70:
+{
+FileSelectFile, Objects70, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects71:
+{
+FileSelectFile, Objects71, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects72:
+{
+FileSelectFile, Objects72, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects73:
+{
+FileSelectFile, Objects73, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects74:
+{
+FileSelectFile, Objects74, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects75:
+{
+FileSelectFile, Objects75, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects76:
+{
+FileSelectFile, Objects76, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects77:
+{
+FileSelectFile, Objects77, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects78:
+{
+FileSelectFile, Objects78, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects79:
+{
+FileSelectFile, Objects79, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects80:
+{
+FileSelectFile, Objects80, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects81:
+{
+FileSelectFile, Objects81, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects82:
+{
+FileSelectFile, Objects82, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects83:
+{
+FileSelectFile, Objects83, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects84:
+{
+FileSelectFile, Objects84, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects85:
+{
+FileSelectFile, Objects85, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects86:
+{
+FileSelectFile, Objects86, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects87:
+{
+FileSelectFile, Objects87, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects88:
+{
+FileSelectFile, Objects88, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects89:
+{
+FileSelectFile, Objects89, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects90:
+{
+FileSelectFile, Objects90, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects91:
+{
+FileSelectFile, Objects91, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects92:
+{
+FileSelectFile, Objects92, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects93:
+{
+FileSelectFile, Objects93, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects94:
+{
+FileSelectFile, Objects94, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects95:
+{
+FileSelectFile, Objects95, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects96:
+{
+FileSelectFile, Objects96, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects97:
+{
+FileSelectFile, Objects97, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
+SelectObjects98:
+{
+FileSelectFile, Objects98, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+SelectObjects99:
+{
+FileSelectFile, Objects99, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+SelectObjects100:
+{
+FileSelectFile, Objects100, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+return
 
 
 Bag:
@@ -707,6 +3496,261 @@ IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybo
 IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
+
+
+IniWrite, %Svoye_1%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_1
+IniWrite, %Svoye_2%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_2
+IniWrite, %Svoye_3%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_3
+IniWrite, %Svoye_4%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_4
+IniWrite, %Svoye_5%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_5
+IniWrite, %Svoye_6%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_6
+IniWrite, %Svoye_7%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_7
+IniWrite, %Svoye_8%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_8
+IniWrite, %Svoye_9%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_9
+IniWrite, %Svoye_10%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_10
+IniWrite, %Svoye_11%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_11
+IniWrite, %Svoye_12%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_12
+IniWrite, %Svoye_13%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_13
+IniWrite, %Svoye_14%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_14
+IniWrite, %Svoye_15%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_15
+IniWrite, %Svoye_16%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_16
+IniWrite, %Svoye_17%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_17
+IniWrite, %Svoye_18%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_18
+IniWrite, %Svoye_19%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_19
+IniWrite, %Svoye_20%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_20
+IniWrite, %Svoye_21%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_21
+IniWrite, %Svoye_22%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_22
+IniWrite, %Svoye_23%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_23
+IniWrite, %Svoye_24%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_24
+IniWrite, %Svoye_25%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_25
+IniWrite, %Svoye_26%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_26
+IniWrite, %Svoye_27%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_27
+IniWrite, %Svoye_28%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_28
+IniWrite, %Svoye_29%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_29
+IniWrite, %Svoye_30%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_30
+IniWrite, %Svoye_31%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_31
+IniWrite, %Svoye_32%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_32
+IniWrite, %Svoye_33%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_33
+IniWrite, %Svoye_34%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_34
+IniWrite, %Svoye_35%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_35
+IniWrite, %Svoye_36%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_36
+IniWrite, %Svoye_37%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_37
+IniWrite, %Svoye_38%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_38
+IniWrite, %Svoye_39%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_39
+IniWrite, %Svoye_40%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_40
+IniWrite, %Svoye_41%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_41
+IniWrite, %Svoye_42%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_42
+IniWrite, %Svoye_43%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_43
+IniWrite, %Svoye_44%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_44
+IniWrite, %Svoye_45%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_45
+IniWrite, %Svoye_46%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_46
+IniWrite, %Svoye_47%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_47
+IniWrite, %Svoye_48%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_48
+IniWrite, %Svoye_49%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_49
+IniWrite, %Svoye_50%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_50
+
+
+IniWrite, %Svoye_51%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_51
+IniWrite, %Svoye_52%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_52
+IniWrite, %Svoye_53%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_53
+IniWrite, %Svoye_54%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_54
+IniWrite, %Svoye_55%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_55
+IniWrite, %Svoye_56%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_56
+IniWrite, %Svoye_57%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_57
+IniWrite, %Svoye_58%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_58
+IniWrite, %Svoye_59%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_59
+IniWrite, %Svoye_60%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_60
+IniWrite, %Svoye_61%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_61
+IniWrite, %Svoye_62%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_62
+IniWrite, %Svoye_63%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_63
+IniWrite, %Svoye_64%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_64
+IniWrite, %Svoye_65%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_65
+IniWrite, %Svoye_66%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_66
+IniWrite, %Svoye_67%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_67
+IniWrite, %Svoye_68%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_68
+IniWrite, %Svoye_69%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_69
+IniWrite, %Svoye_70%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_70
+IniWrite, %Svoye_71%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_71
+IniWrite, %Svoye_72%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_72
+IniWrite, %Svoye_73%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_73
+IniWrite, %Svoye_74%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_74
+IniWrite, %Svoye_75%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_75
+IniWrite, %Svoye_76%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_76
+IniWrite, %Svoye_77%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_77
+IniWrite, %Svoye_78%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_78
+IniWrite, %Svoye_79%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_79
+IniWrite, %Svoye_80%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_80
+IniWrite, %Svoye_81%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_81
+IniWrite, %Svoye_82%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_82
+IniWrite, %Svoye_83%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_83
+IniWrite, %Svoye_84%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_84
+IniWrite, %Svoye_85%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_85
+IniWrite, %Svoye_86%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_86
+IniWrite, %Svoye_87%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_87
+IniWrite, %Svoye_88%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_88
+IniWrite, %Svoye_89%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_89
+IniWrite, %Svoye_90%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_90
+IniWrite, %Svoye_91%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_91
+IniWrite, %Svoye_92%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_92
+IniWrite, %Svoye_93%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_93
+IniWrite, %Svoye_94%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_94
+IniWrite, %Svoye_95%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_95
+IniWrite, %Svoye_96%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_96
+IniWrite, %Svoye_97%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_97
+
+
+
+IniWrite, %11Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
+IniWrite, %21Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
+IniWrite, %31Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 31Redakt
+IniWrite, %41Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 41Redakt
+IniWrite, %51Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 51Redakt
+IniWrite, %61Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 61Redakt
+IniWrite, %71Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 71Redakt
+IniWrite, %81Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 81Redakt
+IniWrite, %91Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 91Redakt
+IniWrite, %101Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 101Redakt
+IniWrite, %111Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 111Redakt
+IniWrite, %121Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 121Redakt
+IniWrite, %131Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 131Redakt
+IniWrite, %141Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 141Redakt
+IniWrite, %151Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 151Redakt
+IniWrite, %161Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 161Redakt
+IniWrite, %171Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 171Redakt
+IniWrite, %181Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 181Redakt
+IniWrite, %191Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 191Redakt
+IniWrite, %201Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 201Redakt
+IniWrite, %211Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 211Redakt
+IniWrite, %221Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 221Redakt
+IniWrite, %231Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 231Redakt
+IniWrite, %241Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 241Redakt
+IniWrite, %251Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 251Redakt
+IniWrite, %261Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 261Redakt
+IniWrite, %271Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 271Redakt
+IniWrite, %281Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 281Redakt
+IniWrite, %291Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 291Redakt
+IniWrite, %301Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 301Redakt
+IniWrite, %311Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 311Redakt
+IniWrite, %321Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 321Redakt
+IniWrite, %331Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 331Redakt
+IniWrite, %341Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 341Redakt
+IniWrite, %351Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 351Redakt
+IniWrite, %361Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 361Redakt
+IniWrite, %371Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 371Redakt
+IniWrite, %381Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 381Redakt
+IniWrite, %391Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 391Redakt
+IniWrite, %401Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 401Redakt
+IniWrite, %411Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 411Redakt
+IniWrite, %421Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 421Redakt
+IniWrite, %431Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 431Redakt
+IniWrite, %441Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 441Redakt
+IniWrite, %451Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 451Redakt
+IniWrite, %461Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 461Redakt
+IniWrite, %471Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 471Redakt
+IniWrite, %481Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 481Redakt
+IniWrite, %491Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 491Redakt
+IniWrite, %501Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 501Redakt
+
+IniWrite, %Objects1%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
+IniWrite, %Objects2%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
+IniWrite, %Objects3%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects3
+IniWrite, %Objects4%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects4
+IniWrite, %Objects5%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects5
+IniWrite, %Objects6%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects6
+IniWrite, %Objects7%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects7
+IniWrite, %Objects8%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects8
+IniWrite, %Objects9%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects9
+IniWrite, %Objects10%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects10
+IniWrite, %Objects11%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects11
+IniWrite, %Objects12%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects12
+IniWrite, %Objects13%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects13
+IniWrite, %Objects14%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects14
+IniWrite, %Objects15%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects15
+IniWrite, %Objects16%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects16
+IniWrite, %Objects17%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects17
+IniWrite, %Objects18%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects18
+IniWrite, %Objects19%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects19
+IniWrite, %Objects20%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects20
+IniWrite, %Objects21%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects21
+IniWrite, %Objects22%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects22
+IniWrite, %Objects23%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects23
+IniWrite, %Objects24%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects24
+IniWrite, %Objects25%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects25
+IniWrite, %Objects26%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects26
+IniWrite, %Objects27%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects27
+IniWrite, %Objects28%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects28
+IniWrite, %Objects29%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects29
+IniWrite, %Objects30%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects30
+IniWrite, %Objects31%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects31
+IniWrite, %Objects32%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects32
+IniWrite, %Objects33%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects33
+IniWrite, %Objects34%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects34
+IniWrite, %Objects36%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects36
+IniWrite, %Objects37%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects37
+IniWrite, %Objects38%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects38
+IniWrite, %Objects39%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects39
+IniWrite, %Objects40%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects40
+IniWrite, %Objects41%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects41
+IniWrite, %Objects42%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects42
+IniWrite, %Objects43%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects43
+IniWrite, %Objects44%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects44
+IniWrite, %Objects45%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects45
+IniWrite, %Objects46%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects46
+IniWrite, %Objects47%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects47
+IniWrite, %Objects48%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects48
+IniWrite, %Objects49%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects49
+IniWrite, %Objects50%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects50
+
+IniWrite, %Objects51%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects51
+IniWrite, %Objects52%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects52
+IniWrite, %Objects53%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects53
+IniWrite, %Objects54%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects54
+IniWrite, %Objects55%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects55
+IniWrite, %Objects56%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects56
+IniWrite, %Objects57%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects57
+IniWrite, %Objects58%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects58
+IniWrite, %Objects59%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects59
+IniWrite, %Objects60%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects60
+IniWrite, %Objects61%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects61
+IniWrite, %Objects62%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects62
+IniWrite, %Objects63%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects63
+IniWrite, %Objects64%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects64
+IniWrite, %Objects65%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects65
+IniWrite, %Objects66%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects66
+IniWrite, %Objects67%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects67
+IniWrite, %Objects68%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects68
+IniWrite, %Objects69%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects69
+IniWrite, %Objects70%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects70
+IniWrite, %Objects71%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects71
+IniWrite, %Objects72%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects72
+IniWrite, %Objects73%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects73
+IniWrite, %Objects74%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects74
+IniWrite, %Objects75%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects75
+IniWrite, %Objects76%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects76
+IniWrite, %Objects77%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects77
+IniWrite, %Objects78%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects78
+IniWrite, %Objects79%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects79
+IniWrite, %Objects70%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects80
+IniWrite, %Objects81%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects81
+IniWrite, %Objects82%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects82
+IniWrite, %Objects83%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects83
+IniWrite, %Objects84%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects84
+IniWrite, %Objects86%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects86
+IniWrite, %Objects87%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects87
+IniWrite, %Objects88%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects88
+IniWrite, %Objects89%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects89
+IniWrite, %Objects90%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects90
+IniWrite, %Objects91%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects91
+IniWrite, %Objects92%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects92
+IniWrite, %Objects93%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects93
+IniWrite, %Objects94%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects94
+IniWrite, %Objects95%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects95
+IniWrite, %Objects96%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects96
+IniWrite, %Objects97%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects97
+
+
+
+
 
 
 if (Pol="Мужской")
