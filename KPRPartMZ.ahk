@@ -5993,7 +5993,7 @@ if rand = 112
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 SendChat("say Сейчас пройдёт тренировка:" Word ". ","  " zaderzhka " ")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -6014,7 +6014,7 @@ Return
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 SendChat("say На этом тренировка:" Word " окончена. ","  " zaderzhka " ")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, Destroy
 Return
 
@@ -6037,7 +6037,7 @@ if rand = 7
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 SendChat("say Сейчас пройдёт мероприятие:" Word ". ","  " zaderzhka " ")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -6073,7 +6073,7 @@ return
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 SendChat("say На этом мероприятие:" Word " окончено. ","  " zaderzhka " "), NumberCall
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, Destroy
 Return
 
@@ -6124,7 +6124,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Заступил" floor " на пост:" Post " // Бригада: " Patrol " ", "1000")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_5.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 Loop, %Skolko%
@@ -6138,7 +6138,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Пост:" Post " // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 }
 sleep 1000
 IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
@@ -6148,7 +6148,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, Destroy
 sleep 1000
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_4.mp3
@@ -6166,7 +6166,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_3.mp3
 sleep 10000
 Gui, Destroy
@@ -6209,7 +6209,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него"  floor " ", "500")
 SendChat("r [" TAG "] Выехал" female " на патрулирование города // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
 Loop, %Skolko%
 {
@@ -6222,7 +6222,7 @@ Loop, %Skolko%
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
     SendChat("r [" TAG "] Патрулирование города // Бригада:" Patrol " ", "500")
     SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat("screenshot", "500")
+    SendChat(" " Skrin_1 " ", "500")
 }
 sleep 1000
 SendPlay {Enter}
@@ -6230,7 +6230,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Окончил" floor " патрулирование города. // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 Return
@@ -6244,7 +6244,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Окончил" floor " патрулирование города. // Бригада: " Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 10000
@@ -6280,7 +6280,7 @@ SendChat("do КПК висит на поясе.", "1500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1500")
 SendChat("r [" TAG "] Принял" floor "  вызов:" to " // Бригада:" Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Return
 
 
@@ -6294,7 +6294,7 @@ SendChat("me снял" floor " КПК с пояса и, зажав кнопку,
 SendChat("r [" TAG "] Ложный // Вызов: " to " // Бригада: " Patrol ". ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 SendChat("cancel", "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Return
 
 
@@ -6306,7 +6306,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Обработан на месте // Вызов:" to " // Бригада:" Patrol ". ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Return
 
 :?:/Вызов_2::
@@ -6322,7 +6322,7 @@ SendChat("hospital", "500")
 SendChat("me зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Госпитализирован // Вызов:" to " // Бригада:" Patrol ".", "1000")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Return
 
 
@@ -6429,7 +6429,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_5.mp3
 Loop, %Skolko%
 {
@@ -6442,7 +6442,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("ro [" Bol_ro_1 "] Патрулирование республики // Бригада:" Patrol_1 " ", "1000")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 }
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
@@ -6451,7 +6451,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("ro [" Bol_ro_1 "] Завершил" floor " патруль республики // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_4.mp3
 Gui, Destroy
 sleep 1000
@@ -6466,7 +6466,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("ro [" Bol_ro_1 "] Завершил" female " патруль республики // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_3.mp3
 Gui, Destroy
 sleep 10000
@@ -6511,7 +6511,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Вылетел" floor " на воздушное патрулирование города // Бригада: " Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Sky_1.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 Loop, %Skolko%
@@ -6525,7 +6525,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Воздушное патрулирование города // Бригада: " Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 }
 sleep 1000
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
@@ -6535,7 +6535,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Окончил" floor " воздушное патрулирование города // Бригада: " Patrol " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 Gui, Destroy
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Sky_3.mp3
 Return
@@ -6550,7 +6550,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "]  Окончил" floor " воздушное патрулирование города // Бригада: " Patrol " ", "1000")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Sky_4.mp3
 Gui, Destroy
 sleep 10000
@@ -6591,7 +6591,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование р. Провинция // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_5.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 Loop, %Skolko%
@@ -6605,14 +6605,14 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование р. Провинция // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 }
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция  // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_4.mp3
 Gui, Destroy
 Return
@@ -6627,7 +6627,7 @@ SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" Bol_ro_1 "] Завершил" female " патруль республики // Бригада:" Patrol_1 " ", "500")
 SendChat("me отжав кнопку, закончил" female " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_3.mp3
 Gui, Destroy
 sleep 10000
@@ -6661,7 +6661,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_5.mp3
 Loop, %Skolko%
 {
@@ -6674,14 +6674,14 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Продолжаю дежурство на посту:Регистратура. ", "1000")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 }
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 SendChat("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_4.mp3
 Gui, Destroy
 Return
@@ -6693,7 +6693,7 @@ SendChat("do КПК висит на поясе.", "1000")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 SendChat("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("screenshot", "500")
+SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_3.mp3
 Gui, Destroy
 sleep 10000

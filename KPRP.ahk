@@ -287,14 +287,13 @@ IniRead, Bol_ro, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
 
-IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, Apps, FonVybor
+IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniRead, Zaderzhka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
 IniRead, Zaderzhka_lektsiya, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
 IniRead, Shrift, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniRead, Tsvet, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
-
-
+IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 
 if JWI=ERROR
 JWI=Студент
@@ -322,10 +321,9 @@ if FonVybor=ERROR
 FonVybor=
 if pol=ERROR
 pol=Мужской
-if Skrin_1=ERROR
-Skrin_1=Включен
-if gameFolder=ERROR
-gameFolder=
+if Skrinshot=ERROR
+Skrinshot=Включен
+
 
 if FonVybor=ERROR
 FonVybor=0
@@ -334,10 +332,6 @@ oText := { fontFamily: "Arial"
 , fontOptions: "cwhite s10 bold q5"
 , textOptions: "x" . A_ScreenWidth - 50 . " y" . A_ScreenHeight - 140 . " right"
 , text: "KPRPKRP | " Name " " Surname "`n" Bol "`n" JWI "`n" . A_Year . "." . A_MM . "." . A_DD . "`n" . A_Hour . ":" . A_Min . ":" . A_Sec . "`n"}
-
-
-
-
 
 
 
@@ -391,6 +385,17 @@ stol =do У окна стоит стол.
 tumba=say Ваша задача — одновременно взять кружку и сказать что-то. И потом ее поставить обратно точно также.
 tumba1=
 }
+
+if (Skrinshot="Включен")
+{
+Skrin_1=screenshot
+}
+if (Skrinshot="Выключен")
+{
+Skrin_1=
+}
+
+
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -597,43 +602,29 @@ MZ:
 
 
 
-Kon:
-Gui, 3:Destroy,
-Return
-
-
-Kon_8:
-Gui, 10:Destroy,
-Return
-
-Kon_9:
-Gui, 11:Destroy,
-Return
 
 
 
 Vania:
-
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+Gui, 6:Destroy,
+Gui, 6:Add, Picture, x0 y0 w96   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
+Gui, 6:Add, Picture, x360 y630 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
-Gui, 12:Destroy,
-Gui, 12:Add, Picture, x0 y0 w96   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 12:Add, Picture, x360 y630 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
-
-Gui, 12:Font, S15 C%Tsvet_1% Bold, Consolas
-Gui, 12:Add, DropDownList, x90 y40 w295 vSkrin_1, %Skrin_1%||Включен|Выключен
-Gui, 12:Add, ComboBox, x90 y135 w295 vZaderzhka, %Zaderzhka%||3500|4000|4500|5000|5500|6000|6500|7000
+Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
+Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
+Gui, 6:Add, ComboBox, x90 y135 w295 vZaderzhka, %Zaderzhka%||3500|4000|4500|5000|5500|6000|6500|7000
 
 if FonVybor=
-Gui, 12:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
+Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
 else
-Gui, 12:Font, S15 C%Tsvet_1% Bold, Consolas
-Gui, 12:Add, Button, x90 y225 w295 gSvoy_Fon, Установлен свой фон
-Gui, 12:Add, ComboBox, x90 y325 w295 vShrift, %Shrift%||Arial|Consolas|Courier New|Comic Sans MS|Lucida Console|MS Sans Serif|Segoe UITimes New Roman
-Gui, 12:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
-Gui, 12:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
-Gui, 12:Add, ComboBox, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
-Gui, 12:show, center , Настройки
+Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
+Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Установлен свой фон
+Gui, 6:Add, ComboBox, x90 y325 w295 vShrift, %Shrift%||Arial|Consolas|Courier New|Comic Sans MS|Lucida Console|MS Sans Serif|Segoe UITimes New Roman
+Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
+Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
+Gui, 6:Add, ComboBox, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
+Gui, 6:show, center , Настройки
 Return
 
 Test:
@@ -660,6 +651,7 @@ Return
 FileDelete, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Dannyye.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\selected.ini
 Return
 
 
@@ -695,12 +687,10 @@ Return
 
 
 Change:
-
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
 Sleep 2500
 
 Gui, Submit
-
 IniWrite, %JWI%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniWrite, %TAG%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniWrite, %Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -708,22 +698,15 @@ IniWrite, %Surname%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Surname
 IniWrite, %Middle_Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle_Name
 IniWrite, %Bol_ro%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniWrite, %Rank%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Rank
-IniWrite, %TAG_1%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG_1
-IniWrite, %Surname_1%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Surname_1
 IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
+IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
 IniWrite, %Zaderzhka_lektsiya%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
-IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
-IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, Apps, FonVybor
+IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
-
-
-
-
-
 
 
 if (Pol="Мужской")
@@ -737,6 +720,14 @@ Floor = а
 Female = ла
 }
 
+if (Skrinshot="Включен")
+{
+Skrin_1=screenshot
+}
+if (Skrinshot="Выключен")
+{
+Skrin_1=
+}
 
 
 Reload
@@ -813,6 +804,7 @@ return
 
 GuiClose:
 2GuiClose:
+5GuiClose:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_18.mp3
 Sleep 1700
 ExitApp
