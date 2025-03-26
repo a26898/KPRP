@@ -8,9 +8,9 @@ Gui, 5:Add, Picture, x0 y24 w1300 h700,
 Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 Gui, 5:Font, S10   Bold, %Shrift%
 Gui, 5:Add, Tab2,  x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans, Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП
-MsgBox, 64, Обновление, Добавлена возможность отключения автоскрина, добавлена возможность добавления ваших отыгровок (своих), оптимизирована работа кода.
 
-Gui, 5:Add, Picture, x10 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Clear.png
+
+Gui, 5:Add, Picture, x10 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png

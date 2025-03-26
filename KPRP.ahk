@@ -1186,26 +1186,20 @@ Return
 
 
 UZ:
-MsgBox, Функционал на данный момент отсутствует.
-FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+#Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartUZ.ahk
 Return
 GUVD:
-MsgBox, Функционал на данный момент отсутствует.
-FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+#Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartGUVD.ahk
 Return
 GIBDD:
-MsgBox, Функционал на данный момент отсутствует.
-FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+#Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartGIBDD.ahk
 Return
 Army:
-MsgBox, Функционал на данный момент отсутствует.
-FileDelete, C:\ProgramData\KPRP\KPRP-main\selected.ini
+#Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartArmy.ahk
 Return
-
-
-
 MZ:
 #Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartMZ.ahk
+Return
 
 0001Redakt:
 Sleep 150
@@ -2535,6 +2529,7 @@ Return
 FileDelete, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Dannyye.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\selected.ini
 Return
 
@@ -3849,6 +3844,10 @@ return
 GuiClose:
 2GuiClose:
 5GuiClose:
+8GuiClose:
+9GuiClose:
+12GuiClose:
+13GuiClose:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_18.mp3
 Sleep 1700
 ExitApp
