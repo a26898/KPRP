@@ -478,12 +478,7 @@ Return
 
 0012MZ7:
 SendPlay {Enter}
-SendChat("say Для получения медицинской карты вам необходимо подать электронное заявление на государственный портал. ", " " zaderzhka " ")
-SendChat("b https://forum.gtaprovince.ru/topic/869358-minzdrav-«emias-provincii»/ Вот ссылка ниже смотрите, есть запись и результаты. ", " " zaderzhka " ")
-SendChat("say После подачи заявки ожидайте, в течении 48 часов ее рассмотрят после, ожидайте в спец связи с вами свяжутся. ", " " zaderzhka " ")
-SendChat("say Если после прохождения 48 часов вас не добавили в спец связь, посмотрите результаты вашей заявки, скорее всего вам ее отказали.", " " zaderzhka " ")
-SendChat("say Если вас добавили в спец связь ожидайте, вас пригласит любой свободный врач! ", " " zaderzhka " ")
-SendChat("say Вам не обязательно находится в больнице можете заниматься своими делами, просто посматривайте спец связь.", " " zaderzhka " ")
+SendChat("say Медицинские карты выдаются с понедельника по субботу с 10:00 до 20:00. ", " " zaderzhka " ")
 Return
 
 
@@ -5609,124 +5604,96 @@ SendChat("say Я выпишу Вам Мелоксикам. Его стоимос
 Return
 
 
-
-
 :?:/МК_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, передайте свой паспорт.", "  " zaderzhka " ")
+SendChat("say Для оформления мне нужен паспорт, удостоверяющий Вашу личность передайте мне его. ", "  " zaderzhka " ")
+Return
+
+
+:?:/МК_11::
+SendPlay {Enter}
+SendChat("say Покажите Ваше удостоверение.", "  " zaderzhka " ")
 Return
 
 :?:/МК_2::
 SendPlay {Enter}
-SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
-SendChat("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
-SendChat("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Жалобы на здоровье есть?", "  " zaderzhka " ")
-Return
+SendChat("me взяв паспорт из рук человека напротив, изучил" floor " его ", "  " zaderzhka " ")
+SendChat("todo Отлично*передав документы гражданину напротив ", "  " zaderzhka " ")
 
 :?:/МК_3::
 SendPlay {Enter}
-SendChat("say Пожалуйста, снимите обувь вместо со всеми аксессуарами.  ", "  " zaderzhka " ")
-SendChat("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
-SendChat("me поднял" floor " фиксатор максимально наверх", "  " zaderzhka " ")
-SendChat("say Вставайте на платформу. Затылок, ягодицы и пятки должны соприкасаться с ростомером.", "  " zaderzhka " ")
+SendChat("say Приступим. Установим Ваше психическое состояние. Как себя чувствуете? ", "  " zaderzhka " ")
 Return
 
-
-:?:/МК_33::
-SendPlay {Enter}
-SendChat("say Пожалуйста, снимите обувь вместо со всеми аксессуарами.  ", "  " zaderzhka " ")
-SendChat("say Так же, снимите и сложите на койку/стол всю свою амуницию, например бронежилет и оружие.", "  " zaderzhka " ")
-SendChat("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
-SendChat("me поднял" floor " фиксатор максимально наверх", "  " zaderzhka " ")
-SendChat("say Вставайте на платформу. Затылок, ягодицы и пятки должны соприкасаться с ростомером.", "  " zaderzhka " ")
-Return
 
 :?:/МК_4::
+Random, rand, 1, 15
+if rand = 1
+	Word := "РП, ПГ, 33"
+if rand = 2
+	Word := "ДМ, СК, МГ"
+if rand = 3
+	Word := "ТК, РК, ДБ"
+if rand = 4
+	Word :=	"ДБ, ДБ, ТК"
+if rand = 5
+	Word :=	"ВХ, ПГ, МГ"
+if rand = 6
+	Word :=	"БХ, РВК, ДБ"
+if rand = 7
+	Word :=	"ДБ, МГ, ДБ"
+if rand = 8
+	Word :=	"ПГ, РП, 33"
+if rand = 9
+	Word :=	"РВК, ООС, ИС"
+if rand = 10
+	Word :=	"РК, СК, ДБ"
+if rand = 11
+	Word :=	"33, ДМ, CК"
+if rand = 12
+	Word :=	"ДМ, ДБ, ТК"
+if rand = 13
+	Word :=	"РК, ТК, CК"
+if rand = 14
+	Word :=	"СК, МГ, РК"
+if rand = 15
+	Word :=	"МГ, ООС, ДБ"
 SendPlay {Enter}
-SendChat("me опустив фиксатор до уровня головы, посмотрел" floor " на показатели измерения", "  " zaderzhka " ")
-SendChat("do Какой рост у пациента?", "  " zaderzhka " ")
+SendChat("say Хорошо. Как можно расшифровать аббревиатуры "Word "? ", "  " zaderzhka " ")
 Return
 
 :?:/МК_5::
 SendPlay {Enter}
-SendChat("me посмотрел" floor " на показатели взвешивания", "  " zaderzhka " ")
-SendChat("do Какой вес у пациента?", "  " zaderzhka " ")
+SendChat("say Теперь изучим ваше физическое состояние. Назовите ваш рост и вес. ", "  " zaderzhka " ")
 Return
 
 :?:/МК_6::
 SendPlay {Enter}
-SendChat("say Хорошо, можете слезать и одевать ваши вещи. Осмотр окончен.", "  " zaderzhka " ")
+SendChat("say Хорошо. Сейчас я измерю давление, вытягивайте левую руку и закатайте рукав.", "  " zaderzhka " ") 
 Return
 
 :?:/МК_7::
-Random, rand, 1, 6
-if rand = 1
-	Word := "желтым"
-if rand = 2
-	Word := "зеленым"
-if rand = 3
-	Word := "черным"
-if rand = 4
-	Word :=	"красным"
-if rand = 5
-	Word :=	"коричневым"
-if rand = 6
-	Word :=	"розовый"	
 SendPlay {Enter}
-SendChat(" " stol " ", "  " zaderzhka " ")
-SendChat("do На столе лежит кубик. ", "  " zaderzhka " ")
-SendChat("do Стороны кубика имеют:желтый, коричневый, розовый, зеленый, красный, черный цвет.  ", "  " zaderzhka " ")
-SendChat("say Ваша задача — подбросить кубик, чтобы он выпал стороной с " Word " цветом. ", "  " zaderzhka " ")
+SendChat(" " stol "  ", "  " zaderzhka " ")
+SendChat("do На столе расположен тонометр. ", "  " zaderzhka " ")
+SendChat("me взяв тонометр со стола и закрепив на руке у пациента, включил" floor " прибор ", "  " zaderzhka " ")
+SendChat("do Давление гражданина в норме? ", "  " zaderzhka " ")
 Return
 
 :?:/МК_8::
-Random, rand, 1, 15
-if rand = 1
-	Word := "РП, ПГ"
-if rand = 2
-	Word := "ДМ, СК"
-if rand = 3
-	Word := "ТК, РК"
-if rand = 4
-	Word :=	"ДБ, ДБ"
-if rand = 5
-	Word :=	"ВХ, ПГ"
-if rand = 6
-	Word :=	"БХ, РВК"
-if rand = 7
-	Word :=	"ДБ, МГ"
-if rand = 8
-	Word :=	"ПГ, РП"
-if rand = 9
-	Word :=	"РВК, ООС"
-if rand = 10
-	Word :=	"РК, СК"
-if rand = 11
-	Word :=	"33, ДМ"
-if rand = 12
-	Word :=	"ДМ, ДБ"
-if rand = 13
-	Word :=	"РК, ТК"
-if rand = 14
-	Word :=	"СК, МГ"
-if rand = 15
-	Word :=	"МГ, ООС"
 SendPlay {Enter}
-SendChat("say Сейчас пройдет психологическое тестирование.", "  " zaderzhka " ")
-SendChat("say Вам будет задано несколько вопросов - вы должны дать ответ. ", "  " zaderzhka " ")
-SendChat("say Что такое " Word "? ", "  " zaderzhka " ")
-Return
+SendChat("me сняв тонометр, положил" floor " его на стол ", "  " zaderzhka " ")
 
 :?:/МК_9::
 SendPlay {Enter}
-SendChat(" " tumba " ", "  " zaderzhka " ")
-SendChat(" " tumba1 " ", "  " zaderzhka " ")
+SendChat("todo Поднимите верхнюю часть одежды, пожалуйста*взяв стетоскоп в руки", "  " zaderzhka " ") 
+SendChat("me начал" floor " слушать грудную клетку пациента ", "  " zaderzhka " ")
+SendChat("do Слышны ли посторонние звуки в области грудной клетки пациента? ", "  " zaderzhka " ")
 Return
 
 :?:/МК_10::
 SendPlay {Enter}
-SendChat("say Передайте вашу медкарту.", "  " zaderzhka " ")
+SendChat("say Вам нужно получить или продлить медицинскую карту? Если продлить, то передайте вашу медкарту.", "  " zaderzhka " ")
 Return
 
 
@@ -5758,8 +5725,7 @@ Return
 
 :?:/МК_13::
 SendPlay {Enter}
-SendChat("say Вы будете внесены во временный запрет на получение медицинской карты. ", "  " zaderzhka " ")
-SendChat("say Приходите через 7 дней, по окончанию срока данного запрета. ", "  " zaderzhka " ")
+SendChat("say Вы не прошли медицинский осмотр, приходите в следующий раз.", "  " zaderzhka " ")
 Return
 
 
@@ -8013,34 +7979,32 @@ Medicine81:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h300 w500,
 
-
-
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /МК_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /МК_2
-Gui, 3:Add, Text, x10 y55 h400 w420 +BackgroundTrans, /МК_3 (/33 для МВД)
-Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /МК_4
-Gui, 3:Add, Text, x10 y95 h500 w370 +BackgroundTrans, /МК_5
-Gui, 3:Add, Text, x10 y115 h500 w370 +BackgroundTrans, /МК_6
-Gui, 3:Add, Text, x10 y135 h500 w370 +BackgroundTrans, /МК_7
-Gui, 3:Add, Text, x10 y155 h500 w370 +BackgroundTrans, /МК_8
-Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /МК_9
-Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /МК_10
-Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /МК_11
-Gui, 3:Add, Text, x10 y235  h500 w370 +BackgroundTrans, /МК_12
-Gui, 3:Add, Text, x10 y255  h500 w370 +BackgroundTrans, /МК_13
+Gui, 3:Add, Text, x10 y15 h200 w420 +BackgroundTrans, /МК_1 (/11 для госников)
+Gui, 3:Add, Text, x10 y35 h200 w420 +BackgroundTrans, /МК_2
+Gui, 3:Add, Text, x10 y55 h400 w420 +BackgroundTrans, /МК_3 
+Gui, 3:Add, Text, x10 y75 h500 w420 +BackgroundTrans, /МК_4
+Gui, 3:Add, Text, x10 y95 h500 w420 +BackgroundTrans, /МК_5
+Gui, 3:Add, Text, x10 y115 h500 w420 +BackgroundTrans, /МК_6
+Gui, 3:Add, Text, x10 y135 h500 w420 +BackgroundTrans, /МК_7
+Gui, 3:Add, Text, x10 y155 h500 w420 +BackgroundTrans, /МК_8
+Gui, 3:Add, Text, x10 y175 h500 w420 +BackgroundTrans, /МК_9
+Gui, 3:Add, Text, x10 y195  h500 w420 +BackgroundTrans, /МК_10
+Gui, 3:Add, Text, x10 y215  h500 w420 +BackgroundTrans, /МК_11
+Gui, 3:Add, Text, x10 y235  h500 w420 +BackgroundTrans, /МК_12
+Gui, 3:Add, Text, x10 y255  h500 w420 +BackgroundTrans, /МК_13
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x170 y15 h500 w370 +BackgroundTrans, [Попросить паспорт]
+Gui, 3:Add, Text, x170 y15 h500 w370 +BackgroundTrans, [Попросить паспорт или удостоверение]
 Gui, 3:Add, Text, x170 y35 h500 w370 +BackgroundTrans, [Изучение паспорта]
-Gui, 3:Add, Text, x170 y55 h500 w370 +BackgroundTrans, [Попросить снять обувь]
-Gui, 3:Add, Text, x170 y75 h500 w370 +BackgroundTrans, [Измерить рост]
-Gui, 3:Add, Text, x170 y95 h500 w370 +BackgroundTrans, [Измерить вес]
-Gui, 3:Add, Text, x170 y115 h500 w370 +BackgroundTrans,  [Осмотр окончен]
-Gui, 3:Add, Text, x170 y135 h500 w370 +BackgroundTrans,  [Психологическое тестирование (try)]
-Gui, 3:Add, Text, x170 y155 h500 w370 +BackgroundTrans,  [Психологическое тестирование (Термины)]
-Gui, 3:Add, Text, x170 y175 h500 w770 +BackgroundTrans,  [Психологическое тестирование (todo) только для сотрудников]
+Gui, 3:Add, Text, x170 y55 h500 w370 +BackgroundTrans, [Как себя чувствуете?]
+Gui, 3:Add, Text, x170 y75 h500 w370 +BackgroundTrans, [Термины]
+Gui, 3:Add, Text, x170 y95 h500 w370 +BackgroundTrans, [Попросить назвать рост и вес]
+Gui, 3:Add, Text, x170 y115 h500 w370 +BackgroundTrans,  [Попросить закатить рукав]
+Gui, 3:Add, Text, x170 y135 h500 w370 +BackgroundTrans,  [Давление гражданина в норме?]
+Gui, 3:Add, Text, x170 y155 h500 w370 +BackgroundTrans,  [Попросить поднять верхнюю одежду]
+Gui, 3:Add, Text, x170 y175 h500 w770 +BackgroundTrans,  [Послушать человека]
 Gui, 3:Add, Text, x170 y195  h500 w370 +BackgroundTrans, [Попросить медкарту]
 Gui, 3:Add, Text, x170 y215  h500 w370 +BackgroundTrans, [Выдать медкарту (в случае продления)]
 Gui, 3:Add, Text, x170 y235  h500 w370 +BackgroundTrans, [Выдать медкарту (в случае получения)]
@@ -8048,6 +8012,7 @@ Gui, 3:Add, Text, x170 y255  h500 w370 +BackgroundTrans, [Отказать в в
 
 Gui, 3:show, center h285 w620, Медкарта
 Return
+
 
 
 
