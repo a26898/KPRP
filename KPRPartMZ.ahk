@@ -5683,10 +5683,11 @@ Return
 :?:/МК_8::
 SendPlay {Enter}
 SendChat("me сняв тонометр, положил" floor " его на стол ", "  " zaderzhka " ")
+SendChat("todo Поднимите верхнюю часть одежды, пожалуйста*взяв стетоскоп в руки", "  " zaderzhka " ")
+Return
 
 :?:/МК_9::
-SendPlay {Enter}
-SendChat("todo Поднимите верхнюю часть одежды, пожалуйста*взяв стетоскоп в руки", "  " zaderzhka " ") 
+SendPlay {Enter} 
 SendChat("me начал" floor " слушать грудную клетку пациента ", "  " zaderzhka " ")
 SendChat("do Слышны ли посторонние звуки в области грудной клетки пациента? ", "  " zaderzhka " ")
 Return
