@@ -11,6 +11,8 @@ Gui, 13:Add, Tab2,  x0 y0 w1380 h28 c%Tsvet% +BackgroundTrans, Общее
 Gui, 13:Add, Picture, x10 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 13:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 13:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 13:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 13:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gInfoDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png 
 Gui, 13:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 13:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 
@@ -756,4 +758,537 @@ SendPlay {Enter}
 SendChat("say Клевета, то есть распространение заведомо ложных сведений,", "  " zaderzhka " ")
 SendChat("say порочащих честь и достоинство другого лица или подрывающих", "  " zaderzhka " ")
 SendChat("say его репутацию. Штраф - 20.000 рублей.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.1::
+SendPlay {Enter}
+SendChat("say Получение должностным лицом взятки в виде денег или", "  " zaderzhka " ")
+SendChat("say другого имущества, прав или услуг имущественного", "  " zaderzhka " ")
+SendChat("say характера за осуществление очевидно незаконных", "  " zaderzhka " ")
+SendChat("say действий (бездействия). Штраф в полуторакратном", "  " zaderzhka " ")
+SendChat("say размере от полученной взятки в случае её получения", "  " zaderzhka " ")
+SendChat("say в виде денег или другого имущества, а также в", "  " zaderzhka " ")
+SendChat("say размере 50.000 рублей в случае её получения в виде", "  " zaderzhka " ")
+SendChat("say прав или услуг имущественного характера, а также", "  " zaderzhka " ")
+SendChat("say арест сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+
+:?:/УК_5.2::
+SendPlay {Enter}
+SendChat("say Дача взятки должностному лицу лично или через", "  " zaderzhka " ")
+SendChat("say посредника, равно как и попытка дачи взятки.", "  " zaderzhka " ")
+SendChat("say Арест сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.3::
+SendPlay {Enter}
+SendChat("say Посягательство на жизнь и здоровье сотрудника", "  " zaderzhka " ")
+SendChat("say полиции, военнослужащего или работника инкассации.", "  " zaderzhka " ")
+SendChat("say Арест сроком от 3 до 6 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.4::
+SendPlay {Enter}
+SendChat("say Применение насилия, не опасного для жизни или", "  " zaderzhka " ")
+SendChat("say здоровья, либо угроза применения насилия в отношении", "  " zaderzhka " ")
+SendChat("say представителя власти или его близких в связи с", "  " zaderzhka " ")
+SendChat("say исполнением им своих должностных обязанностей.", "  " zaderzhka " ")
+SendChat("say Арест сроком до 3 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.5::
+SendPlay {Enter}
+SendChat("say Хамство, борзость, дерзость по отношению к", "  " zaderzhka " ")
+SendChat("say сотруднику правоохранительных органов. Штраф -", "  " zaderzhka " ")
+SendChat("say 15.000 рублей или арест сроком на 1 год.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.6::
+SendPlay {Enter}
+SendChat("say Публичное оскорбление или неоднократное проявление", "  " zaderzhka " ")
+SendChat("say неуважения к представителям власти при исполнении", "  " zaderzhka " ")
+SendChat("say ими своих должностных обязанностей или в связи с", "  " zaderzhka " ")
+SendChat("say их исполнением. Штраф - 25.000 рублей или арест", "  " zaderzhka " ")
+SendChat("say сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.7::
+SendPlay {Enter}
+SendChat("say Провокационные действия в отношении сотрудников", "  " zaderzhka " ")
+SendChat("say государственных структур, несущие в себе негативный", "  " zaderzhka " ")
+SendChat("say характер, либо развлекательную деятельность.", "  " zaderzhka " ")
+SendChat("say Штраф - 50.000 рублей или арест сроком до 2 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.7.1::
+SendPlay {Enter}
+SendChat("say Длительное преследование экипажа сотрудников", "  " zaderzhka " ")
+SendChat("say правоохранительных органов и/или всяческое", "  " zaderzhka " ")
+SendChat("say создание помех работе сотрудников правоохранительных", "  " zaderzhka " ")
+SendChat("say органов. Штраф - 50.000 рублей или арест сроком", "  " zaderzhka " ")
+SendChat("say до 2 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.8::
+SendPlay {Enter}
+SendChat("say Неоднократное неповиновение законному распоряжению", "  " zaderzhka " ")
+SendChat("say или требованию служащего полиции, либо", "  " zaderzhka " ")
+SendChat("say военнослужащего, в связи с исполнением ими", "  " zaderzhka " ")
+SendChat("say обязанностей по охране общественного порядка и", "  " zaderzhka " ")
+SendChat("say обеспечению общественной безопасности, равно как", "  " zaderzhka " ")
+SendChat("say воспрепятствование исполнению ими служебных", "  " zaderzhka " ")
+SendChat("say обязанностей. Арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.8.1::
+SendPlay {Enter}
+SendChat("say Уход от правоохранительных органов, сопутствующий", "  " zaderzhka " ")
+SendChat("say нанесение ущерба имуществу гражданским лицам,", "  " zaderzhka " ")
+SendChat("say частным предприятиям и муниципальным предприятиям.", "  " zaderzhka " ")
+SendChat("say Арест сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.8.2::
+SendPlay {Enter}
+SendChat("say Уход от правоохранительных органов, сопутствующий", "  " zaderzhka " ")
+SendChat("say причинением телесных повреждений средней и выше", "  " zaderzhka " ")
+SendChat("say тяжести по отношению к гражданскому лицу. Арест", "  " zaderzhka " ")
+SendChat("say сроком на 4 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.9::
+SendPlay {Enter}
+SendChat("say Умышленное уничтожение, повреждение имущества", "  " zaderzhka " ")
+SendChat("say правоохранительных и прочих государственных", "  " zaderzhka " ")
+SendChat("say организаций. Штраф - 50.000 рублей или арест", "  " zaderzhka " ")
+SendChat("say сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.10::
+SendPlay {Enter}
+SendChat("say Заведомо ложный донос о совершении преступления", "  " zaderzhka " ")
+SendChat("say или ложные свидетельские показания по уголовному,", "  " zaderzhka " ")
+SendChat("say административному делу. Штраф - 25.000 рублей", "  " zaderzhka " ")
+SendChat("say или арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.11::
+SendPlay {Enter}
+SendChat("say Разглашение секретных данных или любых сведений о", "  " zaderzhka " ")
+SendChat("say предстоящих операциях, именах, должностях и", "  " zaderzhka " ")
+SendChat("say занимаемых постах служащих государственных", "  " zaderzhka " ")
+SendChat("say организаций. Арест сроком до 3 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.12::
+SendPlay {Enter}
+SendChat("say Представление себя в качестве служащего", "  " zaderzhka " ")
+SendChat("say государственной организации, если это не", "  " zaderzhka " ")
+SendChat("say соответствует действительности. Штраф - 30.000", "  " zaderzhka " ")
+SendChat("say рублей или арест сроком на 1 год.", "  " zaderzhka " ")
+Return
+
+:?:/УК_5.13::
+SendPlay {Enter}
+SendChat("say Халатность, то есть неисполнение или ненадлежащее", "  " zaderzhka " ")
+SendChat("say исполнение должностным лицом своих обязанностей", "  " zaderzhka " ")
+SendChat("say вследствие недобросовестного или небрежного", "  " zaderzhka " ")
+SendChat("say отношения к службе либо обязанностей по должности,", "  " zaderzhka " ")
+SendChat("say если это повлекло причинение крупного ущерба или", "  " zaderzhka " ")
+SendChat("say существенное нарушение прав и законных интересов", "  " zaderzhka " ")
+SendChat("say граждан или организаций. Арест сроком до 3 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.1::
+SendPlay {Enter}
+SendChat("say Терроризм, то есть совершение взрыва, поджога или", "  " zaderzhka " ")
+SendChat("say иных действий, устрашающих население и создающих", "  " zaderzhka " ")
+SendChat("say опасность гибели человека, причинения", "  " zaderzhka " ")
+SendChat("say значительного имущественного ущерба либо наступления", "  " zaderzhka " ")
+SendChat("say иных тяжких последствий в целях дестабилизации", "  " zaderzhka " ")
+SendChat("say деятельности органов власти, либо воздействия на", "  " zaderzhka " ")
+SendChat("say принятие ими решений, а также угроза совершения", "  " zaderzhka " ")
+SendChat("say указанных действий в целях воздействия на принятие", "  " zaderzhka " ")
+SendChat("say решений органами власти. Арест сроком до 6 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.2::
+SendPlay {Enter}
+SendChat("say Заведомо ложное сообщение о готовящихся взрыве,", "  " zaderzhka " ")
+SendChat("say поджоге или иных действиях, создающих опасность", "  " zaderzhka " ")
+SendChat("say гибели людей, причинения значительного", "  " zaderzhka " ")
+SendChat("say имущественного ущерба либо наступления иных", "  " zaderzhka " ")
+SendChat("say общественно опасных последствий. Штраф - 50.000", "  " zaderzhka " ")
+SendChat("say рублей, а также арест сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.3::
+SendPlay {Enter}
+SendChat("say Захват или удержание лица в качестве заложника,", "  " zaderzhka " ")
+SendChat("say совершенные в целях понуждения государства,", "  " zaderzhka " ")
+SendChat("say организации или гражданина совершить какое-либо", "  " zaderzhka " ")
+SendChat("say действие или воздержаться от совершения какого-либо", "  " zaderzhka " ")
+SendChat("say действия как условия освобождения заложника.", "  " zaderzhka " ")
+SendChat("say Арест сроком до 3 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.4::
+SendPlay {Enter}
+SendChat("say Организация массовых беспорядков, равно участие в", "  " zaderzhka " ")
+SendChat("say них, сопровождавшихся насилием, погромами,", "  " zaderzhka " ")
+SendChat("say поджогами, уничтожением имущества, применением", "  " zaderzhka " ")
+SendChat("say оружия, взрывных устройств, отравляющих либо иных", "  " zaderzhka " ")
+SendChat("say веществ и предметов, представляющих опасность для", "  " zaderzhka " ")
+SendChat("say окружающих. Штраф — 100.000 рублей и арест сроком", "  " zaderzhka " ")
+SendChat("say до 6 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.5::
+SendPlay {Enter}
+SendChat("say Создание устойчивой группы людей в целях нападения", "  " zaderzhka " ")
+SendChat("say на граждан или организации, равно как и руководство", "  " zaderzhka " ")
+SendChat("say такой группой (бандой) или участие в его", "  " zaderzhka " ")
+SendChat("say деятельности. Арест сроком до 6 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.6::
+SendPlay {Enter}
+SendChat("say Вандализм, то есть осквернение зданий или иных", "  " zaderzhka " ")
+SendChat("say сооружений, порча имущества на общественном", "  " zaderzhka " ")
+SendChat("say транспорте или в иных общественных местах. Штраф -", "  " zaderzhka " ")
+SendChat("say 10.000 рублей, а также арест сроком на 1 год.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.7::
+SendPlay {Enter}
+SendChat("say Незаконное проникновение в жилище, частную", "  " zaderzhka " ")
+SendChat("say территорию либо иной объект, не принадлежащий", "  " zaderzhka " ")
+SendChat("say проникшему лицу, совершенное против воли", "  " zaderzhka " ")
+SendChat("say проживающего в нем лица. Арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.8::
+SendPlay {Enter}
+SendChat("say Самовольное проникновение на охраняемый в", "  " zaderzhka " ")
+SendChat("say установленном порядке объект. Штраф - 10.000 рублей", "  " zaderzhka " ")
+SendChat("say или арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.9::
+SendPlay {Enter}
+SendChat("say Приобретение, передача, сбыт, хранение,", "  " zaderzhka " ")
+SendChat("say перевозка, продажа, использование или ношение", "  " zaderzhka " ")
+SendChat("say огнестрельного оружия, его основных частей,", "  " zaderzhka " ")
+SendChat("say боеприпасов. Штраф - 20.000 рублей, а также арест", "  " zaderzhka " ")
+SendChat("say сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.10::
+SendPlay {Enter}
+SendChat("say Незаконные приобретение, хранение, перевозка,", "  " zaderzhka " ")
+SendChat("say изготовление, переработка, продажа наркотических", "  " zaderzhka " ")
+SendChat("say средств, психотропных веществ или их аналогов с", "  " zaderzhka " ")
+SendChat("say любой целью. Штраф - 20.000 рублей, а также арест", "  " zaderzhka " ")
+SendChat("say сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.11::
+SendPlay {Enter}
+SendChat("say Неоказание первой или медицинской помощи больному", "  " zaderzhka " ")
+SendChat("say без уважительных причин лицом, обязанным ее", "  " zaderzhka " ")
+SendChat("say оказывать в соответствии с законодательством.", "  " zaderzhka " ")
+SendChat("say Арест сроком на 1 год.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.12::
+SendPlay {Enter}
+SendChat("say Попытка срыва мероприятий группой лиц или", "  " zaderzhka " ")
+SendChat("say намеренная помеха в проведении мероприятий. Арест", "  " zaderzhka " ")
+SendChat("say сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.13::
+SendPlay {Enter}
+SendChat("say Использование не зарегистрированной лицензии и(или)", "  " zaderzhka " ")
+SendChat("say подделка удостоверения или иного официального", "  " zaderzhka " ")
+SendChat("say документа, предоставляющего права или", "  " zaderzhka " ")
+SendChat("say освобождающего от обязанностей, в целях его", "  " zaderzhka " ")
+SendChat("say использования либо сбыт такого документа и(или)", "  " zaderzhka " ")
+SendChat("say лицензии. Штраф - 20.000 рублей, а также арест", "  " zaderzhka " ")
+SendChat("say сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_6.14::
+SendPlay {Enter}
+SendChat("say Превышение должностных полномочий. Совершение", "  " zaderzhka " ")
+SendChat("say должностным лицом действий, явно выходящих за", "  " zaderzhka " ")
+SendChat("say пределы его полномочий и повлекших существенное", "  " zaderzhka " ")
+SendChat("say нарушение прав и законных интересов граждан или", "  " zaderzhka " ")
+SendChat("say организаций либо охраняемых законом интересов", "  " zaderzhka " ")
+SendChat("say общества или государства. Штраф - до 50.000", "  " zaderzhka " ")
+SendChat("say рублей или арест сроком до 3 лет.", "  " zaderzhka " ")
+Return
+
+:?:/УК_7.1::
+SendPlay {Enter}
+SendChat("say Мошенничество, то есть хищение чужого имущества", "  " zaderzhka " ")
+SendChat("say или приобретение права на чужое имущество путем", "  " zaderzhka " ")
+SendChat("say обмана или злоупотребления доверием. Штраф -", "  " zaderzhka " ")
+SendChat("say 50.000 рублей и возмещение ущерба или арест сроком", "  " zaderzhka " ")
+SendChat("say на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_7.2::
+SendPlay {Enter}
+SendChat("say Грабеж или кража чужого имущества. Арест сроком", "  " zaderzhka " ")
+SendChat("say на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_7.3::
+SendPlay {Enter}
+SendChat("say Вымогательство, то есть требование передачи", "  " zaderzhka " ")
+SendChat("say чужого имущества под угрозой применения насилия,", "  " zaderzhka " ")
+SendChat("say уничтожения имущества, распространения позорящих", "  " zaderzhka " ")
+SendChat("say сведений. Арест сроком на 3 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_7.4::
+SendPlay {Enter}
+SendChat("say Умышленные уничтожение или повреждение чужого", "  " zaderzhka " ")
+SendChat("say имущества, если эти деяния повлекли причинение", "  " zaderzhka " ")
+SendChat("say значительного ущерба. Штраф - 50.000 рублей и", "  " zaderzhka " ")
+SendChat("say возмещение ущерба или арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+:?:/УК_7.5::
+SendPlay {Enter}
+SendChat("say Организация, проведение азартных игр в любой", "  " zaderzhka " ")
+SendChat("say форме в общественных местах. Штраф - 50.000 рублей", "  " zaderzhka " ")
+SendChat("say или арест сроком на 2 года.", "  " zaderzhka " ")
+Return
+
+
+0001DUVD7:
+SendPlay {Enter}
+SendChat("say Здравия желаю, [" dolzhnostDUVD7 "] полиции [" rankDUVD7 "] [" surnameDUVD7 "], УВД по городу [" CityDUVD7 "]", "  " zaderzhka " ")
+Return
+
+
+0002DUVD7:
+SendPlay {Enter}
+SendChat("say Гражданин, предоставьте документ, удостоверяющий вашу личность", "  " zaderzhka " ")
+SendChat("b Для этого необходимо написать в чат /pass ID", "  " zaderzhka " ")
+Return
+
+
+0003DUVD7:
+InputBox, id, Ввод данных, Введите id человека, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+InputBox, star, Ввод данных, Введите количество звезд, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+InputBox, reason, Ввод данных, Введите причину, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+IniWrite %id%, %FilePath%, %DataGroup%, NumberCall
+IniWrite %star%, %FilePath%, %DataGroup%, NumberCall
+IniWrite %reason%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы ввели:ID %id% Разворачивайте игру!
+Sleep 7000
+SendPlay {Enter}
+SendChat("do Рация висит на нагрудном кармане формы.", "  " zaderzhka " ")
+SendChat("me сняв рацию, зажал" floor " кнопку и передал" floor " информацию о человеке в дежурную часть", "  " zaderzhka " ")
+SendChat("do Дежурная часть среагировала на вопрос и объявила в федеральный розыск человека.", "  " zaderzhka " ")
+SendChat("me повесил" floor " рацию обратно", "  " zaderzhka " ")
+SendChat("su " id " " su " " reason " ", "  " zaderzhka " ")
+Return
+
+0004DUVD7:
+SendPlay {Enter}
+SendChat("do Упаковка влажных салфеток в кармане.", "  " zaderzhka " ")
+SendChat("me достал" floor " салфетки и протер лицо гражданину.", "  " zaderzhka " ")
+SendChat("me убрал" floor " салфетки обратно", "  " zaderzhka " ")
+Return
+
+0005DUVD7:
+SendPlay {Enter}
+SendChat("do КПК находится в кармане.", "  " zaderzhka " ")
+SendChat("me достал" floor " КПК, сделал фото лица", "  " zaderzhka " ")
+SendChat("me нажал" floor " 'Отправить и опознать'", "  " zaderzhka " ")
+SendChat("do На экране появились данные.", "  " zaderzhka " ")
+SendChat("me убрал" floor " КПК в карман", "  " zaderzhka " ")
+Return
+
+0006DUVD7:
+SendPlay {Enter}
+SendChat("me снял" floor " ключ с пояса и застегнул" floor " наручники", "  " zaderzhka " ")
+SendChat("todo Распишитесь здесь*указав место для подписи", "  " zaderzhka " ")
+Return
+
+0008DUVD7:
+SendPlay {Enter}
+SendChat("do Рация на нагрудном кармане.", "  " zaderzhka " ")
+SendChat("me взял" floor " рацию и вызвал" floor " конвоира", "  " zaderzhka " ")
+SendChat("todo  На связи [" PozyvnoyDUVD7 "] [" surnameDUVD7 "]. Товарищ конвоир, уведите правонарушителя в камеру*говоря в рацию", "  " zaderzhka " ")
+Return
+
+0009DUVD7:
+SendPlay {Enter}
+SendChat("me достал" floor " планшет с протоколом", "  " zaderzhka " ")
+SendChat("do Протокол" floor " содержит: дату, время, место и статью.", "  " zaderzhka " ")
+SendChat("todo Распишитесь, уважаемый?*поставив свою подпись и инициалы в протоколе", "  " zaderzhka " ")
+Return
+
+00010DUVD7:
+SendPlay {Enter}
+SendChat("me посадил" floor " задержанного в автомобиль", "  " zaderzhka " ")
+Return
+
+00011DUVD7:
+InputBox, id, Ввод данных, Введите id человека, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+IniWrite %id%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы ввели:ID %id% Разворачивайте игру!
+Sleep 7000
+SendPlay {Enter}
+SendChat("do Конвоир подошёл к задержанному.", "  " zaderzhka " ")
+SendChat("me передал" floor " рапорт и личные вещи", "  " zaderzhka " ")
+SendChat("arrest " id " ", "  " zaderzhka " ")
+Return
+
+00012DUVD7:
+InputBox, id, Ввод данных, Введите id человека, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+IniWrite %id%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы ввели:ID %id% Разворачивайте игру!
+Sleep 7000
+SendPlay {Enter}
+SendChat("me отпустил" floor " руки задержанного", "  " zaderzhka " ")
+SendChat("dearr id", "  " zaderzhka " ")
+Return
+
+00013DUVD7:
+SendPlay {Enter}
+SendChat("do Рация на нагрудном кармане.", "  " zaderzhka " ")
+SendChat("me запросил" floor " последние координаты преступника", "  " zaderzhka " ")
+Return
+
+00014DUVD7:
+SendPlay {Enter}
+SendChat("me нажал" floor " кнопку рации", "  " zaderzhka " ")
+SendChat("ro [ГУВД] Принято! Выезжаем на подмогу!", "  " zaderzhka " ")
+Return
+
+
+InfoDUVD7:
+
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+
+Gui, 15:Destroy,
+Gui, 15:Add, Picture, x0 y10 w475   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod.png
+Gui, 15:Add, Picture, x470 y600 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+
+Gui, 15:Font, S15 C%Tsvet_1% Bold, Consolas
+Gui, 15:Add, ComboBox, x90 y40  w425  vdolzhnostDUVD7, %dolzhnostDUVD7%||1|2
+Gui, 15:Add, ComboBox, x90 y130 w425 vrankDUVD7, %rankDUVD7%||2|2
+Gui, 15:Add, Edit, x90 y230 w425 vPozyvnoyDUVD7, %PozyvnoyDUVD7%
+Gui, 15:Add, Edit, x90 y320 w425 vsurnameDUVD7, %surnameDUVD7%
+Gui, 15:Add, ComboBox, x90 y420 w425 vCityDUVD7, %CityDUVD7%||Приволжск|Мирный|Невский
+Gui, 15:Add, DropDownList, x90 y610  w225 vpol, %pol%||Мужской|Женский
+
+Gui, 15:show, center , Данные
+Return
+
+
+
+EditDUVD7:
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+
+
+Gui, 14:Destroy,
+
+IniRead, 11DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 11DUVD7
+IniRead, 21DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 21DUVD7
+IniRead, 31DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 31DUVD7
+IniRead, 41DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 41DUVD7
+IniRead, 51DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 51DUVD7
+IniRead, 61DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 61DUVD7
+IniRead, 71DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 71DUVD7
+IniRead, 81DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 81DUVD7
+IniRead, 91DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 91DUVD7
+IniRead, 101DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 101DUVD7
+IniRead, 111DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 111DUVD7
+IniRead, 121DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 121DUVD7
+IniRead, 131DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 131DUVD7
+IniRead, 141DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 141DUVD7
+IniRead, 151DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 151DUVD7
+IniRead, 161DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 161DUVD7
+IniRead, 171DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 171DUVD7
+IniRead, 181DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 181DUVD7
+IniRead, 191DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 191DUVD7
+IniRead, 201DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 201DUVD7
+IniRead, 211DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 211DUVD7
+IniRead, 221DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 221DUVD7
+IniRead, 231DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 231DUVD7
+IniRead, 241DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 241DUVD7
+IniRead, 251DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 251DUVD7
+IniRead, 261DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 261DUVD7
+IniRead, 271DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 271DUVD7
+IniRead, 281DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD7.ini , Edit, 281DUVD7
+
+
+Gui, 14:Font, S11 C%Tsvet_1% Bold, Arial
+Gui, 14:Add, Hotkey, x100 y38 w150  v11DUVD7, %odinDUVD7%
+Gui, 14:Add, Hotkey, x100 y138 w150 v21DUVD7, %dvaDUVD7%
+Gui, 14:Add, Hotkey, x100 y228 w150 v31DUVD7, %triDUVD7%
+Gui, 14:Add, Hotkey, x100 y318 w150 v41DUVD7, %chetireDUVD7%
+Gui, 14:Add, Hotkey, x100 y418 w150 v51DUVD7, %pyatDUVD7%
+Gui, 14:Add, Hotkey, x100 y508 w150 v61DUVD7, %shestDUVD7%
+Gui, 14:Add, Hotkey, x100 y600 w150 v71DUVD7, %semDUVD7%
+
+Gui, 14:Add, Hotkey, x400 y38 w150 v81DUVD7, %vosemDUVD7%
+Gui, 14:Add, Hotkey, x400 y138 w150 v91DUVD7, %devyatDUVD7%
+Gui, 14:Add, Hotkey, x400 y228 w150 v101DUVD7, %desyatDUVD7%
+Gui, 14:Add, Hotkey, x400 y318 w150 v111DUVD7, %odinadcatDUVD7%
+Gui, 14:Add, Hotkey, x400 y418 w150 v121DUVD7, %dvinadcatDUVD7%
+Gui, 14:Add, Hotkey, x400 y508 w150 v131DUVD7, %trinadcatDUVD7%
+Gui, 14:Add, Hotkey, x400 y600 w150 v141DUVD7, %chetirnadcatDUVD7%
+
+Gui, 14:Add, Hotkey, x700 y38 w150 v151DUVD7, %pyatnadcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y138 w150 v161DUVD7, %shestnadcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y228 w150 v171DUVD7, %semnagcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y318 w150 v181DUVD7, %vosemnagcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y418 w150 v191DUVD7, %devyatnadcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y508 w150 v201DUVD7, %dvadcatDUVD7%
+Gui, 14:Add, Hotkey, x700 y600 w150 v211DUVD7, %dvadcatodinDUVD7%
+
+
+Gui, 14:Add, Hotkey, x1000 y38 w150 v221DUVD7, %dvadcatdvaDUVD7%
+Gui, 14:Add, Hotkey, x1000 y138 w150 v231DUVD7, %dvadcattriDUVD7%
+Gui, 14:Add, Hotkey, x1000 y228 w150 v241DUVD7, %dvadcatchetireDUVD7%
+Gui, 14:Add, Hotkey, x1000 y318 w150 v251DUVD7, %dvadcatpyatDUVD7%
+Gui, 14:Add, Hotkey, x1000 y418 w150 v261DUVD7, %dvadcatshestDUVD7%
+Gui, 14:Add, Hotkey, x1000 y508 w150 v271DUVD7, %dvadcatsemDUVD7%
+Gui, 14:Add, Hotkey, x1000 y600 w150 v281DUVD7, %dvadcatvosemDUVD7%
+
+
+
+Gui, 14:Add, Picture, x1170 y610 w64 h64  gSave1,  C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 14:Add, Picture, x0 y5 w1200 h675 + BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Raskladka
+Gui, 14:Show, center, Раскладка
+
 Return
