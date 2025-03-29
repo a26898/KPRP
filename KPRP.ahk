@@ -30,34 +30,35 @@ IniRead, 261MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
 IniRead, 271MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
 IniRead, 281MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
 
-IniRead, 11MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
-IniRead, 21MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 21MZ7
-IniRead, 31MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 31MZ7
-IniRead, 41MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 41MZ7
-IniRead, 51MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 51MZ7
-IniRead, 61MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 61MZ7
-IniRead, 71MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 71MZ7
-IniRead, 81MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 81MZ7
-IniRead, 91MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 91MZ7
-IniRead, 101MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 101MZ7
-IniRead, 111MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 111MZ7
-IniRead, 121MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 121MZ7
-IniRead, 131MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 131MZ7
-IniRead, 141MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 141MZ7
-IniRead, 151MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 151MZ7
-IniRead, 161MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 161MZ7
-IniRead, 171MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 171MZ7
-IniRead, 181MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 181MZ7
-IniRead, 191MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 191MZ7
-IniRead, 201MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 201MZ7
-IniRead, 211MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 211MZ7
-IniRead, 221MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 221MZ7
-IniRead, 231MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 231MZ7
-IniRead, 241MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 241MZ7
-IniRead, 251MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
-IniRead, 261MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
-IniRead, 271MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
-IniRead, 281MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
+IniRead, 11DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
+IniRead, 21DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
+IniRead, 31DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
+IniRead, 41DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
+IniRead, 51DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
+IniRead, 61DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
+IniRead, 71DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
+IniRead, 81DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
+IniRead, 91DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
+IniRead, 101DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
+IniRead, 111DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
+IniRead, 121DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
+IniRead, 131DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
+IniRead, 141DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
+IniRead, 151DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
+IniRead, 161DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
+IniRead, 171DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
+IniRead, 181DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
+IniRead, 191DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
+IniRead, 201DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
+IniRead, 211DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
+IniRead, 221DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
+IniRead, 231DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
+IniRead, 241DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
+IniRead, 251DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
+IniRead, 261DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
+IniRead, 271DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
+IniRead, 281DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
+
 
 IniRead, 11Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
 IniRead, 21Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
@@ -139,6 +140,34 @@ dvadcatshestMZ7 = %261MZ7%
 dvadcatsemMZ7 = %271MZ7%
 dvadcatvosemMZ7 = %281MZ7%
 
+odinDUVD7 = %11DUVD7%
+dvaDUVD7 = %21DUVD7%
+triDUVD7 = %31DUVD7%
+chetireDUVD7 = %41DUVD7%
+pyatDUVD7 = %51DUVD7%
+shestDUVD7 = %61DUVD7%
+semDUVD7 = %71DUVD7%
+vosemDUVD7 = %81DUVD7%
+devyatDUVD7 = %91DUVD7%
+desyatDUVD7 = %101DUVD7%
+odinadcatDUVD7 = %111DUVD7%
+dvinadcatDUVD7 = %121DUVD7%
+trinadcatDUVD7 = %131DUVD7%
+chetirnadcatDUVD7 = %141DUVD7%
+pyatnadcatDUVD7 = %151DUVD7%
+shestnadcatDUVD7 = %161DUVD7%
+semnagcatDUVD7 = %171DUVD7%
+vosemnagcatDUVD7 = %181DUVD7%
+devyatnadcatDUVD7 = %191DUVD7%
+dvadcatDUVD7 = %201DUVD7%
+dvadcatodinDUVD7 = %211DUVD7%
+dvadcatdvaDUVD7 = %221DUVD7%
+dvadcattriDUVD7 = %231DUVD7%
+dvadcatchetireDUVD7 = %241DUVD7%
+dvadcatpyatDUVD7 = %251DUVD7%
+dvadcatshestDUVD7 = %261DUVD7%
+dvadcatsemDUVD7 = %271DUVD7%
+dvadcatvosemDUVD7 = %281DUVD7%
 
 odinRedakt = %11Redakt%
 dvaRedakt = %21Redakt%
@@ -190,6 +219,36 @@ coroksemRedakt = %471Redakt%
 corokvosemRedakt = %481Redakt%
 corokdevyatRedakt = %491Redakt%
 pyatdesyatRedakt = %501Redakt%
+
+
+Hotkey, %odinDUVD7%, Off, UseErrorLevel
+Hotkey, %dvaDUVD7%, Off, UseErrorLevel
+Hotkey, %triDUVD7%, Off, UseErrorLevel
+Hotkey, %chetireDUVD7%, Off, UseErrorLevel
+Hotkey, %pyatDUVD7%, Off, UseErrorLevel
+Hotkey, %shestDUVD7%, Off, UseErrorLevel
+Hotkey, %semDUVD7%, Off, UseErrorLevel
+Hotkey, %vosemDUVD7%, Off, UseErrorLevel
+Hotkey, %devyatDUVD7%, Off, UseErrorLevel
+Hotkey, %desyatDUVD7%, Off, UseErrorLevel
+Hotkey, %odinadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %dvinadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %trinadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %chetirnadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %pyatnadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %shestnadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %semnagcatDUVD7%, Off, UseErrorLevel
+Hotkey, %vosemnagcatDUVD7%, Off, UseErrorLevel
+Hotkey, %devyatnadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatodinDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatdvaDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcattriDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatchetireDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatpyatDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatshestDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatsemDUVD7%, Off, UseErrorLevel
+Hotkey, %dvadcatvosemDUVD7%, Off, UseErrorLevel
 
 
 Hotkey, %odinMZ7%, Off, UseErrorLevel
@@ -304,6 +363,37 @@ Hotkey, %dvadcatpyatMZ7%, 0025MZ7, On, UseErrorLevel
 Hotkey, %dvadcatshestMZ7%, 0026MZ7, On, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, 0027MZ7, On, UseErrorLevel
 Hotkey, %dvadcatvosemMZ7%, 0028MZ7, On, UseErrorLevel
+
+
+
+Hotkey, %odinDUVD7%, 0001DUVD7, On, UseErrorLevel
+Hotkey, %dvaDUVD7%, 0002DUVD7, On, UseErrorLevel
+Hotkey, %triDUVD7%, 0003DUVD7, On, UseErrorLevel
+Hotkey, %chetireDUVD7%, 0004DUVD7, On, UseErrorLevel
+Hotkey, %pyatDUVD7%, 0005DUVD7, On, UseErrorLevel
+Hotkey, %shestDUVD7%, 0006DUVD7, On, UseErrorLevel
+Hotkey, %semDUVD7%, 0007DUVD7, On, UseErrorLevel
+Hotkey, %vosemDUVD7%, 0008DUVD7, On, UseErrorLevel
+Hotkey, %devyatDUVD7%, 0009DUVD7, On, UseErrorLevel
+Hotkey, %desyatDUVD7%, 0010DUVD7, On, UseErrorLevel
+Hotkey, %odinadcatDUVD7%, 0011DUVD7, On, UseErrorLevel
+Hotkey, %dvinadcatDUVD7%, 0012DUVD7, On, UseErrorLevel
+Hotkey, %trinadcatDUVD7%, 0013DUVD7, On, UseErrorLevel
+Hotkey, %chetirnadcatDUVD7%, 0014DUVD7, On, UseErrorLevel
+Hotkey, %pyatnadcatDUVD7%, 0015DUVD7, UseErrorLevel
+Hotkey, %shestnadcatDUVD7%, 0016DUVD7, On, UseErrorLevel
+Hotkey, %semnagcatDUVD7%, 0017DUVD7, On, UseErrorLevel
+Hotkey, %vosemnagcatDUVD7%, 0018DUVD7, On, UseErrorLevel
+Hotkey, %devyatnadcatDUVD7%, 0019DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatDUVD7%, 0020DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatodinDUVD7%, 0021DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatdvaDUVD7%, 0022DUVD7, On, UseErrorLevel
+Hotkey, %dvadcattriDUVD7%, 0023DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatchetireDUVD7%, 0024, On, UseErrorLevel
+Hotkey, %dvadcatpyatDUVD7%, 0025DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatshestDUVD7%, 0026DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatsemDUVD7%, 0027DUVD7, On, UseErrorLevel
+Hotkey, %dvadcatvosemDUVD7%, 0028DUVD7, On, UseErrorLevel
 
 Hotkey, %odinRedakt%, 0001Redakt, On, UseErrorLevel
 Hotkey, %dvaRedakt%, 0002Redakt, On, UseErrorLevel
@@ -697,6 +787,15 @@ IniRead, Middle_Name, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle_Na
 IniRead, Bol_ro, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
+IniRead, dolzhnostDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
+IniRead, rankDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
+IniRead, surnameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
+IniRead, CityDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
+IniRead, PozyvnoyDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
+IniRead, TegDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
+IniRead, NameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
+IniRead, OtchetskstoDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
+
 
 IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniRead, Zaderzhka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
@@ -901,6 +1000,24 @@ Svoye_96=Описание
 if Svoye_97=ERROR
 Svoye_97=Описание
 
+
+
+if dolzhnostDUVD7=ERROR
+dolzhnostDUVD7=Не заполнено
+if rankDUVD7=ERROR
+rankDUVD7=Не заполнено
+if CityDUVD7=ERROR
+CityDUVD7=Не заполнено
+if PozyvnoyDUVD7=ERROR
+PozyvnoyDUVD7=Не заполнено
+if surnameDUVD7=ERROR
+surnameDUVD7=Не заполнено
+if TegDUVD7=ERROR
+TegDUVD7=Не заполнено
+if NameDUVD7=ERROR
+NameDUVD7=Не заполнено
+if OtchetskstoDUVD7=ERROR
+OtchetskstoDUVD7=Не заполнено
 
 if JWI=ERROR
 JWI=Студент
@@ -3492,6 +3609,17 @@ IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 
+IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
+IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
+IniWrite, %surnameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
+IniWrite, %CityDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
+IniWrite, %PozyvnoyDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
+IniWrite, %TegDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
+IniWrite, %NameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
+IniWrite, %OtchetskstoDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
+
+
+
 
 IniWrite, %Svoye_1%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_1
 IniWrite, %Svoye_2%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_2
@@ -3787,6 +3915,7 @@ return
 
 Save1:
 Gui, 4:SubMit, NoHide
+Gui, 14:SubMit, NoHide
 
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
 Sleep 2500
@@ -3820,6 +3949,37 @@ IniWrite, %251MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
 IniWrite, %261MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
 IniWrite, %271MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
 IniWrite, %281MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
+
+IniWrite, %11DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
+IniWrite, %21DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
+IniWrite, %31DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
+IniWrite, %41DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
+IniWrite, %51DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
+IniWrite, %61DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
+IniWrite, %71DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
+IniWrite, %81DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
+IniWrite, %91DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
+IniWrite, %101DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
+IniWrite, %111DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
+IniWrite, %121DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
+IniWrite, %131DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
+IniWrite, %141DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
+IniWrite, %151DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
+IniWrite, %161DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
+IniWrite, %171DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
+IniWrite, %181DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
+IniWrite, %191DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
+IniWrite, %201DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
+IniWrite, %211DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
+IniWrite, %221DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
+IniWrite, %231DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
+IniWrite, %241DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
+IniWrite, %251DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
+IniWrite, %261DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
+IniWrite, %271DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
+IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
+
+
 Reload
 return
 

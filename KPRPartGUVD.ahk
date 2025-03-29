@@ -1071,7 +1071,7 @@ Return
 
 0001DUVD7:
 SendPlay {Enter}
-SendChat("say Здравия желаю, [" dolzhnostDUVD7 "] полиции [" rankDUVD7 "] [" surnameDUVD7 "], УВД по городу [" CityDUVD7 "]", "  " zaderzhka " ")
+SendChat("say Здравия желаю, [" rankDUVD7 "] полиции [" surnameDUVD7 "], УВД по городу [" CityDUVD7 "]", "  " zaderzhka " ")
 Return
 
 
@@ -1101,7 +1101,7 @@ if (ErrorLevel) {
 IniWrite %id%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %star%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %reason%, %FilePath%, %DataGroup%, NumberCall
-MsgBox, 48, Предупреждение, Вы ввели:ID %id% Разворачивайте игру!
+MsgBox, 48, Предупреждение, Вы ввели:ID %id% Количество звезд:%star% Причина:%reason% Разворачивайте игру!
 Sleep 7000
 SendPlay {Enter}
 SendChat("do Рация висит на нагрудном кармане формы.", "  " zaderzhka " ")
@@ -1193,22 +1193,76 @@ SendChat("me нажал" floor " кнопку рации", "  " zaderzhka " ")
 SendChat("ro [ГУВД] Принято! Выезжаем на подмогу!", "  " zaderzhka " ")
 Return
 
+00015DUVD7:
+SendPlay {Enter}
+SendChat("do Мегафон лежит на торпеде.", " " zaderzhka " ")
+SendChat("me взял" floor " мегафон в руку и начал" floor " в него говорить", " " zaderzhka " ")
+SendChat("m Гражданин, немедленно остановитесь! В противном случае будет открыт огонь!", " " zaderzhka " ")
+Return
+
+00016DUVD7:
+SendPlay {Enter}
+SendChat("s Останавливаемся! В противном случае будут применены силовые меры!", " " zaderzhka " ")
+Return
+
+00017DUVD7:
+SendPlay {Enter}
+SendChat("do На торпеде лежит бланк, протокол и ручка.", " " zaderzhka " ")
+SendChat("me взяв бланк и ручку, составил" floor " протокол о нарушении", " " zaderzhka " ")
+SendChat("do Бланк протокола заполнен и подписан.", " " zaderzhka " ")
+Return
+
+00018DUVD7:
+SendPlay {Enter}
+SendChat("say Вот протокол о Вашем нарушении. Прошу поставить подпись.", " " zaderzhka " ")
+SendChat("me передал" floor " бланк с протоколом гражданину", " " zaderzhka " ")
+SendChat("b /me поставил подпись", " " zaderzhka " ")
+Return
+
+00019DUVD7:
+InputBox, id, Ввод данных, Введите id человека, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+InputBox, summa, Ввод данных, Введите сумму, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+InputBox, reason, Ввод данных, Введите причину, затем нажмите "OK"
+if (ErrorLevel) {
+    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    Return
+}
+MsgBox, 48, Предупреждение, Вы ввели:ID %id% Cумма:%star% Причина:%reason% Разворачивайте игру!
+
+SendPlay {Enter}
+SendChat("me оторвал" floor " копию протокола и передал" floor " её гражданину", " " zaderzhka " ")
+SendChat("say Вот Ваша копия протокола. Надеюсь, Вы больше не будете нарушать.", " " zaderzhka " ")
+SendChat("tsu " id " " su " " summa " ", "  " zaderzhka " ")
+Return
+
+
+
 
 InfoDUVD7:
 
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 15:Destroy,
-Gui, 15:Add, Picture, x0 y10 w475   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod.png
-Gui, 15:Add, Picture, x470 y600 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 15:Add, Picture, x0 y10 w475   h720 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod.png
+Gui, 15:Add, Picture, x470 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 15:Font, S15 C%Tsvet_1% Bold, Consolas
-Gui, 15:Add, ComboBox, x90 y40  w425  vdolzhnostDUVD7, %dolzhnostDUVD7%||1|2
-Gui, 15:Add, ComboBox, x90 y130 w425 vrankDUVD7, %rankDUVD7%||2|2
-Gui, 15:Add, Edit, x90 y230 w425 vPozyvnoyDUVD7, %PozyvnoyDUVD7%
-Gui, 15:Add, Edit, x90 y320 w425 vsurnameDUVD7, %surnameDUVD7%
-Gui, 15:Add, ComboBox, x90 y420 w425 vCityDUVD7, %CityDUVD7%||Приволжск|Мирный|Невский
-Gui, 15:Add, DropDownList, x90 y610  w225 vpol, %pol%||Мужской|Женский
+Gui, 15:Add, ComboBox, x90 y40  w425 vrankDUVD7, %rankDUVD7%||Рядовой|Сержант|Старшина|Прапорщик|Лейтенант|Старший лейтенант|Капитан|Майор|Подполковник|Полковник|Генерал
+Gui, 15:Add, ComboBox, x90 y120 w425 vCityDUVD7, %CityDUVD7%||Приволжск|Мирный|Невский
+Gui, 15:Add, ComboBox, x90 y230 w425 vTegDUVD7, %TegDUVD7%||Нач. ГУВД|Первый Зам. Нач. ГУВД|Зам. Нач. ГУВД|Нач. ОМОН|Нач. УгРО|Нач. ППС|Нач. ПА|Зам. Нач. ОМОН|Зам. Нач. УгРО|Зам. Нач. ППС|Зам. Нач. ПА|ОМОН|УгРо|ППС|ПА
+Gui, 15:Add, Edit, x90 y320 w425 vNameDUVD7, %NameDUVD7%
+Gui, 15:Add, Edit, x90 y420 w425 vsurnameDUVD7, %surnameDUVD7%
+Gui, 15:Add, Edit, x90 y520 w425 vOtchetskstoDUVD7,%OtchetskstoDUVD7%
+Gui, 15:Add, Edit, x90 y620 w425 vPozyvnoyDUVD7,%PozyvnoyDUVD7%
+Gui, 15:Add, DropDownList, x90 y710  w225 vpol, %pol%||Мужской|Женский
 
 Gui, 15:show, center , Данные
 Return
