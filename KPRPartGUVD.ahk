@@ -1111,7 +1111,7 @@ MsgBox, 48, Предупреждение, Вы ввели:ID %id% Количес
 Sleep 7000
 SendPlay {Enter}
 SendChat("do Рация висит на поясе.", "  " zaderzhka " ")
-SendChat("me снял" floor " рацию, связался с диспетчером и передал" floor " ориентировку на гражданского"", "  " zaderzhka " ")
+SendChat("me снял" floor " рацию, связался с диспетчером и передал" floor " ориентировку на гражданского ", "  " zaderzhka " ")
 SendChat("do Нарушитель объявлен в розыск.", "  " zaderzhka " ")
 SendChat("su " id " " su " " reason " ", "  " zaderzhka " ")
 Return
