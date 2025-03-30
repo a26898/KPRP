@@ -1110,10 +1110,9 @@ IniWrite %reason%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы ввели:ID %id% Количество звезд:%star% Причина:%reason% Разворачивайте игру!
 Sleep 7000
 SendPlay {Enter}
-SendChat("do Рация висит на нагрудном кармане формы.", "  " zaderzhka " ")
-SendChat("me сняв рацию, зажал" floor " кнопку и передал" floor " информацию о человеке в дежурную часть", "  " zaderzhka " ")
-SendChat("do Дежурная часть среагировала на вопрос и объявила в федеральный розыск человека.", "  " zaderzhka " ")
-SendChat("me повесил" floor " рацию обратно", "  " zaderzhka " ")
+SendChat("do Рация висит на поясе.", "  " zaderzhka " ")
+SendChat("me снял" floor " рацию, связался с диспетчером и передал" floor " ориентировку на гражданского"", "  " zaderzhka " ")
+SendChat("do Нарушитель объявлен в розыск.", "  " zaderzhka " ")
 SendChat("su " id " " su " " reason " ", "  " zaderzhka " ")
 Return
 
