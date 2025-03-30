@@ -1071,13 +1071,13 @@ Return
 
 0001DUVD7:
 SendPlay {Enter}
-SendChat("say Здравия желаю, [" rankDUVD7 "] полиции [" surnameDUVD7 "], УВД по городу [" CityDUVD7 "]", "  " zaderzhka " ")
+SendChat("say Здравия желаю! " rankDUVD7 " полиции, по г. Город " CityDUVD7 " NameDUVD7 " " SurnameDUVD7 "., "  " zaderzhka " ")
 Return
 
 
 0002DUVD7:
 SendPlay {Enter}
-SendChat("say Гражданин, предоставьте документ, удостоверяющий вашу личность", "  " zaderzhka " ")
+SendChat("say Гражданин, предоставьте документ, удостоверяющий вашу личность.", "  " zaderzhka " ")
 SendChat("b Для этого необходимо написать в чат /pass ID", "  " zaderzhka " ")
 Return
 
