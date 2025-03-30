@@ -1071,7 +1071,7 @@ Return
 
 0001DUVD7:
 SendPlay {Enter}
-SendChat("say Здравия желаю! " rankDUVD7 " полиции, по г. Город " CityDUVD7 " NameDUVD7 " " SurnameDUVD7 "., "  " zaderzhka " ")
+SendChat("say Здравия желаю! " rankDUVD7 " полиции, по г. Город " CityDUVD7 " NameDUVD7 " " SurnameDUVD7 ", "  " zaderzhka " ")
 Return
 
 
