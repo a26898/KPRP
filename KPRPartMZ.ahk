@@ -1,7 +1,7 @@
 ﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 
-Gui, 5:show,  center h650 w1200 , AНК для министерства здравоохранения |КПРП работает на коммунизм!
+Gui, 5:show,  center h650 w1200 , AНК для министерства здравоохранения | КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
 Gui, 5:Add, Picture, x0 y24 w1300 h700,
 }
