@@ -2608,7 +2608,7 @@ Gui, 6:Add, Picture, x360 y630 w64 h64   +BackgroundTrans gChange, C:\ProgramDat
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
-Gui, 6:Add, ComboBox, x90 y135 w295 vZaderzhka, %Zaderzhka%||3500|4000|4500|5000|5500|6000|6500|7000
+Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||3500|4000|4500|5000|5500|6000|6500|7000
 
 if FonVybor=
 Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
@@ -2618,7 +2618,7 @@ Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Установлен свой фо�
 Gui, 6:Add, ComboBox, x90 y325 w295 vShrift, %Shrift%||Arial|Consolas|Courier New|Comic Sans MS|Lucida Console|MS Sans Serif|Segoe UITimes New Roman
 Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
-Gui, 6:Add, ComboBox, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
+Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
 Gui, 6:show, center , Настройки
 Return
 

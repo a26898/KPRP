@@ -1,7 +1,7 @@
 ﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 
-Gui, 5:show,  center h650 w1200 , AНК для министерства здравоохранения 
+Gui, 5:show,  center h650 w1200 , AНК для министерства здравоохранения |КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
 Gui, 5:Add, Picture, x0 y24 w1300 h700,
 }
@@ -5668,7 +5668,7 @@ if rand = 6
 	Word :=	"розовый"	
 SendPlay {Enter}
 SendChat(" " stol " ", "  " zaderzhka " ")
-SendChat("do На столе лежит кубик с четырьмя сторонами. ", "  " zaderzhka " ")
+SendChat("do На столе лежит кубик. ", "  " zaderzhka " ")
 SendChat("do Стороны кубика имеют:красный, желтый, коричневый, зеленый, розовый, черный цвет.  ", "  " zaderzhka " ")
 SendChat("say Ваша задача — подбросить кубик, чтобы он выпал стороной с " Word " цветом. ", "  " zaderzhka " ")
 Return
