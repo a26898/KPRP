@@ -5720,7 +5720,7 @@ Return
 SendPlay {Enter}
 SendChat(" " tumba " ", "  " zaderzhka " ")
 SendChat(" " tumba1 " ", "  " zaderzhka " ")
-
+Return
 
 
 :?:/МК_10::
