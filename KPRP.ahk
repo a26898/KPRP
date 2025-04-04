@@ -2640,21 +2640,13 @@ Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya
 Gui, 6:show, center , Настройки
 Return
 
-Test:
-MsgBox, % 4+32+256, Тестовая версия, Вы действительно хотите запустить тестовую версию?
-IfMsgBox, No
-    Return
-
-testFile := "C:\ProgramData\KPRP\KPRP-main\Test.ahk" ; Исправленный путь
-
-If !FileExist(testFile) {
-    MsgBox, 16, Ошибка, Файл не найден!
-    ExitApp
-}
-
-Run, %testFile%
-ExitApp
+Vybor_organizatsii:
+    Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
+    Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
+    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
+    Gui, 2:Show, w250 h120, Выбор организации
 Return
+
 
 
 Svoy:

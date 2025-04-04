@@ -13,6 +13,7 @@ Gui, 13:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramDa
 Gui, 13:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
 Gui, 13:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png
 Gui, 13:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gInfoDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png 
+Gui, 13:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 13:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 13:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 

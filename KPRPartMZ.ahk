@@ -15,7 +15,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -59,7 +59,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -98,7 +98,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -135,7 +135,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -211,7 +211,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -271,7 +271,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -303,7 +303,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
@@ -380,7 +380,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gTest, C:\ProgramData\KPRP\KPRP-main\Test.png
+Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png

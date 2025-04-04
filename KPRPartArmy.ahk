@@ -11,5 +11,6 @@ Gui, 9:Add, Tab2,  x0 y0 w1290 h29 c%Tsvet% +BackgroundTrans, Общее
 Gui, 9:Add, Picture, x10 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 9:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 9:Add, Picture, x200 y600 w48 w48   +BackgroundTrans  gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 9:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 9:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 9:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans  gReload , C:\ProgramData\KPRP\KPRP-main\restart.png
