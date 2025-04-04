@@ -1256,22 +1256,34 @@ if !FileExist(KPRPico) {
 
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.flag"  ; Файл для отслеживания первого запуска
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbyCCbU5uq3YxD0VLMTybqjWXvqxt3j5w6HDUdTvU9B6-QMO8u97qyVz9aTRCxGejPhK/exec"  ;
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbyhmWZzYYpbpKoW3EN6rI6xdVYWqgS_jFvy8mwIJdSrQJyviuuOgTJfeKGoy_BXlJOn3g/exec"  ;
 
-; Словарь соответствий (русский -> английская метка)
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
-; Проверяем, есть ли файл флага первого запуска
 if !FileExist(flagFile) {
-    ; Получаем данные о системе 
     EnvGet, PCName, COMPUTERNAME
     EnvGet, UserName, USERNAME
     DriveGet, DiskSerial, Serial, C:
     
-  
-    JsonData := "{""pc_name"":""" PCName """,""user"":""" UserName """,""disk_serial"":""" DiskSerial """}"
+    InputNick:
+    Gui, 3:Font, S12, Consolas
+    Gui, 3:Add, Text, x10 y10, Введите ник (Пример:Ivan_Ivanov)
+    Gui, 3:Add, Edit, vUserNick x10 y40 w280,
+    Gui, 3:Add, Button, gSubmitNick x10 y80 w280, Подтвердить
+    Gui, 3:Show, w300 h120, Ввод ника
+    Return
     
-    ; Отправка HTTP-запроса
+    SubmitNick:
+    Gui, 3:Submit
+    If !RegExMatch(UserNick, "^[A-Za-z0-9_]+$") {
+        MsgBox, Ошибка: Ник должен содержать только латинские буквы, цифры и _
+        GuiControl,, UserNick,  
+        Return
+    }
+    Gui, 3:Destroy
+    
+    JsonData := "{""pc_name"":""" PCName """,""user"":""" UserName """,""disk_serial"":""" DiskSerial """,""nickname"":""" UserNick """}"
+    
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
     HttpObj.SetRequestHeader("Content-Type", "application/json")
@@ -1279,25 +1291,20 @@ if !FileExist(flagFile) {
     HttpObj.Send(JsonData)
     Response := HttpObj.ResponseText
     
-   
     MsgBox, 64, Идентификация пользователя, %Response%
-    
-
-    FileAppend, , %flagFile%  
+    FileAppend, , %flagFile%
 }
 
-; Проверяем, есть ли сохраненный выбор
 if FileExist(selectedFile) {
     FileRead, SelectedItem, %selectedFile%
-    SelectedItem := Trim(SelectedItem)  ; Убираем пробелы/переносы строк
+    SelectedItem := Trim(SelectedItem)
     if (SelectedItem != "" && unitMap.HasKey(SelectedItem)) {
-        Gosub, % unitMap[SelectedItem]  ; Переходим к нужной метке при старте программы
+        Gosub, % unitMap[SelectedItem]
     }
 }
 
-; Показываем интерфейс выбора, если нет сохраненного выбора
 if (SelectedItem = "") {
-    Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
+    Gui, 2:Font, S15 Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
     Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
@@ -1305,17 +1312,14 @@ if (SelectedItem = "") {
 Return
 
 SaveSelection:
-    ; Сохраняем выбор
     Gui, 2:Submit
     FileDelete, %selectedFile%
     FileAppend, %SelectedItem%, %selectedFile%
     
-    ; Выполняем метку, соответствующую выбранной организации
     if (unitMap.HasKey(SelectedItem)) {
-        Gosub, % unitMap[SelectedItem]  ; Переходим к нужной метке
+        Gosub, % unitMap[SelectedItem]
     }
-
-    Gui, 2:Hide  ; Скрываем окно после выбора
+    Gui, 2:Hide
 Return
 
 
