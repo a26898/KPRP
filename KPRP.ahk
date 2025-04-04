@@ -1246,22 +1246,44 @@ Greeting()
 }
 
 
+
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico"
 if !FileExist(KPRPico) {
     MsgBox, Ошибка: Файл %KPRPico% не найден!
 } else {
     Menu, Tray, Icon, %KPRPico%
 }
-selectedFile := "C:\ProgramData\KPRP\KPRP-main\selected.ini"
-flagFile := "C:\ProgramData\KPRP\KPRP-main\first_run.flag"  ; Файл для отслеживания первого запуска
+
+selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
+flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.flag"  ; Файл для отслеживания первого запуска
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbyCCbU5uq3YxD0VLMTybqjWXvqxt3j5w6HDUdTvU9B6-QMO8u97qyVz9aTRCxGejPhK/exec"  ;
 
 ; Словарь соответствий (русский -> английская метка)
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
 ; Проверяем, есть ли файл флага первого запуска
 if !FileExist(flagFile) {
-    ; Если флаг не существует, значит первый запуск
-    FileAppend, , %flagFile%  ; Создаем файл флага, чтобы не показывать окно повторно
+    ; Получаем данные о системе 
+    EnvGet, PCName, COMPUTERNAME
+    EnvGet, UserName, USERNAME
+    DriveGet, DiskSerial, Serial, C:
+    
+  
+    JsonData := "{""pc_name"":""" PCName """,""user"":""" UserName """,""disk_serial"":""" DiskSerial """}"
+    
+    ; Отправка HTTP-запроса
+    HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+    HttpObj.Open("POST", GoogleScriptURL, false)
+    HttpObj.SetRequestHeader("Content-Type", "application/json")
+    
+    HttpObj.Send(JsonData)
+    Response := HttpObj.ResponseText
+    
+   
+    MsgBox, 64, Идентификация пользователя, %Response%
+    
+
+    FileAppend, , %flagFile%  
 }
 
 ; Проверяем, есть ли сохраненный выбор
@@ -1277,7 +1299,7 @@ if FileExist(selectedFile) {
 if (SelectedItem = "") {
     Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
 }
 Return
@@ -1295,6 +1317,7 @@ SaveSelection:
 
     Gui, 2:Hide  ; Скрываем окно после выбора
 Return
+
 
 
 
