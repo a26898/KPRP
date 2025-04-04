@@ -1255,8 +1255,8 @@ if !FileExist(KPRPico) {
 }
 
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
-flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.flag"  ; Файл для отслеживания первого запуска
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbyhmWZzYYpbpKoW3EN6rI6xdVYWqgS_jFvy8mwIJdSrQJyviuuOgTJfeKGoy_BXlJOn3g/exec"  ;
+flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.flag"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbw0Vk1bZ_0hsXyYe-oiXsNr5wwA9CoD1qE8xnd2-8i6dF6rsh6L4HYigQusTZa77-G0aQ/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1265,34 +1265,29 @@ if !FileExist(flagFile) {
     EnvGet, UserName, USERNAME
     DriveGet, DiskSerial, Serial, C:
     
-    InputNick:
-    Gui, 3:Font, S12, Consolas
-    Gui, 3:Add, Text, x10 y10, Введите ник (Пример:Ivan_Ivanov)
-    Gui, 3:Add, Edit, vUserNick x10 y40 w280,
-    Gui, 3:Add, Button, gSubmitNick x10 y80 w280, Подтвердить
-    Gui, 3:Show, w300 h120, Ввод ника
-    Return
-    
-    SubmitNick:
-    Gui, 3:Submit
-    If !RegExMatch(UserNick, "^[A-Za-z0-9_]+$") {
-        MsgBox, Ошибка: Ник должен содержать только латинские буквы, цифры и _
-        GuiControl,, UserNick,  
-        Return
+    Loop {
+        InputBox, Nickname, Введите ваш ник, Введите ник (Пример:Ivan_Ivanov), , 300, 150
+        if (Nickname = "") {
+            MsgBox, Ошибка! Никнейм не может быть пустым.
+        } else if !RegExMatch(Nickname, "^[a-zA-Z_]+$") {
+            MsgBox, Ошибка! Используйте только английские буквы и символ _
+        } else {
+            break
+        }
     }
-    Gui, 3:Destroy
     
-    JsonData := "{""pc_name"":""" PCName """,""user"":""" UserName """,""disk_serial"":""" DiskSerial """,""nickname"":""" UserNick """}"
+    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """}"
     
+    ; Отображаем JSON перед отправкой для проверки
+
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
     HttpObj.SetRequestHeader("Content-Type", "application/json")
-    
     HttpObj.Send(JsonData)
     Response := HttpObj.ResponseText
     
     MsgBox, 64, Идентификация пользователя, %Response%
-    FileAppend, , %flagFile%
+    FileAppend, , %flagFile% 
 }
 
 if FileExist(selectedFile) {
@@ -1304,7 +1299,7 @@ if FileExist(selectedFile) {
 }
 
 if (SelectedItem = "") {
-    Gui, 2:Font, S15 Bold, Consolas
+    Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
     Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
@@ -1319,13 +1314,9 @@ SaveSelection:
     if (unitMap.HasKey(SelectedItem)) {
         Gosub, % unitMap[SelectedItem]
     }
+
     Gui, 2:Hide
 Return
-
-
-
-
-
 
 
 
