@@ -2641,11 +2641,17 @@ Gui, 6:show, center , Настройки
 Return
 
 Vybor_organizatsii:
-    Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
-    Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
-    Gui, 2:Show, w250 h120, Выбор организации
+Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
+Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200 gOnSelect, РЖД|МЗ|ГУВД|ГИБДД|Армия
+Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 2:Show, w250 h120, Выбор организации
 Return
+
+OnSelect:
+    Sleep 2000
+    Reload
+Return
+
 
 
 
