@@ -1255,8 +1255,8 @@ if !FileExist(KPRPico) {
 }
 
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
-flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbw0Vk1bZ_0hsXyYe-oiXsNr5wwA9CoD1qE8xnd2-8i6dF6rsh6L4HYigQusTZa77-G0aQ/exec"
+flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbxYATFR_ZlXz_aSSmp6mpZdR6ykRUQVHXK-CSfaXK2O_KDcqJe1Jto_fpCaqyGJwYurJQ/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1264,7 +1264,13 @@ if !FileExist(flagFile) {
     EnvGet, PCName, COMPUTERNAME
     EnvGet, UserName, USERNAME
     DriveGet, DiskSerial, Serial, C:
-    
+
+    ; Получение информации о CPU, RAM и GPU
+    cpu := GetWMIValue("Win32_Processor", "Name")
+    ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
+    gpu := GetWMIValue("Win32_VideoController", "Name")
+    ramGB := Round(ram / (1024 ** 3), 2)
+
     Loop {
         InputBox, Nickname, Введите ваш ник, Введите ник (Пример:Ivan_Ivanov), , 300, 150
         if (Nickname = "") {
@@ -1275,17 +1281,16 @@ if !FileExist(flagFile) {
             break
         }
     }
-    
-    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """}"
-    
-    ; Отображаем JSON перед отправкой для проверки
 
+    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """}"
+
+    ; Отправка JSON
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
     HttpObj.SetRequestHeader("Content-Type", "application/json")
     HttpObj.Send(JsonData)
     Response := HttpObj.ResponseText
-    
+
     MsgBox, 64, Идентификация пользователя, %Response%
     FileAppend, , %flagFile% 
 }
@@ -1310,13 +1315,20 @@ SaveSelection:
     Gui, 2:Submit
     FileDelete, %selectedFile%
     FileAppend, %SelectedItem%, %selectedFile%
-    
+
     if (unitMap.HasKey(SelectedItem)) {
         Gosub, % unitMap[SelectedItem]
     }
 
     Gui, 2:Hide
 Return
+
+; Функция получения значений из WMI
+GetWMIValue(Class, Property) {
+    for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
+        return item[Property]
+    return "N/A"
+}
 
 
 
