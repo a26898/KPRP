@@ -1265,7 +1265,6 @@ if !FileExist(flagFile) {
     EnvGet, UserName, USERNAME
     DriveGet, DiskSerial, Serial, C:
 
-    ; Получение информации о CPU, RAM и GPU
     cpu := GetWMIValue("Win32_Processor", "Name")
     ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
     gpu := GetWMIValue("Win32_VideoController", "Name")
@@ -1281,10 +1280,8 @@ if !FileExist(flagFile) {
             break
         }
     }
+  JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """}"
 
-    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """}"
-
-    ; Отправка JSON
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
     HttpObj.SetRequestHeader("Content-Type", "application/json")
