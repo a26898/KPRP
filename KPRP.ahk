@@ -1128,8 +1128,8 @@ Menu, Tray, Add
 Menu, Tray, Add, Help
 Menu, Tray, Rename, Help, Техническая поддержка
 Menu, Tray, Add
-Menu, Tray, Add, Bag
-Menu, Tray, Rename, Bag, Баг-репорт
+Menu, Tray, Add, Bugreport
+Menu, Tray, Rename, Bugreport, Баг-репорт
 Menu, Tray, Add
 Menu, Tray, Add, Reload
 Menu, Tray, Rename, Reload, Перезапуск
@@ -3620,12 +3620,6 @@ FileSelectFile, Objects100, % 1+2, %A_WorkingDir%, Редактор отыгро
 return
 
 
-Bag:
-MsgBox, % 4+32+256, Баг-репорт, Вы действительно хотите перейти в Баг-репорт?
-	IfMsgBox, No
-Return
-Run https://vk.com/im?media=&sel=-187717337
-Return
 
 
 
@@ -3957,7 +3951,62 @@ Sleep 2500
 Reload
 return
 
+Bugreport:
+MsgBox, % 4+32+256, Баг-репорт, Вы действительно хотите перейти в Баг-репорт?
+IfMsgBox, No
+    Return
 
+; Ввод ника
+Loop {
+    InputBox, Nickname, Введите ваш ник, Введите ник (Пример: Ivan_Ivanov), , 300, 150
+    if (ErrorLevel)  ; Нажал крестик или отмену
+        Return
+
+    if (Nickname = "") {
+        MsgBox, Ошибка! Никнейм не может быть пустым.
+    } else if !RegExMatch(Nickname, "^[a-zA-Z_]+$") {
+        MsgBox, Ошибка! Используйте только английские буквы и символ _
+    } else {
+        break
+    }
+}
+
+; Ввод описания ошибки
+Loop {
+    InputBox, BugDescription, Опишите ошибку, Кратко опишите суть бага или ошибки:, , 400, 200
+    if (ErrorLevel)
+        Return
+
+    if (BugDescription = "") {
+        MsgBox, Ошибка! Описание не может быть пустым.
+    } else {
+        break
+    }
+}
+
+; Ввод ВК (необязательно)
+InputBox, VkLink, Ваш ВКонтакте, Укажите ссылку на ваш ВК (необязательно), , 400, 150
+if (ErrorLevel)
+    Return
+
+; Подготовка JSON
+JsonData := "{"
+    . """nickname"": """ . Nickname . """, "
+    . """bug_description"": """ . StrReplace(BugDescription, "`n", " ") . """, "
+    . """vk"": """ . VkLink . """}"
+
+; URL скрипта
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbyppRECPhTvRNBptbAM9c-EnusUSkAgDRjb3h0DGjw3O9fWTitv1pA-qwjScS8fwb1lcg/exec"
+
+; Отправка запроса
+HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+HttpObj.Open("POST", GoogleScriptURL, false)
+HttpObj.SetRequestHeader("Content-Type", "application/json")
+HttpObj.Send(JsonData)
+Response := HttpObj.ResponseText
+
+MsgBox, 64, Спасибо!, Ваш баг-репорт был отправлен.`nОтвет сервера: %Response%
+Return
 
 
 Save1:

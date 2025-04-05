@@ -15,6 +15,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -59,6 +60,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -98,6 +100,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -135,6 +138,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -211,6 +215,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -271,6 +276,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -303,6 +309,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -380,6 +387,7 @@ Gui, 5:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData
 Gui, 5:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gEditMZ, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
 Gui, 5:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
 Gui, 5:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 5:Add, Picture, x500 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
 Gui, 5:Add, Picture, x840 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 5:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 5:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
@@ -5736,7 +5744,7 @@ SendChat("me взяв медицинскую карту из рук челове
 SendChat("me положил" floor " медицинскую карту на стол ", "  " zaderzhka " ")
 SendChat("me взяв ручку, начал" floor " заполнения медицинской карты", "  " zaderzhka " ")
 SendChat("me написав в строке заключения 'К государственной службе годен', отложил" floor " ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать 'Маршалова  К. А. - Минздрав РП' на строке заключения", "  " zaderzhka " ")
+SendChat("me взяв штемпель со стола, поставил" floor " печать 'Брофловский А. С. - Минздрав РП' на строке заключения", "  " zaderzhka " ")
 SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
 SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
 SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
