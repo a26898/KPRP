@@ -1269,7 +1269,7 @@ if !FileExist(flagFile) {
     ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
     gpu := GetWMIValue("Win32_VideoController", "Name")
     osVersion := GetWMIValue("Win32_OperatingSystem", "Version")
-    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption") ; ← Получаем полное имя Windows
+    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption") ;
     winVersion := GetWindowsName(osVersion)
 
     ramGB := Round(ram / (1024 ** 3), 2)
@@ -1325,14 +1325,12 @@ SaveSelection:
     Gui, 2:Hide
 Return
 
-; Получение значения из WMI
 GetWMIValue(Class, Property) {
     for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
         return item[Property]
     return "N/A"
 }
 
-; Определение только версии (10, 11 и т.д.)
 GetWindowsName(version) {
     if InStr(version, "10.0") {
         build := SubStr(version, 6)
