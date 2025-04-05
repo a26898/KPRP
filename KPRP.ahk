@@ -1247,7 +1247,7 @@ Greeting()
 
 
 
-KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico"
+KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
 if !FileExist(KPRPico) {
     MsgBox, Ошибка: Файл %KPRPico% не найден!
 } else {
@@ -1256,7 +1256,7 @@ if !FileExist(KPRPico) {
 
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbxYATFR_ZlXz_aSSmp6mpZdR6ykRUQVHXK-CSfaXK2O_KDcqJe1Jto_fpCaqyGJwYurJQ/exec"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbxh8mqp9BSQ-ENsdTBemkbQP3qBMP81x71DAt36fBVS9433ioJvWHBOgWNy4k2mFMDb/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1268,6 +1268,10 @@ if !FileExist(flagFile) {
     cpu := GetWMIValue("Win32_Processor", "Name")
     ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
     gpu := GetWMIValue("Win32_VideoController", "Name")
+    osVersion := GetWMIValue("Win32_OperatingSystem", "Version")
+    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption") ; ← Получаем полное имя Windows
+    winVersion := GetWindowsName(osVersion)
+
     ramGB := Round(ram / (1024 ** 3), 2)
 
     Loop {
@@ -1280,7 +1284,8 @@ if !FileExist(flagFile) {
             break
         }
     }
-  JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """}"
+
+    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winVersion . """, ""os_full"": """ . osFullName . """}"
 
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
@@ -1320,12 +1325,31 @@ SaveSelection:
     Gui, 2:Hide
 Return
 
-; Функция получения значений из WMI
+; Получение значения из WMI
 GetWMIValue(Class, Property) {
     for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
         return item[Property]
     return "N/A"
 }
+
+; Определение только версии (10, 11 и т.д.)
+GetWindowsName(version) {
+    if InStr(version, "10.0") {
+        build := SubStr(version, 6)
+        if (build >= 22000)
+            return "Windows 11"
+        else
+            return "Windows 10"
+    } else if InStr(version, "6.3")
+        return "Windows 8.1"
+    else if InStr(version, "6.2")
+        return "Windows 8"
+    else if InStr(version, "6.1")
+        return "Windows 7"
+    else
+        return "Неизвестная версия (" . version . ")"
+}
+
 
 
 
