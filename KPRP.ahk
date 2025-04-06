@@ -3951,6 +3951,71 @@ Sleep 2500
 Reload
 return
 
+
+Uluchsheniya:
+MsgBox, % 4+32+256, Улучшение, Вы действительно хотите отправить предложение по улучшению?
+IfMsgBox, No
+    Return
+
+Loop {
+    InputBox, Nickname, Ваш ник, Введите ник (Пример: Ivan_Ivanov), , 300, 150
+    if (ErrorLevel)  ; Нажал крестик или отмену
+        Return
+
+    if (Nickname = "") {
+        MsgBox, Ошибка! Никнейм не может быть пустым.
+    } else if !RegExMatch(Nickname, "^[a-zA-Z_]+$") {
+        MsgBox, Ошибка! Используйте только английские буквы и символ _.
+    } else {
+        break
+    }
+}
+
+
+Loop {
+    InputBox, SuggestionText, Ваше предложение, Кратко опишите, как можно улучшить КПРП:, , 400, 200
+    if (ErrorLevel)
+        Return
+
+    if (SuggestionText = "") {
+        MsgBox, Ошибка! Поле предложения не может быть пустым.
+    } else {
+        break
+    }
+}
+
+
+InputBox, VkLink, Ваш ВКонтакте, Укажите ссылку на ваш ВК (необязательно), , 400, 150
+if (ErrorLevel)
+    Return
+
+
+JsonData := "{"
+    . """nickname"": """ . Nickname . """, "
+    . """suggestion"": """ . StrReplace(SuggestionText, "`n", " ") . """, "
+    . """vk"": """ . VkLink . """}"
+
+
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx85ySEvmqXm3hN2d-_3ZuuJuAVEEhv0TOHNI8Li_0QL69rOQLxJK9-EIV4ZMKK0j4W/exec"
+
+
+HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+HttpObj.Open("POST", GoogleScriptURL, false)
+HttpObj.SetRequestHeader("Content-Type", "application/json")
+HttpObj.Send(JsonData)
+Response := HttpObj.ResponseText
+
+MsgBox, 64, Спасибо!, Ваше предложение было отправлено.`nОтвет сервера: %Response%
+Return
+
+
+
+
+
+
+
+
+
 Bugreport:
 MsgBox, % 4+32+256, Баг-репорт, Вы действительно хотите перейти в Баг-репорт?
 IfMsgBox, No
@@ -4007,6 +4072,9 @@ Response := HttpObj.ResponseText
 
 MsgBox, 64, Спасибо!, Ваш баг-репорт был отправлен.`nОтвет сервера: %Response%
 Return
+
+
+
 
 
 Save1:
