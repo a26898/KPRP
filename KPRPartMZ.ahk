@@ -1,6 +1,8 @@
 ﻿
 
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+TrayTip, Обновление от 08.04.25:, добавлено оповещение о вызовах сделано удаление бригады при ее отсутствии запрещено вводить данные в докладах..., 100, 2
+TrayTip, Обновление, не соответствующих опции!,20, 2
 
 Gui, 5:show,  center h650 w1200 , Министерство здравоохранения | КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
@@ -6137,6 +6139,7 @@ Return
 
 
 ::/Пост::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6264,6 +6267,7 @@ return
 
 
 :?:/Город::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6378,6 +6382,7 @@ Return
 
 
 :?:/Вызов_1::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (разрешены только русские буквы, можно оставить пустым)
 InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету — оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6447,6 +6452,7 @@ Return
 
 
 :?:/Вызов_4::
+
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 Sleep 1500
 SendPlay {Enter}
@@ -6485,56 +6491,72 @@ Return
 
 
 :?:/Напарник_16::
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
+SendMessage, 0x50, 0, 0x4190419,, A
 InputBox, Patrol_1, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
 if (ErrorLevel) {
     MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
     Return
 }
-
-
-MsgBox, 48, Предупреждение, Вы изменили данные на:%Patrol_1%.
+If !RegExMatch(Patrol_1, "^[А-Яа-яЁё]+$") {
+    MsgBox, 16, Ошибка, Введите только русские буквы.
+    Return
+}
+IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol_1%.
 return
 
 
 
 :?:/Напарник_15::
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
+SendMessage, 0x50, 0, 0x4190419,, A
 InputBox, Patrol, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
 if (ErrorLevel) {
     MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
     Return
 }
-
-
-MsgBox, 48, Предупреждение, Вы изменили данные на:%Patrol%.
+If !RegExMatch(Patrol, "^[А-Яа-яЁё]+$") {
+    MsgBox, 16, Ошибка, Введите только русские буквы.
+    Return
+}
+IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol%.
 return
 
 
 :?:/Пост_15::
 SendMessage, 0x50,, 0x4190419,, A
-IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
 InputBox, Post, Ввод данных, Введите пост, затем нажмите "OK"
 if (ErrorLevel) {
     MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
     Return
 }
-
-
-MsgBox, 48, Предупреждение, Вы изменили данные на:%Post%.
+If !RegExMatch(Post, "^[А-Яа-яЁё]+$") {
+    MsgBox, 16, Ошибка, Введите только русские буквы.
+    Return
+}
+IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы изменили данные на: %Post%.
 return
 
 
 
 :?:/Вызов_15::
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-InputBox, to, Ввод данных, Введите номер вызова , затем нажмите "OK"
+; Переключение на русскую раскладку
+SendMessage, 0x50, 0, 0x4190419,, A
+
+InputBox, to, Ввод данных, Введите номер вызова, затем нажмите "OK"
 if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
     Return
 }
-MsgBox, 48, Предупреждение, Вы изменили данные на:%to%.
+If !RegExMatch(to, "^\d+$") {
+    MsgBox, 16, Ошибка, Введите только цифры для номера вызова.
+    Return
+}
+IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
+MsgBox, 48, Предупреждение, Вы изменили данные на: %to%.
 return
+
 
 
 UpdateTime:
@@ -6554,6 +6576,7 @@ Return
 
 
 :?:/Республика::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol_1, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6695,6 +6718,7 @@ Return
 
 
 :?:/Город_0::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6826,6 +6850,7 @@ Return
 
 
 :?:/Республика_0::
+SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol_1, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
 if (ErrorLevel) {
@@ -6966,6 +6991,7 @@ Return
 
 
 :?:/ПО::
+SendMessage, 0x50, 0, 0x4190419,, A
 InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
 if (ErrorLevel) {
     MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
