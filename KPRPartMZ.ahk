@@ -404,10 +404,15 @@ Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\Progr
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
 
 
-
 IniRead, gameFolder, %ProgramFiles%\KPRP\Halyards\Province.ini, Mta, gameFolder
 
 FileCLog := gameFolder "\MTA\logs\console.log"  ; Путь к файлу лога
+
+GuiControlGet, SoundEnable, 6:, SoundEnable
+
+; Если SoundEnable не 1, выходим
+if (SoundEnable != 1)
+    return
 
 Loop
 {
