@@ -806,6 +806,8 @@ IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 
 
+IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
+
 if Svoye_1=ERROR
 Svoye_1=Описание
 if Svoye_2=ERROR
@@ -1245,14 +1247,24 @@ Greeting()
     return, Greeting
 }
 
-
-
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
 if !FileExist(KPRPico) {
     MsgBox, Ошибка: Файл %KPRPico% не найден!
 } else {
     Menu, Tray, Icon, %KPRPico%
 }
+
+
+if (!FileExist(gameFolder "\Multi Theft Auto.exe")) {
+    FileSelectFolder, gameFolder,, 0, Выберите папку, где установлена MTA Province! Пример:C:\Province Games
+    if (gameFolder = "") {
+        MsgBox, Ошибка! Папка не выбрана. Скрипт завершит работу.
+        ExitApp
+    }
+    IniWrite, %gameFolder%, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
+}
+
+IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
@@ -4146,6 +4158,7 @@ IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 28
 
 Reload
 return
+
 
 
 HideToTray:
