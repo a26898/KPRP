@@ -1050,6 +1050,8 @@ if pol=ERROR
 pol=Мужской
 if Skrinshot=ERROR
 Skrinshot=Включен
+if SoundEnable=ERROR
+SoundEnable=1
 
 
 if FonVybor=ERROR
