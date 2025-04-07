@@ -1,7 +1,6 @@
 ﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
-
-Gui, 5:show,  center h650 w1200 , AНК для министерства здравоохранения | КПРП работает на коммунизм!
+Gui, 5:show,  center h650 w1200 , Министерство здравоохранения | КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
 Gui, 5:Add, Picture, x0 y24 w1300 h700,
 }
@@ -23,7 +22,6 @@ Gui, 5:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramDat
 Gui, 5:Add, Picture, x1020 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 
-
 Gui, 5:Add, Picture, x10 y40 w128 w96  +BackgroundTrans gLaziness7, C:\ProgramData\KPRP\KPRP-main\Sobes.png
 Gui, 5:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine81, C:\ProgramData\KPRP\KPRP-main\Cards.png
 Gui, 5:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine79, C:\ProgramData\KPRP\KPRP-main\Oath.png
@@ -32,21 +30,14 @@ Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine33, C:\ProgramD
 Gui, 5:Add, Picture, x130 y40 w128 w96  +BackgroundTrans gMedicine13, C:\ProgramData\KPRP\KPRP-main\Defibrillator.png
 
 
-
 Gui, 5:Add, Picture, x370 y40 w128 w96  +BackgroundTrans gLaziness2, C:\ProgramData\KPRP\KPRP-main\Fast.png
-
 
 Gui, 5:Add, Picture, x490 y40 w128 w96  +BackgroundTrans gLaziness8, C:\ProgramData\KPRP\KPRP-main\Patrol.png
 Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gLaziness14, C:\ProgramData\KPRP\KPRP-main\Patrol_r.png
-
 Gui, 5:Add, Picture, x610 y40 w128 w96  +BackgroundTrans gLaziness12, C:\ProgramData\KPRP\KPRP-main\Patrol_V.png
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gLaziness13, C:\ProgramData\KPRP\KPRP-main\Patrol_rr.png
-
 Gui, 5:Add, Picture, x730 y40 w128 w96  +BackgroundTrans gLaziness3, C:\ProgramData\KPRP\KPRP-main\Change.png
-
 Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\ProgramData\KPRP\KPRP-main\Registry.png
-
-
 Gui, 5:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\Call.png
 Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
 
@@ -386,12 +377,7 @@ Gui, 5:Add, Picture, x250  y260 w128 w96 +BackgroundTrans gLekarstva21, C:\Progr
 Gui, 5:Add, Picture, x10   y150 w128 w96 +BackgroundTrans gLekarstva22, C:\ProgramData\KPRP\KPRP-main\Reduced.png
 
 
-
-
-
-
 Gui, 5:Tab, 8
-
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -406,13 +392,11 @@ Gui, 5:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramDat
 Gui, 5:Add, Picture, x1020 y600 w48 w48   +BackgroundTrans  gLektsii_MZ, C:\ProgramData\KPRP\KPRP-main\Infa_Lepktsii.png
 Gui, 5:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 
-
 Gui, 5:Add, Picture, x10 y40 w128 w96 +BackgroundTrans gLaziness20, C:\ProgramData\KPRP\KPRP-main\Dezinfektsiya.png
 Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gMedicine83, C:\ProgramData\KPRP\KPRP-main\Sroka_godnosti.png
 Gui, 5:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine87, C:\ProgramData\KPRP\KPRP-main\Dokumentatsiya.png
 Gui, 5:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine84, C:\ProgramData\KPRP\KPRP-main\Khraneniya.png
 Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine86, C:\ProgramData\KPRP\KPRP-main\Zamena_belya.png
-
 
 Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\ProgramData\KPRP\KPRP-main\Quartzization.png
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
@@ -441,6 +425,41 @@ Return
 
 0003MZ7:
 SendPlay {Enter}
+SendChat("say На что жалуетесь?", "  " zaderzhka " ")
+Return
+
+0004MZ7:
+SendPlay {Enter}
+SendChat("say Есть ли у Вас предшествующие заболевания?", "  " zaderzhka " ")
+Return
+
+0005MZ7:
+SendPlay {Enter}
+SendChat("say Имеются ли у Вас аллергические реакции?", "  " zaderzhka " ")
+Return
+
+0006MZ7:
+SendPlay {Enter}
+SendChat("say Принимаете ли Вы лекарственные препараты?", "  " zaderzhka " ")
+Return
+
+0007MZ7:
+SendPlay {Enter}
+SendChat("say Имеете алкогольную или наркотическую зависимость?", "  " zaderzhka " ")
+Return
+
+0008MZ7:
+SendPlay {Enter}
+SendChat("say Какой Вы ведёте образ жизни?", "  " zaderzhka " ")
+Return
+
+0009MZ7:
+SendPlay {Enter}
+SendChat("say Есть ли у Вас наследственные заболевания?", "  " zaderzhka " ")
+Return
+
+0010MZ7:
+SendPlay {Enter}
 SendChat("say Сейчас я осмотрю вас.", "  " zaderzhka " ")
 SendChat("do Медицинские перчатки в кармане.", "  " zaderzhka " ")
 SendChat("me достав перчатки, надел" floor " их и приступил" floor " к осмотру пациента ", "  " zaderzhka " ")
@@ -448,7 +467,7 @@ SendChat("me подумав, сделал" floor " соответствующи�
 Return
 
 
-0004MZ7:
+0011MZ7:
 SendPlay {Enter}
 SendChat("do В грудном кармане бланк выписки и ручка.", "  " zaderzhka " ")
 SendChat("me достал" floor " бланк, ручку и записал" floor " диагноз с лекарством", "  " zaderzhka " ")
@@ -457,47 +476,43 @@ SendChat("me передал" floor " лекарство и бланк пацие
 SendChat("n Пропишите, пожалуйста, в обычном чате: /me взял(а) лекарство и бланк из рук врача", "  " zaderzhka " ")
 Return
 
-0005MZ7:
+00012MZ7:
 SendPlay {Enter}
 SendChat("me открыв сумку, достал" floor " из нее необходимое лекарство и употребил" floor " его ", " " zaderzhka " ")
 Return
 
 
-0006MZ7:
+0013MZ7:
 SendPlay {Enter}
 SendChat("say Всего доброго, не болейте.", "500")
 Return
 
-0007MZ7:
+0014MZ7:
 SendPlay {Enter}
 SendChat("say Хорошо, Вы можете пройти лечение бесплатно в стационаре нашей больницы, проходите в палату.", "500")
 Return
 
 
-0008MZ7:
+0015MZ7:
 SendPlay {Enter}
 SendChat("me сняв рацию с приборной панели, нажал" floor " на тангенту после чего что-то прокричал" floor " в нее", "500")
 SendChat("m Немедленно уступите дорогу специальному транспорту! ", "500")
 SendChat("me отпустил" floor " тангенту после чего повесил" floor " её на приборную панель", "500")
 Return
 
-0009MZ7:
-Return
-
-
-0010MZ7:
+0016MZ7:
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
 Return
 
 
-0011MZ7:
+0017MZ7:
 SendPlay {Enter}
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
 Return
 
-0012MZ7:
+0018MZ7:
 SendPlay {Enter}
 SendChat("say Для получения медицинской карты вам необходимо подать электронное заявление на государственный портал. ", " " zaderzhka " ")
 SendChat("b https://forum.gtaprovince.ru/topic/869358-minzdrav-«emias-provincii»/ Вот ссылка ниже смотрите, есть запись и результаты. ", " " zaderzhka " ")
@@ -508,32 +523,29 @@ SendChat("say Вам не обязательно находится в боль�
 Return
 
 
-0013MZ7:
-Return
 
-
-0014MZ7:
+0019MZ7:
 SendPlay {Enter}
 SendChat("me достал" floor " каталку из АСМП", " " zaderzhka " ")
 SendChat("drivecouch ", " " zaderzhka " ")
 Return
 
 
-0015MZ7:
+0020MZ7:
 SendPlay {Enter}
 SendChat("me переложил" floor " человека на каталку ", " " zaderzhka " ")
 SendChat("loadcouch", " " zaderzhka " ")
 Return
 
 
-0016MZ7:
+0021MZ7:
 SendPlay {Enter}
 SendChat("me закатил" floor " каталку в АСМП", " " zaderzhka " ")
 SendChat("getcouch", " " zaderzhka " ")
 Return
 
 
-0017MZ7:
+0022MZ7:
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me сняв КПК с пояса, вызвал" floor " через неё дежурного врача", "  " zaderzhka " ")
@@ -542,7 +554,7 @@ SendChat("hospital", "500")
 return
 
 
-0018MZ7:
+0023MZ7:
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
@@ -550,8 +562,7 @@ SendChat("r [" TAG "] Помехи. ", " zaderzhka ")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
 Return
 
-
-0019MZ7:
+0024MZ7:
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
@@ -559,59 +570,27 @@ SendChat("rо [" Bol_ro_1 "] Помехи. ", " zaderzhka ")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
 Return
 
-
-0020MZ7:
+0025MZ7:
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
 SendChat("d [" Bol_ro_1 "] Помехи. ", " zaderzhka ")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
 Return
 
-
-
-0022MZ7:
+0026MZ7:
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", " zaderzhka ")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
-SendChat("r [" TAG "] Заступил" floor " на смену. ", " zaderzhka ")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
-return
+SendChat("say Гражданин мы не выдаем таблетки, мы выписываем рецепты на приобретение определенных. ", "  " zaderzhka " ")
+SendChat("say Если вас что-то беспокоит, пройдите в стационар и ожидайте свободного врача. ", "  " zaderzhka " ")
+SendChat("say Так-же таблетки или другие лекарственные препараты приобретаются только в aптеках всех городов Республики Провинции.", "  " zaderzhka " ")
+Return
 
-
-
-0023MZ7:
+0027MZ7:
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", " zaderzhka ")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
 SendChat("r [" TAG "] Разрешите, отъехать на 30 минут по личным делам? ", " zaderzhka ")
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
 return
-
-
-0024MZ7:
-SendPlay {Enter}
-SendChat("do КПК висит на поясе.", " zaderzhka ")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
-SendChat("r [" TAG "]  Взял" floor " перерыв. ", " zaderzhka ")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
-return
-
-
-0025MZ7:
-SendPlay {Enter}
-SendChat("do КПК висит на поясе.", " zaderzhka ")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него  ", " zaderzhka ")
-SendChat("r [" TAG "] Сдал" floor " смену. ", " zaderzhka ")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", " zaderzhka ")
-return
-
-
-0026MZ7:
-return
-
-0027MZ7:
-return
-
 
 0028MZ7:
 Pause
