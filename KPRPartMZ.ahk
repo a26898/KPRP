@@ -1,4 +1,6 @@
-﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+﻿
+
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 5:show,  center h650 w1200 , Министерство здравоохранения | КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
@@ -402,7 +404,51 @@ Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\Progr
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
 
 
-CapsLock:
+
+IniRead, gameFolder, %ProgramFiles%\KPRP\Halyards\Province.ini, Mta, gameFolder
+
+FileCLog := gameFolder "\MTA\logs\console.log"  ; Путь к файлу лога
+
+Loop
+{
+    lastLine := GetNewLine(FileCLog)
+
+    ; Проверка, содержит ли последняя строка "/to [ID]"
+    if (InStr(lastLine, "/to [ID]"))
+    {
+        Sleep, 2000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\call.mp3
+    }
+
+    Sleep, 1000 ; чтобы не грузить процессор
+}
+
+; Функция для получения новой строки из файла
+GetNewLine(filename)
+{
+    static oldSize := 0
+    static lastLine := ""
+
+    FileGetSize, newSize, %filename%
+
+    ; Если размер файла не изменился — ничего не делать
+    if (newSize = oldSize)
+        return ""
+
+    oldSize := newSize
+
+    ; Прочитать последнюю непустую строку из файла
+    last := ""
+    Loop, Read, %filename%
+    {
+        if A_LoopReadLine
+            last := A_LoopReadLine
+    }
+
+    return last
+}
+
+
 Return
 
 
