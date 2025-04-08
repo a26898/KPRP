@@ -806,6 +806,7 @@ IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
+IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
@@ -1055,6 +1056,8 @@ if SoundEnable=ERROR
 SoundEnable=1
 if MaxMinutes=ERROR
 MaxMinutes=4
+if Taymer_Nastroyka=ERROR
+Taymer_Nastroyka=Включен
 
 
 if FonVybor=ERROR
@@ -1127,6 +1130,16 @@ if (Skrinshot="Выключен")
 Skrin_1=
 }
 
+
+
+
+Taymer_Nastroyka := "Включен"  ; Пример значения переменной настройки
+
+if (Taymer_Nastroyka = "Включен") {
+    Run, C:\ProgramData\KPRP\KPRP-main\АFK.ahk  ; Запуск скрипта, если настройка включена
+} else {
+    ; Здесь ничего не делаем, если настройка выключена
+}
 
 
 Menu, Tray, NoStandard
@@ -1256,7 +1269,6 @@ Greeting()
     return, Greeting
 }
 
-Run, C:\ProgramData\KPRP\KPRP-main\АFK.ahk
 
 
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
@@ -2717,8 +2729,8 @@ Return
 Vania:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 Gui, 6:Destroy,
-Gui, 6:Add, Picture, x0 y0 w96   h765 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 6:Add, Picture, x360 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 6:Add, Picture, x0 y0 w480   h765 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
+Gui, 6:Add, Picture, x580 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
@@ -2734,7 +2746,8 @@ Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
 Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
 Gui, 6:Add, Slider, x90 y700 w195 h30 vSoundEnable Range0-1, %SoundEnable% 
-Gui, 6:Add, Edit, x520 y40 w195 vMaxMinutes, %MaxMinutes%
+Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
+Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
 
 
 Gui, 6:show, center , Настройки
@@ -3726,6 +3739,7 @@ IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
+IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 
 IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
