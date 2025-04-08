@@ -1269,12 +1269,9 @@ if (!FileExist(gameFolder "\Multi Theft Auto.exe")) {
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
-
-
-
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx8SixW5a_9eklrerbrpiPNhJHWknBM2qpD9R12VUYK14vSbsdsfAyZNHA-ykI3_wzNdQ/exec"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx3z3TbQ5WwzhpIhxtfEEX7INO4UUoX433FxCeQq1XK0_MThm58ZHUC4z47Qjh4qKMbNQ/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1286,16 +1283,9 @@ if !FileExist(flagFile) {
     cpu := GetWMIValue("Win32_Processor", "Name")
     ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
     gpu := GetWMIValue("Win32_VideoController", "Name")
-    osVersion := GetWMIValue("Win32_OperatingSystem", "Version")
     osFullName := GetWMIValue("Win32_OperatingSystem", "Caption")
-    
-    ; Безопасное получение дополнительных полей
-    displayVersion := SafeWMI("Win32_OperatingSystem", "DisplayVersion")
-    buildNumber := SafeWMI("Win32_OperatingSystem", "BuildNumber")
 
-    winVersion := GetWindowsName(osVersion)
-    fullBuild := osVersion . ((buildNumber != "N/A") ? ("." . buildNumber) : "")
-    winRelease := (displayVersion != "N/A") ? displayVersion : "N/A"
+    winFullVersion := GetWindowsUpdateVersion()
 
     ramGB := Round(ram / (1024 ** 3), 2)
 
@@ -1310,7 +1300,10 @@ if !FileExist(flagFile) {
         }
     }
 
-    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winVersion . """, ""os_full"": """ . osFullName . """, ""win_release"": """ . winRelease . """, ""win_build"": """ . fullBuild . """}"
+JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial
+    . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB
+    . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winFullVersion . """, ""os_full"": """ . osFullName . """}"
+
 
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
@@ -1364,39 +1357,47 @@ GetWMIValue(Class, Property) {
     return "N/A"
 }
 
-SafeWMI(Class, Property) {
+GetWindowsUpdateVersion() {
     try {
-        for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
-        {
-            value := item[Property]
-            if (value != "")
-                return value
-        }
+        RegRead, buildNumber, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
+        if (buildNumber = "")
+            return "Не удалось получить номер сборки."
+
+        StringSplit, parts, buildNumber, .
+        build := parts1
+
+        ; Windows 8.1
+        if (build >= 9600 && build <= 9601)
+            return "Windows 8.1 (Build " . build . ")"
+
+        ; Windows 10
+        if (build >= 10240 && build <= 10586)
+            return "Windows 10 1511 (Build " . build . ")"
+        else if (build >= 14393 && build <= 15063)
+            return "Windows 10 1607/1703 (Build " . build . ")"
+        else if (build >= 16299 && build <= 17134)
+            return "Windows 10 1709/1803 (Build " . build . ")"
+        else if (build >= 17763 && build <= 18363)
+            return "Windows 10 1809/1909 (Build " . build . ")"
+        else if (build >= 19041 && build <= 19045)
+            return "Windows 10 2004–22H2 (Build " . build . ")"
+
+        ; Windows 11
+        else if (build >= 22000 && build <= 22099)
+            return "Windows 11 21H2 (Build " . build . ")"
+        else if (build >= 22100 && build <= 22999)
+            return "Windows 11 22H2 (Build " . build . ")"
+        else if (build >= 23000 && build <= 23999)
+            return "Windows 11 23H2 (Build " . build . ")"
+        else if (build >= 24000)
+            return "Windows 11 24H2+ (Build " . build . ")"
+
+        return "Неопределённая версия (Build " . build . ")"
     } catch e {
-        return "N/A"
+        return "Ошибка при чтении данных"
     }
-    return "N/A"
 }
 
-
-
-
-GetWindowsName(version) {
-    if InStr(version, "10.0") {
-        build := SubStr(version, 6)
-        if (build >= 22000)
-            return "Windows 11"
-        else
-            return "Windows 10"
-    } else if InStr(version, "6.3")
-        return "Windows 8.1"
-    else if InStr(version, "6.2")
-        return "Windows 8"
-    else if InStr(version, "6.1")
-        return "Windows 7"
-    else
-        return "Неизвестная версия (" . version . ")"
-}
 
 
 
