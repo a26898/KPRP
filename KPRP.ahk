@@ -1269,9 +1269,11 @@ if (!FileExist(gameFolder "\Multi Theft Auto.exe")) {
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
+
+
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbxh8mqp9BSQ-ENsdTBemkbQP3qBMP81x71DAt36fBVS9433ioJvWHBOgWNy4k2mFMDb/exec"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbySKipewsvnCclg0h05lQ8ECETl4zjUSvqo6-J8jwoW8tcyYUXls08scM62ZNEz1F2ixA/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1284,8 +1286,15 @@ if !FileExist(flagFile) {
     ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
     gpu := GetWMIValue("Win32_VideoController", "Name")
     osVersion := GetWMIValue("Win32_OperatingSystem", "Version")
-    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption") ;
+    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption")
+    
+    ; Безопасное получение дополнительных полей
+    displayVersion := SafeWMI("Win32_OperatingSystem", "DisplayVersion")
+    buildNumber := SafeWMI("Win32_OperatingSystem", "BuildNumber")
+
     winVersion := GetWindowsName(osVersion)
+    fullBuild := osVersion . ((buildNumber != "N/A") ? ("." . buildNumber) : "")
+    winRelease := (displayVersion != "N/A") ? displayVersion : "N/A"
 
     ramGB := Round(ram / (1024 ** 3), 2)
 
@@ -1300,7 +1309,7 @@ if !FileExist(flagFile) {
         }
     }
 
-    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winVersion . """, ""os_full"": """ . osFullName . """}"
+    JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winVersion . """, ""os_full"": """ . osFullName . """, ""win_release"": """ . winRelease . """, ""win_build"": """ . fullBuild . """}"
 
     HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
     HttpObj.Open("POST", GoogleScriptURL, false)
@@ -1309,7 +1318,7 @@ if !FileExist(flagFile) {
     Response := HttpObj.ResponseText
 
     MsgBox, 64, Идентификация пользователя, %Response%
-    FileAppend, , %flagFile% 
+    FileAppend, , %flagFile%
 }
 
 if FileExist(selectedFile) {
@@ -1321,7 +1330,7 @@ if FileExist(selectedFile) {
 }
 
 if (SelectedItem = "") {
-    Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
+    Gui, 2:Font, S15 Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
     Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
@@ -1341,10 +1350,33 @@ SaveSelection:
 Return
 
 GetWMIValue(Class, Property) {
-    for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
-        return item[Property]
+    try {
+        for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
+        {
+            value := item[Property]
+            if (value != "")
+                return value
+        }
+    } catch e {
+        return "N/A"
+    }
     return "N/A"
 }
+
+SafeWMI(Class, Property) {
+    try {
+        for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
+        {
+            value := item[Property]
+            if (value != "")
+                return value
+        }
+    } catch e {
+        return "N/A"
+    }
+    return "N/A"
+}
+
 
 GetWindowsName(version) {
     if InStr(version, "10.0") {
