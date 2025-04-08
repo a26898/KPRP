@@ -1132,14 +1132,10 @@ Skrin_1=
 
 
 
-
-Taymer_Nastroyka := "Включен"  ; Пример значения переменной настройки
-
 if (Taymer_Nastroyka = "Включен") {
-    Run, C:\ProgramData\KPRP\KPRP-main\АFK.ahk  ; Запуск скрипта, если настройка включена
-} else {
-    ; Здесь ничего не делаем, если настройка выключена
+    Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
 }
+
 
 
 Menu, Tray, NoStandard
