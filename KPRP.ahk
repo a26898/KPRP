@@ -805,6 +805,7 @@ IniRead, Tsvet, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
+IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
@@ -1052,6 +1053,8 @@ if Skrinshot=ERROR
 Skrinshot=Включен
 if SoundEnable=ERROR
 SoundEnable=1
+if MaxMinutes=ERROR
+MaxMinutes=4
 
 
 if FonVybor=ERROR
@@ -1253,6 +1256,9 @@ Greeting()
     return, Greeting
 }
 
+Run, C:\ProgramData\KPRP\KPRP-main\АFK.ahk
+
+
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
 if !FileExist(KPRPico) {
     MsgBox, Ошибка: Файл %KPRPico% не найден!
@@ -1400,6 +1406,9 @@ GetWindowsUpdateVersion() {
         return "Ошибка при чтении данных"
     }
 }
+
+
+
 
 
 
@@ -2725,6 +2734,7 @@ Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
 Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
 Gui, 6:Add, Slider, x90 y700 w195 h30 vSoundEnable Range0-1, %SoundEnable% 
+Gui, 6:Add, Edit, x520 y40 w195 vMaxMinutes, %MaxMinutes%
 
 
 Gui, 6:show, center , Настройки
@@ -2740,6 +2750,10 @@ Return
 
 OnSelect:
     Sleep 2000
+	
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, АFK.ahk
     Reload
 Return
 
@@ -3711,6 +3725,7 @@ IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
+IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 
 IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
@@ -3999,6 +4014,9 @@ if (Skrinshot="Выключен")
 Skrin_1=
 }
 
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, АFK.ahk
 
 Reload
 Return
@@ -4009,6 +4027,10 @@ Return
 
 Reload:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
+
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, АFK.ahk
 Sleep 2500
 Reload
 return
@@ -4206,6 +4228,9 @@ IniWrite, %271DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 27
 IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
 
 
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, АFK.ahk
 Reload
 return
 
@@ -4237,6 +4262,12 @@ GuiClose:
 13GuiClose:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_18.mp3
 Sleep 1700
+
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, АFK.ahk
+
+
 ExitApp
 
 
