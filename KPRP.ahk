@@ -1188,11 +1188,14 @@ En()
 
 YAzyk(String) {
     if (RegExMatch(String, "[А-Яа-яЁё]")) {
+        Sleep 500
         Ru()
-	} else {
+    } else {
+        Sleep 500
         En()
+    }
 }
-}
+
 
 
 
@@ -2710,7 +2713,7 @@ Gui, 6:Add, Picture, x360 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramDat
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
-Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||3500|4000|4500|5000|5500|6000|6500|7000
+Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||3000|3500|4000|4500|5000|5500|6000|6500|7000
 
 if FonVybor=
 Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
