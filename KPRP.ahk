@@ -1271,9 +1271,10 @@ IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
 
 
+
 selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
 flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbySKipewsvnCclg0h05lQ8ECETl4zjUSvqo6-J8jwoW8tcyYUXls08scM62ZNEz1F2ixA/exec"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx8SixW5a_9eklrerbrpiPNhJHWknBM2qpD9R12VUYK14vSbsdsfAyZNHA-ykI3_wzNdQ/exec"
 
 unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
 
@@ -1378,6 +1379,8 @@ SafeWMI(Class, Property) {
 }
 
 
+
+
 GetWindowsName(version) {
     if InStr(version, "10.0") {
         build := SubStr(version, 6)
@@ -1394,6 +1397,8 @@ GetWindowsName(version) {
     else
         return "Неизвестная версия (" . version . ")"
 }
+
+
 
 
 
