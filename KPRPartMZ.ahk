@@ -1,8 +1,7 @@
 ﻿
 
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
-TrayTip, Обновление от 08.04.25:, добавлено оповещение о вызовах сделано удаление бригады при ее отсутствии запрещено вводить данные в докладах..., 100, 2
-TrayTip, Обновление, не соответствующих опции!,20, 2
+
 
 Gui, 5:show,  center h650 w1200 , Министерство здравоохранения | КПРП работает на коммунизм!
 if (FonVybor="ERROR" or FonVybor=""){
@@ -653,6 +652,42 @@ else
 return
 nip:
 Pause, off
+
+:?:/Лек_1::
+SendPlay {Enter}
+SendChat("say На что жалуетесь?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_2::
+SendPlay {Enter}
+SendChat("say Есть ли у Вас предшествующие заболевания?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_3::
+SendPlay {Enter}
+SendChat("say Имеются ли у Вас аллергические реакции?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_4::
+SendPlay {Enter}
+SendChat("say Принимаете ли Вы лекарственные препараты?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_5::
+SendPlay {Enter}
+SendChat("say Имеете алкогольную или наркотическую зависимость?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_6::
+SendPlay {Enter}
+SendChat("say Какой Вы ведёте образ жизни?", "  " zaderzhka " ")
+Return
+
+:?:/Лек_7::
+SendPlay {Enter}
+SendChat("say Есть ли у Вас наследственные заболевания?", "  " zaderzhka " ")
+Return
+
 
 :?:/Аптека::
 SendPlay {Enter}
