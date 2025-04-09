@@ -1,4 +1,4 @@
-﻿
+﻿TrayTip, Обновления!, Добавлен таймер AFK!, 5, 2
 
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
