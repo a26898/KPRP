@@ -2726,7 +2726,7 @@ Vania:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 Gui, 6:Destroy,
 Gui, 6:Add, Picture, x0 y0 w480   h765 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 6:Add, Picture, x580 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 6:Add, Picture, x620 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
@@ -2741,7 +2741,7 @@ Gui, 6:Add, ComboBox, x90 y325 w295 vShrift, %Shrift%||Arial|Consolas|Courier Ne
 Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
 Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
-Gui, 6:Add, Slider, x90 y700 w195 h30 vSoundEnable Range0-1, %SoundEnable% 
+Gui, 6:Add, Slider, x90 y700 w295 h30 vSoundEnable Range0-1, %SoundEnable% 
 Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
 Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
 
