@@ -1,4 +1,4 @@
-﻿TrayTip, Обновления!, Добавлен таймер AFK!, 5, 2
+﻿TrayTip, Внимание!, Добавлена система против тестироваться на бейджеке и на выдачи лекарства, 5, 2
 
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
@@ -464,10 +464,34 @@ Return
 
 
 0001MZ7:
-Var := Greeting()
+Sleep 150
 SendPlay {Enter}
-SendChat("say " Var ", меня зовут " Name " " Surname ".", " " zaderzhka " ")
-SendChat("do На груди висит бейдж:[" Bol_ro_3 "][" JWI "][" TAG "][" Surname " " Name " " Middle_Name "].", " " zaderzhka " ")
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+KPRPMZ1 := "C:\ProgramData\KPRP\KPRP-main\BadgeMZ.txt"
+Loop, read, %KPRPMZ1%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
 Return
 
 
@@ -521,13 +545,35 @@ Return
 
 
 0011MZ7:
+Sleep 150
 SendPlay {Enter}
-SendChat("do В грудном кармане бланк выписки и ручка.", "  " zaderzhka " ")
-SendChat("me достал" floor " бланк, ручку и записал" floor " диагноз с лекарством", "  " zaderzhka " ")
-SendChat("me открыл" floor " сумку, после чего достал" floor " из неё нужное лекарство ", "  " zaderzhka " ")
-SendChat("me передал" floor " лекарство и бланк пациенту", "  " zaderzhka " ")
-SendChat("n Пропишите, пожалуйста, в обычном чате: /me взял(а) лекарство и бланк из рук врача", "  " zaderzhka " ")
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+KPRPMZ8 := "C:\ProgramData\KPRP\KPRP-main\Dispensing_medicineMZ.txt"
+Loop, read, %KPRPMZ8%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
 Return
+
+
+
 
 0012MZ7:
 SendPlay {Enter}
@@ -574,6 +620,7 @@ SendChat("say Если после прохождения 48 часов вас н
 SendChat("say Если вас добавили в спец связь ожидайте, вас пригласит любой свободный врач! ", " " zaderzhka " ")
 SendChat("say Вам не обязательно находится в больнице можете заниматься своими делами, просто посматривайте спец связь.", " " zaderzhka " ")
 Return
+
 
 
 
