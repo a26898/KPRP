@@ -529,9 +529,9 @@ SendChat("me передал" floor " лекарство и бланк пацие
 SendChat("n Пропишите, пожалуйста, в обычном чате: /me взял(а) лекарство и бланк из рук врача", "  " zaderzhka " ")
 Return
 
-00012MZ7:
+0012MZ7:
 SendPlay {Enter}
-SendChat("me открыв сумку, достал" floor " из нее необходимое лекарство и употребил" floor " его ", " " zaderzhka " ")
+SendChat("me открыв сумку, достал" floor " из нее лекарство и употребил" floor " его ", " " zaderzhka " ")
 Return
 
 
