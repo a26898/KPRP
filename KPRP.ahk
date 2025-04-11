@@ -358,7 +358,7 @@ Hotkey, %dvadcatMZ7%, 0020MZ7, On, UseErrorLevel
 Hotkey, %dvadcatodinMZ7%, 0021MZ7, On, UseErrorLevel
 Hotkey, %dvadcatdvaMZ7%, 0022MZ7, On, UseErrorLevel
 Hotkey, %dvadcattriMZ7%, 0023MZ7, On, UseErrorLevel
-Hotkey, %dvadcatchetireMZ7%, 0024, On, UseErrorLevel
+Hotkey, %dvadcatchetireMZ7%, 0024MZ7, On, UseErrorLevel
 Hotkey, %dvadcatpyatMZ7%, 0025MZ7, On, UseErrorLevel
 Hotkey, %dvadcatshestMZ7%, 0026MZ7, On, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, 0027MZ7, On, UseErrorLevel
@@ -677,6 +677,109 @@ IniRead, Svoye_95,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_95
 IniRead, Svoye_96,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_96
 IniRead, Svoye_97,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_97
 
+IniRead, SvoyeМZ_1, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_1
+IniRead, SvoyeМZ_2, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_2
+IniRead, SvoyeМZ_3, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_3
+IniRead, SvoyeМZ_4, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_4
+IniRead, SvoyeМZ_5, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_5
+IniRead, SvoyeМZ_6, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_6
+IniRead, SvoyeМZ_7, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_7
+IniRead, SvoyeМZ_8, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_8
+IniRead, SvoyeМZ_9, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_9
+IniRead, SvoyeМZ_10, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_10
+IniRead, SvoyeМZ_11, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_11
+IniRead, SvoyeМZ_12, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_12
+IniRead, SvoyeМZ_13, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_13
+IniRead, SvoyeМZ_14, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_14
+IniRead, SvoyeМZ_15, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_15
+IniRead, SvoyeМZ_16, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_16
+IniRead, SvoyeМZ_17, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_17
+IniRead, SvoyeМZ_18, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_18
+IniRead, SvoyeМZ_19, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_19
+IniRead, SvoyeМZ_20, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_20
+IniRead, SvoyeМZ_21, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_21
+IniRead, SvoyeМZ_22, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_22
+IniRead, SvoyeМZ_23, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_23
+IniRead, SvoyeМZ_24, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_24
+IniRead, SvoyeМZ_25, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_25
+IniRead, SvoyeМZ_26, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_26
+IniRead, SvoyeМZ_27, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_27
+IniRead, SvoyeМZ_28, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_28
+IniRead, SvoyeМZ_29, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_29
+IniRead, SvoyeМZ_30, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_30
+IniRead, SvoyeМZ_31, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_31
+IniRead, SvoyeМZ_32, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_32
+IniRead, SvoyeМZ_33, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_33
+IniRead, SvoyeМZ_34, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_34
+IniRead, SvoyeМZ_35, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_35
+IniRead, SvoyeМZ_36, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_36
+IniRead, SvoyeМZ_37, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_37
+IniRead, SvoyeМZ_38, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_38
+IniRead, SvoyeМZ_39, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_39
+IniRead, SvoyeМZ_40, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_40
+IniRead, SvoyeМZ_41, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_41
+IniRead, SvoyeМZ_42, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_42
+IniRead, SvoyeМZ_43, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_43
+IniRead, SvoyeМZ_44, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_44
+IniRead, SvoyeМZ_45, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_45
+IniRead, SvoyeМZ_46, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_46
+IniRead, SvoyeМZ_47, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_47
+IniRead, SvoyeМZ_48, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_48
+IniRead, SvoyeМZ_49, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_49
+IniRead, SvoyeМZ_50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_50
+
+IniRead, KPRPMZ1, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ1
+IniRead, KPRPMZ2, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ2
+IniRead, KPRPMZ3, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ3
+IniRead, KPRPMZ4, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ4
+IniRead, KPRPMZ5, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ5
+IniRead, KPRPMZ6, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ6
+IniRead, KPRPMZ7, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ7
+IniRead, KPRPMZ8, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ8
+IniRead, KPRPMZ9, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ9
+IniRead, KPRPMZ10, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ10
+IniRead, KPRPMZ11, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ11
+IniRead, KPRPMZ12, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ12
+IniRead, KPRPMZ13, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ13
+IniRead, KPRPMZ14, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ14
+IniRead, KPRPMZ15, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ15
+IniRead, KPRPMZ16, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ16
+IniRead, KPRPMZ17, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ17
+IniRead, KPRPMZ18, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ18
+IniRead, KPRPMZ19, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ19
+IniRead, KPRPMZ20, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ20
+IniRead, KPRPMZ21, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ21
+IniRead, KPRPMZ22, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ22
+IniRead, KPRPMZ23, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ23
+IniRead, KPRPMZ24, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ24
+IniRead, KPRPMZ25, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ25
+IniRead, KPRPMZ26, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ26
+IniRead, KPRPMZ27, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ27
+IniRead, KPRPMZ28, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ28
+IniRead, KPRPMZ29, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ29
+IniRead, KPRPMZ30, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ30
+IniRead, KPRPMZ31, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ31
+IniRead, KPRPMZ32, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ32
+IniRead, KPRPMZ33, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ33
+IniRead, KPRPMZ34, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ34
+IniRead, KPRPMZ35, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ35
+IniRead, KPRPMZ36, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ36
+IniRead, KPRPMZ37, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ37
+IniRead, KPRPMZ38, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ38
+IniRead, KPRPMZ39, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ39
+IniRead, KPRPMZ40, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ40
+IniRead, KPRPMZ41, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ41
+IniRead, KPRPMZ42, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ42
+IniRead, KPRPMZ43, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ43
+IniRead, KPRPMZ44, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ44
+IniRead, KPRPMZ45, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ45
+IniRead, KPRPMZ46, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ46
+IniRead, KPRPMZ47, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ47
+IniRead, KPRPMZ48, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
+IniRead, KPRPMZ49, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
+IniRead, KPRPMZ50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
+
+
 
 IniRead, Objects1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
 IniRead, Objects2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
@@ -810,6 +913,124 @@ IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Ta
 
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
+
+
+
+
+
+if SvoyeМZ_1=ERROR
+SvoyeМZ_1=Бейдж
+if SvoyeМZ_2=ERROR
+SvoyeМZ_2=За мной
+if SvoyeМZ_3=ERROR
+SvoyeМZ_3=На что жалуетесь?
+if SvoyeМZ_4=ERROR
+SvoyeМZ_4=Вопрос 1
+if SvoyeМZ_5=ERROR
+SvoyeМZ_5=Вопрос 2
+if SvoyeМZ_6=ERROR
+SvoyeМZ_6=Вопрос 3
+if SvoyeМZ_7=ERROR
+SvoyeМZ_7=Вопрос 4
+if SvoyeМZ_8=ERROR
+SvoyeМZ_8=Вопрос 5
+if SvoyeМZ_9=ERROR
+SvoyeМZ_9=Вопрос 6
+if SvoyeМZ_10=ERROR
+SvoyeМZ_10=Осмотор
+if SvoyeМZ_11=ERROR
+SvoyeМZ_11=Лечение
+if SvoyeМZ_12=ERROR
+SvoyeМZ_12=Лечения себя
+if SvoyeМZ_13=ERROR
+SvoyeМZ_13=Прощание
+if SvoyeМZ_14=ERROR
+SvoyeМZ_14=Отказ
+if SvoyeМZ_15=ERROR
+SvoyeМZ_15=Мегафон
+if SvoyeМZ_16=ERROR
+SvoyeМZ_16=Влк.КПК
+if SvoyeМZ_17=ERROR
+SvoyeМZ_17=Вык.КПК 
+if SvoyeМZ_18=ERROR
+SvoyeМZ_18=Иформация о медкарте 
+if SvoyeМZ_19=ERROR
+SvoyeМZ_19=Достать каталку  
+if SvoyeМZ_20=ERROR
+SvoyeМZ_20=Переложитьчеловека 
+if SvoyeМZ_21=ERROR
+SvoyeМZ_21=Убарть в АСМП 
+if SvoyeМZ_22=ERROR
+SvoyeМZ_22=Госпитализация 
+if SvoyeМZ_23=ERROR
+SvoyeМZ_23=Откат /r 
+if SvoyeМZ_24=ERROR
+SvoyeМZ_24=Откат /ro
+if SvoyeМZ_25=ERROR
+SvoyeМZ_25=Аптека (таблетка)
+
+
+
+if KPRPMZ1=ERROR
+KPRPMZ1=C:\ProgramData\KPRP\KPRP-main\KPRP1MZ.txt
+if KPRPMZ2=ERROR
+KPRPMZ2=C:\ProgramData\KPRP\KPRP-main\KPRP2MZ.txt
+if KPRPMZ3=ERROR
+KPRPMZ3=C:\ProgramData\KPRP\KPRP-main\KPRP3MZ.txt
+if KPRPMZ4=ERROR
+KPRPMZ4=C:\ProgramData\KPRP\KPRP-main\KPRP4MZ.txt
+if KPRPMZ5=ERROR
+KPRPMZ5=C:\ProgramData\KPRP\KPRP-main\KPRP5MZ.txt
+if KPRPMZ6=ERROR
+KPRPMZ6=C:\ProgramData\KPRP\KPRP-main\KPRP6MZ.txt
+if KPRPMZ7=ERROR
+KPRPMZ7=C:\ProgramData\KPRP\KPRP-main\KPRP7MZ.txt
+if KPRPMZ8=ERROR
+KPRPMZ8=C:\ProgramData\KPRP\KPRP-main\KPRP8MZ.txt
+if KPRPMZ9=ERROR
+KPRPMZ9=C:\ProgramData\KPRP\KPRP-main\KPRP9MZ.txt
+if KPRPMZ10=ERROR
+KPRPMZ10=C:\ProgramData\KPRP\KPRP-main\KPRP10MZ.txt
+if KPRPMZ11=ERROR
+KPRPMZ11=C:\ProgramData\KPRP\KPRP-main\KPRP11MZ.txt
+if KPRPMZ12=ERROR
+KPRPMZ12=C:\ProgramData\KPRP\KPRP-main\KPRP12MZ.txt
+if KPRPMZ13=ERROR
+KPRPMZ13=C:\ProgramData\KPRP\KPRP-main\KPRP13MZ.txt
+if KPRPMZ14=ERROR
+KPRPMZ14=C:\ProgramData\KPRP\KPRP-main\KPRP14MZ.txt
+if KPRPMZ15=ERROR
+KPRPMZ15=C:\ProgramData\KPRP\KPRP-main\KPRP15MZ.txt
+if KPRPMZ16=ERROR
+KPRPMZ16=C:\ProgramData\KPRP\KPRP-main\KPRP16MZ.txt
+if KPRPMZ17=ERROR
+KPRPMZ17=C:\ProgramData\KPRP\KPRP-main\KPRP17MZ.txt
+if KPRPMZ18=ERROR
+KPRPMZ18=C:\ProgramData\KPRP\KPRP-main\KPRP18MZ.txt
+if KPRPMZ19=ERROR
+KPRPMZ19=C:\ProgramData\KPRP\KPRP-main\KPRP19MZ.txt
+if KPRPMZ20=ERROR
+KPRPMZ20=C:\ProgramData\KPRP\KPRP-main\KPRP20MZ.txt
+if KPRPMZ21=ERROR
+KPRPMZ21=C:\ProgramData\KPRP\KPRP-main\KPRP21MZ.txt
+if KPRPMZ22=ERROR
+KPRPMZ22=C:\ProgramData\KPRP\KPRP-main\KPRP22MZ.txt
+if KPRPMZ23=ERROR
+KPRPMZ23=C:\ProgramData\KPRP\KPRP-main\KPRP23MZ.txt
+if KPRPMZ24=ERROR
+KPRPMZ24=C:\ProgramData\KPRP\KPRP-main\KPRP24MZ.txt
+if KPRPMZ25=ERROR
+KPRPMZ25=C:\ProgramData\KPRP\KPRP-main\KPRP25MZ.txt
+if KPRPMZ26=ERROR
+KPRPMZ26=C:\ProgramData\KPRP\KPRP-main\KPRP26MZ.txt
+if KPRPMZ27=ERROR
+KPRPMZ27=C:\ProgramData\KPRP\KPRP-main\KPRP27MZ.txt
+if KPRPMZ28=ERROR
+KPRPMZ28=C:\ProgramData\KPRP\KPRP-main\KPRP28MZ.txt
+
+
+
+
 
 if Svoye_1=ERROR
 Svoye_1=Описание
@@ -3028,6 +3249,12 @@ Return
 
 
 
+
+
+
+
+
+
 Editor:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
@@ -3709,8 +3936,8 @@ return
 
 
 
-
-
+Save1:
+return
 
 Change:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
@@ -3718,6 +3945,8 @@ Sleep 2500
 
 
 Gui, Submit, NoHide
+
+
 IniWrite, %JWI%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniWrite, %TAG%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniWrite, %Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -4000,7 +4229,167 @@ IniWrite, %Objects95%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects
 IniWrite, %Objects96%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects96
 IniWrite, %Objects97%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects97
 
+IniWrite, %SvoyeМZ_1%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_1
+IniWrite, %SvoyeМZ_2%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_2
+IniWrite, %SvoyeМZ_3%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_3
+IniWrite, %SvoyeМZ_4%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_4
+IniWrite, %SvoyeМZ_5%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_5
+IniWrite, %SvoyeМZ_6%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_6
+IniWrite, %SvoyeМZ_7%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_7
+IniWrite, %SvoyeМZ_8%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_8
+IniWrite, %SvoyeМZ_9%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_9
+IniWrite, %SvoyeМZ_10%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_10
+IniWrite, %SvoyeМZ_11%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_11
+IniWrite, %SvoyeМZ_12%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_12
+IniWrite, %SvoyeМZ_13%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_13
+IniWrite, %SvoyeМZ_14%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_14
+IniWrite, %SvoyeМZ_15%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_15
+IniWrite, %SvoyeМZ_16%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_16
+IniWrite, %SvoyeМZ_17%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_17
+IniWrite, %SvoyeМZ_18%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_18
+IniWrite, %SvoyeМZ_19%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_19
+IniWrite, %SvoyeМZ_20%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_20
+IniWrite, %SvoyeМZ_21%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_21
+IniWrite, %SvoyeМZ_22%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_22
+IniWrite, %SvoyeМZ_23%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_23
+IniWrite, %SvoyeМZ_24%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_24
+IniWrite, %SvoyeМZ_25%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_25
+IniWrite, %SvoyeМZ_26%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_26
+IniWrite, %SvoyeМZ_27%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_27
+IniWrite, %SvoyeМZ_28%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_28
+IniWrite, %SvoyeМZ_29%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_29
+IniWrite, %SvoyeМZ_30%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_30
+IniWrite, %SvoyeМZ_31%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_31
+IniWrite, %SvoyeМZ_32%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_32
+IniWrite, %SvoyeМZ_33%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_33
+IniWrite, %SvoyeМZ_34%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_34
+IniWrite, %SvoyeМZ_35%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_35
+IniWrite, %SvoyeМZ_36%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_36
+IniWrite, %SvoyeМZ_37%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_37
+IniWrite, %SvoyeМZ_38%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_38
+IniWrite, %SvoyeМZ_39%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_39
+IniWrite, %SvoyeМZ_40%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_40
+IniWrite, %SvoyeМZ_41%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_41
+IniWrite, %SvoyeМZ_42%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_42
+IniWrite, %SvoyeМZ_43%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_43
+IniWrite, %SvoyeМZ_44%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_44
+IniWrite, %SvoyeМZ_45%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_45
+IniWrite, %SvoyeМZ_46%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_46
+IniWrite, %SvoyeМZ_47%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_47
+IniWrite, %SvoyeМZ_48%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_48
+IniWrite, %SvoyeМZ_49%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_49
+IniWrite, %SvoyeМZ_50%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_50
 
+
+IniWrite, %KPRPMZ1%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ1
+IniWrite, %KPRPMZ2%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ2
+IniWrite, %KPRPMZ3%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ3
+IniWrite, %KPRPMZ4%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ4
+IniWrite, %KPRPMZ5%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ5
+IniWrite, %KPRPMZ6%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ6
+IniWrite, %KPRPMZ7%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ7
+IniWrite, %KPRPMZ8%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ8
+IniWrite, %KPRPMZ9%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ9
+IniWrite, %KPRPMZ10%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ10
+IniWrite, %KPRPMZ11%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ11
+IniWrite, %KPRPMZ12%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ12
+IniWrite, %KPRPMZ13%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ13
+IniWrite, %KPRPMZ14%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ14
+IniWrite, %KPRPMZ15%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ15
+IniWrite, %KPRPMZ16%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ16
+IniWrite, %KPRPMZ17%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ17
+IniWrite, %KPRPMZ18%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ18
+IniWrite, %KPRPMZ19%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ19
+IniWrite, %KPRPMZ20%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ20
+IniWrite, %KPRPMZ21%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ21
+IniWrite, %KPRPMZ22%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ22
+IniWrite, %KPRPMZ23%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ23
+IniWrite, %KPRPMZ24%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ24
+IniWrite, %KPRPMZ25%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ25
+IniWrite, %KPRPMZ26%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ26
+IniWrite, %KPRPMZ27%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ27
+IniWrite, %KPRPMZ28%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ28
+IniWrite, %KPRPMZ29%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ29
+IniWrite, %KPRPMZ30%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ30
+IniWrite, %KPRPMZ31%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ31
+IniWrite, %KPRPMZ32%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ32
+IniWrite, %KPRPMZ33%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ33
+IniWrite, %KPRPMZ34%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ34
+IniWrite, %KPRPMZ35%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ35
+IniWrite, %KPRPMZ36%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ36
+IniWrite, %KPRPMZ37%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ37
+IniWrite, %KPRPMZ38%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ38
+IniWrite, %KPRPMZ39%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ39
+IniWrite, %KPRPMZ40%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ40
+IniWrite, %KPRPMZ41%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ41
+IniWrite, %KPRPMZ42%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ42
+IniWrite, %KPRPMZ43%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ43
+IniWrite, %KPRPMZ44%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ44
+IniWrite, %KPRPMZ45%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ45
+IniWrite, %KPRPMZ46%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ46
+IniWrite, %KPRPMZ47%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ47
+IniWrite, %KPRPMZ48%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
+IniWrite, %KPRPMZ49%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
+IniWrite, %KPRPMZ50%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
+
+
+IniWrite, %11MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
+IniWrite, %21MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 21MZ7
+IniWrite, %31MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 31MZ7
+IniWrite, %41MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 41MZ7
+IniWrite, %51MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 51MZ7
+IniWrite, %61MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 61MZ7
+IniWrite, %71MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 71MZ7
+IniWrite, %81MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 81MZ7
+IniWrite, %91MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 91MZ7
+IniWrite, %101MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 101MZ7
+IniWrite, %111MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 111MZ7
+IniWrite, %121MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 121MZ7
+IniWrite, %131MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 131MZ7
+IniWrite, %141MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 141MZ7
+IniWrite, %151MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 151MZ7
+IniWrite, %161MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 161MZ7
+IniWrite, %171MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 171MZ7
+IniWrite, %181MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 181MZ7
+IniWrite, %191MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 191MZ7
+IniWrite, %201MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 201MZ7
+IniWrite, %211MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 211MZ7
+IniWrite, %221MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 221MZ7
+IniWrite, %231MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 231MZ7
+IniWrite, %241MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 241MZ7
+IniWrite, %251MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
+IniWrite, %261MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
+IniWrite, %271MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
+IniWrite, %281MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
+
+IniWrite, %11DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
+IniWrite, %21DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
+IniWrite, %31DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
+IniWrite, %41DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
+IniWrite, %51DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
+IniWrite, %61DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
+IniWrite, %71DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
+IniWrite, %81DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
+IniWrite, %91DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
+IniWrite, %101DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
+IniWrite, %111DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
+IniWrite, %121DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
+IniWrite, %131DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
+IniWrite, %141DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
+IniWrite, %151DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
+IniWrite, %161DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
+IniWrite, %171DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
+IniWrite, %181DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
+IniWrite, %191DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
+IniWrite, %201DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
+IniWrite, %211DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
+IniWrite, %221DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
+IniWrite, %231DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
+IniWrite, %241DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
+IniWrite, %251DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
+IniWrite, %261DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
+IniWrite, %271DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
+IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
 
 
 
@@ -4169,81 +4558,6 @@ MsgBox, 64, Спасибо!, Ваш баг-репорт был отправле�
 Return
 
 
-
-
-
-Save1:
-Gui, 4:SubMit, NoHide
-Gui, 14:SubMit, NoHide
-
-SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
-Sleep 2500
-
-
-IniWrite, %11MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
-IniWrite, %21MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 21MZ7
-IniWrite, %31MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 31MZ7
-IniWrite, %41MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 41MZ7
-IniWrite, %51MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 51MZ7
-IniWrite, %61MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 61MZ7
-IniWrite, %71MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 71MZ7
-IniWrite, %81MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 81MZ7
-IniWrite, %91MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 91MZ7
-IniWrite, %101MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 101MZ7
-IniWrite, %111MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 111MZ7
-IniWrite, %121MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 121MZ7
-IniWrite, %131MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 131MZ7
-IniWrite, %141MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 141MZ7
-IniWrite, %151MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 151MZ7
-IniWrite, %161MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 161MZ7
-IniWrite, %171MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 171MZ7
-IniWrite, %181MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 181MZ7
-IniWrite, %191MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 191MZ7
-IniWrite, %201MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 201MZ7
-IniWrite, %211MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 211MZ7
-IniWrite, %221MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 221MZ7
-IniWrite, %231MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 231MZ7
-IniWrite, %241MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 241MZ7
-IniWrite, %251MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
-IniWrite, %261MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
-IniWrite, %271MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
-IniWrite, %281MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
-
-IniWrite, %11DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
-IniWrite, %21DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
-IniWrite, %31DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
-IniWrite, %41DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
-IniWrite, %51DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
-IniWrite, %61DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
-IniWrite, %71DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
-IniWrite, %81DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
-IniWrite, %91DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
-IniWrite, %101DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
-IniWrite, %111DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
-IniWrite, %121DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
-IniWrite, %131DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
-IniWrite, %141DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
-IniWrite, %151DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
-IniWrite, %161DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
-IniWrite, %171DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
-IniWrite, %181DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
-IniWrite, %191DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
-IniWrite, %201DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
-IniWrite, %211DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
-IniWrite, %221DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
-IniWrite, %231DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
-IniWrite, %241DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
-IniWrite, %251DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
-IniWrite, %261DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
-IniWrite, %271DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
-IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
-
-
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, АFK.ahk
-Reload
-return
 
 
 
