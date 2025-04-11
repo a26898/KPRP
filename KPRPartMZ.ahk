@@ -11387,7 +11387,7 @@ Gui, 4:Add, Edit, x660 y446 w180 vSvoyeМZ_20, %SvoyeМZ_20%
 Gui, 4:Add, Edit, x660 y506 w180 vSvoyeМZ_21, %SvoyeМZ_21%
 Gui, 4:Add, Edit, x660 y566 w180 vSvoyeМZ_22, %SvoyeМZ_22%
 Gui, 4:Add, Edit, x660 y626 w180 vSvoyeМZ_23, %SvoyeМZ_23%
-Gui, 4:Add, Edit, x660 y686 w180 vSvoyeМZ_26, %SvoyeМZ_26%
+Gui, 4:Add, Edit, x660 y686 w180 vSvoyeМZ_24, %SvoyeМZ_24%
 Gui, 4:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
