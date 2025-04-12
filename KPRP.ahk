@@ -30,6 +30,35 @@ IniRead, 261MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
 IniRead, 271MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
 IniRead, 281MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
 
+IniRead, 11GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 11GIBDD7
+IniRead, 21GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 21GIBDD7
+IniRead, 31GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 31GIBDD7
+IniRead, 41GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 41GIBDD7
+IniRead, 51GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 51GIBDD7
+IniRead, 61GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 61GIBDD7
+IniRead, 71GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 71GIBDD7
+IniRead, 81GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 81GIBDD7
+IniRead, 91GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 91GIBDD7
+IniRead, 101GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 101GIBDD7
+IniRead, 111GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 111GIBDD7
+IniRead, 121GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 121GIBDD7
+IniRead, 131GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 131GIBDD7
+IniRead, 141GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 141GIBDD7
+IniRead, 151GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 151GIBDD7
+IniRead, 161GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 161GIBDD7
+IniRead, 171GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 171GIBDD7
+IniRead, 181GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 181GIBDD7
+IniRead, 191GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 191GIBDD7
+IniRead, 201GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 201GIBDD7
+IniRead, 211GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 211GIBDD7
+IniRead, 221GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 221GIBDD7
+IniRead, 231GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 231GIBDD7
+IniRead, 241GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 241GIBDD7
+IniRead, 251GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 251GIBDD7
+IniRead, 261GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 261GIBDD7
+IniRead, 271GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 271GIBDD7
+IniRead, 281GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 281GIBDD7
+
 IniRead, 11DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
 IniRead, 21DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
 IniRead, 31DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
@@ -139,6 +168,35 @@ dvadcatpyatMZ7 = %251MZ7%
 dvadcatshestMZ7 = %261MZ7%
 dvadcatsemMZ7 = %271MZ7%
 dvadcatvosemMZ7 = %281MZ7%
+
+odinGIBDD7 = %11GIBDD7%
+dvaGIBDD7 = %21GIBDD7%
+triGIBDD7 = %31GIBDD7%
+chetireGIBDD7 = %41GIBDD7%
+pyatGIBDD7 = %51GIBDD7%
+shestGIBDD7 = %61GIBDD7%
+semGIBDD7 = %71GIBDD7%
+vosemGIBDD7 = %81GIBDD7%
+devyatGIBDD7 = %91GIBDD7%
+desyatGIBDD7 = %101GIBDD7%
+odinadcatGIBDD7 = %111GIBDD7%
+dvinadcatGIBDD7 = %121GIBDD7%
+trinadcatGIBDD7 = %131GIBDD7%
+chetirnadcatGIBDD7 = %141GIBDD7%
+pyatnadcatGIBDD7 = %151GIBDD7%
+shestnadcatGIBDD7 = %161GIBDD7%
+semnagcatGIBDD7 = %171GIBDD7%
+vosemnagcatGIBDD7 = %181GIBDD7%
+devyatnadcatGIBDD7 = %191GIBDD7%
+dvadcatGIBDD7 = %201GIBDD7%
+dvadcatodinGIBDD7 = %211GIBDD7%
+dvadcatdvaGIBDD7 = %221GIBDD7%
+dvadcattriGIBDD7 = %231GIBDD7%
+dvadcatchetireGIBDD7 = %241GIBDD7%
+dvadcatpyatGIBDD7 = %251GIBDD7%
+dvadcatshestGIBDD7 = %261GIBDD7%
+dvadcatsemGIBDD7 = %271GIBDD7%
+dvadcatvosemGIBDD7 = %281GIBDD7%
 
 odinDUVD7 = %11DUVD7%
 dvaDUVD7 = %21DUVD7%
@@ -280,6 +338,34 @@ Hotkey, %dvadcatshestMZ7%, Off, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, Off, UseErrorLevel
 Hotkey, %dvadcatvosemMZ7%, Off, UseErrorLevel
 
+Hotkey, %odinGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvaGIBDD7%, Off, UseErrorLevel
+Hotkey, %triGIBDD7%, Off, UseErrorLevel
+Hotkey, %chetireGIBDD7%, Off, UseErrorLevel
+Hotkey, %pyatGIBDD7%, Off, UseErrorLevel
+Hotkey, %shestGIBDD7%, Off, UseErrorLevel
+Hotkey, %semGIBDD7%, Off, UseErrorLevel
+Hotkey, %vosemGIBDD7%, Off, UseErrorLevel
+Hotkey, %devyatGIBDD7%, Off, UseErrorLevel
+Hotkey, %desyatGIBDD7%, Off, UseErrorLevel
+Hotkey, %odinadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvinadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %trinadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %chetirnadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %pyatnadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %shestnadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %semnagcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %vosemnagcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %devyatnadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatodinGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatdvaGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcattriGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatchetireGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatpyatGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatshestGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatsemGIBDD7%, Off, UseErrorLevel
+Hotkey, %dvadcatvosemGIBDD7%, Off, UseErrorLevel
 
 
 Hotkey, %odinRedakt%, Off, UseErrorLevel
@@ -364,6 +450,35 @@ Hotkey, %dvadcatshestMZ7%, 0026MZ7, On, UseErrorLevel
 Hotkey, %dvadcatsemMZ7%, 0027MZ7, On, UseErrorLevel
 Hotkey, %dvadcatvosemMZ7%, 0028MZ7, On, UseErrorLevel
 
+
+Hotkey, %odinGIBDD7%, 0001GIBDD7, On, UseErrorLevel
+Hotkey, %dvaGIBDD7%, 0002GIBDD7, On, UseErrorLevel
+Hotkey, %triGIBDD7%, 0003GIBDD7, On, UseErrorLevel
+Hotkey, %chetireGIBDD7%, 0004GIBDD7, On, UseErrorLevel
+Hotkey, %pyatGIBDD7%, 0005GIBDD7, On, UseErrorLevel
+Hotkey, %shestGIBDD7%, 0006GIBDD7, On, UseErrorLevel
+Hotkey, %semGIBDD7%, 0007GIBDD7, On, UseErrorLevel
+Hotkey, %vosemGIBDD7%, 0008GIBDD7, On, UseErrorLevel
+Hotkey, %devyatGIBDD7%, 0009GIBDD7, On, UseErrorLevel
+Hotkey, %desyatGIBDD7%, 0010GIBDD7, On, UseErrorLevel
+Hotkey, %odinadcatGIBDD7%, 0011GIBDD7, On, UseErrorLevel
+Hotkey, %dvinadcatGIBDD7%, 0012GIBDD7, On, UseErrorLevel
+Hotkey, %trinadcatGIBDD7%, 0013GIBDD7, On, UseErrorLevel
+Hotkey, %chetirnadcatGIBDD7%, 0014GIBDD7, On, UseErrorLevel
+Hotkey, %pyatnadcatGIBDD7%, 0015GIBDD7, UseErrorLevel
+Hotkey, %shestnadcatGIBDD7%, 0016GIBDD7, On, UseErrorLevel
+Hotkey, %semnagcatGIBDD7%, 0017GIBDD7, On, UseErrorLevel
+Hotkey, %vosemnagcatGIBDD7%, 0018GIBDD7, On, UseErrorLevel
+Hotkey, %devyatnadcatGIBDD7%, 0019GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatGIBDD7%, 0020GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatodinGIBDD7%, 0021GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatdvaGIBDD7%, 0022GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcattriGIBDD7%, 0023GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatchetireGIBDD7%, 0024GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatpyatGIBDD7%, 0025GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatshestGIBDD7%, 0026GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatsemGIBDD7%, 0027GIBDD7, On, UseErrorLevel
+Hotkey, %dvadcatvosemGIBDD7%, 0028GIBDD7, On, UseErrorLevel
 
 
 Hotkey, %odinDUVD7%, 0001DUVD7, On, UseErrorLevel
@@ -781,6 +896,110 @@ IniRead, KPRPMZ50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
 
 
 
+
+IniRead, SvoyeGIBDD_1, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_1
+IniRead, SvoyeGIBDD_2, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_2
+IniRead, SvoyeGIBDD_3, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_3
+IniRead, SvoyeGIBDD_4, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_4
+IniRead, SvoyeGIBDD_5, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_5
+IniRead, SvoyeGIBDD_6, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_6
+IniRead, SvoyeGIBDD_7, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_7
+IniRead, SvoyeGIBDD_8, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_8
+IniRead, SvoyeGIBDD_9, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_9
+IniRead, SvoyeGIBDD_10, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_10
+IniRead, SvoyeGIBDD_11, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_11
+IniRead, SvoyeGIBDD_12, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_12
+IniRead, SvoyeGIBDD_13, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_13
+IniRead, SvoyeGIBDD_14, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_14
+IniRead, SvoyeGIBDD_15, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_15
+IniRead, SvoyeGIBDD_16, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_16
+IniRead, SvoyeGIBDD_17, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_17
+IniRead, SvoyeGIBDD_18, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_18
+IniRead, SvoyeGIBDD_19, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_19
+IniRead, SvoyeGIBDD_20, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_20
+IniRead, SvoyeGIBDD_21, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_21
+IniRead, SvoyeGIBDD_22, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_22
+IniRead, SvoyeGIBDD_23, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_23
+IniRead, SvoyeGIBDD_24, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_24
+IniRead, SvoyeGIBDD_25, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_25
+IniRead, SvoyeGIBDD_26, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_26
+IniRead, SvoyeGIBDD_27, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_27
+IniRead, SvoyeGIBDD_28, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_28
+IniRead, SvoyeGIBDD_29, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_29
+IniRead, SvoyeGIBDD_30, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_30
+IniRead, SvoyeGIBDD_31, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_31
+IniRead, SvoyeGIBDD_32, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_32
+IniRead, SvoyeGIBDD_33, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_33
+IniRead, SvoyeGIBDD_34, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_34
+IniRead, SvoyeGIBDD_35, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_35
+IniRead, SvoyeGIBDD_36, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_36
+IniRead, SvoyeGIBDD_37, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_37
+IniRead, SvoyeGIBDD_38, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_38
+IniRead, SvoyeGIBDD_39, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_39
+IniRead, SvoyeGIBDD_40, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_40
+IniRead, SvoyeGIBDD_41, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_41
+IniRead, SvoyeGIBDD_42, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_42
+IniRead, SvoyeGIBDD_43, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_43
+IniRead, SvoyeGIBDD_44, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_44
+IniRead, SvoyeGIBDD_45, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_45
+IniRead, SvoyeGIBDD_46, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_46
+IniRead, SvoyeGIBDD_47, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_47
+IniRead, SvoyeGIBDD_48, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_48
+IniRead, SvoyeGIBDD_49, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_49
+IniRead, SvoyeGIBDD_50, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_50
+
+IniRead, KPRPGIBDD1, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD1
+IniRead, KPRPGIBDD2, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD2
+IniRead, KPRPGIBDD3, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD3
+IniRead, KPRPGIBDD4, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD4
+IniRead, KPRPGIBDD5, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD5
+IniRead, KPRPGIBDD6, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD6
+IniRead, KPRPGIBDD7, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD7
+IniRead, KPRPGIBDD8, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD8
+IniRead, KPRPGIBDD9, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD9
+IniRead, KPRPGIBDD10, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD10
+IniRead, KPRPGIBDD11, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD11
+IniRead, KPRPGIBDD12, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD12
+IniRead, KPRPGIBDD13, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD13
+IniRead, KPRPGIBDD14, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD14
+IniRead, KPRPGIBDD15, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD15
+IniRead, KPRPGIBDD16, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD16
+IniRead, KPRPGIBDD17, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD17
+IniRead, KPRPGIBDD18, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD18
+IniRead, KPRPGIBDD19, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD19
+IniRead, KPRPGIBDD20, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD20
+IniRead, KPRPGIBDD21, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD21
+IniRead, KPRPGIBDD22, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD22
+IniRead, KPRPGIBDD23, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD23
+IniRead, KPRPGIBDD24, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD24
+IniRead, KPRPGIBDD25, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD25
+IniRead, KPRPGIBDD26, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD26
+IniRead, KPRPGIBDD27, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD27
+IniRead, KPRPGIBDD28, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD28
+IniRead, KPRPGIBDD29, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD29
+IniRead, KPRPGIBDD30, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD30
+IniRead, KPRPGIBDD31, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD31
+IniRead, KPRPGIBDD32, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD32
+IniRead, KPRPGIBDD33, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD33
+IniRead, KPRPGIBDD34, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD34
+IniRead, KPRPGIBDD35, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD35
+IniRead, KPRPGIBDD36, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD36
+IniRead, KPRPGIBDD37, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD37
+IniRead, KPRPGIBDD38, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD38
+IniRead, KPRPGIBDD39, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD39
+IniRead, KPRPGIBDD40, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD40
+IniRead, KPRPGIBDD41, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD41
+IniRead, KPRPGIBDD42, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD42
+IniRead, KPRPGIBDD43, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD43
+IniRead, KPRPGIBDD44, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD44
+IniRead, KPRPGIBDD45, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD45
+IniRead, KPRPGIBDD46, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD46
+IniRead, KPRPGIBDD47, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD47
+IniRead, KPRPGIBDD48, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD48
+IniRead, KPRPGIBDD49, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD49
+IniRead, KPRPGIBDD50, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD50
+
+
 IniRead, Objects1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
 IniRead, Objects2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
 IniRead, Objects3, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects3
@@ -890,6 +1109,13 @@ IniRead, Middle_Name, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle_Na
 IniRead, Bol_ro, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
+
+
+IniRead, RankGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
+IniRead, SurnameGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
+IniRead, FamiliyaGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+
+
 IniRead, dolzhnostDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniRead, rankDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
 IniRead, surnameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
@@ -949,9 +1175,9 @@ SvoyeМZ_14=Отказ
 if SvoyeМZ_15=ERROR
 SvoyeМZ_15=Мегафон
 if SvoyeМZ_16=ERROR
-SvoyeМZ_16=Влк.КПК
+SvoyeМZ_16=Вкл.КПК
 if SvoyeМZ_17=ERROR
-SvoyeМZ_17=Вык.КПК 
+SvoyeМZ_17=Выкл.КПК 
 if SvoyeМZ_18=ERROR
 SvoyeМZ_18=Иформация о медкарте 
 if SvoyeМZ_19=ERROR
@@ -1029,6 +1255,115 @@ if KPRPMZ28=ERROR
 KPRPMZ28=C:\ProgramData\KPRP\KPRP-main\KPRP28MZ.txt
 
 
+
+if SvoyeGIBDD_1=ERROR
+SvoyeGIBDD_1=Служебное удостоверение
+if SvoyeGIBDD_2=ERROR
+SvoyeGIBDD_2=Убрать /ud
+if SvoyeGIBDD_3=ERROR
+SvoyeGIBDD_3=Попросить ВУ
+if SvoyeGIBDD_4=ERROR
+SvoyeGIBDD_4=Взять ВУ
+if SvoyeGIBDD_5=ERROR
+SvoyeGIBDD_5=Объявление в розыск (через ГУВД)
+if SvoyeGIBDD_6=ERROR
+SvoyeGIBDD_6=Здравия желаю!
+if SvoyeGIBDD_7=ERROR
+SvoyeGIBDD_7=Пробить на штрафы
+if SvoyeGIBDD_8=ERROR
+SvoyeGIBDD_8=Пробить номер
+if SvoyeGIBDD_9=ERROR
+SvoyeGIBDD_9=Выписать штраф через БД
+if SvoyeGIBDD_10=ERROR
+SvoyeGIBDD_10=Аннулировать ВУ
+if SvoyeGIBDD_11=ERROR
+SvoyeGIBDD_11=wanted
+if SvoyeGIBDD_12=ERROR
+SvoyeGIBDD_12=сrimrec
+if SvoyeGIBDD_13=ERROR
+SvoyeGIBDD_13=fines 
+if SvoyeGIBDD_14=ERROR 
+SvoyeGIBDD_14=Установить личность
+if SvoyeGIBDD_15=ERROR
+SvoyeGIBDD_15=Прекращение конвоирования
+if SvoyeGIBDD_16=ERROR
+SvoyeGIBDD_16=Пешее преследование
+if SvoyeGIBDD_17=ERROR
+SvoyeGIBDD_17=Тауметр
+if SvoyeGIBDD_18=ERROR
+SvoyeGIBDD_18=Рация вкл.
+if SvoyeGIBDD_19=ERROR
+SvoyeGIBDD_19=Рация выкл.  
+if SvoyeGIBDD_20=ERROR
+SvoyeGIBDD_20=Пред.
+if SvoyeGIBDD_21=ERROR
+SvoyeGIBDD_21=Пед.в случае неповиновения 
+if SvoyeGIBDD_22=ERROR
+SvoyeGIBDD_22=Пед.приближающемся транспорте МВД
+if SvoyeGIBDD_23=ERROR
+SvoyeGIBDD_23=Заполнить протокол
+if SvoyeGIBDD_24=ERROR
+SvoyeGIBDD_24=Передать протокол 
+if SvoyeGIBDD_25=ERROR
+SvoyeGIBDD_25=Взять протокол
+
+
+if KPRPGIBDD1=ERROR
+KPRPGIBDD1=C:\ProgramData\KPRP\KPRP-main\KPRP1GIBDD.txt
+if KPRPGIBDD2=ERROR
+KPRPGIBDD2=C:\ProgramData\KPRP\KPRP-main\KPRP2GIBDD.txt
+if KPRPGIBDD3=ERROR
+KPRPGIBDD3=C:\ProgramData\KPRP\KPRP-main\KPRP3GIBDD.txt
+if KPRPGIBDD4=ERROR
+KPRPGIBDD4=C:\ProgramData\KPRP\KPRP-main\KPRP4GIBDD.txt
+if KPRPGIBDD5=ERROR
+KPRPGIBDD5=C:\ProgramData\KPRP\KPRP-main\KPRP5GIBDD.txt
+if KPRPGIBDD6=ERROR
+KPRPGIBDD6=C:\ProgramData\KPRP\KPRP-main\KPRP6GIBDD.txt
+if KPRPGIBDD7=ERROR
+KPRPGIBDD7=C:\ProgramData\KPRP\KPRP-main\KPRP7GIBDD.txt
+if KPRPGIBDD8=ERROR
+KPRPGIBDD8=C:\ProgramData\KPRP\KPRP-main\KPRP8GIBDD.txt
+if KPRPGIBDD9=ERROR
+KPRPGIBDD9=C:\ProgramData\KPRP\KPRP-main\KPRP9GIBDD.txt
+if KPRPGIBDD10=ERROR
+KPRPGIBDD10=C:\ProgramData\KPRP\KPRP-main\KPRP10GIBDD.txt
+if KPRPGIBDD11=ERROR
+KPRPGIBDD11=C:\ProgramData\KPRP\KPRP-main\KPRP11GIBDD.txt
+if KPRPGIBDD12=ERROR
+KPRPGIBDD12=C:\ProgramData\KPRP\KPRP-main\KPRP12GIBDD.txt
+if KPRPGIBDD13=ERROR
+KPRPGIBDD13=C:\ProgramData\KPRP\KPRP-main\KPRP13GIBDD.txt
+if KPRPGIBDD14=ERROR
+KPRPGIBDD14=C:\ProgramData\KPRP\KPRP-main\KPRP14GIBDD.txt
+if KPRPGIBDD15=ERROR
+KPRPGIBDD15=C:\ProgramData\KPRP\KPRP-main\KPRP15GIBDD.txt
+if KPRPGIBDD16=ERROR
+KPRPGIBDD16=C:\ProgramData\KPRP\KPRP-main\KPRP16GIBDD.txt
+if KPRPGIBDD17=ERROR
+KPRPGIBDD17=C:\ProgramData\KPRP\KPRP-main\KPRP17GIBDD.txt
+if KPRPGIBDD18=ERROR
+KPRPGIBDD18=C:\ProgramData\KPRP\KPRP-main\KPRP18GIBDD.txt
+if KPRPGIBDD19=ERROR
+KPRPGIBDD19=C:\ProgramData\KPRP\KPRP-main\KPRP19GIBDD.txt
+if KPRPGIBDD20=ERROR
+KPRPGIBDD20=C:\ProgramData\KPRP\KPRP-main\KPRP20GIBDD.txt
+if KPRPGIBDD21=ERROR
+KPRPGIBDD21=C:\ProgramData\KPRP\KPRP-main\KPRP21GIBDD.txt
+if KPRPGIBDD22=ERROR
+KPRPGIBDD22=C:\ProgramData\KPRP\KPRP-main\KPRP22GIBDD.txt
+if KPRPGIBDD23=ERROR
+KPRPGIBDD23=C:\ProgramData\KPRP\KPRP-main\KPRP23GIBDD.txt
+if KPRPGIBDD24=ERROR
+KPRPGIBDD24=C:\ProgramData\KPRP\KPRP-main\KPRP24GIBDD.txt
+if KPRPGIBDD25=ERROR
+KPRPGIBDD25=C:\ProgramData\KPRP\KPRP-main\KPRP25GIBDD.txt
+if KPRPGIBDD26=ERROR
+KPRPGIBDD26=C:\ProgramData\KPRP\KPRP-main\KPRP26GIBDD.txt
+if KPRPGIBDD27=ERROR
+KPRPGIBDD27=C:\ProgramData\KPRP\KPRP-main\KPRP27GIBDD.txt
+if KPRPGIBDD28=ERROR
+KPRPGIBDD28=C:\ProgramData\KPRP\KPRP-main\KPRP28GIBDD.txt
 
 
 
@@ -1227,6 +1562,13 @@ if Svoye_97=ERROR
 Svoye_97=Описание
 
 
+if RankGIBDD7=ERROR
+RankGIBDD7=Не заполнено
+if SurnameGIBDD7=ERROR
+SurnameGIBDD7=Не заполнено
+if FamiliyaGIBDD7=ERROR
+FamiliyaGIBDD7=Не заполнено
+
 
 if dolzhnostDUVD7=ERROR
 dolzhnostDUVD7=Не заполнено
@@ -1245,6 +1587,12 @@ NameDUVD7=Не заполнено
 if OtchetskstoDUVD7=ERROR
 OtchetskstoDUVD7=Не заполнено
 
+
+
+
+
+
+
 if JWI=ERROR
 JWI=Студент
 if TAG=ERROR
@@ -1256,7 +1604,7 @@ Surname=Не заполнено
 if Middle_Name=ERROR
 Middle_Name=Не заполнено
 if Bol_ro=ERROR
-Bol_ro=ГМУ
+Bol_ro=Приволжск
 if Zaderzhka=ERROR
 Zaderzhka=3000
 if Zaderzhka_lektsiya=ERROR
@@ -1302,7 +1650,7 @@ Floor = а
 Female = ла
 }
 
-if (Bol_ro="ЦГБ-Н")
+if (Bol_ro="Невский")
 {
 Bol_ro_1 =ЦГБ-Н
 Bol_ro_2 = Nevskiy.png
@@ -1310,9 +1658,10 @@ Bol_ro_3 =ГБУЗ ЦГБ г. Невский
 stol =
 tumba=do Шкаф закрыт.
 tumba1=say Ваша задача — одновременно открыть шкаф и сказать что-то. И потом закрыть обратно точно также.
+CityGIBDD7=Невский
 }
 
-if (Bol_ro="ЦГБ-П")
+if (Bol_ro="Приволжск")
 {
 Bol_ro_1 =ЦГБ-П
 Bol_ro_2 = Privolzhsk.png
@@ -1320,9 +1669,10 @@ Bol_ro_3 =ГБУЗ ЦГБ г. Приволжск
 stol =do У окна стоит стол.
 tumba=say Ваша задача — одновременно взять кружку и сказать что-то. И потом ее поставить обратно точно также.
 tumba1=
+CityGIBDD7=Приволжск
 }
 
-if (Bol_ro="ОКБ-М")
+if (Bol_ro="Мирный")
 {
 Bol_ro_1 =ОКБ-М
 Bol_ro_2 =Mirnyy.png
@@ -1330,6 +1680,7 @@ Bol_ro_3 =ГБУЗ ОКБ г. Мирный
 stol =
 tumba=do Шкаф закрыт.
 tumba1=say Ваша задача — одновременно открыть шкаф и сказать что-то. И потом закрыть обратно точно также.
+CityGIBDD7=Мирный
 }
 
 if (Bol_ro="ГМУ")
@@ -1340,6 +1691,7 @@ Bol_ro_3 =ГМУ г. Приволжск
 stol =do У окна стоит стол.
 tumba=say Ваша задача — одновременно взять кружку и сказать что-то. И потом ее поставить обратно точно также.
 tumba1=
+CityGIBDD7=
 }
 
 if (Skrinshot="Включен")
@@ -2995,11 +3347,16 @@ Svoy:
 MsgBox, % 4+32+256, Удаление данных, Вы действительно, хотите удалить все данные?
 	IfMsgBox, No
 Return
-FileDelete, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Dannyye.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\selected.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\Province.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini
+FileDelete, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini
 Return
 
 
@@ -3967,6 +4324,12 @@ IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Soun
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 
+
+
+IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
+IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
+IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+
 IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
 IniWrite, %surnameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
@@ -4361,6 +4724,144 @@ IniWrite, %251MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
 IniWrite, %261MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
 IniWrite, %271MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
 IniWrite, %281MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
+
+
+
+
+IniWrite, %SvoyeGIBDD_1%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_1
+IniWrite, %SvoyeGIBDD_2%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_2
+IniWrite, %SvoyeGIBDD_3%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_3
+IniWrite, %SvoyeGIBDD_4%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_4
+IniWrite, %SvoyeGIBDD_5%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_5
+IniWrite, %SvoyeGIBDD_6%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_6
+IniWrite, %SvoyeGIBDD_7%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_7
+IniWrite, %SvoyeGIBDD_8%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_8
+IniWrite, %SvoyeGIBDD_9%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_9
+IniWrite, %SvoyeGIBDD_10%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_10
+IniWrite, %SvoyeGIBDD_11%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_11
+IniWrite, %SvoyeGIBDD_12%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_12
+IniWrite, %SvoyeGIBDD_13%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_13
+IniWrite, %SvoyeGIBDD_14%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_14
+IniWrite, %SvoyeGIBDD_15%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_15
+IniWrite, %SvoyeGIBDD_16%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_16
+IniWrite, %SvoyeGIBDD_17%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_17
+IniWrite, %SvoyeGIBDD_18%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_18
+IniWrite, %SvoyeGIBDD_19%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_19
+IniWrite, %SvoyeGIBDD_20%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_20
+IniWrite, %SvoyeGIBDD_21%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_21
+IniWrite, %SvoyeGIBDD_22%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_22
+IniWrite, %SvoyeGIBDD_23%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_23
+IniWrite, %SvoyeGIBDD_24%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_24
+IniWrite, %SvoyeGIBDD_25%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_25
+IniWrite, %SvoyeGIBDD_26%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_26
+IniWrite, %SvoyeGIBDD_27%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_27
+IniWrite, %SvoyeGIBDD_28%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_28
+IniWrite, %SvoyeGIBDD_29%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_29
+IniWrite, %SvoyeGIBDD_30%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_30
+IniWrite, %SvoyeGIBDD_31%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_31
+IniWrite, %SvoyeGIBDD_32%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_32
+IniWrite, %SvoyeGIBDD_33%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_33
+IniWrite, %SvoyeGIBDD_34%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_34
+IniWrite, %SvoyeGIBDD_35%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_35
+IniWrite, %SvoyeGIBDD_36%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_36
+IniWrite, %SvoyeGIBDD_37%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_37
+IniWrite, %SvoyeGIBDD_38%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_38
+IniWrite, %SvoyeGIBDD_39%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_39
+IniWrite, %SvoyeGIBDD_40%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_40
+IniWrite, %SvoyeGIBDD_41%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_41
+IniWrite, %SvoyeGIBDD_42%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_42
+IniWrite, %SvoyeGIBDD_43%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_43
+IniWrite, %SvoyeGIBDD_44%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_44
+IniWrite, %SvoyeGIBDD_45%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_45
+IniWrite, %SvoyeGIBDD_46%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_46
+IniWrite, %SvoyeGIBDD_47%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_47
+IniWrite, %SvoyeGIBDD_48%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_48
+IniWrite, %SvoyeGIBDD_49%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_49
+IniWrite, %SvoyeGIBDD_50%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_50
+
+
+IniWrite, %KPRPGIBDD1%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD1
+IniWrite, %KPRPGIBDD2%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD2
+IniWrite, %KPRPGIBDD3%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD3
+IniWrite, %KPRPGIBDD4%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD4
+IniWrite, %KPRPGIBDD5%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD5
+IniWrite, %KPRPGIBDD6%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD6
+IniWrite, %KPRPGIBDD7%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD7
+IniWrite, %KPRPGIBDD8%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD8
+IniWrite, %KPRPGIBDD9%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD9
+IniWrite, %KPRPGIBDD10%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD10
+IniWrite, %KPRPGIBDD11%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD11
+IniWrite, %KPRPGIBDD12%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD12
+IniWrite, %KPRPGIBDD13%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD13
+IniWrite, %KPRPGIBDD14%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD14
+IniWrite, %KPRPGIBDD15%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD15
+IniWrite, %KPRPGIBDD16%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD16
+IniWrite, %KPRPGIBDD17%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD17
+IniWrite, %KPRPGIBDD18%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD18
+IniWrite, %KPRPGIBDD19%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD19
+IniWrite, %KPRPGIBDD20%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD20
+IniWrite, %KPRPGIBDD21%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD21
+IniWrite, %KPRPGIBDD22%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD22
+IniWrite, %KPRPGIBDD23%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD23
+IniWrite, %KPRPGIBDD24%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD24
+IniWrite, %KPRPGIBDD25%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD25
+IniWrite, %KPRPGIBDD26%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD26
+IniWrite, %KPRPGIBDD27%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD27
+IniWrite, %KPRPGIBDD28%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD28
+IniWrite, %KPRPGIBDD29%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD29
+IniWrite, %KPRPGIBDD30%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD30
+IniWrite, %KPRPGIBDD31%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD31
+IniWrite, %KPRPGIBDD32%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD32
+IniWrite, %KPRPGIBDD33%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD33
+IniWrite, %KPRPGIBDD34%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD34
+IniWrite, %KPRPGIBDD35%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD35
+IniWrite, %KPRPGIBDD36%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD36
+IniWrite, %KPRPGIBDD37%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD37
+IniWrite, %KPRPGIBDD38%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD38
+IniWrite, %KPRPGIBDD39%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD39
+IniWrite, %KPRPGIBDD40%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD40
+IniWrite, %KPRPGIBDD41%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD41
+IniWrite, %KPRPGIBDD42%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD42
+IniWrite, %KPRPGIBDD43%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD43
+IniWrite, %KPRPGIBDD44%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD44
+IniWrite, %KPRPGIBDD45%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD45
+IniWrite, %KPRPGIBDD46%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD46
+IniWrite, %KPRPGIBDD47%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD47
+IniWrite, %KPRPGIBDD48%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD48
+IniWrite, %KPRPGIBDD49%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD49
+IniWrite, %KPRPGIBDD50%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD50
+
+IniWrite, %11GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 11GIBDD7
+IniWrite, %21GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 21GIBDD7
+IniWrite, %31GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 31GIBDD7
+IniWrite, %41GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 41GIBDD7
+IniWrite, %51GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 51GIBDD7
+IniWrite, %61GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 61GIBDD7
+IniWrite, %71GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 71GIBDD7
+IniWrite, %81GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 81GIBDD7
+IniWrite, %91GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 91GIBDD7
+IniWrite, %101GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 101GIBDD7
+IniWrite, %111GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 111GIBDD7
+IniWrite, %121GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 121GIBDD7
+IniWrite, %131GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 131GIBDD7
+IniWrite, %141GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 141GIBDD7
+IniWrite, %151GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 151GIBDD7
+IniWrite, %161GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 161GIBDD7
+IniWrite, %171GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 171GIBDD7
+IniWrite, %181GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 181GIBDD7
+IniWrite, %191GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 191GIBDD7
+IniWrite, %201GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 201GIBDD7
+IniWrite, %211GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 211GIBDD7
+IniWrite, %221GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 221GIBDD7
+IniWrite, %231GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 231GIBDD7
+IniWrite, %241GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 241GIBDD7
+IniWrite, %251GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 251GIBDD7
+IniWrite, %261GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 261GIBDD7
+IniWrite, %271GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 271GIBDD7
+IniWrite, %281GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 281GIBDD7
+
+
+
 
 IniWrite, %11DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
 IniWrite, %21DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
