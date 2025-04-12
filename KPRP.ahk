@@ -1114,6 +1114,7 @@ IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 IniRead, RankGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniRead, SurnameGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
 IniRead, FamiliyaGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+IniRead, OtdelGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
 
 
 IniRead, dolzhnostDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
@@ -1568,7 +1569,8 @@ if SurnameGIBDD7=ERROR
 SurnameGIBDD7=Не заполнено
 if FamiliyaGIBDD7=ERROR
 FamiliyaGIBDD7=Не заполнено
-
+if OtdelGIBDD7=ERROR
+OtdelGIBDD7=Не заполнено
 
 if dolzhnostDUVD7=ERROR
 dolzhnostDUVD7=Не заполнено
@@ -4329,6 +4331,8 @@ IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User,
 IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
 IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+IniWrite, %OtdelGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+
 
 IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
