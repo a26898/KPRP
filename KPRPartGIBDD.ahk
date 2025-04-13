@@ -25,6 +25,7 @@ Gui, 12:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramDa
 Gui, 12:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 
 Gui, 12:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
+Gui, 12:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
 Return
 
 0001GIBDD7:

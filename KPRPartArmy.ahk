@@ -14,3 +14,6 @@ Gui, 9:Add, Picture, x200 y600 w48 w48   +BackgroundTrans  gOffers, C:\ProgramDa
 Gui, 9:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
 Gui, 9:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
 Gui, 9:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans  gReload , C:\ProgramData\KPRP\KPRP-main\restart.png
+
+Gui, 9:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
+Gui, 9:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
