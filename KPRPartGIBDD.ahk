@@ -1073,251 +1073,806 @@ NotebookKPRPGIBDD28:
 Run, notepad.exe "%KPRPGIBDD28%" 
 return
 
-SelectKPRPGIBDD1:
+SelectKPRPGIBDD1: 
 {
-FileSelectFile, KPRPGIBDD1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    ; Сохраняем текущий путь, чтобы он не сбивался
+    LastPath := KPRPGIBDD1  ; Сохраняем текущий путь, чтобы не сбить его, если пользователь не выбрал файл.
+
+    FileSelectFile, KPRPGIBDD1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    ; Если путь пустой, значит, пользователь отменил выбор (не выбрал файл)
+    if (KPRPGIBDD1 = "")
+    {
+        KPRPGIBDD1 := LastPath  ; Восстанавливаем путь, если пользователь отменил выбор.
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD1%
 }
-Return
+return
+
+
 SelectKPRPGIBDD2:
 {
-FileSelectFile, KPRPGIBDD2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD2
+    FileSelectFile, KPRPGIBDD2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD2 = "")
+    {
+        KPRPGIBDD2 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD2%
 }
-Return
+return
+
 SelectKPRPGIBDD3:
 {
-FileSelectFile, KPRPGIBDD3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD3
+    FileSelectFile, KPRPGIBDD3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD3 = "")
+    {
+        KPRPGIBDD3 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD3%
 }
-Return
+return
+
 SelectKPRPGIBDD4:
 {
-FileSelectFile, KPRPGIBDD4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD4
+    FileSelectFile, KPRPGIBDD4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD4 = "")
+    {
+        KPRPGIBDD4 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD4%
 }
-Return
+return
+
 SelectKPRPGIBDD5:
 {
-FileSelectFile, KPRPGIBDD5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD5
+    FileSelectFile, KPRPGIBDD5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD5 = "")
+    {
+        KPRPGIBDD5 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD5%
 }
-Return
+return
+
 SelectKPRPGIBDD6:
 {
-FileSelectFile, KPRPGIBDD6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD6
+    FileSelectFile, KPRPGIBDD6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD6 = "")
+    {
+        KPRPGIBDD6 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD6%
 }
-Return
+return
+
 SelectKPRPGIBDD7:
 {
-FileSelectFile, KPRPGIBDD7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD7
+    FileSelectFile, KPRPGIBDD7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD7 = "")
+    {
+        KPRPGIBDD7 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD7%
 }
-Return
+return
+
 SelectKPRPGIBDD8:
 {
-FileSelectFile, KPRPGIBDD8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD8
+    FileSelectFile, KPRPGIBDD8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD8 = "")
+    {
+        KPRPGIBDD8 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD8%
 }
-Return
+return
+
 SelectKPRPGIBDD9:
 {
-FileSelectFile, KPRPGIBDD9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD9
+    FileSelectFile, KPRPGIBDD9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD9 = "")
+    {
+        KPRPGIBDD9 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD9%
 }
-Return
+return
+
 SelectKPRPGIBDD10:
 {
-FileSelectFile, KPRPGIBDD10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD10
+    FileSelectFile, KPRPGIBDD10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD10 = "")
+    {
+        KPRPGIBDD10 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD10%
 }
 return
+
 SelectKPRPGIBDD11:
 {
-FileSelectFile, KPRPGIBDD11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD11
+    FileSelectFile, KPRPGIBDD11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD11 = "")
+    {
+        KPRPGIBDD11 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD11%
 }
 return
+
 SelectKPRPGIBDD12:
 {
-FileSelectFile, KPRPGIBDD12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD12
+    FileSelectFile, KPRPGIBDD12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD12 = "")
+    {
+        KPRPGIBDD12 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD12%
 }
 return
+
 SelectKPRPGIBDD13:
 {
-FileSelectFile, KPRPGIBDD13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD13
+    FileSelectFile, KPRPGIBDD13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD13 = "")
+    {
+        KPRPGIBDD13 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD13%
 }
 return
+
 SelectKPRPGIBDD14:
 {
-FileSelectFile, KPRPGIBDD13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD14
+    FileSelectFile, KPRPGIBDD14, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD14 = "")
+    {
+        KPRPGIBDD14 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD14%
 }
 return
+
 SelectKPRPGIBDD15:
 {
-FileSelectFile, KPRPGIBDD15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD15
+    FileSelectFile, KPRPGIBDD15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD15 = "")
+    {
+        KPRPGIBDD15 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD15%
 }
 return
+
 SelectKPRPGIBDD16:
 {
-FileSelectFile, KPRPGIBDD16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD16
+    FileSelectFile, KPRPGIBDD16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD16 = "")
+    {
+        KPRPGIBDD16 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD16%
 }
 return
+
 SelectKPRPGIBDD17:
 {
-FileSelectFile, KPRPGIBDD17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD17
+    FileSelectFile, KPRPGIBDD17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD17 = "")
+    {
+        KPRPGIBDD17 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD17%
 }
 return
+
 SelectKPRPGIBDD18:
 {
-FileSelectFile, KPRPGIBDD18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD18
+    FileSelectFile, KPRPGIBDD18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD18 = "")
+    {
+        KPRPGIBDD18 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD18%
 }
 return
+
 SelectKPRPGIBDD19:
 {
-FileSelectFile, KPRPGIBDD19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD19
+    FileSelectFile, KPRPGIBDD19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD19 = "")
+    {
+        KPRPGIBDD19 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD19%
 }
 return
+
 SelectKPRPGIBDD20:
 {
-FileSelectFile, KPRPGIBDD20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD20
+    FileSelectFile, KPRPGIBDD20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD20 = "")
+    {
+        KPRPGIBDD20 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD20%
 }
 return
+
 SelectKPRPGIBDD21:
 {
-FileSelectFile, KPRPGIBDD21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD21
+    FileSelectFile, KPRPGIBDD21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD21 = "")
+    {
+        KPRPGIBDD21 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD21%
 }
 return
+
 SelectKPRPGIBDD22:
 {
-FileSelectFile, KPRPGIBDD22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD22
+    FileSelectFile, KPRPGIBDD22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD22 = "")
+    {
+        KPRPGIBDD22 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD22%
 }
 return
+
 SelectKPRPGIBDD23:
 {
-FileSelectFile, KPRPGIBDD23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD23
+    FileSelectFile, KPRPGIBDD23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD23 = "")
+    {
+        KPRPGIBDD23 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD23%
 }
 return
+
 SelectKPRPGIBDD24:
 {
-FileSelectFile, KPRPGIBDD24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD24
+    FileSelectFile, KPRPGIBDD24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD24 = "")
+    {
+        KPRPGIBDD24 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD24%
 }
 return
+
 SelectKPRPGIBDD25:
 {
-FileSelectFile, KPRPGIBDD25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD25
+    FileSelectFile, KPRPGIBDD25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD25 = "")
+    {
+        KPRPGIBDD25 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD25%
 }
 return
+
 SelectKPRPGIBDD26:
 {
-FileSelectFile, KPRPGIBDD26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD26
+    FileSelectFile, KPRPGIBDD26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD26 = "")
+    {
+        KPRPGIBDD26 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD26%
 }
 return
+
 SelectKPRPGIBDD27:
 {
-FileSelectFile, KPRPGIBDD27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD27
+    FileSelectFile, KPRPGIBDD27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD27 = "")
+    {
+        KPRPGIBDD27 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD27%
 }
 return
+
 SelectKPRPGIBDD28:
 {
-FileSelectFile, KPRPGIBDD28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD28
+    FileSelectFile, KPRPGIBDD28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD28 = "")
+    {
+        KPRPGIBDD28 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD28%
 }
 return
+
 SelectKPRPGIBDD29:
 {
-FileSelectFile, KPRPGIBDD29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD29
+    FileSelectFile, KPRPGIBDD29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD29 = "")
+    {
+        KPRPGIBDD29 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD29%
 }
 return
+
 SelectKPRPGIBDD30:
 {
-FileSelectFile, KPRPGIBDD30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD30
+    FileSelectFile, KPRPGIBDD30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD30 = "")
+    {
+        KPRPGIBDD30 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD30%
 }
 return
+
 SelectKPRPGIBDD31:
 {
-FileSelectFile, KPRPGIBDD31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD31
+    FileSelectFile, KPRPGIBDD31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD31 = "")
+    {
+        KPRPGIBDD31 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD31%
 }
 return
+
 SelectKPRPGIBDD32:
 {
-FileSelectFile, KPRPGIBDD32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD32
+    FileSelectFile, KPRPGIBDD32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD32 = "")
+    {
+        KPRPGIBDD32 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD32%
 }
 return
+
 SelectKPRPGIBDD33:
 {
-FileSelectFile, KPRPGIBDD33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD33
+    FileSelectFile, KPRPGIBDD33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD33 = "")
+    {
+        KPRPGIBDD33 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD33%
 }
 return
+
 SelectKPRPGIBDD34:
 {
-FileSelectFile, KPRPGIBDD34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD34
+    FileSelectFile, KPRPGIBDD34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD34 = "")
+    {
+        KPRPGIBDD34 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD34%
 }
 return
+
 SelectKPRPGIBDD35:
 {
-FileSelectFile, KPRPGIBDD35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD35
+    FileSelectFile, KPRPGIBDD35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD35 = "")
+    {
+        KPRPGIBDD35 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD35%
 }
 return
+
 SelectKPRPGIBDD36:
 {
-FileSelectFile, KPRPGIBDD36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD36
+    FileSelectFile, KPRPGIBDD36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD36 = "")
+    {
+        KPRPGIBDD36 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD36%
 }
 return
+
 SelectKPRPGIBDD37:
 {
-FileSelectFile, KPRPGIBDD37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD37
+    FileSelectFile, KPRPGIBDD37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD37 = "")
+    {
+        KPRPGIBDD37 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD37%
 }
 return
+
 SelectKPRPGIBDD38:
 {
-FileSelectFile, KPRPGIBDD38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD38
+    FileSelectFile, KPRPGIBDD38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD38 = "")
+    {
+        KPRPGIBDD38 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD38%
 }
 return
+
 SelectKPRPGIBDD39:
 {
-FileSelectFile, KPRPGIBDD39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD39
+    FileSelectFile, KPRPGIBDD39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD39 = "")
+    {
+        KPRPGIBDD39 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD39%
 }
 return
+
 SelectKPRPGIBDD40:
 {
-FileSelectFile, KPRPGIBDD40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD40
+    FileSelectFile, KPRPGIBDD40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD40 = "")
+    {
+        KPRPGIBDD40 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD40%
 }
 return
+
 SelectKPRPGIBDD41:
 {
-FileSelectFile, KPRPGIBDD41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD41
+    FileSelectFile, KPRPGIBDD41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD41 = "")
+    {
+        KPRPGIBDD41 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD41%
 }
 return
+
 SelectKPRPGIBDD42:
 {
-FileSelectFile, KPRPGIBDD42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD42
+    FileSelectFile, KPRPGIBDD42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD42 = "")
+    {
+        KPRPGIBDD42 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD42%
 }
 return
+
 SelectKPRPGIBDD43:
 {
-FileSelectFile, KPRPGIBDD43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD43
+    FileSelectFile, KPRPGIBDD43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD43 = "")
+    {
+        KPRPGIBDD43 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD43%
 }
 return
+
 SelectKPRPGIBDD44:
 {
-FileSelectFile, KPRPGIBDD44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD44
+    FileSelectFile, KPRPGIBDD44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD44 = "")
+    {
+        KPRPGIBDD44 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD44%
 }
 return
+
 SelectKPRPGIBDD45:
 {
-FileSelectFile, KPRPGIBDD45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD45
+    FileSelectFile, KPRPGIBDD45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD45 = "")
+    {
+        KPRPGIBDD45 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD45%
 }
 return
+
 SelectKPRPGIBDD46:
 {
-FileSelectFile, KPRPGIBDD46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD46
+    FileSelectFile, KPRPGIBDD46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD46 = "")
+    {
+        KPRPGIBDD46 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD46%
 }
 return
+
 SelectKPRPGIBDD47:
 {
-FileSelectFile, KPRPGIBDD47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD47
+    FileSelectFile, KPRPGIBDD47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD47 = "")
+    {
+        KPRPGIBDD47 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD47%
 }
 return
+
 SelectKPRPGIBDD48:
 {
-FileSelectFile, KPRPGIBDD48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD48
+    FileSelectFile, KPRPGIBDD48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD48 = "")
+    {
+        KPRPGIBDD48 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD48%
 }
+return
+
 SelectKPRPGIBDD49:
 {
-FileSelectFile, KPRPGIBDD49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD49
+    FileSelectFile, KPRPGIBDD49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD49 = "")
+    {
+        KPRPGIBDD49 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD49%
 }
+return
+
 SelectKPRPGIBDD50:
 {
-FileSelectFile, KPRPGIBDD50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    LastPath := KPRPGIBDD50
+    FileSelectFile, KPRPGIBDD50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPGIBDD50 = "")
+    {
+        KPRPGIBDD50 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPGIBDD50%
 }
 return
