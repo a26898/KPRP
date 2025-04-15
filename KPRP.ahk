@@ -1137,6 +1137,7 @@ IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
+IniRead, ToggleTimer, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
 
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
@@ -1707,11 +1708,6 @@ Skrin_1=
 
 
 
-if (Taymer_Nastroyka = "Включен") {
-    Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
-}
-
-
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -1775,10 +1771,10 @@ En()
 
 YAzyk(String) {
     if (RegExMatch(String, "[А-Яа-яЁё]")) {
-        Sleep 500
+        Sleep 2000
         Ru()
     } else {
-        Sleep 500
+        Sleep 2000
         En()
     }
 }
@@ -3320,6 +3316,8 @@ Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya
 Gui, 6:Add, Slider, x90 y700 w295 h30 vSoundEnable Range0-1, %SoundEnable% 
 Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
 Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
+Gui, 6:Add, DropDownList, x490 y225 w195 vToggleTimer, %ToggleTimer%||Включен|Выключен
+
 
 
 Gui, 6:show, center , Настройки
@@ -4325,6 +4323,7 @@ IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
+IniWrite, %ToggleTimer%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
 
 
 
