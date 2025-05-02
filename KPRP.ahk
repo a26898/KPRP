@@ -1706,7 +1706,9 @@ if (Skrinshot="Выключен")
 Skrin_1=
 }
 
-
+if (Taymer_Nastroyka = "Включен") {
+    Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
+}
 
 
 Menu, Tray, NoStandard
