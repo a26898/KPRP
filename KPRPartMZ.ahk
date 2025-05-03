@@ -29,7 +29,7 @@ Gui, 5:Add, Picture, x10 y40 w128 w96  +BackgroundTrans gLaziness7, C:\ProgramDa
 Gui, 5:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine81, C:\ProgramData\KPRP\KPRP-main\Cards.png
 Gui, 5:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine79, C:\ProgramData\KPRP\KPRP-main\Oath.png
 Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine33, C:\ProgramData\KPRP\KPRP-main\Feelings.png
-
+Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness25, C:\ProgramData\KPRP\KPRP-main\Prizyvpng.png
 Gui, 5:Add, Picture, x130 y40 w128 w96  +BackgroundTrans gMedicine13, C:\ProgramData\KPRP\KPRP-main\Defibrillator.png
 
 
@@ -42,11 +42,12 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gLaziness13, C:\Progra
 Gui, 5:Add, Picture, x730 y40 w128 w96  +BackgroundTrans gLaziness3, C:\ProgramData\KPRP\KPRP-main\Change.png
 Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\ProgramData\KPRP\KPRP-main\Registry.png
 Gui, 5:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\Call.png
-Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
+Gui, 5:Add, Picture, x130 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
 
 
 Gui, 5:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
 Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
+
 
 
 Gui, 5: Tab, 2
@@ -10384,7 +10385,7 @@ Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x90 y15 h500 w370 +BackgroundTrans, [Передайте заключение]
 Gui, 3:Add, Text, x90 y35 h500 w370 +BackgroundTrans, [Выдать медкарту]
 
-Gui, 3:show, center h330 w550, Призыв
+Gui, 3:show, center h100 w350, Призыв
 Return
 
 
