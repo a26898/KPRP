@@ -1111,6 +1111,7 @@ IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
 
 
+
 IniRead, RankGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniRead, SurnameGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
 IniRead, FamiliyaGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
@@ -1197,64 +1198,19 @@ SvoyeМZ_24=Откат /ro
 if SvoyeМZ_25=ERROR
 SvoyeМZ_25=Аптека (таблетка)
 
+Loop, 50
+{
+    ; Генерируем название переменной, например, KPRPMZ1, KPRPMZ2 и т.д.
+    varName := "KPRPMZ" A_Index
+    
+    ; Получаем значение переменной (если оно равно "ERROR")
+    if %varName% = ERROR
+    {
+        ; Если значение ERROR, присваиваем путь
+        %varName% := "C:\ProgramData\KPRP\KPRP-main\KPRP" A_Index "MZ.txt"
+    }
+}
 
-
-if KPRPMZ1=ERROR
-KPRPMZ1=C:\ProgramData\KPRP\KPRP-main\KPRP1MZ.txt
-if KPRPMZ2=ERROR
-KPRPMZ2=C:\ProgramData\KPRP\KPRP-main\KPRP2MZ.txt
-if KPRPMZ3=ERROR
-KPRPMZ3=C:\ProgramData\KPRP\KPRP-main\KPRP3MZ.txt
-if KPRPMZ4=ERROR
-KPRPMZ4=C:\ProgramData\KPRP\KPRP-main\KPRP4MZ.txt
-if KPRPMZ5=ERROR
-KPRPMZ5=C:\ProgramData\KPRP\KPRP-main\KPRP5MZ.txt
-if KPRPMZ6=ERROR
-KPRPMZ6=C:\ProgramData\KPRP\KPRP-main\KPRP6MZ.txt
-if KPRPMZ7=ERROR
-KPRPMZ7=C:\ProgramData\KPRP\KPRP-main\KPRP7MZ.txt
-if KPRPMZ8=ERROR
-KPRPMZ8=C:\ProgramData\KPRP\KPRP-main\KPRP8MZ.txt
-if KPRPMZ9=ERROR
-KPRPMZ9=C:\ProgramData\KPRP\KPRP-main\KPRP9MZ.txt
-if KPRPMZ10=ERROR
-KPRPMZ10=C:\ProgramData\KPRP\KPRP-main\KPRP10MZ.txt
-if KPRPMZ11=ERROR
-KPRPMZ11=C:\ProgramData\KPRP\KPRP-main\KPRP11MZ.txt
-if KPRPMZ12=ERROR
-KPRPMZ12=C:\ProgramData\KPRP\KPRP-main\KPRP12MZ.txt
-if KPRPMZ13=ERROR
-KPRPMZ13=C:\ProgramData\KPRP\KPRP-main\KPRP13MZ.txt
-if KPRPMZ14=ERROR
-KPRPMZ14=C:\ProgramData\KPRP\KPRP-main\KPRP14MZ.txt
-if KPRPMZ15=ERROR
-KPRPMZ15=C:\ProgramData\KPRP\KPRP-main\KPRP15MZ.txt
-if KPRPMZ16=ERROR
-KPRPMZ16=C:\ProgramData\KPRP\KPRP-main\KPRP16MZ.txt
-if KPRPMZ17=ERROR
-KPRPMZ17=C:\ProgramData\KPRP\KPRP-main\KPRP17MZ.txt
-if KPRPMZ18=ERROR
-KPRPMZ18=C:\ProgramData\KPRP\KPRP-main\KPRP18MZ.txt
-if KPRPMZ19=ERROR
-KPRPMZ19=C:\ProgramData\KPRP\KPRP-main\KPRP19MZ.txt
-if KPRPMZ20=ERROR
-KPRPMZ20=C:\ProgramData\KPRP\KPRP-main\KPRP20MZ.txt
-if KPRPMZ21=ERROR
-KPRPMZ21=C:\ProgramData\KPRP\KPRP-main\KPRP21MZ.txt
-if KPRPMZ22=ERROR
-KPRPMZ22=C:\ProgramData\KPRP\KPRP-main\KPRP22MZ.txt
-if KPRPMZ23=ERROR
-KPRPMZ23=C:\ProgramData\KPRP\KPRP-main\KPRP23MZ.txt
-if KPRPMZ24=ERROR
-KPRPMZ24=C:\ProgramData\KPRP\KPRP-main\KPRP24MZ.txt
-if KPRPMZ25=ERROR
-KPRPMZ25=C:\ProgramData\KPRP\KPRP-main\KPRP25MZ.txt
-if KPRPMZ26=ERROR
-KPRPMZ26=C:\ProgramData\KPRP\KPRP-main\KPRP26MZ.txt
-if KPRPMZ27=ERROR
-KPRPMZ27=C:\ProgramData\KPRP\KPRP-main\KPRP27MZ.txt
-if KPRPMZ28=ERROR
-KPRPMZ28=C:\ProgramData\KPRP\KPRP-main\KPRP28MZ.txt
 
 
 
@@ -4315,6 +4271,8 @@ IniWrite, %Bol_ro%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniWrite, %Rank%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Rank
 IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
+
+
 IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
 IniWrite, %Zaderzhka_lektsiya%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
@@ -5072,13 +5030,13 @@ if(Hidden)
 {
 	Menu, Tray, Rename, Развернуть, Свернуть
 	Menu, Tray, default, Свернуть
-	Gui, 15:Show
+	Gui, 5:Show
 
 } else {
 	Menu, Tray, Rename, Свернуть, Развернуть
 	Menu, Tray, default, Развернуть
 
-	Gui, 15:Hide
+	Gui, 5:Hide
 }
 Hidden := !Hidden
 return
