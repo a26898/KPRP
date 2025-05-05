@@ -5594,12 +5594,10 @@ SendChat("me взял" floor " в руку кварцевальную лампу
 SendChat("me закрыл" floor " шкаф  ", "  " zaderzhka " ")
 SendChat("me поставил" floor " кварцевальную лампу на пол  ", "  " zaderzhka " ")
 SendChat("me включил" floor " кварцевальную лампу   ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " комнату дверью  ", "  " zaderzhka " ")
 Return
 
 :?:/Кварц_2::
 SendPlay {Enter}
-SendChat("me открыл" floor " дверь  ", "  " zaderzhka " ")
 SendChat("me выключил" floor " кварцевальную лампу ", "  " zaderzhka " ")
 SendChat("me взял" floor " лампу в руку  ", "  " zaderzhka " ")
 SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
@@ -6981,20 +6979,18 @@ Gui, Destroy
 Return
 
 :?:/МП::
-Random, rand, 1, 7
+Random, rand, 1, 6
 if rand = 1
 	Word := "Стерилизация медицинских предметов"
 if rand = 2
 	Word := "Проверка срока годности лекарств"
 if rand = 3
-	Word := "Проверка срока годности шприцов"
+	Word := "Проверка условий хранения препаратов"
 if rand = 4
 	Word := "Проверка срока годности перчаток"
 if rand = 5
-	Word := "Мойка полов"
-if rand = 6
 	Word := "Дезинфекция в палатах"
-if rand = 7
+if rand = 6
 	Word := "Кварцевание палат"
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
