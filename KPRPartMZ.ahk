@@ -1654,7 +1654,419 @@ Loop, read, %KPRPMZ38%
 Return
 
 
+:?:/Зрения_1::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
 
+Var := Greeting()
+Loop, read, %KPRPMZ39%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_2::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ40%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_3::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ41%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_4::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ42%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_5::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ43%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_6::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ44%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_7::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ45%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_8::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ46%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Зрения_9::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ47%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Вши_1::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ48%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Вши_2::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ49%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/Вши_3::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ50%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+:?:/Вши_4::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ51%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
 
 
 
@@ -1848,28 +2260,6 @@ SendChat("say У вас всё в порядке. ", "1000")
 Return
 
 
-:?:/Вши_1::
-SendPlay {Enter}
-SendChat("do В правом кармане одноразовые перчатки. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из правого кармана перчатки ", "  " zaderzhka " ")
-SendChat("me одел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Хорошо, сейчас я Вас осмотрю.  ", "  " zaderzhka " ")
-SendChat("me осматривает голову пациента ", "  " zaderzhka " ")
-SendChat("do У человека есть вши? ", "  " zaderzhka " ")
-Return
-
-
-:?:/Вши_2::
-SendPlay {Enter}
-SendChat("say У Вас обнаружены вши. ", "  " zaderzhka " ")
-SendChat("me снял" floor " перчатки и выкинул" floor " их в мусорку", "  " zaderzhka " ")
-Return
-
-:?:/Вши_3::
-SendPlay {Enter}
-SendChat("say У Вас обнаружены вши. ", "  " zaderzhka " ")
-SendChat("me снял" floor " перчатки и выкинул" floor " их в мусорку", "  " zaderzhka " ")
-Return
 
 :?:/Нос_ПМП::
 SendPlay {Enter}
@@ -1986,52 +2376,6 @@ SendChat("me взял" floor " из мед.сумки повязку и нало
 SendChat("say Согласны на госпитализацию?   ", "  " zaderzhka " ")
 Return
 
-:?:/Зрения_1::
-SendPlay {Enter}
-SendChat("do На стене висит таблица Сивцева.  ", "  " zaderzhka " ")
-SendChat("say Сейчас я Вам буду показывать буквы, а вы будете их называть. ", "  " zaderzhka " ")
-SendChat("do Указка лежит на столе. ", "  " zaderzhka " ")
-SendChat("me взял" floor " указку в левую руку ", "  " zaderzhka " ")
-SendChat("say Закройте правый глаз. ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_2::
-SendPlay {Enter}
-SendChat("me указал" floor " на букву Б ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_3::
-SendPlay {Enter}
-SendChat("me указал" floor " на букву Н ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_4::
-SendPlay {Enter}
-SendChat("me указал" floor " на букву Ш ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_5::
-SendPlay {Enter}
-SendChat("say Хорошо, закройте левый глаз.", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_6::
-SendPlay {Enter}
-SendChat("me указал" floor " на букву Ф ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_7::
-SendPlay {Enter}
-SendChat("me указал" floor " на букву П ", "  " zaderzhka " ")
-Return
-
-:?:/Зрения_8::
-SendPlay {Enter}
-SendChat("me положил" floor " указку на стол ", "  " zaderzhka " ")
-SendChat("say Открывайте глаза.  ", "  " zaderzhka " ")
-SendChat("do На столе ручка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " ручку, затем внес" Female " изменения в мед. книжку ", "  " zaderzhka " ")
-Return
 
 :?:/Глисты_1::
 SendPlay {Enter}
@@ -8427,24 +8771,38 @@ Return
 
 ;--------------------------------------------------------------------------------
 
+
 Medicine28:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Вши_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Вши_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Вши_3
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Вши_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Вши_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Вши_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Вши_4
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Проверка на вши]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Проверка на вши ответ да]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [Проверка на вши ответ нет]
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Попросить снять головной убор]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Проверка на вши]
+Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Проверка на вши ответ да]
+Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Проверка на вши ответ нет]
 
 
-Gui, 3:show, center h100 w400, Проверка на вши
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ48,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ48,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ49,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ49,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ50,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ50,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ51,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ1,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Проверка на вши
 Return
+
 
 
 ;--------------------------------------------------------------------------------
@@ -9371,26 +9729,48 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h200 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Зрения_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Зрения_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Зрения_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Зрения_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /Зрения_5
-Gui, 3:Add, Text, x10 y115 h200 w120 +BackgroundTrans, /Зрения_6
-Gui, 3:Add, Text, x10 y135 h200 w120 +BackgroundTrans, /Зрения_7
-Gui, 3:Add, Text, x10 y155 h200 w120 +BackgroundTrans, /Зрения_8
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Зрения_1
+Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Зрения_2
+Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Зрения_3
+Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Зрения_4
+Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Зрения_5
+Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /Зрения_6
+Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /Зрения_7
+Gui, 3:Add, Text, x10 y440 h200 w120 +BackgroundTrans, /Зрения_8
+Gui, 3:Add, Text, x10 y505 h200 w120 +BackgroundTrans, /Зрения_9
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y95 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y115 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y135 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y155 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y85 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y145 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y205 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y260 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y325 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y385 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y445 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y505 h500 w370 +BackgroundTrans, [Проверка Зрения]
 
-Gui, 3:show, center h200 w400, Проверка Зрения
+Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ39, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ39,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ40,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ40,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ41,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ41,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ42,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ42,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ43,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ43,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ44,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ44,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ45,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ45,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ46,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ46,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x330 y490 w48 h48 +BackgroundTrans gSelectKPRPMZ47,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y490 w48 h48 +BackgroundTrans gNotebookKPRPMZ47,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h540 w500, Проверка Зрения
 Return
 
 ;--------------------------------------------------------------------------------
@@ -11902,9 +12282,156 @@ return
 NotebookKPRPMZ50:
 Run, notepad.exe "%KPRPMZ50%"
 return
-
-
-
+NotebookKPRPMZ51:
+Run, notepad.exe "%KPRPMZ51%"
+return
+NotebookKPRPMZ52:
+Run, notepad.exe "%KPRPMZ52%"
+return
+NotebookKPRPMZ53:
+Run, notepad.exe "%KPRPMZ53%"
+return
+NotebookKPRPMZ54:
+Run, notepad.exe "%KPRPMZ54%"
+return
+NotebookKPRPMZ55:
+Run, notepad.exe "%KPRPMZ55%"
+return
+NotebookKPRPMZ56:
+Run, notepad.exe "%KPRPMZ56%"
+return
+NotebookKPRPMZ57:
+Run, notepad.exe "%KPRPMZ57%"
+return
+NotebookKPRPMZ58:
+Run, notepad.exe "%KPRPMZ58%"
+return
+NotebookKPRPMZ59:
+Run, notepad.exe "%KPRPMZ59%"
+return
+NotebookKPRPMZ60:
+Run, notepad.exe "%KPRPMZ60%"
+return
+NotebookKPRPMZ61:
+Run, notepad.exe "%KPRPMZ61%"
+return
+NotebookKPRPMZ62:
+Run, notepad.exe "%KPRPMZ62%"
+return
+NotebookKPRPMZ63:
+Run, notepad.exe "%KPRPMZ63%"
+return
+NotebookKPRPMZ64:
+Run, notepad.exe "%KPRPMZ64%"
+return
+NotebookKPRPMZ65:
+Run, notepad.exe "%KPRPMZ65%"
+return
+NotebookKPRPMZ66:
+Run, notepad.exe "%KPRPMZ66%"
+return
+NotebookKPRPMZ67:
+Run, notepad.exe "%KPRPMZ67%"
+return
+NotebookKPRPMZ68:
+Run, notepad.exe "%KPRPMZ68%"
+return
+NotebookKPRPMZ69:
+Run, notepad.exe "%KPRPMZ69%"
+return
+NotebookKPRPMZ70:
+Run, notepad.exe "%KPRPMZ70%"
+return
+NotebookKPRPMZ71:
+Run, notepad.exe "%KPRPMZ71%"
+return
+NotebookKPRPMZ72:
+Run, notepad.exe "%KPRPMZ72%"
+return
+NotebookKPRPMZ73:
+Run, notepad.exe "%KPRPMZ73%"
+return
+NotebookKPRPMZ74:
+Run, notepad.exe "%KPRPMZ74%"
+return
+NotebookKPRPMZ75:
+Run, notepad.exe "%KPRPMZ75%"
+return
+NotebookKPRPMZ76:
+Run, notepad.exe "%KPRPMZ76%"
+return
+NotebookKPRPMZ77:
+Run, notepad.exe "%KPRPMZ77%"
+return
+NotebookKPRPMZ78:
+Run, notepad.exe "%KPRPMZ78%"
+return
+NotebookKPRPMZ79:
+Run, notepad.exe "%KPRPMZ79%"
+return
+NotebookKPRPMZ80:
+Run, notepad.exe "%KPRPMZ80%"
+return
+NotebookKPRPMZ81:
+Run, notepad.exe "%KPRPMZ81%"
+return
+NotebookKPRPMZ82:
+Run, notepad.exe "%KPRPMZ82%"
+return
+NotebookKPRPMZ83:
+Run, notepad.exe "%KPRPMZ83%"
+return
+NotebookKPRPMZ84:
+Run, notepad.exe "%KPRPMZ84%"
+return
+NotebookKPRPMZ85:
+Run, notepad.exe "%KPRPMZ85%"
+return
+NotebookKPRPMZ86:
+Run, notepad.exe "%KPRPMZ86%"
+return
+NotebookKPRPMZ87:
+Run, notepad.exe "%KPRPMZ87%"
+return
+NotebookKPRPMZ88:
+Run, notepad.exe "%KPRPMZ88%"
+return
+NotebookKPRPMZ89:
+Run, notepad.exe "%KPRPMZ89%"
+return
+NotebookKPRPMZ90:
+Run, notepad.exe "%KPRPMZ90%"
+return
+NotebookKPRPMZ91:
+Run, notepad.exe "%KPRPMZ91%"
+return
+NotebookKPRPMZ92:
+Run, notepad.exe "%KPRPMZ92%"
+return
+NotebookKPRPMZ93:
+Run, notepad.exe "%KPRPMZ93%"
+return
+NotebookKPRPMZ94:
+Run, notepad.exe "%KPRPMZ94%"
+return
+NotebookKPRPMZ95:
+Run, notepad.exe "%KPRPMZ95%"
+return
+NotebookKPRPMZ96:
+Run, notepad.exe "%KPRPMZ96%"
+return
+NotebookKPRPMZ97:
+Run, notepad.exe "%KPRPMZ97%"
+return
+NotebookKPRPMZ98:
+Run, notepad.exe "%KPRPMZ98%"
+return
+NotebookKPRPMZ99:
+Run, notepad.exe "%KPRPMZ99%"
+return
+NotebookKPRPMZ100:
+Run, notepad.exe "%KPRPMZ100%"
+return
 
 
 SelectKPRPMZ1: 
@@ -11923,6 +12450,8 @@ SelectKPRPMZ1:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ1%
+	Goto, Change
+	
 }
 return
 
@@ -11940,6 +12469,7 @@ SelectKPRPMZ2:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ2%
+	Goto, Change
 }
 return
 
@@ -11956,6 +12486,7 @@ SelectKPRPMZ3:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ3%
+	Goto, Change
 }
 return
 
@@ -11972,6 +12503,7 @@ SelectKPRPMZ4:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ4%
+	Goto, Change
 }
 return
 
@@ -11988,6 +12520,7 @@ SelectKPRPMZ5:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ5%
+	Goto, Change
 }
 return
 
@@ -12004,6 +12537,7 @@ SelectKPRPMZ6:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ6%
+	Goto, Change
 }
 return
 
@@ -12020,6 +12554,7 @@ SelectKPRPMZ7:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ7%
+	Goto, Change
 }
 return
 
@@ -12036,6 +12571,7 @@ SelectKPRPMZ8:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ8%
+	Goto, Change
 }
 return
 
@@ -12052,6 +12588,7 @@ SelectKPRPMZ9:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ9%
+	Goto, Change
 }
 return
 
@@ -12068,6 +12605,7 @@ SelectKPRPMZ10:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ10%
+	Goto, Change
 }
 return
 
@@ -12084,6 +12622,7 @@ SelectKPRPMZ11:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ11%
+	Goto, Change
 }
 return
 
@@ -12100,6 +12639,7 @@ SelectKPRPMZ12:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ12%
+	Goto, Change
 }
 return
 
@@ -12116,6 +12656,7 @@ SelectKPRPMZ13:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ13%
+	Goto, Change
 }
 return
 
@@ -12132,6 +12673,7 @@ SelectKPRPMZ14:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ14%
+	Goto, Change
 }
 return
 
@@ -12148,6 +12690,7 @@ SelectKPRPMZ15:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ15%
+	Goto, Change
 }
 return
 
@@ -12164,6 +12707,7 @@ SelectKPRPMZ16:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ16%
+	Goto, Change
 }
 return
 
@@ -12180,6 +12724,7 @@ SelectKPRPMZ17:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ17%
+	Goto, Change
 }
 return
 
@@ -12196,6 +12741,7 @@ SelectKPRPMZ18:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ18%
+	Goto, Change
 }
 return
 
@@ -12212,6 +12758,7 @@ SelectKPRPMZ19:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ19%
+	Goto, Change
 }
 return
 
@@ -12228,6 +12775,7 @@ SelectKPRPMZ20:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ20%
+	Goto, Change
 }
 return
 
@@ -12244,6 +12792,7 @@ SelectKPRPMZ21:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ21%
+	Goto, Change
 }
 return
 
@@ -12260,6 +12809,7 @@ SelectKPRPMZ22:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ22%
+	Goto, Change
 }
 return
 
@@ -12276,6 +12826,7 @@ SelectKPRPMZ23:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ23%
+	Goto, Change
 }
 return
 
@@ -12292,6 +12843,7 @@ SelectKPRPMZ24:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ24%
+	Goto, Change
 }
 return
 
@@ -12308,6 +12860,7 @@ SelectKPRPMZ25:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ25%
+	Goto, Change
 }
 return
 
@@ -12323,7 +12876,8 @@ SelectKPRPMZ26:
         return
     }
 
-    MsgBox, 64, Файл выбран, %KPRPMZ26%
+    MsgBox, 64, Файл выбран, %KPRPMZ26%\
+	Goto, Change
 }
 return
 
@@ -12340,6 +12894,7 @@ SelectKPRPMZ27:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ27%
+	Goto, Change
 }
 return
 
@@ -12356,6 +12911,7 @@ SelectKPRPMZ28:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ28%
+	Goto, Change
 }
 return
 
@@ -12372,6 +12928,7 @@ SelectKPRPMZ29:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ29%
+	Goto, Change
 }
 return
 
@@ -12388,6 +12945,7 @@ SelectKPRPMZ30:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ30%
+	Goto, Change
 }
 return
 
@@ -12404,6 +12962,7 @@ SelectKPRPMZ31:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ31%
+	Goto, Change
 }
 return
 
@@ -12420,6 +12979,7 @@ SelectKPRPMZ32:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ32%
+	Goto, Change
 }
 return
 
@@ -12436,6 +12996,7 @@ SelectKPRPMZ33:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ33%
+	Goto, Change
 }
 return
 
@@ -12452,6 +13013,7 @@ SelectKPRPMZ34:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ34%
+	Goto, Change
 }
 return
 
@@ -12468,6 +13030,7 @@ SelectKPRPMZ35:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ35%
+	Goto, Change
 }
 return
 
@@ -12484,6 +13047,7 @@ SelectKPRPMZ36:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ36%
+	Goto, Change
 }
 return
 
@@ -12500,6 +13064,7 @@ SelectKPRPMZ37:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ37%
+	Goto, Change
 }
 return
 
@@ -12516,6 +13081,7 @@ SelectKPRPMZ38:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ38%
+	Goto, Change
 }
 return
 
@@ -12532,6 +13098,7 @@ SelectKPRPMZ39:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ39%
+	Goto, Change
 }
 return
 
@@ -12548,6 +13115,7 @@ SelectKPRPMZ40:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ40%
+	Goto, Change
 }
 return
 
@@ -12564,6 +13132,7 @@ SelectKPRPMZ41:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ41%
+	Goto, Change
 }
 return
 
@@ -12580,6 +13149,7 @@ SelectKPRPMZ42:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ42%
+	Goto, Change
 }
 return
 
@@ -12596,6 +13166,7 @@ SelectKPRPMZ43:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ43%
+	Goto, Change
 }
 return
 
@@ -12612,6 +13183,7 @@ SelectKPRPMZ44:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ44%
+	Goto, Change
 }
 return
 
@@ -12628,6 +13200,7 @@ SelectKPRPMZ45:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ45%
+	Goto, Change
 }
 return
 
@@ -12644,6 +13217,7 @@ SelectKPRPMZ46:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ46%
+	Goto, Change
 }
 return
 
@@ -12660,6 +13234,7 @@ SelectKPRPMZ47:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ47%
+	Goto, Change
 }
 return
 
@@ -12676,6 +13251,7 @@ SelectKPRPMZ48:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ48%
+	Goto, Change
 }
 return
 
@@ -12692,6 +13268,7 @@ SelectKPRPMZ49:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ49%
+	Goto, Change
 }
 return
 
@@ -12708,6 +13285,757 @@ SelectKPRPMZ50:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ50%
+	Goto, Change
 }
 return
 
+SelectKPRPMZ51:
+{
+    LastPath := KPRPMZ51
+    FileSelectFile, KPRPMZ51, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (KPRPMZ51 = "")
+    {
+        KPRPMZ51 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    MsgBox, 64, Файл выбран, %KPRPMZ51%
+	Goto, Change
+}
+return
+SelectKPRPMZ52:
+{
+    LastPath := KPRPMZ52
+    FileSelectFile, KPRPMZ52, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ52 = "")
+    {
+        KPRPMZ52 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ52%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ53:
+{
+    LastPath := KPRPMZ53
+    FileSelectFile, KPRPMZ53, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ53 = "")
+    {
+        KPRPMZ53 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ53%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ54:
+{
+    LastPath := KPRPMZ54
+    FileSelectFile, KPRPMZ54, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ54 = "")
+    {
+        KPRPMZ54 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ54%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ55:
+{
+    LastPath := KPRPMZ55
+    FileSelectFile, KPRPMZ55, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ55 = "")
+    {
+        KPRPMZ55 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ55%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ56:
+{
+    LastPath := KPRPMZ56
+    FileSelectFile, KPRPMZ56, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ56 = "")
+    {
+        KPRPMZ56 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ56%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ57:
+{
+    LastPath := KPRPMZ57
+    FileSelectFile, KPRPMZ57, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ57 = "")
+    {
+        KPRPMZ57 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ57%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ58:
+{
+    LastPath := KPRPMZ58
+    FileSelectFile, KPRPMZ58, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ58 = "")
+    {
+        KPRPMZ58 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ58%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ59:
+{
+    LastPath := KPRPMZ59
+    FileSelectFile, KPRPMZ59, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ59 = "")
+    {
+        KPRPMZ59 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ59%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ60:
+{
+    LastPath := KPRPMZ60
+    FileSelectFile, KPRPMZ60, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ60 = "")
+    {
+        KPRPMZ60 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ60%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ61:
+{
+    LastPath := KPRPMZ61
+    FileSelectFile, KPRPMZ61, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ61 = "")
+    {
+        KPRPMZ61 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ61%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ62:
+{
+    LastPath := KPRPMZ62
+    FileSelectFile, KPRPMZ62, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ62 = "")
+    {
+        KPRPMZ62 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ62%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ63:
+{
+    LastPath := KPRPMZ63
+    FileSelectFile, KPRPMZ63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ63 = "")
+    {
+        KPRPMZ63 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ63%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ64:
+{
+    LastPath := KPRPMZ64
+    FileSelectFile, KPRPMZ64, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ64 = "")
+    {
+        KPRPMZ64 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ64%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ65:
+{
+    LastPath := KPRPMZ65
+    FileSelectFile, KPRPMZ65, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ65 = "")
+    {
+        KPRPMZ65 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ65%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ66:
+{
+    LastPath := KPRPMZ66
+    FileSelectFile, KPRPMZ66, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ66 = "")
+    {
+        KPRPMZ66 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ66%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ67:
+{
+    LastPath := KPRPMZ67
+    FileSelectFile, KPRPMZ67, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ67 = "")
+    {
+        KPRPMZ67 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ67%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ68:
+{
+    LastPath := KPRPMZ68
+    FileSelectFile, KPRPMZ68, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ68 = "")
+    {
+        KPRPMZ68 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ68%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ69:
+{
+    LastPath := KPRPMZ69
+    FileSelectFile, KPRPMZ69, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ69 = "")
+    {
+        KPRPMZ69 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ69%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ70:
+{
+    LastPath := KPRPMZ70
+    FileSelectFile, KPRPMZ70, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ70 = "")
+    {
+        KPRPMZ70 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ70%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ71:
+{
+    LastPath := KPRPMZ71
+    FileSelectFile, KPRPMZ71, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ71 = "")
+    {
+        KPRPMZ71 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ71%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ72:
+{
+    LastPath := KPRPMZ72
+    FileSelectFile, KPRPMZ72, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ72 = "")
+    {
+        KPRPMZ72 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ72%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ73:
+{
+    LastPath := KPRPMZ73
+    FileSelectFile, KPRPMZ73, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ73 = "")
+    {
+        KPRPMZ73 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ73%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ74:
+{
+    LastPath := KPRPMZ74
+    FileSelectFile, KPRPMZ74, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ74 = "")
+    {
+        KPRPMZ74 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ74%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ75:
+{
+    LastPath := KPRPMZ75
+    FileSelectFile, KPRPMZ75, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ75 = "")
+    {
+        KPRPMZ75 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ75%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ76:
+{
+    LastPath := KPRPMZ76
+    FileSelectFile, KPRPMZ76, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ76 = "")
+    {
+        KPRPMZ76 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ76%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ77:
+{
+    LastPath := KPRPMZ77
+    FileSelectFile, KPRPMZ77, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ77 = "")
+    {
+        KPRPMZ77 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ77%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ78:
+{
+    LastPath := KPRPMZ78
+    FileSelectFile, KPRPMZ78, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ78 = "")
+    {
+        KPRPMZ78 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ78%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ79:
+{
+    LastPath := KPRPMZ79
+    FileSelectFile, KPRPMZ79, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ79 = "")
+    {
+        KPRPMZ79 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ79%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ80:
+{
+    LastPath := KPRPMZ80
+    FileSelectFile, KPRPMZ80, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ80 = "")
+    {
+        KPRPMZ80 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ80%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ81:
+{
+    LastPath := KPRPMZ81
+    FileSelectFile, KPRPMZ81, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ81 = "")
+    {
+        KPRPMZ81 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ81%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ82:
+{
+    LastPath := KPRPMZ82
+    FileSelectFile, KPRPMZ82, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ82 = "")
+    {
+        KPRPMZ82 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ82%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ83:
+{
+    LastPath := KPRPMZ83
+    FileSelectFile, KPRPMZ83, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ83 = "")
+    {
+        KPRPMZ83 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ83%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ84:
+{
+    LastPath := KPRPMZ84
+    FileSelectFile, KPRPMZ84, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ84 = "")
+    {
+        KPRPMZ84 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ84%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ85:
+{
+    LastPath := KPRPMZ85
+    FileSelectFile, KPRPMZ85, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ85 = "")
+    {
+        KPRPMZ85 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ85%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ86:
+{
+    LastPath := KPRPMZ86
+    FileSelectFile, KPRPMZ86, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ86 = "")
+    {
+        KPRPMZ86 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ86%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ87:
+{
+    LastPath := KPRPMZ87
+    FileSelectFile, KPRPMZ87, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ87 = "")
+    {
+        KPRPMZ87 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ87%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ88:
+{
+    LastPath := KPRPMZ88
+    FileSelectFile, KPRPMZ88, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ88 = "")
+    {
+        KPRPMZ88 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ88%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ89:
+{
+    LastPath := KPRPMZ89
+    FileSelectFile, KPRPMZ89, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ89 = "")
+    {
+        KPRPMZ89 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ89%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ90:
+{
+    LastPath := KPRPMZ90
+    FileSelectFile, KPRPMZ90, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ90 = "")
+    {
+        KPRPMZ90 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ90%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ91:
+{
+    LastPath := KPRPMZ91
+    FileSelectFile, KPRPMZ91, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ91 = "")
+    {
+        KPRPMZ91 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ91%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ92:
+{
+    LastPath := KPRPMZ92
+    FileSelectFile, KPRPMZ92, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ92 = "")
+    {
+        KPRPMZ92 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ92%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ93:
+{
+    LastPath := KPRPMZ93
+    FileSelectFile, KPRPMZ93, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ93 = "")
+    {
+        KPRPMZ93 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ93%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ94:
+{
+    LastPath := KPRPMZ94
+    FileSelectFile, KPRPMZ94, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ94 = "")
+    {
+        KPRPMZ94 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ94%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ95:
+{
+    LastPath := KPRPMZ95
+    FileSelectFile, KPRPMZ95, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ95 = "")
+    {
+        KPRPMZ95 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ95%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ96:
+{
+    LastPath := KPRPMZ96
+    FileSelectFile, KPRPMZ96, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ96 = "")
+    {
+        KPRPMZ96 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ96%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ97:
+{
+    LastPath := KPRPMZ97
+    FileSelectFile, KPRPMZ97, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ97 = "")
+    {
+        KPRPMZ97 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ97%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ98:
+{
+    LastPath := KPRPMZ98
+    FileSelectFile, KPRPMZ98, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ98 = "")
+    {
+        KPRPMZ98 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ98%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ99:
+{
+    LastPath := KPRPMZ99
+    FileSelectFile, KPRPMZ99, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ99 = "")
+    {
+        KPRPMZ99 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ99%
+	Goto, Change
+}
+return
+
+SelectKPRPMZ100:
+{
+    LastPath := KPRPMZ100
+    FileSelectFile, KPRPMZ100, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    if (KPRPMZ100 = "")
+    {
+        KPRPMZ100 := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+    MsgBox, 64, Файл выбран, %KPRPMZ100%
+	Goto, Change
+}
+return

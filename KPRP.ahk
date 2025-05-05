@@ -894,6 +894,57 @@ IniRead, KPRPMZ48, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
 IniRead, KPRPMZ49, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
 IniRead, KPRPMZ50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
 
+IniRead, KPRPMZ51, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ51
+IniRead, KPRPMZ52, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ52
+IniRead, KPRPMZ53, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ53
+IniRead, KPRPMZ54, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ54
+IniRead, KPRPMZ55, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ55
+IniRead, KPRPMZ56, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ56
+IniRead, KPRPMZ57, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ57
+IniRead, KPRPMZ58, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ58
+IniRead, KPRPMZ59, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ59
+IniRead, KPRPMZ60, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ60
+IniRead, KPRPMZ61, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ61
+IniRead, KPRPMZ62, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ62
+IniRead, KPRPMZ63, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ63
+IniRead, KPRPMZ64, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ64
+IniRead, KPRPMZ65, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ65
+IniRead, KPRPMZ66, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ66
+IniRead, KPRPMZ67, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ67
+IniRead, KPRPMZ68, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ68
+IniRead, KPRPMZ69, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ69
+IniRead, KPRPMZ70, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ70
+IniRead, KPRPMZ71, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ71
+IniRead, KPRPMZ72, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ72
+IniRead, KPRPMZ73, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ73
+IniRead, KPRPMZ74, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ74
+IniRead, KPRPMZ75, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ75
+IniRead, KPRPMZ76, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ76
+IniRead, KPRPMZ77, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ77
+IniRead, KPRPMZ78, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ78
+IniRead, KPRPMZ79, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ79
+IniRead, KPRPMZ80, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ80
+IniRead, KPRPMZ81, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ81
+IniRead, KPRPMZ82, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ82
+IniRead, KPRPMZ83, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ83
+IniRead, KPRPMZ84, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ84
+IniRead, KPRPMZ85, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ85
+IniRead, KPRPMZ86, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ86
+IniRead, KPRPMZ87, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ87
+IniRead, KPRPMZ88, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ88
+IniRead, KPRPMZ89, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ89
+IniRead, KPRPMZ90, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ90
+IniRead, KPRPMZ91, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ91
+IniRead, KPRPMZ92, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ92
+IniRead, KPRPMZ93, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ93
+IniRead, KPRPMZ94, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ94
+IniRead, KPRPMZ95, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ95
+IniRead, KPRPMZ96, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ96
+IniRead, KPRPMZ97, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ97
+IniRead, KPRPMZ98, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ98
+IniRead, KPRPMZ99, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ99
+IniRead, KPRPMZ100, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ100
+
 
 
 
@@ -1198,7 +1249,7 @@ SvoyeМZ_24=Откат /ro
 if SvoyeМZ_25=ERROR
 SvoyeМZ_25=Аптека (таблетка)
 
-Loop, 50
+Loop, 100
 {
     ; Генерируем название переменной, например, KPRPMZ1, KPRPMZ2 и т.д.
     varName := "KPRPMZ" A_Index
@@ -1729,10 +1780,10 @@ En()
 
 YAzyk(String) {
     if (RegExMatch(String, "[А-Яа-яЁё]")) {
-        Sleep 500
+        Sleep 1000
         Ru()
     } else {
-        Sleep 500
+        Sleep 1000
         En()
     }
 }
@@ -4657,6 +4708,56 @@ IniWrite, %KPRPMZ47%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ47
 IniWrite, %KPRPMZ48%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
 IniWrite, %KPRPMZ49%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
 IniWrite, %KPRPMZ50%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
+IniWrite, %KPRPMZ51%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ51
+IniWrite, %KPRPMZ52%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ52
+IniWrite, %KPRPMZ53%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ53
+IniWrite, %KPRPMZ54%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ54
+IniWrite, %KPRPMZ55%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ55
+IniWrite, %KPRPMZ56%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ56
+IniWrite, %KPRPMZ57%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ57
+IniWrite, %KPRPMZ58%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ58
+IniWrite, %KPRPMZ59%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ59
+IniWrite, %KPRPMZ60%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ60
+IniWrite, %KPRPMZ61%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ61
+IniWrite, %KPRPMZ62%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ62
+IniWrite, %KPRPMZ63%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ63
+IniWrite, %KPRPMZ64%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ64
+IniWrite, %KPRPMZ65%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ65
+IniWrite, %KPRPMZ66%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ66
+IniWrite, %KPRPMZ67%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ67
+IniWrite, %KPRPMZ68%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ68
+IniWrite, %KPRPMZ69%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ69
+IniWrite, %KPRPMZ70%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ70
+IniWrite, %KPRPMZ71%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ71
+IniWrite, %KPRPMZ72%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ72
+IniWrite, %KPRPMZ73%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ73
+IniWrite, %KPRPMZ74%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ74
+IniWrite, %KPRPMZ75%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ75
+IniWrite, %KPRPMZ76%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ76
+IniWrite, %KPRPMZ77%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ77
+IniWrite, %KPRPMZ78%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ78
+IniWrite, %KPRPMZ79%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ79
+IniWrite, %KPRPMZ80%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ80
+IniWrite, %KPRPMZ81%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ81
+IniWrite, %KPRPMZ82%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ82
+IniWrite, %KPRPMZ83%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ83
+IniWrite, %KPRPMZ84%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ84
+IniWrite, %KPRPMZ85%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ85
+IniWrite, %KPRPMZ86%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ86
+IniWrite, %KPRPMZ87%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ87
+IniWrite, %KPRPMZ88%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ88
+IniWrite, %KPRPMZ89%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ89
+IniWrite, %KPRPMZ90%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ90
+IniWrite, %KPRPMZ91%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ91
+IniWrite, %KPRPMZ92%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ92
+IniWrite, %KPRPMZ93%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ93
+IniWrite, %KPRPMZ94%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ94
+IniWrite, %KPRPMZ95%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ95
+IniWrite, %KPRPMZ96%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ96
+IniWrite, %KPRPMZ97%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ97
+IniWrite, %KPRPMZ98%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ98
+IniWrite, %KPRPMZ99%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ99
+IniWrite, %KPRPMZ100%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ100
 
 
 IniWrite, %11MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
