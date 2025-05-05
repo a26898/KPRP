@@ -1622,6 +1622,40 @@ Return
 
 
 
+:?:/Вакцинация::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ38%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+
+
 
 
 :?:/Лек_1::
@@ -2166,24 +2200,6 @@ SendChat("say Садитесь на туалет и ожидайте выход�
 Return
 
 
-:?:/Вакцинация::
-SendPlay {Enter}
-SendChat("do На столе лежит всё необходимое для вакцинации.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватный диск и спирт  ", "  " zaderzhka " ")
-SendChat("me смочил" floor "ватный диск в спирте  ", "  " zaderzhka " ")
-SendChat("me продезинфицировал" floor " место введения вакцины   ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " ватный диск в урну  ", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовую иглу, и новый одноразовый шприц  ", "  " zaderzhka " ")
-SendChat("me надел" floor " иглу на шприц   ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку с вакциной   ", "  " zaderzhka " ")
-SendChat("me наполнил" floor " шприц вакциной   ", "  " zaderzhka " ")
-SendChat("me убрал" floor " лишний воздух из шприца  ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " иглу в дельтовидную мышцу пациента  ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " вакцину  ", "  " zaderzhka " ")
-SendChat("me вынул" floor " иглу  ", "  " zaderzhka " ")
-SendChat("me придавил" floor " место прокола заранее приготовленной ваткой в спирте ", "  " zaderzhka " ")
-SendChat("say Держите ватку так не менее 5-ти минут. ", "  " zaderzhka " ")
-Return
 
 :?:/Нога_1::
 SendPlay {Enter}
@@ -3353,6 +3369,7 @@ SendChat("do На хирургическом столе лежат необхо�
 SendChat("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента  ", "  " zaderzhka " ")
 SendChat("me взял" floor " со стола шприц с обезболивающим, после чего вколол" floor " содержимое под десну ", "  " zaderzhka " ")
 SendChat("do На столе лежит крышка от шприца. ", "  " zaderzhka " ")
+SendChat("do В углу комнаты стоит урна.", "  " zaderzhka " ")
 SendChat("me взял" floor " крышку, после чего закрыл" floor " шприц и выбросил" floor " его в урну ", "  " zaderzhka " ")
 SendChat("me взял" floor " со стола скальпель, после чего сделал" floor " небольшой разрез десны ", "  " zaderzhka " ")
 SendChat("me положил" floor " скальпель на стол, после чего взял" floor " салфетку, вытер кровь и выбросил" floor " в урну ", "  " zaderzhka " ")
@@ -8016,11 +8033,15 @@ Medicine4:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h60 w330,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Вакцинация
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Вакцинация
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Вакцинация]
-Gui, 3:show, center h60 w330, Вакцинация
+Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Вакцинация]
+
+Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ38,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ38,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h60 w460, Вакцинация
 Return
 
 ;--------------------------------------------------------------------------------
