@@ -7924,12 +7924,23 @@ SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
 
+:?:/МК_88::
+SendPlay {Enter}
+SendChat("me снял" floor " манжету и положил" floor " её на стол вместе с тонометром", "  " zaderzhka " ")
+Return
+
 
 :?:/МК_9::
 SendPlay {Enter}
 SendChat("me посмотрел" floor " на экран тонометра и зафиксировал" floor " показатели давления в медицинской карте пациента", "  " zaderzhka " ")
 SendChat("do Давление понижено?", "  " zaderzhka " ")
 SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+Return
+
+
+:?:/МК_99::
+SendPlay {Enter}
+SendChat("me снял" floor " манжету и положил" floor " её на стол вместе с тонометром", "  " zaderzhka " ")
 Return
 
 
