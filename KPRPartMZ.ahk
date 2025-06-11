@@ -7872,6 +7872,13 @@ SendPlay {Enter}
 SendChat("say Здравствуйте, передайте свой паспорт.", "  " zaderzhka " ")
 Return
 
+
+:?:/МК_111::
+SendPlay {Enter}
+SendChat("say Покажите ваше удостоверение.", "  " zaderzhka " ")
+SendChat("say Жалобы на здоровье есть?", "  " zaderzhka " ")
+Return
+
 :?:/МК_2::
 SendPlay {Enter}
 SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
@@ -7897,24 +7904,17 @@ Return
 :?:/МК_5::
 SendPlay {Enter}
 SendChat("me внёс" floor " показатели роста в медицинскую карту пациента", "  " zaderzhka " ")
-Return
-
-:?:/МК_6::
-SendPlay {Enter}
 SendChat(" " stol " ", "  " zaderzhka " ")
 SendChat("do На столе лежит тонометр. ", "  " zaderzhka " ")
 SendChat("me взял" floor " со стола в руку тонометр и расстегнул" floor " манжету", "  " zaderzhka " ")
 SendChat("say Присаживайтесь на койку и дайте мне Вашу любую свободную руку.", "  " zaderzhka " ")
 Return
 
-:?:/МК_7::
+
+:?:/МК_6::
 SendPlay {Enter}
 SendChat("me надел" floor " манжету на руку человека и застегнул" floor " её", "  " zaderzhka " ")
 SendChat("me нажал" floor " на кнопку включения тонометра и начал" floor " накачивать манжету", "  " zaderzhka " ")
-Return
-
-:?:/МК_8::
-SendPlay {Enter}
 SendChat("do На тонометре показалось число 220.", "  " zaderzhka " ")
 SendChat("me перестал" floor " накачивать манжету", "  " zaderzhka " ")
 SendChat("do Через несколько секунд манжета слегка расширилась.", "  " zaderzhka " ")
@@ -7924,27 +7924,65 @@ SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
 
-:?:/МК_88::
-SendPlay {Enter}
-SendChat("me снял" floor " манжету и положил" floor " её на стол вместе с тонометром", "  " zaderzhka " ")
-Return
-
-
-:?:/МК_9::
+:?:/МК_7::
 SendPlay {Enter}
 SendChat("me посмотрел" floor " на экран тонометра и зафиксировал" floor " показатели давления в медицинской карте пациента", "  " zaderzhka " ")
 SendChat("do Давление понижено?", "  " zaderzhka " ")
 SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
-
-:?:/МК_99::
+:?:/МК_8::
 SendPlay {Enter}
-SendChat("me снял" floor " манжету и положил" floor " её на стол вместе с тонометром", "  " zaderzhka " ")
+SendChat("say Что у меня над головой?", "  " zaderzhka " ")
+Return
+
+:?:/МК_9::
+Random, rand, 1, 15
+if rand = 1
+	Word := "РП, ПГ"
+if rand = 2
+	Word := "ДМ, СК"
+if rand = 3
+	Word := "ТК, РК"
+if rand = 4
+	Word :=	"ДБ, ДБ"
+if rand = 5
+	Word :=	"ВХ, ПГ"
+if rand = 6
+	Word :=	"БХ, РВК"
+if rand = 7
+	Word :=	"ДБ, МГ"
+if rand = 8
+	Word :=	"ПГ, РП"
+if rand = 9
+	Word :=	"РВК, ООС"
+if rand = 10
+	Word :=	"РК, СК"
+if rand = 11
+	Word :=	"33, ДМ"
+if rand = 12
+	Word :=	"ДМ, ДБ"
+if rand = 13
+	Word :=	"РК, ТК"
+if rand = 14
+	Word :=	"СК, МГ"
+if rand = 15
+	Word :=	"МГ, ООС"
+SendPlay {Enter}
+SendChat("say Сейчас пройдет психологическое тестирование.", "  " zaderzhka " ")
+SendChat("say Вам будет задано несколько вопросов - вы должны дать ответ. ", "  " zaderzhka " ")
+SendChat("say Что такое " Word "? ", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_10::
+SendPlay {Enter}
+SendChat("do В правом кармане штанов медицинского работника лежат ключи от АСМП.", "  " zaderzhka " ")
+SendChat("say Что у меня в правом кармане штанов?", "  " zaderzhka " ")
+Return
+
+
+:?:/МК_11::
 SendPlay {Enter}
 SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
 SendChat("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
@@ -9044,9 +9082,9 @@ SendChat("me снял" floor " КПК с пояса и, зажав кнопку,
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
+    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование р. Провинция. ", "500")
+    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция. ", "500")
 }
 
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9067,9 +9105,9 @@ Loop, %Skolko%
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "1000")
+        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование р. Провинция. ", "1000")
+        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
     }
     SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
     SendChat(" " Skrin_1 " ", "500")
@@ -9082,9 +9120,9 @@ SendChat("me снял" floor " КПК с пояса и, зажав кнопку,
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
+    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция. ", "500")
+    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция. ", "500")
 }
 
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
