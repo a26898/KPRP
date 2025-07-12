@@ -1,4 +1,4 @@
-﻿
+﻿TrayTip, Внимание!, Обновлена система раскладки, 5, 2
 
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
@@ -29,7 +29,7 @@ Gui, 5:Add, Picture, x10 y40 w128 w96  +BackgroundTrans gLaziness7, C:\ProgramDa
 Gui, 5:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine81, C:\ProgramData\KPRP\KPRP-main\Cards.png
 Gui, 5:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine79, C:\ProgramData\KPRP\KPRP-main\Oath.png
 Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine33, C:\ProgramData\KPRP\KPRP-main\Feelings.png
-Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness25, C:\ProgramData\KPRP\KPRP-main\Prizyvpng.png
+
 Gui, 5:Add, Picture, x130 y40 w128 w96  +BackgroundTrans gMedicine13, C:\ProgramData\KPRP\KPRP-main\Defibrillator.png
 
 
@@ -42,12 +42,11 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gLaziness13, C:\Progra
 Gui, 5:Add, Picture, x730 y40 w128 w96  +BackgroundTrans gLaziness3, C:\ProgramData\KPRP\KPRP-main\Change.png
 Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\ProgramData\KPRP\KPRP-main\Registry.png
 Gui, 5:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\Call.png
-Gui, 5:Add, Picture, x130 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
+Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
 
 
 Gui, 5:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
 Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
-
 
 
 Gui, 5: Tab, 2
@@ -407,7 +406,7 @@ Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\Progr
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
 
 
-IniRead, gameFolder,   C:\ProgramData\KPRP\KPRP-main\Halyards\Province.ini, Mta, gameFolder
+IniRead, gameFolder, %ProgramFiles%\KPRP\Halyards\Province.ini, Mta, gameFolder
 
 FileCLog := gameFolder "\MTA\logs\console.log"  ; Путь к файлу лога
 
@@ -1327,1995 +1326,14 @@ Loop, read, %KPRPMZ27%
 }
 Return
 
-Pause::Pause ; Assign the toggle-pause function to the "pause" key...
-!p::Pause ; ... or assign it to Win+p or some other hotkey.
+!R::
+Pause
+if(RegExMatch)
+goto, nip
+else
 return
-
-
-:?:/ВМС_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ29%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/ВМС_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ30%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Желудок::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ31%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Пуля::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ32%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Шприц_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ33%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Цистоскоп_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ34%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Цистоскоп_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ35%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Цистоскоп_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ36%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Цистоскоп_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ37%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Вакцинация::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ38%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ39%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ40%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ41%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ42%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_5::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ43%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_6::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ44%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_7::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ45%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_8::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ46%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Зрения_9::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ47%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Вши_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ48%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Вши_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ49%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Вши_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ50%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Вши_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ51%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Флюшка_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ52%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Флюшка_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ53%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Флюшка_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ54%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Флюшка_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ55%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Флюшка_5::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ56%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-
-:?:/Температура_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ57%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Температура_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ58%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Температура_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ59%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Температура_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ60%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Маммограф_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ61%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Маммограф_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ62%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Маммограф_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ63%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Маммограф_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ64%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Прибор_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ65%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Прибор_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ66%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Прибор_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ67%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Прибор_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ68%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-
-
-
-
-:?:/Глисты_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ69%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Глисты_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ70%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Глисты_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ71%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Глисты_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ72%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/ЭКГ_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ73%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-
-:?:/ЭКГ_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ74%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/ЭКГ_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ75%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/ЭКГ_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ76%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Гинек_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ77%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Гинек_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ78%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Гинек_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ79%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Гинек_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ80%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Гинек_5::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ81%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Матка_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ82%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Матка_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ83%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_0::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ84%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_1::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ85%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_2::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ86%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_3::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ87%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Чувства_4::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ88%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_5::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ89%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-:?:/Чувства_6::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ90%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
+nip:
+Pause, off
 
 :?:/Лек_1::
 SendPlay {Enter}
@@ -3432,6 +1450,149 @@ SendChat("me закрыл" floor "  шкаф  ", "  " zaderzhka " ")
 Return
 
 
+:?:/ВМС_1::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ29%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+:?:/ВМС_2::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ30%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+Return
+
+
+
+
+:?:/Желудок::
+SendPlay {Enter}
+SendChat("do На столе лежит зонд, и раствор чистой воды. ", "  " zaderzhka " ")
+SendChat("me взял" floor " зонд и раствор воды ", "  " zaderzhka " ")
+SendChat("me начинает промывание желудка ", "  " zaderzhka " ")
+SendChat("me вытащил" floor " трубку зонда, и убрал" floor " инструменты ", "  " zaderzhka " ")
+SendChat("say Всего доброго, не болейте. ", "  " zaderzhka " ")
+Return
+
+
+:?:/Пуля::
+SendPlay {Enter}
+SendChat("me осмотрел" floor " ранение ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола стерильные перчатки и надел" floor " их ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола перекись водорода и ватку ", "  " zaderzhka " ")
+SendChat("me обработал" floor " кожу, вокруг ранения ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола шприц с обезболивающим, и сделал" floor " укол ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола щипцы, и аккуратно достал" floor "  пулю ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола иглу с нитью и продел" floor "  её ", "  " zaderzhka " ")
+SendChat("me аккуратно зашил" floor " рану, и обрезал" floor " концы нити ", "  " zaderzhka " ")
+SendChat("me взял" floor " зелёнку со стола, и обработал" floor " место ранения ", "  " zaderzhka " ")
+Return
+
+
+:?:/Пуля::
+SendPlay {Enter}
+SendChat("me осмотрел" floor " ранение  ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола стерильные перчатки и надел" floor " их", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола перекись водорода и ватку", "  " zaderzhka " ")
+SendChat("me обработал" floor " кожу вокруг ранения, убрав загрязнения и подготовив место для дальнейших действий", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола шприц с обезболивающим и сделал" floor " укол вблизи раны для обезболивания", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола щипцы и аккуратно достал" floor " пулю, избегая повреждения окружающих тканей ", "  " zaderzhka " ")
+SendChat("me внимательно осмотрел" floor " рану после извлечения пули", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола иглу с нитью и продел" floor " её через края раны", "  " zaderzhka " ")
+SendChat("me аккуратно зашил" floor " рану, создавая прочные швы, и обрезал" floor " концы нити", "  " zaderzhka " ")
+SendChat("me взял" floor " зелёнку со стола и обработал" floor " место ранения для предотвращения инфекции  ", "  " zaderzhka " ")
+SendChat("me наложил" floor " стерильную повязку на рану и закрепил" floor " её", "  " zaderzhka " ")
+SendChat("say Пуля извлечена, рана зашита. Вам нужно будет следить за состоянием раны и приходить на контроль через несколько дней.", "  " zaderzhka " ")
+SendChat("say Я выпишу вам антибиотики для предотвращения инфекции. ", "  " zaderzhka " ")
+SendChat("say Также рекомендую вам соблюдать покой и избегать сильных нагрузок на травмированную область. ", "  " zaderzhka " ")
+Return
+
+:?:/Шприц_1::
+SendPlay {Enter}
+SendChat("do Препараты лежат на стеллаже. ", "  " zaderzhka " ")
+SendChat("me достал" floor " ампулу  и шприц ", "  " zaderzhka " ")
+SendChat("me набрал" floor " в шприц содержимое ампулы ", "  " zaderzhka " ")
+SendChat("me протер" female " место укола спиртовой салфеткой ", "  " zaderzhka " ")
+SendChat("me медленно вводит препарат в вену пациента ", "  " zaderzhka " ")
+SendChat("me приложил" floor " вату к месту укола ", "  " zaderzhka " ")
+SendChat("say Ватку держите 5 минут, потом выбросите в урну. ", "  " zaderzhka " ")
+Return
+
+
+
+
+:?:/Прибор_1::
+SendPlay {Enter}
+SendChat("do В углу комнаты стоит аппарат для компьютерной томографии. ", "  " zaderzhka " ")
+SendChat("say Ложитесь, пожалуйста на стол. ", "  " zaderzhka " ")
+SendChat("say Не двигайтесь. ", "  " zaderzhka " ")
+SendChat("me задвинул" floor " стол в прибор ", "  " zaderzhka " ")
+SendChat("me включил" floor " сканирование на аппарате ", "  " zaderzhka " ")
+SendChat("me изучает снимок ", "  " zaderzhka " ")
+SendChat("do На снимке обнаружены отклонения?" floor ", отклонения ", "  " zaderzhka " ")
+Return
+
+:?:/Прибор_2::
+SendPlay {Enter}
+SendChat("say Вам необходимо придерживаться режима сна и специальной диеты, а также избегать стресса. ", "  " zaderzhka " ")
+Return
+
+:?:/Прибор_3::
+SendPlay {Enter}
+SendChat("say Всё хорошо. Ваш мозг не повреждён, никаких патологий нет. ", "  " zaderzhka " ")
+SendChat("say Рекомендуется продолжить регулярные осмотры для профилактики.", "  " zaderzhka " ")
+Return
 
 :?:/Рана_1::
 SendPlay {Enter}
@@ -3461,6 +1622,40 @@ SendChat("me смочил" floor " вату перекисью водорода 
 SendChat("me поднес" female " ватку к ноздре пострадавшего  ", "  " zaderzhka " ")
 Return
 
+:?:/Цистоскоп_1::
+SendPlay {Enter}
+SendChat("say Сейчас я проведу Цистоскопию. ", " " zaderzhka " ")
+SendChat("say Раздевайтесь и садитесь. ", " " zaderzhka " ")
+Return
+
+:?:/Цистоскоп_2::
+SendPlay {Enter}
+SendChat("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
+SendChat("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
+SendChat("me надел" floor " перчатки ", "  " zaderzhka " ")
+SendChat("do На стойке висит цистоскоп. ", "  " zaderzhka " ")
+SendChat("me снял" floor " цистоскоп со стойки ", "  " zaderzhka " ")
+SendChat("me начал" floor " вводить  цистоскоп  в  уретру ", "  " zaderzhka " ")
+SendChat("me начал" floor " осмотр  мочевого пузыря ", "  " zaderzhka " ")
+SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+Return
+
+:?:/Цистоскоп_3::
+SendPlay {Enter}
+SendChat("say У вас, есть отклонения.", "1000")
+Return
+
+:?:/Цистоскоп_4::
+SendPlay {Enter}
+SendChat("say Отклонений  у вас, нет.", "1000")
+Return
+
+:?:/Цистоскоп_5::
+SendPlay {Enter}
+SendChat("me начал" floor " вынимать цистоскоп  из  уретры ", "  " zaderzhka " ")
+SendChat("me положил" floor " цистоскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
+Return
+
 
 :?:/Сколиоз_1::
 SendPlay {Enter}
@@ -3487,6 +1682,28 @@ SendChat("say У вас всё в порядке. ", "1000")
 Return
 
 
+:?:/Вши_1::
+SendPlay {Enter}
+SendChat("do В правом кармане одноразовые перчатки. ", "  " zaderzhka " ")
+SendChat("me достал" floor " из правого кармана перчатки ", "  " zaderzhka " ")
+SendChat("me одел" floor " перчатки на руки ", "  " zaderzhka " ")
+SendChat("say Хорошо, сейчас я Вас осмотрю.  ", "  " zaderzhka " ")
+SendChat("me осматривает голову пациента ", "  " zaderzhka " ")
+SendChat("do У человека есть вши? ", "  " zaderzhka " ")
+Return
+
+
+:?:/Вши_2::
+SendPlay {Enter}
+SendChat("say У Вас обнаружены вши. ", "  " zaderzhka " ")
+SendChat("me снял" floor " перчатки и выкинул" floor " их в мусорку", "  " zaderzhka " ")
+Return
+
+:?:/Вши_3::
+SendPlay {Enter}
+SendChat("say У Вас обнаружены вши. ", "  " zaderzhka " ")
+SendChat("me снял" floor " перчатки и выкинул" floor " их в мусорку", "  " zaderzhka " ")
+Return
 
 :?:/Нос_ПМП::
 SendPlay {Enter}
@@ -3499,6 +1716,35 @@ SendChat("me открыв баночку с перекисью водорода,
 SendChat("me вставил" floor " вату в обе ноздри человека напротив ", "  " zaderzhka " ")
 Return
 
+:?:/Флюшка_1::
+SendPlay {Enter}
+SendChat("say Здравствуйте, раздевайтесь по пояс.", "  " zaderzhka " ")
+SendChat("do Аппарат для флюорографии у стены.", "  " zaderzhka " ")
+Return
+
+:?:/Флюшка_2::
+SendPlay {Enter}
+SendChat("say Подходите к аппарату и грудью прижмитесь к синему квадрату.", "  " zaderzhka " ")
+SendChat("say Хорошо, приготовьтесь к облучению.", "  " zaderzhka " ")
+SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
+SendChat("do Аппарат готов к снимку.", "  " zaderzhka " ")
+SendChat("me выполнил" floor " снимок", "  " zaderzhka " ")
+SendChat("say Хорошо, можете одеваться.", "  " zaderzhka " ")
+Return
+
+:?:/Флюшка_3::
+SendPlay {Enter}
+SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+SendChat("do Принтер стоит рядом с аппаратом.", "  " zaderzhka " ")
+SendChat("me включив принтер, нажал" floor " на кнопку печати снимка", "  " zaderzhka " ")
+SendChat("do Снимок распечатан.", "  " zaderzhka " ")
+SendChat("me достал" floor " снимок из принтера", "  " zaderzhka " ")
+SendChat("me прикрепив к снимку реквизиты, положил" floor " снимок на стол  ", "  " zaderzhka " ")
+SendChat("say Вот ваш снимок, пожалуйста, ознакомьтесь с ним.", "  " zaderzhka " ")
+SendChat("say Если возникнут вопросы, обращайтесь к лечащему врачу.", "  " zaderzhka " ")
+SendChat("say На этом всё, благодарю за терпение.", "  " zaderzhka " ")
+SendChat("say Пожалуйста, не забудьте забрать свои вещи.", "  " zaderzhka " ")
+Return
 
 
 :?:/Нож::
@@ -3574,8 +1820,79 @@ SendChat("me взял" floor " из мед.сумки повязку и нало
 SendChat("say Согласны на госпитализацию?   ", "  " zaderzhka " ")
 Return
 
+:?:/Зрения_1::
+SendPlay {Enter}
+SendChat("do На стене висит таблица Сивцева.  ", "  " zaderzhka " ")
+SendChat("say Сейчас я Вам буду показывать буквы, а вы будете их называть. ", "  " zaderzhka " ")
+SendChat("do Указка лежит на столе. ", "  " zaderzhka " ")
+SendChat("me взял" floor " указку в левую руку ", "  " zaderzhka " ")
+SendChat("say Закройте правый глаз. ", "  " zaderzhka " ")
+Return
 
+:?:/Зрения_2::
+SendPlay {Enter}
+SendChat("me указал" floor " на букву Б ", "  " zaderzhka " ")
+Return
 
+:?:/Зрения_3::
+SendPlay {Enter}
+SendChat("me указал" floor " на букву Н ", "  " zaderzhka " ")
+Return
+
+:?:/Зрения_4::
+SendPlay {Enter}
+SendChat("me указал" floor " на букву Ш ", "  " zaderzhka " ")
+Return
+
+:?:/Зрения_5::
+SendPlay {Enter}
+SendChat("say Хорошо, закройте левый глаз.", "  " zaderzhka " ")
+Return
+
+:?:/Зрения_6::
+SendPlay {Enter}
+SendChat("me указал" floor " на букву Ф ", "  " zaderzhka " ")
+Return
+
+:?:/Зрения_7::
+SendPlay {Enter}
+SendChat("me указал" floor " на букву П ", "  " zaderzhka " ")
+Return
+
+:?:/Зрения_8::
+SendPlay {Enter}
+SendChat("me положил" floor " указку на стол ", "  " zaderzhka " ")
+SendChat("say Открывайте глаза.  ", "  " zaderzhka " ")
+SendChat("do На столе ручка. ", "  " zaderzhka " ")
+SendChat("me взял" floor " ручку, затем внес" Female " изменения в мед. книжку ", "  " zaderzhka " ")
+Return
+
+:?:/Глисты_1::
+SendPlay {Enter}
+SendChat("say Здравствуйте, сейчас мы проведем Вам биoрезoнансную диагнoстику на паразитoв.  ", "  " zaderzhka " ")
+SendChat("say Ложитесь на кушетку.  ", "  " zaderzhka " ")
+SendChat("me открыл" floor " сумку, после чего достал" floor " биорезонансный прибор  ", "  " zaderzhka " ")
+SendChat("Снимите штаны и нижнее бельё по колено.  ", "  " zaderzhka " ")
+Return
+
+:?:/Глисты_2::
+SendPlay {Enter}
+SendChat("say Хорошо,теперь расслабьтесь. ", "  " zaderzhka " ")
+SendChat("me вводит трубочку биорезонансново прибора в анальное отверстие пациента ", "  " zaderzhka " ")
+SendChat("me включает прибор ", "  " zaderzhka " ")
+SendChat("me cканирует кишечник пациента ","  " zaderzhka " ")
+SendChat("do У человека есть глисты? ", "  " zaderzhka " ")
+Return
+
+:?:/Глисты_3::
+SendPlay {Enter}
+SendChat("say У Вас обнаружены паразиты. ", " " zaderzhka " ")
+Return
+
+:?:/Глисты_4::
+SendPlay {Enter}
+SendChat("say Вас всё в порядке. ", " " zaderzhka " ")
+Return
 
 :?:/УЗИ::
 SendPlay {Enter}
@@ -3657,6 +1974,37 @@ SendChat("say Операция завершена. Отдыхайте, все б
 Return
 
 
+:?:/Матка_1::
+SendPlay {Enter}
+SendChat("do В углу палаты стоит гинекологическое кресло.", "  " zaderzhka " ")
+SendChat("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
+Return
+
+:?:/Матка_2::
+SendPlay {Enter}
+SendChat("do В операционной подготовлены все необходимые инструменты для гистероскопии. ", "  " zaderzhka " ")
+SendChat("me надел" floor " перчатки и обработал руки антисептиком ", "  " zaderzhka " ")
+SendChat("do У стены стоит аппарат для гистероскопии. ", "  " zaderzhka " ")
+SendChat("me проверил" floor " настройки аппарата и подготовил" floor " гистероскоп ", "  " zaderzhka " ")
+SendChat("do На столе лежит стерильная смазка для гистероскопа. ", "  " zaderzhka " ")
+SendChat("me нанёс" female " смазку на гистероскоп для облегчения введения ", "  " zaderzhka " ")
+SendChat("me аккуратно ввел" floor " гистероскоп в шейку матки пациента, наблюдая на экране монитора ", "  " zaderzhka " ")
+SendChat("do На экране отображается полость матки. ", "  " zaderzhka " ")
+SendChat("me внимательно осмотрел" floor " матку, проверяя её состояние на наличие полипов, миом или других образований ", "  " zaderzhka " ")
+SendChat("me начал" floor " осмотр всех участков полости матки ", "  " zaderzhka " ")
+SendChat("do На экране видны полипы в полости матки. ", "  " zaderzhka " ")
+SendChat("me сделал" floor " фото полипов для дальнейшего анализа ", "  " zaderzhka " ")
+SendChat("me аккуратно удалил" floor " полипы с помощью специализированных инструментов ", "  " zaderzhka " ")
+SendChat("me взял" floor " электроинструмент и аккуратно прижег" female " оставшиеся участки для предотвращения кровотечений ", "  " zaderzhka " ")
+SendChat("me извлек" female " гистероскоп и снял" floor " показания для окончательной диагностики ", "  " zaderzhka " ")
+SendChat("me обработал" floor " полость матки антисептиком ", "  " zaderzhka " ")
+SendChat("do В углу стоит стерильный контейнер для биопсии. ", "  " zaderzhka " ")
+SendChat("me поместил" floor " удалённые образцы в стерильный контейнер ", "  " zaderzhka " ")
+SendChat("say Процедура завершена, результаты анализов будут готовы через несколько дней. ", "  " zaderzhka " ")
+SendChat("say Рекомендую вам соблюдать покой и избегать физической активности в течение нескольких дней.", "  " zaderzhka " ")
+Return
+
+
 :?:/Клизма_1::
 SendPlay {Enter}
 SendChat("do В шкафу необходимые вещи. ", "  " zaderzhka " ")
@@ -3686,6 +2034,24 @@ SendChat("say Садитесь на туалет и ожидайте выход�
 Return
 
 
+:?:/Вакцинация::
+SendPlay {Enter}
+SendChat("do На столе лежит всё необходимое для вакцинации.  ", "  " zaderzhka " ")
+SendChat("me взял" floor " ватный диск и спирт  ", "  " zaderzhka " ")
+SendChat("me смочил" floor "ватный диск в спирте  ", "  " zaderzhka " ")
+SendChat("me продезинфицировал" floor " место введения вакцины   ", "  " zaderzhka " ")
+SendChat("me выкинул" floor " ватный диск в урну  ", "  " zaderzhka " ")
+SendChat("me взял" floor " одноразовую иглу, и новый одноразовый шприц  ", "  " zaderzhka " ")
+SendChat("me надел" floor " иглу на шприц   ", "  " zaderzhka " ")
+SendChat("me взял" floor " пробирку с вакциной   ", "  " zaderzhka " ")
+SendChat("me наполнил" floor " шприц вакциной   ", "  " zaderzhka " ")
+SendChat("me убрал" floor " лишний воздух из шприца  ", "  " zaderzhka " ")
+SendChat("me ввёл" floor " иглу в дельтовидную мышцу пациента  ", "  " zaderzhka " ")
+SendChat("me ввёл" floor " вакцину  ", "  " zaderzhka " ")
+SendChat("me вынул" floor " иглу  ", "  " zaderzhka " ")
+SendChat("me придавил" floor " место прокола заранее приготовленной ваткой в спирте ", "  " zaderzhka " ")
+SendChat("say Держите ватку так не менее 5-ти минут. ", "  " zaderzhka " ")
+Return
 
 :?:/Нога_1::
 SendPlay {Enter}
@@ -3771,6 +2137,33 @@ SendChat("me снял" floor " перчатки с рук, затем выкин
 Return
 
 
+:?:/Температура_1::
+SendPlay {Enter}
+SendChat("do Градусник в мед.сумке. ", "  " zaderzhka " ")
+SendChat("me открыл" floor " мед.сумку ", "  " zaderzhka " ")
+SendChat("me взял" floor " градусник из мед.сумки ", "  " zaderzhka " ")
+SendChat("me стряхнул" floor " градусник ", "  " zaderzhka " ")
+SendChat("me положил" floor " градусник под подмышку пациенту ", "  " zaderzhka " ")
+SendChat("me взял" floor " градусник в руки ", "  " zaderzhka " ")
+SendChat("me внимательно посмотрел" floor " на градусник ", "  " zaderzhka " ")
+SendChat("do Температура повышена? ", "  " zaderzhka " ")
+Return
+
+
+:?:/Температура_2::
+SendPlay {Enter}
+SendChat("say У вас повышенная температура. ", "  " zaderzhka " ")
+SendChat("say Я выпишу Вам Колдрексc . Его стоимость 500 рублей. Вы согласны? ", "  " zaderzhka " ")
+SendChat("me стряхнул" floor " градусник ", "  " zaderzhka " ")
+SendChat("me положил" floor " градусник в мед.сумку ", "  " zaderzhka " ")
+Return
+
+:?:/Температура_3::
+SendPlay {Enter}
+SendChat("say Ваша температура в норме. ", "  " zaderzhka " ")
+SendChat("me стряхнул" floor " градусник ", "  " zaderzhka " ")
+SendChat("me положил" floor " градусник в мед.сумку ", "  " zaderzhka " ")
+Return
 
 :?:/Капельница::
 SendPlay {Enter}
@@ -3993,7 +2386,40 @@ SendChat("me положил" floor "  использованную иглу в �
 SendChat("say Спасибо за донорство. ", "  " zaderzhka " ")
 Return
 
+:?:/ЭКГ_1::
+SendPlay {Enter}
+SendChat("do Электрокардиограф стоит у стены.  ", "  " zaderzhka " ")
+SendChat("me подкатил" floor " электрокардиограф к пациенту ", "  " zaderzhka " ")
+SendChat("me взял" floor " медицинский спирт со стола и открыл" floor " его ", "  " zaderzhka " ")
+SendChat("me обезжирил" floor " электроды на приборе, и поставил" floor " спирт на стол ", "  " zaderzhka " ")
+SendChat("do Гель Синтакт лежит в шкафу.  ", "  " zaderzhka " ")
+SendChat("me взял" floor " гель Синтакт и смазал электроды  ", "  " zaderzhka " ")
+SendChat("me поставил" floor " гель на стол ", "  " zaderzhka " ")
+SendChat("me взял" floor " обработанные электроды и прикрепил" floor " их к телу пациента ", "  " zaderzhka " ")
+SendChat("me подключил" floor " электроды к электрокардиографу и включил" floor " его ", "  " zaderzhka " ")
+SendChat("me запустил" floor " прибор  ", "  " zaderzhka " ")
+SendChat("me остановил" floor " запись, и выключил прибор ", "  " zaderzhka " ")
+SendChat("me снял" floor " электроды с тела пациента, и положил" floor "  их на стол ", "  " zaderzhka " ")
+SendChat("me изучил" floor " график и поставил" floor " диагноз ", "  " zaderzhka " ")
+SendChat("do Обнаружена ли фибрилляция сердца? ", "  " zaderzhka " ")
+Return
 
+:?:/ЭКГ_2::
+SendPlay {Enter}
+SendChat("say У Вас проблемы с сердцем.   ", "  " zaderzhka " ")
+SendChat("say Обратитесь к своему врачу-терапевту, он вам выпишет направление.  ", "  " zaderzhka " ")
+SendChat("say Принимайте Кардиомагнил, 1 таблетку под язык раз в неделю для профилактики. ", "  " zaderzhka " ")
+SendChat("say Одну пачку этого лекарства я выпишу вам прямо сейчас. ", "  " zaderzhka " ")
+SendChat("say Стоит он 500 рублей, Вы согласны? ", "  " zaderzhka " ")
+Return
+
+:?:/ЭКГ_3::
+SendPlay {Enter}
+SendChat("say Не волнуйтесь, с сердцем у Вас всё хорошо.  ", "  " zaderzhka " ")
+SendChat("say Принимайте Кардиомагнил, 1 таблетку раз в день для профилактики.  ", "  " zaderzhka " ")
+SendChat("say Одну упаковку этого лекарства я выпишу вам прямо сейчас. ", "  " zaderzhka " ")
+SendChat("say Стоит он 500 рублей, Вы согласны? ", "  " zaderzhka " ")
+Return
 
 :?:/Открытый::
 SendPlay {Enter}
@@ -4315,7 +2741,57 @@ SendChat("me нанес" Female " повязку на место ожога та
 SendChat("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
 Return
 
+:?:/Чувства_1::
+SendPlay {Enter}
+SendChat("me приложил" floor " два пальца к сонной артерии пациента ", "  " zaderzhka " ")
+SendChat("do У человека есть пульс? ", "  " zaderzhka " ")
+Return
 
+
+:?:/Чувства_2::
+SendPlay {Enter}
+SendChat("me открыв сумку, достал" floor "  нашатырный спирт и ватку ", "  " zaderzhka " ")
+SendChat("me смочив вату спиртом, приложил" floor " ее к носу пострадавшего ", "  " zaderzhka " ")
+SendChat("me убрав спирт в сумку, закрыл" floor " ее ", "  " zaderzhka " ")
+Return
+
+
+:?:/Чувства_3::
+SendPlay {Enter}
+SendChat("do Мешок Амбу и лицевая маска в медицинской сумке.", "  " zaderzhka " ")
+SendChat("me вытащил" floor " мешок Амбу и лицевую маску из медицинской сумки", "  " zaderzhka " ")
+SendChat("me отпустив мешок с воздухом, занял" floor " место вертикально над грудной клеткой пострадавшего", "  " zaderzhka " ")
+SendChat("me найдя мечевидный отросток, занял" floor " место на два пальца ниже него, затем начал" floor " ритмично надавливать на грудную клетку пострадавшего", "  " zaderzhka " ")
+SendChat("me совершив тридцать нажатий, дважды сжал" floor " мешок с воздухом", "  " zaderzhka " ")
+SendChat("me приложил" floor " два пальца к сонной артерии, слегка надавив на артерию", "  " zaderzhka " ")
+SendChat("do У пострадавшего прощупывается пульс?	", "  " zaderzhka " ")
+SendChat("b /do Да. /do Нет.", "  " zaderzhka " ")
+Return
+
+
+:?:/Чувства_4::
+SendPlay {Enter}
+SendChat("do В медицинской сумке лежит переносной аппарат ЭКГ. ", "  " zaderzhka " ")
+SendChat("me достал" floor " аппарат ЭКГ из медицинской сумки ", "  " zaderzhka " ")
+SendChat("me подключил" floor " аппарат ЭКГ к пострадавшему ", "  " zaderzhka " ")
+SendChat("do На экране аппарата ЭКГ присутствует фибрилляция желудочков. ", "  " zaderzhka " ")
+SendChat("do В медицинской сумке лежит переносной аппарат дефибрилляции. ", "  " zaderzhka " ")
+SendChat("me достал" floor " аппарат дефибрилляции из медицинской сумки ", "  " zaderzhka " ")
+SendChat("do На аппарате дефибрилляции находятся 2 дефибриллятора. ", "  " zaderzhka " ")
+SendChat("me взял" floor " оба дефибриллятора, после чего подготовил" floor " их к разряду ", "  " zaderzhka " ")
+SendChat("me прижал" floor " дефибрилляторы к грудной клетке пострадавшего и нажал" floor " на кнопку ", "  " zaderzhka " ")
+SendChat("do Дефибрилляторы слегка провибрировали и сделали разряд. ", "  " zaderzhka " ")
+SendChat("do Синусовый ритм восстановлен? ", "  " zaderzhka " ")
+Return
+
+:?:/Чувства_5::
+SendPlay {Enter}
+SendChat("me убрал" floor " дефибрилляторы с пострадавшего ", "  " zaderzhka " ")
+SendChat("me заново подготовил" floor " дефибрилляторы к разряду ", "  " zaderzhka " ")
+SendChat("me прижал" floor " дефибрилляторы к грудной клетке пострадавшего и нажал" floor " на кнопку ", "  " zaderzhka " ")
+SendChat("do Дефибрилляторы слегка провибрировали и сделали разряд. ", "  " zaderzhka " ")
+SendChat("do Синусовый ритм восстановлен? ", "  " zaderzhka " ")
+Return
 
 :?:/Алкоголь_1::
 
@@ -4745,7 +3221,6 @@ SendChat("do На хирургическом столе лежат необхо�
 SendChat("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента  ", "  " zaderzhka " ")
 SendChat("me взял" floor " со стола шприц с обезболивающим, после чего вколол" floor " содержимое под десну ", "  " zaderzhka " ")
 SendChat("do На столе лежит крышка от шприца. ", "  " zaderzhka " ")
-SendChat("do В углу комнаты стоит урна.", "  " zaderzhka " ")
 SendChat("me взял" floor " крышку, после чего закрыл" floor " шприц и выбросил" floor " его в урну ", "  " zaderzhka " ")
 SendChat("me взял" floor " со стола скальпель, после чего сделал" floor " небольшой разрез десны ", "  " zaderzhka " ")
 SendChat("me положил" floor " скальпель на стол, после чего взял" floor " салфетку, вытер кровь и выбросил" floor " в урну ", "  " zaderzhka " ")
@@ -5114,6 +3589,79 @@ SendChat("say Результат теста отрицательный. COVID-19
 
 Return
 
+:?:/МТ_1::
+SendPlay {Enter}
+SendChat("say Здравствуйте, раздевайтесь по пояс. ", " " zaderzhka " ")
+SendChat("do Аппарат для маммографии с томосинтезом  у стены. ", " " zaderzhka " ")
+SendChat("say Подходите к аппарату и прижмитесь грудью. ", " " zaderzhka " ")
+Return
+
+:?:/МТ_2::
+SendPlay {Enter}
+SendChat("me включил аппарат ", "  " zaderzhka " ")
+SendChat("do Аппарат готов к снимку. ", "  " zaderzhka " ")
+SendChat("me выполнил" floor " снимок ", "  " zaderzhka " ")
+SendChat("say Хорошо, можете одеваться. ", "  " zaderzhka " ")
+SendChat("me выключил" floor " аппарат ", "  " zaderzhka " ")
+SendChat("do Принтер стоит рядом с аппаратом. ", "  " zaderzhka " ")
+SendChat("me включив принтер, нажал" floor " на кнопку печати снимка ", "  " zaderzhka " ")
+SendChat("do Снимок распечатан. ", "  " zaderzhka " ")
+SendChat("me достал" floor " снимок из принтера ", "  " zaderzhka " ")
+SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+SendChat("me положил" floor " снимок на стол ", "  " zaderzhka " ")
+Return
+
+:?:/МТ_3::
+SendPlay {Enter}
+SendChat("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
+SendChat("say Обратитесь к онкологу.  ", "  " zaderzhka " ")
+SendChat("do На столе бланк и ручка. ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
+SendChat("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
+SendChat("mе взял" floor " со стола, направления и передал" floor " пациентки  ", "  " zaderzhka " ")
+SendChat("say Возьмите. ", "  " zaderzhka " ")
+Return
+
+
+:?:/Маммограф_1::
+SendPlay {Enter}
+SendChat("say Здравствуйте, раздевайтесь по пояс. ", " " zaderzhka " ")
+SendChat("do Аппарат для томосинтез у стены. ", " " zaderzhka " ")
+SendChat("say Подходите к аппарату и прижмитесь грудью. ", " " zaderzhka " ")
+Return
+
+:?:/Маммограф_2::
+SendPlay {Enter}
+SendChat("me включил аппарат ", "  " zaderzhka " ")
+SendChat("do Аппарат готов к снимку. ", "  " zaderzhka " ")
+SendChat("me выполнил" floor " снимок ", "  " zaderzhka " ")
+SendChat("say Хорошо, можете одеваться. ", "  " zaderzhka " ")
+SendChat("me выключил" floor " аппарат ", "  " zaderzhka " ")
+SendChat("do Принтер стоит рядом с аппаратом. ", "  " zaderzhka " ")
+SendChat("me включив принтер, нажал" floor " на кнопку печати снимка ", "  " zaderzhka " ")
+SendChat("do Снимок распечатан. ", "  " zaderzhka " ")
+SendChat("me достал" floor " снимок из принтера ", "  " zaderzhka " ")
+SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+SendChat("me положил" floor " снимок на стол ", "  " zaderzhka " ")
+Return
+
+:?:/Маммограф_3::
+SendPlay {Enter}
+SendChat("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
+SendChat("say Обратитесь к онкологу.  ", "  " zaderzhka " ")
+SendChat("do На столе бланк ии ручка. ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
+SendChat("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
+SendChat("mе взял" floor " со стола, направления и передал" floor " пациентки  ", "  " zaderzhka " ")
+SendChat("say Возьмите. ", "  " zaderzhka " ")
+Return
+
+
+:?:/Маммограф_4::
+SendPlay {Enter}
+SendChat("say Все хорошо. У Вас не обнаружено отклонений.", "  " zaderzhka " ")
+Return
+
 
 :?:/ОЭКТ_1::
 SendPlay {Enter}
@@ -5439,7 +3987,7 @@ Return
 
 :?:/Мрт_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, перед началом процедуры, я должен" floor " кратко рассказать о ней.", "  " zaderzhka " ")
+SendChat("say Здравствуйте, перед началом процедуры, я должен кратко рассказать о ней.", "  " zaderzhka " ")
 SendChat("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
 SendChat("do На столе лежит коробка.", "  " zaderzhka " ")
 SendChat("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
@@ -6312,10 +4860,45 @@ Return
 SendPlay {Enter}
 SendChat("say Нет, ничего страшного. Это просто артефакты в изображении. ", "  " zaderzhka " ")
 Return
+:?:/Гинек_1::
+SendPlay {Enter}
+SendChat("do Гинекологическое кресло стоит в углу палаты..", "  " zaderzhka " ")
+SendChat("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
+Return
+:?:/Гинек_2::
+SendPlay {Enter}
+SendChat("do Раковина стоит в углу палаты. ", "  " zaderzhka " ")
+SendChat("me открыл" floor " кран ", "  " zaderzhka " ")
+SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+SendChat("me взял" floor " мыло и начал мыть руки ", "  " zaderzhka " ")
+SendChat("me положил" floor " мыло в мыльницу ", "  " zaderzhka " ")
+SendChat("me выключает кран ", "  " zaderzhka " ")
+SendChat("do У стены стоит стол с хирургическими перчатками. ", "  " zaderzhka " ")
+SendChat("me взял" floor " со стола упаковку хирургических перчаток и открыл" floor " её ", "  " zaderzhka " ")
+SendChat("me достал" floor " из упаковки хирургические перчатки и надел" floor " их ", "  " zaderzhka " ")
+SendChat("say Расскажите, есть ли у вас регулярная половая жизнь?", "  " zaderzhka " ")
+Return
+:?:/Гинек_3::
+SendPlay {Enter}
+SendChat("me начал" floor " прощупывать низ живота пациентки ", "  " zaderzhka " ")
+SendChat("say Боли во время полового акта бывали? ", "  " zaderzhka " ")
+SendChat("say Зуд или жжение в области наружных половых органов имеется? ", "  " zaderzhka " ")
+Return
+:?:/Гинек_4::
+SendPlay {Enter}
+SendChat("me начал" floor " делать пальпацию внутренних органов через влагалище  ", "  " zaderzhka " ")
+SendChat("say Боли не чувствуете?  ", "  " zaderzhka " ")
+Return
+:?:/Гинек_5::
+SendPlay {Enter}
+SendChat("do Палочка с расширенным наконечником лежит на медицинском столе.", "  " zaderzhka " ")
+SendChat("me взял" floor " палочку со стола и сделал" floor " мазок влагалища", "  " zaderzhka " ")
+SendChat("me вытащил" floor " палочку с мазком и поместил" floor " в стеклянную ёмкость", "  " zaderzhka " ")
+Return
 
 :?:/Шейка_1::
 SendPlay {Enter}
-SendChat("do Гинекологическое кресло стоит в углу палаты.", "  " zaderzhka " ")
+SendChat("do Гинекологическое кресло стоит в углу палаты..", "  " zaderzhka " ")
 SendChat("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
 Return
 
@@ -6398,7 +4981,7 @@ SendChat("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
 Return
 :?:/МРА_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, перед началом процедуры, я долженл" floor " кратко рассказать о ней.", "  " zaderzhka " ")
+SendChat("say Здравствуйте, перед началом процедуры, я должен кратко рассказать о ней.", "  " zaderzhka " ")
 SendChat("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
 SendChat("do На столе лежит коробка.", "  " zaderzhka " ")
 SendChat("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
@@ -6862,10 +5445,12 @@ SendChat("me взял" floor " в руку кварцевальную лампу
 SendChat("me закрыл" floor " шкаф  ", "  " zaderzhka " ")
 SendChat("me поставил" floor " кварцевальную лампу на пол  ", "  " zaderzhka " ")
 SendChat("me включил" floor " кварцевальную лампу   ", "  " zaderzhka " ")
+SendChat("me закрыл" floor " комнату дверью  ", "  " zaderzhka " ")
 Return
 
 :?:/Кварц_2::
 SendPlay {Enter}
+SendChat("me открыл" floor " дверь  ", "  " zaderzhka " ")
 SendChat("me выключил" floor " кварцевальную лампу ", "  " zaderzhka " ")
 SendChat("me взял" floor " лампу в руку  ", "  " zaderzhka " ")
 SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
@@ -7065,56 +5650,23 @@ SendChat("say Отлично, вы можете вставать и повора
 Return
 
 
+
+
 :?:/ПР_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, передайте документ, удостоверяющий Вашу личность.", "  " zaderzhka " ")
+SendChat("say Передайте заключение.", "  " zaderzhka " ")
 Return
+
 
 :?:/ПР_2::
-SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
-SendChat("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
-SendChat("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
-Return
-
-
-:?:/ПР_3::
-SendPlay {Enter}
-SendChat("say Хорошо, передайте Ваше медицинское заключение.", "  " zaderzhka " ")
-Return
-
-:?:/ПР_4::
-SendPlay {Enter}
-SendChat("me взял" floor " медицинское заключение из рук гражданина напротив", "  " zaderzhka " ")
-SendChat("me открыв медицинское заключение, приступил" floor " к его изучению", "  " zaderzhka " ")
-SendChat("me изучив медицинское заключение, вернул" floor " его гражданину напротив", "  " zaderzhka " ")
-Return
-
-:?:/ПР_5::
-SendPlay {Enter}
-SendChat("say Вам нужно получить или продлить медицинскую карту? Если продлить, то передайте вашу медкарту.", "  " zaderzhka " ")
-Return
-
-:?:/ПР_6::
 SendPlay {Enter}
 SendChat(" " stol "  ", "  " zaderzhka " ")
-SendChat("me взяв медицинскую карту из рук человека напротив, открыл" floor " её", "  " zaderzhka " ")
-SendChat("me положил" floor " медицинскую карту на стол ", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнения медицинской карты", "  " zaderzhka " ")
-SendChat("me написав в строке заключения 'К государственной службе годен', отложил" floor " ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «Маршалова Аанаис - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
-SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
-Return
-
-
-:?:/ПР_7::
-SendPlay {Enter}
-SendChat(" " stol "  ", "  " zaderzhka " ")
+SendChat("me взяв заключение из рук военнослужащего напротив, изучил" floor " его", "  " zaderzhka " ")
+SendChat("me отложил" floor " медицинское заключение на край стола", "  " zaderzhka " ")
 SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
 SendChat("me взяв ручку, начал" floor "  заполнения медицинской карты", "  " zaderzhka " ")
 SendChat("me написав в строке заключения 'К государственной службе годен', отложил ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «Маршалова Аанаис - Минздрав РП» на строке заключения", "  " zaderzhka " ")
+SendChat("me взяв штемпель со стола, поставил" floor " печать 'ГВРП Маршалова А. - Минздрав РП' на строке заключения", "  " zaderzhka " ")
 SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью  ", "  " zaderzhka " ")
 SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
 SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
@@ -7872,13 +6424,6 @@ SendPlay {Enter}
 SendChat("say Здравствуйте, передайте свой паспорт.", "  " zaderzhka " ")
 Return
 
-
-:?:/МК_0::
-SendPlay {Enter}
-SendChat("say Покажите ваше удостоверение.", "  " zaderzhka " ")
-SendChat("say Жалобы на здоровье есть?", "  " zaderzhka " ")
-Return
-
 :?:/МК_2::
 SendPlay {Enter}
 SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
@@ -7889,54 +6434,61 @@ Return
 
 :?:/МК_3::
 SendPlay {Enter}
-SendChat(" " stol "  ", "  " zaderzhka " ")
-SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
-SendChat("say Назовите Ваш вес.", "  " zaderzhka " ")
+SendChat("say Сейчас будем измерять ваши антропометрические данные. Пожалуйста, снимите обувь и подойдите к ростомеру.", "  " zaderzhka " ")
+SendChat("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
+SendChat("me поднял" floor " фиксатор максимально наверх", "  " zaderzhka " ")
+SendChat("say Вставайте на платформу. Затылок, ягодицы и пятки должны соприкасаться с ростомером.", "  " zaderzhka " ")
 Return
+
+:?:/МК_33::
+SendPlay {Enter}
+SendChat("say Пожалуйста, снимите обувь вместо со всеми аксессуарами.  ", "  " zaderzhka " ")
+SendChat("say Так же, снимите и сложите на койку/стол всю свою амуницию, например бронежилет и оружие.", "  " zaderzhka " ")
+SendChat("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
+SendChat("me поднял" floor " фиксатор максимально наверх", "  " zaderzhka " ")
+SendChat("say Вставайте на платформу. Затылок, ягодицы и пятки должны соприкасаться с ростомером.", "  " zaderzhka " ")
+Return
+
 
 :?:/МК_4::
 SendPlay {Enter}
-SendChat("me внёс" floor " показатели веса в медицинскую карту пациента", "  " zaderzhka " ")
-SendChat("say Назовите Ваш рост. ", "  " zaderzhka " ")
+SendChat("me опустив фиксатор до уровня головы, посмотрел" floor " на показатели измерения", "  " zaderzhka " ")
+SendChat("do Какой рост у пациента?", "  " zaderzhka " ")
 Return
 
 :?:/МК_5::
 SendPlay {Enter}
-SendChat("me внёс" floor " показатели роста в медицинскую карту пациента", "  " zaderzhka " ")
-SendChat(" " stol " ", "  " zaderzhka " ")
-SendChat("do На столе лежит тонометр. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола в руку тонометр и расстегнул" floor " манжету", "  " zaderzhka " ")
-SendChat("say Присаживайтесь на койку и дайте мне Вашу любую свободную руку.", "  " zaderzhka " ")
+SendChat("me посмотрел" floor " на показатели взвешивания", "  " zaderzhka " ")
+SendChat("do Какой вес у пациента?", "  " zaderzhka " ")
 Return
-
 
 :?:/МК_6::
 SendPlay {Enter}
-SendChat("me надел" floor " манжету на руку человека и застегнул" floor " её", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку включения тонометра и начал" floor " накачивать манжету", "  " zaderzhka " ")
-SendChat("do На тонометре показалось число 220.", "  " zaderzhka " ")
-SendChat("me перестал" floor " накачивать манжету", "  " zaderzhka " ")
-SendChat("do Через несколько секунд манжета слегка расширилась.", "  " zaderzhka " ")
-SendChat("do На экране тонометра появилось давление.", "  " zaderzhka " ")
-SendChat("do Давление в норме?", "  " zaderzhka " ")
-SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+SendChat("say Хорошо, можете слезать и обуваться. Осмотр окончен.", "  " zaderzhka " ")
 Return
 
-
 :?:/МК_7::
+Random, rand, 1, 6
+if rand = 1
+	Word := "желтым"
+if rand = 2
+	Word := "зеленым"
+if rand = 3
+	Word := "черным"
+if rand = 4
+	Word :=	"красным"
+if rand = 5
+	Word :=	"коричневый"
+if rand = 6
+	Word :=	"розовый"	
 SendPlay {Enter}
-SendChat("me посмотрел" floor " на экран тонометра и зафиксировал" floor " показатели давления в медицинской карте пациента", "  " zaderzhka " ")
-SendChat("do Давление понижено?", "  " zaderzhka " ")
-SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+SendChat(" " stol " ", "  " zaderzhka " ")
+SendChat("do На столе лежит кубик. ", "  " zaderzhka " ")
+SendChat("do Стороны кубика имеют:красный, желтый, коричневый, зеленый, розовый, черный цвет.  ", "  " zaderzhka " ")
+SendChat("say Ваша задача — подбросить кубик, чтобы он выпал стороной с " Word " цветом. ", "  " zaderzhka " ")
 Return
 
 :?:/МК_8::
-SendPlay {Enter}
-SendChat("say Что у меня над головой?", "  " zaderzhka " ")
-Return
-
-:?:/МК_9::
 Random, rand, 1, 15
 if rand = 1
 	Word := "РП, ПГ"
@@ -7974,20 +6526,27 @@ SendChat("say Вам будет задано несколько вопросов
 SendChat("say Что такое " Word "? ", "  " zaderzhka " ")
 Return
 
+:?:/МК_9::
+SendPlay {Enter}
+SendChat(" " tumba " ", "  " zaderzhka " ")
+SendChat(" " tumba1 " ", "  " zaderzhka " ")
+Return
+
 
 :?:/МК_10::
 SendPlay {Enter}
-SendChat("do В правом кармане штанов медицинского работника лежат ключи от АСМП.", "  " zaderzhka " ")
-SendChat("say Что у меня в правом кармане штанов?", "  " zaderzhka " ")
+SendChat("say Вам нужно получить или продлить медицинскую карту? Если продлить, то передайте вашу медкарту.", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_11::
 SendPlay {Enter}
-SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
-SendChat("me написав в строке заключения «К государственной службе годен», отложил" floor " ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «ГВРП Брофловский А. С. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
+SendChat(" " stol "  ", "  " zaderzhka " ")
+SendChat("me взяв медицинскую карту из рук человека напротив, открыл" floor " её", "  " zaderzhka " ")
+SendChat("me положил" floor " медицинскую карту на стол ", "  " zaderzhka " ")
+SendChat("me взяв ручку, начал" floor " заполнения медицинской карты", "  " zaderzhka " ")
+SendChat("me написав в строке заключения 'К государственной службе годен', отложил" floor " ручку", "  " zaderzhka " ")
+SendChat("me взяв штемпель со стола, поставил" floor " печать 'Маршалова А. - Минздрав РП' на строке заключения", "  " zaderzhka " ")
 SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
 SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
 SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
@@ -7995,6 +6554,18 @@ Return
 
 
 :?:/МК_12::
+SendPlay {Enter}
+SendChat(" " stol "  ", "  " zaderzhka " ")
+SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
+SendChat("me взяв ручку, начал" floor " заполнения медицинской карты", "  " zaderzhka " ")
+SendChat("me написав в строке заключения 'К государственной службе годен', отложил" floor " ручку", "  " zaderzhka " ")
+SendChat("me взяв штемпель со стола, поставил" floor " печать 'Маршалова А. - Минздрав РП' на строке заключения", "  " zaderzhka " ")
+SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
+SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
+SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
+Return
+
+:?:/МК_13::
 SendPlay {Enter}
 SendChat("say Вы не прошли медицинский осмотр, приходите в следующий раз.", "  " zaderzhka " ")
 Return
@@ -8259,18 +6830,20 @@ Gui, Destroy
 Return
 
 :?:/МП::
-Random, rand, 1, 6
+Random, rand, 1, 7
 if rand = 1
 	Word := "Стерилизация медицинских предметов"
 if rand = 2
 	Word := "Проверка срока годности лекарств"
 if rand = 3
-	Word := "Проверка условий хранения препаратов"
+	Word := "Проверка срока годности шприцов"
 if rand = 4
 	Word := "Проверка срока годности перчаток"
 if rand = 5
-	Word := "Дезинфекция в палатах"
+	Word := "Мойка полов"
 if rand = 6
+	Word := "Дезинфекция в палатах"
+if rand = 7
 	Word := "Кварцевание палат"
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
@@ -8322,7 +6895,7 @@ Return
 
 
 
-:?:/Пост::
+::/Пост::
 SendMessage, 0x50, 0, 0x4190419,, A
 ; Ввод фамилии напарника (только русские буквы)
 InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
@@ -8602,7 +7175,9 @@ SendChat("me достал" floor " из кармана КПК, запустил"
 SendChat("me открывает базу поступивших вызовов", "1500")
 SendChat("me фиксирует последние данные GPS пациента", "1500")
 SendChat("to " to " ", "500")
-SendChat("me зажав кнопку на КПК, начал" floor " что-то говорить в него", "1500")
+SendChat("me закрыл" floor " и убрал" floor " КПК в карман", "1500")
+SendChat("do КПК висит на поясе.", "1500")
+SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1500")
 If (Patrol != "") {
     SendChat("r [" TAG "] Принял" floor " вызов: " to " // Бригада: " Patrol " ", "500")
 } Else {
@@ -9087,9 +7662,9 @@ SendChat("me снял" floor " КПК с пояса и, зажав кнопку,
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
+    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция. ", "500")
+    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование р. Провинция. ", "500")
 }
 
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9110,9 +7685,9 @@ Loop, %Skolko%
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "1000")
+        SendChat("ro [" Bol_ro_1 " Воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
+        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование р. Провинция. ", "1000")
     }
     SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
     SendChat(" " Skrin_1 " ", "500")
@@ -9125,9 +7700,9 @@ SendChat("me снял" floor " КПК с пояса и, зажав кнопку,
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
+    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция. ", "500")
+    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция. ", "500")
 }
 
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9288,17 +7863,7 @@ Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Шприц_1
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, Consolas
 Gui, 3:Add, Text, x195 y15 h20 w500 +BackgroundTrans, [Аллергический приступ]
-
-
-Gui, 3:Add, Picture, x430 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ33,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x500 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ33,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-
-Gui, 3:show, center h60 w590, Аллергический приступ
 Return
-
-
 
 ;--------------------------------------------------------------------------------
 
@@ -9307,15 +7872,11 @@ Medicine4:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h60 w330,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Вакцинация
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Вакцинация
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Вакцинация]
-
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ38,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ38,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-Gui, 3:show, center h60 w460, Вакцинация
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Вакцинация]
+Gui, 3:show, center h60 w330, Вакцинация
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9405,19 +7966,12 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h80 w330,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ВМС_1
-Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /ВМС_2
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ВМС_2
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Внутриматочная спираль]
-Gui, 3:Add, Text, x100 y85 h500 w370 +BackgroundTrans, [Внутриматочная спираль]
-
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ29,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ29,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-Gui, 3:Add, Picture, x330 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ30,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ30,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-Gui, 3:show, center h120 w480, Внутриматочная спираль
+Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Внутриматочная спираль]
+Gui, 3:show, center h80 w330, Внутриматочная спираль
 Return
 
 
@@ -9445,20 +7999,15 @@ Medicine11:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h140 w330,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Матка_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Матка_2
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Матка_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Матка_2
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x115 y25 h500 w370 +BackgroundTrans, [Гистероскопия]
-Gui, 3:Add, Text, x115 y75 h500 w370 +BackgroundTrans, [Гистероскопия]
+Gui, 3:Add, Text, x115 y15 h500 w370 +BackgroundTrans, [Гистероскопия]
+Gui, 3:Add, Text, x115 y35 h500 w370 +BackgroundTrans, [Гистероскопия]
 
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ82,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ82,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ83,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ83,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-Gui, 3:show, center h120 w540, Гистероскопия
+Gui, 3:show, center h140 w330, Гистероскопия
 Return
 
 
@@ -9520,30 +8069,16 @@ Medicine15:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w300,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /ЭКГ_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /ЭКГ_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /ЭКГ_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /ЭКГ_4
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ЭКГ_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ЭКГ_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /ЭКГ_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [ЭКГ]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [ЭКГ]
-Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [ЭКГ ответ да]
-Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [ЭКГ ответ нет]
-
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ73,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ73,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ74,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ74,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ75,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ75,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ76,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ76,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-
-Gui, 3:show, center h220 w540, ЭКГ
+Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [ЭКГ]
+Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [ЭКГ ответ да]
+Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [ЭКГ ответ нет]
+Gui, 3:show, center h100 w300, ЭКГ
 Return
 
 
@@ -9554,30 +8089,16 @@ Medicine16:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w480,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Температура_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Температура_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Температура_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Температура_4
-
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Температура_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Температура_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Температура_3
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Измерить температуру]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Измерить температуру]
-Gui, 3:Add, Text, x145 y125 h500 w370 +BackgroundTrans, [Ответ да]
-Gui, 3:Add, Text, x145 y175 h500 w370 +BackgroundTrans, [Ответ нет]
+Gui, 3:Add, Text, x175 y15 h500 w370 +BackgroundTrans, [Измерить температуру]
+Gui, 3:Add, Text, x175 y35 h500 w370 +BackgroundTrans, [Измерить температуру ответ да]
+Gui, 3:Add, Text, x175 y55 h500 w370 +BackgroundTrans, [Измерить температуру ответ нет]
 
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ57,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ57,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ58,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ58,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ59,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ59,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ60,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ60,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h220 w540, Измерить температуру
+Gui, 3:show, center h100 w480, Измерить температуру
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9712,10 +8233,6 @@ Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Желудок
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x125 y15 h500 w370 +BackgroundTrans, [Отравление желудка]
-
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ32,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ32,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
 Gui, 3:show, center h60 w350, Отравление желудка
 Return
 
@@ -9738,38 +8255,24 @@ Return
 
 ;--------------------------------------------------------------------------------
 
-
 Medicine28:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Вши_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Вши_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Вши_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Вши_4
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Вши_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Вши_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Вши_3
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Попросить снять головной убор]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Проверка на вши]
-Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Проверка на вши ответ да]
-Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Проверка на вши ответ нет]
+Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Проверка на вши]
+Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Проверка на вши ответ да]
+Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [Проверка на вши ответ нет]
 
 
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ48,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ48,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ49,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ49,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ50,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ50,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ51,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ51,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h220 w550, Проверка на вши
+Gui, 3:show, center h100 w400, Проверка на вши
 Return
-
 
 
 ;--------------------------------------------------------------------------------
@@ -9778,30 +8281,22 @@ Medicine29:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h120 w440,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Глисты_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Глисты_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Глисты_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Глисты_4
+
+
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Глисты_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Глисты_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Глисты_3
+Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Глисты_4
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Проверка на глисты]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Проверка на глисты]
-Gui, 3:Add, Text, x145 y125 h500 w370 +BackgroundTrans, [Проверка на глисты ответ да]
-Gui, 3:Add, Text, x145 y175 h500 w370 +BackgroundTrans, [Проверка на глисты ответ нет]
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка на глисты]
+Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка на глисты]
+Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Проверка на глисты ответ да]
+Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Проверка на глисты ответ нет]
 
 
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ69,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ69,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ70,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ70,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ71,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ71,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ72,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ72,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h220 w540, Проверка на глисты
+Gui, 3:show, center h120 w440, Проверка на глисты
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9857,41 +8352,20 @@ Medicine33:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h130 w595,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Чувства_0
-Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Чувства_1
-Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Чувства_2
-Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Чувства_3
-Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Чувства_4
-Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /Чувства_5
-Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /Чувства_6
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Чувства_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Чувства_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Чувства_3
+Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Чувства_4
+Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Чувства_5
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x135 y25 h500 w570 +BackgroundTrans, [Освободить артерию от одежды если она есть]
-Gui, 3:Add, Text, x135 y85 h500 w570 +BackgroundTrans, [Проверка пульса на сонной артерии]
-Gui, 3:Add, Text, x135 y145 h500 w570 +BackgroundTrans, [Убрать руку от соной артерии]
-Gui, 3:Add, Text, x135 y205 h500 w570 +BackgroundTrans, [Пульс есть - использование нашатыря]
-Gui, 3:Add, Text, x135 y260 h500 w570 +BackgroundTrans, [Снять одежду с человека, если она есть, для проведения реанимации]
-Gui, 3:Add, Text, x135 y325 h500 w570 +BackgroundTrans, [Пульса нет - проведения СЛР]
-Gui, 3:Add, Text, x135 y385 h500 w570 +BackgroundTrans, [Пульса нет - в случае, если не помогло СЛР]
+Gui, 3:Add, Text, x125 y15 h700 w700 +BackgroundTrans, [Приведение в чувства (Проверка пульса)]
+Gui, 3:Add, Text, x125 y35 h700 w700 +BackgroundTrans, [Приведение в чувства (Пульс есть)]
+Gui, 3:Add, Text, x125 y55 h700 w700 +BackgroundTrans, [Приведение в чувства (Пульса нет)]
+Gui, 3:Add, Text, x125 y75 h700 w700 +BackgroundTrans, [Приведение в чувства (Если пульс не появился)]
+Gui, 3:Add, Text, x125 y95 h700 w700 +BackgroundTrans, [Приведение в чувства (Если пульс не появился)]
 
-
-Gui, 3:Add, Picture, x730 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ84, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ84,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ85,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ85,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ86,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ86,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ87,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ87,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ88,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ88,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ89,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ89,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x730 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ90,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x800 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ90,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h430 w895, Приведение в чувства
+Gui, 3:show, center h130 w595, Приведение в чувства
 Return
 
 
@@ -9968,18 +8442,11 @@ Medicine38:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h60 w280,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Пуля
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Пуля
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Пулевое ранение]
-
-
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ32,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ32,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-
-Gui, 3:show, center h60 w460, Пулевое ранение
+Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Пулевое ранение]
+Gui, 3:show, center h60 w280, Пулевое ранение
 Return
 
 
@@ -10024,31 +8491,15 @@ Medicine41:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w380,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Прибор_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Прибор_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Прибор_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Прибор_4
-
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Прибор_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Прибор_2
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Прибор_3
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Томография]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Томография]
-Gui, 3:Add, Text, x145 y125 h500 w370 +BackgroundTrans, [Томография ответ да]
-Gui, 3:Add, Text, x145 y175 h500 w370 +BackgroundTrans, [Томография ответ нет]
-
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ65,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ65,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ66,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ66,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ67,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ67,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ68,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ68,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h220 w540, Томография
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Томография]
+Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Томография ответ да]
+Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Томография ответ нет]
+Gui, 3:show, center h100 w380, Томография
 Return
 
 
@@ -10109,38 +8560,18 @@ Return
 
 Medicine46:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h200 w400,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Флюшка_1
-Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Флюшка_2
-Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Флюшка_3
-Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Флюшка_4
-Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Флюшка_5
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Флюшка_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Флюшка_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Флюшка_3
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Флюрография]
-Gui, 3:Add, Text, x125 y85 h500 w370 +BackgroundTrans, [Флюрография]
-Gui, 3:Add, Text, x125 y145 h500 w370 +BackgroundTrans, [Флюрография]
-Gui, 3:Add, Text, x125 y205 h500 w370 +BackgroundTrans, [Флюрография ответ да]
-Gui, 3:Add, Text, x125 y265 h500 w370 +BackgroundTrans, [Флюрография ответ нет]
-
-
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ52, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ52,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ53,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ53,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ54,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ54,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ55,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ55,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ56,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ56,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-
-Gui, 3:show, center h300 w500, Флюрография
+Gui, 3:Add, Text, x145 y15 h700 w570 +BackgroundTrans, [Флюрография]
+Gui, 3:Add, Text, x145 y35 h700 w570 +BackgroundTrans, [Флюрография]
+Gui, 3:Add, Text, x145 y55 h700 w570 +BackgroundTrans, [Флюрография]
+Gui, 3:show, center h100 w400, Флюрография
 Return
 
 ;--------------------------------------------------------------------------------
@@ -10171,30 +8602,20 @@ Medicine48:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Цистоскоп_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Цистоскоп_2
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Цистоскоп_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Цистоскоп_4
-
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Цистоскоп_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Цистоскоп_2
+Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Цистоскоп_3
+Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Цистоскоп_4
+Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Цистоскоп_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Цистоскопия]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Цистоскопия]
-Gui, 3:Add, Text, x145 y125 h500 w370 +BackgroundTrans, [Цистоскопия ответ да]
-Gui, 3:Add, Text, x145 y175 h500 w370 +BackgroundTrans, [Цистоскопия ответ нет]
-
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ34,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ34,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ35,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-Gui, 3:show, center h230 w550,Цистоскопия
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Цистоскопия]
+Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Цистоскопия]
+Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Цистоскопия ответ да]
+Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Цистоскопия ответ нет]
+Gui, 3:Add, Text, x145 y95 h500 w370 +BackgroundTrans, [Цистоскопия]
+Gui, 3:show, center h140 w400,
 Return
 
 ;--------------------------------------------------------------------------------
@@ -10543,28 +8964,17 @@ Medicine70:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h120 w380,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Маммограф_1
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Маммограф_1
-Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Маммограф_3
-Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Маммограф_4
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Маммограф_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Маммограф_2
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Маммограф_3
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Маммограф_4
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Маммография]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Маммография]
-Gui, 3:Add, Text, x145 y125 h500 w370 +BackgroundTrans, [Маммография ответ да]
-Gui, 3:Add, Text, x145 y175 h500 w370 +BackgroundTrans, [Маммография ответ нет]
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ61,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ61,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ62,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ62,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ63,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ63,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ64,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ64,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h220 w540, Маммография
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Маммография]
+Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Маммография]
+Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Маммография ответ да]
+Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Маммография ответ нет]
+Gui, 3:show, center h120 w380, Маммография
 Return
 
 
@@ -10726,9 +9136,9 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h300 w500,
 
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h400 w220 +BackgroundTrans, /МК_1 /МК_0 для гос
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /МК_1
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /МК_2
-Gui, 3:Add, Text, x10 y55 h400 w420 +BackgroundTrans, /МК_3 
+Gui, 3:Add, Text, x10 y55 h400 w420 +BackgroundTrans, /МК_3 (/33 для МВД)
 Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /МК_4
 Gui, 3:Add, Text, x10 y95 h500 w370 +BackgroundTrans, /МК_5
 Gui, 3:Add, Text, x10 y115 h500 w370 +BackgroundTrans, /МК_6
@@ -10738,22 +9148,25 @@ Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /МК_9
 Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /МК_10
 Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /МК_11
 Gui, 3:Add, Text, x10 y235  h500 w370 +BackgroundTrans, /МК_12
-
+Gui, 3:Add, Text, x10 y255  h500 w370 +BackgroundTrans, /МК_13
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x175 y15 h500 w370 +BackgroundTrans, [Попросить паспорт]
-Gui, 3:Add, Text, x175 y35 h500 w370 +BackgroundTrans, [Изучение паспорта]
-Gui, 3:Add, Text, x175 y55 h500 w370 +BackgroundTrans, [Назовите ваш вес]
-Gui, 3:Add, Text, x175 y75 h500 w370 +BackgroundTrans, [Назовите ваш рост]
-Gui, 3:Add, Text, x175 y95 h500 w370 +BackgroundTrans, [Дайте руку]
-Gui, 3:Add, Text, x175 y115 h500 w370 +BackgroundTrans,  [Давление в норме?]
-Gui, 3:Add, Text, x175 y135 h500 w370 +BackgroundTrans,  [Давление понижено?]
-Gui, 3:Add, Text, x175 y155 h500 w370 +BackgroundTrans,  [Что у меня над головой?]
-Gui, 3:Add, Text, x175 y175 h500 w770 +BackgroundTrans,  [Термины]
-Gui, 3:Add, Text, x175 y195  h500 w370 +BackgroundTrans, [Что в кармане?]
-Gui, 3:Add, Text, x175 y215  h500 w370 +BackgroundTrans, [Выдать медкарту]
-Gui, 3:Add, Text, x175 y235  h500 w370 +BackgroundTrans, [Отказать из-за ошибок]
+Gui, 3:Add, Text, x170 y15 h500 w370 +BackgroundTrans, [Попросить паспорт]
+Gui, 3:Add, Text, x170 y35 h500 w370 +BackgroundTrans, [Изучение паспорта]
+Gui, 3:Add, Text, x170 y55 h500 w370 +BackgroundTrans, [Попросить снять обувь]
+Gui, 3:Add, Text, x170 y75 h500 w370 +BackgroundTrans, [Измерить рост]
+Gui, 3:Add, Text, x170 y95 h500 w370 +BackgroundTrans, [Измерить вес]
+Gui, 3:Add, Text, x170 y115 h500 w370 +BackgroundTrans,  [Осмотр окончен]
+Gui, 3:Add, Text, x170 y135 h500 w370 +BackgroundTrans,  [Психологическое тестирование (try)]
+Gui, 3:Add, Text, x170 y155 h500 w370 +BackgroundTrans,  [Психологическое тестирование (Термины)]
+Gui, 3:Add, Text, x170 y175 h500 w770 +BackgroundTrans,  [Психологическое тестирование (todo) только для сотрудников]
+Gui, 3:Add, Text, x170 y195  h500 w370 +BackgroundTrans, [Попросить медкарту]
+Gui, 3:Add, Text, x170 y215  h500 w370 +BackgroundTrans, [Выдать медкарту (в случае продления)]
+Gui, 3:Add, Text, x170 y235  h500 w370 +BackgroundTrans, [Выдать медкарту (в случае получения)]
+Gui, 3:Add, Text, x170 y255  h500 w370 +BackgroundTrans, [Отказать в выдаче медкарты иза ошибок]
 
+Gui, 3:show, center h285 w620, Медкарта
+Return
 
 Gui, 3:show, center h285 w620, Медкарта
 Return
@@ -10769,48 +9182,26 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h200 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Зрения_1
-Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Зрения_2
-Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Зрения_3
-Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Зрения_4
-Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Зрения_5
-Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /Зрения_6
-Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /Зрения_7
-Gui, 3:Add, Text, x10 y440 h200 w120 +BackgroundTrans, /Зрения_8
-Gui, 3:Add, Text, x10 y505 h200 w120 +BackgroundTrans, /Зрения_9
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Зрения_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Зрения_2
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Зрения_3
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Зрения_4
+Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /Зрения_5
+Gui, 3:Add, Text, x10 y115 h200 w120 +BackgroundTrans, /Зрения_6
+Gui, 3:Add, Text, x10 y135 h200 w120 +BackgroundTrans, /Зрения_7
+Gui, 3:Add, Text, x10 y155 h200 w120 +BackgroundTrans, /Зрения_8
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y85 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y145 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y205 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y260 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y325 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y385 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y445 h500 w370 +BackgroundTrans, [Проверка Зрения]
-Gui, 3:Add, Text, x145 y505 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y95 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y115 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y135 h500 w370 +BackgroundTrans, [Проверка Зрения]
+Gui, 3:Add, Text, x145 y155 h500 w370 +BackgroundTrans, [Проверка Зрения]
 
-Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ39, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ39,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ40,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ40,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ41,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ41,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ42,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ42,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ43,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ43,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ44,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ44,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ45,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ45,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ46,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ46,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x330 y490 w48 h48 +BackgroundTrans gSelectKPRPMZ47,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x400 y490 w48 h48 +BackgroundTrans gNotebookKPRPMZ47,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h540 w500, Проверка Зрения
+Gui, 3:show, center h200 w400, Проверка Зрения
 Return
 
 ;--------------------------------------------------------------------------------
@@ -11357,33 +9748,20 @@ Medicine118:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /Гинек_1
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Гинек_2
-Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /Гинек_3
-Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /Гинек_4
-Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /Гинек_5
+Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Гинек_1
+Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Гинек_2
+Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Гинек_3
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Гинек_4
+Gui, 3:Add, Text, x10 y95 h200 w320 +BackgroundTrans, /Гинек_5
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x105 y25 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
-Gui, 3:Add, Text, x105 y75 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
-Gui, 3:Add, Text, x105 y125 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
-Gui, 3:Add, Text, x105 y175 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
-Gui, 3:Add, Text, x105 y225 h200 w320 +BackgroundTrans, [Гинекологическое обследование]
+Gui, 3:Add, Text, x125 y15 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
+Gui, 3:Add, Text, x125 y35 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
+Gui, 3:Add, Text, x125 y55 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Гинекологическое обследование]
+Gui, 3:Add, Text, x125 y95 h200 w320 +BackgroundTrans, [Гинекологическое обследование]
 
-
-Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ77,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ77,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ78,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ78,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ79,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ79,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ80,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ80,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 3:Add, Picture, x380 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ81,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x460 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ81,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-
-
-Gui, 3:show, center h280 w540, Гинекологическое обследование
+Gui, 3:show, center h140 w400, Гинекологическое обследование
 Return
 
 ;--------------------------------------------------------------------------------
@@ -11835,7 +10213,7 @@ Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x90 y15 h500 w370 +BackgroundTrans, [Передайте заключение]
 Gui, 3:Add, Text, x90 y35 h500 w370 +BackgroundTrans, [Выдать медкарту]
 
-Gui, 3:show, center h100 w350, Призыв
+Gui, 3:show, center h330 w550, Призыв
 Return
 
 
@@ -13179,11 +11557,10 @@ InfovariableMZ:
 %JWI%: " JWI " - Должность.
 %TAG%: " TAG " - Ваш тег(отдел).
 %Skrin_1%: " Skrin_1 " - Делает скриншот.
-%stol%: " stol " - Стол.
+
 )"
   
 Return
-
 
 NotebookKPRPMZ1: 
 Run, notepad.exe "%KPRPMZ1%" 
@@ -13269,222 +11646,6 @@ return
 NotebookKPRPMZ28: 
 Run, notepad.exe "%KPRPMZ28%" 
 return
-NotebookKPRPMZ29: 
-Run, notepad.exe "%KPRPMZ29%" 
-return
-NotebookKPRPMZ30: 
-Run, notepad.exe "%KPRPMZ30%" 
-return
-NotebookKPRPMZ31: 
-Run, notepad.exe "%KPRPMZ31%" 
-return
-NotebookKPRPMZ32: 
-Run, notepad.exe "%KPRPMZ32%" 
-return
-NotebookKPRPMZ33:
-Run, notepad.exe "%KPRPMZ33%"
-return
-NotebookKPRPMZ34:
-Run, notepad.exe "%KPRPMZ34%"
-return
-NotebookKPRPMZ35:
-Run, notepad.exe "%KPRPMZ35%"
-return
-NotebookKPRPMZ36:
-Run, notepad.exe "%KPRPMZ36%"
-return
-NotebookKPRPMZ37:
-Run, notepad.exe "%KPRPMZ37%"
-return
-NotebookKPRPMZ38:
-Run, notepad.exe "%KPRPMZ38%"
-return
-NotebookKPRPMZ39:
-Run, notepad.exe "%KPRPMZ39%"
-return
-NotebookKPRPMZ40:
-Run, notepad.exe "%KPRPMZ40%"
-return
-NotebookKPRPMZ41:
-Run, notepad.exe "%KPRPMZ41%"
-return
-NotebookKPRPMZ42:
-Run, notepad.exe "%KPRPMZ42%"
-return
-NotebookKPRPMZ43:
-Run, notepad.exe "%KPRPMZ43%"
-return
-NotebookKPRPMZ44:
-Run, notepad.exe "%KPRPMZ44%"
-return
-NotebookKPRPMZ45:
-Run, notepad.exe "%KPRPMZ45%"
-return
-NotebookKPRPMZ46:
-Run, notepad.exe "%KPRPMZ46%"
-return
-NotebookKPRPMZ47:
-Run, notepad.exe "%KPRPMZ47%"
-return
-NotebookKPRPMZ48:
-Run, notepad.exe "%KPRPMZ48%"
-return
-NotebookKPRPMZ49:
-Run, notepad.exe "%KPRPMZ49%"
-return
-NotebookKPRPMZ50:
-Run, notepad.exe "%KPRPMZ50%"
-return
-NotebookKPRPMZ51:
-Run, notepad.exe "%KPRPMZ51%"
-return
-NotebookKPRPMZ52:
-Run, notepad.exe "%KPRPMZ52%"
-return
-NotebookKPRPMZ53:
-Run, notepad.exe "%KPRPMZ53%"
-return
-NotebookKPRPMZ54:
-Run, notepad.exe "%KPRPMZ54%"
-return
-NotebookKPRPMZ55:
-Run, notepad.exe "%KPRPMZ55%"
-return
-NotebookKPRPMZ56:
-Run, notepad.exe "%KPRPMZ56%"
-return
-NotebookKPRPMZ57:
-Run, notepad.exe "%KPRPMZ57%"
-return
-NotebookKPRPMZ58:
-Run, notepad.exe "%KPRPMZ58%"
-return
-NotebookKPRPMZ59:
-Run, notepad.exe "%KPRPMZ59%"
-return
-NotebookKPRPMZ60:
-Run, notepad.exe "%KPRPMZ60%"
-return
-NotebookKPRPMZ61:
-Run, notepad.exe "%KPRPMZ61%"
-return
-NotebookKPRPMZ62:
-Run, notepad.exe "%KPRPMZ62%"
-return
-NotebookKPRPMZ63:
-Run, notepad.exe "%KPRPMZ63%"
-return
-NotebookKPRPMZ64:
-Run, notepad.exe "%KPRPMZ64%"
-return
-NotebookKPRPMZ65:
-Run, notepad.exe "%KPRPMZ65%"
-return
-NotebookKPRPMZ66:
-Run, notepad.exe "%KPRPMZ66%"
-return
-NotebookKPRPMZ67:
-Run, notepad.exe "%KPRPMZ67%"
-return
-NotebookKPRPMZ68:
-Run, notepad.exe "%KPRPMZ68%"
-return
-NotebookKPRPMZ69:
-Run, notepad.exe "%KPRPMZ69%"
-return
-NotebookKPRPMZ70:
-Run, notepad.exe "%KPRPMZ70%"
-return
-NotebookKPRPMZ71:
-Run, notepad.exe "%KPRPMZ71%"
-return
-NotebookKPRPMZ72:
-Run, notepad.exe "%KPRPMZ72%"
-return
-NotebookKPRPMZ73:
-Run, notepad.exe "%KPRPMZ73%"
-return
-NotebookKPRPMZ74:
-Run, notepad.exe "%KPRPMZ74%"
-return
-NotebookKPRPMZ75:
-Run, notepad.exe "%KPRPMZ75%"
-return
-NotebookKPRPMZ76:
-Run, notepad.exe "%KPRPMZ76%"
-return
-NotebookKPRPMZ77:
-Run, notepad.exe "%KPRPMZ77%"
-return
-NotebookKPRPMZ78:
-Run, notepad.exe "%KPRPMZ78%"
-return
-NotebookKPRPMZ79:
-Run, notepad.exe "%KPRPMZ79%"
-return
-NotebookKPRPMZ80:
-Run, notepad.exe "%KPRPMZ80%"
-return
-NotebookKPRPMZ81:
-Run, notepad.exe "%KPRPMZ81%"
-return
-NotebookKPRPMZ82:
-Run, notepad.exe "%KPRPMZ82%"
-return
-NotebookKPRPMZ83:
-Run, notepad.exe "%KPRPMZ83%"
-return
-NotebookKPRPMZ84:
-Run, notepad.exe "%KPRPMZ84%"
-return
-NotebookKPRPMZ85:
-Run, notepad.exe "%KPRPMZ85%"
-return
-NotebookKPRPMZ86:
-Run, notepad.exe "%KPRPMZ86%"
-return
-NotebookKPRPMZ87:
-Run, notepad.exe "%KPRPMZ87%"
-return
-NotebookKPRPMZ88:
-Run, notepad.exe "%KPRPMZ88%"
-return
-NotebookKPRPMZ89:
-Run, notepad.exe "%KPRPMZ89%"
-return
-NotebookKPRPMZ90:
-Run, notepad.exe "%KPRPMZ90%"
-return
-NotebookKPRPMZ91:
-Run, notepad.exe "%KPRPMZ91%"
-return
-NotebookKPRPMZ92:
-Run, notepad.exe "%KPRPMZ92%"
-return
-NotebookKPRPMZ93:
-Run, notepad.exe "%KPRPMZ93%"
-return
-NotebookKPRPMZ94:
-Run, notepad.exe "%KPRPMZ94%"
-return
-NotebookKPRPMZ95:
-Run, notepad.exe "%KPRPMZ95%"
-return
-NotebookKPRPMZ96:
-Run, notepad.exe "%KPRPMZ96%"
-return
-NotebookKPRPMZ97:
-Run, notepad.exe "%KPRPMZ97%"
-return
-NotebookKPRPMZ98:
-Run, notepad.exe "%KPRPMZ98%"
-return
-NotebookKPRPMZ99:
-Run, notepad.exe "%KPRPMZ99%"
-return
-NotebookKPRPMZ100:
-Run, notepad.exe "%KPRPMZ100%"
-return
 
 
 SelectKPRPMZ1: 
@@ -13503,8 +11664,6 @@ SelectKPRPMZ1:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ1%
-	Goto, Change
-	
 }
 return
 
@@ -13522,7 +11681,6 @@ SelectKPRPMZ2:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ2%
-	Goto, Change
 }
 return
 
@@ -13539,7 +11697,6 @@ SelectKPRPMZ3:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ3%
-	Goto, Change
 }
 return
 
@@ -13556,7 +11713,6 @@ SelectKPRPMZ4:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ4%
-	Goto, Change
 }
 return
 
@@ -13573,7 +11729,6 @@ SelectKPRPMZ5:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ5%
-	Goto, Change
 }
 return
 
@@ -13590,7 +11745,6 @@ SelectKPRPMZ6:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ6%
-	Goto, Change
 }
 return
 
@@ -13607,7 +11761,6 @@ SelectKPRPMZ7:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ7%
-	Goto, Change
 }
 return
 
@@ -13624,7 +11777,6 @@ SelectKPRPMZ8:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ8%
-	Goto, Change
 }
 return
 
@@ -13641,7 +11793,6 @@ SelectKPRPMZ9:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ9%
-	Goto, Change
 }
 return
 
@@ -13658,7 +11809,6 @@ SelectKPRPMZ10:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ10%
-	Goto, Change
 }
 return
 
@@ -13675,7 +11825,6 @@ SelectKPRPMZ11:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ11%
-	Goto, Change
 }
 return
 
@@ -13692,7 +11841,6 @@ SelectKPRPMZ12:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ12%
-	Goto, Change
 }
 return
 
@@ -13709,7 +11857,6 @@ SelectKPRPMZ13:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ13%
-	Goto, Change
 }
 return
 
@@ -13726,7 +11873,6 @@ SelectKPRPMZ14:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ14%
-	Goto, Change
 }
 return
 
@@ -13743,7 +11889,6 @@ SelectKPRPMZ15:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ15%
-	Goto, Change
 }
 return
 
@@ -13760,7 +11905,6 @@ SelectKPRPMZ16:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ16%
-	Goto, Change
 }
 return
 
@@ -13777,7 +11921,6 @@ SelectKPRPMZ17:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ17%
-	Goto, Change
 }
 return
 
@@ -13794,7 +11937,6 @@ SelectKPRPMZ18:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ18%
-	Goto, Change
 }
 return
 
@@ -13811,7 +11953,6 @@ SelectKPRPMZ19:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ19%
-	Goto, Change
 }
 return
 
@@ -13828,7 +11969,6 @@ SelectKPRPMZ20:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ20%
-	Goto, Change
 }
 return
 
@@ -13845,7 +11985,6 @@ SelectKPRPMZ21:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ21%
-	Goto, Change
 }
 return
 
@@ -13862,7 +12001,6 @@ SelectKPRPMZ22:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ22%
-	Goto, Change
 }
 return
 
@@ -13879,7 +12017,6 @@ SelectKPRPMZ23:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ23%
-	Goto, Change
 }
 return
 
@@ -13896,7 +12033,6 @@ SelectKPRPMZ24:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ24%
-	Goto, Change
 }
 return
 
@@ -13913,7 +12049,6 @@ SelectKPRPMZ25:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ25%
-	Goto, Change
 }
 return
 
@@ -13929,8 +12064,7 @@ SelectKPRPMZ26:
         return
     }
 
-    MsgBox, 64, Файл выбран, %KPRPMZ26%\
-	Goto, Change
+    MsgBox, 64, Файл выбран, %KPRPMZ26%
 }
 return
 
@@ -13947,7 +12081,6 @@ SelectKPRPMZ27:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ27%
-	Goto, Change
 }
 return
 
@@ -13964,7 +12097,6 @@ SelectKPRPMZ28:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ28%
-	Goto, Change
 }
 return
 
@@ -13981,7 +12113,6 @@ SelectKPRPMZ29:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ29%
-	Goto, Change
 }
 return
 
@@ -13998,7 +12129,6 @@ SelectKPRPMZ30:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ30%
-	Goto, Change
 }
 return
 
@@ -14015,7 +12145,6 @@ SelectKPRPMZ31:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ31%
-	Goto, Change
 }
 return
 
@@ -14032,7 +12161,6 @@ SelectKPRPMZ32:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ32%
-	Goto, Change
 }
 return
 
@@ -14049,7 +12177,6 @@ SelectKPRPMZ33:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ33%
-	Goto, Change
 }
 return
 
@@ -14066,7 +12193,6 @@ SelectKPRPMZ34:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ34%
-	Goto, Change
 }
 return
 
@@ -14083,7 +12209,6 @@ SelectKPRPMZ35:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ35%
-	Goto, Change
 }
 return
 
@@ -14100,7 +12225,6 @@ SelectKPRPMZ36:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ36%
-	Goto, Change
 }
 return
 
@@ -14117,7 +12241,6 @@ SelectKPRPMZ37:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ37%
-	Goto, Change
 }
 return
 
@@ -14134,7 +12257,6 @@ SelectKPRPMZ38:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ38%
-	Goto, Change
 }
 return
 
@@ -14151,7 +12273,6 @@ SelectKPRPMZ39:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ39%
-	Goto, Change
 }
 return
 
@@ -14168,7 +12289,6 @@ SelectKPRPMZ40:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ40%
-	Goto, Change
 }
 return
 
@@ -14185,7 +12305,6 @@ SelectKPRPMZ41:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ41%
-	Goto, Change
 }
 return
 
@@ -14202,7 +12321,6 @@ SelectKPRPMZ42:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ42%
-	Goto, Change
 }
 return
 
@@ -14219,7 +12337,6 @@ SelectKPRPMZ43:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ43%
-	Goto, Change
 }
 return
 
@@ -14236,7 +12353,6 @@ SelectKPRPMZ44:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ44%
-	Goto, Change
 }
 return
 
@@ -14253,7 +12369,6 @@ SelectKPRPMZ45:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ45%
-	Goto, Change
 }
 return
 
@@ -14270,7 +12385,6 @@ SelectKPRPMZ46:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ46%
-	Goto, Change
 }
 return
 
@@ -14287,7 +12401,6 @@ SelectKPRPMZ47:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ47%
-	Goto, Change
 }
 return
 
@@ -14304,7 +12417,6 @@ SelectKPRPMZ48:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ48%
-	Goto, Change
 }
 return
 
@@ -14321,7 +12433,6 @@ SelectKPRPMZ49:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ49%
-	Goto, Change
 }
 return
 
@@ -14338,757 +12449,6 @@ SelectKPRPMZ50:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ50%
-	Goto, Change
 }
 return
 
-SelectKPRPMZ51:
-{
-    LastPath := KPRPMZ51
-    FileSelectFile, KPRPMZ51, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ51 = "")
-    {
-        KPRPMZ51 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ51%
-	Goto, Change
-}
-return
-SelectKPRPMZ52:
-{
-    LastPath := KPRPMZ52
-    FileSelectFile, KPRPMZ52, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ52 = "")
-    {
-        KPRPMZ52 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ52%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ53:
-{
-    LastPath := KPRPMZ53
-    FileSelectFile, KPRPMZ53, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ53 = "")
-    {
-        KPRPMZ53 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ53%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ54:
-{
-    LastPath := KPRPMZ54
-    FileSelectFile, KPRPMZ54, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ54 = "")
-    {
-        KPRPMZ54 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ54%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ55:
-{
-    LastPath := KPRPMZ55
-    FileSelectFile, KPRPMZ55, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ55 = "")
-    {
-        KPRPMZ55 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ55%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ56:
-{
-    LastPath := KPRPMZ56
-    FileSelectFile, KPRPMZ56, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ56 = "")
-    {
-        KPRPMZ56 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ56%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ57:
-{
-    LastPath := KPRPMZ57
-    FileSelectFile, KPRPMZ57, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ57 = "")
-    {
-        KPRPMZ57 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ57%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ58:
-{
-    LastPath := KPRPMZ58
-    FileSelectFile, KPRPMZ58, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ58 = "")
-    {
-        KPRPMZ58 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ58%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ59:
-{
-    LastPath := KPRPMZ59
-    FileSelectFile, KPRPMZ59, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ59 = "")
-    {
-        KPRPMZ59 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ59%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ60:
-{
-    LastPath := KPRPMZ60
-    FileSelectFile, KPRPMZ60, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ60 = "")
-    {
-        KPRPMZ60 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ60%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ61:
-{
-    LastPath := KPRPMZ61
-    FileSelectFile, KPRPMZ61, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ61 = "")
-    {
-        KPRPMZ61 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ61%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ62:
-{
-    LastPath := KPRPMZ62
-    FileSelectFile, KPRPMZ62, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ62 = "")
-    {
-        KPRPMZ62 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ62%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ63:
-{
-    LastPath := KPRPMZ63
-    FileSelectFile, KPRPMZ63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ63 = "")
-    {
-        KPRPMZ63 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ63%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ64:
-{
-    LastPath := KPRPMZ64
-    FileSelectFile, KPRPMZ64, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ64 = "")
-    {
-        KPRPMZ64 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ64%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ65:
-{
-    LastPath := KPRPMZ65
-    FileSelectFile, KPRPMZ65, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ65 = "")
-    {
-        KPRPMZ65 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ65%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ66:
-{
-    LastPath := KPRPMZ66
-    FileSelectFile, KPRPMZ66, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ66 = "")
-    {
-        KPRPMZ66 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ66%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ67:
-{
-    LastPath := KPRPMZ67
-    FileSelectFile, KPRPMZ67, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ67 = "")
-    {
-        KPRPMZ67 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ67%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ68:
-{
-    LastPath := KPRPMZ68
-    FileSelectFile, KPRPMZ68, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ68 = "")
-    {
-        KPRPMZ68 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ68%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ69:
-{
-    LastPath := KPRPMZ69
-    FileSelectFile, KPRPMZ69, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ69 = "")
-    {
-        KPRPMZ69 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ69%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ70:
-{
-    LastPath := KPRPMZ70
-    FileSelectFile, KPRPMZ70, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ70 = "")
-    {
-        KPRPMZ70 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ70%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ71:
-{
-    LastPath := KPRPMZ71
-    FileSelectFile, KPRPMZ71, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ71 = "")
-    {
-        KPRPMZ71 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ71%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ72:
-{
-    LastPath := KPRPMZ72
-    FileSelectFile, KPRPMZ72, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ72 = "")
-    {
-        KPRPMZ72 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ72%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ73:
-{
-    LastPath := KPRPMZ73
-    FileSelectFile, KPRPMZ73, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ73 = "")
-    {
-        KPRPMZ73 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ73%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ74:
-{
-    LastPath := KPRPMZ74
-    FileSelectFile, KPRPMZ74, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ74 = "")
-    {
-        KPRPMZ74 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ74%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ75:
-{
-    LastPath := KPRPMZ75
-    FileSelectFile, KPRPMZ75, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ75 = "")
-    {
-        KPRPMZ75 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ75%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ76:
-{
-    LastPath := KPRPMZ76
-    FileSelectFile, KPRPMZ76, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ76 = "")
-    {
-        KPRPMZ76 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ76%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ77:
-{
-    LastPath := KPRPMZ77
-    FileSelectFile, KPRPMZ77, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ77 = "")
-    {
-        KPRPMZ77 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ77%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ78:
-{
-    LastPath := KPRPMZ78
-    FileSelectFile, KPRPMZ78, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ78 = "")
-    {
-        KPRPMZ78 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ78%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ79:
-{
-    LastPath := KPRPMZ79
-    FileSelectFile, KPRPMZ79, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ79 = "")
-    {
-        KPRPMZ79 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ79%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ80:
-{
-    LastPath := KPRPMZ80
-    FileSelectFile, KPRPMZ80, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ80 = "")
-    {
-        KPRPMZ80 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ80%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ81:
-{
-    LastPath := KPRPMZ81
-    FileSelectFile, KPRPMZ81, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ81 = "")
-    {
-        KPRPMZ81 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ81%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ82:
-{
-    LastPath := KPRPMZ82
-    FileSelectFile, KPRPMZ82, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ82 = "")
-    {
-        KPRPMZ82 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ82%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ83:
-{
-    LastPath := KPRPMZ83
-    FileSelectFile, KPRPMZ83, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ83 = "")
-    {
-        KPRPMZ83 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ83%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ84:
-{
-    LastPath := KPRPMZ84
-    FileSelectFile, KPRPMZ84, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ84 = "")
-    {
-        KPRPMZ84 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ84%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ85:
-{
-    LastPath := KPRPMZ85
-    FileSelectFile, KPRPMZ85, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ85 = "")
-    {
-        KPRPMZ85 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ85%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ86:
-{
-    LastPath := KPRPMZ86
-    FileSelectFile, KPRPMZ86, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ86 = "")
-    {
-        KPRPMZ86 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ86%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ87:
-{
-    LastPath := KPRPMZ87
-    FileSelectFile, KPRPMZ87, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ87 = "")
-    {
-        KPRPMZ87 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ87%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ88:
-{
-    LastPath := KPRPMZ88
-    FileSelectFile, KPRPMZ88, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ88 = "")
-    {
-        KPRPMZ88 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ88%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ89:
-{
-    LastPath := KPRPMZ89
-    FileSelectFile, KPRPMZ89, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ89 = "")
-    {
-        KPRPMZ89 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ89%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ90:
-{
-    LastPath := KPRPMZ90
-    FileSelectFile, KPRPMZ90, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ90 = "")
-    {
-        KPRPMZ90 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ90%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ91:
-{
-    LastPath := KPRPMZ91
-    FileSelectFile, KPRPMZ91, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ91 = "")
-    {
-        KPRPMZ91 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ91%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ92:
-{
-    LastPath := KPRPMZ92
-    FileSelectFile, KPRPMZ92, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ92 = "")
-    {
-        KPRPMZ92 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ92%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ93:
-{
-    LastPath := KPRPMZ93
-    FileSelectFile, KPRPMZ93, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ93 = "")
-    {
-        KPRPMZ93 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ93%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ94:
-{
-    LastPath := KPRPMZ94
-    FileSelectFile, KPRPMZ94, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ94 = "")
-    {
-        KPRPMZ94 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ94%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ95:
-{
-    LastPath := KPRPMZ95
-    FileSelectFile, KPRPMZ95, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ95 = "")
-    {
-        KPRPMZ95 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ95%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ96:
-{
-    LastPath := KPRPMZ96
-    FileSelectFile, KPRPMZ96, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ96 = "")
-    {
-        KPRPMZ96 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ96%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ97:
-{
-    LastPath := KPRPMZ97
-    FileSelectFile, KPRPMZ97, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ97 = "")
-    {
-        KPRPMZ97 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ97%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ98:
-{
-    LastPath := KPRPMZ98
-    FileSelectFile, KPRPMZ98, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ98 = "")
-    {
-        KPRPMZ98 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ98%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ99:
-{
-    LastPath := KPRPMZ99
-    FileSelectFile, KPRPMZ99, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ99 = "")
-    {
-        KPRPMZ99 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ99%
-	Goto, Change
-}
-return
-
-SelectKPRPMZ100:
-{
-    LastPath := KPRPMZ100
-    FileSelectFile, KPRPMZ100, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ100 = "")
-    {
-        KPRPMZ100 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ100%
-	Goto, Change
-}
-return
