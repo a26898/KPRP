@@ -7933,6 +7933,7 @@ Return
 
 :?:/МК_8::
 SendPlay {Enter}
+SendChat("me снял" floor "  манжету и положил" floor "  тонометр на стол", "  " zaderzhka " ")
 SendChat("say Что у меня над головой?", "  " zaderzhka " ")
 Return
 
@@ -7993,6 +7994,11 @@ SendChat("me отложил" floor " ручку, затем закрыл" floor 
 SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
 Return
 
+
+:?:/МК_12::
+SendPlay {Enter}
+SendChat("say Вы не прошли осмотр и будете внесены во временный запрет на 4 дня.", "  " zaderzhka " ")
+Return
 
 
 :?:/Трен::
@@ -10721,7 +10727,7 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h300 w500,
 
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /МК_1
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /МК_1 (111 удо)
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /МК_2
 Gui, 3:Add, Text, x10 y55 h400 w420 +BackgroundTrans, /МК_3 
 Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /МК_4
@@ -10731,6 +10737,8 @@ Gui, 3:Add, Text, x10 y135 h500 w370 +BackgroundTrans, /МК_7
 Gui, 3:Add, Text, x10 y155 h500 w370 +BackgroundTrans, /МК_8
 Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /МК_9
 Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /МК_10
+Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /МК_11
+Gui, 3:Add, Text, x10 y235  h500 w370 +BackgroundTrans, /МК_12
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
@@ -10738,12 +10746,14 @@ Gui, 3:Add, Text, x170 y15 h500 w370 +BackgroundTrans, [Попросить па�
 Gui, 3:Add, Text, x170 y35 h500 w370 +BackgroundTrans, [Изучение паспорта]
 Gui, 3:Add, Text, x170 y55 h500 w370 +BackgroundTrans, [Назовите ваш вес]
 Gui, 3:Add, Text, x170 y75 h500 w370 +BackgroundTrans, [Назовите ваш рост]
-Gui, 3:Add, Text, x170 y95 h500 w370 +BackgroundTrans, [Внести вес]
-Gui, 3:Add, Text, x170 y115 h500 w370 +BackgroundTrans,  [Дайте руку]
-Gui, 3:Add, Text, x170 y135 h500 w370 +BackgroundTrans,  [Надеть менжетку]
-Gui, 3:Add, Text, x170 y155 h500 w370 +BackgroundTrans,  [Давление в норме?]
-Gui, 3:Add, Text, x170 y175 h500 w770 +BackgroundTrans,  [Давление понижено?]
-Gui, 3:Add, Text, x170 y195  h500 w370 +BackgroundTrans, [Выдать медкарту]
+Gui, 3:Add, Text, x170 y95 h500 w370 +BackgroundTrans, [Дайте руку]
+Gui, 3:Add, Text, x170 y115 h500 w370 +BackgroundTrans, [Давление в норме?]
+Gui, 3:Add, Text, x170 y135 h500 w370 +BackgroundTrans, [Давление понижено?]
+Gui, 3:Add, Text, x170 y155 h500 w370 +BackgroundTrans, [Психическая проверка]
+Gui, 3:Add, Text, x170 y175 h500 w770 +BackgroundTrans,  [Термины]
+Gui, 3:Add, Text, x170 y195  h500 w370 +BackgroundTrans, [Психическая проверка]
+Gui, 3:Add, Text, x170 y215  h500 w370 +BackgroundTrans, [Выдать медкарту] 
+Gui, 3:Add, Text, x170 y235  h500 w370 +BackgroundTrans, [Отказ 3/3] 
 
 
 Gui, 3:show, center h285 w620, Медкарта
