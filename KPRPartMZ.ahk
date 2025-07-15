@@ -3125,6 +3125,8 @@ Loop, read, %KPRPMZ84%
 Return
 
 
+
+
 :?:/Чувства_1::
 Sleep 150
 SendPlay {Enter}
@@ -8390,12 +8392,16 @@ SendChat("me отжав кнопку, закончил" floor " что-то го
 SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_5.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
+; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
 {
 sleep 570000
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_2.mp3
 sleep 30000
+if(A_Index = Skolko){
+		break
+	}
 SendPlay {Enter}
 SendChat("do КПК висит на поясе.", "500")
 SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -8508,12 +8514,16 @@ If (Patrol != "") {
 SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 SendChat(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
+; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
 {
     sleep 570000
     IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_2.mp3
     sleep 30000
+	if(A_Index = Skolko){
+		break
+	}
     SendPlay {Enter}
     SendChat("do КПК висит на поясе.", "500")
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -8832,6 +8842,9 @@ Loop, %Skolko%
     }
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_2.mp3
     sleep 30000
+	if(A_Index = Skolko){
+		break
+	}
     SendPlay {Enter}
     SendChat("do КПК висит на поясе.", "500")
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -8969,6 +8982,9 @@ Loop, %Skolko%
     IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
     SoundPlay,C:\ProgramData\KPRP\KPRP-main\Gorodskoy_2.mp3
     sleep 30000
+	if(A_Index = Skolko){
+		break
+	}
     SendPlay {Enter}
     SendChat("do КПК висит на поясе.", "500")
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9106,6 +9122,9 @@ Loop, %Skolko%
     }
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_2.mp3
     sleep 30000
+	if(A_Index = Skolko){
+		break
+	}
     SendPlay {Enter}
     SendChat("do КПК висит на поясе.", "500")
     SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9215,6 +9234,9 @@ Loop, %Skolko%
     sleep 570000
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_2.mp3
     sleep 30000
+	if(A_Index = Skolko){
+		break
+	}
     IniRead, Lancia, C:\ProgramData\KPRP\KPRP-main\Statistika.ini, Statistic, Lancia
     SendPlay {Enter}
     SendChat("do КПК висит на поясе.", "1000")
