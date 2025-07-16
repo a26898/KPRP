@@ -1,5 +1,6 @@
 ﻿#Persistent  ; Скрипт будет работать постоянно
 #NoTrayIcon  ; Скрыть иконку из трея
+#SingleInstance Force
 
 SetTimer, CheckGTA, 1000  ; Проверять каждую секунду
 

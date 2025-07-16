@@ -1,5 +1,6 @@
 ﻿#Persistent  ; Скрипт будет работать постоянно
 #NoTrayIcon  ; Скрыть иконку из трея
+#SingleInstance Force
 
 SetTimer, CheckMoscowTime, 60000  ; Проверка каждую минуту
 Return
