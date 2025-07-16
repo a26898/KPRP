@@ -1,4 +1,8 @@
-﻿SetTimer, CheckMoscowTime, 60000  ; Проверка каждую минуту
+﻿#Persistent  ; Скрипт будет работать постоянно
+#NoTrayIcon  ; Скрыть иконку из трея
+
+SetTimer, CheckMoscowTime, 60000  ; Проверка каждую минуту
+Return
 
 CheckMoscowTime:
 ; Получаем текущее UTC время (в формате YYYYMMDDHH24MISS)
@@ -32,3 +36,4 @@ for index, t in targetTimes {
         break
     }
 }
+Return
