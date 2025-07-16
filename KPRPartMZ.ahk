@@ -461,10 +461,6 @@ GetNewLine(filename)
 Return
 
 
-
-
-
-
 0001MZ7:
 Sleep 150
 SendPlay {Enter}
@@ -493,7 +489,7 @@ Loop, read, %KPRPMZ1%
 		
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -524,7 +520,7 @@ Loop, read, %KPRPMZ2%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -557,7 +553,7 @@ Loop, read, %KPRPMZ3%
  		line := StrReplace(line, "%stol%", stol)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -589,7 +585,7 @@ Loop, read, %KPRPMZ4%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -621,7 +617,7 @@ Loop, read, %KPRPMZ5%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -652,7 +648,7 @@ Loop, read, %KPRPMZ6%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -684,7 +680,7 @@ Loop, read, %KPRPMZ7%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -717,7 +713,7 @@ Loop, read, %KPRPMZ8%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -749,7 +745,7 @@ Loop, read, %KPRPMZ9%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -782,7 +778,7 @@ Loop, read, %KPRPMZ10%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -813,7 +809,7 @@ Loop, read, %KPRPMZ11%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -845,7 +841,7 @@ Loop, read, %KPRPMZ12%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -877,7 +873,7 @@ Loop, read, %KPRPMZ13%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -910,7 +906,7 @@ Loop, read, %KPRPMZ14%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -942,7 +938,7 @@ Loop, read, %KPRPMZ15%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)		
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -973,7 +969,7 @@ Loop, read, %KPRPMZ16%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1004,7 +1000,7 @@ Loop, read, %KPRPMZ17%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1036,7 +1032,7 @@ Loop, read, %KPRPMZ18%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)		
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1067,7 +1063,7 @@ Loop, read, %KPRPMZ19%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1099,7 +1095,7 @@ Loop, read, %KPRPMZ20%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1131,7 +1127,7 @@ Loop, read, %KPRPMZ21%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1162,7 +1158,7 @@ Loop, read, %KPRPMZ22%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1194,7 +1190,7 @@ Loop, read, %KPRPMZ23%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1226,7 +1222,7 @@ Loop, read, %KPRPMZ24%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1258,7 +1254,7 @@ Loop, read, %KPRPMZ25%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1291,7 +1287,7 @@ Loop, read, %KPRPMZ26%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1322,7 +1318,7 @@ Loop, read, %KPRPMZ27%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1358,7 +1354,7 @@ Loop, read, %KPRPMZ29%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1390,7 +1386,7 @@ Loop, read, %KPRPMZ30%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1423,7 +1419,7 @@ Loop, read, %KPRPMZ31%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1454,7 +1450,7 @@ Loop, read, %KPRPMZ32%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1487,7 +1483,7 @@ Loop, read, %KPRPMZ33%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1519,7 +1515,7 @@ Loop, read, %KPRPMZ34%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1551,7 +1547,7 @@ Loop, read, %KPRPMZ35%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1583,7 +1579,7 @@ Loop, read, %KPRPMZ36%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1615,7 +1611,7 @@ Loop, read, %KPRPMZ37%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1648,7 +1644,7 @@ Loop, read, %KPRPMZ38%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1680,7 +1676,7 @@ Loop, read, %KPRPMZ39%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1712,7 +1708,7 @@ Loop, read, %KPRPMZ40%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1744,7 +1740,7 @@ Loop, read, %KPRPMZ41%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1776,7 +1772,7 @@ Loop, read, %KPRPMZ42%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1808,7 +1804,7 @@ Loop, read, %KPRPMZ43%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1840,7 +1836,7 @@ Loop, read, %KPRPMZ44%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1872,7 +1868,7 @@ Loop, read, %KPRPMZ45%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1904,7 +1900,7 @@ Loop, read, %KPRPMZ46%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1936,7 +1932,7 @@ Loop, read, %KPRPMZ47%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -1968,7 +1964,7 @@ Loop, read, %KPRPMZ48%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2000,7 +1996,7 @@ Loop, read, %KPRPMZ49%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2032,7 +2028,7 @@ Loop, read, %KPRPMZ50%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2063,7 +2059,7 @@ Loop, read, %KPRPMZ51%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2094,7 +2090,7 @@ Loop, read, %KPRPMZ52%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2126,7 +2122,7 @@ Loop, read, %KPRPMZ53%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2158,7 +2154,7 @@ Loop, read, %KPRPMZ54%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2189,7 +2185,7 @@ Loop, read, %KPRPMZ55%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2221,7 +2217,7 @@ Loop, read, %KPRPMZ56%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2255,7 +2251,7 @@ Loop, read, %KPRPMZ57%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2288,7 +2284,7 @@ Loop, read, %KPRPMZ58%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2320,7 +2316,7 @@ Loop, read, %KPRPMZ59%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2351,7 +2347,7 @@ Loop, read, %KPRPMZ60%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2382,7 +2378,7 @@ Loop, read, %KPRPMZ61%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2414,7 +2410,7 @@ Loop, read, %KPRPMZ62%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2445,7 +2441,7 @@ Loop, read, %KPRPMZ63%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2476,7 +2472,7 @@ Loop, read, %KPRPMZ64%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2508,7 +2504,7 @@ Loop, read, %KPRPMZ65%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2539,7 +2535,7 @@ Loop, read, %KPRPMZ66%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2570,7 +2566,7 @@ Loop, read, %KPRPMZ67%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2601,7 +2597,7 @@ Loop, read, %KPRPMZ68%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2638,7 +2634,7 @@ Loop, read, %KPRPMZ69%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2671,7 +2667,7 @@ Loop, read, %KPRPMZ70%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2703,7 +2699,7 @@ Loop, read, %KPRPMZ71%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2734,7 +2730,7 @@ Loop, read, %KPRPMZ72%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2767,7 +2763,7 @@ Loop, read, %KPRPMZ73%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2801,7 +2797,7 @@ Loop, read, %KPRPMZ74%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2833,7 +2829,7 @@ Loop, read, %KPRPMZ75%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2865,7 +2861,7 @@ Loop, read, %KPRPMZ76%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2897,7 +2893,7 @@ Loop, read, %KPRPMZ77%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2929,7 +2925,7 @@ Loop, read, %KPRPMZ78%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2961,7 +2957,7 @@ Loop, read, %KPRPMZ79%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -2993,7 +2989,7 @@ Loop, read, %KPRPMZ80%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3025,7 +3021,7 @@ Loop, read, %KPRPMZ81%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3056,7 +3052,7 @@ Loop, read, %KPRPMZ82%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3087,7 +3083,7 @@ Loop, read, %KPRPMZ83%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3119,7 +3115,7 @@ Loop, read, %KPRPMZ84%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3153,7 +3149,7 @@ Loop, read, %KPRPMZ85%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3185,7 +3181,7 @@ Loop, read, %KPRPMZ86%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3217,7 +3213,7 @@ Loop, read, %KPRPMZ87%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3248,7 +3244,7 @@ Loop, read, %KPRPMZ88%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3280,7 +3276,7 @@ Loop, read, %KPRPMZ89%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3312,7 +3308,7 @@ Loop, read, %KPRPMZ90%
         line := StrReplace(line, "%Female%", Female)
 		line := StrReplace(line, "%stol%", stol)
 		
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -3321,259 +3317,259 @@ Return
 
 :?:/Лек_1::
 SendPlay {Enter}
-SendChat("say На что жалуетесь?", "  " zaderzhka " ")
+%vybor%("say На что жалуетесь?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_2::
 SendPlay {Enter}
-SendChat("say Есть ли у Вас предшествующие заболевания?", "  " zaderzhka " ")
+%vybor%("say Есть ли у Вас предшествующие заболевания?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_3::
 SendPlay {Enter}
-SendChat("say Имеются ли у Вас аллергические реакции?", "  " zaderzhka " ")
+%vybor%("say Имеются ли у Вас аллергические реакции?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_4::
 SendPlay {Enter}
-SendChat("say Принимаете ли Вы лекарственные препараты?", "  " zaderzhka " ")
+%vybor%("say Принимаете ли Вы лекарственные препараты?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_5::
 SendPlay {Enter}
-SendChat("say Имеете алкогольную или наркотическую зависимость?", "  " zaderzhka " ")
+%vybor%("say Имеете алкогольную или наркотическую зависимость?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_6::
 SendPlay {Enter}
-SendChat("say Какой Вы ведёте образ жизни?", "  " zaderzhka " ")
+%vybor%("say Какой Вы ведёте образ жизни?", "  " zaderzhka " ")
 Return
 
 :?:/Лек_7::
 SendPlay {Enter}
-SendChat("say Есть ли у Вас наследственные заболевания?", "  " zaderzhka " ")
+%vybor%("say Есть ли у Вас наследственные заболевания?", "  " zaderzhka " ")
 Return
 
 
 :?:/Аптека::
 SendPlay {Enter}
-SendChat("say Гражданин мы не выдаем таблетки, мы выписываем рецепты на приобретение определенных. ", "  " zaderzhka " ")
-SendChat("say Если вас что-то беспокоит, пройдите в стационар и ожидайте свободного врача. ", "  " zaderzhka " ")
-SendChat("say Так-же таблетки или другие лекарственные препараты приобретаются только в aптеках всех городов Республики Провинции.", "  " zaderzhka " ")
+%vybor%("say Гражданин мы не выдаем таблетки, мы выписываем рецепты на приобретение определенных. ", "  " zaderzhka " ")
+%vybor%("say Если вас что-то беспокоит, пройдите в стационар и ожидайте свободного врача. ", "  " zaderzhka " ")
+%vybor%("say Так-же таблетки или другие лекарственные препараты приобретаются только в aптеках всех городов Республики Провинции.", "  " zaderzhka " ")
 Return
 
 
 :?:/Форма::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит комплект рабочей формы.", "  " zaderzhka " ")
-SendChat("me достал" floor " рабочую форму и передал" floor " сотруднику напротив", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит комплект рабочей формы.", "  " zaderzhka " ")
+%vybor%("me достал" floor " рабочую форму и передал" floor " сотруднику напротив", "  " zaderzhka " ")
 Return
 
 :?:/ИВЛ_ЦГБ::
 SendPlay {Enter}
-SendChat("do У койки стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("me взял" floor " маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу кислорода ", "  " zaderzhka " ")
+%vybor%("do У койки стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("me взял" floor " маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу кислорода ", "  " zaderzhka " ")
 Return
 
 :?:/ИВЛ_АСМП::
 SendPlay {Enter}
-SendChat("do В АСМП стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат  ", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взял" floor " маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor "  подачу кислорода в маску ", "  " zaderzhka " ")
+%vybor%("do В АСМП стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат  ", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor "  подачу кислорода в маску ", "  " zaderzhka " ")
 Return
 
 :?:/ИВЛ::
 SendPlay {Enter}
-SendChat("me отключил" floor " подачу кислорода в маску ", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат ИВЛ ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу кислорода в маску ", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат ИВЛ ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
 Return
 
 :?:/ПХД_1::
 SendPlay {Enter}
-SendChat("do Уборочный инвентарь в шкафу.", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф и взял" floor " ведро, швабру", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("do На стене можно заметить раковину, под ней кран для набора воды. ", "  " zaderzhka " ")
-SendChat("me подставил" floor " под кран ведро  ", "  " zaderzhka " ")
-SendChat("me открыл" floor " кран   ", "  " zaderzhka " ")
-SendChat("do Ведро наполнилось.", "  " zaderzhka " ")
-SendChat("me закрыл" floor " кран и поднял" floor " ведро с пола  ", "  " zaderzhka " ")
-SendChat("me поставил" floor " ведро с водой на пол и опустил" floor " в него швабру ", "  " zaderzhka " ")
-SendChat("me достал" floor " мокрую швабру из ведра ", "  " zaderzhka " ")
-SendChat("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
-SendChat("me моет пол  ", "  " zaderzhka " ")
-SendChat("do На швабре можно заметить грязь. ", "  " zaderzhka " ")
-SendChat("me окунул" floor " швабру в ведро и прополоскал" floor " её  ", "  " zaderzhka " ")
-SendChat("do Швабра чистая. ", "  " zaderzhka " ")
-SendChat("me достал" floor " мокрую швабру из ведра ", "  " zaderzhka " ")
-SendChat("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
+%vybor%("do Уборочный инвентарь в шкафу.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф и взял" floor " ведро, швабру", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("do На стене можно заметить раковину, под ней кран для набора воды. ", "  " zaderzhka " ")
+%vybor%("me подставил" floor " под кран ведро  ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " кран   ", "  " zaderzhka " ")
+%vybor%("do Ведро наполнилось.", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " кран и поднял" floor " ведро с пола  ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " ведро с водой на пол и опустил" floor " в него швабру ", "  " zaderzhka " ")
+%vybor%("me достал" floor " мокрую швабру из ведра ", "  " zaderzhka " ")
+%vybor%("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
+%vybor%("me моет пол  ", "  " zaderzhka " ")
+%vybor%("do На швабре можно заметить грязь. ", "  " zaderzhka " ")
+%vybor%("me окунул" floor " швабру в ведро и прополоскал" floor " её  ", "  " zaderzhka " ")
+%vybor%("do Швабра чистая. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " мокрую швабру из ведра ", "  " zaderzhka " ")
+%vybor%("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/ПХД_2::
 SendPlay {Enter}
-SendChat("me окунул" floor " швабру в ведро прополоскал" floor " ", "  " zaderzhka " ")
-SendChat("me достал" floor " мокрую швабру из ведра", "  " zaderzhka " ")
-SendChat("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
-SendChat("do Швабра сухая. ", "  " zaderzhka " ")
-SendChat("do Ведро с водой можно заметить на полу на полу. ", "  " zaderzhka " ")
-SendChat("me взял" floor " ведро в левую руку ", "  " zaderzhka " ")
-SendChat("do На стене можно заметить раковину. ", "  " zaderzhka " ")
-SendChat("me поставил" floor " к стене швабру   ", "  " zaderzhka " ")
-SendChat("me вылил" floor " из ведра воду в раковину     ", "  " zaderzhka " ")
-SendChat("do Ведро  пустое.   ", "  " zaderzhka " ")
-SendChat("me взял" floor " швабру  ", "  " zaderzhka " ")
-SendChat("me откры" floor " шкаф и поставил" floor " в него швабру с ведром", "  " zaderzhka " ")
-SendChat("me закрыл" floor "  шкаф  ", "  " zaderzhka " ")
+%vybor%("me окунул" floor " швабру в ведро прополоскал" floor " ", "  " zaderzhka " ")
+%vybor%("me достал" floor " мокрую швабру из ведра", "  " zaderzhka " ")
+%vybor%("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
+%vybor%("do Швабра сухая. ", "  " zaderzhka " ")
+%vybor%("do Ведро с водой можно заметить на полу на полу. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ведро в левую руку ", "  " zaderzhka " ")
+%vybor%("do На стене можно заметить раковину. ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " к стене швабру   ", "  " zaderzhka " ")
+%vybor%("me вылил" floor " из ведра воду в раковину     ", "  " zaderzhka " ")
+%vybor%("do Ведро  пустое.   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " швабру  ", "  " zaderzhka " ")
+%vybor%("me откры" floor " шкаф и поставил" floor " в него швабру с ведром", "  " zaderzhka " ")
+%vybor%("me закрыл" floor "  шкаф  ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Рана_1::
 SendPlay {Enter}
-SendChat("me достал" floor "  жгут из сумки ", "  " zaderzhka " ")
-SendChat("me затянул" floor " жгут выше кровотечения ", "  " zaderzhka " ")
-SendChat("me взял" floor " упаковку со шприцом и ампулу с обезболивающим ", "  " zaderzhka " ")
-SendChat("me достал" floor " шприц и выкинул" floor "  упаковку  ", "  " zaderzhka " ")
-SendChat("me заполнил" floor " обезболивающим шприц до нужной отметки ", "  " zaderzhka " ")
-SendChat("me вколол" floor " обезболивающее ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " шприц и ампулу ", "  " zaderzhka " ")
+%vybor%("me достал" floor "  жгут из сумки ", "  " zaderzhka " ")
+%vybor%("me затянул" floor " жгут выше кровотечения ", "  " zaderzhka " ")
+%vybor%("me взял" floor " упаковку со шприцом и ампулу с обезболивающим ", "  " zaderzhka " ")
+%vybor%("me достал" floor " шприц и выкинул" floor "  упаковку  ", "  " zaderzhka " ")
+%vybor%("me заполнил" floor " обезболивающим шприц до нужной отметки ", "  " zaderzhka " ")
+%vybor%("me вколол" floor " обезболивающее ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " шприц и ампулу ", "  " zaderzhka " ")
 Return
 
 :?:/Сознания_ПМП::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит вата, нашатырный спирт.", " " zaderzhka " ")
-SendChat("me раскрыв сумку, достал" floor " из неё ватку и бутыль с нашатырным спиртом", "  " zaderzhka " ")
-SendChat("me раскрыв бутыль с нашатырным спиртом, смочил" floor " ватку нашатырём ", "  " zaderzhka " ")
-SendChat("me убрав ватку от бутыля, поводил" floor " ей около носа пострадавшего ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит вата, нашатырный спирт.", " " zaderzhka " ")
+%vybor%("me раскрыв сумку, достал" floor " из неё ватку и бутыль с нашатырным спиртом", "  " zaderzhka " ")
+%vybor%("me раскрыв бутыль с нашатырным спиртом, смочил" floor " ватку нашатырём ", "  " zaderzhka " ")
+%vybor%("me убрав ватку от бутыля, поводил" floor " ей около носа пострадавшего ", "  " zaderzhka " ")
 Return
 
 :?:/Нос::
 SendPlay {Enter}
-SendChat("me открыл" floor " сумку ", "  " zaderzhka " ")
-SendChat("do В правом отделении сумки, лежит вата и бутылка с перекисью водорода. ", "  " zaderzhka " ")
-SendChat("me достал" floor " перекись водорода и вату из сумки ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату перекисью водорода  ", "  " zaderzhka " ")
-SendChat("me поднес" female " ватку к ноздре пострадавшего  ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " сумку ", "  " zaderzhka " ")
+%vybor%("do В правом отделении сумки, лежит вата и бутылка с перекисью водорода. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " перекись водорода и вату из сумки ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату перекисью водорода  ", "  " zaderzhka " ")
+%vybor%("me поднес" female " ватку к ноздре пострадавшего  ", "  " zaderzhka " ")
 Return
 
 
 :?:/Сколиоз_1::
 SendPlay {Enter}
-SendChat("say И так, приступим. ", "  " zaderzhka " ")
-SendChat("do В медицинской сумке лежит сколиометр.", " " zaderzhka " ")
-SendChat("me открыл" floor " сумку, после чего достал" floor " сколиометр ", "  " zaderzhka " ")
-SendChat("me прикладывает сколиометр к спинному позвоночнику пациента ", "  " zaderzhka " ")
-SendChat("me снимает показания с прибора ", "  " zaderzhka " ")
-SendChat("me смотрит результат ", "  " zaderzhka " ")
-SendChat("do Обнаружены отклонения?", "  " zaderzhka " ")
+%vybor%("say И так, приступим. ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит сколиометр.", " " zaderzhka " ")
+%vybor%("me открыл" floor " сумку, после чего достал" floor " сколиометр ", "  " zaderzhka " ")
+%vybor%("me прикладывает сколиометр к спинному позвоночнику пациента ", "  " zaderzhka " ")
+%vybor%("me снимает показания с прибора ", "  " zaderzhka " ")
+%vybor%("me смотрит результат ", "  " zaderzhka " ")
+%vybor%("do Обнаружены отклонения?", "  " zaderzhka " ")
 Return
 
 
 :?:/Сколиоз_2::
 SendPlay {Enter}
-SendChat("say Ох, да у вас искривление в позвоночнике. ", "  " zaderzhka " ")
-SendChat("say Рекомендую  Вам прийти к нам позже и заказать корсет. ", "  " zaderzhka " ")
+%vybor%("say Ох, да у вас искривление в позвоночнике. ", "  " zaderzhka " ")
+%vybor%("say Рекомендую  Вам прийти к нам позже и заказать корсет. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Сколиоз_3::
 SendPlay {Enter}
-SendChat("say У вас всё в порядке. ", "1000")
+%vybor%("say У вас всё в порядке. ", "1000")
 Return
 
 
 
 :?:/Нос_ПМП::
 SendPlay {Enter}
-SendChat("me наклонил" floor " голову пострадавшего вниз ", "  " zaderzhka " ")
-SendChat("me открыв медицинскую сумку, взял" floor " ледяной компресс  ", "  " zaderzhka " ")
-SendChat("me наложил" floor " ледяной компресс на нос пострадавшего ", "  " zaderzhka " ")
-SendChat("say Придерживайте компресс. ", "  " zaderzhka " ")
-SendChat("me взял" floor " из сумки вату и баночку с перекисью водорода ", "  " zaderzhka " ")
-SendChat("me открыв баночку с перекисью водорода, смочил" floor " вату  ", "  " zaderzhka " ")
-SendChat("me вставил" floor " вату в обе ноздри человека напротив ", "  " zaderzhka " ")
+%vybor%("me наклонил" floor " голову пострадавшего вниз ", "  " zaderzhka " ")
+%vybor%("me открыв медицинскую сумку, взял" floor " ледяной компресс  ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " ледяной компресс на нос пострадавшего ", "  " zaderzhka " ")
+%vybor%("say Придерживайте компресс. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " из сумки вату и баночку с перекисью водорода ", "  " zaderzhka " ")
+%vybor%("me открыв баночку с перекисью водорода, смочил" floor " вату  ", "  " zaderzhka " ")
+%vybor%("me вставил" floor " вату в обе ноздри человека напротив ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Нож::
 SendPlay {Enter}
-SendChat("do На столе лежат все необходимые инструменты для обработки раны.  ", "  " zaderzhka " ")
-SendChat("me осмотрел" floor " ножевое ранение пациента, проверил" floor " степень повреждения тканей. ", "  " zaderzhka " ")
-SendChat("me аккуратно очистил" floor " место ранения от грязи и остатков одежды ", "  " zaderzhka " ")
-SendChat("do В медицинской сумке лежат антисептики и ватные тампоны. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " антисептик и смочил вату ", "  " zaderzhka " ")
-SendChat("me обработал" floor " рану антисептиком, очистив её от возможных инфекций ", "  " zaderzhka " ")
-SendChat("do В стеллаже лежат шприцы и обезболивающие препараты. ", "  " zaderzhka " ")
-SendChat("me взял" floor " шприц с обезболивающим средством ", "  " zaderzhka " ")
-SendChat("me ввел" floor " обезболивающее в место ранения", "  " zaderzhka " ")
-SendChat("say Сейчас вам станет легче, боль утихнет через несколько минут. ", "  " zaderzhka " ")
-SendChat("do На столе лежит иглодержатель с нитью для швов. ", "  " zaderzhka " ")
-SendChat("me взял" floor " иглодержатель и нить ", "  " zaderzhka " ")
-SendChat("me аккуратно наложил" floor " швы на рану, сшивая края кожи ", "  " zaderzhka " ")
-SendChat("me обрезал" floor " концы нитей и закрепил" floor " их ", "  " zaderzhka " ")
-SendChat("do В стеллаже есть повязки и бинты. ", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильную повязку и аккуратно наложил" floor " её на рану ", "  " zaderzhka " ")
-SendChat("me закрепил" floor " повязку бинтом, фиксируя её на месте ранения ", "  " zaderzhka " ")
-SendChat("say Операция завершена, швы заживут в течение нескольких недель. ", "  " zaderzhka " ")
-SendChat("say Я вам пропишу антибиотики для предотвращения инфекции. ", "  " zaderzhka " ")
-SendChat("say Вам необходимо избегать нагрузки на раненую область и следить за состоянием раны. ", "  " zaderzhka " ")
+%vybor%("do На столе лежат все необходимые инструменты для обработки раны.  ", "  " zaderzhka " ")
+%vybor%("me осмотрел" floor " ножевое ранение пациента, проверил" floor " степень повреждения тканей. ", "  " zaderzhka " ")
+%vybor%("me аккуратно очистил" floor " место ранения от грязи и остатков одежды ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежат антисептики и ватные тампоны. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " антисептик и смочил вату ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " рану антисептиком, очистив её от возможных инфекций ", "  " zaderzhka " ")
+%vybor%("do В стеллаже лежат шприцы и обезболивающие препараты. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " шприц с обезболивающим средством ", "  " zaderzhka " ")
+%vybor%("me ввел" floor " обезболивающее в место ранения", "  " zaderzhka " ")
+%vybor%("say Сейчас вам станет легче, боль утихнет через несколько минут. ", "  " zaderzhka " ")
+%vybor%("do На столе лежит иглодержатель с нитью для швов. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " иглодержатель и нить ", "  " zaderzhka " ")
+%vybor%("me аккуратно наложил" floor " швы на рану, сшивая края кожи ", "  " zaderzhka " ")
+%vybor%("me обрезал" floor " концы нитей и закрепил" floor " их ", "  " zaderzhka " ")
+%vybor%("do В стеллаже есть повязки и бинты. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильную повязку и аккуратно наложил" floor " её на рану ", "  " zaderzhka " ")
+%vybor%("me закрепил" floor " повязку бинтом, фиксируя её на месте ранения ", "  " zaderzhka " ")
+%vybor%("say Операция завершена, швы заживут в течение нескольких недель. ", "  " zaderzhka " ")
+%vybor%("say Я вам пропишу антибиотики для предотвращения инфекции. ", "  " zaderzhka " ")
+%vybor%("say Вам необходимо избегать нагрузки на раненую область и следить за состоянием раны. ", "  " zaderzhka " ")
 Return
 
 :?:/Аппендикс::
 SendPlay {Enter}
-SendChat("me надел" floor " стерильные перчатки ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц с обезбаливающим, и сделал" floor " укол ", "  " zaderzhka " ")
-SendChat("do Около койки стоит аппарат для наркоза. ", "  " zaderzhka " ")
-SendChat("me me взял" floor " кислородную маску и надел" floor " её на пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель со стола, и сделал" floor " надрез ", "  " zaderzhka " ")
-SendChat("me выделил" floor " орган аппендикса щипцами, и удалил" floor " его скальпелем ", "  " zaderzhka " ")
-SendChat("me обработал" floor " полость ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола иглу с нитью и продел" floor " её ", "  " zaderzhka " ")
-SendChat("me аккуратно зашил" floor "  рану, и обрезал" floor " концы нити ", "  " zaderzhka " ")
-SendChat("me взял" floor " зелёнку со стола, и обработал" floor "  рану  ", "  " zaderzhka " ")
-SendChat("me взял" floor " бинт со стола, и перевязал" floor " рану ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат для наркоза ", "  " zaderzhka " ")
-SendChat("me снял" floor " маску с пациента ", "  " zaderzhka " ")
-SendChat("say тдыхайте и соблюдайте диету. Всего доброго. ", "  " zaderzhka " ")
+%vybor%("me надел" floor " стерильные перчатки ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц с обезбаливающим, и сделал" floor " укол ", "  " zaderzhka " ")
+%vybor%("do Около койки стоит аппарат для наркоза. ", "  " zaderzhka " ")
+%vybor%("me me взял" floor " кислородную маску и надел" floor " её на пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель со стола, и сделал" floor " надрез ", "  " zaderzhka " ")
+%vybor%("me выделил" floor " орган аппендикса щипцами, и удалил" floor " его скальпелем ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " полость ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола иглу с нитью и продел" floor " её ", "  " zaderzhka " ")
+%vybor%("me аккуратно зашил" floor "  рану, и обрезал" floor " концы нити ", "  " zaderzhka " ")
+%vybor%("me взял" floor " зелёнку со стола, и обработал" floor "  рану  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бинт со стола, и перевязал" floor " рану ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат для наркоза ", "  " zaderzhka " ")
+%vybor%("me снял" floor " маску с пациента ", "  " zaderzhka " ")
+%vybor%("say тдыхайте и соблюдайте диету. Всего доброго. ", "  " zaderzhka " ")
 Return
 
 :?:/ПМП_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит фонарик.", "  " zaderzhka " ")
-SendChat("me открыл" floor " медицинскую сумку и достал" floor " из нее фонарик", "  " zaderzhka " ")
-SendChat("me посветил" floor " фонариком в глаз пострадавшего ", "  " zaderzhka " ")
-SendChat("b При сотрясении мозга реакция зрачка отсутствует.", "  " zaderzhka " ")
-SendChat("do Зрачок пациента реагирует на свет?", "  " zaderzhka " ")
-SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит фонарик.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " медицинскую сумку и достал" floor " из нее фонарик", "  " zaderzhka " ")
+%vybor%("me посветил" floor " фонариком в глаз пострадавшего ", "  " zaderzhka " ")
+%vybor%("b При сотрясении мозга реакция зрачка отсутствует.", "  " zaderzhka " ")
+%vybor%("do Зрачок пациента реагирует на свет?", "  " zaderzhka " ")
+%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
 :?:/ПМП_2::
 SendPlay {Enter}
-SendChat("say У вас выявлено сотрясение мозга, вам необходимо отдохнуть, избегать яркого света и стресса.", "  " zaderzhka " ")
+%vybor%("say У вас выявлено сотрясение мозга, вам необходимо отдохнуть, избегать яркого света и стресса.", "  " zaderzhka " ")
 Return
 
 :?:/ПМП_3::
 SendPlay {Enter}
-SendChat("say Сотрясение мозга у вас не выявлено, поздравляю, но будьте осторожны.", "  " zaderzhka " ")
+%vybor%("say Сотрясение мозга у вас не выявлено, поздравляю, но будьте осторожны.", "  " zaderzhka " ")
 Return
 
 :?:/Челюсти_ПМП::
 SendPlay {Enter}
-SendChat("me открыв мед.сумку, достал" floor " впитывающую ткань  ", "  " zaderzhka " ")
-SendChat("me положил" floor " впитывающую ткань в рот пострадавшего   ", "  " zaderzhka " ")
-SendChat("me взял" floor " из мед.сумки два ледяных компресса   ", "  " zaderzhka " ")
-SendChat("me наложил" floor " ледяные компрессы на обе стороны челюсти   ", "  " zaderzhka " ")
-SendChat("me взял" floor " из мед.сумки повязку и наложил" floor " её на челюсть   ", "  " zaderzhka " ")
-SendChat("say Согласны на госпитализацию?   ", "  " zaderzhka " ")
+%vybor%("me открыв мед.сумку, достал" floor " впитывающую ткань  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " впитывающую ткань в рот пострадавшего   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " из мед.сумки два ледяных компресса   ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " ледяные компрессы на обе стороны челюсти   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " из мед.сумки повязку и наложил" floor " её на челюсть   ", "  " zaderzhka " ")
+%vybor%("say Согласны на госпитализацию?   ", "  " zaderzhka " ")
 Return
 
 
@@ -3581,740 +3577,740 @@ Return
 
 :?:/УЗИ::
 SendPlay {Enter}
-SendChat("do На столе лежат гель и ультразвуковой датчик.", "  " zaderzhka " ")
-SendChat("me обработал" floor " руки антисептиком и надел" floor " стерильные перчатки", "  " zaderzhka " ")
-SendChat("me нанёс" female " немного ультразвукового геля на живот пациента", "  " zaderzhka " ")
-SendChat("me взял" floor " ультразвуковой датчик и аккуратно провёл" floor " им по животу пациента", "  " zaderzhka " ")
-SendChat("do На экране появляется изображение внутренних органов пациента.", "  " zaderzhka " ")
-SendChat("me внимательно осмотрел" floor " изображение на экране, анализируя состояние органов", "  " zaderzhka " ")
-SendChat("do В комнате стоит монитор, на котором отображаются результаты УЗИ.", "  " zaderzhka " ")
-SendChat("me увеличил" floor " изображение, чтобы более детально рассмотреть органы пациента", "  " zaderzhka " ")
-SendChat("me сделал" floor " несколько снимков внутренних органов для дальнейшего анализа", "  " zaderzhka " ")
-SendChat("do В углу стоит медицинский журнал для записи результатов.", "  " zaderzhka " ")
-SendChat("me записал" floor " результаты исследования в медицинский журнал", "  " zaderzhka " ")
+%vybor%("do На столе лежат гель и ультразвуковой датчик.", "  " zaderzhka " ")
+%vybor%("me обработал" floor " руки антисептиком и надел" floor " стерильные перчатки", "  " zaderzhka " ")
+%vybor%("me нанёс" female " немного ультразвукового геля на живот пациента", "  " zaderzhka " ")
+%vybor%("me взял" floor " ультразвуковой датчик и аккуратно провёл" floor " им по животу пациента", "  " zaderzhka " ")
+%vybor%("do На экране появляется изображение внутренних органов пациента.", "  " zaderzhka " ")
+%vybor%("me внимательно осмотрел" floor " изображение на экране, анализируя состояние органов", "  " zaderzhka " ")
+%vybor%("do В комнате стоит монитор, на котором отображаются результаты УЗИ.", "  " zaderzhka " ")
+%vybor%("me увеличил" floor " изображение, чтобы более детально рассмотреть органы пациента", "  " zaderzhka " ")
+%vybor%("me сделал" floor " несколько снимков внутренних органов для дальнейшего анализа", "  " zaderzhka " ")
+%vybor%("do В углу стоит медицинский журнал для записи результатов.", "  " zaderzhka " ")
+%vybor%("me записал" floor " результаты исследования в медицинский журнал", "  " zaderzhka " ")
 Return
 
 :?:/Плод_1::
 SendPlay {Enter}
-SendChat("do В углу палаты стоит гинекологическое кресло.", "  " zaderzhka " ")
-SendChat("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
+%vybor%("do В углу палаты стоит гинекологическое кресло.", "  " zaderzhka " ")
+%vybor%("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
 Return
 :?:/Плод_2::
 SendPlay {Enter}
-SendChat("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки ", "  " zaderzhka " ")
-SendChat("do Около  стоит аппарат для наркоза. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кислородную маску  ", "  " zaderzhka " ")
-SendChat("me надел" floor " маску на пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат для наркоза ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола перекись водорода и ватку, и обработал" floor " место операции ", "  " zaderzhka " ")
-SendChat("do На стойке висит фетоскоп. ", "  " zaderzhka " ")
-SendChat("me снял" floor " фетоскоп со стойки ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить фетоскоп в брюшную стенку ", "  " zaderzhka " ")
-SendChat("me начал" floor " осмотр плода ", "  " zaderzhka " ")
-SendChat("do Обнаружены отклонения? ", "  " zaderzhka " ")
+%vybor%("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки ", "  " zaderzhka " ")
+%vybor%("do Около  стоит аппарат для наркоза. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кислородную маску  ", "  " zaderzhka " ")
+%vybor%("me надел" floor " маску на пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат для наркоза ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола перекись водорода и ватку, и обработал" floor " место операции ", "  " zaderzhka " ")
+%vybor%("do На стойке висит фетоскоп. ", "  " zaderzhka " ")
+%vybor%("me снял" floor " фетоскоп со стойки ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить фетоскоп в брюшную стенку ", "  " zaderzhka " ")
+%vybor%("me начал" floor " осмотр плода ", "  " zaderzhka " ")
+%vybor%("do Обнаружены отклонения? ", "  " zaderzhka " ")
 Return
 
 :?:/Плод_3::
 SendPlay {Enter}
-SendChat("me начал" floor " вынимать фетоскоп ", "  " zaderzhka " ")
-SendChat("me положил" floor " фетоскоп  в аппарат для дезинфекции  ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат для наркоза", "  " zaderzhka " ")
-SendChat("me снял" floor " маску с человека ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вынимать фетоскоп ", "  " zaderzhka " ")
+%vybor%("me положил" floor " фетоскоп  в аппарат для дезинфекции  ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат для наркоза", "  " zaderzhka " ")
+%vybor%("me снял" floor " маску с человека ", "  " zaderzhka " ")
 Return
 
 :?:/Плод_4::
 SendPlay {Enter}
-SendChat("say Есть пороки развития. ", " " zaderzhka " ")
+%vybor%("say Есть пороки развития. ", " " zaderzhka " ")
 Return
 
 :?:/Плод_5::
 SendPlay {Enter}
-SendChat("say Все хорошо. ", " " zaderzhka " ")
+%vybor%("say Все хорошо. ", " " zaderzhka " ")
 Return
 
 :?:/Стерилизация::
 SendPlay {Enter}
-SendChat("do У стены стоит шкаф. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("do На верхней полке лежат перчатки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки с полки ", "  " zaderzhka " ")
-SendChat("me надел" floor "перчатки  ", "  " zaderzhka " ")
-SendChat("do Около койки стоит аппарат для наркоза. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кислородную маску ", "  " zaderzhka " ")
-SendChat("me надел" floor " маску на пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат для наркоза ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель ", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез в области брюшной полости ", "  " zaderzhka " ")
-SendChat("me аккуратно расставил" floor " ткани, чтобы добраться до фаллопиевых труб", "  " zaderzhka " ")
-SendChat("me взял" floor " кольца ", "  " zaderzhka " ")
-SendChat("me начал" floor " перетягивать фаллопиевы трубы ", "  " zaderzhka " ")
-SendChat("me остановил" floor " кровотечение  ", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол ", "  " zaderzhka " ")
-SendChat("me зашил" floor " рану ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат для наркоза ", "  " zaderzhka " ")
-SendChat("me снял" floor " маску с пациента ", "  " zaderzhka " ")
-SendChat("say Операция завершена. Отдыхайте, все будет хорошо. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит шкаф. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("do На верхней полке лежат перчатки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки с полки ", "  " zaderzhka " ")
+%vybor%("me надел" floor "перчатки  ", "  " zaderzhka " ")
+%vybor%("do Около койки стоит аппарат для наркоза. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кислородную маску ", "  " zaderzhka " ")
+%vybor%("me надел" floor " маску на пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат для наркоза ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез в области брюшной полости ", "  " zaderzhka " ")
+%vybor%("me аккуратно расставил" floor " ткани, чтобы добраться до фаллопиевых труб", "  " zaderzhka " ")
+%vybor%("me взял" floor " кольца ", "  " zaderzhka " ")
+%vybor%("me начал" floor " перетягивать фаллопиевы трубы ", "  " zaderzhka " ")
+%vybor%("me остановил" floor " кровотечение  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол ", "  " zaderzhka " ")
+%vybor%("me зашил" floor " рану ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат для наркоза ", "  " zaderzhka " ")
+%vybor%("me снял" floor " маску с пациента ", "  " zaderzhka " ")
+%vybor%("say Операция завершена. Отдыхайте, все будет хорошо. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Клизма_1::
 SendPlay {Enter}
-SendChat("do В шкафу необходимые вещи. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф   ", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовую пелёнку  ", "  " zaderzhka " ")
-SendChat("me постелил" floor " пелёнку на койку ", "  " zaderzhka " ")
-SendChat("say Снимите всю нижнюю одежду.  ", "  " zaderzhka " ")
-SendChat("say Ложитесь на левый бок, согните ноги.  ", "  " zaderzhka " ")
+%vybor%("do В шкафу необходимые вещи. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " одноразовую пелёнку  ", "  " zaderzhka " ")
+%vybor%("me постелил" floor " пелёнку на койку ", "  " zaderzhka " ")
+%vybor%("say Снимите всю нижнюю одежду.  ", "  " zaderzhka " ")
+%vybor%("say Ложитесь на левый бок, согните ноги.  ", "  " zaderzhka " ")
 Return
 
 :?:/Клизма_2::
 SendPlay {Enter}
-SendChat("me взял" floor " клизму ", "  " zaderzhka " ")
-SendChat("do В стеллаже баночка с раствором Энема клин. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " стеллаж   ", "  " zaderzhka " ")
-SendChat("me взял" floor " баночку раствором   ", "  " zaderzhka " ")
-SendChat("me открыв баночку, аккуратно ввёл" floor " раствор в клизму   ", "  " zaderzhka " ")
-SendChat("me поставил" floor " баночку с оставшимся раствором в стеллаж   ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " стеллаж   ", "  " zaderzhka " ")
-SendChat("me взял" floor " вазелиновое масло из шкафа   ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф   ", "  " zaderzhka " ")
-SendChat("me смазал" floor " конец трубки клизмы вазелиновым маслом  ", "  " zaderzhka " ")
-SendChat("me осторожно вводит трубку в задний проход пациента   ", "  " zaderzhka " ")
-SendChat("me начал" floor " водить раствор в пациента   ", "  " zaderzhka " ")
-SendChat("me вытащил" floor " трубку из заднего прохода    ", "  " zaderzhka " ")
-SendChat("say Садитесь на туалет и ожидайте выхода каловых масс. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " клизму ", "  " zaderzhka " ")
+%vybor%("do В стеллаже баночка с раствором Энема клин. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " стеллаж   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " баночку раствором   ", "  " zaderzhka " ")
+%vybor%("me открыв баночку, аккуратно ввёл" floor " раствор в клизму   ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " баночку с оставшимся раствором в стеллаж   ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " стеллаж   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " вазелиновое масло из шкафа   ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф   ", "  " zaderzhka " ")
+%vybor%("me смазал" floor " конец трубки клизмы вазелиновым маслом  ", "  " zaderzhka " ")
+%vybor%("me осторожно вводит трубку в задний проход пациента   ", "  " zaderzhka " ")
+%vybor%("me начал" floor " водить раствор в пациента   ", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " трубку из заднего прохода    ", "  " zaderzhka " ")
+%vybor%("say Садитесь на туалет и ожидайте выхода каловых масс. ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Нога_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит вата, перекись водорода.", " " zaderzhka " ")
-SendChat("me открыв мед.сумку, достал" floor " вату и баночку с перекисью водорода  ", "  " zaderzhka " ")
-SendChat("me открыв баночку с перекисью водорода, смочил" floor " ей вату  ", "  " zaderzhka " ")
-SendChat("me поднёс" Female " вату к ране и тщательно обработал" floor "  ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " вату на землю  ", "  " zaderzhka " ")
-SendChat("me закрыв баночку с перекисью водорода, убрал" floor " её на землю  ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " мед.сумку  ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит вата, перекись водорода.", " " zaderzhka " ")
+%vybor%("me открыв мед.сумку, достал" floor " вату и баночку с перекисью водорода  ", "  " zaderzhka " ")
+%vybor%("me открыв баночку с перекисью водорода, смочил" floor " ей вату  ", "  " zaderzhka " ")
+%vybor%("me поднёс" Female " вату к ране и тщательно обработал" floor "  ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " вату на землю  ", "  " zaderzhka " ")
+%vybor%("me закрыв баночку с перекисью водорода, убрал" floor " её на землю  ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " мед.сумку  ", "  " zaderzhka " ")
 Return
 
 :?:/Нога_2::
 SendPlay {Enter}
-SendChat("me открыв мед.сумку, взял" floor " ледяной компресс  ", "  " zaderzhka " ")
-SendChat("me наложил" floor " ледяной компресс на ногу пострадавшего  ", "  " zaderzhka " ")
-SendChat("say Придерживайте компресс.   ", "  " zaderzhka " ")
-SendChat("me взял" floor " из мед.сумки давящую повязку и наложил" floor " её на место вывиха  ", "  " zaderzhka " ")
-SendChat("me тщательно зафиксировал" floor " повязку   ", "  " zaderzhka " ")
+%vybor%("me открыв мед.сумку, взял" floor " ледяной компресс  ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " ледяной компресс на ногу пострадавшего  ", "  " zaderzhka " ")
+%vybor%("say Придерживайте компресс.   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " из мед.сумки давящую повязку и наложил" floor " её на место вывиха  ", "  " zaderzhka " ")
+%vybor%("me тщательно зафиксировал" floor " повязку   ", "  " zaderzhka " ")
 Return
 
 :?:/Венозное_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит жгут, перекись водорода.", " " zaderzhka " ")
-SendChat("me раскрыв мед.сумку, достал" floor " из неё жгут с ремешком и бутыль с перекисью водорода  ", "  " zaderzhka " ")
-SendChat("me раскрыв бутыль с перекисью водорода, накапал" floor " немного перекиси на рану  ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " бутыль с перекисью и положил" floor " его в мед.сумку   ", "  " zaderzhka " ")
-SendChat("me расстегнув жгут до максимального значения, просунул" floor " руку пострадавшего в жгут ", "  " zaderzhka " ")
-SendChat("me застегнул" floor " ремешок жгута так, чтобы он сдавливал" floor " поверхность над раной  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из мед.сумки стерильную повязку, после чего наложил" floor " её на ранение  ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит жгут, перекись водорода.", " " zaderzhka " ")
+%vybor%("me раскрыв мед.сумку, достал" floor " из неё жгут с ремешком и бутыль с перекисью водорода  ", "  " zaderzhka " ")
+%vybor%("me раскрыв бутыль с перекисью водорода, накапал" floor " немного перекиси на рану  ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " бутыль с перекисью и положил" floor " его в мед.сумку   ", "  " zaderzhka " ")
+%vybor%("me расстегнув жгут до максимального значения, просунул" floor " руку пострадавшего в жгут ", "  " zaderzhka " ")
+%vybor%("me застегнул" floor " ремешок жгута так, чтобы он сдавливал" floor " поверхность над раной  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из мед.сумки стерильную повязку, после чего наложил" floor " её на ранение  ", "  " zaderzhka " ")
 Return
 
 :?:/Артериальное_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит жгут, перекись водорода.", " " zaderzhka " ")
-SendChat("me раскрыв мед.сумку, достал" floor " из неё жгут с резиновым ремешком и бутыль с перекисью водорода ", "  " zaderzhka " ")
-SendChat("me отложил" floor " бутыль с перекисью на землю, после чего сильно зажал" floor " артерию около ранения   ", "  " zaderzhka " ")
-SendChat("me держа руку на артерии, надел" floor " жгут на руку пострадавшего ", "  " zaderzhka " ")
-SendChat("me отпустил" floor " руку с артерии и сильно застегнул жгут   ", "  " zaderzhka " ")
-SendChat("me взяв" floor " бутыль с перекисью с земли, открыл" floor " его и накапал" floor " немного перекиси на ранку ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " бутыль с перекисью и положил" floor " его в мед.сумку   ", "  " zaderzhka " ")
-SendChat("me достал" floor " из мед.сумки стерильную повязку, после чего наложил" floor " её на ранение ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит жгут, перекись водорода.", " " zaderzhka " ")
+%vybor%("me раскрыв мед.сумку, достал" floor " из неё жгут с резиновым ремешком и бутыль с перекисью водорода ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " бутыль с перекисью на землю, после чего сильно зажал" floor " артерию около ранения   ", "  " zaderzhka " ")
+%vybor%("me держа руку на артерии, надел" floor " жгут на руку пострадавшего ", "  " zaderzhka " ")
+%vybor%("me отпустил" floor " руку с артерии и сильно застегнул жгут   ", "  " zaderzhka " ")
+%vybor%("me взяв" floor " бутыль с перекисью с земли, открыл" floor " его и накапал" floor " немного перекиси на ранку ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " бутыль с перекисью и положил" floor " его в мед.сумку   ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из мед.сумки стерильную повязку, после чего наложил" floor " её на ранение ", "  " zaderzhka " ")
 Return
 
 :?:/Пуля_ПМП::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит бинт, жгут и перекись водорода.", " " zaderzhka " ")
-SendChat("me расстегнув сумку, достал" floor " из неё перекись водорода, ватку, бинт и жгут ", "  " zaderzhka " ")
-SendChat("me открыв бутыль с перекисью водорода, смочил" floor " ватку перекисью ", "  " zaderzhka " ")
-SendChat("me тщательно протёр" Female " место вхождения пули ваткой ", "  " zaderzhka " ")
-SendChat("do В медицинской сумке можно заметить небольшой пакетик для мусора. ", "  " zaderzhka " ")
-SendChat("me кинул" floor " ватку в пакетик и сложил" floor " перекись водорода в сумку ", "  " zaderzhka " ")
-SendChat("me расстегнув жгут, надел" floor " его чуть выше ранения ", "  " zaderzhka " ")
-SendChat("me затянул" floor " ремешок жгута до среднего значения ", "  " zaderzhka " ")
-SendChat("me отмотав нужное количество бинта, оторвал" floor " его ", "  " zaderzhka " ")
-SendChat("me перебинтовал" floor " ранение, после чего сложил" floor " оставшийся бинт в сумку ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит бинт, жгут и перекись водорода.", " " zaderzhka " ")
+%vybor%("me расстегнув сумку, достал" floor " из неё перекись водорода, ватку, бинт и жгут ", "  " zaderzhka " ")
+%vybor%("me открыв бутыль с перекисью водорода, смочил" floor " ватку перекисью ", "  " zaderzhka " ")
+%vybor%("me тщательно протёр" Female " место вхождения пули ваткой ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке можно заметить небольшой пакетик для мусора. ", "  " zaderzhka " ")
+%vybor%("me кинул" floor " ватку в пакетик и сложил" floor " перекись водорода в сумку ", "  " zaderzhka " ")
+%vybor%("me расстегнув жгут, надел" floor " его чуть выше ранения ", "  " zaderzhka " ")
+%vybor%("me затянул" floor " ремешок жгута до среднего значения ", "  " zaderzhka " ")
+%vybor%("me отмотав нужное количество бинта, оторвал" floor " его ", "  " zaderzhka " ")
+%vybor%("me перебинтовал" floor " ранение, после чего сложил" floor " оставшийся бинт в сумку ", "  " zaderzhka " ")
 Return
 
 :?:/Вена_1::
 SendPlay {Enter}
-SendChat("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-SendChat("me нанёс" Female " антисептик на руки и спешно растёр" Female " его", "  " zaderzhka " ")
-SendChat("do В кармане лежит пара стерильных перчаток.", "  " zaderzhka " ")
-SendChat("me вынул" floor " из кармана перчатки и натянул" floor " их на руки", "  " zaderzhka " ")
-SendChat("do На столе лежат жгут, баночка антисептика, ватка, шприц и лоток с колбами.", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола жгут", "  " zaderzhka " ")
-SendChat("me завязал" floor " жгут на руке пациента", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола ватку и антисептик", "  " zaderzhka " ")
-SendChat("me нанёс" Female " антисептик на ватку", "  " zaderzhka " ")
-SendChat("me обработал" floor " место укола ваткой", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, уколол" floor " в неё шприцом", "  " zaderzhka " ")
-SendChat("me шприцом взял" floor " кровь из вены", "  " zaderzhka " ")
-SendChat("me приложил" floor "" floor " ватку на место укола", "  " zaderzhka " ")
-SendChat("me вытянул" floor " шприц из вены", "  " zaderzhka " ")
-SendChat("say Держите ватку 5 минуты.", "  " zaderzhka " ")
-SendChat("me взял" floor " из лотка чистую колбу", "  " zaderzhka " ")
-SendChat("me перелил" floor " кровь из шприца в колбу", "  " zaderzhka " ")
-SendChat("me поставил" floor " колбу в специальный раздел лотка", "  " zaderzhka " ")
-SendChat("do Какая группа крови и резус-фактор у человека?    ", "  " zaderzhka " ")
-SendChat("do Рядом стоят урны для отходов.  ", "  " zaderzhka " ")
-SendChat("me снял" floor " перчатки с рук, затем выкинул" floor " их в урну", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
+%vybor%("me нанёс" Female " антисептик на руки и спешно растёр" Female " его", "  " zaderzhka " ")
+%vybor%("do В кармане лежит пара стерильных перчаток.", "  " zaderzhka " ")
+%vybor%("me вынул" floor " из кармана перчатки и натянул" floor " их на руки", "  " zaderzhka " ")
+%vybor%("do На столе лежат жгут, баночка антисептика, ватка, шприц и лоток с колбами.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола жгут", "  " zaderzhka " ")
+%vybor%("me завязал" floor " жгут на руке пациента", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола ватку и антисептик", "  " zaderzhka " ")
+%vybor%("me нанёс" Female " антисептик на ватку", "  " zaderzhka " ")
+%vybor%("me обработал" floor " место укола ваткой", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, уколол" floor " в неё шприцом", "  " zaderzhka " ")
+%vybor%("me шприцом взял" floor " кровь из вены", "  " zaderzhka " ")
+%vybor%("me приложил" floor "" floor " ватку на место укола", "  " zaderzhka " ")
+%vybor%("me вытянул" floor " шприц из вены", "  " zaderzhka " ")
+%vybor%("say Держите ватку 5 минуты.", "  " zaderzhka " ")
+%vybor%("me взял" floor " из лотка чистую колбу", "  " zaderzhka " ")
+%vybor%("me перелил" floor " кровь из шприца в колбу", "  " zaderzhka " ")
+%vybor%("me поставил" floor " колбу в специальный раздел лотка", "  " zaderzhka " ")
+%vybor%("do Какая группа крови и резус-фактор у человека?    ", "  " zaderzhka " ")
+%vybor%("do Рядом стоят урны для отходов.  ", "  " zaderzhka " ")
+%vybor%("me снял" floor " перчатки с рук, затем выкинул" floor " их в урну", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Капельница::
 SendPlay {Enter}
-SendChat("do На столе лежат ватка, Хлоргексидин, упакованный катетер и пакеты с препаратом.", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола катетер, ватку и Хлоргексидин", "  " zaderzhka " ")
-SendChat("me опрыснул" floor " Хлоргексидином ватку", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протер" female " ваткой место укола", "  " zaderzhka " ")
-SendChat("me вытащив катетер из упаковки, снял" floor " защитный колпачок", "  " zaderzhka " ")
-SendChat("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
-SendChat("me выкинул" floor " использованную ватку в урну", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола нужный пакет для капельницы", "  " zaderzhka " ")
-SendChat("do Штатив стоит у стены.", "  " zaderzhka " ")
-SendChat("me взяв штатив в руки, поставил" floor " его рядом с пациентом ", "  " zaderzhka " ")
-SendChat("me повесил" floor " пакет на штатив", "  " zaderzhka " ")
-SendChat("me подключил" floor " капельницу к катетеру", "  " zaderzhka " ")
-SendChat("me подрегулировал" floor " скорость капельницы	 ", "  " zaderzhka " ")
-SendChat("say Следите за уровнем жидкости в пакете, сообщите, если почувствуете дискомфорт. ", "  " zaderzhka " ")
-SendChat("say Если потребуется помощь, позовите.", "  " zaderzhka " ")
+%vybor%("do На столе лежат ватка, Хлоргексидин, упакованный катетер и пакеты с препаратом.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола катетер, ватку и Хлоргексидин", "  " zaderzhka " ")
+%vybor%("me опрыснул" floor " Хлоргексидином ватку", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протер" female " ваткой место укола", "  " zaderzhka " ")
+%vybor%("me вытащив катетер из упаковки, снял" floor " защитный колпачок", "  " zaderzhka " ")
+%vybor%("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " использованную ватку в урну", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола нужный пакет для капельницы", "  " zaderzhka " ")
+%vybor%("do Штатив стоит у стены.", "  " zaderzhka " ")
+%vybor%("me взяв штатив в руки, поставил" floor " его рядом с пациентом ", "  " zaderzhka " ")
+%vybor%("me повесил" floor " пакет на штатив", "  " zaderzhka " ")
+%vybor%("me подключил" floor " капельницу к катетеру", "  " zaderzhka " ")
+%vybor%("me подрегулировал" floor " скорость капельницы	 ", "  " zaderzhka " ")
+%vybor%("say Следите за уровнем жидкости в пакете, сообщите, если почувствуете дискомфорт. ", "  " zaderzhka " ")
+%vybor%("say Если потребуется помощь, позовите.", "  " zaderzhka " ")
 Return
 
 :?:/ФГДС_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте. Сейчас я проведу Вам гастроскопию.  Ложитесь на кушеткуна левый бок.  ", "  " zaderzhka " ")
-SendChat("do На столике лежит капа.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " капу в руку  ", "  " zaderzhka " ")
-SendChat("Так... Вот, откройте ротзакусите капу.  ", "  " zaderzhka " ")
+%vybor%("say Здравствуйте. Сейчас я проведу Вам гастроскопию.  Ложитесь на кушеткуна левый бок.  ", "  " zaderzhka " ")
+%vybor%("do На столике лежит капа.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " капу в руку  ", "  " zaderzhka " ")
+%vybor%("Так... Вот, откройте ротзакусите капу.  ", "  " zaderzhka " ")
 
 Return
 
 :?:/ФГДС_2::
 SendPlay {Enter}
-SendChat("me вставил" floor " капу в рот пациента  ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить гастроскоп в пищевод пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения в пищеводе?  ", "  " zaderzhka " ")
-SendChat("me продолжил" floor " вводить гастроскоп в желудок пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения в желудке?  ", "  " zaderzhka " ")
-SendChat("me осмотрел" floor " двенадцатипёрстную кишку ", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения в двенадцатипёрстной кишке?  ", "  " zaderzhka " ")
-SendChat("me начал" floor " вынимать гастроскоп из желудка пациента ", "  " zaderzhka " ")
-SendChat("me положил" floor " гастроскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
+%vybor%("me вставил" floor " капу в рот пациента  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить гастроскоп в пищевод пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения в пищеводе?  ", "  " zaderzhka " ")
+%vybor%("me продолжил" floor " вводить гастроскоп в желудок пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения в желудке?  ", "  " zaderzhka " ")
+%vybor%("me осмотрел" floor " двенадцатипёрстную кишку ", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения в двенадцатипёрстной кишке?  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вынимать гастроскоп из желудка пациента ", "  " zaderzhka " ")
+%vybor%("me положил" floor " гастроскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
 Return
 
 :?:/ФКС_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте. Сейчас, я проведу Вам, колоноскопию. ", "  " zaderzhka " ")
-SendChat("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки  ", "  " zaderzhka " ")
-SendChat("do На стойке висит эндоскоп. ", "  " zaderzhka " ")
-SendChat("me снял" floor " эндоскоп со стойки ", "  " zaderzhka " ")
-SendChat("me взял" floor " смазку в руку ", "  " zaderzhka " ")
-SendChat("me смазал" floor " эндоскоп смазкой ", "  " zaderzhka " ")
-SendChat("me поставил" floor " смазку на стол ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить эндоскоп в ректальное отверстие пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " визуальный осмотр состояния прямой кишки ", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения?", "  " zaderzhka " ")
-SendChat("me начал" floor " вынимать эндоскоп из ректального отверстия пациента ", "  " zaderzhka " ")
-SendChat("me положил" floor "  эндоскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
+%vybor%("say Здравствуйте. Сейчас, я проведу Вам, колоноскопию. ", "  " zaderzhka " ")
+%vybor%("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки  ", "  " zaderzhka " ")
+%vybor%("do На стойке висит эндоскоп. ", "  " zaderzhka " ")
+%vybor%("me снял" floor " эндоскоп со стойки ", "  " zaderzhka " ")
+%vybor%("me взял" floor " смазку в руку ", "  " zaderzhka " ")
+%vybor%("me смазал" floor " эндоскоп смазкой ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " смазку на стол ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить эндоскоп в ректальное отверстие пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " визуальный осмотр состояния прямой кишки ", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения?", "  " zaderzhka " ")
+%vybor%("me начал" floor " вынимать эндоскоп из ректального отверстия пациента ", "  " zaderzhka " ")
+%vybor%("me положил" floor "  эндоскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
 Return
 
 :?:/ФКС_2::
 SendPlay {Enter}
-SendChat("say К сожалению, у Вас есть некоторые заболевания прямой кишки. ", " " zaderzhka " ")
-SendChat("say Можете одеваться. ", " " zaderzhka " ")
+%vybor%("say К сожалению, у Вас есть некоторые заболевания прямой кишки. ", " " zaderzhka " ")
+%vybor%("say Можете одеваться. ", " " zaderzhka " ")
 Return
 
 :?:/ФКС_3::
 SendPlay {Enter}
-SendChat("say Вашей прямой кишкой всё в порядке.", " " zaderzhka " ")
-SendChat("say Можете одеваться. ", " " zaderzhka " ")
+%vybor%("say Вашей прямой кишкой всё в порядке.", " " zaderzhka " ")
+%vybor%("say Можете одеваться. ", " " zaderzhka " ")
 Return
 
 :?:/Зонд_1::
 SendPlay {Enter}
-SendChat("do На столе лежит урогенитальный зонд. ", "  " zaderzhka " ")
-SendChat("me взял" floor " урогенитальный зонд со стола ", "  " zaderzhka " ")
-SendChat("say Сейчас, будет немного неприятно, потерпите. ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " урогенитальный зонд в уретру пациента  ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробу с внутренней стенки уретры ", "  " zaderzhka " ")
-SendChat("me достал" floor " урогенитальный зонд из уретры человека ", "  " zaderzhka " ")
-SendChat("do На столе стоит микробиологический анализатор. ", "  " zaderzhka " ")
-SendChat("me опустил" floor " урогенитальный зонд в анализатор ", "  " zaderzhka " ")
-SendChat("me включил" floor " микробиологический анализатор ", "  " zaderzhka " ")
-SendChat("me запустил" floor " процесс диагностики мазка  ", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+%vybor%("do На столе лежит урогенитальный зонд. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " урогенитальный зонд со стола ", "  " zaderzhka " ")
+%vybor%("say Сейчас, будет немного неприятно, потерпите. ", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " урогенитальный зонд в уретру пациента  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробу с внутренней стенки уретры ", "  " zaderzhka " ")
+%vybor%("me достал" floor " урогенитальный зонд из уретры человека ", "  " zaderzhka " ")
+%vybor%("do На столе стоит микробиологический анализатор. ", "  " zaderzhka " ")
+%vybor%("me опустил" floor " урогенитальный зонд в анализатор ", "  " zaderzhka " ")
+%vybor%("me включил" floor " микробиологический анализатор ", "  " zaderzhka " ")
+%vybor%("me запустил" floor " процесс диагностики мазка  ", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
 Return
 
 :?:/Зонд_2::
 SendPlay {Enter}
-SendChat("say К сожалению, у Вас имеется шанс заболевания венерическим заболеванием. ", " " zaderzhka " ")
-SendChat("say Как можно скорее обратитесь к своему лечащему врачу. ", " " zaderzhka " ")
+%vybor%("say К сожалению, у Вас имеется шанс заболевания венерическим заболеванием. ", " " zaderzhka " ")
+%vybor%("say Как можно скорее обратитесь к своему лечащему врачу. ", " " zaderzhka " ")
 Return
 
 :?:/Зонд_3::
 SendPlay {Enter}
-SendChat("say Вы здоровы можете одеваться. ", " " zaderzhka " ")
+%vybor%("say Вы здоровы можете одеваться. ", " " zaderzhka " ")
 Return
 
 :?:/Палец_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте. Вы на взятие крови? ", " " zaderzhka " ")
+%vybor%("say Здравствуйте. Вы на взятие крови? ", " " zaderzhka " ")
 Return
 
 :?:/Палец_2::
 SendPlay {Enter}
-SendChat("say Хорошо, давайте сюда свою медицинскую карту. ", " " zaderzhka " ")
+%vybor%("say Хорошо, давайте сюда свою медицинскую карту. ", " " zaderzhka " ")
 Return
 
 :?:/Палец_3::
 SendPlay {Enter}
-SendChat("me взял" floor " медицинскую карту человека ", " " zaderzhka " ")
-SendChat("me положил" floor " на стол медицинскую карту ", " " zaderzhka " ")
+%vybor%("me взял" floor " медицинскую карту человека ", " " zaderzhka " ")
+%vybor%("me положил" floor " на стол медицинскую карту ", " " zaderzhka " ")
 Return
 
 :?:/Палец_4::
 SendPlay {Enter}
-SendChat("say Садитесь на кушетку, кладите правую руку на стол. ", " " zaderzhka " ")
+%vybor%("say Садитесь на кушетку, кладите правую руку на стол. ", " " zaderzhka " ")
 Return
 
 :?:/Палец_5::
 SendPlay {Enter}
-SendChat("do На столе лежат медицинские перчатки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки со стола ", "  " zaderzhka " ")
-SendChat("me надел" floor " медицинские перчатки ", "  " zaderzhka " ")
-SendChat("say Будем брать кровь из безымянного пальца. ", "  " zaderzhka " ")
-SendChat("do На столе стоит банка со спиртовыми шариками. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " банку ", "  " zaderzhka " ")
-SendChat("me взял" floor " один ватный шарик в руку ", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать безымянный палец ", "  " zaderzhka " ")
-SendChat("do На столе лежат стерильные скарификаторы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " скарификатор в руку ", "  " zaderzhka " ")
-SendChat("me быстрым движением проколол" floor " палец пациенту ", "  " zaderzhka " ")
-SendChat("me взял" floor " стекло для взятия мазка ", "  " zaderzhka " ")
-SendChat("me сделал" floor " мазок крови по стеклу ", "  " zaderzhka " ")
-SendChat("do На столе лежит спиртовой шарик. ", "  " zaderzhka " ")
-SendChat("me приложил" floor " спиртовой шарик к проколу ", "  " zaderzhka " ")
-SendChat("say say Держите палец неподвижно и избегайте физической нагрузки на руку в течение 10 минут.  ", "  " zaderzhka " ")
+%vybor%("do На столе лежат медицинские перчатки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки со стола ", "  " zaderzhka " ")
+%vybor%("me надел" floor " медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("say Будем брать кровь из безымянного пальца. ", "  " zaderzhka " ")
+%vybor%("do На столе стоит банка со спиртовыми шариками. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " банку ", "  " zaderzhka " ")
+%vybor%("me взял" floor " один ватный шарик в руку ", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать безымянный палец ", "  " zaderzhka " ")
+%vybor%("do На столе лежат стерильные скарификаторы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скарификатор в руку ", "  " zaderzhka " ")
+%vybor%("me быстрым движением проколол" floor " палец пациенту ", "  " zaderzhka " ")
+%vybor%("me взял" floor " стекло для взятия мазка ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " мазок крови по стеклу ", "  " zaderzhka " ")
+%vybor%("do На столе лежит спиртовой шарик. ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " спиртовой шарик к проколу ", "  " zaderzhka " ")
+%vybor%("say say Держите палец неподвижно и избегайте физической нагрузки на руку в течение 10 минут.  ", "  " zaderzhka " ")
 Return
 
 :?:/Палец_6::
 SendPlay {Enter}
-SendChat("do На столе лежит карточка пациента. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " карточку пациента ", "  " zaderzhka " ")
-SendChat("do На столе лежит ручка.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ручку в руку ", "  " zaderzhka " ")
-SendChat("me внес" Female " данные о проведении процедуры в карточку ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " карточку ", "  " zaderzhka " ")
-SendChat("me взял" floor " карточку в руку ", "  " zaderzhka " ")
-SendChat("me передал" floor " карточку человеку напротив  ", "  " zaderzhka " ")
-SendChat("say За результатами приходите через день-два.  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит карточка пациента. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " карточку пациента ", "  " zaderzhka " ")
+%vybor%("do На столе лежит ручка.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ручку в руку ", "  " zaderzhka " ")
+%vybor%("me внес" Female " данные о проведении процедуры в карточку ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " карточку ", "  " zaderzhka " ")
+%vybor%("me взял" floor " карточку в руку ", "  " zaderzhka " ")
+%vybor%("me передал" floor " карточку человеку напротив  ", "  " zaderzhka " ")
+%vybor%("say За результатами приходите через день-два.  ", "  " zaderzhka " ")
 Return
 
 :?:/Сахар_1::
 SendPlay {Enter}
-SendChat("do В правом кармане одноразовые перчатки. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из правого кармана перчатки ", "  " zaderzhka " ")
-SendChat("me одел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Давайте правую руку.  ", "  " zaderzhka " ")
+%vybor%("do В правом кармане одноразовые перчатки. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из правого кармана перчатки ", "  " zaderzhka " ")
+%vybor%("me одел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Давайте правую руку.  ", "  " zaderzhka " ")
 Return
 
 :?:/Сахар_2::
 SendPlay {Enter}
-SendChat("do На тумбе лежит всё необходимое для анализа.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " с тумбы ватку и спирт  ", "  " zaderzhka " ")
-SendChat("me аккуратно открыл" floor " спирт, затем смочил" floor " ватку  ", "  " zaderzhka " ")
-SendChat("me лёгким движением руки обработал" floor " место сбора крови  ", "  " zaderzhka " ")
-SendChat("me отложил" floor " ватку на стол  ", "  " zaderzhka " ")
-SendChat("do На тумбе перед сотрудником лежит новый скарификатор.  ", "  " zaderzhka " ")
-SendChat("me сделал" floor " прокол в области подушечки пальца  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватку с тумбы, затем вытер" Female " первую каплю крови  ", "  " zaderzhka " ")
-SendChat("me аккуратно нанёс" Female " каплю крови на тест-полоску  ", "  " zaderzhka " ")
-SendChat("me взял" floor " с тумбы сухую ватку и приложил" floor " к месту прокола  ", "  " zaderzhka " ")
-SendChat("me вставил" floor " тест-полоску в глюкометр  ", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на показатели глюкометра  ", "  " zaderzhka " ")
-SendChat("do Уровень сахара в норме? ", "  " zaderzhka " ")
+%vybor%("do На тумбе лежит всё необходимое для анализа.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " с тумбы ватку и спирт  ", "  " zaderzhka " ")
+%vybor%("me аккуратно открыл" floor " спирт, затем смочил" floor " ватку  ", "  " zaderzhka " ")
+%vybor%("me лёгким движением руки обработал" floor " место сбора крови  ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " ватку на стол  ", "  " zaderzhka " ")
+%vybor%("do На тумбе перед сотрудником лежит новый скарификатор.  ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " прокол в области подушечки пальца  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватку с тумбы, затем вытер" Female " первую каплю крови  ", "  " zaderzhka " ")
+%vybor%("me аккуратно нанёс" Female " каплю крови на тест-полоску  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " с тумбы сухую ватку и приложил" floor " к месту прокола  ", "  " zaderzhka " ")
+%vybor%("me вставил" floor " тест-полоску в глюкометр  ", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на показатели глюкометра  ", "  " zaderzhka " ")
+%vybor%("do Уровень сахара в норме? ", "  " zaderzhka " ")
 Return
 
 :?:/Сахар_3::
 SendPlay {Enter}
-SendChat("say Уровень сахара в крови в норме.  ", " " zaderzhka " ")
-SendChat("say Всё в порядке, уровень сахара находится в пределах нормы. Если что-то будет беспокоить, не стесняйтесь обращаться.  ", " " zaderzhka " ")
+%vybor%("say Уровень сахара в крови в норме.  ", " " zaderzhka " ")
+%vybor%("say Всё в порядке, уровень сахара находится в пределах нормы. Если что-то будет беспокоить, не стесняйтесь обращаться.  ", " " zaderzhka " ")
 Return
 
 :?:/Сахар_3::
 SendPlay {Enter}
-SendChat("say Уровень сахара в крови не в норме. ", " " zaderzhka " ")
-SendChat("say Уровень сахара выше нормы, вам нужно обратиться к терапевту для более детального обследования.", " " zaderzhka " ")
-SendChat("say Возможно, потребуется корректировка диеты или медикаментозное лечение.", " " zaderzhka " ")
+%vybor%("say Уровень сахара в крови не в норме. ", " " zaderzhka " ")
+%vybor%("say Уровень сахара выше нормы, вам нужно обратиться к терапевту для более детального обследования.", " " zaderzhka " ")
+%vybor%("say Возможно, потребуется корректировка диеты или медикаментозное лечение.", " " zaderzhka " ")
 Return
 
 :?:/Донор::
 SendPlay {Enter}
-SendChat("do На столе лежат медицинские перчатки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки со стола ", "  " zaderzhka " ")
-SendChat("me надел" floor " медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me взял" floor " донора за руку  ", "  " zaderzhka " ")
-SendChat("me взял" floor "  клеенчатый валик  ", "  " zaderzhka " ")
-SendChat("me подложил" floor "  клеёнчатый валик под локоть донора  ", "  " zaderzhka " ")
-SendChat("me зафиксировал" floor "  руку донора ладонью к верху ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку и иглу с переходником с мед.лотка ", "  " zaderzhka " ")
-SendChat("me присоединил" floor "  пробирку к игле ", "  " zaderzhka " ")
-SendChat("me положил" floor " собранную систему в мед.лоток ", "  " zaderzhka " ")
-SendChat("me взял" floor "  жгут и спиртовую салфетку с мед.лотка ", "  " zaderzhka " ")
-SendChat("me обработал" floor "  спиртовой салфеткой область локтевого сгиба, на руке донора ", "  " zaderzhka " ")
-SendChat("me затянул" floor "  жгут на плече донора ", "  " zaderzhka " ")
-SendChat("say Сожмите, пожалуйста кулак.", "  " zaderzhka " ")
-SendChat("me взял" floor "   из мед.лотка собранную систему ", "  " zaderzhka " ")
-SendChat("me ввел" floor "  иглу в вену ", "  " zaderzhka " ")
-SendChat("me снимает жгут с плеча донора ", "  " zaderzhka " ")
-SendChat("say Можете разжать руку.", "  " zaderzhka " ")
-SendChat("me медленно оттянул" floor " поршень шприца вверх ", "  " zaderzhka " ")
-SendChat("me приложил" floor " спиртовую салфетку к месту прокола ", "  " zaderzhka " ")
-SendChat("me вывел" floor " иглу из вены ", "  " zaderzhka " ")
-SendChat("me отсоединил" floor " пробирку от иглы ", "  " zaderzhka " ")
-SendChat("do На столе стоит держатель для пробирок. ", "  " zaderzhka " ")
-SendChat("me поместил" floor " пробирку в держатель для пробирок ", "  " zaderzhka " ")
-SendChat("me положил" floor "  использованную иглу в мед.лоток ", "  " zaderzhka " ")
-SendChat("say Спасибо за донорство. ", "  " zaderzhka " ")
+%vybor%("do На столе лежат медицинские перчатки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки со стола ", "  " zaderzhka " ")
+%vybor%("me надел" floor " медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me взял" floor " донора за руку  ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  клеенчатый валик  ", "  " zaderzhka " ")
+%vybor%("me подложил" floor "  клеёнчатый валик под локоть донора  ", "  " zaderzhka " ")
+%vybor%("me зафиксировал" floor "  руку донора ладонью к верху ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробирку и иглу с переходником с мед.лотка ", "  " zaderzhka " ")
+%vybor%("me присоединил" floor "  пробирку к игле ", "  " zaderzhka " ")
+%vybor%("me положил" floor " собранную систему в мед.лоток ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  жгут и спиртовую салфетку с мед.лотка ", "  " zaderzhka " ")
+%vybor%("me обработал" floor "  спиртовой салфеткой область локтевого сгиба, на руке донора ", "  " zaderzhka " ")
+%vybor%("me затянул" floor "  жгут на плече донора ", "  " zaderzhka " ")
+%vybor%("say Сожмите, пожалуйста кулак.", "  " zaderzhka " ")
+%vybor%("me взял" floor "   из мед.лотка собранную систему ", "  " zaderzhka " ")
+%vybor%("me ввел" floor "  иглу в вену ", "  " zaderzhka " ")
+%vybor%("me снимает жгут с плеча донора ", "  " zaderzhka " ")
+%vybor%("say Можете разжать руку.", "  " zaderzhka " ")
+%vybor%("me медленно оттянул" floor " поршень шприца вверх ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " спиртовую салфетку к месту прокола ", "  " zaderzhka " ")
+%vybor%("me вывел" floor " иглу из вены ", "  " zaderzhka " ")
+%vybor%("me отсоединил" floor " пробирку от иглы ", "  " zaderzhka " ")
+%vybor%("do На столе стоит держатель для пробирок. ", "  " zaderzhka " ")
+%vybor%("me поместил" floor " пробирку в держатель для пробирок ", "  " zaderzhka " ")
+%vybor%("me положил" floor "  использованную иглу в мед.лоток ", "  " zaderzhka " ")
+%vybor%("say Спасибо за донорство. ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Открытый::
 SendPlay {Enter}
-SendChat("do В углу стоит хирургический стол.   ", "  " zaderzhka " ")
-SendChat("me взял" floor " жгут со стола и наложил" floor " его выше места перелома  ", "  " zaderzhka " ")
-SendChat("me взял" floor " шприц с обезбаливающим со стола  ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " обезболивающее в ногу пациента ", "  " zaderzhka " ")
-SendChat("me проталкнул" floor " кость во внутрь  ", "  " zaderzhka " ")
-SendChat("me взял" floor " иглу в руки, продел" floor " в неё нить ", "  " zaderzhka " ")
-SendChat("me зашил" floor " ранение  ", "  " zaderzhka " ")
-SendChat("me отложил" floor " нить с иглой на стол   ", "  " zaderzhka " ")
-SendChat("me взял" floor " бинты со стола и перевязал " floor "ранение  ", "  " zaderzhka " ")
-SendChat("me взял" floor " дрель со стола подключил" floor " её к розетке  ", "  " zaderzhka " ")
-SendChat("me включил" floor " дрель и сделал" floor " тонкие прорезы сквозь ногу  ", "  " zaderzhka " ")
-SendChat("me продел" floor " в ногу спицы ", "  " zaderzhka " ")
-SendChat("me наложил" floor " на каждую спицу вату с двух сторон, прижав пробкой  ", "  " zaderzhka " ")
-SendChat("do Два кольца лежат на столе. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кольца ", "  " zaderzhka " ")
-SendChat("me открыл" floor " кольца и наложил" floor " их   ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " кольца ", "  " zaderzhka " ")
-SendChat("me взял" floor " палки и продел" floor " их сквозь отверстия колец  ", "  " zaderzhka " ")
-SendChat("me наложил" floor " палки и зафиксировал" floor " их гайками  ", "  " zaderzhka " ")
+%vybor%("do В углу стоит хирургический стол.   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " жгут со стола и наложил" floor " его выше места перелома  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " шприц с обезбаливающим со стола  ", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " обезболивающее в ногу пациента ", "  " zaderzhka " ")
+%vybor%("me проталкнул" floor " кость во внутрь  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " иглу в руки, продел" floor " в неё нить ", "  " zaderzhka " ")
+%vybor%("me зашил" floor " ранение  ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " нить с иглой на стол   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бинты со стола и перевязал " floor "ранение  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " дрель со стола подключил" floor " её к розетке  ", "  " zaderzhka " ")
+%vybor%("me включил" floor " дрель и сделал" floor " тонкие прорезы сквозь ногу  ", "  " zaderzhka " ")
+%vybor%("me продел" floor " в ногу спицы ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " на каждую спицу вату с двух сторон, прижав пробкой  ", "  " zaderzhka " ")
+%vybor%("do Два кольца лежат на столе. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кольца ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " кольца и наложил" floor " их   ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " кольца ", "  " zaderzhka " ")
+%vybor%("me взял" floor " палки и продел" floor " их сквозь отверстия колец  ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " палки и зафиксировал" floor " их гайками  ", "  " zaderzhka " ")
 Return
 
 :?:/Ожоги::
 SendPlay {Enter}
-SendChat("me открыл" floor " сумку  ", "  " zaderzhka " ")
-SendChat("me нащупал" floor " стерильные перчатки и взял" floor " их в руку ", "  " zaderzhka " ")
-SendChat("me достал" floor " из стерильные перчатки из сумки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("me осмотрел" floor " пациента ", "  " zaderzhka " ")
-SendChat("me освободил" floor " место ожога от одежды ", "  " zaderzhka " ")
-SendChat("me сделал" floor " оценку площади и глубины ожога ", "  " zaderzhka " ")
-SendChat("do Бутылка с холодной, чистой водой в сумке. ", "  " zaderzhka " ")
-SendChat("me взял" floor " бутылку с чистой водой в руку и вынул" floor " из сумки ", "  " zaderzhka " ")
-SendChat("me открутил" floor " крышку на бутылке ", "  " zaderzhka " ")
-SendChat("me вылил" floor " воду на место ожога ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки шприц с обезболивающим ", "  " zaderzhka " ")
-SendChat("me смочил" floor " шприц спиртовым раствором ватный тампон ", "  " zaderzhka " ")
-SendChat("me обработав место укола, вколол" floor " обезболивающее пациенту ", "  " zaderzhka " ")
-SendChat("me взглянул" floor "  в сумку ", "  " zaderzhka " ")
-SendChat("do В сумке балончик. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки баллончик с надписью Пантенол ", "  " zaderzhka " ")
-SendChat("me разбрызгал" floor " спрей на область ожога ", "  " zaderzhka " ")
-SendChat("me посмотрел" floor " а другой отдел сумки ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки стерильную салфетку ", "  " zaderzhka " ")
-SendChat("me прикрыл" floor " салфеткой ожог ", "  " zaderzhka " ")
-SendChat("say Все, ваш ожог обработан. ", "  " zaderzhka " ")
-SendChat("say Одевайтесь и можете идти. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " сумку  ", "  " zaderzhka " ")
+%vybor%("me нащупал" floor " стерильные перчатки и взял" floor " их в руку ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из стерильные перчатки из сумки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("me осмотрел" floor " пациента ", "  " zaderzhka " ")
+%vybor%("me освободил" floor " место ожога от одежды ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " оценку площади и глубины ожога ", "  " zaderzhka " ")
+%vybor%("do Бутылка с холодной, чистой водой в сумке. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бутылку с чистой водой в руку и вынул" floor " из сумки ", "  " zaderzhka " ")
+%vybor%("me открутил" floor " крышку на бутылке ", "  " zaderzhka " ")
+%vybor%("me вылил" floor " воду на место ожога ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки шприц с обезболивающим ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " шприц спиртовым раствором ватный тампон ", "  " zaderzhka " ")
+%vybor%("me обработав место укола, вколол" floor " обезболивающее пациенту ", "  " zaderzhka " ")
+%vybor%("me взглянул" floor "  в сумку ", "  " zaderzhka " ")
+%vybor%("do В сумке балончик. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки баллончик с надписью Пантенол ", "  " zaderzhka " ")
+%vybor%("me разбрызгал" floor " спрей на область ожога ", "  " zaderzhka " ")
+%vybor%("me посмотрел" floor " а другой отдел сумки ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки стерильную салфетку ", "  " zaderzhka " ")
+%vybor%("me прикрыл" floor " салфеткой ожог ", "  " zaderzhka " ")
+%vybor%("say Все, ваш ожог обработан. ", "  " zaderzhka " ")
+%vybor%("say Одевайтесь и можете идти. ", "  " zaderzhka " ")
 Return
 
 :?:/Позвоночник::
 SendPlay {Enter}
-SendChat(" do У стены стоит стол с необходимыми инструментами. ", "  " zaderzhka " ")
-SendChat("me взял" floor " антисептик с ватой ", "  " zaderzhka " ")
-SendChat("me обрабатывает операционное поле  ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат наркоза ", "  " zaderzhka " ")
-SendChat("me взял" floor " кислородную маску ", "  " zaderzhka " ")
-SendChat("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
-SendChat("me подключил" floor " пациента к аппарату искусственной вентиляции лёгких ", "  " zaderzhka " ")
-SendChat("me передвинул" floor " аппарат поближе к койке ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат подачи хирургического цемента ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель ", "  " zaderzhka " ")
-SendChat("me сделал" floor " разрез в месте перелома позвоночника ", "  " zaderzhka " ")
-SendChat("me взял" floor " троакар ", "  " zaderzhka " ")
-SendChat("me постепенно ввел" floor " троакар в позвоночник ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("me подсоединил" floor " трубку аппарата к троакару ", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку 'Подать воздух' ", "  " zaderzhka " ")
-SendChat("me вытащил" floor " троакар из позвонка ", "  " zaderzhka " ")
-SendChat("me взял" floor " трубку ", "  " zaderzhka " ")
-SendChat("me засунул" floor " трубку в позвонок ", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку 'Запуск' ", "  " zaderzhka " ")
-SendChat("me начал" floor " заливать цемент в позвоночник ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат подачи хирургического цемента ", "  " zaderzhka " ")
-SendChat("me вытащил" floor " трубку из позвоночника ", "  " zaderzhka " ")
-SendChat("me положил" floor " трубку на аппарат ", "  " zaderzhka " ")
-SendChat("me начал" floor " двигать аппарат к углу комнаты ", "  " zaderzhka " ")
-SendChat("me взял" floor " в руки нитки и ножницы ", "  " zaderzhka " ")
-SendChat("me отрезал" floor " нужное количество ниток ", "  " zaderzhka " ")
-SendChat("me сшивает место разреза кожи ", "  " zaderzhka " ")
-SendChat("me взял" floor " послеоперационный пластырь ", "  " zaderzhka " ")
-SendChat("do Послеоперационный пластырь в руках. ", "  " zaderzhka " ")
-SendChat("me наклеил" floor " пластырь на место шва ", "  " zaderzhka " ")
-SendChat("me отключил" floor " пациента от аппарата искусственной вентиляции лёгких ", "  " zaderzhka " ")
-SendChat("me снял" floor " кислородную маску с человека ", "  " zaderzhka " ")
-SendChat("say Операция прошла успешно. ", "  " zaderzhka " ")
-SendChat("say Сейчас я Вам одену корсет. ", "  " zaderzhka " ")
-SendChat("me взял" floor " корсет в руку ", "  " zaderzhka " ")
-SendChat("me аккуратно одевает корсет на спину пациента ", "  " zaderzhka " ")
-SendChat("me плотно завязывает шнурки корсета ", "  " zaderzhka " ")
-SendChat("me проверяет фиксацию корсета ", "  " zaderzhka " ")
-SendChat("say Теперь необходимо носить корсет как минимум 2 месяца. ", "  " zaderzhka " ")
+%vybor%(" do У стены стоит стол с необходимыми инструментами. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " антисептик с ватой ", "  " zaderzhka " ")
+%vybor%("me обрабатывает операционное поле  ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат наркоза ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кислородную маску ", "  " zaderzhka " ")
+%vybor%("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " пациента к аппарату искусственной вентиляции лёгких ", "  " zaderzhka " ")
+%vybor%("me передвинул" floor " аппарат поближе к койке ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат подачи хирургического цемента ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " разрез в месте перелома позвоночника ", "  " zaderzhka " ")
+%vybor%("me взял" floor " троакар ", "  " zaderzhka " ")
+%vybor%("me постепенно ввел" floor " троакар в позвоночник ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("me подсоединил" floor " трубку аппарата к троакару ", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку 'Подать воздух' ", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " троакар из позвонка ", "  " zaderzhka " ")
+%vybor%("me взял" floor " трубку ", "  " zaderzhka " ")
+%vybor%("me засунул" floor " трубку в позвонок ", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку 'Запуск' ", "  " zaderzhka " ")
+%vybor%("me начал" floor " заливать цемент в позвоночник ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат подачи хирургического цемента ", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " трубку из позвоночника ", "  " zaderzhka " ")
+%vybor%("me положил" floor " трубку на аппарат ", "  " zaderzhka " ")
+%vybor%("me начал" floor " двигать аппарат к углу комнаты ", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руки нитки и ножницы ", "  " zaderzhka " ")
+%vybor%("me отрезал" floor " нужное количество ниток ", "  " zaderzhka " ")
+%vybor%("me сшивает место разреза кожи ", "  " zaderzhka " ")
+%vybor%("me взял" floor " послеоперационный пластырь ", "  " zaderzhka " ")
+%vybor%("do Послеоперационный пластырь в руках. ", "  " zaderzhka " ")
+%vybor%("me наклеил" floor " пластырь на место шва ", "  " zaderzhka " ")
+%vybor%("me отключил" floor " пациента от аппарата искусственной вентиляции лёгких ", "  " zaderzhka " ")
+%vybor%("me снял" floor " кислородную маску с человека ", "  " zaderzhka " ")
+%vybor%("say Операция прошла успешно. ", "  " zaderzhka " ")
+%vybor%("say Сейчас я Вам одену корсет. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " корсет в руку ", "  " zaderzhka " ")
+%vybor%("me аккуратно одевает корсет на спину пациента ", "  " zaderzhka " ")
+%vybor%("me плотно завязывает шнурки корсета ", "  " zaderzhka " ")
+%vybor%("me проверяет фиксацию корсета ", "  " zaderzhka " ")
+%vybor%("say Теперь необходимо носить корсет как минимум 2 месяца. ", "  " zaderzhka " ")
 Return
 :?:/Кровь::
 SendPlay {Enter}
-SendChat("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
-SendChat("me подключил" floor " апппрпт наркоза к пациенту   ", "  " zaderzhka " ")
-SendChat("do Рядом стоит стол.   ", "  " zaderzhka " ")
-SendChat("do На столе лежат перчатки.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки    ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки   ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола вату и Йодонат  ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату йодонатом   ", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать область груди  ", "  " zaderzhka " ")
-SendChat("do На столе лежит скальпель.   ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель   ", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез в области грудной клетки   ", "  " zaderzhka " ")
-SendChat("me делает разрезы мышц и жира  ", "  " zaderzhka " ")
-SendChat("me обнаружил" floor " легие и кровеносные сосуды   ", "  " zaderzhka " ")
-SendChat("me обнаружил" floor " повреждённый сосуд  ", "  " zaderzhka " ")
-SendChat("me взял" floor " нитки  ", "  " zaderzhka " ")
-SendChat("me начал" floor " перекрывать поврежденный сосуд нитками   ", "  " zaderzhka " ")
-SendChat("do На столе лежит катетер.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " катетер в руки  ", "  " zaderzhka " ")
-SendChat("me начал" floor " выкачивать кровь из полости плевры  ", "  " zaderzhka " ")
-SendChat("do На столе лежат игла и нитки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " нитки и иглу  ", "  " zaderzhka " ")
-SendChat("me начинает зашивать разрезанные мышцы  ", "  " zaderzhka " ")
-SendChat("me зашивает кожу на груди  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватку и раствор   ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату  йодовым раствором  ", "  " zaderzhka " ")
-SendChat("me обрабатывает швы  ", "  " zaderzhka " ")
-SendChat("me взял" floor "  хирургический пластырь в руки ", "  " zaderzhka " ")
-SendChat("me накладывает хирургический пластырь на швы  ", "  " zaderzhka " ")
-SendChat("me отключил" floor "  аппарат наркоза  ", "  " zaderzhka " ")
-SendChat("me отсоеденил" floor "  аппарат наркоза от пациента  ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " апппрпт наркоза к пациенту   ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит стол.   ", "  " zaderzhka " ")
+%vybor%("do На столе лежат перчатки.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки    ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола вату и Йодонат  ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату йодонатом   ", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать область груди  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит скальпель.   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель   ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез в области грудной клетки   ", "  " zaderzhka " ")
+%vybor%("me делает разрезы мышц и жира  ", "  " zaderzhka " ")
+%vybor%("me обнаружил" floor " легие и кровеносные сосуды   ", "  " zaderzhka " ")
+%vybor%("me обнаружил" floor " повреждённый сосуд  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нитки  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " перекрывать поврежденный сосуд нитками   ", "  " zaderzhka " ")
+%vybor%("do На столе лежит катетер.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " катетер в руки  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " выкачивать кровь из полости плевры  ", "  " zaderzhka " ")
+%vybor%("do На столе лежат игла и нитки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нитки и иглу  ", "  " zaderzhka " ")
+%vybor%("me начинает зашивать разрезанные мышцы  ", "  " zaderzhka " ")
+%vybor%("me зашивает кожу на груди  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватку и раствор   ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату  йодовым раствором  ", "  " zaderzhka " ")
+%vybor%("me обрабатывает швы  ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  хирургический пластырь в руки ", "  " zaderzhka " ")
+%vybor%("me накладывает хирургический пластырь на швы  ", "  " zaderzhka " ")
+%vybor%("me отключил" floor "  аппарат наркоза  ", "  " zaderzhka " ")
+%vybor%("me отсоеденил" floor "  аппарат наркоза от пациента  ", "  " zaderzhka " ")
 Return
 
 :?:/Грыжа::
 SendPlay {Enter}
-SendChat("do На столе лежат перчатки и мед.маска.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки  ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки  ", "  " zaderzhka " ")
-SendChat("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
-SendChat("me подключил" floor " аппарат наркоза к пациенту  ", "  " zaderzhka " ")
-SendChat("me взял" floor " датчики от аппарата  ", "  " zaderzhka " ")
-SendChat("me подключил" floor " датчики к пациенту  ", "  " zaderzhka " ")
-SendChat("me взял" floor " бутыль с Йодонатом со стойки  ", "  " zaderzhka " ")
-SendChat("me открыл" floor " бутыль с Йодонатом  ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола вату  ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату йодонатом  ", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать место надреза  ", "  " zaderzhka " ")
-SendChat("do На столе лежит скальпель.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель  ", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез в середине позвоночника ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватный тампон со стола  ", "  " zaderzhka " ")
-SendChat("me вытер" Female " аккуратно кровь  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ранорасширитель с подноса  ", "  " zaderzhka " ")
-SendChat("me расширил" floor " надрез с помощью инструмента  ", "  " zaderzhka " ")
-SendChat("me посмотрел" floor " на датчик пульса пациента  ", "  " zaderzhka " ")
-SendChat("me взял" floor " зажим с подноса  ", "  " zaderzhka " ")
-SendChat("me взял" floor " инструмент для удаления связок и костей ", "  " zaderzhka " ")
-SendChat("me начал" floor " удалять участки связок и костей  ", "  " zaderzhka " ")
-SendChat("me начал" floor " оценивать степень повреждения нервов  ", "  " zaderzhka " ")
-SendChat("me взял" floor " зажим с подноса  ", "  " zaderzhka " ")
-SendChat("me взял" floor " инструмент для удаления грыжи  ", "  " zaderzhka " ")
-SendChat("me начал" floor " удалять грыжу с диска позвоночника  ", "  " zaderzhka " ")
-SendChat("do Хирургическая нить и игла лежат на столе.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " с подноса хирургическую нить и иглу ", "  " zaderzhka " ")
-SendChat("me начал" floor " продевать нить в ушко иглы  ", "  " zaderzhka " ")
-SendChat("me начал" floor "  зашивать надрез на спине пациента ", "  " zaderzhka " ")
-SendChat("do На столе лежит раствор хлорида натрия и вата.  ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату раствором хлорида натрия  ", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать швы  ", "  " zaderzhka " ")
-SendChat("do Хирургический пластырь лежит на столе.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургический пластырь в руки  ", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать хирургический пластырь на швы  ", "  " zaderzhka " ")
-SendChat("me отключил" floor " аппарат наркоза  ", "  " zaderzhka " ")
-SendChat("me отсоединил" floor " аппарат наркоза от пациента  ", "  " zaderzhka " ")
-SendChat("say Операция на этом закончена.  ", "  " zaderzhka " ")
+%vybor%("do На столе лежат перчатки и мед.маска.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки  ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки  ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " аппарат наркоза к пациенту  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " датчики от аппарата  ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " датчики к пациенту  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бутыль с Йодонатом со стойки  ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " бутыль с Йодонатом  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола вату  ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату йодонатом  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать место надреза  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит скальпель.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель  ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез в середине позвоночника ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватный тампон со стола  ", "  " zaderzhka " ")
+%vybor%("me вытер" Female " аккуратно кровь  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ранорасширитель с подноса  ", "  " zaderzhka " ")
+%vybor%("me расширил" floor " надрез с помощью инструмента  ", "  " zaderzhka " ")
+%vybor%("me посмотрел" floor " на датчик пульса пациента  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " зажим с подноса  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " инструмент для удаления связок и костей ", "  " zaderzhka " ")
+%vybor%("me начал" floor " удалять участки связок и костей  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " оценивать степень повреждения нервов  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " зажим с подноса  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " инструмент для удаления грыжи  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " удалять грыжу с диска позвоночника  ", "  " zaderzhka " ")
+%vybor%("do Хирургическая нить и игла лежат на столе.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " с подноса хирургическую нить и иглу ", "  " zaderzhka " ")
+%vybor%("me начал" floor " продевать нить в ушко иглы  ", "  " zaderzhka " ")
+%vybor%("me начал" floor "  зашивать надрез на спине пациента ", "  " zaderzhka " ")
+%vybor%("do На столе лежит раствор хлорида натрия и вата.  ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату раствором хлорида натрия  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать швы  ", "  " zaderzhka " ")
+%vybor%("do Хирургический пластырь лежит на столе.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургический пластырь в руки  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать хирургический пластырь на швы  ", "  " zaderzhka " ")
+%vybor%("me отключил" floor " аппарат наркоза  ", "  " zaderzhka " ")
+%vybor%("me отсоединил" floor " аппарат наркоза от пациента  ", "  " zaderzhka " ")
+%vybor%("say Операция на этом закончена.  ", "  " zaderzhka " ")
 Return
 
 :?:/Грудь::
 SendPlay {Enter}
-SendChat("me открыл" floor " шкаф  ", "  " zaderzhka " ")
-SendChat("do На верхней полке лежат перчатки.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки с полки   ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки   ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф   ", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер со стола  ", "  " zaderzhka " ")
-SendChat("me отметил" floor " места для надрезов   ", "  " zaderzhka " ")
-SendChat("me положил" floor " маркер на стол   ", "  " zaderzhka " ")
-SendChat("me взял" floor " шприц с обезболивающим со стола  ", "  " zaderzhka " ")
-SendChat("me вколол" floor " обезболивающее в плечо пациента ", "  " zaderzhka " ")
-SendChat("do Около койки стоит аппарат для наркоза.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " кислородную маску  ", "  " zaderzhka " ")
-SendChat("me надел" floor " маску на пациента  ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель со стола  ", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрезы по линиям  ", "  " zaderzhka " ")
-SendChat("do На столе лежат силиконовые импланты.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " силиконовые импланты  ", "  " zaderzhka " ")
-SendChat("me аккуратно вставил" floor " импланты в надрезы ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола дезинфицирующие тампоны  ", "  " zaderzhka " ")
-SendChat("me обработал" floor " места надрезов  ", "  " zaderzhka " ")
-SendChat("me взял" floor " иголку с нитью со стола  ", "  " zaderzhka " ")
-SendChat("me зашил" floor " надрезы  ", "  " zaderzhka " ")
-SendChat("me взял" floor " ножницы со стола  ", "  " zaderzhka " ")
-SendChat("me обрезал" floor " нить ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола обработанные зеленкой ватные тампоны  ", "  " zaderzhka " ")
-SendChat("me обработал" floor " швы зеленкой  ", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильную эластичную повязку со стола  ", "  " zaderzhka " ")
-SendChat("me перевязал" floor " пациента  ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
-SendChat("me снял" floor " маску с человека ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф  ", "  " zaderzhka " ")
+%vybor%("do На верхней полке лежат перчатки.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки с полки   ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки   ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер со стола  ", "  " zaderzhka " ")
+%vybor%("me отметил" floor " места для надрезов   ", "  " zaderzhka " ")
+%vybor%("me положил" floor " маркер на стол   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " шприц с обезболивающим со стола  ", "  " zaderzhka " ")
+%vybor%("me вколол" floor " обезболивающее в плечо пациента ", "  " zaderzhka " ")
+%vybor%("do Около койки стоит аппарат для наркоза.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кислородную маску  ", "  " zaderzhka " ")
+%vybor%("me надел" floor " маску на пациента  ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель со стола  ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрезы по линиям  ", "  " zaderzhka " ")
+%vybor%("do На столе лежат силиконовые импланты.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " силиконовые импланты  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вставил" floor " импланты в надрезы ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола дезинфицирующие тампоны  ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " места надрезов  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " иголку с нитью со стола  ", "  " zaderzhka " ")
+%vybor%("me зашил" floor " надрезы  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ножницы со стола  ", "  " zaderzhka " ")
+%vybor%("me обрезал" floor " нить ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола обработанные зеленкой ватные тампоны  ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " швы зеленкой  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильную эластичную повязку со стола  ", "  " zaderzhka " ")
+%vybor%("me перевязал" floor " пациента  ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат для наркоза  ", "  " zaderzhka " ")
+%vybor%("me снял" floor " маску с человека ", "  " zaderzhka " ")
 Return
 
 :?:/ПМП_открытый::
 SendPlay {Enter}
-SendChat("me расстегнув сумку, достал" floor " из неё жгут  ", "  " zaderzhka " ")
-SendChat("me развязав жгут, надел" floor " его чуть выше перелома  ", "  " zaderzhka " ")
-SendChat("me затянул" floor " ремешок жгута  ", "  " zaderzhka " ")
-SendChat("do Кровотечение из открытого перелома постепенно начало останавливаться.  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки шприц с обезболивающим, ватку и медицинский спирт  ", "  " zaderzhka " ")
-SendChat("me открыв медицинский спирт, смочил" floor " им ватку  ", "  " zaderzhka " ")
-SendChat("me протёр" Female " на ноге пострадавшего место для будущего укола  ", "  " zaderzhka " ")
-SendChat("do В мед.сумке можно заметить небольшой пакетик для мусора.  ", "  " zaderzhka " ")
-SendChat("me бросив ватку в пакетик, положил" floor " в сумку медицинский спирт  ", "  " zaderzhka " ")
-SendChat("me оттянув поршень шприца, подставил" floor " его к обработанному месту  ", "  " zaderzhka " ")
-SendChat("me аккуратно введя иглу в вену, надавил" floor " на поршень  ", "  " zaderzhka " ")
-SendChat("do Обезболивающее в крови пострадавшего.  ", "  " zaderzhka " ")
-SendChat("me достал" floor " шприц из вены и положил" floor " его в пакетик для мусора  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки перекись водорода и стерильную повязку  ", "  " zaderzhka " ")
-SendChat("me капнул" floor " перекисью водорода по краям открытого перелома ", "  " zaderzhka " ")
-SendChat("me положил" floor " её в сумку  ", "  " zaderzhka " ")
-SendChat("me размотав стерильную повязку, наложил" floor " её на открытый перелом  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки две небольших прямых доски и бинт  ", "  " zaderzhka " ")
-SendChat("me отмотав нужный кусок бинта, оторвал" floor " его от основного  ", "  " zaderzhka " ")
-SendChat("me приложил" floor " две прямых доски по бокам повреждённой конечности  ", "  " zaderzhka " ")
-SendChat("me перебинтовал" floor " доски так, что они прижались к ноге  ", "  " zaderzhka " ")
-SendChat("do Доски полностью иммобилизовали повреждённую конечность.  ", "  " zaderzhka " ")
+%vybor%("me расстегнув сумку, достал" floor " из неё жгут  ", "  " zaderzhka " ")
+%vybor%("me развязав жгут, надел" floor " его чуть выше перелома  ", "  " zaderzhka " ")
+%vybor%("me затянул" floor " ремешок жгута  ", "  " zaderzhka " ")
+%vybor%("do Кровотечение из открытого перелома постепенно начало останавливаться.  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки шприц с обезболивающим, ватку и медицинский спирт  ", "  " zaderzhka " ")
+%vybor%("me открыв медицинский спирт, смочил" floor " им ватку  ", "  " zaderzhka " ")
+%vybor%("me протёр" Female " на ноге пострадавшего место для будущего укола  ", "  " zaderzhka " ")
+%vybor%("do В мед.сумке можно заметить небольшой пакетик для мусора.  ", "  " zaderzhka " ")
+%vybor%("me бросив ватку в пакетик, положил" floor " в сумку медицинский спирт  ", "  " zaderzhka " ")
+%vybor%("me оттянув поршень шприца, подставил" floor " его к обработанному месту  ", "  " zaderzhka " ")
+%vybor%("me аккуратно введя иглу в вену, надавил" floor " на поршень  ", "  " zaderzhka " ")
+%vybor%("do Обезболивающее в крови пострадавшего.  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " шприц из вены и положил" floor " его в пакетик для мусора  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки перекись водорода и стерильную повязку  ", "  " zaderzhka " ")
+%vybor%("me капнул" floor " перекисью водорода по краям открытого перелома ", "  " zaderzhka " ")
+%vybor%("me положил" floor " её в сумку  ", "  " zaderzhka " ")
+%vybor%("me размотав стерильную повязку, наложил" floor " её на открытый перелом  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки две небольших прямых доски и бинт  ", "  " zaderzhka " ")
+%vybor%("me отмотав нужный кусок бинта, оторвал" floor " его от основного  ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " две прямых доски по бокам повреждённой конечности  ", "  " zaderzhka " ")
+%vybor%("me перебинтовал" floor " доски так, что они прижались к ноге  ", "  " zaderzhka " ")
+%vybor%("do Доски полностью иммобилизовали повреждённую конечность.  ", "  " zaderzhka " ")
 Return
 
 :?:/ПМП_закрытый::
 SendPlay {Enter}
-SendChat("me расстегнув сумку, достал" floor " из неё ватку, бутыль с перекисью водорода и обезболивающую мазь ", "  " zaderzhka " ")
-SendChat("me открыв бутыль с перекисью водорода, смочил" floor " ватку перекисью ", "  " zaderzhka " ")
-SendChat("me несколько раз провёл" floor " ваткой по ранкам на повреждённой конечности  ", "  " zaderzhka " ")
-SendChat("do В сумке можно заметить небольшой пакетик для мусора. ", "  " zaderzhka " ")
-SendChat("me кинул" floor " ватку в пакетик и, закрыв бутыль с перекисью, положил" floor " её обратно в сумку ", "  " zaderzhka " ")
-SendChat("me открыл" floor " тюбик с мазью ", "  " zaderzhka " ")
-SendChat("me намазал" floor " её на месте перелома ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " тюбик с мазью и положил" floor " его обратно в сумку ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки две небольших прямых доски и бинт ", "  " zaderzhka " ")
-SendChat("me отмотав бинт до нужной длины, оторвал" floor " нужный кусок ", "  " zaderzhka " ")
-SendChat("me приложил" floor " доски по обе стороны от повреждённой конечности ", "  " zaderzhka " ")
-SendChat("me начал" floor " прибинтовывать доски, плотно прижимая их к конечности ", "  " zaderzhka " ")
-SendChat("do Через некоторое время доски зафиксировались бинтом и иммобилизировали конечность. ", "  " zaderzhka " ")
+%vybor%("me расстегнув сумку, достал" floor " из неё ватку, бутыль с перекисью водорода и обезболивающую мазь ", "  " zaderzhka " ")
+%vybor%("me открыв бутыль с перекисью водорода, смочил" floor " ватку перекисью ", "  " zaderzhka " ")
+%vybor%("me несколько раз провёл" floor " ваткой по ранкам на повреждённой конечности  ", "  " zaderzhka " ")
+%vybor%("do В сумке можно заметить небольшой пакетик для мусора. ", "  " zaderzhka " ")
+%vybor%("me кинул" floor " ватку в пакетик и, закрыв бутыль с перекисью, положил" floor " её обратно в сумку ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " тюбик с мазью ", "  " zaderzhka " ")
+%vybor%("me намазал" floor " её на месте перелома ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " тюбик с мазью и положил" floor " его обратно в сумку ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки две небольших прямых доски и бинт ", "  " zaderzhka " ")
+%vybor%("me отмотав бинт до нужной длины, оторвал" floor " нужный кусок ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " доски по обе стороны от повреждённой конечности ", "  " zaderzhka " ")
+%vybor%("me начал" floor " прибинтовывать доски, плотно прижимая их к конечности ", "  " zaderzhka " ")
+%vybor%("do Через некоторое время доски зафиксировались бинтом и иммобилизировали конечность. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Мороз_1::
 SendPlay {Enter}
-SendChat("do В шкафу лежат стерильные перчатки и антисептик. ", "  " zaderzhka " ")
-SendChat("me открыв шкаф, взял" floor " стерильные перчатки и надел их ", "  " zaderzhka " ")
-SendChat("do На столе лежат бинты и салфетки. ", "  " zaderzhka " ")
-SendChat("me взял" floor " бинт и салфетку ", "  " zaderzhka " ")
-SendChat("me аккуратно снял" floor " одежду с пораженных участков тела пациента ", "  " zaderzhka " ")
-SendChat("me тщательно осмотрел" floor " кожу, проверяя, не возникли ли пузырьки или повреждения ", "  " zaderzhka " ")
-SendChat("me взял" floor " антисептик и аккуратно обработал" floor " пораженные участки кожи ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола теплую грелку и подложил" floor " ее к пораженному участку ", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильные салфетки и аккуратно промокнул" floor " влажные участки кожи пациента ", "  " zaderzhka " ")
-SendChat("do На столе лежит послеоперационный пластырь. ", "  " zaderzhka " ")
-SendChat("me взял" floor " пластырь и аккуратно наклеил" floor " его на пораженные участки ", "  " zaderzhka " ")
-SendChat("me взял" floor " бинт и закрепил" floor " его поверх пластыря, чтобы обеспечить дополнительную защиту", "  " zaderzhka " ")
-SendChat("me подключил" floor " пациента к аппарату для мониторинга температуры тела", "  " zaderzhka " ")
-SendChat("say Обморожение зафиксировано. Мы обеспечили защиту от дальнейших повреждений. ", "  " zaderzhka " ")
-SendChat("say Я выпишу вам Нурофен цена 500 рублей для снятия воспаления и болевого синдрома. Согласны ли вы на лечение?", "  " zaderzhka " ")
+%vybor%("do В шкафу лежат стерильные перчатки и антисептик. ", "  " zaderzhka " ")
+%vybor%("me открыв шкаф, взял" floor " стерильные перчатки и надел их ", "  " zaderzhka " ")
+%vybor%("do На столе лежат бинты и салфетки. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бинт и салфетку ", "  " zaderzhka " ")
+%vybor%("me аккуратно снял" floor " одежду с пораженных участков тела пациента ", "  " zaderzhka " ")
+%vybor%("me тщательно осмотрел" floor " кожу, проверяя, не возникли ли пузырьки или повреждения ", "  " zaderzhka " ")
+%vybor%("me взял" floor " антисептик и аккуратно обработал" floor " пораженные участки кожи ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола теплую грелку и подложил" floor " ее к пораженному участку ", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильные салфетки и аккуратно промокнул" floor " влажные участки кожи пациента ", "  " zaderzhka " ")
+%vybor%("do На столе лежит послеоперационный пластырь. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пластырь и аккуратно наклеил" floor " его на пораженные участки ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бинт и закрепил" floor " его поверх пластыря, чтобы обеспечить дополнительную защиту", "  " zaderzhka " ")
+%vybor%("me подключил" floor " пациента к аппарату для мониторинга температуры тела", "  " zaderzhka " ")
+%vybor%("say Обморожение зафиксировано. Мы обеспечили защиту от дальнейших повреждений. ", "  " zaderzhka " ")
+%vybor%("say Я выпишу вам Нурофен цена 500 рублей для снятия воспаления и болевого синдрома. Согласны ли вы на лечение?", "  " zaderzhka " ")
 Return
 
 
 :?:/Мороз_2::
 SendPlay {Enter}
-SendChat("do В СМП лежат пледы и сухие повязки.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " одну из сухих повязок, намотал" floor " ее на пострадавшую конечность пациента  ", "  " zaderzhka " ")
-SendChat("me достав плед, накрыл" floor " им пострадавшую конечность поверх повязки    ", "  " zaderzhka " ")
-SendChat("do В СМП стоят небольшой чайник и несколько кружек.", "  " zaderzhka " ")
-SendChat("me включив чайник, положил" floor "  пакетик чая в одну из кружек ", "  " zaderzhka " ")
-SendChat("me выключив вскипевший чайник, налил" floor " кипяток в кружку  ", "  " zaderzhka " ")
-SendChat("me передал" floor "  кружку с чаем пострадавшему ", "  " zaderzhka " ")
+%vybor%("do В СМП лежат пледы и сухие повязки.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " одну из сухих повязок, намотал" floor " ее на пострадавшую конечность пациента  ", "  " zaderzhka " ")
+%vybor%("me достав плед, накрыл" floor " им пострадавшую конечность поверх повязки    ", "  " zaderzhka " ")
+%vybor%("do В СМП стоят небольшой чайник и несколько кружек.", "  " zaderzhka " ")
+%vybor%("me включив чайник, положил" floor "  пакетик чая в одну из кружек ", "  " zaderzhka " ")
+%vybor%("me выключив вскипевший чайник, налил" floor " кипяток в кружку  ", "  " zaderzhka " ")
+%vybor%("me передал" floor "  кружку с чаем пострадавшему ", "  " zaderzhka " ")
 Return
 
 
 :?:/Ожог_ПМП::
 SendPlay {Enter}
-SendChat("me убрал" floor " одежду с места ожога   ", "  " zaderzhka " ")
-SendChat("do На стене расположены кран и большая раковина. ", "  " zaderzhka " ")
-SendChat("say Так-с, теперь необходимо охладить ожог.    ", "  " zaderzhka " ")
-SendChat("me подставив место ожога к крану, включил" floor " его   ", "  " zaderzhka " ")
-SendChat("me включил" floor " холодную воду   ", "  " zaderzhka " ")
-SendChat("me выключил" floor " кран    ", "  " zaderzhka " ")
-SendChat("me достал" floor " раствор фурацилина из сумки    ", "  " zaderzhka " ")
-SendChat("say Сейчас будет немножко больно.    ", "  " zaderzhka " ")
-SendChat("me открыв флакон с жидким лекарством, аккуратно нане" Female " с его на место ожога  ", "  " zaderzhka " ")
-SendChat("me закрыв флакон с фурацилином, убрал" floor " его в мед. сумку  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки стерильную марлевую повязку   ", "  " zaderzhka " ")
-SendChat("say Осталось немного...    ", "  " zaderzhka " ")
-SendChat("me нанес" Female " повязку на место ожога так, чтобы она не сдавливала рану   ", "  " zaderzhka " ")
-SendChat("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " одежду с места ожога   ", "  " zaderzhka " ")
+%vybor%("do На стене расположены кран и большая раковина. ", "  " zaderzhka " ")
+%vybor%("say Так-с, теперь необходимо охладить ожог.    ", "  " zaderzhka " ")
+%vybor%("me подставив место ожога к крану, включил" floor " его   ", "  " zaderzhka " ")
+%vybor%("me включил" floor " холодную воду   ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " кран    ", "  " zaderzhka " ")
+%vybor%("me достал" floor " раствор фурацилина из сумки    ", "  " zaderzhka " ")
+%vybor%("say Сейчас будет немножко больно.    ", "  " zaderzhka " ")
+%vybor%("me открыв флакон с жидким лекарством, аккуратно нане" Female " с его на место ожога  ", "  " zaderzhka " ")
+%vybor%("me закрыв флакон с фурацилином, убрал" floor " его в мед. сумку  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки стерильную марлевую повязку   ", "  " zaderzhka " ")
+%vybor%("say Осталось немного...    ", "  " zaderzhka " ")
+%vybor%("me нанес" Female " повязку на место ожога так, чтобы она не сдавливала рану   ", "  " zaderzhka " ")
+%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Ожог_ПМП_1::
 SendPlay {Enter}
-SendChat("me убрал" floor " одежду с места ожога   ", "  " zaderzhka " ")
-SendChat("do В СМП расположены кран и большая раковина. ", "  " zaderzhka " ")
-SendChat("say Так-с, теперь необходимо охладить ожог.    ", "  " zaderzhka " ")
-SendChat("me подставив место ожога к крану, включил" floor " его   ", "  " zaderzhka " ")
-SendChat("me включил" floor " холодную воду   ", "  " zaderzhka " ")
-SendChat("me выключил" floor " кран    ", "  " zaderzhka " ")
-SendChat("me достал" floor " раствор фурацилина из сумки    ", "  " zaderzhka " ")
-SendChat("say Сейчас будет немножко больно.    ", "  " zaderzhka " ")
-SendChat("me открыв флакон с жидким лекарством, аккуратно нане" Female " с его на место ожога ", "  " zaderzhka " ")
-SendChat("me закрыв флакон с фурацилином, убрал" floor " его в мед. сумку  ", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки стерильную марлевую повязку    ", "  " zaderzhka " ")
-SendChat("say Осталось немного...    ", "  " zaderzhka " ")
-SendChat("me нанес" Female " повязку на место ожога так, чтобы она не сдавливала рану    ", "  " zaderzhka " ")
-SendChat("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " одежду с места ожога   ", "  " zaderzhka " ")
+%vybor%("do В СМП расположены кран и большая раковина. ", "  " zaderzhka " ")
+%vybor%("say Так-с, теперь необходимо охладить ожог.    ", "  " zaderzhka " ")
+%vybor%("me подставив место ожога к крану, включил" floor " его   ", "  " zaderzhka " ")
+%vybor%("me включил" floor " холодную воду   ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " кран    ", "  " zaderzhka " ")
+%vybor%("me достал" floor " раствор фурацилина из сумки    ", "  " zaderzhka " ")
+%vybor%("say Сейчас будет немножко больно.    ", "  " zaderzhka " ")
+%vybor%("me открыв флакон с жидким лекарством, аккуратно нане" Female " с его на место ожога ", "  " zaderzhka " ")
+%vybor%("me закрыв флакон с фурацилином, убрал" floor " его в мед. сумку  ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки стерильную марлевую повязку    ", "  " zaderzhka " ")
+%vybor%("say Осталось немного...    ", "  " zaderzhka " ")
+%vybor%("me нанес" Female " повязку на место ожога так, чтобы она не сдавливала рану    ", "  " zaderzhka " ")
+%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
 Return
 
 
@@ -4339,2302 +4335,2302 @@ Return
 
 :?:/АВД_1::
 SendPlay {Enter}
-SendChat("me снял" floor " с пациента одежду ", " " zaderzhka " ")
+%vybor%("me снял" floor " с пациента одежду ", " " zaderzhka " ")
 Return
 
 :?:/АВД_2::
 SendPlay {Enter}
-SendChat("me открыл" floor "  медсумку ", "  " zaderzhka " ")
-SendChat("me отложил" floor " полотенце на стол, открыл" floor " полку, взял АВД и электроды и включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("me приклеил" floor " первый электрод на тело пациента", "  " zaderzhka " ")
-SendChat("me приклеил" floor " второй электрод на тело пациента", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку  ", "  " zaderzhka " ")
-SendChat("do У человека есть пульс?", "  " zaderzhka " ")
+%vybor%("me открыл" floor "  медсумку ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " полотенце на стол, открыл" floor " полку, взял АВД и электроды и включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("me приклеил" floor " первый электрод на тело пациента", "  " zaderzhka " ")
+%vybor%("me приклеил" floor " второй электрод на тело пациента", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку  ", "  " zaderzhka " ")
+%vybor%("do У человека есть пульс?", "  " zaderzhka " ")
 
 
 Return
 
 :?:/АВД_3::
 SendPlay {Enter}
-SendChat("do АВД начал издавать звуки.  ", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку Пуск  ", "  " zaderzhka " ")
-SendChat("me поднес" female " руку к сонной артерии пациента ", "  " zaderzhka " ")
-SendChat("me пытается нащупать пульс  ", "  " zaderzhka " ")
-SendChat("do У человека есть пульс?  ", "  " zaderzhka " ")
+%vybor%("do АВД начал издавать звуки.  ", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку Пуск  ", "  " zaderzhka " ")
+%vybor%("me поднес" female " руку к сонной артерии пациента ", "  " zaderzhka " ")
+%vybor%("me пытается нащупать пульс  ", "  " zaderzhka " ")
+%vybor%("do У человека есть пульс?  ", "  " zaderzhka " ")
 Return
 
 :?:/АВД_4::
 SendPlay {Enter}
-SendChat("me выключил" floor " АВД апарат и вытащил" floor " электроды ", "  " zaderzhka " ")
-SendChat("me поставил" floor " апарат на полку  ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " АВД апарат и вытащил" floor " электроды ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " апарат на полку  ", "  " zaderzhka " ")
 Return
 
 :?:/Наркотики_1::
 SendPlay {Enter}
-SendChat("do На полке лежит различное оборудование.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " с полки экспресс тест на наркотики  ", "  " zaderzhka " ")
-SendChat("me распечатал" floor " герметичную оболочку баночки  ", "  " zaderzhka " ")
-SendChat("me передал" floor " тест человеку напротив  ", "  " zaderzhka " ")
-SendChat("say Возьмите.  ", "  " zaderzhka " ")
-SendChat("say Вам необходимо заполнить контейнер уриной до вот этого уровня. ", "  " zaderzhka " ")
-SendChat("me показал" floor " на отметку в тестере  ", "  " zaderzhka " ")
+%vybor%("do На полке лежит различное оборудование.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " с полки экспресс тест на наркотики  ", "  " zaderzhka " ")
+%vybor%("me распечатал" floor " герметичную оболочку баночки  ", "  " zaderzhka " ")
+%vybor%("me передал" floor " тест человеку напротив  ", "  " zaderzhka " ")
+%vybor%("say Возьмите.  ", "  " zaderzhka " ")
+%vybor%("say Вам необходимо заполнить контейнер уриной до вот этого уровня. ", "  " zaderzhka " ")
+%vybor%("me показал" floor " на отметку в тестере  ", "  " zaderzhka " ")
 Return
 
 :?:/Наркотики_2::
 SendPlay {Enter}
-SendChat("say Давайте я посмотрю.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " тест у человека напротив ", "  " zaderzhka " ")
-SendChat("me достал" floor " тест-полоску из контейнера   ", "  " zaderzhka " ")
-SendChat("me посмотрел" floor " на тест-полоску   ", "  " zaderzhka " ")
-SendChat("do У человека есть наркотическое опьянение? ", "  " zaderzhka " ")
+%vybor%("say Давайте я посмотрю.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " тест у человека напротив ", "  " zaderzhka " ")
+%vybor%("me достал" floor " тест-полоску из контейнера   ", "  " zaderzhka " ")
+%vybor%("me посмотрел" floor " на тест-полоску   ", "  " zaderzhka " ")
+%vybor%("do У человека есть наркотическое опьянение? ", "  " zaderzhka " ")
 Return
 
 :?:/Наркотики_3::
 SendPlay {Enter}
-SendChat("say У вас обнаружено наркотическое опьянение.   ", " " zaderzhka " ")
+%vybor%("say У вас обнаружено наркотическое опьянение.   ", " " zaderzhka " ")
 Return
 
 :?:/Наркотики_4::
 SendPlay {Enter}
-SendChat("say Вы не в состоянии наркотического опьянения. ", " " zaderzhka " ")
+%vybor%("say Вы не в состоянии наркотического опьянения. ", " " zaderzhka " ")
 Return
 
 :?:/Ребро_1::
 SendPlay {Enter}
-SendChat("say Сейчас проведем сканирование, выясним серьезность, ложитесь.", "  " zaderzhka " ")
-SendChat("me подключил" floor "  апппрпт наркоза к пациенту ", "  " zaderzhka " ")
-SendChat("do Рентген аппарат стоит у стены. ", "  " zaderzhka " ")
-SendChat("me выкатывает аппарат к койке пациента", "  " zaderzhka " ")
-SendChat("me включает аппарат", "  " zaderzhka " ")
-SendChat("me наклоняет аппарат прислоняя прибор к спине пациента ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола вату и Йодонат ", "  " zaderzhka " ")
-SendChat("me запускает сканирование ", "  " zaderzhka " ")
-SendChat("me вынимает снимок из аппарата ", "  " zaderzhka " ")
-SendChat("me задумчиво смотрит на снимок ", "  " zaderzhka " ")
-SendChat("do Обнаружены отклонения? ", "  " zaderzhka " ")
+%vybor%("say Сейчас проведем сканирование, выясним серьезность, ложитесь.", "  " zaderzhka " ")
+%vybor%("me подключил" floor "  апппрпт наркоза к пациенту ", "  " zaderzhka " ")
+%vybor%("do Рентген аппарат стоит у стены. ", "  " zaderzhka " ")
+%vybor%("me выкатывает аппарат к койке пациента", "  " zaderzhka " ")
+%vybor%("me включает аппарат", "  " zaderzhka " ")
+%vybor%("me наклоняет аппарат прислоняя прибор к спине пациента ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола вату и Йодонат ", "  " zaderzhka " ")
+%vybor%("me запускает сканирование ", "  " zaderzhka " ")
+%vybor%("me вынимает снимок из аппарата ", "  " zaderzhka " ")
+%vybor%("me задумчиво смотрит на снимок ", "  " zaderzhka " ")
+%vybor%("do Обнаружены отклонения? ", "  " zaderzhka " ")
 Return
 
 :?:/Ребро_2::
 SendPlay {Enter}
-SendChat("me отложил" floor " снимок на тумбочку ", "  " zaderzhka " ")
-SendChat("say Соболезную вам, худшие опасения подтвердились. ", "  " zaderzhka " ")
-SendChat("say Будем ставить вам корсет. ", "  " zaderzhka " ")
-SendChat("me взяв перчатки с тумбочки надел" floor "  их ", "  " zaderzhka " ")
-SendChat("me щупает место перелома ", "  " zaderzhka " ")
-SendChat("me резким движением рук вправляет кость в правильное положение ", "  " zaderzhka " ")
-SendChat("say Сейчас достану обезболивающее и корсет. ", "  " zaderzhka " ")
-SendChat("do Шкаф стоит у стены. ", "  " zaderzhka " ")
-SendChat("me открыл" floor "  дверцу шкафа ", "  " zaderzhka " ")
-SendChat("me взяв препарат в руку несет его пациенту ", "  " zaderzhka " ")
-SendChat("me потянул" floor "  препарат пациенту ", "  " zaderzhka " ")
-SendChat("say Разжуйте и проглотите, это снизит боль ", "  " zaderzhka " ")
-SendChat("me взяв корсет, несет его пациенту ", "  " zaderzhka " ")
-SendChat("me аккуратно надевает корсет на спину пациента ", "  " zaderzhka " ")
-SendChat("me завязывает шнурки фиксируя корсет плотно на месте перелома ", "  " zaderzhka " ")
-SendChat("me проверяет фиксацию корсета ", "  " zaderzhka " ")
-SendChat("say Вам с ним нужно будет проходить полторы-две недели. ", "  " zaderzhka " ")
-SendChat("say После нужно будет приехать к нам, повторно проведем сканирование. ", "  " zaderzhka " ")
-SendChat("say Вообще не снимать и не мочить. Спать только на животе. ", "  " zaderzhka " ")
-SendChat("say Сейчас я Вам вколю обезболивающее.  ", "  " zaderzhka " ")
-SendChat("do Препараты лежат на стеллаже. ", "  " zaderzhka " ")
-SendChat("me достал" floor " нужный препарат со стеллажа ", "  " zaderzhka " ")
-SendChat("me смочил" floor " ватку Хлоргексидином ", "  " zaderzhka " ")
-SendChat("me снял" floor " со шприца колпачок ", "  " zaderzhka " ")
-SendChat("me набрав Хлоргексидин в шприц ", "  " zaderzhka " ")
-SendChat("me приспустил" floor " штаны пациента ", "  " zaderzhka " ")
-SendChat("me смазывает место будущего укола мокрой ваткой ", "  " zaderzhka " ")
-SendChat("me убрал" floor " Хлоргексидин на стеллаж ", "  " zaderzhka " ")
-SendChat("do Препараты на стеллаже. ", "  " zaderzhka " ")
-SendChat("me достал" floor " нужный препарат со стеллажа ", "  " zaderzhka " ")
-SendChat("me набрал" floor " в шприц Налбуфин ", "  " zaderzhka " ")
-SendChat("do Лекарство в шприце. ", "  " zaderzhka " ")
-SendChat("me введя шприц в место укола вводит лекарство внутрь ", "  " zaderzhka " ")
-SendChat("do Урна в углу палаты. ", "  " zaderzhka " ")
-SendChat("me вытащив шприц бросил" floor " его в урну ", "  " zaderzhka " ")
-SendChat("me прислонил" floor " ватку к месту укола ", "  " zaderzhka " ")
-SendChat("say Так. Прижимайте ватку, потом просто бросьте ее в урну. ", "  " zaderzhka " ")
-SendChat("say Вам нужно полежать в таком положении минимум 1 час. ", "  " zaderzhka " ")
-SendChat("say После чего, Вы можете ехать домой.  ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " снимок на тумбочку ", "  " zaderzhka " ")
+%vybor%("say Соболезную вам, худшие опасения подтвердились. ", "  " zaderzhka " ")
+%vybor%("say Будем ставить вам корсет. ", "  " zaderzhka " ")
+%vybor%("me взяв перчатки с тумбочки надел" floor "  их ", "  " zaderzhka " ")
+%vybor%("me щупает место перелома ", "  " zaderzhka " ")
+%vybor%("me резким движением рук вправляет кость в правильное положение ", "  " zaderzhka " ")
+%vybor%("say Сейчас достану обезболивающее и корсет. ", "  " zaderzhka " ")
+%vybor%("do Шкаф стоит у стены. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor "  дверцу шкафа ", "  " zaderzhka " ")
+%vybor%("me взяв препарат в руку несет его пациенту ", "  " zaderzhka " ")
+%vybor%("me потянул" floor "  препарат пациенту ", "  " zaderzhka " ")
+%vybor%("say Разжуйте и проглотите, это снизит боль ", "  " zaderzhka " ")
+%vybor%("me взяв корсет, несет его пациенту ", "  " zaderzhka " ")
+%vybor%("me аккуратно надевает корсет на спину пациента ", "  " zaderzhka " ")
+%vybor%("me завязывает шнурки фиксируя корсет плотно на месте перелома ", "  " zaderzhka " ")
+%vybor%("me проверяет фиксацию корсета ", "  " zaderzhka " ")
+%vybor%("say Вам с ним нужно будет проходить полторы-две недели. ", "  " zaderzhka " ")
+%vybor%("say После нужно будет приехать к нам, повторно проведем сканирование. ", "  " zaderzhka " ")
+%vybor%("say Вообще не снимать и не мочить. Спать только на животе. ", "  " zaderzhka " ")
+%vybor%("say Сейчас я Вам вколю обезболивающее.  ", "  " zaderzhka " ")
+%vybor%("do Препараты лежат на стеллаже. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " нужный препарат со стеллажа ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " ватку Хлоргексидином ", "  " zaderzhka " ")
+%vybor%("me снял" floor " со шприца колпачок ", "  " zaderzhka " ")
+%vybor%("me набрав Хлоргексидин в шприц ", "  " zaderzhka " ")
+%vybor%("me приспустил" floor " штаны пациента ", "  " zaderzhka " ")
+%vybor%("me смазывает место будущего укола мокрой ваткой ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " Хлоргексидин на стеллаж ", "  " zaderzhka " ")
+%vybor%("do Препараты на стеллаже. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " нужный препарат со стеллажа ", "  " zaderzhka " ")
+%vybor%("me набрал" floor " в шприц Налбуфин ", "  " zaderzhka " ")
+%vybor%("do Лекарство в шприце. ", "  " zaderzhka " ")
+%vybor%("me введя шприц в место укола вводит лекарство внутрь ", "  " zaderzhka " ")
+%vybor%("do Урна в углу палаты. ", "  " zaderzhka " ")
+%vybor%("me вытащив шприц бросил" floor " его в урну ", "  " zaderzhka " ")
+%vybor%("me прислонил" floor " ватку к месту укола ", "  " zaderzhka " ")
+%vybor%("say Так. Прижимайте ватку, потом просто бросьте ее в урну. ", "  " zaderzhka " ")
+%vybor%("say Вам нужно полежать в таком положении минимум 1 час. ", "  " zaderzhka " ")
+%vybor%("say После чего, Вы можете ехать домой.  ", "  " zaderzhka " ")
 Return
 
 :?:/Ребро_3::
 SendPlay {Enter}
-SendChat("Я выпишу Вам Фастум-гель. Его стоимость 500 рублей. Вы согласны?", " " zaderzhka " ")
+%vybor%("Я выпишу Вам Фастум-гель. Его стоимость 500 рублей. Вы согласны?", " " zaderzhka " ")
 Return
 
 :?:/Роды_1::
 SendPlay {Enter}
-SendChat("say Успокойтесь, девушка, сейчас главное не волноваться. ", "  " zaderzhka " ")
-SendChat("me расстегнул" floor " на девушке одежду, которая стягивала живот ", "  " zaderzhka " ")
-SendChat("say Пожалуйста, согните ноги в коленях и очень сильно раздвиньте. ", "  " zaderzhka " ")
-SendChat("say Запомните: тужиться нужно только после глубокого вдоха, вне потуг нужно глубоко дышать. ", "  " zaderzhka " ")
-SendChat("say Во время потуг, пожалуйста, держитесь за свои колени и тяните их на себя, ничего не бойтесь. ", "  " zaderzhka " ")
+%vybor%("say Успокойтесь, девушка, сейчас главное не волноваться. ", "  " zaderzhka " ")
+%vybor%("me расстегнул" floor " на девушке одежду, которая стягивала живот ", "  " zaderzhka " ")
+%vybor%("say Пожалуйста, согните ноги в коленях и очень сильно раздвиньте. ", "  " zaderzhka " ")
+%vybor%("say Запомните: тужиться нужно только после глубокого вдоха, вне потуг нужно глубоко дышать. ", "  " zaderzhka " ")
+%vybor%("say Во время потуг, пожалуйста, держитесь за свои колени и тяните их на себя, ничего не бойтесь. ", "  " zaderzhka " ")
 Return
 :?:/Роды_2::
 SendPlay {Enter}
-SendChat("s Тужьтесь, тужьтесь. Сильнее.  ", "  " zaderzhka " ")
-SendChat("do На свет постепенно начала появляться голова новорожденного.   ", "  " zaderzhka " ")
-SendChat("todo Сделайте выдох и постарайтесь больше не тужиться*придерживая голову ребенка   ", "  " zaderzhka " ")
-SendChat("do Ребенок полностью появился на свет.  ", "  " zaderzhka " ")
-SendChat("say Спокойствие. Теперь необходимо разрезать пуповину.  ", "  " zaderzhka " ")
-SendChat("do Через плечо надета мед. сумка с множеством препаратов.  ", "  " zaderzhka " ")
-SendChat("me достав нитки для бинтов, сделал" floor " 2 узла на расстоянии 5 и 10 см выше пупка ребенка   ", "  " zaderzhka " ")
-SendChat("me достав ножницы из сумки, аккуратно перерезал" floor "  пуповину между узлами  ", "  " zaderzhka " ")
-SendChat("me аккуратно похлопал" floor "  ребенка по ягодицам и спине  ", "  " zaderzhka " ")
-SendChat("me достав антисептик, продезинфицировал" floor " конец пуповины у ребенка  ", "  " zaderzhka " ")
-SendChat("me убрав антисептик в сумку, достал" floor " к бинты и обвязал" floor " к ими пуповину  ", "  " zaderzhka " ")
-SendChat("me достав салфетки из сумки, вытер" Female " слизь с носа и рта новорожденного  ", "  " zaderzhka " ")
-SendChat("todo Ну что, мамаша! Поздравляю!*достав объемную ткань из сумки  ", "  " zaderzhka " ")
-SendChat("me завернув новорожденного в ткань, положил" floor " его на грудь матери  ", "  " zaderzhka " ")
+%vybor%("s Тужьтесь, тужьтесь. Сильнее.  ", "  " zaderzhka " ")
+%vybor%("do На свет постепенно начала появляться голова новорожденного.   ", "  " zaderzhka " ")
+%vybor%("todo Сделайте выдох и постарайтесь больше не тужиться*придерживая голову ребенка   ", "  " zaderzhka " ")
+%vybor%("do Ребенок полностью появился на свет.  ", "  " zaderzhka " ")
+%vybor%("say Спокойствие. Теперь необходимо разрезать пуповину.  ", "  " zaderzhka " ")
+%vybor%("do Через плечо надета мед. сумка с множеством препаратов.  ", "  " zaderzhka " ")
+%vybor%("me достав нитки для бинтов, сделал" floor " 2 узла на расстоянии 5 и 10 см выше пупка ребенка   ", "  " zaderzhka " ")
+%vybor%("me достав ножницы из сумки, аккуратно перерезал" floor "  пуповину между узлами  ", "  " zaderzhka " ")
+%vybor%("me аккуратно похлопал" floor "  ребенка по ягодицам и спине  ", "  " zaderzhka " ")
+%vybor%("me достав антисептик, продезинфицировал" floor " конец пуповины у ребенка  ", "  " zaderzhka " ")
+%vybor%("me убрав антисептик в сумку, достал" floor " к бинты и обвязал" floor " к ими пуповину  ", "  " zaderzhka " ")
+%vybor%("me достав салфетки из сумки, вытер" Female " слизь с носа и рта новорожденного  ", "  " zaderzhka " ")
+%vybor%("todo Ну что, мамаша! Поздравляю!*достав объемную ткань из сумки  ", "  " zaderzhka " ")
+%vybor%("me завернув новорожденного в ткань, положил" floor " его на грудь матери  ", "  " zaderzhka " ")
 Return
 
 
 :?:/ЭЭГ_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, садитесь пожалуйста. ", "  " zaderzhka " ")
-SendChat("do Возле стены стоит аппарат ЭЭГ. ", "  " zaderzhka " ")
-SendChat("me пододвинул" floor " аппарат ЭЭГ к койке ", "  " zaderzhka " ")
-SendChat("do Аппарат возле койки. ", "  " zaderzhka " ")
-SendChat("do Электроды от ЭЭГ и спирт в закрытом стеллаже. ", "  " zaderzhka " ")
-SendChat("me открыв стеллаж взял" floor " в руку спирт и электроды ", "  " zaderzhka " ")
-SendChat("me открыв спирт, обработал" floor " электроды ", "  " zaderzhka " ")
-SendChat("do В закрытом шкафу лежит чистое тряпошное полотенце. ", "  " zaderzhka " ")
-SendChat("me взял" floor " полотенце в руку  ", "  " zaderzhka " ")
-SendChat("me положил" floor " тряпошное полотенце на голову человеку ", "  " zaderzhka " ")
-SendChat("me приклеил" floor " липучки полотенца к коже в области ушей ", "  " zaderzhka " ")
-SendChat("do Полотенце на голове и зафиксировано. ", "  " zaderzhka " ")
-SendChat("do В стеллаже токопроводящий гель. ", "  " zaderzhka " ")
-SendChat("me взяв гель в руку обработал" floor " электроды ", "  " zaderzhka " ")
-SendChat("do Электроды обработаны и готовы к использованию. ", "  " zaderzhka " ")
-SendChat("me присоединил" floor " электроды к голове человека ", "  " zaderzhka " ")
-SendChat("me подключил" floor " электроды к аппарату ЭЭГ ", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку запуска аппарата ЭЭГ ", "  " zaderzhka " ")
-SendChat("say Сидите смирно и не подвижно. ", "  " zaderzhka " ")
-SendChat("do Аппарат ЭЭГ начал работу и вывел изменение графика на экран.  ", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на экран прибора ", "  " zaderzhka " ")
-SendChat("say Глубоко вдохните. ", "  " zaderzhka " ")
-SendChat("say Теперь выдохните. ", "  " zaderzhka " ")
-SendChat("do Сотрудник мог увидел изменения на графике ЭЭГ. ", "  " zaderzhka " ")
-SendChat("say Закройте глаза. ", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку включения мигания света ", "  " zaderzhka " ")
-SendChat("do Прибор начал" floor " подавать пучки света в глаза человеку. ", "  " zaderzhka " ")
-SendChat("do Прибор перистал подавать пучки света в глаза человеку. ", "  " zaderzhka " ")
-SendChat("me нажал" floor "на кнопку Результат ", "  " zaderzhka " ")
-SendChat("do Прибор закончил работу и распечатал энцефалограмму. ", "  " zaderzhka " ")
-SendChat("me взял" floor " в руки энцефалограмму ", "  " zaderzhka " ")
-SendChat("me подробно изучает энцефалограмму ", "  " zaderzhka " ")
-SendChat("do Проблемы в работе нервных импульсов головного мозга обнаружены? ", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, садитесь пожалуйста. ", "  " zaderzhka " ")
+%vybor%("do Возле стены стоит аппарат ЭЭГ. ", "  " zaderzhka " ")
+%vybor%("me пододвинул" floor " аппарат ЭЭГ к койке ", "  " zaderzhka " ")
+%vybor%("do Аппарат возле койки. ", "  " zaderzhka " ")
+%vybor%("do Электроды от ЭЭГ и спирт в закрытом стеллаже. ", "  " zaderzhka " ")
+%vybor%("me открыв стеллаж взял" floor " в руку спирт и электроды ", "  " zaderzhka " ")
+%vybor%("me открыв спирт, обработал" floor " электроды ", "  " zaderzhka " ")
+%vybor%("do В закрытом шкафу лежит чистое тряпошное полотенце. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " полотенце в руку  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " тряпошное полотенце на голову человеку ", "  " zaderzhka " ")
+%vybor%("me приклеил" floor " липучки полотенца к коже в области ушей ", "  " zaderzhka " ")
+%vybor%("do Полотенце на голове и зафиксировано. ", "  " zaderzhka " ")
+%vybor%("do В стеллаже токопроводящий гель. ", "  " zaderzhka " ")
+%vybor%("me взяв гель в руку обработал" floor " электроды ", "  " zaderzhka " ")
+%vybor%("do Электроды обработаны и готовы к использованию. ", "  " zaderzhka " ")
+%vybor%("me присоединил" floor " электроды к голове человека ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " электроды к аппарату ЭЭГ ", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку запуска аппарата ЭЭГ ", "  " zaderzhka " ")
+%vybor%("say Сидите смирно и не подвижно. ", "  " zaderzhka " ")
+%vybor%("do Аппарат ЭЭГ начал работу и вывел изменение графика на экран.  ", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на экран прибора ", "  " zaderzhka " ")
+%vybor%("say Глубоко вдохните. ", "  " zaderzhka " ")
+%vybor%("say Теперь выдохните. ", "  " zaderzhka " ")
+%vybor%("do Сотрудник мог увидел изменения на графике ЭЭГ. ", "  " zaderzhka " ")
+%vybor%("say Закройте глаза. ", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку включения мигания света ", "  " zaderzhka " ")
+%vybor%("do Прибор начал" floor " подавать пучки света в глаза человеку. ", "  " zaderzhka " ")
+%vybor%("do Прибор перистал подавать пучки света в глаза человеку. ", "  " zaderzhka " ")
+%vybor%("me нажал" floor "на кнопку Результат ", "  " zaderzhka " ")
+%vybor%("do Прибор закончил работу и распечатал энцефалограмму. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руки энцефалограмму ", "  " zaderzhka " ")
+%vybor%("me подробно изучает энцефалограмму ", "  " zaderzhka " ")
+%vybor%("do Проблемы в работе нервных импульсов головного мозга обнаружены? ", "  " zaderzhka " ")
 Return
 
 :?:/ЭЭГ_2::
 SendPlay {Enter}
-SendChat("say Были найдены проблемы в работе. ", "  " zaderzhka " ")
-SendChat("say Я выпишу Вам Фенитоин, а так же направление на терапию. ", "  " zaderzhka " ")
-SendChat("say Стоимость лекарства, 500 рублей, Вы согласны? ", "  " zaderzhka " ")
-SendChat("me снял" floor " с головы человека электроды и полотенце ", "  " zaderzhka " ")
-SendChat("me отодвинул" floor " аппарат ЭЭГ от койки ", "  " zaderzhka " ")
+%vybor%("say Были найдены проблемы в работе. ", "  " zaderzhka " ")
+%vybor%("say Я выпишу Вам Фенитоин, а так же направление на терапию. ", "  " zaderzhka " ")
+%vybor%("say Стоимость лекарства, 500 рублей, Вы согласны? ", "  " zaderzhka " ")
+%vybor%("me снял" floor " с головы человека электроды и полотенце ", "  " zaderzhka " ")
+%vybor%("me отодвинул" floor " аппарат ЭЭГ от койки ", "  " zaderzhka " ")
 Return
 
 :?:/ЭЭГ_3::
 SendPlay {Enter}
-SendChat("say Всё хорошо, никаких отклонений не видно. ", "  " zaderzhka " ")
-SendChat("say Скорее всего обычная усталость. ", "  " zaderzhka " ")
-SendChat("say Но, всё равно выпишу Вам Фенитоин. ", "  " zaderzhka " ")
-SendChat("me снял" floor " с головы человека электроды и полотенце ", "  " zaderzhka " ")
-SendChat("me отодвинул" floor " аппарат ЭЭГ от койки ", "  " zaderzhka " ")
+%vybor%("say Всё хорошо, никаких отклонений не видно. ", "  " zaderzhka " ")
+%vybor%("say Скорее всего обычная усталость. ", "  " zaderzhka " ")
+%vybor%("say Но, всё равно выпишу Вам Фенитоин. ", "  " zaderzhka " ")
+%vybor%("me снял" floor " с головы человека электроды и полотенце ", "  " zaderzhka " ")
+%vybor%("me отодвинул" floor " аппарат ЭЭГ от койки ", "  " zaderzhka " ")
 Return
 
 :?:/Вывих::
 SendPlay {Enter}
-SendChat("me сняв одежду с повреждённого места, положил на койку ", "  " zaderzhka " ")
-SendChat("do В стеллаже шприц в упаковке. ", "  " zaderzhka " ")
-SendChat("me открыв стеллаж, взял упакованный шприц ", "  " zaderzhka " ")
-SendChat("me открыв упаковку, взял шприц ", "  " zaderzhka " ")
-SendChat("do В стеллаже баночка Натрия оксибутират с наркозным средством. ", "  " zaderzhka " ")
-SendChat("me открыв баночку, ввёл в шприц наркозное средство ", "  " zaderzhka " ")
-SendChat("do Шприц наполнен наркозным средством. ", "  " zaderzhka " ")
-SendChat("me закрыв баночку с наркозным средством, поставил в стеллаж ", "  " zaderzhka " ")
-SendChat("do В стеллаже антисептик и ватка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " антисептик и вату ", "  " zaderzhka " ")
-SendChat("me открыв антисептик, намочил" floor " вату ", "  " zaderzhka " ")
-SendChat("do Вата в антисептике. ", "  " zaderzhka " ")
-SendChat("me протер" Female " место повреждения ватой ", "  " zaderzhka " ")
-SendChat("me закрыв антисептик, положил" floor " обратно в стеллаж  ", "  " zaderzhka " ")
-SendChat("do В руке шприц с наркозным средством.", "  " zaderzhka " ")
-SendChat("me осторожно ввёл" floor " средство рядом с местом повреждения ", "  " zaderzhka " ")
-SendChat("do Под столом в комнате санитарная урна. ", "  " zaderzhka " ")
-SendChat("me выкинув использованный шприц, взял" floor " повреждённую конечность ", "  " zaderzhka " ")
-SendChat("me немного повернул" floor " конечность ", "  " zaderzhka " ")
-SendChat("do У стены стоит холодильник. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " холодильник ", "  " zaderzhka " ")
-SendChat("do В холодильнике лежит ледяной компресс. ", "  " zaderzhka " ")
-SendChat("me достал" floor " ледяной компресс из холодильника ", "  " zaderzhka " ")
-SendChat("me приложил" floor " ледяной компресс к месту повреждения ", "  " zaderzhka " ")
-SendChat("say Анестезия на месте повреждения скоро пройдет, и боль увеличится. ", "  " zaderzhka " ")
-SendChat("me убрав компресс, положил его в холодильник ", "  " zaderzhka " ")
-SendChat("me закрыл холодильник ", "  " zaderzhka " ")
+%vybor%("me сняв одежду с повреждённого места, положил на койку ", "  " zaderzhka " ")
+%vybor%("do В стеллаже шприц в упаковке. ", "  " zaderzhka " ")
+%vybor%("me открыв стеллаж, взял упакованный шприц ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку, взял шприц ", "  " zaderzhka " ")
+%vybor%("do В стеллаже баночка Натрия оксибутират с наркозным средством. ", "  " zaderzhka " ")
+%vybor%("me открыв баночку, ввёл в шприц наркозное средство ", "  " zaderzhka " ")
+%vybor%("do Шприц наполнен наркозным средством. ", "  " zaderzhka " ")
+%vybor%("me закрыв баночку с наркозным средством, поставил в стеллаж ", "  " zaderzhka " ")
+%vybor%("do В стеллаже антисептик и ватка. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " антисептик и вату ", "  " zaderzhka " ")
+%vybor%("me открыв антисептик, намочил" floor " вату ", "  " zaderzhka " ")
+%vybor%("do Вата в антисептике. ", "  " zaderzhka " ")
+%vybor%("me протер" Female " место повреждения ватой ", "  " zaderzhka " ")
+%vybor%("me закрыв антисептик, положил" floor " обратно в стеллаж  ", "  " zaderzhka " ")
+%vybor%("do В руке шприц с наркозным средством.", "  " zaderzhka " ")
+%vybor%("me осторожно ввёл" floor " средство рядом с местом повреждения ", "  " zaderzhka " ")
+%vybor%("do Под столом в комнате санитарная урна. ", "  " zaderzhka " ")
+%vybor%("me выкинув использованный шприц, взял" floor " повреждённую конечность ", "  " zaderzhka " ")
+%vybor%("me немного повернул" floor " конечность ", "  " zaderzhka " ")
+%vybor%("do У стены стоит холодильник. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " холодильник ", "  " zaderzhka " ")
+%vybor%("do В холодильнике лежит ледяной компресс. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " ледяной компресс из холодильника ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " ледяной компресс к месту повреждения ", "  " zaderzhka " ")
+%vybor%("say Анестезия на месте повреждения скоро пройдет, и боль увеличится. ", "  " zaderzhka " ")
+%vybor%("me убрав компресс, положил его в холодильник ", "  " zaderzhka " ")
+%vybor%("me закрыл холодильник ", "  " zaderzhka " ")
 Return
 
 :?:/Кардиостимулятор::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит стеллаж с необходимыми инструментами. ", "  " zaderzhka " ")
-SendChat("do Антисептик с ватой в стеллаже. ", "  " zaderzhka " ")
-SendChat("me открыв стеллаж, взял" floor " антисептик с ватой ", "  " zaderzhka " ")
-SendChat("me обрабатывает операционное поле ", "  " zaderzhka " ")
-SendChat("do Операционное поле обработано. ", "  " zaderzhka " ")
-SendChat("do Рядом стоит аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включив аппарат наркоза, взял" floor " кислородную маску ", "  " zaderzhka " ")
-SendChat("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
-SendChat("me подключил" floor " пациента к аппарату ИВЛ ", "  " zaderzhka " ")
-SendChat("do Пациент подключен к аппарату ИВЛ. ", "  " zaderzhka " ")
-SendChat("do Стерилизованный кардиостимулятор в стеллаже. ", "  " zaderzhka " ")
-SendChat("do Кардиостимулятор в упаковке. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кардиостимулятор в упаковке ", "  " zaderzhka " ")
-SendChat("me открыв упаковку, взял" floor " кардиостимулятор ", "  " zaderzhka " ")
-SendChat("me взяв скальпель, сделал" floor " надрез под ключицей ", "  " zaderzhka " ")
-SendChat("do Подключичные вены стали видны. ", "  " zaderzhka " ")
-SendChat("me сделав надрез в вене, провел" floor " электрод в сердце ", "  " zaderzhka " ")
-SendChat("me поместил" floor " основную часть кардиостимулятора в подкожный карман ", "  " zaderzhka " ")
-SendChat("do Кардиостимулятор под кожей.", "  " zaderzhka " ")
-SendChat("do В стеллаже лежат нитки и ножницы.  ", "  " zaderzhka " ")
-SendChat("me взяв в руки нитки и ножницы, отрезал" floor " нужное количество ниток ", "  " zaderzhka " ")
-SendChat("me сшил" floor " место разреза кожи ", "  " zaderzhka " ")
-SendChat("do Послеоперационный пластырь в открытом стеллаже. ", "  " zaderzhka " ")
-SendChat("me взяв послеоперационный пластырь, закрыл" floor " стеллаж ", "  " zaderzhka " ")
-SendChat("do Послеоперационный пластырь в упаковке. ", "  " zaderzhka " ")
-SendChat("me открыв упаковку, наклеил пластырь на место шва ", "  " zaderzhka " ")
-SendChat("do Послеоперационный пластырь наклеен на шов. ", "  " zaderzhka " ")
-SendChat("me отключил" floor " пациента от аппарата ИВЛ ", "  " zaderzhka " ")
-SendChat("me снял" floor " кислородную маску с пациента ", "  " zaderzhka " ")
-SendChat("say Операция прошла успешно. ", "  " zaderzhka " ")
-SendChat("say Я Вам выпишу обезболивающее Тазепам, его стоимость 500 рублей, Вы согласны оплатить? ", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит стеллаж с необходимыми инструментами. ", "  " zaderzhka " ")
+%vybor%("do Антисептик с ватой в стеллаже. ", "  " zaderzhka " ")
+%vybor%("me открыв стеллаж, взял" floor " антисептик с ватой ", "  " zaderzhka " ")
+%vybor%("me обрабатывает операционное поле ", "  " zaderzhka " ")
+%vybor%("do Операционное поле обработано. ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включив аппарат наркоза, взял" floor " кислородную маску ", "  " zaderzhka " ")
+%vybor%("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " пациента к аппарату ИВЛ ", "  " zaderzhka " ")
+%vybor%("do Пациент подключен к аппарату ИВЛ. ", "  " zaderzhka " ")
+%vybor%("do Стерилизованный кардиостимулятор в стеллаже. ", "  " zaderzhka " ")
+%vybor%("do Кардиостимулятор в упаковке. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кардиостимулятор в упаковке ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку, взял" floor " кардиостимулятор ", "  " zaderzhka " ")
+%vybor%("me взяв скальпель, сделал" floor " надрез под ключицей ", "  " zaderzhka " ")
+%vybor%("do Подключичные вены стали видны. ", "  " zaderzhka " ")
+%vybor%("me сделав надрез в вене, провел" floor " электрод в сердце ", "  " zaderzhka " ")
+%vybor%("me поместил" floor " основную часть кардиостимулятора в подкожный карман ", "  " zaderzhka " ")
+%vybor%("do Кардиостимулятор под кожей.", "  " zaderzhka " ")
+%vybor%("do В стеллаже лежат нитки и ножницы.  ", "  " zaderzhka " ")
+%vybor%("me взяв в руки нитки и ножницы, отрезал" floor " нужное количество ниток ", "  " zaderzhka " ")
+%vybor%("me сшил" floor " место разреза кожи ", "  " zaderzhka " ")
+%vybor%("do Послеоперационный пластырь в открытом стеллаже. ", "  " zaderzhka " ")
+%vybor%("me взяв послеоперационный пластырь, закрыл" floor " стеллаж ", "  " zaderzhka " ")
+%vybor%("do Послеоперационный пластырь в упаковке. ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку, наклеил пластырь на место шва ", "  " zaderzhka " ")
+%vybor%("do Послеоперационный пластырь наклеен на шов. ", "  " zaderzhka " ")
+%vybor%("me отключил" floor " пациента от аппарата ИВЛ ", "  " zaderzhka " ")
+%vybor%("me снял" floor " кислородную маску с пациента ", "  " zaderzhka " ")
+%vybor%("say Операция прошла успешно. ", "  " zaderzhka " ")
+%vybor%("say Я Вам выпишу обезболивающее Тазепам, его стоимость 500 рублей, Вы согласны оплатить? ", "  " zaderzhka " ")
 Return
 :?:/Бешенство::
 SendPlay {Enter}
-SendChat("do На столе лежит всё необходимое для вакцинации.", "  " zaderzhka " ")
-SendChat("me взял" floor " ватный диск и спирт ", "  " zaderzhka " ")
-SendChat("me промочил" floor " ватный диск в спирте ", "  " zaderzhka " ")
-SendChat("me продезинфицировал" floor " место ввода вакцины ", "  " zaderzhka " ")
-SendChat("do В комнате расположена урна. ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " ватный диск в урну ", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовую иглу и новый одноразовый шприц ", "  " zaderzhka " ")
-SendChat("me надел" floor " иглу на шприц ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку с вакциной от бешенства ", "  " zaderzhka " ")
-SendChat("me наполнил" floor " шприц вакциной от бешенства ", "  " zaderzhka " ")
-SendChat("me убрал лишний воздух из шприца ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " иглу в дельтовидную мышцу пациента ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " вакцину ", "  " zaderzhka " ")
-SendChat("me вынул" floor " иглу ", "  " zaderzhka " ")
-SendChat("me придавил" floor " место прокола заранее приготовленной ваткой в спирте ", "  " zaderzhka " ")
-SendChat("say Держите ватку так не менее 5-ти минутюб. ", "  " zaderzhka " ")
+%vybor%("do На столе лежит всё необходимое для вакцинации.", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватный диск и спирт ", "  " zaderzhka " ")
+%vybor%("me промочил" floor " ватный диск в спирте ", "  " zaderzhka " ")
+%vybor%("me продезинфицировал" floor " место ввода вакцины ", "  " zaderzhka " ")
+%vybor%("do В комнате расположена урна. ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " ватный диск в урну ", "  " zaderzhka " ")
+%vybor%("me взял" floor " одноразовую иглу и новый одноразовый шприц ", "  " zaderzhka " ")
+%vybor%("me надел" floor " иглу на шприц ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробирку с вакциной от бешенства ", "  " zaderzhka " ")
+%vybor%("me наполнил" floor " шприц вакциной от бешенства ", "  " zaderzhka " ")
+%vybor%("me убрал лишний воздух из шприца ", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " иглу в дельтовидную мышцу пациента ", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " вакцину ", "  " zaderzhka " ")
+%vybor%("me вынул" floor " иглу ", "  " zaderzhka " ")
+%vybor%("me придавил" floor " место прокола заранее приготовленной ваткой в спирте ", "  " zaderzhka " ")
+%vybor%("say Держите ватку так не менее 5-ти минутюб. ", "  " zaderzhka " ")
 Return
 
 :?:/Родинка::
 SendPlay {Enter}
-SendChat("do В шкафу лежит профессиональный фен. ", "  " zaderzhka " ")
-SendChat("me взяв фен из шкафа, включил" floor " его на холодном потоке воздуха ", "  " zaderzhka " ")
-SendChat("me направил" floor " фен на проблемное место пациента для охлаждения ", "  " zaderzhka " ")
-SendChat("do Лазерная машина стоит около операционного стола. ", "  " zaderzhka " ")
-SendChat("me включив необходимый режим, установил" floor " таймер и направил лазер на место родинки ", "  " zaderzhka " ")
-SendChat("say Сейчас будет немного больно, потерпите. ", "  " zaderzhka " ")
-SendChat("say В течении 3-х минут проблемного места уже не будет.  ", "  " zaderzhka " ")
-SendChat("do Лазер начал удалять проблемное место пациента. ", "" " zaderzhka " "0")
-SendChat("do Лазерная машина закончила работу. ", "  " zaderzhka " ")
-SendChat("say Как вы себя чувствуете?   ", "  " zaderzhka " ")
-SendChat("me выключив лазер, придвинул" floor " его обратно к стенке ", "  " zaderzhka " ")
-SendChat("me выключил фен и убрал" floor " его в шкаф  ", "  " zaderzhka " ")
-SendChat("do В тумбе лежит медицинский спирт с ватой. ", "  " zaderzhka " ")
-SendChat("me достав все необходимое из тумбы, смочил" floor " вату спиртом, затем приложил" floor " на место операции ", "  " zaderzhka " ")
-SendChat("say Так-с, держите её и постарайтесь не двигать. ", "  " zaderzhka " ")
-SendChat("do На столе лежит большая пачка пластырей. ", "  " zaderzhka " ")
-SendChat("me вскрыв пачку, достал" floor " из нее пластырь, затем положил" floor " пачку в шкаф ", "  " zaderzhka " ")
-SendChat("me наклеил" floor " пластырь поверх ватки ", "  " zaderzhka " ")
-SendChat("say Если будут какие-то жалобы, то обратитесь к врачу. ", "  " zaderzhka " ")
-SendChat("say Важно избегать попадания воды на обработанную зону в течение 24 часов. ", "  " zaderzhka " ")
-SendChat("say Не снимайте пластырь в течение 2 дней. ", "  " zaderzhka " ")
-SendChat("say Если возникнут признаки воспаления, такие как покраснение или выделения, немедленно свяжитесь с врачом. ", "  " zaderzhka " ")
-SendChat("say На этом все. Всего хорошего. ", "  " zaderzhka " ")
+%vybor%("do В шкафу лежит профессиональный фен. ", "  " zaderzhka " ")
+%vybor%("me взяв фен из шкафа, включил" floor " его на холодном потоке воздуха ", "  " zaderzhka " ")
+%vybor%("me направил" floor " фен на проблемное место пациента для охлаждения ", "  " zaderzhka " ")
+%vybor%("do Лазерная машина стоит около операционного стола. ", "  " zaderzhka " ")
+%vybor%("me включив необходимый режим, установил" floor " таймер и направил лазер на место родинки ", "  " zaderzhka " ")
+%vybor%("say Сейчас будет немного больно, потерпите. ", "  " zaderzhka " ")
+%vybor%("say В течении 3-х минут проблемного места уже не будет.  ", "  " zaderzhka " ")
+%vybor%("do Лазер начал удалять проблемное место пациента. ", "" " zaderzhka " "0")
+%vybor%("do Лазерная машина закончила работу. ", "  " zaderzhka " ")
+%vybor%("say Как вы себя чувствуете?   ", "  " zaderzhka " ")
+%vybor%("me выключив лазер, придвинул" floor " его обратно к стенке ", "  " zaderzhka " ")
+%vybor%("me выключил фен и убрал" floor " его в шкаф  ", "  " zaderzhka " ")
+%vybor%("do В тумбе лежит медицинский спирт с ватой. ", "  " zaderzhka " ")
+%vybor%("me достав все необходимое из тумбы, смочил" floor " вату спиртом, затем приложил" floor " на место операции ", "  " zaderzhka " ")
+%vybor%("say Так-с, держите её и постарайтесь не двигать. ", "  " zaderzhka " ")
+%vybor%("do На столе лежит большая пачка пластырей. ", "  " zaderzhka " ")
+%vybor%("me вскрыв пачку, достал" floor " из нее пластырь, затем положил" floor " пачку в шкаф ", "  " zaderzhka " ")
+%vybor%("me наклеил" floor " пластырь поверх ватки ", "  " zaderzhka " ")
+%vybor%("say Если будут какие-то жалобы, то обратитесь к врачу. ", "  " zaderzhka " ")
+%vybor%("say Важно избегать попадания воды на обработанную зону в течение 24 часов. ", "  " zaderzhka " ")
+%vybor%("say Не снимайте пластырь в течение 2 дней. ", "  " zaderzhka " ")
+%vybor%("say Если возникнут признаки воспаления, такие как покраснение или выделения, немедленно свяжитесь с врачом. ", "  " zaderzhka " ")
+%vybor%("say На этом все. Всего хорошего. ", "  " zaderzhka " ")
 Return
 
 :?:/ОПТГ_1::
 SendPlay {Enter}
-SendChat("say Сейчас я проведу вам процедуру под названием ОПТГ... ", "  " zaderzhka " ")
-SendChat("say ...это панорамный рентгеновский снимок верхней и нижней челюсти. ", "  " zaderzhka " ")
-SendChat("do В кабинете стоит препарат для ОПТГ. ", "  " zaderzhka " ")
-SendChat("do на столе лежат одноразовые мундштуки для прикусывания. ", "  " zaderzhka " ")
-SendChat("say На вас есть металлические предметы? Серьги, цепочки, кольца и т.д. ", "  " zaderzhka " ")
+%vybor%("say Сейчас я проведу вам процедуру под названием ОПТГ... ", "  " zaderzhka " ")
+%vybor%("say ...это панорамный рентгеновский снимок верхней и нижней челюсти. ", "  " zaderzhka " ")
+%vybor%("do В кабинете стоит препарат для ОПТГ. ", "  " zaderzhka " ")
+%vybor%("do на столе лежат одноразовые мундштуки для прикусывания. ", "  " zaderzhka " ")
+%vybor%("say На вас есть металлические предметы? Серьги, цепочки, кольца и т.д. ", "  " zaderzhka " ")
 Return
 
 :?:/ОПТГ_2::
 SendPlay {Enter}
-SendChat("say Становитесь на платформу и ставьте подборок на специальное место... ", "  " zaderzhka " ")
-SendChat("say ...так же я сейчас вам дам мундштук, который нужно будет прикусить. ", "  " zaderzhka " ")
-SendChat("me взял" floor " мундштук и подал" floor " его пациенту ", "  " zaderzhka " ")
-SendChat("say Прикусите его во рту и поставьте подбородок на специальную выемку перед вами. ", "  " zaderzhka " ")
+%vybor%("say Становитесь на платформу и ставьте подборок на специальное место... ", "  " zaderzhka " ")
+%vybor%("say ...так же я сейчас вам дам мундштук, который нужно будет прикусить. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " мундштук и подал" floor " его пациенту ", "  " zaderzhka " ")
+%vybor%("say Прикусите его во рту и поставьте подбородок на специальную выемку перед вами. ", "  " zaderzhka " ")
 Return
 
 :?:/ОПТГ_3::
 SendPlay {Enter}
-SendChat("say Теперь не двигайтесь, процедура скоро начнется. ", "5500")
-SendChat("do Перед входом в кабинет находится пульт управления прибором. ", "  " zaderzhka " ")
-SendChat("me зажал" floor " кнопку на пульте ", "  " zaderzhka " ")
-SendChat("do Из кабинета слышны характерные звуки работы прибора. ", "  " zaderzhka " ")
-SendChat("do Загорелась зеленая лампочка. ", "  " zaderzhka " ")
-SendChat("me отпустил" floor " кнопку и ожидает окончания процедуры ", "  " zaderzhka " ")
-SendChat("do Внутри кабинета на компьютере появляется снимок. ", "  " zaderzhka " ")
+%vybor%("say Теперь не двигайтесь, процедура скоро начнется. ", "5500")
+%vybor%("do Перед входом в кабинет находится пульт управления прибором. ", "  " zaderzhka " ")
+%vybor%("me зажал" floor " кнопку на пульте ", "  " zaderzhka " ")
+%vybor%("do Из кабинета слышны характерные звуки работы прибора. ", "  " zaderzhka " ")
+%vybor%("do Загорелась зеленая лампочка. ", "  " zaderzhka " ")
+%vybor%("me отпустил" floor " кнопку и ожидает окончания процедуры ", "  " zaderzhka " ")
+%vybor%("do Внутри кабинета на компьютере появляется снимок. ", "  " zaderzhka " ")
 Return
 
 :?:/ОПТГ_4::
 SendPlay {Enter}
-SendChat("say Отлично, можете убирать подбородок с подставки и отдавайте мундштук. ", "  " zaderzhka " ")
+%vybor%("say Отлично, можете убирать подбородок с подставки и отдавайте мундштук. ", "  " zaderzhka " ")
 Return
 
 :?:/ОПТГ_5::
 SendPlay {Enter}
-SendChat("do В углу кабинета стоит мусорка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " мундштук и выкинул его в мусорку ", "  " zaderzhka " ")
-SendChat("say хорошо, теперь можете забрать свои украшения, если оставляли. Процедура окончена. ", "  " zaderzhka " ")
+%vybor%("do В углу кабинета стоит мусорка. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " мундштук и выкинул его в мусорку ", "  " zaderzhka " ")
+%vybor%("say хорошо, теперь можете забрать свои украшения, если оставляли. Процедура окончена. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Мудрости_1::
 SendPlay {Enter}
-SendChat("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
-SendChat("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
+%vybor%("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
+%vybor%("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
 Return
 
 :?:/Мудрости_2::
 SendPlay {Enter}
-SendChat("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
-SendChat("say Откройте рот. ", "  " zaderzhka " ")
-SendChat("b /me открыл(a) рот ", "  " zaderzhka " ")
+%vybor%("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
+%vybor%("say Откройте рот. ", "  " zaderzhka " ")
+%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
 Return
 
 :?:/Мудрости_3::
 SendPlay {Enter}
-SendChat("me взял со стола шприц с анестетиком Артекаин , после чего ввёл ее ", "  " zaderzhka " ")
-SendChat("say Сейчас я прикоснусь к вашему зубу, а вы скажите, чувствуете ли боль ", "  " zaderzhka " ")
-SendChat("me движением руки начал" floor " шевелить зуб ", "  " zaderzhka " ")
-SendChat("do Пациент чувствует боль? ", "  " zaderzhka " ")
+%vybor%("me взял со стола шприц с анестетиком Артекаин , после чего ввёл ее ", "  " zaderzhka " ")
+%vybor%("say Сейчас я прикоснусь к вашему зубу, а вы скажите, чувствуете ли боль ", "  " zaderzhka " ")
+%vybor%("me движением руки начал" floor " шевелить зуб ", "  " zaderzhka " ")
+%vybor%("do Пациент чувствует боль? ", "  " zaderzhka " ")
 Return
 
 :?:/Мудрости_4::
 SendPlay {Enter}
-SendChat("me взял" floor " со стола скальпель, после чего сделал" floor " разрез десны и положил" floor " на место ", "  " zaderzhka " ")
-SendChat("me движением правой руки взял" floor " со стола щипцы, после чего начал" floor " вытаскивать зуб ", "  " zaderzhka " ")
-SendChat("me левой рукой взял" floor " со стола элеватор, затем освободил" floor " лунку от зуба ", "  " zaderzhka " ")
-SendChat("do Зуб мудрости полностью удален.  ", "  " zaderzhka " ")
-SendChat("me положил" floor " инструмент на стол, после чего взял" floor " вату и приложил к ране ", "  " zaderzhka " ")
-SendChat("say Поздравляю, Ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола скальпель, после чего сделал" floor " разрез десны и положил" floor " на место ", "  " zaderzhka " ")
+%vybor%("me движением правой руки взял" floor " со стола щипцы, после чего начал" floor " вытаскивать зуб ", "  " zaderzhka " ")
+%vybor%("me левой рукой взял" floor " со стола элеватор, затем освободил" floor " лунку от зуба ", "  " zaderzhka " ")
+%vybor%("do Зуб мудрости полностью удален.  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " инструмент на стол, после чего взял" floor " вату и приложил к ране ", "  " zaderzhka " ")
+%vybor%("say Поздравляю, Ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
 Return
 
 :?:/Кариес_1::
 SendPlay {Enter}
-SendChat("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
-SendChat("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
+%vybor%("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
+%vybor%("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
 Return
 
 :?:/Кариес_2::
 SendPlay {Enter}
-SendChat("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
-SendChat("say Откройте рот. ", "  " zaderzhka " ")
-SendChat("b /me открыл(a) рот ", "  " zaderzhka " ")
+%vybor%("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
+%vybor%("say Откройте рот. ", "  " zaderzhka " ")
+%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
 Return
 
 :?:/Кариес_3::
 SendPlay {Enter}
-SendChat("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента  ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц с обезболивающим, после чего вколол" floor " содержимое под десну ", "  " zaderzhka " ")
-SendChat("do На столе лежит крышка от шприца. ", "  " zaderzhka " ")
-SendChat("do В углу комнаты стоит урна.", "  " zaderzhka " ")
-SendChat("me взял" floor " крышку, после чего закрыл" floor " шприц и выбросил" floor " его в урну ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола скальпель, после чего сделал" floor " небольшой разрез десны ", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол, после чего взял" floor " салфетку, вытер кровь и выбросил" floor " в урну ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола пинцет, после чего приподнял" floor " корень зуба, затем повернул" floor " его ", "  " zaderzhka " ")
-SendChat("do Корень зуба стал свободно виден. ", "  " zaderzhka " ")
-SendChat("me перехватив пинцет свободной рукой, начал" floor " выдавливать корень зуба ", "  " zaderzhka " ")
-SendChat("do Зуб полностью удален. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола вату, после чего приложил" floor " на место удаленного зуба ", "  " zaderzhka " ")
-SendChat("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
+%vybor%("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц с обезболивающим, после чего вколол" floor " содержимое под десну ", "  " zaderzhka " ")
+%vybor%("do На столе лежит крышка от шприца. ", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит урна.", "  " zaderzhka " ")
+%vybor%("me взял" floor " крышку, после чего закрыл" floor " шприц и выбросил" floor " его в урну ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола скальпель, после чего сделал" floor " небольшой разрез десны ", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол, после чего взял" floor " салфетку, вытер кровь и выбросил" floor " в урну ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола пинцет, после чего приподнял" floor " корень зуба, затем повернул" floor " его ", "  " zaderzhka " ")
+%vybor%("do Корень зуба стал свободно виден. ", "  " zaderzhka " ")
+%vybor%("me перехватив пинцет свободной рукой, начал" floor " выдавливать корень зуба ", "  " zaderzhka " ")
+%vybor%("do Зуб полностью удален. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола вату, после чего приложил" floor " на место удаленного зуба ", "  " zaderzhka " ")
+%vybor%("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
 Return
 
 :?:/Молочный_1::
 SendPlay {Enter}
-SendChat("say Откройте рот. ", "  " zaderzhka " ")
-SendChat("b /me открыл(a) рот ", "  " zaderzhka " ")
+%vybor%("say Откройте рот. ", "  " zaderzhka " ")
+%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
 Return
 
 :?:/Молочный_2::
 SendPlay {Enter}
-SendChat("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента ", "  " zaderzhka " ")
-SendChat("say Cейчас я нанесу обезболивающий бальзам, чтобы вы не чувствовали боли. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола тюбик с бальзамом, после чего нанес" Female " его на палец ", "  " zaderzhka " ")
-SendChat("do Выдавленный крем виднеется на пальце. ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " тюбик, после чего положил" floor " его на стол ", "  " zaderzhka " ")
-SendChat("me нанес" Female " крем на больной зуб ", "  " zaderzhka " ")
-SendChat("say Приготовьтесь, сейчас будет удаление зуба. Не переживайте, это не больно. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола щипцы, после чего поднес к зубу, и круговыми движениями освободил" floor " зуб ", "  " zaderzhka " ")
-SendChat("do Зуб успешно удален. ", "  " zaderzhka " ")
-SendChat("do На ране пациента виднеется кровь.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола вату, предварительно смоченную антисептиком, после чего поднес" Female " к ране ", "  " zaderzhka " ")
-SendChat("me движением правой руки выбросил" floor " зуб, после чего положил" floor " щипцы на стол в место отходов ", "  " zaderzhka " ")
-SendChat("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение двух часов. ", "  " zaderzhka " ")
+%vybor%("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента ", "  " zaderzhka " ")
+%vybor%("say Cейчас я нанесу обезболивающий бальзам, чтобы вы не чувствовали боли. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола тюбик с бальзамом, после чего нанес" Female " его на палец ", "  " zaderzhka " ")
+%vybor%("do Выдавленный крем виднеется на пальце. ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " тюбик, после чего положил" floor " его на стол ", "  " zaderzhka " ")
+%vybor%("me нанес" Female " крем на больной зуб ", "  " zaderzhka " ")
+%vybor%("say Приготовьтесь, сейчас будет удаление зуба. Не переживайте, это не больно. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола щипцы, после чего поднес к зубу, и круговыми движениями освободил" floor " зуб ", "  " zaderzhka " ")
+%vybor%("do Зуб успешно удален. ", "  " zaderzhka " ")
+%vybor%("do На ране пациента виднеется кровь.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола вату, предварительно смоченную антисептиком, после чего поднес" Female " к ране ", "  " zaderzhka " ")
+%vybor%("me движением правой руки выбросил" floor " зуб, после чего положил" floor " щипцы на стол в место отходов ", "  " zaderzhka " ")
+%vybor%("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение двух часов. ", "  " zaderzhka " ")
 Return
 
 :?:/Реминерализирующая::
 SendPlay {Enter}
-SendChat("say Чтобы придать ваш зубам обратно блеск, то мы проведем реминерализирующую терапию. ", "  " zaderzhka " ")
-SendChat("say Мы будем использовать лак по этому попрошу не закрывать рот до конца процедуры. ", "  " zaderzhka " ")
-SendChat("do На стоматологическом столе стоит фторлак и нужные инструменты для проведения. ", "  " zaderzhka " ")
-SendChat("me взял" floor " наконечник в виде щетки и надел" floor " его на турбину ", "  " zaderzhka " ")
-SendChat("me нанес" Female " на наконечник абразивную пасту и обработал" floor " зубы с измененным блеском ", "  " zaderzhka " ")
-SendChat("me убрал" floor " наконечник ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватку смочив её  раствором перекиси водорода и обработал" floor " зубы с измененным блеском ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " ватку ", "  " zaderzhka " ")
-SendChat("me взял" floor " водно-воздушный пистолет и высушил" floor " поверхность зубов ", "  " zaderzhka " ")
-SendChat("me с помощью кисточки тонким слоем нанес" Female " на поверхность зубов лак ", "  " zaderzhka " ")
-SendChat("say Хорошо, пока можете закрывать рот. Советуем вам прийти ещё несколько раз на прием...  ", "  " zaderzhka " ")
+%vybor%("say Чтобы придать ваш зубам обратно блеск, то мы проведем реминерализирующую терапию. ", "  " zaderzhka " ")
+%vybor%("say Мы будем использовать лак по этому попрошу не закрывать рот до конца процедуры. ", "  " zaderzhka " ")
+%vybor%("do На стоматологическом столе стоит фторлак и нужные инструменты для проведения. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " наконечник в виде щетки и надел" floor " его на турбину ", "  " zaderzhka " ")
+%vybor%("me нанес" Female " на наконечник абразивную пасту и обработал" floor " зубы с измененным блеском ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " наконечник ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватку смочив её  раствором перекиси водорода и обработал" floor " зубы с измененным блеском ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " ватку ", "  " zaderzhka " ")
+%vybor%("me взял" floor " водно-воздушный пистолет и высушил" floor " поверхность зубов ", "  " zaderzhka " ")
+%vybor%("me с помощью кисточки тонким слоем нанес" Female " на поверхность зубов лак ", "  " zaderzhka " ")
+%vybor%("say Хорошо, пока можете закрывать рот. Советуем вам прийти ещё несколько раз на прием...  ", "  " zaderzhka " ")
 Return
 
 
 :?:/Стетоскоп_1::
 SendPlay {Enter}
-SendChat("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
-SendChat("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
-SendChat("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
-SendChat("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
+%vybor%("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
+%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
+%vybor%("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
+%vybor%("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
 Return
 
 :?:/Стетоскоп_2::
 SendPlay {Enter}
-SendChat("me прислонил головку стетоскопа к легким ", "  " zaderzhka " ")
-SendChat("say Дышите... ", "  " zaderzhka " ")
-SendChat("say Не дышите  ", "  " zaderzhka " ")
-SendChat("me прислонил" floor " головку стетоскопа к легким на спину  ", "  " zaderzhka " ")
-SendChat("say Можете одеваться. ", "  " zaderzhka " ")
-SendChat("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
+%vybor%("me прислонил головку стетоскопа к легким ", "  " zaderzhka " ")
+%vybor%("say Дышите... ", "  " zaderzhka " ")
+%vybor%("say Не дышите  ", "  " zaderzhka " ")
+%vybor%("me прислонил" floor " головку стетоскопа к легким на спину  ", "  " zaderzhka " ")
+%vybor%("say Можете одеваться. ", "  " zaderzhka " ")
+%vybor%("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
 Return
 
 :?:/Сердце_4::
 SendPlay {Enter}
-SendChat("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
-SendChat("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши  ", "  " zaderzhka " ")
-SendChat("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
-SendChat("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
+%vybor%("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
+%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
+%vybor%("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
 Return
 
 :?:/Сердце_5::
 SendPlay {Enter}
-SendChat("me прислонил" floor " головку стетоскопа к сердцу на спину ", "  " zaderzhka " ")
-SendChat("say Можете одеваться. ", "  " zaderzhka " ")
-SendChat("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
+%vybor%("me прислонил" floor " головку стетоскопа к сердцу на спину ", "  " zaderzhka " ")
+%vybor%("say Можете одеваться. ", "  " zaderzhka " ")
+%vybor%("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
 Return
 
 :?:/Давление_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежит механический тонометр.", " " zaderzhka " ")
-SendChat("me открыв мед. сумку, взял" floor " механический тонометр ", "  " zaderzhka " ")
-SendChat("say Давайте руку. ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежит механический тонометр.", " " zaderzhka " ")
+%vybor%("me открыв мед. сумку, взял" floor " механический тонометр ", "  " zaderzhka " ")
+%vybor%("say Давайте руку. ", "  " zaderzhka " ")
 Return
 
 :?:/Давление_2::
 SendPlay {Enter}
-SendChat("me надел" floor " манжет на руку человеку напротив ", "  " zaderzhka " ")
-SendChat("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
-SendChat("me приложил" floor " головку стетоскопа к среднему сгибу руки ", "  " zaderzhka " ")
-SendChat("me накачивая манжету, взглянул" floor " на циферблат тонометра ", "  " zaderzhka " ")
-SendChat("do Давление в норме? ", "  " zaderzhka " ")
-SendChat("me сняв манжету, убрал" floor " ручной тонометр в мед. сумку ", "  " zaderzhka " ")
-SendChat("me повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
+%vybor%("me надел" floor " манжет на руку человеку напротив ", "  " zaderzhka " ")
+%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " головку стетоскопа к среднему сгибу руки ", "  " zaderzhka " ")
+%vybor%("me накачивая манжету, взглянул" floor " на циферблат тонометра ", "  " zaderzhka " ")
+%vybor%("do Давление в норме? ", "  " zaderzhka " ")
+%vybor%("me сняв манжету, убрал" floor " ручной тонометр в мед. сумку ", "  " zaderzhka " ")
+%vybor%("me повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
 Return
 
 :?:/Рост_1::
 SendPlay {Enter}
-SendChat("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
-SendChat("say Снимайте обувь, вставайте на весы, держите спину прямо.", "  " zaderzhka " ")
+%vybor%("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
+%vybor%("say Снимайте обувь, вставайте на весы, держите спину прямо.", "  " zaderzhka " ")
 Return
 
 :?:/Рост_2::
 SendPlay {Enter}
-SendChat("me взглянул" floor " на показатели весов ", "  " zaderzhka " ")
-SendChat("me подтянув измерительный прибор к голове сотрудника, зафиксировал" floor " его ", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на показатели роста", "  " zaderzhka " ")
-SendChat("do Какой рост у пациента?", "  " zaderzhka " ")
-SendChat("do Какой вес у пациента?", "  " zaderzhka " ")
-SendChat("say Хорошо, можете обуваться", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на показатели весов ", "  " zaderzhka " ")
+%vybor%("me подтянув измерительный прибор к голове сотрудника, зафиксировал" floor " его ", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на показатели роста", "  " zaderzhka " ")
+%vybor%("do Какой рост у пациента?", "  " zaderzhka " ")
+%vybor%("do Какой вес у пациента?", "  " zaderzhka " ")
+%vybor%("say Хорошо, можете обуваться", "  " zaderzhka " ")
 Return
 
 :?:/Радиация_1::
 SendPlay {Enter}
-SendChat("do На стеллаже лежит антисептик. ", "  " zaderzhka " ")
-SendChat("me взял" floor " антисептик ", "  " zaderzhka " ")
-SendChat("do Через плечо висит мед.сумка. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " мед.сумку ", "  " zaderzhka " ")
-SendChat("do В медицинской сумке находится вата. ", "  " zaderzhka " ")
-SendChat("me взял" floor " вату из мед.сумки ", "  " zaderzhka " ")
-SendChat("me смочил" floor " вату антисептиком ", "  " zaderzhka " ")
-SendChat("do На стеллаже лежат куски стерильных бинтов. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кусок бинта ", "  " zaderzhka " ")
-SendChat("me обработал" floor " место поражения антисептиком ", "  " zaderzhka " ")
-SendChat("me наложил" floor " повязку из бинтов на пораженный участок ", "  " zaderzhka " ")
-SendChat("do Недалеко от кушетки расположена урна. ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " вату в урну ", "  " zaderzhka " ")
-SendChat("do В мед.сумке лежат шприцы и раствор промидола. ", "  " zaderzhka " ")
-SendChat("me взя" floor "л шприц и раствор ", "  " zaderzhka " ")
-SendChat("me снял" floor " колпачок со шприца и выкинул" floor " в урну ", "  " zaderzhka " ")
-SendChat("me начал" floor " набирать раствор в шприц ", "  " zaderzhka " ")
-SendChat("me взял" floor " кусок ваты из сумки и смочил" floor " вату антисептиком ", "  " zaderzhka " ")
-SendChat("say Спустите штаны. ", "  " zaderzhka " ")
-SendChat("b me снял(а) штаны ", "  " zaderzhka " ")
+%vybor%("do На стеллаже лежит антисептик. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " антисептик ", "  " zaderzhka " ")
+%vybor%("do Через плечо висит мед.сумка. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " мед.сумку ", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке находится вата. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " вату из мед.сумки ", "  " zaderzhka " ")
+%vybor%("me смочил" floor " вату антисептиком ", "  " zaderzhka " ")
+%vybor%("do На стеллаже лежат куски стерильных бинтов. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кусок бинта ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " место поражения антисептиком ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " повязку из бинтов на пораженный участок ", "  " zaderzhka " ")
+%vybor%("do Недалеко от кушетки расположена урна. ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " вату в урну ", "  " zaderzhka " ")
+%vybor%("do В мед.сумке лежат шприцы и раствор промидола. ", "  " zaderzhka " ")
+%vybor%("me взя" floor "л шприц и раствор ", "  " zaderzhka " ")
+%vybor%("me снял" floor " колпачок со шприца и выкинул" floor " в урну ", "  " zaderzhka " ")
+%vybor%("me начал" floor " набирать раствор в шприц ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кусок ваты из сумки и смочил" floor " вату антисептиком ", "  " zaderzhka " ")
+%vybor%("say Спустите штаны. ", "  " zaderzhka " ")
+%vybor%("b me снял(а) штаны ", "  " zaderzhka " ")
 Return
 
 :?:/Радиация_2::
 SendPlay {Enter}
-SendChat("me обработал" floor " место будущего укола ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить препарат в мышцу ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " шприц в урну ", "  " zaderzhka " ")
-SendChat("me прижал" floor " место укола ватой ", "  " zaderzhka " ")
-SendChat("say Держите и одевайте штаны. ", "  " zaderzhka " ")
-SendChat("b me держит вату и одевает штаны ", "  " zaderzhka " ")
-SendChat("say Сейчас я вам выпишу направление. Будете к нам приходить на инфузионную терапию и обследования. ", "  " zaderzhka " ")
-SendChat("do На стеллаже лежит стопка пустых бланков направлений. ", "  " zaderzhka " ")
-SendChat("me взял" floor " бланк и положил" floor " его на стол ", "  " zaderzhka " ")
-SendChat("do На нагрудном кармане закреплена ручка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " ручку ", "  " zaderzhka " ")
-SendChat("say Ваша Фамилия и Имя. ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " место будущего укола ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить препарат в мышцу ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " шприц в урну ", "  " zaderzhka " ")
+%vybor%("me прижал" floor " место укола ватой ", "  " zaderzhka " ")
+%vybor%("say Держите и одевайте штаны. ", "  " zaderzhka " ")
+%vybor%("b me держит вату и одевает штаны ", "  " zaderzhka " ")
+%vybor%("say Сейчас я вам выпишу направление. Будете к нам приходить на инфузионную терапию и обследования. ", "  " zaderzhka " ")
+%vybor%("do На стеллаже лежит стопка пустых бланков направлений. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бланк и положил" floor " его на стол ", "  " zaderzhka " ")
+%vybor%("do На нагрудном кармане закреплена ручка. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ручку ", "  " zaderzhka " ")
+%vybor%("say Ваша Фамилия и Имя. ", "  " zaderzhka " ")
 Return
 
 :?:/Радиация_3::
 SendPlay {Enter}
-SendChat("me начал" floor " заполнять бланк ", "  " zaderzhka " ")
-SendChat("me прикрепил ручку к нагрудному карману ", "  " zaderzhka " ")
-SendChat("me взял" floor " готовый бланк ", "  " zaderzhka " ")
-SendChat("me передал" floor " бланк ", "  " zaderzhka " ")
-SendChat("b me взял(а) бланк ", "  " zaderzhka " ")
-SendChat("say Держите. ", "  " zaderzhka " ")
+%vybor%("me начал" floor " заполнять бланк ", "  " zaderzhka " ")
+%vybor%("me прикрепил ручку к нагрудному карману ", "  " zaderzhka " ")
+%vybor%("me взял" floor " готовый бланк ", "  " zaderzhka " ")
+%vybor%("me передал" floor " бланк ", "  " zaderzhka " ")
+%vybor%("b me взял(а) бланк ", "  " zaderzhka " ")
+%vybor%("say Держите. ", "  " zaderzhka " ")
 Return
 
 :?:/Визиографическое_1::
 SendPlay {Enter}
-SendChat("say Сейчас я проведу вам визиографию зуба это прицельное... ", "  " zaderzhka " ")
-SendChat("say ...рентгенологическое исследование зуба и его окружающих тканей. ", "  " zaderzhka " ")
-SendChat("say Наденьте на себя защитный фартук и садитесь на стул. ", "  " zaderzhka " ")
-SendChat("do Фартуки с шейной защитой висят на отдельной вешалке. ", "  " zaderzhka " ")
+%vybor%("say Сейчас я проведу вам визиографию зуба это прицельное... ", "  " zaderzhka " ")
+%vybor%("say ...рентгенологическое исследование зуба и его окружающих тканей. ", "  " zaderzhka " ")
+%vybor%("say Наденьте на себя защитный фартук и садитесь на стул. ", "  " zaderzhka " ")
+%vybor%("do Фартуки с шейной защитой висят на отдельной вешалке. ", "  " zaderzhka " ")
 Return
 
 :?:/Визиографическое_2::
 SendPlay {Enter}
-SendChat("do Справа от стула висит рентген прибор, а на нем визиограф. ", "  " zaderzhka " ")
-SendChat("do На столе стоят одноразовые чехлы для визиографа. ", "  " zaderzhka " ")
-SendChat("do На столе стоит включенный компьютер. ", "  " zaderzhka " ")
-SendChat("me надел" floor " на себя защитный фартук с шейной защитой ", "  " zaderzhka " ")
-SendChat("me взял" floor " визиограф и одел" floor " на него одноразовый чехол ", "  " zaderzhka " ")
-SendChat("say Хорошо, откройте теперь рот я правильно расположу визиограф по отношению к рентгену. ", "  " zaderzhka " ")
+%vybor%("do Справа от стула висит рентген прибор, а на нем визиограф. ", "  " zaderzhka " ")
+%vybor%("do На столе стоят одноразовые чехлы для визиографа. ", "  " zaderzhka " ")
+%vybor%("do На столе стоит включенный компьютер. ", "  " zaderzhka " ")
+%vybor%("me надел" floor " на себя защитный фартук с шейной защитой ", "  " zaderzhka " ")
+%vybor%("me взял" floor " визиограф и одел" floor " на него одноразовый чехол ", "  " zaderzhka " ")
+%vybor%("say Хорошо, откройте теперь рот я правильно расположу визиограф по отношению к рентгену. ", "  " zaderzhka " ")
 Return
 
 :?:/Визиографическое_3::
 SendPlay {Enter}
-SendChat("me занес" Female " визиограф в ротовую полость и расположил" floor " за исследуемым зубом ", "  " zaderzhka " ")
-SendChat("me поправил" floor " по отношению к рентгенологическому прибору ", "  " zaderzhka " ")
-SendChat("say Придержите большим пальцем прибор. ", "  " zaderzhka " ")
+%vybor%("me занес" Female " визиограф в ротовую полость и расположил" floor " за исследуемым зубом ", "  " zaderzhka " ")
+%vybor%("me поправил" floor " по отношению к рентгенологическому прибору ", "  " zaderzhka " ")
+%vybor%("say Придержите большим пальцем прибор. ", "  " zaderzhka " ")
 Return
 
 :?:/Визиографическое_4::
 SendPlay {Enter}
-SendChat("me взял" floor " рентгенологический прибор и со стороны щеки расположил" floor " его к визиографу ", "  " zaderzhka " ")
-SendChat("me зафиксировал" floor " положение рентгенологического прибора ", "  " zaderzhka " ")
-SendChat("do На стене висит пульт с разными программами. ", "  " zaderzhka " ")
-SendChat(" поставил" floor " нужную программу с нужным излучением для исследуемого зуба ", "  " zaderzhka " ")
-SendChat("me зажал" floor " кнопку на пульте ", "  " zaderzhka " ")
-SendChat("do В комнате слышен характерный пик со стороны рентген прибора. ", "  " zaderzhka " ")
-SendChat("do В углу стоит мусорка.  ", "  " zaderzhka " ")
-SendChat("do На компьютере появился снимок исследуемого зуба. ", "  " zaderzhka " ")
-SendChat("say Отлично, снимок готов.  ", "  " zaderzhka " ")
-SendChat("me помог" floor " убрать визиограф из ротовой и снял" floor " одноразовый чехол, после чего выкинул" floor " чехол ", "  " zaderzhka " ")
-SendChat("me помог" floor " снять защитный фартук пациенту и повесил" floor " его на вешалку ", "  " zaderzhka " ")
-SendChat("me снял" floor " свой фартук вместе с шейной защитой и повесил" floor " так же на вешалку ", "  " zaderzhka " ")
-SendChat("say Процедура завершена, можете вставать. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " рентгенологический прибор и со стороны щеки расположил" floor " его к визиографу ", "  " zaderzhka " ")
+%vybor%("me зафиксировал" floor " положение рентгенологического прибора ", "  " zaderzhka " ")
+%vybor%("do На стене висит пульт с разными программами. ", "  " zaderzhka " ")
+%vybor%(" поставил" floor " нужную программу с нужным излучением для исследуемого зуба ", "  " zaderzhka " ")
+%vybor%("me зажал" floor " кнопку на пульте ", "  " zaderzhka " ")
+%vybor%("do В комнате слышен характерный пик со стороны рентген прибора. ", "  " zaderzhka " ")
+%vybor%("do В углу стоит мусорка.  ", "  " zaderzhka " ")
+%vybor%("do На компьютере появился снимок исследуемого зуба. ", "  " zaderzhka " ")
+%vybor%("say Отлично, снимок готов.  ", "  " zaderzhka " ")
+%vybor%("me помог" floor " убрать визиограф из ротовой и снял" floor " одноразовый чехол, после чего выкинул" floor " чехол ", "  " zaderzhka " ")
+%vybor%("me помог" floor " снять защитный фартук пациенту и повесил" floor " его на вешалку ", "  " zaderzhka " ")
+%vybor%("me снял" floor " свой фартук вместе с шейной защитой и повесил" floor " так же на вешалку ", "  " zaderzhka " ")
+%vybor%("say Процедура завершена, можете вставать. ", "  " zaderzhka " ")
 Return
 
 :?:/Отбеливание_1::
 SendPlay {Enter}
-SendChat("say Хорошо, приступим. ", "  " zaderzhka " ")
-SendChat("do Над пациентом висит Хирургическая лампа. ", "  " zaderzhka " ")
-SendChat("me направил" floor " лампу на ротовую полость пациента ", "  " zaderzhka " ")
-SendChat("do В сталаже режит стоматологический гель. ", "  " zaderzhka " ")
-SendChat("me открыв стелаж, взял" floor " стоматологический гель ", "  " zaderzhka " ")
-SendChat("me положил" floor " гель на стол ", "  " zaderzhka " ")
-SendChat("do Рядом с гелем лежит капа и лазерное устройство. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, приступим. ", "  " zaderzhka " ")
+%vybor%("do Над пациентом висит Хирургическая лампа. ", "  " zaderzhka " ")
+%vybor%("me направил" floor " лампу на ротовую полость пациента ", "  " zaderzhka " ")
+%vybor%("do В сталаже режит стоматологический гель. ", "  " zaderzhka " ")
+%vybor%("me открыв стелаж, взял" floor " стоматологический гель ", "  " zaderzhka " ")
+%vybor%("me положил" floor " гель на стол ", "  " zaderzhka " ")
+%vybor%("do Рядом с гелем лежит капа и лазерное устройство. ", "  " zaderzhka " ")
 Return
 
 :?:/Отбеливание_2::
 SendPlay {Enter}
-SendChat("say Откройте рот. ", "  " zaderzhka " ")
+%vybor%("say Откройте рот. ", "  " zaderzhka " ")
 Return
 
 :?:/Отбеливание_3::
 SendPlay {Enter}
-SendChat("me взял" floor " со стола капу, лазерное устройство, гель ", "  " zaderzhka " ")
-SendChat("do Зафиксировал капу во рту пациента.  ", "  " zaderzhka " ")
-SendChat("me аккуратными движениями нанёс" Female " гель на каждый зуб  ", "  " zaderzhka " ")
-SendChat("me включив лазерное устройство направил" floor " весь свет на зубы пациента ", "  " zaderzhka " ")
-SendChat("say Теперь ждём 20 секунд. ", "  " zaderzhka " ")
-SendChat("say Пока они проходят, я расскажу вам что нельзя делать после отбеливания. ", "  " zaderzhka " ")
-SendChat("say А именно, это не есть 2 дня продукты в которых содержится краситель. ", "  " zaderzhka " ")
-SendChat("me выключив лазерное устройство отодвинул" floor " его ", "  " zaderzhka " ")
-SendChat("do В шкафу лежит рулетка ваты. ", "  " zaderzhka " ")
-SendChat("me открыв шкаф оторвал кусочек ватки ", "  " zaderzhka " ")
-SendChat("me очистил" floor " зубы от оставшегося геля ", "  " zaderzhka " ")
-SendChat("me аккуратно убрал" floor " капы ", "  " zaderzhka " ")
-SendChat("do Под столом стоит урна. ", "  " zaderzhka " ")
-SendChat("me кинул" floor " в урну тюбик геля, ватку, капу ", "  " zaderzhka " ")
-SendChat("say И так, я закончил" floor " отбеливание зубов. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола капу, лазерное устройство, гель ", "  " zaderzhka " ")
+%vybor%("do Зафиксировал капу во рту пациента.  ", "  " zaderzhka " ")
+%vybor%("me аккуратными движениями нанёс" Female " гель на каждый зуб  ", "  " zaderzhka " ")
+%vybor%("me включив лазерное устройство направил" floor " весь свет на зубы пациента ", "  " zaderzhka " ")
+%vybor%("say Теперь ждём 20 секунд. ", "  " zaderzhka " ")
+%vybor%("say Пока они проходят, я расскажу вам что нельзя делать после отбеливания. ", "  " zaderzhka " ")
+%vybor%("say А именно, это не есть 2 дня продукты в которых содержится краситель. ", "  " zaderzhka " ")
+%vybor%("me выключив лазерное устройство отодвинул" floor " его ", "  " zaderzhka " ")
+%vybor%("do В шкафу лежит рулетка ваты. ", "  " zaderzhka " ")
+%vybor%("me открыв шкаф оторвал кусочек ватки ", "  " zaderzhka " ")
+%vybor%("me очистил" floor " зубы от оставшегося геля ", "  " zaderzhka " ")
+%vybor%("me аккуратно убрал" floor " капы ", "  " zaderzhka " ")
+%vybor%("do Под столом стоит урна. ", "  " zaderzhka " ")
+%vybor%("me кинул" floor " в урну тюбик геля, ватку, капу ", "  " zaderzhka " ")
+%vybor%("say И так, я закончил" floor " отбеливание зубов. ", "  " zaderzhka " ")
 Return
 
 :?:/Ранение::
 SendPlay {Enter}
-SendChat("do В комнате расположен специализированный стол. ", "  " zaderzhka " ")
-SendChat("do На столе расположен тупфер. ", "  " zaderzhka " ")
-SendChat("do Раствор йодоната подготовлен для дальнейших действий с ним. ", "  " zaderzhka " ")
-SendChat("me взяв со стола тупфер, окунул" floor " его в раствор йодоната ", "  " zaderzhka " ")
-SendChat("me затем провела несколько раз тупфером по месту ранения и вокруг него ", "  " zaderzhka " ")
-SendChat("do В комнате находится лоток. ", "  " zaderzhka " ")
-SendChat("do На столе располагается 150-кубовый шприц. ", "  " zaderzhka " ")
-SendChat("me отложив тупфер в лоток, взял" floor " со столика 150-кубовый шприц ", "  " zaderzhka " ")
-SendChat("do В шприце прозрачный раствор - Хлоргексидин. ", "  " zaderzhka " ")
-SendChat("me выдавил" floor " содержимое шприца прямо в рану и отложил его в лоток ", "  " zaderzhka " ")
-SendChat("do На нижней полки стола стоял кровоотсос. ", "  " zaderzhka " ")
-SendChat("me взял" floor " шланг кровоотсоса с пластиковой трубочкой на конце ", "  " zaderzhka " ")
-SendChat("me нажатием на кнопку, включил" floor " кровоотсос и ввел" floor " трубочку в место ранения ", "  " zaderzhka " ")
-SendChat("do Хлоргексидин вместе с кровью начал всасываться в трубочку. ", "  " zaderzhka " ")
-SendChat("me нажатием на кнопку, выключил" floor " кровоотсос и отложил" floor " шланг на место ", "  " zaderzhka " ")
-SendChat("me взяв со столика тупфер, макнул" floor " им место ранение и отбросил" floor " его в лоток ", "  " zaderzhka " ")
-SendChat("do На столе расположен иглодержатель с заправленной в него иглой и нитью. ", "  " zaderzhka " ")
-SendChat("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью ", "  " zaderzhka " ")
-SendChat("do На столе располагается хирургический пинцет. ", "  " zaderzhka " ")
-SendChat("me в левую руку взял" floor " хирургический пинцет ", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
-SendChat("do На столе находится одноразовая полсеоперационная повязка. ", "  " zaderzhka " ")
-SendChat("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
-SendChat("do На повязке расположена защитная плёнка. ", "  " zaderzhka " ")
-SendChat("me оторвал" floor " с повязки защитную плёнку, аккуратно приклеил" floor " повязку поверх шва ", "  " zaderzhka " ")
-SendChat("me нажатием на кнопку выключил" floor " аппарат ИВЛ и извлёк трубку из трахеи пациента ", "  " zaderzhka " ")
-SendChat("do Под раковиной стоит большая урна для отходов группы Б. ", "  " zaderzhka " ")
-SendChat("me сняв с себя всё хирургическое облачение, бросил" floor " его в урну под раковиной ", "  " zaderzhka " ")
+%vybor%("do В комнате расположен специализированный стол. ", "  " zaderzhka " ")
+%vybor%("do На столе расположен тупфер. ", "  " zaderzhka " ")
+%vybor%("do Раствор йодоната подготовлен для дальнейших действий с ним. ", "  " zaderzhka " ")
+%vybor%("me взяв со стола тупфер, окунул" floor " его в раствор йодоната ", "  " zaderzhka " ")
+%vybor%("me затем провела несколько раз тупфером по месту ранения и вокруг него ", "  " zaderzhka " ")
+%vybor%("do В комнате находится лоток. ", "  " zaderzhka " ")
+%vybor%("do На столе располагается 150-кубовый шприц. ", "  " zaderzhka " ")
+%vybor%("me отложив тупфер в лоток, взял" floor " со столика 150-кубовый шприц ", "  " zaderzhka " ")
+%vybor%("do В шприце прозрачный раствор - Хлоргексидин. ", "  " zaderzhka " ")
+%vybor%("me выдавил" floor " содержимое шприца прямо в рану и отложил его в лоток ", "  " zaderzhka " ")
+%vybor%("do На нижней полки стола стоял кровоотсос. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " шланг кровоотсоса с пластиковой трубочкой на конце ", "  " zaderzhka " ")
+%vybor%("me нажатием на кнопку, включил" floor " кровоотсос и ввел" floor " трубочку в место ранения ", "  " zaderzhka " ")
+%vybor%("do Хлоргексидин вместе с кровью начал всасываться в трубочку. ", "  " zaderzhka " ")
+%vybor%("me нажатием на кнопку, выключил" floor " кровоотсос и отложил" floor " шланг на место ", "  " zaderzhka " ")
+%vybor%("me взяв со столика тупфер, макнул" floor " им место ранение и отбросил" floor " его в лоток ", "  " zaderzhka " ")
+%vybor%("do На столе расположен иглодержатель с заправленной в него иглой и нитью. ", "  " zaderzhka " ")
+%vybor%("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью ", "  " zaderzhka " ")
+%vybor%("do На столе располагается хирургический пинцет. ", "  " zaderzhka " ")
+%vybor%("me в левую руку взял" floor " хирургический пинцет ", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
+%vybor%("do На столе находится одноразовая полсеоперационная повязка. ", "  " zaderzhka " ")
+%vybor%("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
+%vybor%("do На повязке расположена защитная плёнка. ", "  " zaderzhka " ")
+%vybor%("me оторвал" floor " с повязки защитную плёнку, аккуратно приклеил" floor " повязку поверх шва ", "  " zaderzhka " ")
+%vybor%("me нажатием на кнопку выключил" floor " аппарат ИВЛ и извлёк трубку из трахеи пациента ", "  " zaderzhka " ")
+%vybor%("do Под раковиной стоит большая урна для отходов группы Б. ", "  " zaderzhka " ")
+%vybor%("me сняв с себя всё хирургическое облачение, бросил" floor " его в урну под раковиной ", "  " zaderzhka " ")
 Return
 :?:/Рассечение_г::
 SendPlay {Enter}
-SendChat("do В комнате расположен специализированный столик для предметов. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф его правую створку  ", "  " zaderzhka " ")
-SendChat("do В шкафу на разных полках лежат медицинские средства индивидуальной защиты. ", "  " zaderzhka " ")
-SendChat("me взяв с полки хирургическую шапочку и маску, поочерёдно надел" floor " их на себя ", "  " zaderzhka " ")
-SendChat("me достал" floor " из индивидуальной упаковки пару стерильных перчаток и натянул" floor " их на руки ", "  " zaderzhka " ")
-SendChat("do Возле операционного стола стоит двухъярусный столик укрытый плотным материалом. ", "  " zaderzhka " ")
-SendChat("me убирает со столика материал, сложив его, кладёт на нижнюю полку ", "  " zaderzhka " ")
-SendChat("do На столе находится ампула с прозрачной жидкостью внутри. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со столика ампулу с прозрачной жидкостью внутри ", "  " zaderzhka " ")
-SendChat("do На ампуле написано Новокаин. ", "  " zaderzhka " ")
-SendChat("do В комнате расположен лоток.", "  " zaderzhka " ")
-SendChat("me отломив горлышко ампулы, бросил" floor " его в лоток, а ампулу поставил" floor " на столик ", "  " zaderzhka " ")
-SendChat("do На столе располагается шприц. ", "  " zaderzhka " ")
-SendChat("me взяв со столика шприц, вскрыл упаковку и достал" floor " его ", "  " zaderzhka " ")
-SendChat("me снял" floor " футляр с иглы и аккуратно набрал" floor " лекарство из ампулы в шприц ", "  " zaderzhka " ")
-SendChat("do Упаковка со спиртовыми салфетками находится на столе. ", "  " zaderzhka " ")
-SendChat("me снова надел" floor " футляр на иглу и взял" floor " со столика спиртовую салфетку в упаковке ", "  " zaderzhka " ")
-SendChat("me вскрыв упаковку, достал" floor " салфетку и протёр" Female " ей предполагаемое место инъекции ", "  " zaderzhka " ")
-SendChat("me бросил" floor " салфетку с упаковкой в лоток и взял" floor " шприц, сняв футляр с иглы ", "  " zaderzhka " ")
-SendChat("me аккуратно ввел" floor " иглу в место рядом с рассечением и выдавил лекарство из шприца ", "  " zaderzhka " ")
-SendChat("do На столе расположен другой шприц. ", "  " zaderzhka " ")
-SendChat("me откинул" floor " шприц в лоток и взял" floor " со стола другой шприц ", "  " zaderzhka " ")
-SendChat("do В 20-ти кубовом шприце была прозрачная жидкость - Хлоргексидин. ", "  " zaderzhka " ")
-SendChat("me выдавил" floor " содержимое шприца прямо в рану и отложил" floor " его в лоток ", "  " zaderzhka " ")
-SendChat("do На столе располагается тупфер. ", "  " zaderzhka " ")
-SendChat("me взяв со столика тупфер, макнул" floor " им место ранение и отбросил" floor " его в лоток ", "  " zaderzhka " ")
-SendChat("do На столе расположен иглодержатель с заправленной в него иглой и нитью. ", "  " zaderzhka " ")
-SendChat("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью ", "  " zaderzhka " ")
-SendChat("do Хирургический пинцет находится на столе. ", "  " zaderzhka " ")
-SendChat("me в левую руку взял" floor " со стола хирургический пинцет ", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
-SendChat("do Одноразовая послеоперационная повязка на столе. ", "  " zaderzhka " ")
-SendChat("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
-SendChat("do Защитная плёнка расположена на повязке. ", "  " zaderzhka " ")
-SendChat("me оторвал" floor " с повязки защитную плёнку, аккуратно приклеил" floor " повязку поверх шва ", "  " zaderzhka " ")
-SendChat("me нажатием на кнопку выключил" floor " аппарат ИВЛ и извлёк" Female " трубку из трахеи пациента ", "  " zaderzhka " ")
-SendChat("do Под раковиной стоит большая урна для отходов группы Б. ", "  " zaderzhka " ")
-SendChat("me сняв с себя всё хирургическое облачение, бросил" floor " его в урну под раковиной ", "  " zaderzhka " ")
+%vybor%("do В комнате расположен специализированный столик для предметов. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф его правую створку  ", "  " zaderzhka " ")
+%vybor%("do В шкафу на разных полках лежат медицинские средства индивидуальной защиты. ", "  " zaderzhka " ")
+%vybor%("me взяв с полки хирургическую шапочку и маску, поочерёдно надел" floor " их на себя ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из индивидуальной упаковки пару стерильных перчаток и натянул" floor " их на руки ", "  " zaderzhka " ")
+%vybor%("do Возле операционного стола стоит двухъярусный столик укрытый плотным материалом. ", "  " zaderzhka " ")
+%vybor%("me убирает со столика материал, сложив его, кладёт на нижнюю полку ", "  " zaderzhka " ")
+%vybor%("do На столе находится ампула с прозрачной жидкостью внутри. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со столика ампулу с прозрачной жидкостью внутри ", "  " zaderzhka " ")
+%vybor%("do На ампуле написано Новокаин. ", "  " zaderzhka " ")
+%vybor%("do В комнате расположен лоток.", "  " zaderzhka " ")
+%vybor%("me отломив горлышко ампулы, бросил" floor " его в лоток, а ампулу поставил" floor " на столик ", "  " zaderzhka " ")
+%vybor%("do На столе располагается шприц. ", "  " zaderzhka " ")
+%vybor%("me взяв со столика шприц, вскрыл упаковку и достал" floor " его ", "  " zaderzhka " ")
+%vybor%("me снял" floor " футляр с иглы и аккуратно набрал" floor " лекарство из ампулы в шприц ", "  " zaderzhka " ")
+%vybor%("do Упаковка со спиртовыми салфетками находится на столе. ", "  " zaderzhka " ")
+%vybor%("me снова надел" floor " футляр на иглу и взял" floor " со столика спиртовую салфетку в упаковке ", "  " zaderzhka " ")
+%vybor%("me вскрыв упаковку, достал" floor " салфетку и протёр" Female " ей предполагаемое место инъекции ", "  " zaderzhka " ")
+%vybor%("me бросил" floor " салфетку с упаковкой в лоток и взял" floor " шприц, сняв футляр с иглы ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввел" floor " иглу в место рядом с рассечением и выдавил лекарство из шприца ", "  " zaderzhka " ")
+%vybor%("do На столе расположен другой шприц. ", "  " zaderzhka " ")
+%vybor%("me откинул" floor " шприц в лоток и взял" floor " со стола другой шприц ", "  " zaderzhka " ")
+%vybor%("do В 20-ти кубовом шприце была прозрачная жидкость - Хлоргексидин. ", "  " zaderzhka " ")
+%vybor%("me выдавил" floor " содержимое шприца прямо в рану и отложил" floor " его в лоток ", "  " zaderzhka " ")
+%vybor%("do На столе располагается тупфер. ", "  " zaderzhka " ")
+%vybor%("me взяв со столика тупфер, макнул" floor " им место ранение и отбросил" floor " его в лоток ", "  " zaderzhka " ")
+%vybor%("do На столе расположен иглодержатель с заправленной в него иглой и нитью. ", "  " zaderzhka " ")
+%vybor%("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью ", "  " zaderzhka " ")
+%vybor%("do Хирургический пинцет находится на столе. ", "  " zaderzhka " ")
+%vybor%("me в левую руку взял" floor " со стола хирургический пинцет ", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
+%vybor%("do Одноразовая послеоперационная повязка на столе. ", "  " zaderzhka " ")
+%vybor%("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
+%vybor%("do Защитная плёнка расположена на повязке. ", "  " zaderzhka " ")
+%vybor%("me оторвал" floor " с повязки защитную плёнку, аккуратно приклеил" floor " повязку поверх шва ", "  " zaderzhka " ")
+%vybor%("me нажатием на кнопку выключил" floor " аппарат ИВЛ и извлёк" Female " трубку из трахеи пациента ", "  " zaderzhka " ")
+%vybor%("do Под раковиной стоит большая урна для отходов группы Б. ", "  " zaderzhka " ")
+%vybor%("me сняв с себя всё хирургическое облачение, бросил" floor " его в урну под раковиной ", "  " zaderzhka " ")
 Return
 :?:/Растяжение_1::
 SendPlay {Enter}
-SendChat("todo Сейчас изучим Вашу рану*взглянув на место растяжения ", "  " zaderzhka " ")
-SendChat("say Думаю, что стоит обезболить место растяжения. Возьмите Спазмалгон, я пока наложу повязку. ", "  " zaderzhka " ")
-SendChat("do У стены стоит шкаф с медицинскими препаратами. ", "  " zaderzhka " ")
-SendChat("me открыв шкаф, взял" floor " эластичный бинт и начал" floor " накладывать его на место растяжения ", "  " zaderzhka " ")
-SendChat("say Вот и всё! Принимайте обезболивающее 3-4 раза в день и не делайте резких движений. ", "  " zaderzhka " ")
-SendChat("say Всего хорошего, не болейте! ", "  " zaderzhka " ")
+%vybor%("todo Сейчас изучим Вашу рану*взглянув на место растяжения ", "  " zaderzhka " ")
+%vybor%("say Думаю, что стоит обезболить место растяжения. Возьмите Спазмалгон, я пока наложу повязку. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит шкаф с медицинскими препаратами. ", "  " zaderzhka " ")
+%vybor%("me открыв шкаф, взял" floor " эластичный бинт и начал" floor " накладывать его на место растяжения ", "  " zaderzhka " ")
+%vybor%("say Вот и всё! Принимайте обезболивающее 3-4 раза в день и не делайте резких движений. ", "  " zaderzhka " ")
+%vybor%("say Всего хорошего, не болейте! ", "  " zaderzhka " ")
 Return
 
 :?:/Коронавирус_1::
 SendPlay {Enter}
-SendChat("do У стены стоит дозатор с антисептиком. ", "  " zaderzhka " ")
-SendChat("me нанёс" Female " антисептик на руки и спешно растёр его ", "  " zaderzhka " ")
-SendChat("me вытащил" floor "  из кармана медицинские перчатки и надел" floor "  их ", "  " zaderzhka " ")
-SendChat("me вытащил" floor "  из кармана медицинскую маску и надел" floor "  её ", "  " zaderzhka " ")
-SendChat("do Рядом лежит специальный защитный костюм. ", "  " zaderzhka " ")
-SendChat("me взял" floor "  специальный защитный костюм и надел" floor "  его ", "  " zaderzhka " ")
-SendChat("say Сейчас я возьму у вас мазок, который определит наличие COVID-19. ", "  " zaderzhka " ")
-SendChat("do Рядом стоит медицинский стол с необходимыми материалами. ", "  " zaderzhka " ")
-SendChat("me взял" floor "  в левую руку медицинский шпатель ", "  " zaderzhka " ")
-SendChat("me взял" floor "  в правую руку стерильную палочку с ватой ", "  " zaderzhka " ")
-SendChat("me прижав язык пациента шпателем, ввел" floor "  палочку в ротовую полость ", "  " zaderzhka " ")
-SendChat("me провел" floor "  тампоном по миндалинам, затем по дужке к язычку ", "  " zaderzhka " ")
-SendChat("me вынул" floor "  тампон из ротовой полости, не касаясь слизистых поверхностей ", "  " zaderzhka " ")
-SendChat("do На столе стоит лоток для отработанных материалов. ", "  " zaderzhka " ")
-SendChat("me отложил" floor "  шпатель в лоток для отработанных материалов ", "  " zaderzhka " ")
-SendChat("me взял" floor "  в левую руку стерильную пробирку и открыл" floor "  её ", "  " zaderzhka " ")
-SendChat("me положил" floor "  вату в пробирку и закрыл" floor "  её крышкой ", "  " zaderzhka " ")
-SendChat("say Прошу вас подождать результатов анализа и не покидать палату. ", "  " zaderzhka " ")
-SendChat("do На столе лежит тест-полоска. ", "  " zaderzhka " ")
-SendChat("me открыв пробирку, достал" floor "  из неё вату ", "  " zaderzhka " ")
-SendChat("me нанёс материал с ваты на тест-полоску ", "  " zaderzhka " ")
-SendChat("do На тест-полоске происходит реакция. ", "  " zaderzhka " ")
-SendChat("me следит за реакцией на тест-полоске ", "  " zaderzhka " ")
-SendChat("do Результат положительный?", "  " zaderzhka " ")
+%vybor%("do У стены стоит дозатор с антисептиком. ", "  " zaderzhka " ")
+%vybor%("me нанёс" Female " антисептик на руки и спешно растёр его ", "  " zaderzhka " ")
+%vybor%("me вытащил" floor "  из кармана медицинские перчатки и надел" floor "  их ", "  " zaderzhka " ")
+%vybor%("me вытащил" floor "  из кармана медицинскую маску и надел" floor "  её ", "  " zaderzhka " ")
+%vybor%("do Рядом лежит специальный защитный костюм. ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  специальный защитный костюм и надел" floor "  его ", "  " zaderzhka " ")
+%vybor%("say Сейчас я возьму у вас мазок, который определит наличие COVID-19. ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит медицинский стол с необходимыми материалами. ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  в левую руку медицинский шпатель ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  в правую руку стерильную палочку с ватой ", "  " zaderzhka " ")
+%vybor%("me прижав язык пациента шпателем, ввел" floor "  палочку в ротовую полость ", "  " zaderzhka " ")
+%vybor%("me провел" floor "  тампоном по миндалинам, затем по дужке к язычку ", "  " zaderzhka " ")
+%vybor%("me вынул" floor "  тампон из ротовой полости, не касаясь слизистых поверхностей ", "  " zaderzhka " ")
+%vybor%("do На столе стоит лоток для отработанных материалов. ", "  " zaderzhka " ")
+%vybor%("me отложил" floor "  шпатель в лоток для отработанных материалов ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  в левую руку стерильную пробирку и открыл" floor "  её ", "  " zaderzhka " ")
+%vybor%("me положил" floor "  вату в пробирку и закрыл" floor "  её крышкой ", "  " zaderzhka " ")
+%vybor%("say Прошу вас подождать результатов анализа и не покидать палату. ", "  " zaderzhka " ")
+%vybor%("do На столе лежит тест-полоска. ", "  " zaderzhka " ")
+%vybor%("me открыв пробирку, достал" floor "  из неё вату ", "  " zaderzhka " ")
+%vybor%("me нанёс материал с ваты на тест-полоску ", "  " zaderzhka " ")
+%vybor%("do На тест-полоске происходит реакция. ", "  " zaderzhka " ")
+%vybor%("me следит за реакцией на тест-полоске ", "  " zaderzhka " ")
+%vybor%("do Результат положительный?", "  " zaderzhka " ")
 Return
 
 :?:/Коронавирус_2::
 SendPlay {Enter}
-SendChat("say У меня плохие новости, у вас выявлен COVID-19. ", "  " zaderzhka " ")
-SendChat("say Отправляйтесь домой и не контактируйте с людьми.  ", "  " zaderzhka " ")
-SendChat("say Если вам станет плохо - вызывайте скорую помощь. ", "  " zaderzhka " ")
+%vybor%("say У меня плохие новости, у вас выявлен COVID-19. ", "  " zaderzhka " ")
+%vybor%("say Отправляйтесь домой и не контактируйте с людьми.  ", "  " zaderzhka " ")
+%vybor%("say Если вам станет плохо - вызывайте скорую помощь. ", "  " zaderzhka " ")
 Return
 
 :?:/Коронавирус_3::
 SendPlay {Enter}
-SendChat("say Результат теста отрицательный. COVID-19 у вас не выявлен. ", "  " zaderzhka " ")
+%vybor%("say Результат теста отрицательный. COVID-19 у вас не выявлен. ", "  " zaderzhka " ")
 
 Return
 
 
 :?:/ОЭКТ_1::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит аппарат для ОЭКТ. ", "  " zaderzhka " ")
-SendChat("say Ложитесь, пожалуйста на стол.  ", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит аппарат для ОЭКТ. ", "  " zaderzhka " ")
+%vybor%("say Ложитесь, пожалуйста на стол.  ", "  " zaderzhka " ")
 Return
 
 :?:/ОЭКТ_2::
 SendPlay {Enter}
-SendChat("say Не двигайтесь! ", "  " zaderzhka " ")
-SendChat("me включил" floor " сканирование на аппарате ", "  " zaderzhka " ")
-SendChat("me выключил" floor " сканирование на аппарате ", "  " zaderzhka " ")
-SendChat("do На мониторе результаты сканирования. ", "  " zaderzhka " ")
-SendChat("me изучает снимок ", "  " zaderzhka " ")
-SendChat("do Обнаружены отклонения? ", "  " zaderzhka " ")
+%vybor%("say Не двигайтесь! ", "  " zaderzhka " ")
+%vybor%("me включил" floor " сканирование на аппарате ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " сканирование на аппарате ", "  " zaderzhka " ")
+%vybor%("do На мониторе результаты сканирования. ", "  " zaderzhka " ")
+%vybor%("me изучает снимок ", "  " zaderzhka " ")
+%vybor%("do Обнаружены отклонения? ", "  " zaderzhka " ")
 Return
 
 :?:/ОЭКТ_3::
 SendPlay {Enter}
-SendChat("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
-SendChat("do На столе бланк ии ручка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
-SendChat("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
-SendChat("mе взял" floor " со стола, направления и передал" floor " человеку  ", "  " zaderzhka " ")
-SendChat("say Возьмите. ", "  " zaderzhka " ")
+%vybor%("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
+%vybor%("do На столе бланк ии ручка. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
+%vybor%("mе взял" floor " со стола, направления и передал" floor " человеку  ", "  " zaderzhka " ")
+%vybor%("say Возьмите. ", "  " zaderzhka " ")
 Return
 
 :?:/ОЭКТ_4::
 SendPlay {Enter}
-SendChat("say Все хорошо. У Вас не обнаружено отклонений.", "  " zaderzhka " ")
+%vybor%("say Все хорошо. У Вас не обнаружено отклонений.", "  " zaderzhka " ")
 Return
 
 :?:/ОФЭКТ_1::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит аппарат для ОФЭКТ. ", "  " zaderzhka " ")
-SendChat("say Ложитесь, пожалуйста на стол.  ", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит аппарат для ОФЭКТ. ", "  " zaderzhka " ")
+%vybor%("say Ложитесь, пожалуйста на стол.  ", "  " zaderzhka " ")
 Return
 
 :?:/ОФЭКТ_2::
 SendPlay {Enter}
-SendChat("say Не двигайтесь! ", "  " zaderzhka " ")
-SendChat("me включил" floor " сканирование на аппарате ", "  " zaderzhka " ")
-SendChat("me выключил" floor " сканирование на аппарате ", "  " zaderzhka " ")
-SendChat("do На мониторе результаты сканирования. ", "  " zaderzhka " ")
-SendChat("me изучает снимок ", "  " zaderzhka " ")
-SendChat("do Обнаружены отклонения? ", "  " zaderzhka " ")
+%vybor%("say Не двигайтесь! ", "  " zaderzhka " ")
+%vybor%("me включил" floor " сканирование на аппарате ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " сканирование на аппарате ", "  " zaderzhka " ")
+%vybor%("do На мониторе результаты сканирования. ", "  " zaderzhka " ")
+%vybor%("me изучает снимок ", "  " zaderzhka " ")
+%vybor%("do Обнаружены отклонения? ", "  " zaderzhka " ")
 Return
 
 :?:/ОФЭКТ_3::
 SendPlay {Enter}
-SendChat("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
-SendChat("do На столе бланк ии ручка. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
-SendChat("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
-SendChat("mе взял" floor " со стола, направления и передал" floor " человеку  ", "  " zaderzhka " ")
-SendChat("say Возьмите. ", "  " zaderzhka " ")
+%vybor%("say У Вас обнаружены отклонения. ", "  " zaderzhka " ")
+%vybor%("do На столе бланк ии ручка. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола бланк, ручку и начал" floor " ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " дату и подпись, положил" floor " ручку на стол ", "  " zaderzhka " ")
+%vybor%("mе взял" floor " со стола, направления и передал" floor " человеку  ", "  " zaderzhka " ")
+%vybor%("say Возьмите. ", "  " zaderzhka " ")
 Return
 
 :?:/ОФЭКТ_4::
 SendPlay {Enter}
-SendChat("say Все хорошо. У Вас не обнаружено отклонений.", "  " zaderzhka " ")
+%vybor%("say Все хорошо. У Вас не обнаружено отклонений.", "  " zaderzhka " ")
 Return
 
 :?:/Химиотерапия::
 SendPlay {Enter}
-SendChat("do Возле стола стоит стойка с капельницей. ", "  " zaderzhka " ")
-SendChat("me взял" floor " стойку с капельницей ", "  " zaderzhka " ")
-SendChat("me поставил" floor " стойку около кушетки с пациентом ", "  " zaderzhka " ")
-SendChat("me достал" floor " из мед.сумки пакет с химиопрепаратом ", "  " zaderzhka " ")
-SendChat("me повесил" floor " пакет с химиопрепаратом на стойку ", "  " zaderzhka " ")
-SendChat("me достал" floor " из мед.сумки шприц-бабочку ", "  " zaderzhka " ")
-SendChat("me присоединил" floor " её к капельнице ", "  " zaderzhka " ")
-SendChat("me наложил" floor " жгут на руку пациента ", "  " zaderzhka " ")
-SendChat("me взял" floor " ватку со столика и смочил" floor " её в спирте ", "  " zaderzhka " ")
-SendChat("me протёр" Female " место укола ", "  " zaderzhka " ")
-SendChat("me убрал" floor " жгут с руки ", "  " zaderzhka " ")
-SendChat("me ввёл" floor " шприц-бабочку в вену ", "  " zaderzhka " ")
-SendChat("me проверил" floor ", не появились ли повреждения в вене ", "  " zaderzhka " ")
-SendChat("me проверил" floor ", что капельница течёт правильно ", "  " zaderzhka " ")
-SendChat("say Капельница работает, всё в порядке. ", "  " zaderzhka " ")
-SendChat("say Вам нужно будет сидеть спокойно в течение всей процедуры. ", "  " zaderzhka " ")
-SendChat("me настроил" floor " скорость капельницы в соответствии с протоколом лечения ", "  " zaderzhka " ")
-SendChat("say Следите за уровнем жидкости в пакете. ", "  " zaderzhka " ")
-SendChat("say Если почувствуете дискомфорт или болевые ощущения, немедленно сообщите. ", "  " zaderzhka " ")
+%vybor%("do Возле стола стоит стойка с капельницей. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " стойку с капельницей ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " стойку около кушетки с пациентом ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из мед.сумки пакет с химиопрепаратом ", "  " zaderzhka " ")
+%vybor%("me повесил" floor " пакет с химиопрепаратом на стойку ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из мед.сумки шприц-бабочку ", "  " zaderzhka " ")
+%vybor%("me присоединил" floor " её к капельнице ", "  " zaderzhka " ")
+%vybor%("me наложил" floor " жгут на руку пациента ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватку со столика и смочил" floor " её в спирте ", "  " zaderzhka " ")
+%vybor%("me протёр" Female " место укола ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " жгут с руки ", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " шприц-бабочку в вену ", "  " zaderzhka " ")
+%vybor%("me проверил" floor ", не появились ли повреждения в вене ", "  " zaderzhka " ")
+%vybor%("me проверил" floor ", что капельница течёт правильно ", "  " zaderzhka " ")
+%vybor%("say Капельница работает, всё в порядке. ", "  " zaderzhka " ")
+%vybor%("say Вам нужно будет сидеть спокойно в течение всей процедуры. ", "  " zaderzhka " ")
+%vybor%("me настроил" floor " скорость капельницы в соответствии с протоколом лечения ", "  " zaderzhka " ")
+%vybor%("say Следите за уровнем жидкости в пакете. ", "  " zaderzhka " ")
+%vybor%("say Если почувствуете дискомфорт или болевые ощущения, немедленно сообщите. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Спутник::
 SendPlay {Enter}
-SendChat("do На тело врача надет специальный защитный костюм. ", "  " zaderzhka " ")
-SendChat("do На руки врача надеты медицинские перчатки. ", "  " zaderzhka " ")
-SendChat("do На стене висит дозатор с антисептиком. ", "  " zaderzhka " ")
-SendChat("me нанёс" Female " антисептик на руки и спешно растёр" Female " его ", "  " zaderzhka " ")
-SendChat("say Сейчас я поставлю вам прививку от коронавируса. ", "  " zaderzhka " ")
-SendChat("do Рядом стоит медицинский стол с необходимыми материалами. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её ", "  " zaderzhka " ")
-SendChat("me протёр" Female " место укола спиртовой салфеткой ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц и распаковал" floor " его ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола ампулу с вакциной Спутник V и открыл" floor " её ", "  " zaderzhka " ")
-SendChat("me набрал" floor " лекарство в шприц ", "  " zaderzhka " ")
-SendChat("me ввел" floor " шприц под кожу пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить вакцину ", "  " zaderzhka " ")
-SendChat("do Через некоторое время вакцина была введена. ", "  " zaderzhka " ")
-SendChat("me вытащи" floor "л шприц из-под кожи пациента ", "  " zaderzhka " ")
-SendChat("me приложил" floor " спиртовую салфетку к месту укола ", "  " zaderzhka " ")
-SendChat("do Рядом стоит урна. ", "  " zaderzhka " ")
-SendChat("me выкинул" floor " в урну все использованные материалы ", "  " zaderzhka " ")
-SendChat("say Всё готово. Если будет температура - примите жаропонижающее средство. ", "  " zaderzhka " ")
-SendChat("say Можете идти. Всего доброго, не болейте! ", "  " zaderzhka " ")
+%vybor%("do На тело врача надет специальный защитный костюм. ", "  " zaderzhka " ")
+%vybor%("do На руки врача надеты медицинские перчатки. ", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком. ", "  " zaderzhka " ")
+%vybor%("me нанёс" Female " антисептик на руки и спешно растёр" Female " его ", "  " zaderzhka " ")
+%vybor%("say Сейчас я поставлю вам прививку от коронавируса. ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит медицинский стол с необходимыми материалами. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её ", "  " zaderzhka " ")
+%vybor%("me протёр" Female " место укола спиртовой салфеткой ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц и распаковал" floor " его ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола ампулу с вакциной Спутник V и открыл" floor " её ", "  " zaderzhka " ")
+%vybor%("me набрал" floor " лекарство в шприц ", "  " zaderzhka " ")
+%vybor%("me ввел" floor " шприц под кожу пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить вакцину ", "  " zaderzhka " ")
+%vybor%("do Через некоторое время вакцина была введена. ", "  " zaderzhka " ")
+%vybor%("me вытащи" floor "л шприц из-под кожи пациента ", "  " zaderzhka " ")
+%vybor%("me приложил" floor " спиртовую салфетку к месту укола ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит урна. ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " в урну все использованные материалы ", "  " zaderzhka " ")
+%vybor%("say Всё готово. Если будет температура - примите жаропонижающее средство. ", "  " zaderzhka " ")
+%vybor%("say Можете идти. Всего доброго, не болейте! ", "  " zaderzhka " ")
 Return
 
 :?:/Нога_3::
 SendPlay {Enter}
-SendChat("me освободил" floor "  поврежденную ногу от обуви  ", "  " zaderzhka " ")
-SendChat("say Примите пожалуйста удобное для вас положение.  ", "  " zaderzhka " ")
-SendChat("do В мед.сумке лежит холодный компресс.  ", "  " zaderzhka " ")
-SendChat("me передал" floor "  холодны компресс пострадавшему ", "  " zaderzhka " ")
-SendChat("say Прикладывайте каждый час к поврежденной ноге.  ", "  " zaderzhka " ")
-SendChat("say А сейчас, наложим вам повязку для фиксации. ", "  " zaderzhka " ")
-SendChat("me взял" floor "  с мед.сумке ", "  " zaderzhka " ")
-SendChat("me начал" floor "  обматывать ногу бинтом  ", "  " zaderzhka " ")
-SendChat(" Так же я вам выпишу Нурофен, цена которого 500 рублей. Согласны?  ", "  " zaderzhka " ")
+%vybor%("me освободил" floor "  поврежденную ногу от обуви  ", "  " zaderzhka " ")
+%vybor%("say Примите пожалуйста удобное для вас положение.  ", "  " zaderzhka " ")
+%vybor%("do В мед.сумке лежит холодный компресс.  ", "  " zaderzhka " ")
+%vybor%("me передал" floor "  холодны компресс пострадавшему ", "  " zaderzhka " ")
+%vybor%("say Прикладывайте каждый час к поврежденной ноге.  ", "  " zaderzhka " ")
+%vybor%("say А сейчас, наложим вам повязку для фиксации. ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  с мед.сумке ", "  " zaderzhka " ")
+%vybor%("me начал" floor "  обматывать ногу бинтом  ", "  " zaderzhka " ")
+%vybor%(" Так же я вам выпишу Нурофен, цена которого 500 рублей. Согласны?  ", "  " zaderzhka " ")
 Return
 
 
 :?:/Мойка_1::
 SendPlay {Enter}
-SendChat("do Использованные медицинские инструменты лежат в ведре для стерилизации.   ", "  " zaderzhka " ")
-SendChat("me достав инструменты из ведра, кладет их в раковину     ", "  " zaderzhka " ")
-SendChat("me открывает кран с водой     ", "  " zaderzhka " ")
-SendChat("me промывает каждый инструмент в проточной воде      ", "  " zaderzhka " ")
-SendChat("do Плитка с емкостью для стерилизации стоит на рабочем столе.    ", "  " zaderzhka " ")
-SendChat("me взяв емкость для стерилизации, наливает в неё воду   ", "  " zaderzhka " ")
-SendChat("me закрывает кран с водой     ", "  " zaderzhka " ")
-SendChat("me ставит емкость для стерилизации на плитку     ", "  " zaderzhka " ")
-SendChat("me включает плитку и устанавливает температуру     ", "  " zaderzhka " ")
-SendChat("me кладет инструменты в емкость для стерилизации     ", "  " zaderzhka " ")
-SendChat("me выключив плитку, берет емкость для стерилизации за ручки   ", "  " zaderzhka " ")
-SendChat("me аккуратно выливает кипяток в раковину     ", "  " zaderzhka " ")
-SendChat("me достает инструменты из емкости   ", "  " zaderzhka " ")
-SendChat("me убирает инструменты в раствор Хлоргексидина    ", "  " zaderzhka " ")
+%vybor%("do Использованные медицинские инструменты лежат в ведре для стерилизации.   ", "  " zaderzhka " ")
+%vybor%("me достав инструменты из ведра, кладет их в раковину     ", "  " zaderzhka " ")
+%vybor%("me открывает кран с водой     ", "  " zaderzhka " ")
+%vybor%("me промывает каждый инструмент в проточной воде      ", "  " zaderzhka " ")
+%vybor%("do Плитка с емкостью для стерилизации стоит на рабочем столе.    ", "  " zaderzhka " ")
+%vybor%("me взяв емкость для стерилизации, наливает в неё воду   ", "  " zaderzhka " ")
+%vybor%("me закрывает кран с водой     ", "  " zaderzhka " ")
+%vybor%("me ставит емкость для стерилизации на плитку     ", "  " zaderzhka " ")
+%vybor%("me включает плитку и устанавливает температуру     ", "  " zaderzhka " ")
+%vybor%("me кладет инструменты в емкость для стерилизации     ", "  " zaderzhka " ")
+%vybor%("me выключив плитку, берет емкость для стерилизации за ручки   ", "  " zaderzhka " ")
+%vybor%("me аккуратно выливает кипяток в раковину     ", "  " zaderzhka " ")
+%vybor%("me достает инструменты из емкости   ", "  " zaderzhka " ")
+%vybor%("me убирает инструменты в раствор Хлоргексидина    ", "  " zaderzhka " ")
 Return
 
 :?:/Рентген_4::
 SendPlay {Enter}
-SendChat("say Я вам наложу вам повязку на сустав и вам сразу станет легче. ", "  " zaderzhka " ")
-SendChat("do Рядом процедурный столик. ", "  " zaderzhka " ")
-SendChat("do На столике эластичные бинты разных размеров, мазь Долобене.", "  " zaderzhka " ")
-SendChat("me взяв со столика мазь, аккуратно намазал" floor " её в сустав круговыми движениями ", "  " zaderzhka " ")
-SendChat("me взяв со столика бинт, наложил" floor " на сустав повязку  ", "  " zaderzhka " ")
-SendChat("say Вот и все. Ходите аккуратно. Избегайте нагрузок в течении 2 недель.", "  " zaderzhka " ")
+%vybor%("say Я вам наложу вам повязку на сустав и вам сразу станет легче. ", "  " zaderzhka " ")
+%vybor%("do Рядом процедурный столик. ", "  " zaderzhka " ")
+%vybor%("do На столике эластичные бинты разных размеров, мазь Долобене.", "  " zaderzhka " ")
+%vybor%("me взяв со столика мазь, аккуратно намазал" floor " её в сустав круговыми движениями ", "  " zaderzhka " ")
+%vybor%("me взяв со столика бинт, наложил" floor " на сустав повязку  ", "  " zaderzhka " ")
+%vybor%("say Вот и все. Ходите аккуратно. Избегайте нагрузок в течении 2 недель.", "  " zaderzhka " ")
 Return
 
 :?:/Рентген_3::
 SendPlay {Enter}
-SendChat("say У Вас, перелом. Я наложу Вам гипс.  ", "  " zaderzhka " ")
-SendChat("do В шкафу лежит тазик и заготовки из гипса. ", "  " zaderzhka " ")
-SendChat("me открыв шкаф, взял" floor " всё необходимое ", "  " zaderzhka " ")
-SendChat("me открыл" floor " кран и набрал" floor " полный тазик воды", "  " zaderzhka " ")
-SendChat("me опустил" floor " заготовки гипса замочив их водой ", "timestamp" " zaderzhka " "")
-SendChat("do Заготовки размочены и готовы к наложению. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из ведра заготовки и начал" floor " накладывать на место перелома", "  " zaderzhka " ")
-SendChat("say Почти готово.", "  " zaderzhka " ")
-SendChat("me помыл" floor " тазик под водой", "  " zaderzhka " ")
-SendChat("me помыв тазик, убрал" floor " его обратно в шкаф и взял" floor " бинты  ", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать бинты поверх гипса  ", "  " zaderzhka " ")
-SendChat("say Проверим прочность гипса.", "  " zaderzhka " ")
-SendChat("me слегка постучал" floor " по гипсу", "  " zaderzhka " ")
-SendChat("say Всё отлично, гипс затвердел.", "  " zaderzhka " ")
-SendChat("do У стены стоят костыли.", "  " zaderzhka " ")
-SendChat("me взял" floor " костыли и передал" floor " их пациенту ", "  " zaderzhka " ")
-SendChat("say Возьмите, они Вам пригодятся. ", "  " zaderzhka " ")
+%vybor%("say У Вас, перелом. Я наложу Вам гипс.  ", "  " zaderzhka " ")
+%vybor%("do В шкафу лежит тазик и заготовки из гипса. ", "  " zaderzhka " ")
+%vybor%("me открыв шкаф, взял" floor " всё необходимое ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " кран и набрал" floor " полный тазик воды", "  " zaderzhka " ")
+%vybor%("me опустил" floor " заготовки гипса замочив их водой ", "timestamp" " zaderzhka " "")
+%vybor%("do Заготовки размочены и готовы к наложению. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из ведра заготовки и начал" floor " накладывать на место перелома", "  " zaderzhka " ")
+%vybor%("say Почти готово.", "  " zaderzhka " ")
+%vybor%("me помыл" floor " тазик под водой", "  " zaderzhka " ")
+%vybor%("me помыв тазик, убрал" floor " его обратно в шкаф и взял" floor " бинты  ", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать бинты поверх гипса  ", "  " zaderzhka " ")
+%vybor%("say Проверим прочность гипса.", "  " zaderzhka " ")
+%vybor%("me слегка постучал" floor " по гипсу", "  " zaderzhka " ")
+%vybor%("say Всё отлично, гипс затвердел.", "  " zaderzhka " ")
+%vybor%("do У стены стоят костыли.", "  " zaderzhka " ")
+%vybor%("me взял" floor " костыли и передал" floor " их пациенту ", "  " zaderzhka " ")
+%vybor%("say Возьмите, они Вам пригодятся. ", "  " zaderzhka " ")
 Return
 
 :?:/Рентген_2::
 SendPlay {Enter}
-SendChat("say У Вас, перелом. Необходимо наложить лангетку. ", "  " zaderzhka " ")
-SendChat("me взял" floor "  лангетку со стола, и наложил" floor "  на место перелома пациента ", "  " zaderzhka " ")
-SendChat("me закрепил" floor "  лангетку, на месте перелома ", "  " zaderzhka " ")
-SendChat("say Приходите через неделю на повторный осмотр. ", "  " zaderzhka " ")
+%vybor%("say У Вас, перелом. Необходимо наложить лангетку. ", "  " zaderzhka " ")
+%vybor%("me взял" floor "  лангетку со стола, и наложил" floor "  на место перелома пациента ", "  " zaderzhka " ")
+%vybor%("me закрепил" floor "  лангетку, на месте перелома ", "  " zaderzhka " ")
+%vybor%("say Приходите через неделю на повторный осмотр. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Рентген_1::
 SendPlay {Enter}
-SendChat("do Выключенный рентген-аппарат стоит у стены.", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку включения аппарата", "  " zaderzhka " ")
-SendChat("do Аппарат включен.", "  " zaderzhka " ")
-SendChat("me взяв защитный жилет с аппарата, надел" floor " на пациента", "  " zaderzhka " ")
-SendChat("me взяв защитную маску с аппарата, надел" floor " на пациента", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку пуск", "  " zaderzhka " ")
-SendChat("say Не шевелитесь, делаю снимок. Больно не будет.", "  " zaderzhka " ")
-SendChat("do Рентген-аппарат сделал снимок.", "  " zaderzhka " ")
-SendChat("me взял" floor " в руку снимок ", "  " zaderzhka " ")
-SendChat("me повернул" floor " снимок на свет ", "  " zaderzhka " ")
-SendChat("do Снимок стал разборчив. ", "  " zaderzhka " ")
-SendChat("me тщательно рассмотрел" floor " снимок ", "  " zaderzhka " ")
-SendChat("me положил" floor " снимок на стол", "  " zaderzhka " ")
-SendChat("do Обнаружен перелом на снимке? ", "  " zaderzhka " ")
+%vybor%("do Выключенный рентген-аппарат стоит у стены.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку включения аппарата", "  " zaderzhka " ")
+%vybor%("do Аппарат включен.", "  " zaderzhka " ")
+%vybor%("me взяв защитный жилет с аппарата, надел" floor " на пациента", "  " zaderzhka " ")
+%vybor%("me взяв защитную маску с аппарата, надел" floor " на пациента", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку пуск", "  " zaderzhka " ")
+%vybor%("say Не шевелитесь, делаю снимок. Больно не будет.", "  " zaderzhka " ")
+%vybor%("do Рентген-аппарат сделал снимок.", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руку снимок ", "  " zaderzhka " ")
+%vybor%("me повернул" floor " снимок на свет ", "  " zaderzhka " ")
+%vybor%("do Снимок стал разборчив. ", "  " zaderzhka " ")
+%vybor%("me тщательно рассмотрел" floor " снимок ", "  " zaderzhka " ")
+%vybor%("me положил" floor " снимок на стол", "  " zaderzhka " ")
+%vybor%("do Обнаружен перелом на снимке? ", "  " zaderzhka " ")
 Return
 
 
 :?:/ЗЧМТ::
 SendPlay {Enter}
-SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("do В шкафу на разных полках лежат медицинские средства индивидуальной защиты.  ", "  " zaderzhka " ")
-SendChat("me взяв с полки хирургическую шапочку и маску, поочерёдной надел" floor " их на себя ", "  " zaderzhka " ")
-SendChat("me достал" floor " из индивидуальной упаковки пару стерильных перчаток и натянул" floor " их на руки ", "  " zaderzhka " ")
-SendChat("do У койки стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу кислорода в маску ", "  " zaderzhka " ")
-SendChat("do Кислород начал поступать. ", "  " zaderzhka " ")
-SendChat("do Возле операционного стола стоит двухъярусный столик укрытый плотным материалом.  ", "  " zaderzhka " ")
-SendChat("me убрал" floor " со столика материал, сложив его, положил" floor " на нижнюю полку  ", "  " zaderzhka " ")
-SendChat("do На столике лежат разнообразные хирургические инструменты и расходный материал.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " со столика ампулу с прозрачной жидкостью внутри  ", "  " zaderzhka " ")
-SendChat("do На ампуле написано Новокаин.  ", "  " zaderzhka " ")
-SendChat("me отломив горлышко ампулы, бросил" floor " его в лоток, а ампулу поставил" floor " на столик  ", "  " zaderzhka " ")
-SendChat("me взяв со столика шприц, вскрыл" floor " упаковку и достал" floor " его ", "  " zaderzhka " ")
-SendChat("me снял" floor " футляр с иглы и аккуратно набрал" floor " лекарство из ампулы в шприц  ", "  " zaderzhka " ")
-SendChat("me снова надел" floor " футляр на иглу и взял" floor " со столика спиртовую салфетку в упаковке ", "  " zaderzhka " ")
-SendChat("me вскрыв упаковку, достал" floor " салфетку и протёр ей предполагаемое место инъекции  ", "  " zaderzhka " ")
-SendChat("me бросил" floor " салфетку с упаковкой в лоток и взял" floor " шприц, сняв футляр с иглы ", "  " zaderzhka " ")
-SendChat("me аккуратно ввел" floor " иглу в место рядом с рассечением и выдавил" floor " лекарство из шприца ", "  " zaderzhka " ")
-SendChat("me откинул" floor " шприц в лоток и взял" floor " со стола другой шприц ", "  " zaderzhka " ")
-SendChat("do В 20-ти кубовом шприце была прозрачная жидкость - Хлоргексидин.  ", "  " zaderzhka " ")
-SendChat("me выдавил" floor " содержимое шприца прямо в рану и отложил" floor " его в лоток  ", "  " zaderzhka " ")
-SendChat("me взяв со столика тупфер, промокнул" floor " им место ранение и отбросил" floor " его в лоток  ", "  " zaderzhka " ")
-SendChat("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью  ", "  " zaderzhka " ")
-SendChat("me в левую руку взял" floor " хирургический пинцет ", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
-SendChat("do Через некоторое время на место ранения было наложено несколько швов. ", "  " zaderzhka " ")
-SendChat("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
-SendChat("me оторвал" floor " с повязки защитную плёнку и аккуратно приклеил" floor " повязку поверх шва  ", "  " zaderzhka " ")
-SendChat("me нажатием на кнопку выключил" floor " аппарат ИВЛ и снял" floor " маску с пациента ", "  " zaderzhka " ")
-SendChat("say Операция прошла успешно.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("do В шкафу на разных полках лежат медицинские средства индивидуальной защиты.  ", "  " zaderzhka " ")
+%vybor%("me взяв с полки хирургическую шапочку и маску, поочерёдной надел" floor " их на себя ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из индивидуальной упаковки пару стерильных перчаток и натянул" floor " их на руки ", "  " zaderzhka " ")
+%vybor%("do У койки стоит выключенный аппарат ИВЛ. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " на лицо пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу кислорода в маску ", "  " zaderzhka " ")
+%vybor%("do Кислород начал поступать. ", "  " zaderzhka " ")
+%vybor%("do Возле операционного стола стоит двухъярусный столик укрытый плотным материалом.  ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " со столика материал, сложив его, положил" floor " на нижнюю полку  ", "  " zaderzhka " ")
+%vybor%("do На столике лежат разнообразные хирургические инструменты и расходный материал.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со столика ампулу с прозрачной жидкостью внутри  ", "  " zaderzhka " ")
+%vybor%("do На ампуле написано Новокаин.  ", "  " zaderzhka " ")
+%vybor%("me отломив горлышко ампулы, бросил" floor " его в лоток, а ампулу поставил" floor " на столик  ", "  " zaderzhka " ")
+%vybor%("me взяв со столика шприц, вскрыл" floor " упаковку и достал" floor " его ", "  " zaderzhka " ")
+%vybor%("me снял" floor " футляр с иглы и аккуратно набрал" floor " лекарство из ампулы в шприц  ", "  " zaderzhka " ")
+%vybor%("me снова надел" floor " футляр на иглу и взял" floor " со столика спиртовую салфетку в упаковке ", "  " zaderzhka " ")
+%vybor%("me вскрыв упаковку, достал" floor " салфетку и протёр ей предполагаемое место инъекции  ", "  " zaderzhka " ")
+%vybor%("me бросил" floor " салфетку с упаковкой в лоток и взял" floor " шприц, сняв футляр с иглы ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввел" floor " иглу в место рядом с рассечением и выдавил" floor " лекарство из шприца ", "  " zaderzhka " ")
+%vybor%("me откинул" floor " шприц в лоток и взял" floor " со стола другой шприц ", "  " zaderzhka " ")
+%vybor%("do В 20-ти кубовом шприце была прозрачная жидкость - Хлоргексидин.  ", "  " zaderzhka " ")
+%vybor%("me выдавил" floor " содержимое шприца прямо в рану и отложил" floor " его в лоток  ", "  " zaderzhka " ")
+%vybor%("me взяв со столика тупфер, промокнул" floor " им место ранение и отбросил" floor " его в лоток  ", "  " zaderzhka " ")
+%vybor%("me в правую руку взял" floor " иглодержатель с заправленной в него иглой и нитью  ", "  " zaderzhka " ")
+%vybor%("me в левую руку взял" floor " хирургический пинцет ", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать швы на место ранения ", "  " zaderzhka " ")
+%vybor%("do Через некоторое время на место ранения было наложено несколько швов. ", "  " zaderzhka " ")
+%vybor%("me бросил" floor " иглодержатель и пинцет в лоток, взял" floor " со столика одноразовую послеоперационную повязку ", "  " zaderzhka " ")
+%vybor%("me оторвал" floor " с повязки защитную плёнку и аккуратно приклеил" floor " повязку поверх шва  ", "  " zaderzhka " ")
+%vybor%("me нажатием на кнопку выключил" floor " аппарат ИВЛ и снял" floor " маску с пациента ", "  " zaderzhka " ")
+%vybor%("say Операция прошла успешно.", "  " zaderzhka " ")
 Return
 
 :?:/Пересадка_1::
 SendPlay {Enter}
-SendChat("do Стерильные перчатки на тумбочке. ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки затем надел" floor " их ", "  " zaderzhka " ")
-SendChat("do Аппарат для наркоза у койки. ", "  " zaderzhka " ")
-SendChat("do Маска на аппарате. ", "  " zaderzhka " ")
-SendChat("me снял" floor " маску, затем надел" floor " на пациента ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("do Скальпель на тумбочке. ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель ", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез ", "  " zaderzhka " ")
-SendChat("me аккуратным движением рук вытащил" floor " нужный орган ", "  " zaderzhka " ")
-SendChat("do Холодильник у стены. ", "  " zaderzhka " ")
-SendChat("me убрал" floor " орган в холодильник ", "  " zaderzhka " ")
-SendChat("do Новый орган в миске, в размороженном состоянии. ", "  " zaderzhka " ")
-SendChat("me взял" floor " орган ", "  " zaderzhka " ")
-SendChat("me поставил" floor " орган на нужное место ", "  " zaderzhka " ")
-SendChat("do Мед.нить и мед.игла на тумбочке. ", "  " zaderzhka " ")
-SendChat("me взял мед. нить и мед. иглу ", "  " zaderzhka " ")
-SendChat("me продел" floor " нить в иглу ", "  " zaderzhka " ")
-SendChat("me начал " floor "зашивать рану ", "  " zaderzhka " ")
-SendChat("me убрал" floor " маску с пациента, затем повесил" floor " ее на наркозный аппарат ", "  " zaderzhka " ")
+%vybor%("do Стерильные перчатки на тумбочке. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки затем надел" floor " их ", "  " zaderzhka " ")
+%vybor%("do Аппарат для наркоза у койки. ", "  " zaderzhka " ")
+%vybor%("do Маска на аппарате. ", "  " zaderzhka " ")
+%vybor%("me снял" floor " маску, затем надел" floor " на пациента ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("do Скальпель на тумбочке. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель ", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез ", "  " zaderzhka " ")
+%vybor%("me аккуратным движением рук вытащил" floor " нужный орган ", "  " zaderzhka " ")
+%vybor%("do Холодильник у стены. ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " орган в холодильник ", "  " zaderzhka " ")
+%vybor%("do Новый орган в миске, в размороженном состоянии. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " орган ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " орган на нужное место ", "  " zaderzhka " ")
+%vybor%("do Мед.нить и мед.игла на тумбочке. ", "  " zaderzhka " ")
+%vybor%("me взял мед. нить и мед. иглу ", "  " zaderzhka " ")
+%vybor%("me продел" floor " нить в иглу ", "  " zaderzhka " ")
+%vybor%("me начал " floor "зашивать рану ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " маску с пациента, затем повесил" floor " ее на наркозный аппарат ", "  " zaderzhka " ")
 Return
 
 :?:/Нос_1::
 SendPlay {Enter}
-SendChat("do Стул возле стены. ", "  " zaderzhka " ")
-SendChat("say Садитесь на стул, сейчас будем вам вправлять нос ", "  " zaderzhka " ")
-SendChat("do На мед. столе стерильные перчатки. ", "  " zaderzhka " ")
-SendChat("me взяв перчатки со стола, нацепил" floor " их на руки ", "  " zaderzhka " ")
-SendChat("me резким движением руки вправил" floor " нос человеку напротив ", "  " zaderzhka " ")
+%vybor%("do Стул возле стены. ", "  " zaderzhka " ")
+%vybor%("say Садитесь на стул, сейчас будем вам вправлять нос ", "  " zaderzhka " ")
+%vybor%("do На мед. столе стерильные перчатки. ", "  " zaderzhka " ")
+%vybor%("me взяв перчатки со стола, нацепил" floor " их на руки ", "  " zaderzhka " ")
+%vybor%("me резким движением руки вправил" floor " нос человеку напротив ", "  " zaderzhka " ")
 Return
 
 :?:/Нос_2::
 SendPlay {Enter}
-SendChat("do Около стены стол с медицинскими принадлежностями. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола пращевидную повязку ", "  " zaderzhka " ")
-SendChat("me тщательно наложил" floor " пращевидную повязку на нос ", "  " zaderzhka " ")
+%vybor%("do Около стены стол с медицинскими принадлежностями. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола пращевидную повязку ", "  " zaderzhka " ")
+%vybor%("me тщательно наложил" floor " пращевидную повязку на нос ", "  " zaderzhka " ")
 Return
 
 :?:/Перевязывание::
 SendPlay {Enter}
-SendChat("do На столе находится все необходимые предметы для перевязывания раны. ", "  " zaderzhka " ")
-SendChat("me взял" floor " в руки жгут ", "  " zaderzhka " ")
-SendChat("me накладывает жгут выше кровотечения ", "  " zaderzhka " ")
-SendChat("me осмотрел" floor " рану больного ", "  " zaderzhka " ")
-SendChat("me обработал" floor " рану больного ", "  " zaderzhka " ")
-SendChat("me взял" floor " шприц и обезболивающее ", "  " zaderzhka " ")
-SendChat("me заправил" floor " обезболивающим шприц ", "  " zaderzhka " ")
-SendChat("me вколол" floor " обезболивающие ", "  " zaderzhka " ")
-SendChat("do В комнате находится аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат наркоза ", "  " zaderzhka " ")
-SendChat("do Кислородная маска лежит рядом с аппаратом наркоза. ", "  " zaderzhka " ")
-SendChat("me взял" floor " кислородную маску ", "  " zaderzhka " ")
-SendChat("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола продезинфицированные инструменты ", "  " zaderzhka " ")
-SendChat("me начинает зашивать рану ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола ножницы ", "  " zaderzhka " ")
-SendChat("me обрезал" floor " нитку ", "  " zaderzhka " ")
-SendChat("me положил" floor " иголку и ножницы обратно на стол ", "  " zaderzhka " ")
-SendChat("me обработал" floor " рану зеленкой ", "  " zaderzhka " ")
-SendChat("do Бинты лежат на соседней полке. ", "  " zaderzhka " ")
-SendChat("me взял" floor " бинты ", "  " zaderzhka " ")
-SendChat("me перевязывает рану бинтом ", "  " zaderzhka " ")
-SendChat("me снял" floor " жгут ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат наркоза ", "  " zaderzhka " ")
-SendChat("me снял" floor " кислородную маску и положил" floor " её обратно ", "  " zaderzhka " ")
+%vybor%("do На столе находится все необходимые предметы для перевязывания раны. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руки жгут ", "  " zaderzhka " ")
+%vybor%("me накладывает жгут выше кровотечения ", "  " zaderzhka " ")
+%vybor%("me осмотрел" floor " рану больного ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " рану больного ", "  " zaderzhka " ")
+%vybor%("me взял" floor " шприц и обезболивающее ", "  " zaderzhka " ")
+%vybor%("me заправил" floor " обезболивающим шприц ", "  " zaderzhka " ")
+%vybor%("me вколол" floor " обезболивающие ", "  " zaderzhka " ")
+%vybor%("do В комнате находится аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат наркоза ", "  " zaderzhka " ")
+%vybor%("do Кислородная маска лежит рядом с аппаратом наркоза. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " кислородную маску ", "  " zaderzhka " ")
+%vybor%("me надел" floor " кислородную маску на пациента ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола продезинфицированные инструменты ", "  " zaderzhka " ")
+%vybor%("me начинает зашивать рану ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола ножницы ", "  " zaderzhka " ")
+%vybor%("me обрезал" floor " нитку ", "  " zaderzhka " ")
+%vybor%("me положил" floor " иголку и ножницы обратно на стол ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " рану зеленкой ", "  " zaderzhka " ")
+%vybor%("do Бинты лежат на соседней полке. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " бинты ", "  " zaderzhka " ")
+%vybor%("me перевязывает рану бинтом ", "  " zaderzhka " ")
+%vybor%("me снял" floor " жгут ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат наркоза ", "  " zaderzhka " ")
+%vybor%("me снял" floor " кислородную маску и положил" floor " её обратно ", "  " zaderzhka " ")
 Return
 
 :?:/Клятва::
 SendPlay {Enter}
-SendChat("say Получая высокое звание врача и приступая к профессиональной деятельности, я торжественно клянусь:", "  " zaderzhka " ")
-SendChat("say честно исполнять свой врачебный долг, посвятить свои знания и умения предупреждению и лечению заболеваний, сохранению и укреплению здоровья человека;", "  " zaderzhka " ")
-SendChat("say быть всегда готовым оказать медицинскую помощь, хранить врачебную тайну, внимательно и заботливо относиться к пациенту, действовать исключительно в ", "  " zaderzhka " ")
-SendChat("say его интересах независимо от пола, расы, национальности, языка, происхождения, имущественного и должностного положения, места жительства, отношения ", "  " zaderzhka " ")
-SendChat("say к религии, убеждений, принадлежности к общественным объединениям, а также других обстоятельств;", "  " zaderzhka " ")
-SendChat("say проявлять высочайшее уважение к жизни человека, никогда не прибегать к осуществлению эвтаназии;", "  " zaderzhka " ")
-SendChat("say хранить благодарность и уважение к своим учителям, быть требовательным и справедливым к своим ученикам, способствовать их профессиональному росту;", "  " zaderzhka " ")
-SendChat("say доброжелательно относиться к коллегам, обращаться к ним за помощью и советом, если этого требуют интересы пациента, и самому никогда не", "  " zaderzhka " ")
-SendChat("say отказывать коллегам в помощи и совете;", "  " zaderzhka " ")
-SendChat("say постоянно совершенствовать свое профессиональное мастерство, беречь и развивать благородные традиции медицины.", "  " zaderzhka " ")
+%vybor%("say Получая высокое звание врача и приступая к профессиональной деятельности, я торжественно клянусь:", "  " zaderzhka " ")
+%vybor%("say честно исполнять свой врачебный долг, посвятить свои знания и умения предупреждению и лечению заболеваний, сохранению и укреплению здоровья человека;", "  " zaderzhka " ")
+%vybor%("say быть всегда готовым оказать медицинскую помощь, хранить врачебную тайну, внимательно и заботливо относиться к пациенту, действовать исключительно в ", "  " zaderzhka " ")
+%vybor%("say его интересах независимо от пола, расы, национальности, языка, происхождения, имущественного и должностного положения, места жительства, отношения ", "  " zaderzhka " ")
+%vybor%("say к религии, убеждений, принадлежности к общественным объединениям, а также других обстоятельств;", "  " zaderzhka " ")
+%vybor%("say проявлять высочайшее уважение к жизни человека, никогда не прибегать к осуществлению эвтаназии;", "  " zaderzhka " ")
+%vybor%("say хранить благодарность и уважение к своим учителям, быть требовательным и справедливым к своим ученикам, способствовать их профессиональному росту;", "  " zaderzhka " ")
+%vybor%("say доброжелательно относиться к коллегам, обращаться к ним за помощью и советом, если этого требуют интересы пациента, и самому никогда не", "  " zaderzhka " ")
+%vybor%("say отказывать коллегам в помощи и совете;", "  " zaderzhka " ")
+%vybor%("say постоянно совершенствовать свое профессиональное мастерство, беречь и развивать благородные традиции медицины.", "  " zaderzhka " ")
 Return
 
 :?:/Мрт_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, перед началом процедуры, я должен" floor " кратко рассказать о ней.", "  " zaderzhka " ")
-SendChat("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
-SendChat("do На столе лежит коробка.", "  " zaderzhka " ")
-SendChat("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
-SendChat("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, перед началом процедуры, я должен" floor " кратко рассказать о ней.", "  " zaderzhka " ")
+%vybor%("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
+%vybor%("do На столе лежит коробка.", "  " zaderzhka " ")
+%vybor%("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
+%vybor%("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
 Return
 
 
 :?:/Мрт_2::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит аппарат МРТ.", "  " zaderzhka " ")
-SendChat("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит аппарат МРТ.", "  " zaderzhka " ")
+%vybor%("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
 Return
 
 :?:/Мрт_3::
 SendPlay {Enter}
-SendChat("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку на аппарате МРТ", "  " zaderzhka " ")
-SendChat("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
-SendChat("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
-SendChat("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
-SendChat("do Увидены ли отклонения на снимках?", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
+%vybor%("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку на аппарате МРТ", "  " zaderzhka " ")
+%vybor%("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
+%vybor%("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
+%vybor%("do Увидены ли отклонения на снимках?", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
 Return
 
 :?:/Мрт_5::
 SendPlay {Enter}
-SendChat("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
-SendChat("say Я рекомендую пройти дальнейшее обследование для уточнения диагноза.", "  " zaderzhka " ")
-SendChat("say Я сообщу о результатах лечащему врачу.", "  " zaderzhka " ")
+%vybor%("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
+%vybor%("say Я рекомендую пройти дальнейшее обследование для уточнения диагноза.", "  " zaderzhka " ")
+%vybor%("say Я сообщу о результатах лечащему врачу.", "  " zaderzhka " ")
 Return
 
 :?:/Мрт_4::
 SendPlay {Enter}
-SendChat("say У Вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
+%vybor%("say У Вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Годность_1::
 SendPlay {Enter}
-SendChat("do Перед сотрудником стоит стеллаж с препаратами.", "  " zaderzhka " ")
-SendChat("me взял" floor " препарат со стеллажа и начал" floor " изучать его упаковку", "  " zaderzhka " ")
-SendChat("try обнаружил" floor " на упаковке истекший срок годности", "  " zaderzhka " ")
-SendChat("me отложил" floor " препарат в сторону", "  " zaderzhka " ")
-SendChat("me взял" floor " со стеллажа другой препарат и начал" floor " изучать его упаковку", "  " zaderzhka " ")
-SendChat("try обнаружил" floor " на упаковке истекший срок годности", "  " zaderzhka " ")
-SendChat("me отложил" floor " препарат в сторону", "  " zaderzhka " ")
-SendChat("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
-SendChat("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
-SendChat("me убрал" floor " бланк и ручку в медицинскую сумку", "  " zaderzhka " ")
-SendChat("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит стеллаж с препаратами.", "  " zaderzhka " ")
+%vybor%("me взял" floor " препарат со стеллажа и начал" floor " изучать его упаковку", "  " zaderzhka " ")
+%vybor%("try обнаружил" floor " на упаковке истекший срок годности", "  " zaderzhka " ")
+%vybor%("me отложил" floor " препарат в сторону", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стеллажа другой препарат и начал" floor " изучать его упаковку", "  " zaderzhka " ")
+%vybor%("try обнаружил" floor " на упаковке истекший срок годности", "  " zaderzhka " ")
+%vybor%("me отложил" floor " препарат в сторону", "  " zaderzhka " ")
+%vybor%("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
+%vybor%("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
+%vybor%("me убрал" floor " бланк и ручку в медицинскую сумку", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
 
 
 :?:/Хранение_1::
 SendPlay {Enter}
-SendChat("do На плече висит медицинская сумка.", "  " zaderzhka " ")
-SendChat("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки бесконтактный термометр", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку включения прибора", "  " zaderzhka " ")
-SendChat("do Бесконтактный термометр включился.", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку измерения температуры", "  " zaderzhka " ")
-SendChat("do Прибор завершил измерение и вывел" floor " результат на экран.", "  " zaderzhka " ")
-SendChat("do На стене висит таблица с нормами температурного режима для хранения препаратов.", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на таблицу и запомнил" floor " нужный показатель", "  " zaderzhka " ")
-SendChat("try увидел" floor " на экране прибора подходящую норму", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
-SendChat("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
-SendChat("me убрал" floor " бланк и ручку в мед. сумку", "  " zaderzhka " ")
-SendChat("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("do На плече висит медицинская сумка.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки бесконтактный термометр", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку включения прибора", "  " zaderzhka " ")
+%vybor%("do Бесконтактный термометр включился.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку измерения температуры", "  " zaderzhka " ")
+%vybor%("do Прибор завершил измерение и вывел" floor " результат на экран.", "  " zaderzhka " ")
+%vybor%("do На стене висит таблица с нормами температурного режима для хранения препаратов.", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на таблицу и запомнил" floor " нужный показатель", "  " zaderzhka " ")
+%vybor%("try увидел" floor " на экране прибора подходящую норму", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
+%vybor%("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
+%vybor%("me убрал" floor " бланк и ручку в мед. сумку", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
 
 
 :?:/Пульсоксиметр_1::
 SendPlay {Enter}
-SendChat("me достал" floor " из мед сумки пульсоксиметр", "  " zaderzhka " ")
-SendChat("me положил" floor " пульсоксиметр на стол", "  " zaderzhka " ")
-SendChat("say Вставьте любой палец в пульсоксиметр. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из мед сумки пульсоксиметр", "  " zaderzhka " ")
+%vybor%("me положил" floor " пульсоксиметр на стол", "  " zaderzhka " ")
+%vybor%("say Вставьте любой палец в пульсоксиметр. ", "  " zaderzhka " ")
 Return
 
 :?:/Пульсоксиметр_2::
 SendPlay {Enter}
-SendChat("me включил" floor " пульсоксиметр ", "  " zaderzhka " ")
-SendChat("do Пульсоксиметр издал звук.", "  " zaderzhka " ")
-SendChat("do Пульсоксиметр фиксирует насыщения крови кислородом.", "  " zaderzhka " ")
-SendChat("do Что показал пульсоксиметр? ", "  " zaderzhka " ")
+%vybor%("me включил" floor " пульсоксиметр ", "  " zaderzhka " ")
+%vybor%("do Пульсоксиметр издал звук.", "  " zaderzhka " ")
+%vybor%("do Пульсоксиметр фиксирует насыщения крови кислородом.", "  " zaderzhka " ")
+%vybor%("do Что показал пульсоксиметр? ", "  " zaderzhka " ")
 Return
 
 :?:/Ингалятор::
 SendPlay {Enter}
-SendChat("do В шкафу ингалятор.", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("me достал" floor " из шкафа ингалятор", "  " zaderzhka " ")
-SendChat("me поставил" floor " ингалятор на стол", "  " zaderzhka " ")
-SendChat("me подключил" floor " ингалятор к сети ", "  " zaderzhka " ")
-SendChat("me достал" floor " одноразовый шприц из шкафа ", "  " zaderzhka " ")
-SendChat("me набрал" floor " в шприц раствор хлорид натрия ", "  " zaderzhka " ")
-SendChat("me наполнил" floor " ингалятор из шприца", "  " zaderzhka " ")
-SendChat("me включил" floor " ингалятор ", "  " zaderzhka " ")
-SendChat("say Прижмите респиратор к лицу. ", "  " zaderzhka " ")
-SendChat("say Если у вас закончилась жидкость, говорите. ", "  " zaderzhka " ")
-SendChat("say Дышите равномерно, не задерживайте дыхание. Постарайтесь не двигаться. ", "  " zaderzhka " ")
-SendChat("say Если почувствуете головокружение или дискомфорт, сообщите мне. ", "  " zaderzhka " ")
+%vybor%("do В шкафу ингалятор.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из шкафа ингалятор", "  " zaderzhka " ")
+%vybor%("me поставил" floor " ингалятор на стол", "  " zaderzhka " ")
+%vybor%("me подключил" floor " ингалятор к сети ", "  " zaderzhka " ")
+%vybor%("me достал" floor " одноразовый шприц из шкафа ", "  " zaderzhka " ")
+%vybor%("me набрал" floor " в шприц раствор хлорид натрия ", "  " zaderzhka " ")
+%vybor%("me наполнил" floor " ингалятор из шприца", "  " zaderzhka " ")
+%vybor%("me включил" floor " ингалятор ", "  " zaderzhka " ")
+%vybor%("say Прижмите респиратор к лицу. ", "  " zaderzhka " ")
+%vybor%("say Если у вас закончилась жидкость, говорите. ", "  " zaderzhka " ")
+%vybor%("say Дышите равномерно, не задерживайте дыхание. Постарайтесь не двигаться. ", "  " zaderzhka " ")
+%vybor%("say Если почувствуете головокружение или дискомфорт, сообщите мне. ", "  " zaderzhka " ")
 Return
 
 :?:/Миостимулятор_1::
 SendPlay {Enter}
-SendChat("do В шкафу лежит миостимулятор.", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("me достал" floor " из шкафа миостимулятор", "  " zaderzhka " ")
-SendChat("me положил" floor " миостимулятор на стол", "  " zaderzhka " ")
-SendChat("say Раздевайтесь и ложитесь на кушетку. ", "  " zaderzhka " ")
+%vybor%("do В шкафу лежит миостимулятор.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из шкафа миостимулятор", "  " zaderzhka " ")
+%vybor%("me положил" floor " миостимулятор на стол", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь и ложитесь на кушетку. ", "  " zaderzhka " ")
 Return
 :?:/Миостимулятор_2::
 SendPlay {Enter}
-SendChat("me взял миостимулятор в руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " миостимулятор рядом с человеком ", "  " zaderzhka " ")
-SendChat("me положил" floor " электроды к нужным мышцам ", "  " zaderzhka " ")
-SendChat("me включил" floor " миостимулятор ", "  " zaderzhka " ")
+%vybor%("me взял миостимулятор в руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " миостимулятор рядом с человеком ", "  " zaderzhka " ")
+%vybor%("me положил" floor " электроды к нужным мышцам ", "  " zaderzhka " ")
+%vybor%("me включил" floor " миостимулятор ", "  " zaderzhka " ")
 Return
 :?:/Миостимулятор_3::
 SendPlay {Enter}
-SendChat("me выключил" floor " миостимулятор ", "  " zaderzhka " ")
-SendChat("me убрал" floor " электроды с пациента ", "  " zaderzhka " ")
-SendChat("me убрал" floor " миостимулятор в шаф ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " миостимулятор ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " электроды с пациента ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " миостимулятор в шаф ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
 Return
 :?:/ЭндоУЗИ_1::
 SendPlay {Enter}
-SendChat("say Сейчас я проведу Вам Эндосонография.  ", "  " zaderzhka " ")
-SendChat("say Открывайте рот. ", "  " zaderzhka " ")
+%vybor%("say Сейчас я проведу Вам Эндосонография.  ", "  " zaderzhka " ")
+%vybor%("say Открывайте рот. ", "  " zaderzhka " ")
 Return
 
 :?:/ЭндоУЗИ_2::
 SendPlay {Enter}
-SendChat("do Аппарат ЭндоУЗИ стоит у койки. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
-SendChat("me начал" floor " вводить зонд в пищевод пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
-SendChat("me продолжил" floor " вводить зонд в желудок пациента ", "  " zaderzhka " ")
-SendChat("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
-SendChat("me смотрит на экран ", "  " zaderzhka " ")
-SendChat("do Обнаружили отклонения? ", "  " zaderzhka " ")
-SendChat("me начал" floor " вынимать зонд из желудка пациента ", "  " zaderzhka " ")
-SendChat("me положил" floor " зонд на стол   ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
+%vybor%("do Аппарат ЭндоУЗИ стоит у койки. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вводить зонд в пищевод пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
+%vybor%("me продолжил" floor " вводить зонд в желудок пациента ", "  " zaderzhka " ")
+%vybor%("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
+%vybor%("me смотрит на экран ", "  " zaderzhka " ")
+%vybor%("do Обнаружили отклонения? ", "  " zaderzhka " ")
+%vybor%("me начал" floor " вынимать зонд из желудка пациента ", "  " zaderzhka " ")
+%vybor%("me положил" floor " зонд на стол   ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
 Return
 
 
 :?:/Тату_1::
 SendPlay {Enter}
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
-SendChat("do Лазерный аппарат стоит у стены. ", "  " zaderzhka " ")
-SendChat("me взял" floor " защитные очки и передал" floor " их пациенту ", "  " zaderzhka " ")
-SendChat("say Надевайте и ложитесь на койку. ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do Лазерный аппарат стоит у стены. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " защитные очки и передал" floor " их пациенту ", "  " zaderzhka " ")
+%vybor%("say Надевайте и ложитесь на койку. ", "  " zaderzhka " ")
 Return
 
 :?:/Тату_2::
 SendPlay {Enter}
-SendChat("me осмотрел пациента ", "  " zaderzhka " ")
-SendChat("do На столе лежит специальный гель. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " гель и намазал" floor " его на место удаление ", "  " zaderzhka " ")
-SendChat("me надел" floor " защитные очки ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("me начал" floor " выводить татуировку ", "  " zaderzhka " ")
+%vybor%("me осмотрел пациента ", "  " zaderzhka " ")
+%vybor%("do На столе лежит специальный гель. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " гель и намазал" floor " его на место удаление ", "  " zaderzhka " ")
+%vybor%("me надел" floor " защитные очки ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("me начал" floor " выводить татуировку ", "  " zaderzhka " ")
 Return
 
 :?:/Тату_3::
 SendPlay {Enter}
-SendChat("me закончил" floor " выводить татуировку ", "  " zaderzhka " ")
-SendChat("me снял" floor " защитные очки ", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат ", "  " zaderzhka " ")
-SendChat("say Процедура окончена, можете одеваться. ", "  " zaderzhka " ")
+%vybor%("me закончил" floor " выводить татуировку ", "  " zaderzhka " ")
+%vybor%("me снял" floor " защитные очки ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат ", "  " zaderzhka " ")
+%vybor%("say Процедура окончена, можете одеваться. ", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Ангина_1::
 SendPlay {Enter}
-SendChat("do Возле кушетки стоит хирургический столик. ", "  " zaderzhka " ")
-SendChat("do На столике лежат разнообразные хирургические инструменты с медицинскими принадлежностями. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку с экспресс-тестом Ангин и вскрыл" floor " её ", "  " zaderzhka " ")
-SendChat("do Спец.основа на столе. ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку из упаковки и положил" floor " ее на спец.основу ", "  " zaderzhka " ")
-SendChat("me извлек из упаковки 2 раствора, ватную палочку, тест, и положив его на стол ", "  " zaderzhka " ")
-SendChat("me открыл" floor " раствор желтого цвета, и капнув 2 капли в пробирку ", "  " zaderzhka " ")
-SendChat("me открыл" floor " красный раствор, и капнув 4 капли в пробирку ", "  " zaderzhka " ")
-SendChat("say Гражданин, широко откройте рот. ", "  " zaderzhka " ")
+%vybor%("do Возле кушетки стоит хирургический столик. ", "  " zaderzhka " ")
+%vybor%("do На столике лежат разнообразные хирургические инструменты с медицинскими принадлежностями. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку с экспресс-тестом Ангин и вскрыл" floor " её ", "  " zaderzhka " ")
+%vybor%("do Спец.основа на столе. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробирку из упаковки и положил" floor " ее на спец.основу ", "  " zaderzhka " ")
+%vybor%("me извлек из упаковки 2 раствора, ватную палочку, тест, и положив его на стол ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " раствор желтого цвета, и капнув 2 капли в пробирку ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " красный раствор, и капнув 4 капли в пробирку ", "  " zaderzhka " ")
+%vybor%("say Гражданин, широко откройте рот. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Ангина_2::
 SendPlay {Enter}
-SendChat("me взял" floor " ватную палочку со стола и сделал" floor " мазок в районе миндалин и задней стенке глотки ", "  " zaderzhka " ")
-SendChat("me поместил" floor " ватную палочку в пробирку с раствором ", "  " zaderzhka " ")
-SendChat("me перемешал" floor " 10 раз раствор при помощи ватной палочки ", "  " zaderzhka " ")
-SendChat("me достал" floor " ватную палочку из пробирки ", "  " zaderzhka " ")
-SendChat("me поднял" floor " к тесту ватную палочку и надавил" floor " ", "  " zaderzhka " ")
-SendChat("me выбросил" floor " ватную палочку в ведро ", "  " zaderzhka " ")
-SendChat("do На тесте есть 2 полоски? ", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватную палочку со стола и сделал" floor " мазок в районе миндалин и задней стенке глотки ", "  " zaderzhka " ")
+%vybor%("me поместил" floor " ватную палочку в пробирку с раствором ", "  " zaderzhka " ")
+%vybor%("me перемешал" floor " 10 раз раствор при помощи ватной палочки ", "  " zaderzhka " ")
+%vybor%("me достал" floor " ватную палочку из пробирки ", "  " zaderzhka " ")
+%vybor%("me поднял" floor " к тесту ватную палочку и надавил" floor " ", "  " zaderzhka " ")
+%vybor%("me выбросил" floor " ватную палочку в ведро ", "  " zaderzhka " ")
+%vybor%("do На тесте есть 2 полоски? ", "  " zaderzhka " ")
 Return
 
 
 :?:/Ангина_3::
 SendPlay {Enter}
-SendChat("Вы болены, я выпишу вам Фурацилин Авексима, стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
+%vybor%("Вы болены, я выпишу вам Фурацилин Авексима, стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
 Return
 
 
 :?:/Ангина_4::
 SendPlay {Enter}
-SendChat("Вы здоровы можете идти. ", "  " zaderzhka " ")
+%vybor%("Вы здоровы можете идти. ", "  " zaderzhka " ")
 Return
 
 :?:/Гвоздь_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
 Return
 
 :?:/Гвоздь_2::
 SendPlay {Enter}
-SendChat("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и ампулу с антибиотиком, открыл" floor " ампулу  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-SendChat("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
-SendChat("me аккуратно вколол шприц с антибиотиком в кожу пациента возле раны  ", "  " zaderzhka " ")
-SendChat("me положил" floor " шприц на тумбочку  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-SendChat("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-SendChat("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола  ", "  " zaderzhka " ")
-SendChat("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
-SendChat("me положил" floor " шприц на тумбочку ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы ", "  " zaderzhka " ")
-SendChat("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-SendChat("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола ", "  " zaderzhka " ")
-SendChat("me аккуратно вколол шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный скальпель. ", "  " zaderzhka " ")
-SendChat("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи возле раны ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
-SendChat("me взяв пинцет, осторожно вытащил" floor " инородный предмет и положил" floor " его на тумбочку ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и перекись, обработал" floor " место занесения железной арматуры ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит операционная иголка и саморассасывающаяся нить. ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит заживляющая мазь. ", "  " zaderzhka " ")
-SendChat("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место раны ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны ", "  " zaderzhka " ")
-SendChat("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня. ", "  " zaderzhka " ")
+%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и ампулу с антибиотиком, открыл" floor " ампулу  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вколол шприц с антибиотиком в кожу пациента возле раны  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " шприц на тумбочку  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
+%vybor%("me положил" floor " шприц на тумбочку ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы ", "  " zaderzhka " ")
+%vybor%("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола ", "  " zaderzhka " ")
+%vybor%("me аккуратно вколол шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный скальпель. ", "  " zaderzhka " ")
+%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи возле раны ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
+%vybor%("me взяв пинцет, осторожно вытащил" floor " инородный предмет и положил" floor " его на тумбочку ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и перекись, обработал" floor " место занесения железной арматуры ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить. ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит заживляющая мазь. ", "  " zaderzhka " ")
+%vybor%("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место раны ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны ", "  " zaderzhka " ")
+%vybor%("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня. ", "  " zaderzhka " ")
 Return
 
 :?:/Мозоль_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Мозоль_2::
 SendPlay {Enter}
-SendChat("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-SendChat("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " мазоль на теле пациента  ", "  " zaderzhka " ")
-SendChat("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле мазоли  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
-SendChat("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте мазоли  ", "  " zaderzhka " ")
-SendChat("me аккуратно скальпелем удалил" floor " нарост под кожей  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.  ", "  " zaderzhka " ")
-SendChat("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил" floor " рану  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит заживляющая мазь.  ", "  " zaderzhka " ")
-SendChat("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место мозоли  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место мозоли  ", "  " zaderzhka " ")
-SendChat("say Вот и всё. Швы сами рассосутся примерно через неделю.", "  " zaderzhka " ")
-SendChat("say Я вам пропишу ибуклин в качестве обезболивающего.", "  " zaderzhka " ")
-SendChat("say Его стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
-SendChat("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " мазоль на теле пациента  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле мазоли  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
+%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте мазоли  ", "  " zaderzhka " ")
+%vybor%("me аккуратно скальпелем удалил" floor " нарост под кожей  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.  ", "  " zaderzhka " ")
+%vybor%("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил" floor " рану  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит заживляющая мазь.  ", "  " zaderzhka " ")
+%vybor%("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место мозоли  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место мозоли  ", "  " zaderzhka " ")
+%vybor%("say Вот и всё. Швы сами рассосутся примерно через неделю.", "  " zaderzhka " ")
+%vybor%("say Я вам пропишу ибуклин в качестве обезболивающего.", "  " zaderzhka " ")
+%vybor%("say Его стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
+%vybor%("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
 Return
 
 
 :?:/Бородавка_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Бородавка_2::
 SendPlay {Enter}
-SendChat("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-SendChat("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
-SendChat("me аккуратно вколол" floor " шприц с анестезией в кожу пациента   ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
-SendChat("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте бородавки  ", "  " zaderzhka " ")
-SendChat("me скальпелем осторожно вырезал бородавку из-под кожи  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.    ", "  " zaderzhka " ")
-SendChat("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил рану   ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит заживляющая мазь.   ", "  " zaderzhka " ")
-SendChat("me взяв мазь на тумбочке, аккуратно нанёс её на место раны   ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны   ", "  " zaderzhka " ")
-SendChat("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня.   ", "  " zaderzhka " ")
+%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента   ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
+%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте бородавки  ", "  " zaderzhka " ")
+%vybor%("me скальпелем осторожно вырезал бородавку из-под кожи  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.    ", "  " zaderzhka " ")
+%vybor%("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил рану   ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит заживляющая мазь.   ", "  " zaderzhka " ")
+%vybor%("me взяв мазь на тумбочке, аккуратно нанёс её на место раны   ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны   ", "  " zaderzhka " ")
+%vybor%("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня.   ", "  " zaderzhka " ")
 Return
 
 :?:/Соринка_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
 Return
 
 
 :?:/Соринка_2::
 SendPlay {Enter}
-SendChat("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-SendChat("say Расслабьте лицо. Старайтесь не морщиться.  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит специальная тканевая салфетка.  ", "  " zaderzhka " ")
-SendChat("me взяв тканевую салфетку, по направлению к носу аккуратно вытащил" floor " соринку из глаза  ", "  " zaderzhka " ")
-SendChat("me тканевой салфеткой аккуратно протёр" Female " область глаз у носа и положил" floor " салфетку на тумбочку  ", "  " zaderzhka " ")
-SendChat("say Попробуйте аккуратно проморгаться. Глаза не трите крайнем случае можете промыть аккуратно водой.  ", "  " zaderzhka " ")
-SendChat("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
+%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
+%vybor%("say Расслабьте лицо. Старайтесь не морщиться.  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит специальная тканевая салфетка.  ", "  " zaderzhka " ")
+%vybor%("me взяв тканевую салфетку, по направлению к носу аккуратно вытащил" floor " соринку из глаза  ", "  " zaderzhka " ")
+%vybor%("me тканевой салфеткой аккуратно протёр" Female " область глаз у носа и положил" floor " салфетку на тумбочку  ", "  " zaderzhka " ")
+%vybor%("say Попробуйте аккуратно проморгаться. Глаза не трите крайнем случае можете промыть аккуратно водой.  ", "  " zaderzhka " ")
+%vybor%("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
 Return
 
 :?:/Заноза_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
 Return
 
 
 :?:/Заноза_2::
 SendPlay {Enter}
-SendChat("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и перекись, аккуратно обработа" floor "л место вокруг раны ", "  " zaderzhka " ")
-SendChat("me внимательно осмотрел место занесения занозы ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
-SendChat("me взяв пинцет, осторожно вытащил" floor " заносу и положил" floor " её на тумбочку ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и перекись, обработа" floor "л место занесения занозы ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит пачка пластырей. ", "  " zaderzhka " ")
-SendChat("me открыв пачку пластырей, достал" floor " из неё один пластырь, открыл" floor " его и аккуратно закрепил" floor " на месте раны ", "  " zaderzhka " ")
-SendChat("todo Вот и всё. Мы закончили. Всего доброго, не болейте*улыбнувшись. ", "  " zaderzhka " ")
+%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и перекись, аккуратно обработа" floor "л место вокруг раны ", "  " zaderzhka " ")
+%vybor%("me внимательно осмотрел место занесения занозы ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
+%vybor%("me взяв пинцет, осторожно вытащил" floor " заносу и положил" floor " её на тумбочку ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и перекись, обработа" floor "л место занесения занозы ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит пачка пластырей. ", "  " zaderzhka " ")
+%vybor%("me открыв пачку пластырей, достал" floor " из неё один пластырь, открыл" floor " его и аккуратно закрепил" floor " на месте раны ", "  " zaderzhka " ")
+%vybor%("todo Вот и всё. Мы закончили. Всего доброго, не болейте*улыбнувшись. ", "  " zaderzhka " ")
 Return
 
 :?:/М>Ж::
 SendPlay {Enter}
-SendChat("do На столе лежат перчатки и мед.маска.   ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки   ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки   ", "  " zaderzhka " ")
-SendChat("do Рядом стоит аппарат наркоза.   ", "  " zaderzhka " ")
-SendChat("me подключил" floor " аппарат наркоза к пациенту   ", "  " zaderzhka " ")
-SendChat("do В операционной установлены все необходимые медицинские инструменты. ", "  " zaderzhka " ")
-SendChat("me подключил" floor " пациента к датчикам ", "  " zaderzhka " ")
-SendChat("me проверил" floor " показания артериального давления, пульса и сатурации пациента ", "  " zaderzhka " ")
-SendChat("do На мониторе отображаются стабильные показатели состояния пациента. ", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовые перчатки со стола и надел" floor " их ", "  " zaderzhka " ")
-SendChat("do Рядом находится дозатор с антисептиком. ", "  " zaderzhka " ")
-SendChat("me обработал" floor " руки антисептиком поверх перчаток ", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер со стола и отметил" floor " линии разрезов на мошонке и половом члене ", "  " zaderzhka " ")
-SendChat("say Приступаю к основной части операции. ", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель со стола и аккуратно сделал" floor " разрезы по отмеченным линиям ", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургический пинцет и начал" floor " отслаивать кожные покровы от подлежащих тканей ", "  " zaderzhka " ")
-SendChat("me отделил" floor " кожу полового члена, сохранив её для последующего формирования влагалища ", "  " zaderzhka " ")
-SendChat("me вскрыл" floor " мошонку и аккуратно удалил" floor " яички ", "  " zaderzhka " ")
-SendChat("do В лотке находится контейнер для изъятых тканей. ", "  " zaderzhka " ")
-SendChat("me поместил" floor " изъятые ткани в стерильный контейнер", "  " zaderzhka " ")
-SendChat("me взял" floor " сосудистый зажим и остановил" floor " кровотечение из семенных канатиков", "  " zaderzhka " ")
-SendChat("me наложил" floor " лигатуры на сосуды и завершил" floor " подготовку тканей", "  " zaderzhka " ")
-SendChat("do На столе лежит вагинальный расширитель.", "  " zaderzhka " ")
-SendChat("me взял" floor " вагинальный расширитель и начал" floor " формировать полость для влагалища", "  " zaderzhka " ")
-SendChat("me использовал" floor " тупфер с антисептиком для обработки полости", "  " zaderzhka " ")
-SendChat("me укрепил" floor " стенки влагалища лоскутами кожи, взятыми из полового члена", "  " zaderzhka " ")
-SendChat("me зафиксировал" floor " ткани саморассасывающимися швами", "  " zaderzhka " ")
-SendChat("do Полость влагалища сформирована.", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель со стола и аккуратно сформировал" floor " малые и большие половые губы из кожи мошонки", "  " zaderzhka " ")
-SendChat("me наложил" floor " швы на края сформированных губ", "  " zaderzhka " ")
-SendChat("me использовал" floor " часть ткани головки полового члена для формирования клитора", "  " zaderzhka " ")
-SendChat("me закрепил" floor " клитор в анатомически правильном положении", "  " zaderzhka " ")
-SendChat("do Половые губы и клитор сформированы.", "  " zaderzhka " ")
-SendChat("me взял" floor " дезинфицирующий раствор и обработал" floor " область швов", "  " zaderzhka " ")
-SendChat("me наложил" floor " стерильные повязки на все разрезы", "  " zaderzhka " ")
-SendChat("do Рядом лежит компрессионное белье.", "  " zaderzhka " ")
-SendChat("me надел" floor " компрессионное белье на пациента для предотвращения отёков", "  " zaderzhka " ")
-SendChat("me отключил" floor " аппарат наркоза и снял кислородную маску с пациента", "  " zaderzhka " ")
-SendChat("me проверил" floor " показатели состояния пациента после завершения операции", "  " zaderzhka " ")
-SendChat("say Операция прошла успешно. Вам потребуется наблюдение в течение недели для контроля заживления.", "  " zaderzhka " ")
+%vybor%("do На столе лежат перчатки и мед.маска.   ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки   ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки   ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит аппарат наркоза.   ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " аппарат наркоза к пациенту   ", "  " zaderzhka " ")
+%vybor%("do В операционной установлены все необходимые медицинские инструменты. ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " пациента к датчикам ", "  " zaderzhka " ")
+%vybor%("me проверил" floor " показания артериального давления, пульса и сатурации пациента ", "  " zaderzhka " ")
+%vybor%("do На мониторе отображаются стабильные показатели состояния пациента. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " одноразовые перчатки со стола и надел" floor " их ", "  " zaderzhka " ")
+%vybor%("do Рядом находится дозатор с антисептиком. ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " руки антисептиком поверх перчаток ", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер со стола и отметил" floor " линии разрезов на мошонке и половом члене ", "  " zaderzhka " ")
+%vybor%("say Приступаю к основной части операции. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель со стола и аккуратно сделал" floor " разрезы по отмеченным линиям ", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургический пинцет и начал" floor " отслаивать кожные покровы от подлежащих тканей ", "  " zaderzhka " ")
+%vybor%("me отделил" floor " кожу полового члена, сохранив её для последующего формирования влагалища ", "  " zaderzhka " ")
+%vybor%("me вскрыл" floor " мошонку и аккуратно удалил" floor " яички ", "  " zaderzhka " ")
+%vybor%("do В лотке находится контейнер для изъятых тканей. ", "  " zaderzhka " ")
+%vybor%("me поместил" floor " изъятые ткани в стерильный контейнер", "  " zaderzhka " ")
+%vybor%("me взял" floor " сосудистый зажим и остановил" floor " кровотечение из семенных канатиков", "  " zaderzhka " ")
+%vybor%("me наложил" floor " лигатуры на сосуды и завершил" floor " подготовку тканей", "  " zaderzhka " ")
+%vybor%("do На столе лежит вагинальный расширитель.", "  " zaderzhka " ")
+%vybor%("me взял" floor " вагинальный расширитель и начал" floor " формировать полость для влагалища", "  " zaderzhka " ")
+%vybor%("me использовал" floor " тупфер с антисептиком для обработки полости", "  " zaderzhka " ")
+%vybor%("me укрепил" floor " стенки влагалища лоскутами кожи, взятыми из полового члена", "  " zaderzhka " ")
+%vybor%("me зафиксировал" floor " ткани саморассасывающимися швами", "  " zaderzhka " ")
+%vybor%("do Полость влагалища сформирована.", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель со стола и аккуратно сформировал" floor " малые и большие половые губы из кожи мошонки", "  " zaderzhka " ")
+%vybor%("me наложил" floor " швы на края сформированных губ", "  " zaderzhka " ")
+%vybor%("me использовал" floor " часть ткани головки полового члена для формирования клитора", "  " zaderzhka " ")
+%vybor%("me закрепил" floor " клитор в анатомически правильном положении", "  " zaderzhka " ")
+%vybor%("do Половые губы и клитор сформированы.", "  " zaderzhka " ")
+%vybor%("me взял" floor " дезинфицирующий раствор и обработал" floor " область швов", "  " zaderzhka " ")
+%vybor%("me наложил" floor " стерильные повязки на все разрезы", "  " zaderzhka " ")
+%vybor%("do Рядом лежит компрессионное белье.", "  " zaderzhka " ")
+%vybor%("me надел" floor " компрессионное белье на пациента для предотвращения отёков", "  " zaderzhka " ")
+%vybor%("me отключил" floor " аппарат наркоза и снял кислородную маску с пациента", "  " zaderzhka " ")
+%vybor%("me проверил" floor " показатели состояния пациента после завершения операции", "  " zaderzhka " ")
+%vybor%("say Операция прошла успешно. Вам потребуется наблюдение в течение недели для контроля заживления.", "  " zaderzhka " ")
 Return
 
 
 :?:/Ж>М::
 SendPlay {Enter}
-SendChat("do На столе лежат перчатки и мед.маска.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки  ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки  ", "  " zaderzhka " ")
-SendChat("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
-SendChat("me подключил" floor " аппарат наркоза к пациенту  ", "  " zaderzhka " ")
-SendChat("do На столе расположены все необходимые хирургические инструменты.", "  " zaderzhka " ")
-SendChat("me подключил" floor " пациента к датчикам", "  " zaderzhka " ")
-SendChat("me проверил" floor " показатели артериального давления, пульса и сатурации пациента", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовые перчатки и надел" floor " их", "  " zaderzhka " ")
-SendChat("me обработал" floor " руки антисептиком из дозатора", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер со стола и отметил" floor " линии разрезов на груди и в паховой области", "  " zaderzhka " ")
-SendChat("say Начинаю подготовку к операции.", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель со стола и сделал" floor " надрезы по линиям на обеих грудных железах", "  " zaderzhka " ")
-SendChat("me аккуратно отделил" floor " кожные покровы от железистых тканей", "  " zaderzhka " ")
-SendChat("me удалил" floor " железистые ткани с помощью зажима и ножниц", "  " zaderzhka " ")
-SendChat("me остановил" floor " кровотечение при помощи электрокоагулятора", "  " zaderzhka " ")
-SendChat("me сформировал" floor " контуры грудной клетки, наложив швы и подтянув кожу", "  " zaderzhka " ")
-SendChat("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-SendChat("do На столе лежат стерильные повязки.", "  " zaderzhka " ")
-SendChat("me наложил" floor " стерильные повязки на область груди", "  " zaderzhka " ")
-SendChat("me сделал" floor " разрезы в области паха для формирования мошонки", "  " zaderzhka " ")
-SendChat("me создал" floor " мошонку из кожи половых губ, зафиксировав её саморассасывающимися швами", "  " zaderzhka " ")
-SendChat("me наложил" floor " швы на края разрезов", "  " zaderzhka " ")
-SendChat("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-SendChat("me взял" floor " участок кожи с предплечья пациента, чтобы использовать его для фаллопластики", "  " zaderzhka " ")
-SendChat("do В хирургическом лотке лежит выделенный кожный лоскут.", "  " zaderzhka " ")
-SendChat("me сформировал" floor " цилиндрический участок из кожи для создания пениса", "  " zaderzhka " ")
-SendChat("me соединил" floor " кожный лоскут с тканями в области паха", "  " zaderzhka " ")
-SendChat("me подключил" floor " сосуды и нервы к новообразованному пенису", "  " zaderzhka " ")
-SendChat("do На столе лежит хирургический микроскоп.", "  " zaderzhka " ")
-SendChat("me использовал" floor " микроскоп для точного соединения сосудов и нервов", "  " zaderzhka " ")
-SendChat("me наложил" floor " швы на место соединения тканей", "  " zaderzhka " ")
-SendChat("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильные повязки и наложил" floor " их на все операционные раны", "  " zaderzhka " ")
-SendChat("me проверил" floor " показатели состояния пациента на мониторе", "  " zaderzhka " ")
-SendChat("do На мониторе отображаются стабильные жизненные показатели.", "  " zaderzhka " ")
-SendChat("me отключил" floor " аппарат наркоза и снял" floor " кислородную маску", "  " zaderzhka " ")
-SendChat("say Операция завершена. Вам потребуется несколько недель для восстановления.", "  " zaderzhka " ")
-SendChat("say Также следует носить компрессионное бельё и проходить регулярные осмотры.", "  " zaderzhka " ")
+%vybor%("do На столе лежат перчатки и мед.маска.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки  ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки  ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
+%vybor%("me подключил" floor " аппарат наркоза к пациенту  ", "  " zaderzhka " ")
+%vybor%("do На столе расположены все необходимые хирургические инструменты.", "  " zaderzhka " ")
+%vybor%("me подключил" floor " пациента к датчикам", "  " zaderzhka " ")
+%vybor%("me проверил" floor " показатели артериального давления, пульса и сатурации пациента", "  " zaderzhka " ")
+%vybor%("me взял" floor " одноразовые перчатки и надел" floor " их", "  " zaderzhka " ")
+%vybor%("me обработал" floor " руки антисептиком из дозатора", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер со стола и отметил" floor " линии разрезов на груди и в паховой области", "  " zaderzhka " ")
+%vybor%("say Начинаю подготовку к операции.", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель со стола и сделал" floor " надрезы по линиям на обеих грудных железах", "  " zaderzhka " ")
+%vybor%("me аккуратно отделил" floor " кожные покровы от железистых тканей", "  " zaderzhka " ")
+%vybor%("me удалил" floor " железистые ткани с помощью зажима и ножниц", "  " zaderzhka " ")
+%vybor%("me остановил" floor " кровотечение при помощи электрокоагулятора", "  " zaderzhka " ")
+%vybor%("me сформировал" floor " контуры грудной клетки, наложив швы и подтянув кожу", "  " zaderzhka " ")
+%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
+%vybor%("do На столе лежат стерильные повязки.", "  " zaderzhka " ")
+%vybor%("me наложил" floor " стерильные повязки на область груди", "  " zaderzhka " ")
+%vybor%("me сделал" floor " разрезы в области паха для формирования мошонки", "  " zaderzhka " ")
+%vybor%("me создал" floor " мошонку из кожи половых губ, зафиксировав её саморассасывающимися швами", "  " zaderzhka " ")
+%vybor%("me наложил" floor " швы на края разрезов", "  " zaderzhka " ")
+%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
+%vybor%("me взял" floor " участок кожи с предплечья пациента, чтобы использовать его для фаллопластики", "  " zaderzhka " ")
+%vybor%("do В хирургическом лотке лежит выделенный кожный лоскут.", "  " zaderzhka " ")
+%vybor%("me сформировал" floor " цилиндрический участок из кожи для создания пениса", "  " zaderzhka " ")
+%vybor%("me соединил" floor " кожный лоскут с тканями в области паха", "  " zaderzhka " ")
+%vybor%("me подключил" floor " сосуды и нервы к новообразованному пенису", "  " zaderzhka " ")
+%vybor%("do На столе лежит хирургический микроскоп.", "  " zaderzhka " ")
+%vybor%("me использовал" floor " микроскоп для точного соединения сосудов и нервов", "  " zaderzhka " ")
+%vybor%("me наложил" floor " швы на место соединения тканей", "  " zaderzhka " ")
+%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильные повязки и наложил" floor " их на все операционные раны", "  " zaderzhka " ")
+%vybor%("me проверил" floor " показатели состояния пациента на мониторе", "  " zaderzhka " ")
+%vybor%("do На мониторе отображаются стабильные жизненные показатели.", "  " zaderzhka " ")
+%vybor%("me отключил" floor " аппарат наркоза и снял" floor " кислородную маску", "  " zaderzhka " ")
+%vybor%("say Операция завершена. Вам потребуется несколько недель для восстановления.", "  " zaderzhka " ")
+%vybor%("say Также следует носить компрессионное бельё и проходить регулярные осмотры.", "  " zaderzhka " ")
 Return
 
 
 :?:/Пчела_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
 Return
 
 
 :?:/Пчела_2::
 SendPlay {Enter}
-SendChat("say Лежитесь и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
-SendChat("me взял" floor " в руки жгут", "  " zaderzhka " ")
-SendChat("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
-SendChat("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
-SendChat("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
-SendChat("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
-SendChat("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
-SendChat("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
-SendChat("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
-SendChat("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
-SendChat("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
-SendChat("me убрал" floor " насос с зоны укуса, затем отсоединил насадку", "  " zaderzhka " ")
-SendChat("me положил" floor " насос и насадку на тумбочку.", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
-SendChat("do Стерильная повязка на столе.", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
-SendChat("say Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
-SendChat("say Чтобы вывести остатки яда из тканей. ", "  " zaderzhka " ")
+%vybor%("say Лежитесь и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руки жгут", "  " zaderzhka " ")
+%vybor%("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
+%vybor%("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
+%vybor%("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
+%vybor%("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
+%vybor%("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
+%vybor%("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
+%vybor%("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
+%vybor%("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
+%vybor%("me убрал" floor " насос с зоны укуса, затем отсоединил насадку", "  " zaderzhka " ")
+%vybor%("me положил" floor " насос и насадку на тумбочку.", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
+%vybor%("do Стерильная повязка на столе.", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
+%vybor%("say Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
+%vybor%("say Чтобы вывести остатки яда из тканей. ", "  " zaderzhka " ")
 Return
 
 :?:/Донор_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
 Return
 
 
 :?:/Донор_2::
 SendPlay {Enter}
-SendChat("me взял" floor " донора за руку ", "  " zaderzhka " ")
-SendChat("me взял" floor " клеенчатый валик ", "  " zaderzhka " ")
-SendChat("me подложил" floor " клеёнчатый валик под локоть донора", "  " zaderzhka " ")
-SendChat("me зафиксировал" floor " руку донора ладонью кверху ", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку и иглу с переходником с мед.лотка ", "  " zaderzhka " ")
-SendChat("me присоеденил" floor " пробирку к игле ", "  " zaderzhka " ")
-SendChat("me положил" floor " собранную систему в мед.лоток ", "  " zaderzhka " ")
-SendChat("me взял" floor " жгут и спиртовую салфетку с мед.лотка ", "  " zaderzhka " ")
-SendChat("me обработал" floor " спиртовой салфеткой область локтевого сгиба на руке донора", "  " zaderzhka " ")
-SendChat("me затянул" floor " жгут на плече донора", "  " zaderzhka " ")
-SendChat("say Сожмите, пожалуйста кулак.", "  " zaderzhka " ")
+%vybor%("me взял" floor " донора за руку ", "  " zaderzhka " ")
+%vybor%("me взял" floor " клеенчатый валик ", "  " zaderzhka " ")
+%vybor%("me подложил" floor " клеёнчатый валик под локоть донора", "  " zaderzhka " ")
+%vybor%("me зафиксировал" floor " руку донора ладонью кверху ", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробирку и иглу с переходником с мед.лотка ", "  " zaderzhka " ")
+%vybor%("me присоеденил" floor " пробирку к игле ", "  " zaderzhka " ")
+%vybor%("me положил" floor " собранную систему в мед.лоток ", "  " zaderzhka " ")
+%vybor%("me взял" floor " жгут и спиртовую салфетку с мед.лотка ", "  " zaderzhka " ")
+%vybor%("me обработал" floor " спиртовой салфеткой область локтевого сгиба на руке донора", "  " zaderzhka " ")
+%vybor%("me затянул" floor " жгут на плече донора", "  " zaderzhka " ")
+%vybor%("say Сожмите, пожалуйста кулак.", "  " zaderzhka " ")
 Return
 
 :?:/Донор_3::
 SendPlay {Enter}
-SendChat("me взял" floor " из мед.лотка собранную систему", "  " zaderzhka " ")
-SendChat("me ввел" floor " иглу в вену", "  " zaderzhka " ")
-SendChat("me снял" floor " жгут с плеча донора", "  " zaderzhka " ")
-SendChat("say Можете разжать руку", "  " zaderzhka " ")
+%vybor%("me взял" floor " из мед.лотка собранную систему", "  " zaderzhka " ")
+%vybor%("me ввел" floor " иглу в вену", "  " zaderzhka " ")
+%vybor%("me снял" floor " жгут с плеча донора", "  " zaderzhka " ")
+%vybor%("say Можете разжать руку", "  " zaderzhka " ")
 Return
 
 
 :?:/Донор_4::
 SendPlay {Enter}
-SendChat("me медленно оттянул" floor " поршень шприца вверх ", "  " zaderzhka " ")
-SendChat("do Пробирка наполнилась кровью.", "  " zaderzhka " ")
-SendChat("me приложил" floor " спиртовую салфетку к месту прокола ", "  " zaderzhka " ")
-SendChat("me ввел" floor " иглу из вены ", "  " zaderzhka " ")
-SendChat("me отсоеденил" floor " пробирку от иглы ", "  " zaderzhka " ")
-SendChat("me поместил" floor " пробирку в держатель для пробирок ", "  " zaderzhka " ")
-SendChat("me положил" floor " использованную иглу в мед.лоток ", "  " zaderzhka " ")
-SendChat("say Спасибо за донорство. ", "  " zaderzhka " ")
+%vybor%("me медленно оттянул" floor " поршень шприца вверх ", "  " zaderzhka " ")
+%vybor%("do Пробирка наполнилась кровью.", "  " zaderzhka " ")
+%vybor%("me приложил" floor " спиртовую салфетку к месту прокола ", "  " zaderzhka " ")
+%vybor%("me ввел" floor " иглу из вены ", "  " zaderzhka " ")
+%vybor%("me отсоеденил" floor " пробирку от иглы ", "  " zaderzhka " ")
+%vybor%("me поместил" floor " пробирку в держатель для пробирок ", "  " zaderzhka " ")
+%vybor%("me положил" floor " использованную иглу в мед.лоток ", "  " zaderzhka " ")
+%vybor%("say Спасибо за донорство. ", "  " zaderzhka " ")
 Return
 
 :?:/Инфаркт_1::
 SendPlay {Enter}
-SendChat("say Скажите, у Вас есть какие-либо болевые ощущения, которые носят жгучий характер?", "  " zaderzhka " ")
-SendChat("do Через плечо надета мед. сумка с множеством препаратов.", "  " zaderzhka " ")
-SendChat("me достав небольшую подставку из сумки, подложил" floor " ее под голову пациента", "  " zaderzhka " ")
-SendChat("me достав из сумки механический тонометр, надел" floor " манжету на левую руку пострадавшего", "  " zaderzhka " ")
-SendChat("todo Дышите ровно*начав накачивать манжету левой рукой", "  " zaderzhka " ")
-SendChat("do Какое давление у пациента?", "  " zaderzhka " ")
+%vybor%("say Скажите, у Вас есть какие-либо болевые ощущения, которые носят жгучий характер?", "  " zaderzhka " ")
+%vybor%("do Через плечо надета мед. сумка с множеством препаратов.", "  " zaderzhka " ")
+%vybor%("me достав небольшую подставку из сумки, подложил" floor " ее под голову пациента", "  " zaderzhka " ")
+%vybor%("me достав из сумки механический тонометр, надел" floor " манжету на левую руку пострадавшего", "  " zaderzhka " ")
+%vybor%("todo Дышите ровно*начав накачивать манжету левой рукой", "  " zaderzhka " ")
+%vybor%("do Какое давление у пациента?", "  " zaderzhka " ")
 Return
 
 
 :?:/Инфаркт_2::
 SendPlay {Enter}
-SendChat("todo У Вас не очень хорошее давление, возьмите таблетки*достав таблетки из сумки и передав их пациенту", "  " zaderzhka " ")
-SendChat("todo Запейте водой*достав воду из сумки и передав ее пострадавшему", "  " zaderzhka " ")
+%vybor%("todo У Вас не очень хорошее давление, возьмите таблетки*достав таблетки из сумки и передав их пациенту", "  " zaderzhka " ")
+%vybor%("todo Запейте водой*достав воду из сумки и передав ее пострадавшему", "  " zaderzhka " ")
 Return
 
 
 :?:/Инфаркт_3::
 SendPlay {Enter}
-SendChat("todo Так-с, давление у Вас нормальное*сняв аппарат с пациента и убрав его в сумку", "  " zaderzhka " ")
+%vybor%("todo Так-с, давление у Вас нормальное*сняв аппарат с пациента и убрав его в сумку", "  " zaderzhka " ")
 Return
 
 
 :?:/Инфаркт_4::
 SendPlay {Enter}
-SendChat("do На шее врача закреплен стетоскоп.", "  " zaderzhka " ")
-SendChat("me сняв стетоскоп с шеи, вставил наконечники в уши, а головку приложил" floor " к груди пациента", "  " zaderzhka " ")
-SendChat("todo Дышите*переставляя головку стетоскопа в разные места грудной клетки и вслушиваясь в удары сердца", "  " zaderzhka " ")
-SendChat("todo Не дышите*совершая аналогичные движения", "  " zaderzhka " ")
-SendChat("todo Сердцебиение у Вас нормальное.*сняв стетоскоп и закрепив его на шее", "  " zaderzhka " ")
-SendChat("todo Возьмите, пожалуйста, Аспирин и положите его под язык*достав лекарство из сумки и передав его пациенту", "  " zaderzhka " ")
-SendChat("todo Думаю, сейчас необходимо измерить пульс*прислонив два пальца к сонной артерии пациента", "  " zaderzhka " ")
-SendChat("me слегка нажав на артерию, начал" floor " отсчитывать количество ударов за 30 секунд", "  " zaderzhka " ")
-SendChat("do Каков пульс у пострадавшего?", "  " zaderzhka " ")
+%vybor%("do На шее врача закреплен стетоскоп.", "  " zaderzhka " ")
+%vybor%("me сняв стетоскоп с шеи, вставил наконечники в уши, а головку приложил" floor " к груди пациента", "  " zaderzhka " ")
+%vybor%("todo Дышите*переставляя головку стетоскопа в разные места грудной клетки и вслушиваясь в удары сердца", "  " zaderzhka " ")
+%vybor%("todo Не дышите*совершая аналогичные движения", "  " zaderzhka " ")
+%vybor%("todo Сердцебиение у Вас нормальное.*сняв стетоскоп и закрепив его на шее", "  " zaderzhka " ")
+%vybor%("todo Возьмите, пожалуйста, Аспирин и положите его под язык*достав лекарство из сумки и передав его пациенту", "  " zaderzhka " ")
+%vybor%("todo Думаю, сейчас необходимо измерить пульс*прислонив два пальца к сонной артерии пациента", "  " zaderzhka " ")
+%vybor%("me слегка нажав на артерию, начал" floor " отсчитывать количество ударов за 30 секунд", "  " zaderzhka " ")
+%vybor%("do Каков пульс у пострадавшего?", "  " zaderzhka " ")
 Return
 
 
 :?:/Инфаркт_5::
 SendPlay {Enter}
-SendChat("say К счастью, у Вас нормальный пульс. Вам необходимо немного отдохнуть.", "  " zaderzhka " ")
-SendChat("say На этом все. ", "  " zaderzhka " ")
-SendChat("say Можете идти, если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
+%vybor%("say К счастью, у Вас нормальный пульс. Вам необходимо немного отдохнуть.", "  " zaderzhka " ")
+%vybor%("say На этом все. ", "  " zaderzhka " ")
+%vybor%("say Можете идти, если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
 Return
 
 
 :?:/Инфаркт_6::
 SendPlay {Enter}
-SendChat("todo У Вас не очень хороший пульс, возьмите эти таблетки*передав таблетки пострадавшему", "  " zaderzhka " ")
-SendChat("say Теперь, думаю, можете идти. ", "  " zaderzhka " ")
-SendChat("say  Если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
+%vybor%("todo У Вас не очень хороший пульс, возьмите эти таблетки*передав таблетки пострадавшему", "  " zaderzhka " ")
+%vybor%("say Теперь, думаю, можете идти. ", "  " zaderzhka " ")
+%vybor%("say  Если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
 Return
 
 
 :?:/ВИЧ_1::
 SendPlay {Enter}
-SendChat("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-SendChat("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
-SendChat("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-SendChat("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-SendChat("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-SendChat("say Сейчас я сделаю вам тест, который определит наличие ВИЧ.", "  " zaderzhka " ")
-SendChat("say Но сначала возьмите стакан и прополощите рот водой.", "  " zaderzhka " ")
-SendChat("do На столе стоит стакан с водой.", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
+%vybor%("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
+%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
+%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
+%vybor%("say Сейчас я сделаю вам тест, который определит наличие ВИЧ.", "  " zaderzhka " ")
+%vybor%("say Но сначала возьмите стакан и прополощите рот водой.", "  " zaderzhka " ")
+%vybor%("do На столе стоит стакан с водой.", "  " zaderzhka " ")
 Return
 
 :?:/ВИЧ_2::
 SendPlay {Enter}
-SendChat("me взял" floor " со стола упаковку со стерильным тампоном", "  " zaderzhka " ")
-SendChat("me вскрыл" floor " упаковку и вытащил" floor " оттуда тампон, держа его за палочку", "  " zaderzhka " ")
-SendChat("say Откройте рот.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку со стерильным тампоном", "  " zaderzhka " ")
+%vybor%("me вскрыл" floor " упаковку и вытащил" floor " оттуда тампон, держа его за палочку", "  " zaderzhka " ")
+%vybor%("say Откройте рот.", "  " zaderzhka " ")
 Return
 
 :?:/ВИЧ_3::
 SendPlay {Enter}
-SendChat("me ввел" floor " тампон в ротовую полость пациента", "  " zaderzhka " ")
-SendChat("me провел" floor " тампоном вдоль верхней десны вперед и назад", "  " zaderzhka " ")
-SendChat("me перевернул" floor " тампон", "  " zaderzhka " ")
-SendChat("me провел" floor " тампоном вдоль нижней десны вперед и назад", "  " zaderzhka " ")
-SendChat("me вытащил" floor " тампон из ротовой полости пациента", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола прибор для проведения экспресс-тестов", "  " zaderzhka " ")
-SendChat("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
-SendChat("me нанес" Female " биоматериал с тампона на тест-полоску", "  " zaderzhka " ")
-SendChat("me нажал" floor " кнопку включения прибора", "  " zaderzhka " ")
-SendChat("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на экран прибора", "  " zaderzhka " ")
-SendChat("do Результат положительный?", "  " zaderzhka " ")
+%vybor%("me ввел" floor " тампон в ротовую полость пациента", "  " zaderzhka " ")
+%vybor%("me провел" floor " тампоном вдоль верхней десны вперед и назад", "  " zaderzhka " ")
+%vybor%("me перевернул" floor " тампон", "  " zaderzhka " ")
+%vybor%("me провел" floor " тампоном вдоль нижней десны вперед и назад", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " тампон из ротовой полости пациента", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола прибор для проведения экспресс-тестов", "  " zaderzhka " ")
+%vybor%("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
+%vybor%("me нанес" Female " биоматериал с тампона на тест-полоску", "  " zaderzhka " ")
+%vybor%("me нажал" floor " кнопку включения прибора", "  " zaderzhka " ")
+%vybor%("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на экран прибора", "  " zaderzhka " ")
+%vybor%("do Результат положительный?", "  " zaderzhka " ")
 Return
 
 :?:/ВИЧ_4::
 SendPlay {Enter}
-SendChat("say У меня плохие новости, у вас обнаружен ВИЧ.", "  " zaderzhka " ")
-SendChat("say Теперь вам необходимо пожизненно принимать лекарства для снижения активности ВИЧ.", "  " zaderzhka " ")
-SendChat("say Я выпишу вам препараты Тенофовир и Эмтрицитабин.", "  " zaderzhka " ")
-SendChat("say Стоимость составляет 500 рублей. Вы согласны?", "  " zaderzhka " ")
+%vybor%("say У меня плохие новости, у вас обнаружен ВИЧ.", "  " zaderzhka " ")
+%vybor%("say Теперь вам необходимо пожизненно принимать лекарства для снижения активности ВИЧ.", "  " zaderzhka " ")
+%vybor%("say Я выпишу вам препараты Тенофовир и Эмтрицитабин.", "  " zaderzhka " ")
+%vybor%("say Стоимость составляет 500 рублей. Вы согласны?", "  " zaderzhka " ")
 Return
 
 :?:/ВИЧ_5::
 SendPlay {Enter}
-SendChat("say Результат теста отрицательный. ВИЧ у вас не выявлен.", "  " zaderzhka " ")
+%vybor%("say Результат теста отрицательный. ВИЧ у вас не выявлен.", "  " zaderzhka " ")
 Return
 
 
 :?:/Туберкулёз_1::
 SendPlay {Enter}
-SendChat("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-SendChat("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
-SendChat("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-SendChat("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-SendChat("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-SendChat("say Давайте руку.", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
+%vybor%("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
+%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
+%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
+%vybor%("say Давайте руку.", "  " zaderzhka " ")
 Return
 :?:/Туберкулёз_2::
 SendPlay {Enter}
-SendChat("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её", "  " zaderzhka " ")
-SendChat("me протер" Female " палец пациента спиртовой салфеткой", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола ланцет и распаковал" floor " его", "  " zaderzhka " ")
-SendChat("say Сейчас я буду брать у вас кровь из пальца.", "  " zaderzhka " ")
-SendChat("me проколол" floor " ланцетом кожу пальца пациента", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола устройство для проведения экспресс-тестов", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку включения прибора", "  " zaderzhka " ")
-SendChat("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
-SendChat("me взял" floor " палец пациента и провел" floor " им по тест-полоске", "  " zaderzhka " ")
-SendChat("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на экран устройства", "  " zaderzhka " ")
-SendChat("do Результат положительный?", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её", "  " zaderzhka " ")
+%vybor%("me протер" Female " палец пациента спиртовой салфеткой", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола ланцет и распаковал" floor " его", "  " zaderzhka " ")
+%vybor%("say Сейчас я буду брать у вас кровь из пальца.", "  " zaderzhka " ")
+%vybor%("me проколол" floor " ланцетом кожу пальца пациента", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола устройство для проведения экспресс-тестов", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку включения прибора", "  " zaderzhka " ")
+%vybor%("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
+%vybor%("me взял" floor " палец пациента и провел" floor " им по тест-полоске", "  " zaderzhka " ")
+%vybor%("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на экран устройства", "  " zaderzhka " ")
+%vybor%("do Результат положительный?", "  " zaderzhka " ")
 Return
 :?:/Туберкулёз_3::
 SendPlay {Enter}
-SendChat("say У меня плохие новости, у вас обнаружен туберкулёз.", "  " zaderzhka " ")
-SendChat("say Вас необходимо госпитализировать в больницу.", "  " zaderzhka " ")
-SendChat("say А пока я выпишу вам антибиотик Супракс.", "  " zaderzhka " ")
-SendChat("say Его стоимость 500 рублей. Вы согласны?", "  " zaderzhka " ")
+%vybor%("say У меня плохие новости, у вас обнаружен туберкулёз.", "  " zaderzhka " ")
+%vybor%("say Вас необходимо госпитализировать в больницу.", "  " zaderzhka " ")
+%vybor%("say А пока я выпишу вам антибиотик Супракс.", "  " zaderzhka " ")
+%vybor%("say Его стоимость 500 рублей. Вы согласны?", "  " zaderzhka " ")
 Return
 
 :?:/Туберкулёз_4::
 SendPlay {Enter}
-SendChat("say Результат отрицательный, туберкулёз у вас не обнаружен.  ", "  " zaderzhka " ")
+%vybor%("say Результат отрицательный, туберкулёз у вас не обнаружен.  ", "  " zaderzhka " ")
 Return
 
 :?:/Дифтерияе_1::
 SendPlay {Enter}
-SendChat("do На стене висит дозатор с антисептиком..", "  " zaderzhka " ")
-SendChat("me нанес" Female " антисептик на руки и спешно растерс" Female " его.", "  " zaderzhka " ")
-SendChat("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их.", "  " zaderzhka " ")
-SendChat("do Перед сотрудником стоит медицинский стол..", "  " zaderzhka " ")
-SendChat("do На медицинском столе лежат все необходимые материалы..", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её.", "  " zaderzhka " ")
-SendChat("me протерс" Female " место укола спиртовой салфеткой.", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц и распаковал" floor " его.", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола ампулу с внутрикожной пробой и распаковал" floor " её.", "  " zaderzhka " ")
-SendChat("me вставил" floor " шприц в ампулу и набрал" floor " в него лекарство.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " шприц из ампулы.", "  " zaderzhka " ")
-SendChat("me ввел" floor " шприц под кожу пациента", "  " zaderzhka " ")
-SendChat("me нажав на поршень шприца, ввел" floor " внутрикожную пробу", "  " zaderzhka " ")
-SendChat("me вытащил" floor " шприц из-под кожи пациента", "  " zaderzhka " ")
-SendChat("do В месте инъекции происходит положительная реакция?", "  " zaderzhka " ")
-SendChat("b Если реакция положительная, значит дифтерия обнаружена.", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком..", "  " zaderzhka " ")
+%vybor%("me нанес" Female " антисептик на руки и спешно растерс" Female " его.", "  " zaderzhka " ")
+%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их.", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит медицинский стол..", "  " zaderzhka " ")
+%vybor%("do На медицинском столе лежат все необходимые материалы..", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её.", "  " zaderzhka " ")
+%vybor%("me протерс" Female " место укола спиртовой салфеткой.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц и распаковал" floor " его.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола ампулу с внутрикожной пробой и распаковал" floor " её.", "  " zaderzhka " ")
+%vybor%("me вставил" floor " шприц в ампулу и набрал" floor " в него лекарство.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " шприц из ампулы.", "  " zaderzhka " ")
+%vybor%("me ввел" floor " шприц под кожу пациента", "  " zaderzhka " ")
+%vybor%("me нажав на поршень шприца, ввел" floor " внутрикожную пробу", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " шприц из-под кожи пациента", "  " zaderzhka " ")
+%vybor%("do В месте инъекции происходит положительная реакция?", "  " zaderzhka " ")
+%vybor%("b Если реакция положительная, значит дифтерия обнаружена.", "  " zaderzhka " ")
 Return
 
 
 :?:/Дифтерияе_2::
 SendPlay {Enter}
-SendChat("say У меня плохие новости, у вас обнаружена дифтерия.", "  " zaderzhka " ")
-SendChat("say Сейчас я сделаю вам укол противодифтерийной сыворотки.", "  " zaderzhka " ")
+%vybor%("say У меня плохие новости, у вас обнаружена дифтерия.", "  " zaderzhka " ")
+%vybor%("say Сейчас я сделаю вам укол противодифтерийной сыворотки.", "  " zaderzhka " ")
 Return
 
 
 :?:/Дифтерияе_3::
 SendPlay {Enter}
-SendChat("say Реакция отрицательная, дифтерия у вас не обнаружена.", "  " zaderzhka " ")
+%vybor%("say Реакция отрицательная, дифтерия у вас не обнаружена.", "  " zaderzhka " ")
 Return
 
 
 :?:/Бешенство_1::
 SendPlay {Enter}
-SendChat("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-SendChat("me нанес антисептик на руки и спешно растер его", "  " zaderzhka " ")
-SendChat("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-SendChat("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-SendChat("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-SendChat("say Сейчас я возьму у вас мазок, который определит наличие бешенства.", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола тумпфер", "  " zaderzhka " ")
-SendChat("say Откройте рот.", "  " zaderzhka " ")
+%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
+%vybor%("me нанес антисептик на руки и спешно растер его", "  " zaderzhka " ")
+%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
+%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
+%vybor%("say Сейчас я возьму у вас мазок, который определит наличие бешенства.", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола тумпфер", "  " zaderzhka " ")
+%vybor%("say Откройте рот.", "  " zaderzhka " ")
 Return
 
 :?:/Бешенство_2::
 SendPlay {Enter}
-SendChat("me ввел" floor " тумпфер в ротовую полость пациента ", "  " zaderzhka " ")
-SendChat("me провел" floor " тумпфером по внутренним сторонам щёк ", "  " zaderzhka " ")
-SendChat("me вывел" floor " тумпфер из ротовой полости пациента ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола пробирку со специальным раствором ", "  " zaderzhka " ")
-SendChat("me открыл" floor " пробирку и ввел" floor " туда тумпфер ", "  " zaderzhka " ")
-SendChat("me вращает тумпфер в пробирке ", "  " zaderzhka " ")
-SendChat("do Образец слюны перешел в раствор. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола тест-устройство ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола пипетку ", "  " zaderzhka " ")
-SendChat("me набрал" floor " в пипетку немного раствора из пробирки ", "  " zaderzhka " ")
-SendChat("me капнул" floor " несколько капель в специальное окошко тест-устройства  ", "  " zaderzhka " ")
-SendChat("do На тест-устройстве происходит реакция.  ", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на тест-устройство  ", "  " zaderzhka " ")
-SendChat("do Реакция положительная?  ", "  " zaderzhka " ")
+%vybor%("me ввел" floor " тумпфер в ротовую полость пациента ", "  " zaderzhka " ")
+%vybor%("me провел" floor " тумпфером по внутренним сторонам щёк ", "  " zaderzhka " ")
+%vybor%("me вывел" floor " тумпфер из ротовой полости пациента ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола пробирку со специальным раствором ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " пробирку и ввел" floor " туда тумпфер ", "  " zaderzhka " ")
+%vybor%("me вращает тумпфер в пробирке ", "  " zaderzhka " ")
+%vybor%("do Образец слюны перешел в раствор. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола тест-устройство ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола пипетку ", "  " zaderzhka " ")
+%vybor%("me набрал" floor " в пипетку немного раствора из пробирки ", "  " zaderzhka " ")
+%vybor%("me капнул" floor " несколько капель в специальное окошко тест-устройства  ", "  " zaderzhka " ")
+%vybor%("do На тест-устройстве происходит реакция.  ", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на тест-устройство  ", "  " zaderzhka " ")
+%vybor%("do Реакция положительная?  ", "  " zaderzhka " ")
 Return
 
 :?:/Бешенство_3::
 SendPlay {Enter}
-SendChat("say У меня плохие новости, у вас выявлено бешенство.  ", "  " zaderzhka " ")
-SendChat("say Сейчас я поставлю вам прививку от него. ", "  " zaderzhka " ")
+%vybor%("say У меня плохие новости, у вас выявлено бешенство.  ", "  " zaderzhka " ")
+%vybor%("say Сейчас я поставлю вам прививку от него. ", "  " zaderzhka " ")
 Return
 
 :?:/Бешенство_4::
 SendPlay {Enter}
-SendChat("say Результат теста отрицательный. Бешенство у вас не выявлено.  ", "  " zaderzhka " ")
+%vybor%("say Результат теста отрицательный. Бешенство у вас не выявлено.  ", "  " zaderzhka " ")
 Return
 :?:/Гем::
 SendPlay {Enter}
-SendChat("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон и дизинфецирующее средство, аккуратно обработал" floor " анальное отверстие  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит простерилизованный скальпель. ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке скальпель, аккуратно сделал" floor " надрез кожи  ", "  " zaderzhka " ")
-SendChat("me аккуратно вырезал" floor " геморроидальный узел  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит операционная иголка и саморассасывающаяся нить. ", "  " zaderzhka " ")
-SendChat("me положив скальпель на тумбочку, взял иголку с ниткой и аккуратно зашил" floor " края сосудов и кожу  ", "  " zaderzhka " ")
-SendChat("do На тумбочке лежит заживляющая мазь. ", "  " zaderzhka " ")
-SendChat("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место шва  ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место шва  ", "  " zaderzhka " ")
-SendChat("do На тумбочке стоит бутыль с нашатырным спиртом. ", "  " zaderzhka " ")
-SendChat("me взяв на тумбочке вату, смочил" floor " её нашатырным спиртом и привёл" floor " пациента в сознание  ", "  " zaderzhka " ")
-SendChat("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня. ", "  " zaderzhka " ")
+%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон и дизинфецирующее средство, аккуратно обработал" floor " анальное отверстие  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит простерилизованный скальпель. ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке скальпель, аккуратно сделал" floor " надрез кожи  ", "  " zaderzhka " ")
+%vybor%("me аккуратно вырезал" floor " геморроидальный узел  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить. ", "  " zaderzhka " ")
+%vybor%("me положив скальпель на тумбочку, взял иголку с ниткой и аккуратно зашил" floor " края сосудов и кожу  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке лежит заживляющая мазь. ", "  " zaderzhka " ")
+%vybor%("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место шва  ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место шва  ", "  " zaderzhka " ")
+%vybor%("do На тумбочке стоит бутыль с нашатырным спиртом. ", "  " zaderzhka " ")
+%vybor%("me взяв на тумбочке вату, смочил" floor " её нашатырным спиртом и привёл" floor " пациента в сознание  ", "  " zaderzhka " ")
+%vybor%("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня. ", "  " zaderzhka " ")
 Return
 
 
 :?:/Змея_1::
 SendPlay {Enter}
-SendChat("do На столе лежат перчатки.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки ", "  " zaderzhka " ")
-SendChat("say Лежите и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
+%vybor%("do На столе лежат перчатки.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки ", "  " zaderzhka " ")
+%vybor%("say Лежите и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
 Return
 :?:/Змея_2::
 SendPlay {Enter}
-SendChat("me взял" floor " в руки жгут", "  " zaderzhka " ")
-SendChat("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
-SendChat("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
-SendChat("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
-SendChat("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
-SendChat("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
-SendChat("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
-SendChat("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
-SendChat("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
-SendChat("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
-SendChat("me убрал" floor " насос с зоны укуса, затем отсоединил" floor " насадку", "  " zaderzhka " ")
-SendChat("me положил" floor " насос и насадку на тумбочку ", "  " zaderzhka " ")
-SendChat("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
-SendChat("do Стерильная повязка на столе.", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
-SendChat("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
-SendChat("do На столе лежит всё необходимое для укола.", "  " zaderzhka " ")
-SendChat("me взял" floor " ватный диск и спирт", "  " zaderzhka " ")
-SendChat("me промочил" floor " ватный диск в спирте", "  " zaderzhka " ")
-SendChat("me продезинфицировал" floor " место ввода противозмеиной сыворотки", "  " zaderzhka " ")
-SendChat("me выкинул" floor " ватный диск в урну", "  " zaderzhka " ")
-SendChat("me взял" floor " одноразовую иглу и новый одноразовый шприц", "  " zaderzhka " ")
-SendChat("me надел" floor " иглу на шприц", "  " zaderzhka " ")
-SendChat("me взял" floor " пробирку с противозмеиной сывороткой", "  " zaderzhka " ")
-SendChat("me наполнил" floor " шприц сывороткой", "  " zaderzhka " ")
-SendChat("me убрал" floor " лишний воздух из шприца", "  " zaderzhka " ")
-SendChat("me ввёл" floor " иглу в вену пациента", "  " zaderzhka " ")
-SendChat("me ввёл" floor " сыворотку", "  " zaderzhka " ")
-SendChat("me вынул" floor " иглу", "  " zaderzhka " ")
-SendChat("me придавил" floor " место прокола заранее приготовленной ваткой в спирте", "  " zaderzhka " ")
-SendChat("say  Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
-SendChat("say  Чтобы вывести остатки яда из тканей.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руки жгут", "  " zaderzhka " ")
+%vybor%("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
+%vybor%("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
+%vybor%("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
+%vybor%("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
+%vybor%("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
+%vybor%("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
+%vybor%("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
+%vybor%("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
+%vybor%("me убрал" floor " насос с зоны укуса, затем отсоединил" floor " насадку", "  " zaderzhka " ")
+%vybor%("me положил" floor " насос и насадку на тумбочку ", "  " zaderzhka " ")
+%vybor%("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
+%vybor%("do Стерильная повязка на столе.", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
+%vybor%("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
+%vybor%("do На столе лежит всё необходимое для укола.", "  " zaderzhka " ")
+%vybor%("me взял" floor " ватный диск и спирт", "  " zaderzhka " ")
+%vybor%("me промочил" floor " ватный диск в спирте", "  " zaderzhka " ")
+%vybor%("me продезинфицировал" floor " место ввода противозмеиной сыворотки", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " ватный диск в урну", "  " zaderzhka " ")
+%vybor%("me взял" floor " одноразовую иглу и новый одноразовый шприц", "  " zaderzhka " ")
+%vybor%("me надел" floor " иглу на шприц", "  " zaderzhka " ")
+%vybor%("me взял" floor " пробирку с противозмеиной сывороткой", "  " zaderzhka " ")
+%vybor%("me наполнил" floor " шприц сывороткой", "  " zaderzhka " ")
+%vybor%("me убрал" floor " лишний воздух из шприца", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " иглу в вену пациента", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " сыворотку", "  " zaderzhka " ")
+%vybor%("me вынул" floor " иглу", "  " zaderzhka " ")
+%vybor%("me придавил" floor " место прокола заранее приготовленной ваткой в спирте", "  " zaderzhka " ")
+%vybor%("say  Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
+%vybor%("say  Чтобы вывести остатки яда из тканей.  ", "  " zaderzhka " ")
 Return
 :?:/КТ_1::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит готовый аппарат для компьютерной томографии. ", "  " zaderzhka " ")
-SendChat("say Ложитесь, пожалуйста, на стол. ", "  " zaderzhka " ")
-SendChat("say Не двигайтесь! ", "  " zaderzhka " ")
-SendChat("me задвинул" floor " стол в прибор", "  " zaderzhka " ")
-SendChat("me включил" floor " сканирование на аппарате", "  " zaderzhka " ")
-SendChat("do Аппарат отсканировал пациента. ", "  " zaderzhka " ")
-SendChat("me выключил" floor " сканирование на аппарате", "  " zaderzhka " ")
-SendChat("do Снимок на мониторе. ", "  " zaderzhka " ")
-SendChat("me изучил" floor " снимок", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения?", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит готовый аппарат для компьютерной томографии. ", "  " zaderzhka " ")
+%vybor%("say Ложитесь, пожалуйста, на стол. ", "  " zaderzhka " ")
+%vybor%("say Не двигайтесь! ", "  " zaderzhka " ")
+%vybor%("me задвинул" floor " стол в прибор", "  " zaderzhka " ")
+%vybor%("me включил" floor " сканирование на аппарате", "  " zaderzhka " ")
+%vybor%("do Аппарат отсканировал пациента. ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " сканирование на аппарате", "  " zaderzhka " ")
+%vybor%("do Снимок на мониторе. ", "  " zaderzhka " ")
+%vybor%("me изучил" floor " снимок", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения?", "  " zaderzhka " ")
 Return
 :?:/КТ_2::
 SendPlay {Enter}
-SendChat("say Все хорошо. Ваш мозг не поврежден! ", "  " zaderzhka " ")
+%vybor%("say Все хорошо. Ваш мозг не поврежден! ", "  " zaderzhka " ")
 Return
 :?:/КТ_3::
 SendPlay {Enter}
-SendChat("say Кажется, я что-то обнаружил. ", "  " zaderzhka " ")
-SendChat("do Это кровоизлияние в мозг?", "  " zaderzhka " ")
+%vybor%("say Кажется, я что-то обнаружил. ", "  " zaderzhka " ")
+%vybor%("do Это кровоизлияние в мозг?", "  " zaderzhka " ")
 Return
 :?:/КТ_4::
 SendPlay {Enter}
-SendChat("say У вас кровоизлияние в головной мозг. ", "  " zaderzhka " ")
-SendChat("say Вы пока останетесь в больнице. ", "  " zaderzhka " ")
-SendChat("say Будете придерживаться режима сна и специальной диеты. ", "  " zaderzhka " ")
-SendChat("say Мы будем следить за вашим состоянием. ", "  " zaderzhka " ")
+%vybor%("say У вас кровоизлияние в головной мозг. ", "  " zaderzhka " ")
+%vybor%("say Вы пока останетесь в больнице. ", "  " zaderzhka " ")
+%vybor%("say Будете придерживаться режима сна и специальной диеты. ", "  " zaderzhka " ")
+%vybor%("say Мы будем следить за вашим состоянием. ", "  " zaderzhka " ")
 Return
 :?:/КТ_5::
 SendPlay {Enter}
-SendChat("say Нет, ничего страшного. Это просто артефакты в изображении. ", "  " zaderzhka " ")
+%vybor%("say Нет, ничего страшного. Это просто артефакты в изображении. ", "  " zaderzhka " ")
 Return
 
 :?:/Шейка_1::
 SendPlay {Enter}
-SendChat("do Гинекологическое кресло стоит в углу палаты.", "  " zaderzhka " ")
-SendChat("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
+%vybor%("do Гинекологическое кресло стоит в углу палаты.", "  " zaderzhka " ")
+%vybor%("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
 Return
 
 :?:/Шейка_2::
 SendPlay {Enter}
-SendChat("do Раковина стоит в углу палаты. ", "  " zaderzhka " ")
-SendChat("me открыл" floor " кран ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взял" floor " мыло и начал" floor " мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do У стены стоит стол с хирургическими перчатками. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку хирургических перчаток и открыл" floor " её ", "  " zaderzhka " ")
-SendChat("me достал" floor " из упаковки хирургические перчатки и надел" floor " их ", "  " zaderzhka " ")
-SendChat("do Кольпоскоп стоит рядом с креслом", "  " zaderzhka " ")
-SendChat("me включил" floor " кольпоскоп", "  " zaderzhka " ")
-SendChat("me взял" floor " стерильное зеркало", "  " zaderzhka " ")
-SendChat("me установил" floor " стерильное зеркало в шейку матки", "  " zaderzhka " ")
-SendChat("me направил" floor " кольпоскоп на шейку матки", "  " zaderzhka " ")
-SendChat("me изучает данные на экране", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения?  ", "  " zaderzhka " ")
-SendChat("do На столе стоит раствор уксусной кислоты.", "  " zaderzhka " ")
-SendChat("me открыл" floor " раствор уксусной кислоты", "  " zaderzhka " ")
-SendChat("me взял" floor " палочку", "  " zaderzhka " ")
-SendChat("me нанес" Female " раствор уксусной кислоты на палочку", "  " zaderzhka " ")
-SendChat("me закрыл" floor " раствор уксусной кислоты ", "  " zaderzhka " ")
-SendChat("me начал" floor " наносить раствор уксусной кислоты на шейку матки", "  " zaderzhka " ")
-SendChat("me закончил" floor " наносить раствор уксусной кислоты и выкинул палочку", "  " zaderzhka " ")
-SendChat("me изучает данные на экране", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
-SendChat("do На столе стоит раствор йода.", "  " zaderzhka " ")
-SendChat("me открыл" floor " раствор йода", "  " zaderzhka " ")
-SendChat("me взял" floor " палочку", "  " zaderzhka " ")
-SendChat("me нанес" Female " раствор йода на палочку", "  " zaderzhka " ")
-SendChat("me закрыл" floor " раствор йода ", "  " zaderzhka " ")
-SendChat("me начал" floor " наносить раствор йода на шейку матки", "  " zaderzhka " ")
-SendChat("me закончил" floor " наносить раствор йода и выкинул палочку", "  " zaderzhka " ")
-SendChat("me изучает данные на экране", "  " zaderzhka " ")
-SendChat("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
-SendChat("me убрал" floor " зеркало из шейки матки ", "  " zaderzhka " ")
-SendChat("me выключил" floor " кольпоскоп", "  " zaderzhka " ")
-SendChat("me откатил" floor " кольпоскоп", "  " zaderzhka " ")
-SendChat("say Можете одеваться", "  " zaderzhka " ")
+%vybor%("do Раковина стоит в углу палаты. ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " кран ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " мыло и начал" floor " мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do У стены стоит стол с хирургическими перчатками. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку хирургических перчаток и открыл" floor " её ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из упаковки хирургические перчатки и надел" floor " их ", "  " zaderzhka " ")
+%vybor%("do Кольпоскоп стоит рядом с креслом", "  " zaderzhka " ")
+%vybor%("me включил" floor " кольпоскоп", "  " zaderzhka " ")
+%vybor%("me взял" floor " стерильное зеркало", "  " zaderzhka " ")
+%vybor%("me установил" floor " стерильное зеркало в шейку матки", "  " zaderzhka " ")
+%vybor%("me направил" floor " кольпоскоп на шейку матки", "  " zaderzhka " ")
+%vybor%("me изучает данные на экране", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения?  ", "  " zaderzhka " ")
+%vybor%("do На столе стоит раствор уксусной кислоты.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " раствор уксусной кислоты", "  " zaderzhka " ")
+%vybor%("me взял" floor " палочку", "  " zaderzhka " ")
+%vybor%("me нанес" Female " раствор уксусной кислоты на палочку", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " раствор уксусной кислоты ", "  " zaderzhka " ")
+%vybor%("me начал" floor " наносить раствор уксусной кислоты на шейку матки", "  " zaderzhka " ")
+%vybor%("me закончил" floor " наносить раствор уксусной кислоты и выкинул палочку", "  " zaderzhka " ")
+%vybor%("me изучает данные на экране", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+%vybor%("do На столе стоит раствор йода.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " раствор йода", "  " zaderzhka " ")
+%vybor%("me взял" floor " палочку", "  " zaderzhka " ")
+%vybor%("me нанес" Female " раствор йода на палочку", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " раствор йода ", "  " zaderzhka " ")
+%vybor%("me начал" floor " наносить раствор йода на шейку матки", "  " zaderzhka " ")
+%vybor%("me закончил" floor " наносить раствор йода и выкинул палочку", "  " zaderzhka " ")
+%vybor%("me изучает данные на экране", "  " zaderzhka " ")
+%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
+%vybor%("me убрал" floor " зеркало из шейки матки ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " кольпоскоп", "  " zaderzhka " ")
+%vybor%("me откатил" floor " кольпоскоп", "  " zaderzhka " ")
+%vybor%("say Можете одеваться", "  " zaderzhka " ")
 Return
 :?:/Глюкометр_1::
 SendPlay {Enter}
-SendChat("do В шкафу лежит глюкометр.", "  " zaderzhka " ")
-SendChat("me открыл" floor "  шкаф", "  " zaderzhka " ")
-SendChat("me достал" floor "  глюкометр, дырокол", "  " zaderzhka " ")
-SendChat("me достал" floor "  иголку", "  " zaderzhka " ")
-SendChat("me вставил" floor "  иголку в дырокол", "  " zaderzhka " ")
-SendChat("me открутил" floor "  колпачок от иголки", "  " zaderzhka " ")
-SendChat("me взял" floor "  тест-полоску и вставил" floor "  ее в глюкометр", "  " zaderzhka " ")
-SendChat("say Дайте пожалуйста палец.", "  " zaderzhka " ")
+%vybor%("do В шкафу лежит глюкометр.", "  " zaderzhka " ")
+%vybor%("me открыл" floor "  шкаф", "  " zaderzhka " ")
+%vybor%("me достал" floor "  глюкометр, дырокол", "  " zaderzhka " ")
+%vybor%("me достал" floor "  иголку", "  " zaderzhka " ")
+%vybor%("me вставил" floor "  иголку в дырокол", "  " zaderzhka " ")
+%vybor%("me открутил" floor "  колпачок от иголки", "  " zaderzhka " ")
+%vybor%("me взял" floor "  тест-полоску и вставил" floor "  ее в глюкометр", "  " zaderzhka " ")
+%vybor%("say Дайте пожалуйста палец.", "  " zaderzhka " ")
 Return
 :?:/Глюкометр_2::
 SendPlay {Enter}
-SendChat("me проткнул" floor "  палец дыроколом", "  " zaderzhka " ")
-SendChat("say Капнете кровью на тест полоску.", "  " zaderzhka " ")
+%vybor%("me проткнул" floor "  палец дыроколом", "  " zaderzhka " ")
+%vybor%("say Капнете кровью на тест полоску.", "  " zaderzhka " ")
 Return
 :?:/Глюкометр_3::
 SendPlay {Enter}
-SendChat("do Что показал глюкометр?", "  " zaderzhka " ")
+%vybor%("do Что показал глюкометр?", "  " zaderzhka " ")
 Return
 :?:/Глюкометр_4::
 SendPlay {Enter}
-SendChat("say Все хорошо.", "  " zaderzhka " ")
-SendChat("me достал" floor "  тест полоску и выкинул" floor "  ее в урну", "  " zaderzhka " ")
-SendChat("me достал" floor "  иглу и выкинул" floor "  ее в урну", "  " zaderzhka " ")
-SendChat("me убрал" floor "  глюкометр, и дырокол" floor "  в шкаф", "  " zaderzhka " ")
-SendChat("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
+%vybor%("say Все хорошо.", "  " zaderzhka " ")
+%vybor%("me достал" floor "  тест полоску и выкинул" floor "  ее в урну", "  " zaderzhka " ")
+%vybor%("me достал" floor "  иглу и выкинул" floor "  ее в урну", "  " zaderzhka " ")
+%vybor%("me убрал" floor "  глюкометр, и дырокол" floor "  в шкаф", "  " zaderzhka " ")
+%vybor%("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
 Return
 :?:/Глюкометр_5::
 SendPlay {Enter}
-SendChat("say Есть отклонения.", "  " zaderzhka " ")
-SendChat("me достал" floor "  тест полоску и выкинул" floor "  ее в урну", "  " zaderzhka " ")
-SendChat("me достал" floor "  иглу и выкинул" floor "  ее в урну", "  " zaderzhka " ")
-SendChat("me убрал" floor "  глюкометр, и дырокол в шкаф", "  " zaderzhka " ")
-SendChat("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
+%vybor%("say Есть отклонения.", "  " zaderzhka " ")
+%vybor%("me достал" floor "  тест полоску и выкинул" floor "  ее в урну", "  " zaderzhka " ")
+%vybor%("me достал" floor "  иглу и выкинул" floor "  ее в урну", "  " zaderzhka " ")
+%vybor%("me убрал" floor "  глюкометр, и дырокол в шкаф", "  " zaderzhka " ")
+%vybor%("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
 Return
 :?:/МРА_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, перед началом процедуры, я долженл" floor " кратко рассказать о ней.", "  " zaderzhka " ")
-SendChat("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
-SendChat("do На столе лежит коробка.", "  " zaderzhka " ")
-SendChat("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
-SendChat("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, перед началом процедуры, я долженл" floor " кратко рассказать о ней.", "  " zaderzhka " ")
+%vybor%("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
+%vybor%("do На столе лежит коробка.", "  " zaderzhka " ")
+%vybor%("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
+%vybor%("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
 Return
 
 
 :?:/МРА_2::
 SendPlay {Enter}
-SendChat("do В углу комнаты стоит аппарат МРА.", "  " zaderzhka " ")
-SendChat("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
+%vybor%("do В углу комнаты стоит аппарат МРА.", "  " zaderzhka " ")
+%vybor%("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
 Return
 
 :?:/МРА_3::
 SendPlay {Enter}
-SendChat("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку на аппарате МРА", "  " zaderzhka " ")
-SendChat("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
-SendChat("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
-SendChat("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
-SendChat("do У человека есть отклонения?", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
+%vybor%("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку на аппарате МРА", "  " zaderzhka " ")
+%vybor%("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
+%vybor%("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
+%vybor%("do У человека есть отклонения?", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
 Return
 
 :?:/МРА_4::
 SendPlay {Enter}
-SendChat("say У вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
+%vybor%("say У вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
 Return
 
 :?:/МРА_5::
 SendPlay {Enter}
-SendChat("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
+%vybor%("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
 Return
 
 :?:/КТГ_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, снимайте с себя одежду и ложитесь на кушетку.", "  " zaderzhka " ")
-SendChat("do КТГ стоит у стены.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, снимайте с себя одежду и ложитесь на кушетку.", "  " zaderzhka " ")
+%vybor%("do КТГ стоит у стены.", "  " zaderzhka " ")
 Return
 
 :?:/КТГ_2::
 SendPlay {Enter}
-SendChat("do Пояс на аппарате.", "  " zaderzhka " ")
-SendChat("me взял" floor " пояс и прикрепил" floor " его к животу пациентки", "  " zaderzhka " ")
-SendChat("me взял" floor " датчик и прикрепил" floor " его к поясу", "  " zaderzhka " ")
-SendChat("do КТГ готов к использованию.", "  " zaderzhka " ")
-SendChat("me запустил" floor " прибор", "  " zaderzhka " ")
-SendChat("do Электрокардиограф записывает график КТГ.", "  " zaderzhka " ")
-SendChat("me взглянул" floor " на монитор", "  " zaderzhka " ")
-SendChat("me взял" floor " датчик и передал" floor " его пациентки", "  " zaderzhka " ")
-SendChat("say Когда вы услышите любое движение ребенка, нажмите кнопку на датчике.", "  " zaderzhka " ")
+%vybor%("do Пояс на аппарате.", "  " zaderzhka " ")
+%vybor%("me взял" floor " пояс и прикрепил" floor " его к животу пациентки", "  " zaderzhka " ")
+%vybor%("me взял" floor " датчик и прикрепил" floor " его к поясу", "  " zaderzhka " ")
+%vybor%("do КТГ готов к использованию.", "  " zaderzhka " ")
+%vybor%("me запустил" floor " прибор", "  " zaderzhka " ")
+%vybor%("do Электрокардиограф записывает график КТГ.", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на монитор", "  " zaderzhka " ")
+%vybor%("me взял" floor " датчик и передал" floor " его пациентки", "  " zaderzhka " ")
+%vybor%("say Когда вы услышите любое движение ребенка, нажмите кнопку на датчике.", "  " zaderzhka " ")
 Return
 :?:/КТГ_3::
 SendPlay {Enter}
-SendChat("me взглянул" floor " на монитор ", "  " zaderzhka " ")
-SendChat("me остановил" floor " запись и выключил прибор", "  " zaderzhka " ")
-SendChat("me снял" floor " пояс с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me снял" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me забрал" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me изучил" floor " график и поставил" floor " диагноз", "  " zaderzhka " ")
-SendChat("do Обнаружено ли кислородное голодание у плода?", "  " zaderzhka " ")
+%vybor%("me взглянул" floor " на монитор ", "  " zaderzhka " ")
+%vybor%("me остановил" floor " запись и выключил прибор", "  " zaderzhka " ")
+%vybor%("me снял" floor " пояс с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me снял" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me забрал" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me изучил" floor " график и поставил" floor " диагноз", "  " zaderzhka " ")
+%vybor%("do Обнаружено ли кислородное голодание у плода?", "  " zaderzhka " ")
 Return
 
 :?:/КТГ_4::
 SendPlay {Enter}
-SendChat("say У плода кислородное голодание.", "  " zaderzhka " ")
-SendChat("say Приходите через день", "  " zaderzhka " ")
+%vybor%("say У плода кислородное голодание.", "  " zaderzhka " ")
+%vybor%("say Приходите через день", "  " zaderzhka " ")
 Return
 
 :?:/КТГ_5::
 SendPlay {Enter}
-SendChat("say Не волнуйтесь, все в порядке.", "  " zaderzhka " ")
-SendChat("say Приходите через 10 дней.", "  " zaderzhka " ")
+%vybor%("say Не волнуйтесь, все в порядке.", "  " zaderzhka " ")
+%vybor%("say Приходите через 10 дней.", "  " zaderzhka " ")
 Return
 
 :?:/Берм_1::
 SendPlay {Enter}
-SendChat("do На столе лежит баночка.", "  " zaderzhka " ")
-SendChat("me взял" floor " баночку в руку", "  " zaderzhka " ")
-SendChat("me передал" floor " баночку человеку напротив", "  " zaderzhka " ")
-SendChat("say Возьмите, вам в неё нужно будет пописать.", "  " zaderzhka " ")
+%vybor%("do На столе лежит баночка.", "  " zaderzhka " ")
+%vybor%("me взял" floor " баночку в руку", "  " zaderzhka " ")
+%vybor%("me передал" floor " баночку человеку напротив", "  " zaderzhka " ")
+%vybor%("say Возьмите, вам в неё нужно будет пописать.", "  " zaderzhka " ")
 Return
 
 :?:/Берм_2::
 SendPlay {Enter}
-SendChat("do На столе лежит полоска с тестом.", "  " zaderzhka " ")
-SendChat("me взял" floor " тест в руку", "  " zaderzhka " ")
-SendChat("me передал" floor " тест человеку напротив", "  " zaderzhka " ")
-SendChat("say После того, как вы пописали в баночку,", "  " zaderzhka " ")
-SendChat("say Окуните полоску, стрелочкой вниз.", "  " zaderzhka " ")
+%vybor%("do На столе лежит полоска с тестом.", "  " zaderzhka " ")
+%vybor%("me взял" floor " тест в руку", "  " zaderzhka " ")
+%vybor%("me передал" floor " тест человеку напротив", "  " zaderzhka " ")
+%vybor%("say После того, как вы пописали в баночку,", "  " zaderzhka " ")
+%vybor%("say Окуните полоску, стрелочкой вниз.", "  " zaderzhka " ")
 Return
 
 :?:/Берм_3::
 SendPlay {Enter}
-SendChat("Так. Давайте сюда ваш тестик.", "  " zaderzhka " ")
-SendChat("me взял" floor " тест в руку", "  " zaderzhka " ")
-SendChat("me посмотрел" floor " на тест", "  " zaderzhka " ")
-SendChat("do На тесте есть 2 полоски?", "  " zaderzhka " ")
+%vybor%("Так. Давайте сюда ваш тестик.", "  " zaderzhka " ")
+%vybor%("me взял" floor " тест в руку", "  " zaderzhka " ")
+%vybor%("me посмотрел" floor " на тест", "  " zaderzhka " ")
+%vybor%("do На тесте есть 2 полоски?", "  " zaderzhka " ")
 Return
 
 :?:/Берм_4::
 SendPlay {Enter}
-SendChat("say Вы беременны.    ", "  " zaderzhka " ")
+%vybor%("say Вы беременны.    ", "  " zaderzhka " ")
 Return
 
 :?:/Берм_5::
 SendPlay {Enter}
-SendChat("say Вы не беременны. ", "  " zaderzhka " ")
+%vybor%("say Вы не беременны. ", "  " zaderzhka " ")
 Return
 :?:/ЛЛ_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
 Return
 
 :?:/ЛЛ_2::
 SendPlay {Enter}
-SendChat("me взял" floor " со стола шприц", "  " zaderzhka " ")
-SendChat("me наполнил" floor " шприц жидкостью для местной анестезии", "  " zaderzhka " ")
-SendChat("me сделал" floor " укол ниже пупка", "  " zaderzhka " ")
-SendChat("do Анестезия введена.", "  " zaderzhka " ")
-SendChat("me положил" floor " шприц на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер", "  " zaderzhka " ")
-SendChat("me отметил" floor " место надреза", "  " zaderzhka " ")
-SendChat("me положил" floor " маркер на стол", "  " zaderzhka " ")
-SendChat("do Маркер на столе.", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель в руку", "  " zaderzhka " ")
-SendChat("me сделал" floor " небольшой надрез до одного милиметра", "  " zaderzhka " ")
-SendChat("do Надрез сделан.", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " в руку ствол аппарата для лазерной лепасакции", "  " zaderzhka " ")
-SendChat("me ввёл" floor " трубку аппарата в надрез", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do Аппарат закончил топить жир и отсасывать его.", "  " zaderzhka " ")
-SendChat("me вытащил" floor " трубку аппарата из надреза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
-SendChat("me положил ствол аппарата на стол", "  " zaderzhka " ")
-SendChat("do Пластырь в руке.", "  " zaderzhka " ")
-SendChat("me заклеял" floor " разрез пластырем", "  " zaderzhka " ")
-SendChat("me взял" floor " бандаж со стола", "  " zaderzhka " ")
-SendChat("me надел" floor " бандаж на человека напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц", "  " zaderzhka " ")
+%vybor%("me наполнил" floor " шприц жидкостью для местной анестезии", "  " zaderzhka " ")
+%vybor%("me сделал" floor " укол ниже пупка", "  " zaderzhka " ")
+%vybor%("do Анестезия введена.", "  " zaderzhka " ")
+%vybor%("me положил" floor " шприц на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер", "  " zaderzhka " ")
+%vybor%("me отметил" floor " место надреза", "  " zaderzhka " ")
+%vybor%("me положил" floor " маркер на стол", "  " zaderzhka " ")
+%vybor%("do Маркер на столе.", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель в руку", "  " zaderzhka " ")
+%vybor%("me сделал" floor " небольшой надрез до одного милиметра", "  " zaderzhka " ")
+%vybor%("do Надрез сделан.", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руку ствол аппарата для лазерной лепасакции", "  " zaderzhka " ")
+%vybor%("me ввёл" floor " трубку аппарата в надрез", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do Аппарат закончил топить жир и отсасывать его.", "  " zaderzhka " ")
+%vybor%("me вытащил" floor " трубку аппарата из надреза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("me положил ствол аппарата на стол", "  " zaderzhka " ")
+%vybor%("do Пластырь в руке.", "  " zaderzhka " ")
+%vybor%("me заклеял" floor " разрез пластырем", "  " zaderzhka " ")
+%vybor%("me взял" floor " бандаж со стола", "  " zaderzhka " ")
+%vybor%("me надел" floor " бандаж на человека напротив", "  " zaderzhka " ")
 Return
 
 :?:/УВТ_1::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("say Раздевайтесь. ", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
 Return
 
 :?:/УВТ_2::
 SendPlay {Enter}
-SendChat("do Аппарат для УВТ выключен.", "  " zaderzhka " ")
-SendChat("me включил" floor "  аппарат для УВТ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола шприц", "  " zaderzhka " ")
-SendChat("me наполнил" floor " шприц жидкостью для местной анестезии", "  " zaderzhka " ")
-SendChat("me сделал укол ниже пупка", "  " zaderzhka " ")
-SendChat("me положил" floor " шприц на стол", "  " zaderzhka " ")
-SendChat("me направи" floor " л аппарат на место расположения почки", "  " zaderzhka " ")
-SendChat("do Аппарат начал подавать импульсы.", "  " zaderzhka " ")
-SendChat("me изучил" floor "  показания на экране аппарата", "  " zaderzhka " ")
-SendChat("me выключил" floor "  аппарат", "  " zaderzhka " ")
-SendChat("me отодвинул" floor "  аппарат", "  " zaderzhka " ")
+%vybor%("do Аппарат для УВТ выключен.", "  " zaderzhka " ")
+%vybor%("me включил" floor "  аппарат для УВТ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола шприц", "  " zaderzhka " ")
+%vybor%("me наполнил" floor " шприц жидкостью для местной анестезии", "  " zaderzhka " ")
+%vybor%("me сделал укол ниже пупка", "  " zaderzhka " ")
+%vybor%("me положил" floor " шприц на стол", "  " zaderzhka " ")
+%vybor%("me направи" floor " л аппарат на место расположения почки", "  " zaderzhka " ")
+%vybor%("do Аппарат начал подавать импульсы.", "  " zaderzhka " ")
+%vybor%("me изучил" floor "  показания на экране аппарата", "  " zaderzhka " ")
+%vybor%("me выключил" floor "  аппарат", "  " zaderzhka " ")
+%vybor%("me отодвинул" floor "  аппарат", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Матка_У::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
-SendChat("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
-SendChat("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
-SendChat("do Место укола продезинфицировано. ", "  " zaderzhka " ")
-SendChat("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
-SendChat("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
-SendChat("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
-SendChat("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
-SendChat("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
-SendChat("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
-SendChat("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me взял" floor " расширитель", "  " zaderzhka " ")
-SendChat("me установил" floor " расширитель пациентке", "  " zaderzhka " ")
-SendChat("do Ножницы на столе.", "  " zaderzhka " ")
-SendChat("me взял" floor " ножницы", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрезы", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me начал" floor " удалять матку пациентке", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me положил" floor " ножницы на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургическую нить и иглу", "  " zaderzhka " ")
-SendChat("do Нить и игла в руках.", "  " zaderzhka " ")
-SendChat("me начал" floor " зашивать место удаление ", "  " zaderzhka " ")
-SendChat("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
-SendChat("me снял" floor " расширитель", "  " zaderzhka " ")
-SendChat("me положил" floor " расширитель на стол", "  " zaderzhka " ")
-SendChat("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do На столе лежит тампон.", "  " zaderzhka " ")
-SendChat("me взял" floor " тампон и установил" floor " его в влогалище", "  " zaderzhka " ")
-SendChat("say Это для снижения риска кровотечения после 24 часов его необходимо убрать.", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
+%vybor%("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
+%vybor%("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
+%vybor%("do Место укола продезинфицировано. ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
+%vybor%("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
+%vybor%("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
+%vybor%("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
+%vybor%("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
+%vybor%("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me взял" floor " расширитель", "  " zaderzhka " ")
+%vybor%("me установил" floor " расширитель пациентке", "  " zaderzhka " ")
+%vybor%("do Ножницы на столе.", "  " zaderzhka " ")
+%vybor%("me взял" floor " ножницы", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрезы", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me начал" floor " удалять матку пациентке", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me положил" floor " ножницы на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургическую нить и иглу", "  " zaderzhka " ")
+%vybor%("do Нить и игла в руках.", "  " zaderzhka " ")
+%vybor%("me начал" floor " зашивать место удаление ", "  " zaderzhka " ")
+%vybor%("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
+%vybor%("me снял" floor " расширитель", "  " zaderzhka " ")
+%vybor%("me положил" floor " расширитель на стол", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do На столе лежит тампон.", "  " zaderzhka " ")
+%vybor%("me взял" floor " тампон и установил" floor " его в влогалище", "  " zaderzhka " ")
+%vybor%("say Это для снижения риска кровотечения после 24 часов его необходимо убрать.", "  " zaderzhka " ")
 Return
 
 :?:/-афк::
@@ -6655,336 +6651,336 @@ Return
 
 :?:/Грудь_У::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
-SendChat("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
-SendChat("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
-SendChat("do Место укола продезинфицировано. ", "  " zaderzhka " ")
-SendChat("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
-SendChat("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
-SendChat("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
-SendChat("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
-SendChat("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
-SendChat("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
-SendChat("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер", "  " zaderzhka " ")
-SendChat("me обозначил" floor " места надрезов", "  " zaderzhka " ")
-SendChat("me положил" floor " маркер на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез левой груди", "  " zaderzhka " ")
-SendChat("do Надрез сделан. ", "  " zaderzhka " ")
-SendChat("me удалил" floor " жировую прослойку и остатки кожи левой груди", "  " zaderzhka " ")
-SendChat("do Жировая прослойка и остатки кожи удалены. ", "  " zaderzhka " ")
-SendChat("me подтянул" floor " грудь", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял " floor "со стола хирургическую нить и иглу", "  " zaderzhka " ")
-SendChat("me зашил" floor " левую грудь", "  " zaderzhka " ")
-SendChat("me положил" floor " нить и иглу на стод", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрез на правой груди", "  " zaderzhka " ")
-SendChat("me удалил" floor " жировую прослойку и остатки кожи правой груди", "  " zaderzhka " ")
-SendChat("do Жировая прослойка и остатки кожи удалены. ", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола хирургическую нить и иглу", "  " zaderzhka " ")
-SendChat("me начал" floor " зашивать правую грудь", "  " zaderzhka " ")
-SendChat("do Правая грудь зашита.", "  " zaderzhka " ")
-SendChat("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
+%vybor%("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
+%vybor%("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
+%vybor%("do Место укола продезинфицировано. ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
+%vybor%("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
+%vybor%("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
+%vybor%("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
+%vybor%("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
+%vybor%("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер", "  " zaderzhka " ")
+%vybor%("me обозначил" floor " места надрезов", "  " zaderzhka " ")
+%vybor%("me положил" floor " маркер на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез левой груди", "  " zaderzhka " ")
+%vybor%("do Надрез сделан. ", "  " zaderzhka " ")
+%vybor%("me удалил" floor " жировую прослойку и остатки кожи левой груди", "  " zaderzhka " ")
+%vybor%("do Жировая прослойка и остатки кожи удалены. ", "  " zaderzhka " ")
+%vybor%("me подтянул" floor " грудь", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял " floor "со стола хирургическую нить и иглу", "  " zaderzhka " ")
+%vybor%("me зашил" floor " левую грудь", "  " zaderzhka " ")
+%vybor%("me положил" floor " нить и иглу на стод", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрез на правой груди", "  " zaderzhka " ")
+%vybor%("me удалил" floor " жировую прослойку и остатки кожи правой груди", "  " zaderzhka " ")
+%vybor%("do Жировая прослойка и остатки кожи удалены. ", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола хирургическую нить и иглу", "  " zaderzhka " ")
+%vybor%("me начал" floor " зашивать правую грудь", "  " zaderzhka " ")
+%vybor%("do Правая грудь зашита.", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
 Return
 
 
 :?:/Пло_Х::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска.", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me начал" floor " совершать надрез стопы", "  " zaderzhka " ")
-SendChat("do Надрез совершён.", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " винт в руку", "  " zaderzhka " ")
-SendChat("me вставил" floor " винт в нужном положении", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
-SendChat("me начал" floor " зашивать рану", "  " zaderzhka " ")
-SendChat("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
-SendChat("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска.", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me начал" floor " совершать надрез стопы", "  " zaderzhka " ")
+%vybor%("do Надрез совершён.", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " винт в руку", "  " zaderzhka " ")
+%vybor%("me вставил" floor " винт в нужном положении", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
+%vybor%("me начал" floor " зашивать рану", "  " zaderzhka " ")
+%vybor%("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
 Return
 
 :?:/Грудь_УУ::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
-SendChat("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
-SendChat("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
-SendChat("do Место укола продезинфицировано. ", "  " zaderzhka " ")
-SendChat("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
-SendChat("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
-SendChat("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
-SendChat("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
-SendChat("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
-SendChat("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
-SendChat("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me взял" floor " маркер в руку", "  " zaderzhka " ")
-SendChat("me обозначил" floor " место надреза вокруг груди", "  " zaderzhka " ")
-SendChat("me положил" floor " маркер на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me сделал" floor " надрезы по линиям", "  " zaderzhka " ")
-SendChat("do Надрезы сделаны. ", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель в руку", "  " zaderzhka " ")
-SendChat("me начал" floor " удалять левую грудь", "  " zaderzhka " ")
-SendChat("do Левая грудь удалена. ", "  " zaderzhka " ")
-SendChat("me начал" floor " удалять правую грудь", "  " zaderzhka " ")
-SendChat("do Правая грудь удалена. ", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("do Скальпель на столе. ", "  " zaderzhka " ")
-SendChat("me взял" floor " дренаж в руки", "  " zaderzhka " ")
-SendChat("me установил" floor " дренаж", "  " zaderzhka " ")
-SendChat("do Дренаж установлен. ", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
-SendChat("me начал" floor " зашивать рану", "  " zaderzhka " ")
-SendChat("do Рана зашита. ", "  " zaderzhka " ")
-SendChat("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
-SendChat("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
+%vybor%("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
+%vybor%("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
+%vybor%("do Место укола продезинфицировано. ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
+%vybor%("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
+%vybor%("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
+%vybor%("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
+%vybor%("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
+%vybor%("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me взял" floor " маркер в руку", "  " zaderzhka " ")
+%vybor%("me обозначил" floor " место надреза вокруг груди", "  " zaderzhka " ")
+%vybor%("me положил" floor " маркер на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me сделал" floor " надрезы по линиям", "  " zaderzhka " ")
+%vybor%("do Надрезы сделаны. ", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель в руку", "  " zaderzhka " ")
+%vybor%("me начал" floor " удалять левую грудь", "  " zaderzhka " ")
+%vybor%("do Левая грудь удалена. ", "  " zaderzhka " ")
+%vybor%("me начал" floor " удалять правую грудь", "  " zaderzhka " ")
+%vybor%("do Правая грудь удалена. ", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("do Скальпель на столе. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " дренаж в руки", "  " zaderzhka " ")
+%vybor%("me установил" floor " дренаж", "  " zaderzhka " ")
+%vybor%("do Дренаж установлен. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
+%vybor%("me начал" floor " зашивать рану", "  " zaderzhka " ")
+%vybor%("do Рана зашита. ", "  " zaderzhka " ")
+%vybor%("me положил" floor " нить и иглу на стол", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
 Return
 
 :?:/Легкое_У::
 SendPlay {Enter}
-SendChat("do У стены стоит кран. ", "  " zaderzhka " ")
-SendChat("me открывает его ", "  " zaderzhka " ")
-SendChat("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-SendChat("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-SendChat("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-SendChat("me выключает кран ", "  " zaderzhka " ")
-SendChat("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-SendChat("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-SendChat("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-SendChat("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
-SendChat("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
-SendChat("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
-SendChat("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
-SendChat("do Место укола продезинфицировано. ", "  " zaderzhka " ")
-SendChat("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
-SendChat("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
-SendChat("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
-SendChat("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
-SendChat("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
-SendChat("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
-SendChat("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
-SendChat("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
-SendChat("me включил" floor " аппарат", "  " zaderzhka " ")
-SendChat("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
-SendChat("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
-SendChat("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me начал" floor " совершать надрез", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " зажим", "  " zaderzhka " ")
-SendChat("me закрепил" floor " зажим", "  " zaderzhka " ")
-SendChat("me взял" floor " скальпель", "  " zaderzhka " ")
-SendChat("me начал" floor " удаление лёгкого", "  " zaderzhka " ")
-SendChat("do Лёгкое извлечено, в руке. ", "  " zaderzhka " ")
-SendChat("me положил" floor " лёгкое в лоток", "  " zaderzhka " ")
-SendChat("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-SendChat("me убрал" floor " зажим на стол", "  " zaderzhka " ")
-SendChat("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
-SendChat("me начал зашивать рану", "  " zaderzhka " ")
-SendChat("do Рана зашита.", "  " zaderzhka " ")
-SendChat("me положил хирургические нить и иглу на стол", "  " zaderzhka " ")
-SendChat("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
-SendChat("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
-SendChat("me выключил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
+%vybor%("me открывает его ", "  " zaderzhka " ")
+%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
+%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
+%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
+%vybor%("me выключает кран ", "  " zaderzhka " ")
+%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
+%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
+%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит стол со всем необходимым для постановки капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола упаковку с катетером, открыл её и положил" floor " на стол", "  " zaderzhka " ")
+%vybor%("me взяв со стола ватку, опрыснул" floor " её Хлоргексидином", "  " zaderzhka " ")
+%vybor%("me снял" floor " защитный колпачок с катетера и положил" floor " его на стол", "  " zaderzhka " ")
+%vybor%("do Обработанная вата с катетером в руке. ", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протер" Female " ваткой место укола", "  " zaderzhka " ")
+%vybor%("do Место укола продезинфицировано. ", "  " zaderzhka " ")
+%vybor%("me аккуратно ввёл" floor " катетер в вену", "  " zaderzhka " ")
+%vybor%("do На столе лежат пакеты для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " нужный пакет со стола", "  " zaderzhka " ")
+%vybor%("do У стены стоит штатив для капельницы. ", "  " zaderzhka " ")
+%vybor%("me взяв штатив в руку, поставил" floor " его рядом с пациентом", "  " zaderzhka " ")
+%vybor%("me повесив пакет на штатив, подсоеденил капельницу к катетеру", "  " zaderzhka " ")
+%vybor%("me подрегулировал" floor " скорость капельницы", "  " zaderzhka " ")
+%vybor%("do Рядом стоит выключенный аппарат наркоза. ", "  " zaderzhka " ")
+%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
+%vybor%("do На аппарате лежит защитная маска. ", "  " zaderzhka " ")
+%vybor%("me взяв маску в руку, надел" floor " ее на лицо пациента", "  " zaderzhka " ")
+%vybor%("me включил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me начал" floor " совершать надрез", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " зажим", "  " zaderzhka " ")
+%vybor%("me закрепил" floor " зажим", "  " zaderzhka " ")
+%vybor%("me взял" floor " скальпель", "  " zaderzhka " ")
+%vybor%("me начал" floor " удаление лёгкого", "  " zaderzhka " ")
+%vybor%("do Лёгкое извлечено, в руке. ", "  " zaderzhka " ")
+%vybor%("me положил" floor " лёгкое в лоток", "  " zaderzhka " ")
+%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
+%vybor%("me убрал" floor " зажим на стол", "  " zaderzhka " ")
+%vybor%("me взял" floor " хирургические нить и иглу", "  " zaderzhka " ")
+%vybor%("me начал зашивать рану", "  " zaderzhka " ")
+%vybor%("do Рана зашита.", "  " zaderzhka " ")
+%vybor%("me положил хирургические нить и иглу на стол", "  " zaderzhka " ")
+%vybor%("me отключил" floor " подачу анестетиков в маску", "  " zaderzhka " ")
+%vybor%("me сняв маску с пациента, положил" floor " её на аппарат наркоза", "  " zaderzhka " ")
+%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
 Return
 
 :?:/Белье_1::
 SendPlay {Enter}
-SendChat("do В углу палаты лежит постельное бельё.", "  " zaderzhka " ")
-SendChat("todo Ну и осталось только постельное бельё*сняв старое бельё с кровати и сложив его в тумбочку", "  " zaderzhka " ")
-SendChat("do Старое бельё лежит в тумбочке.", "  " zaderzhka " ")
-SendChat("me взяв новое бельё в руки, начал" floor " застилать его", "  " zaderzhka " ")
-SendChat("me закончив застилать новое бельё, взбил" floor " его", "  " zaderzhka " ")
-SendChat("do Новое бельё застелено и взбито.  ", "  " zaderzhka " ")
+%vybor%("do В углу палаты лежит постельное бельё.", "  " zaderzhka " ")
+%vybor%("todo Ну и осталось только постельное бельё*сняв старое бельё с кровати и сложив его в тумбочку", "  " zaderzhka " ")
+%vybor%("do Старое бельё лежит в тумбочке.", "  " zaderzhka " ")
+%vybor%("me взяв новое бельё в руки, начал" floor " застилать его", "  " zaderzhka " ")
+%vybor%("me закончив застилать новое бельё, взбил" floor " его", "  " zaderzhka " ")
+%vybor%("do Новое бельё застелено и взбито.  ", "  " zaderzhka " ")
 Return
 
 
 :?:/Кварц_1::
 SendPlay {Enter}
-SendChat("do Возле стены стоит шкаф.  ", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф  ", "  " zaderzhka " ")
-SendChat("do В шкафу стоит кварцевальная лампа.  ", "  " zaderzhka " ")
-SendChat("me взял" floor " в руку кварцевальную лампу  ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф  ", "  " zaderzhka " ")
-SendChat("me поставил" floor " кварцевальную лампу на пол  ", "  " zaderzhka " ")
-SendChat("me включил" floor " кварцевальную лампу   ", "  " zaderzhka " ")
+%vybor%("do Возле стены стоит шкаф.  ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф  ", "  " zaderzhka " ")
+%vybor%("do В шкафу стоит кварцевальная лампа.  ", "  " zaderzhka " ")
+%vybor%("me взял" floor " в руку кварцевальную лампу  ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф  ", "  " zaderzhka " ")
+%vybor%("me поставил" floor " кварцевальную лампу на пол  ", "  " zaderzhka " ")
+%vybor%("me включил" floor " кварцевальную лампу   ", "  " zaderzhka " ")
 Return
 
 :?:/Кварц_2::
 SendPlay {Enter}
-SendChat("me выключил" floor " кварцевальную лампу ", "  " zaderzhka " ")
-SendChat("me взял" floor " лампу в руку  ", "  " zaderzhka " ")
-SendChat("me открыл" floor " шкаф ", "  " zaderzhka " ")
-SendChat("me положил" floor " кварцевальную лампу в шкаф ", "  " zaderzhka " ")
-SendChat("me закрыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("me выключил" floor " кварцевальную лампу ", "  " zaderzhka " ")
+%vybor%("me взял" floor " лампу в руку  ", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
+%vybor%("me положил" floor " кварцевальную лампу в шкаф ", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
 Return
 
 
 :?:/Документация_1::
 SendPlay {Enter}
-SendChat("do Перед сотрудником стоит стол.", "  " zaderzhka " ")
-SendChat("do На столе лежит папка с документами.", "  " zaderzhka " ")
-SendChat("me открыл" floor " папку и начал" floor " её листать", "  " zaderzhka " ")
-SendChat("try обнаружил" floor " в папке разрешение на осуществление деятельности", "  " zaderzhka " ")
-SendChat("me листает страницы в папке", "  " zaderzhka " ")
-SendChat("try обнаружил" floor " в папке сертификат на закупку лекарств", "  " zaderzhka " ")
-SendChat("me листает страницы в папке", "  " zaderzhka " ")
-SendChat("try обнаружил" floor " в папке заключение санитарно-эпидемиологической службы", "  " zaderzhka " ")
-SendChat("me закрыл" floor " папку с документами и отложил" floor " её в сторону", "  " zaderzhka " ")
-SendChat("do На плече висит медицинская сумка.", "  " zaderzhka " ")
-SendChat("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
-SendChat("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
-SendChat("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
-SendChat("me убрал" floor " бланк и ручку в медицинскую сумку", "  " zaderzhka " ")
-SendChat("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("do Перед сотрудником стоит стол.", "  " zaderzhka " ")
+%vybor%("do На столе лежит папка с документами.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " папку и начал" floor " её листать", "  " zaderzhka " ")
+%vybor%("try обнаружил" floor " в папке разрешение на осуществление деятельности", "  " zaderzhka " ")
+%vybor%("me листает страницы в папке", "  " zaderzhka " ")
+%vybor%("try обнаружил" floor " в папке сертификат на закупку лекарств", "  " zaderzhka " ")
+%vybor%("me листает страницы в папке", "  " zaderzhka " ")
+%vybor%("try обнаружил" floor " в папке заключение санитарно-эпидемиологической службы", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " папку с документами и отложил" floor " её в сторону", "  " zaderzhka " ")
+%vybor%("do На плече висит медицинская сумка.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " медицинскую сумку", "  " zaderzhka " ")
+%vybor%("me достал" floor " из медицинской сумки бланк и ручку", "  " zaderzhka " ")
+%vybor%("me записал" floor " в бланк все необходимые сведения", "  " zaderzhka " ")
+%vybor%("me убрал" floor " бланк и ручку в медицинскую сумку", "  " zaderzhka " ")
+%vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Наркоман_1::
 SendPlay {Enter}
-SendChat("do В медицинской сумке лежат шприц и ампула с препаратом от наркозависимости.", "  " zaderzhka " ")
-SendChat("me открыл" floor " сумку", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки шприц и ампулу", "  " zaderzhka " ")
-SendChat("me надломив ампулу, заполнил шприц препаратом", "  " zaderzhka " ")
-SendChat("do В медицинской сумке лежат одноразовая спиртовая салфетка, жгут и бинт.", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки одноразовую спиртовую салфетку", "  " zaderzhka " ")
-SendChat("me взял" floor " руку пациента", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки жгут и наложил" floor " его на руку выше локтя", "  " zaderzhka " ")
-SendChat("me достал" floor " из сумки бинт", "  " zaderzhka " ")
-SendChat("me обнаружив вену на руке пациента, протёр" Female " спиртовой салфеткой место укола", "  " zaderzhka " ")
-SendChat("me взяв в руки шприц, аккуратно ввёл" floor " её в вену пациенту", "  " zaderzhka " ")
-SendChat("me ослабив жгут на руке пациента, начал" floor " медленно надавливать на поршень", "  " zaderzhka " ")
-SendChat("me вынув иглу из вены пациента, приложил" floor " к месту укола спиртовую салфетку и закрепил" floor " её бинтом", "  " zaderzhka " ")
-SendChat("do Рядом на полу стоит урна.", "  " zaderzhka " ")
-SendChat("me выкинул" floor " в урну спиртовую салфетку, шприц и ампулу", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежат шприц и ампула с препаратом от наркозависимости.", "  " zaderzhka " ")
+%vybor%("me открыл" floor " сумку", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки шприц и ампулу", "  " zaderzhka " ")
+%vybor%("me надломив ампулу, заполнил шприц препаратом", "  " zaderzhka " ")
+%vybor%("do В медицинской сумке лежат одноразовая спиртовая салфетка, жгут и бинт.", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки одноразовую спиртовую салфетку", "  " zaderzhka " ")
+%vybor%("me взял" floor " руку пациента", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки жгут и наложил" floor " его на руку выше локтя", "  " zaderzhka " ")
+%vybor%("me достал" floor " из сумки бинт", "  " zaderzhka " ")
+%vybor%("me обнаружив вену на руке пациента, протёр" Female " спиртовой салфеткой место укола", "  " zaderzhka " ")
+%vybor%("me взяв в руки шприц, аккуратно ввёл" floor " её в вену пациенту", "  " zaderzhka " ")
+%vybor%("me ослабив жгут на руке пациента, начал" floor " медленно надавливать на поршень", "  " zaderzhka " ")
+%vybor%("me вынув иглу из вены пациента, приложил" floor " к месту укола спиртовую салфетку и закрепил" floor " её бинтом", "  " zaderzhka " ")
+%vybor%("do Рядом на полу стоит урна.", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " в урну спиртовую салфетку, шприц и ампулу", "  " zaderzhka " ")
 Return
 
 :?:/ГМУ_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
-SendChat("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
+%vybor%("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
 Return
 
 
 :?:/ГМУ_2::
 SendPlay {Enter}
-SendChat("say Хорошо, покажите мне ваш паспорт. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, покажите мне ваш паспорт. ", "  " zaderzhka " ")
 Return
 
 
 :?:/ГМУ_3::
 SendPlay {Enter}
-SendChat("say Хорошо, мне вашу трудовую книжку. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, мне вашу трудовую книжку. ", "  " zaderzhka " ")
 Return
 
 :?:/ПС_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
-SendChat("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
-SendChat("say Сколько лет вы проживаете в республике, и какое у вас образование?", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
+%vybor%("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
+%vybor%("say Сколько лет вы проживаете в республике, и какое у вас образование?", "  " zaderzhka " ")
 Return
 
 :?:/ПС_2::
 SendPlay {Enter}
-SendChat("say Хорошо, передайте мне ваш паспорт. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, передайте мне ваш паспорт. ", "  " zaderzhka " ")
 Return
 
 :?:/ПС_3::
 SendPlay {Enter}
-SendChat("me взял" floor " паспорт в руки и начал" floor " его изучать ", "  " zaderzhka " ")
-SendChat("me изучив паспорт, вернул" floor " его владельцу напротив ", "  " zaderzhka " ")
+%vybor%("me взял" floor " паспорт в руки и начал" floor " его изучать ", "  " zaderzhka " ")
+%vybor%("me изучив паспорт, вернул" floor " его владельцу напротив ", "  " zaderzhka " ")
 Return
 
 
 :?:/ПС_4::
 SendPlay {Enter}
-SendChat("say Хорошо, передайте мне вашу трудовую книжку. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, передайте мне вашу трудовую книжку. ", "  " zaderzhka " ")
 Return
 
 
 :?:/ПС_5::
 SendPlay {Enter}
-SendChat("me взял" floor " трудовую книжку в руки начал" floor " изучать", "  " zaderzhka " ")
-SendChat("me изучив трудовую книжку, вернул" floor " владельцу напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " трудовую книжку в руки начал" floor " изучать", "  " zaderzhka " ")
+%vybor%("me изучив трудовую книжку, вернул" floor " владельцу напротив", "  " zaderzhka " ")
 Return
 
 :?:/ПС_6::
 SendPlay {Enter}
-SendChat("say Хорошо, передайте мне вашу медицинскую карту.", "  " zaderzhka " ")
+%vybor%("say Хорошо, передайте мне вашу медицинскую карту.", "  " zaderzhka " ")
 Return
 
 :?:/ПС_7::
 SendPlay {Enter}
-SendChat("me взял" floor " медкарту в руки начал" floor " изучать ", "  " zaderzhka " ")
-SendChat("me изучив медкарту, вернул" floor " владельцу напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " медкарту в руки начал" floor " изучать ", "  " zaderzhka " ")
+%vybor%("me изучив медкарту, вернул" floor " владельцу напротив", "  " zaderzhka " ")
 Return
 
 :?:/ПС_8::
 SendPlay {Enter}
-SendChat("say Хорошо, передайте мне ваш диплом о медицинском образовании.", "  " zaderzhka " ")
+%vybor%("say Хорошо, передайте мне ваш диплом о медицинском образовании.", "  " zaderzhka " ")
 Return
 
 :?:/ПС_9::
 SendPlay {Enter}
-SendChat("me взял" floor " диплом в руки и начал" floor " его изучать", "  " zaderzhka " ")
-SendChat("me изучив диплом, вернул" floor " его владельцу напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " диплом в руки и начал" floor " его изучать", "  " zaderzhka " ")
+%vybor%("me изучив диплом, вернул" floor " его владельцу напротив", "  " zaderzhka " ")
 Return
 
 :?:/ПС_10::
@@ -7020,7 +7016,7 @@ if rand = 14
 if rand = 15
 	Word :=	"АСМП, ТК, МГ, ЦГБ и Маммография"
 SendPlay {Enter}
-SendChat("say Что такое " Word " ? ", "  " zaderzhka " ")
+%vybor%("say Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
 :?:/ПС_11::
@@ -7056,887 +7052,868 @@ if rand = 14
 if rand = 15
 	Word :=	"РП, ООС, РВК"
 SendPlay {Enter}
-SendChat("b Что такое " Word " ? ", "  " zaderzhka " ")
+%vybor%("b Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
 :?:/ПС_14::
 SendPlay {Enter}
-SendChat("say Хорошо, присядьте и повернитесь ко мне спиной. ", "  " zaderzhka " ")
-SendChat("b Встаньте и повернитесь ко мне лицом. ", "  " zaderzhka " ")
-SendChat("say Отлично, вы можете вставать и поворачиваться ко мне лицом. ", "  " zaderzhka " ")
+%vybor%("say Хорошо, присядьте и повернитесь ко мне спиной. ", "  " zaderzhka " ")
+%vybor%("b Встаньте и повернитесь ко мне лицом. ", "  " zaderzhka " ")
+%vybor%("say Отлично, вы можете вставать и поворачиваться ко мне лицом. ", "  " zaderzhka " ")
 Return
 
 
 :?:/ПР_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, передайте документ, удостоверяющий Вашу личность.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, передайте документ, удостоверяющий Вашу личность.", "  " zaderzhka " ")
 Return
 
 :?:/ПР_2::
-SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
-SendChat("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
-SendChat("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
+%vybor%("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
+%vybor%("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
 Return
 
 
 :?:/ПР_3::
 SendPlay {Enter}
-SendChat("say Хорошо, передайте Ваше медицинское заключение.", "  " zaderzhka " ")
+%vybor%("say Хорошо, передайте Ваше медицинское заключение.", "  " zaderzhka " ")
 Return
 
 :?:/ПР_4::
 SendPlay {Enter}
-SendChat("me взял" floor " медицинское заключение из рук гражданина напротив", "  " zaderzhka " ")
-SendChat("me открыв медицинское заключение, приступил" floor " к его изучению", "  " zaderzhka " ")
-SendChat("me изучив медицинское заключение, вернул" floor " его гражданину напротив", "  " zaderzhka " ")
+%vybor%("me взял" floor " медицинское заключение из рук гражданина напротив", "  " zaderzhka " ")
+%vybor%("me открыв медицинское заключение, приступил" floor " к его изучению", "  " zaderzhka " ")
+%vybor%("me изучив медицинское заключение, вернул" floor " его гражданину напротив", "  " zaderzhka " ")
 Return
 
 :?:/ПР_5::
 SendPlay {Enter}
-SendChat("say Вам нужно получить или продлить медицинскую карту? Если продлить, то передайте вашу медкарту.", "  " zaderzhka " ")
-Return
-
-:?:/ПР_6::
-SendPlay {Enter}
-SendChat(" " stol "  ", "  " zaderzhka " ")
-SendChat("me взяв медицинскую карту из рук человека напротив, открыл" floor " её", "  " zaderzhka " ")
-SendChat("me положил" floor " медицинскую карту на стол ", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнения медицинской карты", "  " zaderzhka " ")
-SendChat("me написав в строке заключения 'К государственной службе годен', отложил" floor " ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «Маршалова Аанаис - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
-SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
-Return
-
-
-:?:/ПР_7::
-SendPlay {Enter}
-SendChat(" " stol "  ", "  " zaderzhka " ")
-SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor "  заполнения медицинской карты", "  " zaderzhka " ")
-SendChat("me написав в строке заключения 'К государственной службе годен', отложил ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «Маршалова Аанаис - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью  ", "  " zaderzhka " ")
-SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
+%vybor%(" " stol "  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
+%vybor%("me взяв ручку, начал" floor "  заполнения медицинской карты", "  " zaderzhka " ")
+%vybor%("me написав в строке заключения 'К государственной службе годен', отложил ручку", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил" floor " печать «Маршалова А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
+%vybor%("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью  ", "  " zaderzhka " ")
+%vybor%("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
+%vybor%("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
 Return
 
 
 
 :?:/Аллергия_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Цетрин,Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Цетрин,Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Аллергия_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Эриус.Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Эриус.Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Аллергия_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Кларитин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Кларитин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Аллергия_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Зодак. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Зодак. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Аллергия_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Лоратадин . Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Лоратадин . Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Глаз_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Визин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Визин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Глаз_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Альбуцид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Альбуцид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Ухо_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Отинум. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Отинум. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Ухо_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Отипакс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Отипакс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Почки_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Уролесан. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Уролесан. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Почки_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Урохол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Урохол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Живот_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Но-шпу. Её стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Но-шпу. Её стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Живот_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Дротаверин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Дротаверин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Суставы_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Фастум-гель. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Фастум-гель. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Суставы_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Кетонал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Кетонал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Суставы_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Долгит. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Долгит. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Суставы_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Капсикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Капсикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Печень_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Карсил-Форте. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Карсил-Форте. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Печень_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Гепабене. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Гепабене. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Печень_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Урсофальк. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Урсофальк. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Гексорал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Гексорал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Леголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Леголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Ингалипт. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Ингалипт. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Стрепсилс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Стрепсилс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Септолетте. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Септолетте. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Горло_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Септефри. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Септефри. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Витамин_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Унивит. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Унивит. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Витамин_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Витамикс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Витамикс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Витамин_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Алфавит. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Алфавит. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Геморой::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Релиф. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Релиф. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Миг. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Миг. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Цитрамон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Цитрамон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Анальгин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Анальгин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Спазмолгон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Спазмолгон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Спазмантон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Спазмантон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Голова_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Но-Шпу. Её стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Но-Шпу. Её стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Потенция_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Сиалекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Сиалекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Потенция_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Но-Виагру. Её стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Но-Виагру. Её стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диарея_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Энтеросгель. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Энтеросгель. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диарея_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Полисорб. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Полисорб. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диарея_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Лоперамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Лоперамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диарея_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Активированный уголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Активированный уголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диабет_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Виктоза. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Виктоза. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диабет_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Диабетон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Диабетон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диабет_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Глиформин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Глиформин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Диабет_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Глюкофаж. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Глюкофаж. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Ренни. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Ренни. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Маалокс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Маалокс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Алмагель. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Алмагель. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Гастал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Гастал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Гастрацид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Гастрацид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Мотилиума. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Мотилиума. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Изжога_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Омепразол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Омепразол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Лазолван. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Лазолван. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Гербион. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Гербион. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Стоптуссин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Стоптуссин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Омнитус. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Омнитус. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Амбробене. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Амбробене. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Флюдитек. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Флюдитек. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Кашель_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Геделикс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Геделикс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Пузырь_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Цистон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Цистон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Пузырь_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Нолицин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Нолицин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Мигрень_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Амигренин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Амигренин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Мигрень_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Суматриптан. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Суматриптан. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Мигрень_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Релпакс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Релпакс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Мигрень_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Сумамигрен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Сумамигрен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Ожог_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Бепантен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Бепантен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Ожог_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Пантенол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Пантенол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Насморк_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Снуп. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Снуп. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Насморк_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Отривин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Отривин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Насморк_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Аква Марис. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Аква Марис. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Повышенное_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Андипал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Андипал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Пониженное_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Норадреналин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Норадреналин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Пониженное_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Кордиамин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Кордиамин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Жар_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Терафлю. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Терафлю. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Жар_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Колдрекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Колдрекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Жар_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Антигриппин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Антигриппин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Судороги_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Магнелис. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Магнелис. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Судороги_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Аспаркам. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Аспаркам. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Сердце_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Кардиомагнил. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Кардиомагнил. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Сердце_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Нитроглицерин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Нитроглицерин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Сердце_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Корвалол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Корвалол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Тошнота_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Церукал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Церукал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Тошнота_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Метоклопрамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Метоклопрамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Тошнота_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Драмина. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Драмина. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 :?:/Тошнота_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Авиамарин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Авиамарин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
 
 
 
 :?:/Успокоительное_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Валериану Лекарственную. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Валериану Лекарственную. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Успокоительное_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пустырник. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пустырник. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Успокоительное_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Обезбол_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Нурофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Нурофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Обезбол_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Обезбол_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Бонифен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Бонифен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Обезбол_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Нурофактор. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Нурофактор. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Успокоительное_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Валериану Лекарственную. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Валериану Лекарственную. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Успокоительное_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пустырник. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пустырник. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Успокоительное_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Стресс_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Афобазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Афобазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Стресс_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Деприм. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Деприм. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Стресс_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Дезипрамин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Дезипрамин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Температура_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Найз. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Найз. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Температура_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Диклофенак. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Диклофенак. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Температура_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Температура_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Ибуклин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Ибуклин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Астма_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Сальбутамол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Сальбутамол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Астма_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Преднизолон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Преднизолон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Понос_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Лоперамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Лоперамид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Понос_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Сульгин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Сульгин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Понос_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Имодиум. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Имодиум. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Язва_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Сукральфат. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Сукральфат. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Язва_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Де-Нол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Де-Нол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Язва_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Вентрисол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Вентрисол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Молочница_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Нистатин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Нистатин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Молочница_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пимафуцин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пимафуцин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Молочница_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Ливарол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Ливарол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Молочница_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Клотримазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Клотримазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Инфаркт_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Антенолол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Антенолол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Инфаркт_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Омакор. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Омакор. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Головокружение_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Вестибо. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Вестибо. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Головокружение_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Фенибут. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Головокружение_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Бетасерк. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Бетасерк. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Головокружение_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Циннаризин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Циннаризин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Головокружение_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Танакан. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Танакан. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Гастрит_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Рабепразол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Рабепразол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Гастрит_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Азитромицин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Азитромицин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Гастрит_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Антибиотик:тетрациклин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Антибиотик:тетрациклин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Гастрит_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Антибиотик:Амоксициллин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Антибиотик:Амоксициллин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Зубная_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Кеторол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Кеторол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Зубная_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Дексонал. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Дексонал. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Зубная_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Немозол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Немозол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Глисты_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Немозол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Немозол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Глисты_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пиперазин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пиперазин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Глисты_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пирантел. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пирантел. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Глисты_8::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Вермокс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Вермокс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Глисты_9::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Декарис. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Декарис. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Противовирусные_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Ациклавир. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Ациклавир. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Противовирусные_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Полиоксидоний. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Полиоксидоний. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Противовирусные_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Амиксин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Амиксин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Противовирусные_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Циклоферон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Циклоферон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Инсульт_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Гаммалон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Гаммалон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Инсульт_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Пентоксифиллин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Пентоксифиллин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Антисептики_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Бетадин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Бетадин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Антисептики_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Драполен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Драполен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Антисептики_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Хлоргексидин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Хлоргексидин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Антисептики_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Бепантен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Бепантен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам  Активированный уголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам  Активированный уголь. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Смекта. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Смекта. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Полисорб. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Полисорб. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Эспумизан. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Эспумизан. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_5::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Линекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Линекс. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_6::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Лактофильтрум. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Лактофильтрум. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Вздутие_7::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Дротаверин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Дротаверин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Грибок_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Дифлукортолон. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Дифлукортолон. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Грибок_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Изоконазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Изоконазол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Чесотка_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Перметрин. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Перметрин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/Чесотка_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Бензилбензоат. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Бензилбензоат. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Член_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Финастерид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Финастерид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Член_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Простаплант. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Простаплант. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Член_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Импаза. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Импаза. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Член_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Простамол. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Простамол. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Менструация_1::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Ибупрофен. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Менструация_2::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Диклофенак ретард. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Диклофенак ретард. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Менструация_3::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Нимесулид. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Нимесулид. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 :?:/Менструация_4::
 SendPlay {Enter}
-SendChat("say Я выпишу Вам Мелоксикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
+%vybor%("say Я выпишу Вам Мелоксикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
 
 :?:/МК_1::
 SendPlay {Enter}
-SendChat("say Здравствуйте, передайте свой паспорт.", "  " zaderzhka " ")
+%vybor%("say Здравствуйте, передайте свой паспорт.", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_111::
 SendPlay {Enter}
-SendChat("say Покажите ваше удостоверение.", "  " zaderzhka " ")
-SendChat("say Жалобы на здоровье есть?", "  " zaderzhka " ")
+%vybor%("say Покажите ваше удостоверение.", "  " zaderzhka " ")
+%vybor%("say Жалобы на здоровье есть?", "  " zaderzhka " ")
 Return
 
 :?:/МК_2::
 SendPlay {Enter}
-SendChat("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
-SendChat("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
-SendChat("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Жалобы на здоровье есть?", "  " zaderzhka " ")
+%vybor%("me взял" floor " паспорт из рук человека напротив", "  " zaderzhka " ")
+%vybor%("me открыл" floor " паспорт на необходимой странице и начал" floor " его изучение", "  " zaderzhka " ")
+%vybor%("me изучив паспорт, закрыл" floor " его и передал" floor " человеку напротив", "  " zaderzhka " ")
+%vybor%("say Жалобы на здоровье есть?", "  " zaderzhka " ")
 Return
 
 :?:/МК_3::
 SendPlay {Enter}
-SendChat(" " stol "  ", "  " zaderzhka " ")
-SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
-SendChat("say Назовите Ваш вес.", "  " zaderzhka " ")
+%vybor%(" " stol "  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
+%vybor%("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
+%vybor%("say Назовите Ваш вес.", "  " zaderzhka " ")
 Return
 
 :?:/МК_4::
 SendPlay {Enter}
-SendChat("me внёс" floor " показатели веса в медицинскую карту пациента", "  " zaderzhka " ")
-SendChat("say Назовите Ваш рост. ", "  " zaderzhka " ")
+%vybor%("me внёс" floor " показатели веса в медицинскую карту пациента", "  " zaderzhka " ")
+%vybor%("say Назовите Ваш рост. ", "  " zaderzhka " ")
 Return
 
 :?:/МК_5::
 SendPlay {Enter}
-SendChat("me внёс" floor " показатели роста в медицинскую карту пациента", "  " zaderzhka " ")
-SendChat(" " stol " ", "  " zaderzhka " ")
-SendChat("do На столе лежит тонометр. ", "  " zaderzhka " ")
-SendChat("me взял" floor " со стола в руку тонометр и расстегнул" floor " манжету", "  " zaderzhka " ")
-SendChat("say Присаживайтесь на койку и дайте мне Вашу любую свободную руку.", "  " zaderzhka " ")
+%vybor%("me внёс" floor " показатели роста в медицинскую карту пациента", "  " zaderzhka " ")
+%vybor%(" " stol " ", "  " zaderzhka " ")
+%vybor%("do На столе лежит тонометр. ", "  " zaderzhka " ")
+%vybor%("me взял" floor " со стола в руку тонометр и расстегнул" floor " манжету", "  " zaderzhka " ")
+%vybor%("say Присаживайтесь на койку и дайте мне Вашу любую свободную руку.", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_6::
 SendPlay {Enter}
-SendChat("me надел" floor " манжету на руку человека и застегнул" floor " её", "  " zaderzhka " ")
-SendChat("me нажал" floor " на кнопку включения тонометра и начал" floor " накачивать манжету", "  " zaderzhka " ")
-SendChat("do На тонометре показалось число 220.", "  " zaderzhka " ")
-SendChat("me перестал" floor " накачивать манжету", "  " zaderzhka " ")
-SendChat("do Через несколько секунд манжета слегка расширилась.", "  " zaderzhka " ")
-SendChat("do На экране тонометра появилось давление.", "  " zaderzhka " ")
-SendChat("do Давление в норме?", "  " zaderzhka " ")
-SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+%vybor%("me надел" floor " манжету на руку человека и застегнул" floor " её", "  " zaderzhka " ")
+%vybor%("me нажал" floor " на кнопку включения тонометра и начал" floor " накачивать манжету", "  " zaderzhka " ")
+%vybor%("do На тонометре показалось число 220.", "  " zaderzhka " ")
+%vybor%("me перестал" floor " накачивать манжету", "  " zaderzhka " ")
+%vybor%("do Через несколько секунд манжета слегка расширилась.", "  " zaderzhka " ")
+%vybor%("do На экране тонометра появилось давление.", "  " zaderzhka " ")
+%vybor%("do Давление в норме?", "  " zaderzhka " ")
+%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_7::
 SendPlay {Enter}
-SendChat("me посмотрел" floor " на экран тонометра и зафиксировал" floor " показатели давления в медицинской карте пациента", "  " zaderzhka " ")
-SendChat("do Давление понижено?", "  " zaderzhka " ")
-SendChat("b /do Да. или /do Нет.", "  " zaderzhka " ")
+%vybor%("me посмотрел" floor " на экран тонометра и зафиксировал" floor " показатели давления в медицинской карте пациента", "  " zaderzhka " ")
+%vybor%("do Давление понижено?", "  " zaderzhka " ")
+%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
 Return
 
 :?:/МК_8::
 SendPlay {Enter}
-SendChat("me снял" floor "  манжету и положил" floor "  тонометр на стол", "  " zaderzhka " ")
-SendChat("say Что у меня над головой?", "  " zaderzhka " ")
+%vybor%("me снял" floor "  манжету и положил" floor "  тонометр на стол", "  " zaderzhka " ")
+%vybor%("say Что у меня над головой?", "  " zaderzhka " ")
 Return
 
 :?:/МК_9::
@@ -7972,34 +7949,34 @@ if rand = 14
 if rand = 15
 	Word :=	"МГ, ООС"
 SendPlay {Enter}
-SendChat("say Сейчас пройдет психологическое тестирование.", "  " zaderzhka " ")
-SendChat("say Вам будет задано несколько вопросов - вы должны дать ответ. ", "  " zaderzhka " ")
-SendChat("say Что такое " Word "? ", "  " zaderzhka " ")
+%vybor%("say Сейчас пройдет психологическое тестирование.", "  " zaderzhka " ")
+%vybor%("say Вам будет задано несколько вопросов - вы должны дать ответ. ", "  " zaderzhka " ")
+%vybor%("say Что такое " Word "? ", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_10::
 SendPlay {Enter}
-SendChat("do В правом кармане штанов медицинского работника лежат ключи от АСМП.", "  " zaderzhka " ")
-SendChat("say Что у меня в правом кармане штанов?", "  " zaderzhka " ")
+%vybor%("do В правом кармане штанов медицинского работника лежат ключи от АСМП.", "  " zaderzhka " ")
+%vybor%("say Что у меня в правом кармане штанов?", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_11::
 SendPlay {Enter}
-SendChat("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
-SendChat("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
-SendChat("me написав в строке заключения «К государственной службе годен», отложил" floor " ручку", "  " zaderzhka " ")
-SendChat("me взяв штемпель со стола, поставил" floor " печать «ГВРП Маршалова А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-SendChat("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
-SendChat("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
-SendChat("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
+%vybor%("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
+%vybor%("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
+%vybor%("me написав в строке заключения «К государственной службе годен», отложил" floor " ручку", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил" floor " печать «ГВРП Маршалова А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
+%vybor%("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
+%vybor%("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
+%vybor%("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
 Return
 
 
 :?:/МК_12::
 SendPlay {Enter}
-SendChat("say Вы не прошли осмотр и будете внесены во временный запрет на 4 дня.", "  " zaderzhka " ")
+%vybor%("say Вы не прошли осмотр и будете внесены во временный запрет на 4 дня.", "  " zaderzhka " ")
 Return
 
 
@@ -8235,8 +8212,8 @@ if rand = 112
 	Word := "Уменьшение груди"
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
-SendChat("say Сейчас пройдёт тренировка:" Word ". ","  " zaderzhka " ")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("say Сейчас пройдёт тренировка:" Word ". ","  " zaderzhka " ")
+%vybor%(" " Skrin_1 " ", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -8256,8 +8233,8 @@ Return
 :?:/Трен_0::
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
-SendChat("say На этом тренировка:" Word " окончена. ","  " zaderzhka " ")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("say На этом тренировка:" Word " окончена. ","  " zaderzhka " ")
+%vybor%(" " Skrin_1 " ", "500")
 Gui, Destroy
 Return
 
@@ -8277,8 +8254,8 @@ if rand = 6
 	Word := "Кварцевание палат"
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
-SendChat("say Сейчас пройдёт мероприятие:" Word ". ","  " zaderzhka " ")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("say Сейчас пройдёт мероприятие:" Word ". ","  " zaderzhka " ")
+%vybor%(" " Skrin_1 " ", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -8313,14 +8290,14 @@ return
 :?:/МП_0::
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
-SendChat("say На этом мероприятие:" Word " окончено. ","  " zaderzhka " "), NumberCall
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("say На этом мероприятие:" Word " окончено. ","  " zaderzhka " "), NumberCall
+%vybor%(" " Skrin_1 " ", "500")
 Gui, Destroy
 Return
 
 :?:/Такси::
 SendPlay {Enter}
-SendChat("logout","  " zaderzhka " ")
+%vybor%("logout","  " zaderzhka " ")
 Return
 
 
@@ -8380,16 +8357,16 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 ; Условие для добавления информации о бригаде
 If (Patrol != "") {
-    SendChat("r [" TAG "] Заступил" floor " на пост:" Post " // Бригада: " Patrol ". ", "1000")
+    %vybor%("r [" TAG "] Заступил" floor " на пост:" Post " // Бригада: " Patrol ". ", "1000")
 } Else {
-    SendChat("r [" TAG "] Заступил" floor " на пост:" Post ". ", "1000")
+    %vybor%("r [" TAG "] Заступил" floor " на пост:" Post ". ", "1000")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_5.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
@@ -8403,29 +8380,29 @@ if(A_Index = Skolko){
 		break
 	}
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Пост:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Пост:" Post ". ", "500")
+    %vybor%("r [" TAG "] Пост:" Post ". ", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
+%vybor%(" " Skrin_1 " ", "500")
 }
 sleep 1000
 IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Завершил" floor " пост:" Post ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " пост:" Post ". ", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
+%vybor%(" " Skrin_1 " ", "500")
 Gui, Destroy
 sleep 1000
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_4.mp3
@@ -8437,18 +8414,18 @@ Return
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 sleep 1200
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol != "") {
-    SendChat("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Завершил" floor " пост:" Post " ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_3.mp3
 sleep 10000
 Gui, Destroy
@@ -8503,16 +8480,16 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
 ; Условие для добавления информации о бригаде
 If (Patrol != "") {
-    SendChat("r [" TAG "] Выехал" female " на патрулирование города // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Выехал" female " на патрулирование города // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Выехал" female " на патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Выехал" female " на патрулирование города. ", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
@@ -8525,27 +8502,27 @@ Loop, %Skolko%
 		break
 	}
     SendPlay {Enter}
-    SendChat("do КПК висит на поясе.", "500")
-    SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+    %vybor%("do КПК висит на поясе.", "500")
+    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
     If (Patrol != "") {
-        SendChat("r [" TAG "] Патрулирование города // Бригада:" Patrol ". ", "500")
+        %vybor%("r [" TAG "] Патрулирование города // Бригада:" Patrol ". ", "500")
     } Else {
-        SendChat("r [" TAG "] Патрулирование города. ", "500")
+        %vybor%("r [" TAG "] Патрулирование города. ", "500")
     }
-    SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat(" " Skrin_1 " ", "500")
+    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+    %vybor%(" " Skrin_1 " ", "500")
 }
 sleep 1000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Окончил" floor " патрулирование города // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Окончил" floor " патрулирование города // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 Return
@@ -8556,18 +8533,18 @@ Return
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol != "") {
-    SendChat("r [" TAG "] Окончил" floor " патрулирование города. // Бригада: " Patrol ". ", "500")
+    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. // Бригада: " Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 10000
@@ -8609,18 +8586,18 @@ IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 
 Sleep 7000
 SendPlay {Enter}
-SendChat("me достал" floor " из кармана КПК, запустил" floor " его", "1500")
-SendChat("me открывает базу поступивших вызовов", "1500")
-SendChat("me фиксирует последние данные GPS пациента", "1500")
-SendChat("to " to " ", "500")
-SendChat("me зажав кнопку на КПК, начал" floor " что-то говорить в него", "1500")
+%vybor%("me достал" floor " из кармана КПК, запустил" floor " его", "1500")
+%vybor%("me открывает базу поступивших вызовов", "1500")
+%vybor%("me фиксирует последние данные GPS пациента", "1500")
+%vybor%("to " to " ", "500")
+%vybor%("me зажав кнопку на КПК, начал" floor " что-то говорить в него", "1500")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Принял" floor " вызов: " to " // Бригада: " Patrol " ", "500")
+    %vybor%("r [" TAG "] Принял" floor " вызов: " to " // Бригада: " Patrol " ", "500")
 } Else {
-    SendChat("r [" TAG "] Принял" floor " вызов: " to " ", "500")
+    %vybor%("r [" TAG "] Принял" floor " вызов: " to " ", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
+%vybor%(" " Skrin_1 " ", "500")
 Return
 
 
@@ -8630,16 +8607,16 @@ IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1500")
+%vybor%("do КПК висит на поясе.", "1500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1500")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Ложный // Вызов: " to " // Бригада: " Patrol ".", "500")
+    %vybor%("r [" TAG "] Ложный // Вызов: " to " // Бригада: " Patrol ".", "500")
 } Else {
-    SendChat("r [" TAG "] Ложный // Вызов: " to ".", "500")
+    %vybor%("r [" TAG "] Ложный // Вызов: " to ".", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat("cancel", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
+%vybor%("cancel", "500")
+%vybor%(" " Skrin_1 " ", "500")
 Return
 
 
@@ -8649,15 +8626,15 @@ Return
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Обработан на месте // Вызов: " to " // Бригада: " Patrol ".", "500")
+    %vybor%("r [" TAG "] Обработан на месте // Вызов: " to " // Бригада: " Patrol ".", "500")
 } Else {
-    SendChat("r [" TAG "] Обработан на месте // Вызов: " to ".", "500")
+    %vybor%("r [" TAG "] Обработан на месте // Вызов: " to ".", "500")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
+%vybor%(" " Skrin_1 " ", "500")
 Return
 
 
@@ -8666,19 +8643,19 @@ IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 Sleep 150
 SendPlay {Enter}
-SendChat("speclight_onoff", "500")
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me сняв КПК с пояса, вызвал" floor " через него дежурного врача", "  " zaderzhka " ")
-SendChat("do Через некоторое время пришёл врач и забрал каталку с пациентом.", "  " zaderzhka " ")
-SendChat("hospital", "500")
-SendChat("me зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("speclight_onoff", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me сняв КПК с пояса, вызвал" floor " через него дежурного врача", "  " zaderzhka " ")
+%vybor%("do Через некоторое время пришёл врач и забрал каталку с пациентом.", "  " zaderzhka " ")
+%vybor%("hospital", "500")
+%vybor%("me зажав кнопку, начал" floor " что-то говорить в него", "1000")
 If (Patrol != "") {
-    SendChat("r [" TAG "] Госпитализирован // Вызов: " to " // Бригада: " Patrol ".", "1000")
+    %vybor%("r [" TAG "] Госпитализирован // Вызов: " to " // Бригада: " Patrol ".", "1000")
 } Else {
-    SendChat("r [" TAG "] Госпитализирован // Вызов: " to ".", "1000")
+    %vybor%("r [" TAG "] Госпитализирован // Вызов: " to ".", "1000")
 }
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
+%vybor%(" " Skrin_1 " ", "500")
 Return
 
 
@@ -8819,18 +8796,18 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_5.mp3
 
 Loop, %Skolko%
@@ -8846,32 +8823,32 @@ Loop, %Skolko%
 		break
 	}
     SendPlay {Enter}
-    SendChat("do КПК висит на поясе.", "500")
-    SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+    %vybor%("do КПК висит на поясе.", "500")
+    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        SendChat("ro [" Bol_ro_1 "] Патрулирование республики // Бригада:" Patrol_1 ". ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Патрулирование республики // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        SendChat("ro [" Bol_ro_1 "] Патрулирование республики. ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Патрулирование республики. ", "1000")
     }
-    SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat(" " Skrin_1 " ", "500")
+    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+    %vybor%(" " Skrin_1 " ", "500")
 }
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Завершил" floor " патруль республики // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Завершил" floor " патруль республики. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_4.mp3
 Gui, Destroy
 sleep 1000
@@ -8891,18 +8868,18 @@ If (Patrol_1 = "") {
 
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 
 ; Если бригада не указана, не включаем её в сообщение
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Завершил" female " патруль республики // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" female " патруль республики // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Завершил" female " патруль республики. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" female " патруль республики. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_3.mp3
 Gui, Destroy
 sleep 10000
@@ -8962,18 +8939,18 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 
 ; Если фамилия напарника не введена, вывести без нее
 If (Patrol != "") {
-    SendChat("r [" TAG "] Вылетел" floor " на воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Вылетел" floor " на воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Вылетел" floor "  воздушное патрулирование города.", "500")
+    %vybor%("r [" TAG "] Вылетел" floor "  воздушное патрулирование города.", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
 
 Loop, %Skolko%
@@ -8986,35 +8963,35 @@ Loop, %Skolko%
 		break
 	}
     SendPlay {Enter}
-    SendChat("do КПК висит на поясе.", "500")
-    SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+    %vybor%("do КПК висит на поясе.", "500")
+    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     
     ; Если фамилия напарника не введена, вывести без нее
     If (Patrol != "") {
-        SendChat("r [" TAG "] Воздушное патрулирование города // Бригада:" Patrol ". ", "1000")
+        %vybor%("r [" TAG "] Воздушное патрулирование города // Бригада:" Patrol ". ", "1000")
     } Else {
-        SendChat("r [" TAG "] Воздушное патрулирование города.", "1000")
+        %vybor%("r [" TAG "] Воздушное патрулирование города.", "1000")
     }
 
-    SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat(" " Skrin_1 " ", "500")
+    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+    %vybor%(" " Skrin_1 " ", "500")
 }
 
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, вывести без нее
 If (Patrol != "") {
-    SendChat("r [" TAG "] Завершил" floor " воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
 } Else {
-    SendChat("r [" TAG "] Завершил" floor " воздушное патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " воздушное патрулирование города. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 1000
@@ -9026,18 +9003,18 @@ Return
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol != "") {
-    SendChat("r [" TAG "]  Окончил" floor " воздушное патрулирование города // Бригада: " Patrol ". ", "1000")
+    %vybor%("r [" TAG "]  Окончил" floor " воздушное патрулирование города // Бригада: " Patrol ". ", "1000")
 } Else {
-    SendChat("r [" TAG "]  Окончил" floor " воздушное патрулирование города.", "1000")
+    %vybor%("r [" TAG "]  Окончил" floor " воздушное патрулирование города.", "1000")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay,C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 10000
@@ -9099,18 +9076,18 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_5.mp3
 
 Loop, %Skolko%
@@ -9126,32 +9103,32 @@ Loop, %Skolko%
 		break
 	}
     SendPlay {Enter}
-    SendChat("do КПК висит на поясе.", "500")
-    SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+    %vybor%("do КПК висит на поясе.", "500")
+    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        SendChat("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
     }
-    SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat(" " Skrin_1 " ", "500")
+    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+    %vybor%(" " Skrin_1 " ", "500")
 }
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_4.mp3
 Gui, Destroy
 sleep 1000
@@ -9171,19 +9148,19 @@ If (Patrol_1 = "") {
 
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 
 ; Если бригада не указана, не включаем её в сообщение
 
 If (Patrol_1 != "") {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    SendChat("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция. ", "500")
 }
 
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_3.mp3
 Gui, Destroy
 sleep 10000
@@ -9222,11 +9199,11 @@ Gui, Show, xCenter y0 w200 h70
 
 Sleep 7000
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
-SendChat("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_5.mp3
 
 Loop, %Skolko%
@@ -9239,19 +9216,19 @@ Loop, %Skolko%
 	}
     IniRead, Lancia, C:\ProgramData\KPRP\KPRP-main\Statistika.ini, Statistic, Lancia
     SendPlay {Enter}
-    SendChat("do КПК висит на поясе.", "1000")
-    SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
-    SendChat("r [" TAG "] Продолжаю дежурство на посту:Регистратура.", "1000")
-    SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    SendChat(" " Skrin_1 " ", "500")
+    %vybor%("do КПК висит на поясе.", "1000")
+    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+    %vybor%("r [" TAG "] Продолжаю дежурство на посту:Регистратура.", "1000")
+    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+    %vybor%(" " Skrin_1 " ", "500")
 }
 
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "500")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-SendChat("r [" TAG "] Завершил" floor " пост:Регистратура.", "500")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("do КПК висит на поясе.", "500")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
+%vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_4.mp3
 Gui, Destroy
 Return
@@ -9262,11 +9239,11 @@ Return
 :?:/ПО_1::
 Sleep 1500
 SendPlay {Enter}
-SendChat("do КПК висит на поясе.", "1000")
-SendChat("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
-SendChat("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
-SendChat("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-SendChat(" " Skrin_1 " ", "500")
+%vybor%("do КПК висит на поясе.", "1000")
+%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
+%vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
+%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
+%vybor%(" " Skrin_1 " ", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_3.mp3
 Gui, Destroy
 sleep 10000
@@ -11851,14 +11828,20 @@ Gui, 3:Add, Picture, x0 y0 h350 w550,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ПР_1
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ПР_2
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /ПР_3
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /ПР_4
+Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /ПР_5
 
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x90 y15 h500 w370 +BackgroundTrans, [Передайте заключение]
-Gui, 3:Add, Text, x90 y35 h500 w370 +BackgroundTrans, [Выдать медкарту]
+Gui, 3:Add, Text, x90 y15 h500 w370 +BackgroundTrans, [Передайте паспорт]
+Gui, 3:Add, Text, x90 y35 h500 w370 +BackgroundTrans, [Изучение и взятие паспорта]
+Gui, 3:Add, Text, x90 y55 h500 w370 +BackgroundTrans, [Попросить передать заключение]
+Gui, 3:Add, Text, x90 y75 h500 w370 +BackgroundTrans, [Изучение и взятие заключения]
+Gui, 3:Add, Text, x90 y95 h500 w370 +BackgroundTrans, [Выдать медкарту]
 
-Gui, 3:show, center h100 w350, Призыв
+Gui, 3:show, center h140 w350, Призыв
 Return
 
 

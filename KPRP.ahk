@@ -1179,6 +1179,7 @@ IniRead, NameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
 IniRead, OtchetskstoDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
 
 
+
 IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniRead, Zaderzhka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
 IniRead, Zaderzhka_lektsiya, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
@@ -1190,7 +1191,8 @@ IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEn
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 IniRead, ToggleTimer, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
-
+IniRead, vybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
+IniRead, userVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
@@ -1637,6 +1639,11 @@ if MaxMinutes=ERROR
 MaxMinutes=4
 if Taymer_Nastroyka=ERROR
 Taymer_Nastroyka=Включен
+if vybor=ERROR
+vybor=SendChat
+
+if userVybor=ERROR
+userVybor=Автоотправка
 
 
 if FonVybor=ERROR
@@ -1717,6 +1724,7 @@ if (Taymer_Nastroyka = "Включен") {
     Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
 }
 
+Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -1755,7 +1763,23 @@ ProverkaAdmin()
 
 }
 
-
+SendRU(text) {
+    ; Конвертация текста в CP1251 и вставка в буфер обмена
+    VarSetCapacity(buf, StrPut(text, "CP1251"))
+    StrPut(text, &buf, "CP1251")
+    Clipboard := StrGet(&buf, "CP1251")
+    
+    ; Ждём нажатия Ctrl+V
+    ToolTip, Готово. Откройте F8 нажмите Ctrl+V и для отправки нажмите Enter...
+    Loop {
+        Sleep, 40
+        if GetKeyState("Ctrl", "P") && GetKeyState("V", "P") {
+            Break
+        }
+    }
+    ToolTip
+    Sleep, 400
+}
 
 
 
@@ -2028,7 +2052,7 @@ Loop, read, %Objects1%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2041,7 +2065,7 @@ Loop, read, %Objects2%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2054,7 +2078,7 @@ Loop, read, %Objects3%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2067,7 +2091,7 @@ Loop, read, %Objects4%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2080,7 +2104,7 @@ Loop, read, %Objects5%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2093,7 +2117,7 @@ Loop, read, %Objects6%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2106,7 +2130,7 @@ Loop, read, %Objects7%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2119,7 +2143,7 @@ Loop, read, %Objects8%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2132,7 +2156,7 @@ Loop, read, %Objects9%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2145,7 +2169,7 @@ Loop, read, %Objects10%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2158,7 +2182,7 @@ Loop, read, %Objects11%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2171,7 +2195,7 @@ Loop, read, %Objects12%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2184,7 +2208,7 @@ Loop, read, %Objects13%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2197,7 +2221,7 @@ Loop, read, %Objects14%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2210,7 +2234,7 @@ Loop, read, %Objects15%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2223,7 +2247,7 @@ Loop, read, %Objects16%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2236,7 +2260,7 @@ Loop, read, %Objects17%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2249,7 +2273,7 @@ Loop, read, %Objects18%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2262,7 +2286,7 @@ Loop, read, %Objects19%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2275,7 +2299,7 @@ Loop, read, %Objects20%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2288,7 +2312,7 @@ Loop, read, %Objects21%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2301,7 +2325,7 @@ Loop, read, %Objects22%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2314,7 +2338,7 @@ Loop, read, %Objects23%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2327,7 +2351,7 @@ Loop, read, %Objects24%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2340,7 +2364,7 @@ Loop, read, %Objects25%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2353,7 +2377,7 @@ Loop, read, %Objects26%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2366,7 +2390,7 @@ Loop, read, %Objects27%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2379,7 +2403,7 @@ Loop, read, %Objects28%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2392,7 +2416,7 @@ Loop, read, %Objects29%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2405,7 +2429,7 @@ Loop, read, %Objects30%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2418,7 +2442,7 @@ Loop, read, %Objects31%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2431,7 +2455,7 @@ Loop, read, %Objects32%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2445,7 +2469,7 @@ Loop, read, %Objects33%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2459,7 +2483,7 @@ Loop, read, %Objects34%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2473,7 +2497,7 @@ Loop, read, %Objects35%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2487,7 +2511,7 @@ Loop, read, %Objects36%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2501,7 +2525,7 @@ Loop, read, %Objects37%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2514,7 +2538,7 @@ Loop, read, %Objects38%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2528,7 +2552,7 @@ Loop, read, %Objects39%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2541,7 +2565,7 @@ Loop, read, %Objects40%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2554,7 +2578,7 @@ Loop, read, %Objects41%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2567,7 +2591,7 @@ Loop, read, %Objects42%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2581,7 +2605,7 @@ Loop, read, %Objects43%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2595,7 +2619,7 @@ Loop, read, %Objects44%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2608,7 +2632,7 @@ Loop, read, %Objects45%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2622,7 +2646,7 @@ Loop, read, %Objects46%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2636,7 +2660,7 @@ Loop, read, %Objects47%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2650,7 +2674,7 @@ Loop, read, %Objects48%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2664,7 +2688,7 @@ Loop, read, %Objects49%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2678,10 +2702,12 @@ Loop, read, %Objects50%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
+
+
 
 
 
@@ -2693,7 +2719,7 @@ Loop, read, %Objects51%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2707,7 +2733,7 @@ Loop, read, %Objects52%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2720,7 +2746,7 @@ Loop, read, %Objects53%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2733,7 +2759,7 @@ Loop, read, %Objects54%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2746,7 +2772,7 @@ Loop, read, %Objects55%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2759,7 +2785,7 @@ Loop, read, %Objects56%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2772,7 +2798,7 @@ Loop, read, %Objects57%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2785,7 +2811,7 @@ Loop, read, %Objects58%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2798,7 +2824,7 @@ Loop, read, %Objects59%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2811,7 +2837,7 @@ Loop, read, %Objects60%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2825,7 +2851,7 @@ Loop, read, %Objects61%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2838,7 +2864,7 @@ Loop, read, %Objects62%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2850,7 +2876,7 @@ Loop, read, %Objects63%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2864,7 +2890,7 @@ Loop, read, %Objects64%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2877,7 +2903,7 @@ Loop, read, %Objects65%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2890,7 +2916,7 @@ Loop, read, %Objects66%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2903,7 +2929,7 @@ Loop, read, %Objects67%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2916,7 +2942,7 @@ Loop, read, %Objects68%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2929,7 +2955,7 @@ Loop, read, %Objects69%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2943,7 +2969,7 @@ Loop, read, %Objects70%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2956,7 +2982,7 @@ Loop, read, %Objects71%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2969,7 +2995,7 @@ Loop, read, %Objects72%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2982,7 +3008,7 @@ Loop, read, %Objects73%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -2995,7 +3021,7 @@ Loop, read, %Objects74%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3008,7 +3034,7 @@ Loop, read, %Objects75%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3021,7 +3047,7 @@ Loop, read, %Objects76%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3034,7 +3060,7 @@ Loop, read, %Objects77%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3047,7 +3073,7 @@ Loop, read, %Objects78%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3060,7 +3086,7 @@ Loop, read, %Objects79%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3073,7 +3099,7 @@ Loop, read, %Objects80%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3086,7 +3112,7 @@ Loop, read, %Objects81%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3099,7 +3125,7 @@ Loop, read, %Objects82%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3112,7 +3138,7 @@ Loop, read, %Objects83%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3125,7 +3151,7 @@ Loop, read, %Objects84%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3138,7 +3164,7 @@ Loop, read, %Objects85%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3151,7 +3177,7 @@ Loop, read, %Objects86%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3164,7 +3190,7 @@ Loop, read, %Objects87%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3177,7 +3203,7 @@ Loop, read, %Objects88%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3190,7 +3216,7 @@ Loop, read, %Objects89%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3203,7 +3229,7 @@ Loop, read, %Objects90%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3216,7 +3242,7 @@ Loop, read, %Objects91%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3229,7 +3255,7 @@ Loop, read, %Objects92%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3242,7 +3268,7 @@ Loop, read, %Objects93%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3255,7 +3281,7 @@ Loop, read, %Objects94%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3268,7 +3294,7 @@ Loop, read, %Objects95%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 
@@ -3280,7 +3306,7 @@ Loop, read, %Objects96%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
@@ -3293,12 +3319,10 @@ Loop, read, %Objects97%
 {
 Loop, parse, A_LoopReadLine, %A_Tab%
 {
-SendChat("" A_LoopField "", "  " zaderzhka " ")
+%vybor%("" A_LoopField "", "  " zaderzhka " ")
 }
 }
 Return
-
-
 
 
 
@@ -3311,7 +3335,9 @@ Gui, 6:Add, Picture, x620 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramDat
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
-Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||3000|3500|4000|4500|5000|5500|6000|6500|7000|13000
+
+
+Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||0|3000|3500|4000|4500|5000|5500|6000|6500|7000|13000
 
 if FonVybor=
 Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
@@ -3321,15 +3347,51 @@ Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Установлен свой фо�
 Gui, 6:Add, ComboBox, x90 y325 w295 vShrift, %Shrift%||Arial|Consolas|Courier New|Comic Sans MS|Lucida Console|MS Sans Serif|Segoe UITimes New Roman
 Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
-Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||4000|4500|5000|5500|6000|6500|7000
+
+
+Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||0|4000|4500|5000|5500|6000|6500|7000
+
 Gui, 6:Add, Slider, x90 y700 w295 h30 vSoundEnable Range0-1, %SoundEnable% 
 Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
 Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
 Gui, 6:Add, DropDownList, x490 y225 w195 vToggleTimer, %ToggleTimer%||Включен|Выключен
 
+Gui, 6:Add, DropDownList, x490 y325 w195 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
 
 
 Gui, 6:show, center , Настройки
+Gosub, VyborChanged
+Return
+
+VyborChanged:
+Gui, 6:Submit, NoHide  ; Получаем текущие значения GUI
+
+if (userVybor = "Ручной ввод") {
+    ; Меняем основную переменную режима
+    vybor := "SendRU"
+
+    ; Сохраняем текущие значения задержек
+    StaraiaZaderzhka := Zaderzhka
+    StaraiaZaderzhkaLektsiya := Zaderzhka_lektsiya
+
+    ; Ставим задержки в 0 и отключаем
+    GuiControl, 6:ChooseString, Zaderzhka, 0
+    GuiControl, 6:Disable, Zaderzhka
+
+    GuiControl, 6:ChooseString, Zaderzhka_lektsiya, 0
+    GuiControl, 6:Disable, Zaderzhka_lektsiya
+}
+else if (userVybor = "Автоотправка") {
+    ; Меняем основную переменную режима
+    vybor := "SendChat"
+
+    ; Восстанавливаем задержки и включаем
+    GuiControl, 6:Enable, Zaderzhka
+    GuiControl, 6:ChooseString, Zaderzhka, %StaraiaZaderzhka%
+
+    GuiControl, 6:Enable, Zaderzhka_lektsiya
+    GuiControl, 6:ChooseString, Zaderzhka_lektsiya, %StaraiaZaderzhkaLektsiya%
+}
 Return
 
 
@@ -4335,7 +4397,8 @@ IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Soun
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 IniWrite, %ToggleTimer%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
-
+IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
+IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 
 
 IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
