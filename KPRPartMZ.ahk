@@ -4316,22 +4316,40 @@ Return
 
 
 :?:/Алкоголь_1::
+SendPlay {Enter}
+%vybor%(" " stol "  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит чистый бланк медицинского освидетельствования и ручка. ", "  " zaderzhka " ")
+%vybor%("me внёс полученную информацию в бланк ", "  " zaderzhka " ")
+%vybor%("say Назовите свое ФИО? ", "  " zaderzhka " ")
+%vybor%("say А ещё где и кем работаете? ", "  " zaderzhka " ")
 
 
 Return
 
 
 :?:/Алкоголь_2::
+SendPlay {Enter}
+%vybor%("say Замечательно, кем и когда направлен на медицинское освидетельствование? ", "  " zaderzhka " ")
+%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
+%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
 
 Return
 
 :?:/Алкоголь_3::
+SendPlay {Enter}
+%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
+
+
 
 Return
 
 :?:/Алкоголь_4::
+SendPlay {Enter}
+%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
+
 
 Return
+
 
 :?:/АВД_1::
 SendPlay {Enter}
@@ -7964,6 +7982,7 @@ Return
 
 :?:/МК_11::
 SendPlay {Enter}
+%vybor%(" " stol "  ", "  " zaderzhka " ")
 %vybor%("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
 %vybor%("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
 %vybor%("me написав в строке заключения «К государственной службе годен», отложил" floor " ручку", "  " zaderzhka " ")
