@@ -6772,8 +6772,8 @@ Gui, Add, Text, vTimerText cYellow Center, 00:00:00
 Gui, Show, xCenter y0 w200 h70
 Return
 
-:?:/работа-::
-SendPlay {Enter}
+:?:/работа_::
+;SendPlay {Enter}
 Gui, Destroy
 Return
 
