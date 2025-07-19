@@ -6757,6 +6757,26 @@ SendPlay {Enter}
 Reload
 Return
 
+:?:/+работа::
+SendPlay {Enter}
+Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+Gui, Color, 12345
+Gui, Font, s25
+
+startTime := A_TickCount
+
+SetTimer, UpdateTime, 1000
+
+WinSet, TransColor, %CustomColor3% 215
+Gui, Add, Text, vTimerText cYellow Center, 00:00:00
+Gui, Show, xCenter y0 w200 h70
+Return
+
+:?:/-работа::
+SendPlay {Enter}
+Gui, Destroy
+Return
+
 :?:/Грудь_У::
 SendPlay {Enter}
 %vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
