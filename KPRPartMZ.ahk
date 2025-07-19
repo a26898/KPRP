@@ -6769,7 +6769,7 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, xCenter y0 w200 h70
+Gui, Show, NoActivate xCenter y0 w200 h70
 Return
 
 :?:/работа_::
