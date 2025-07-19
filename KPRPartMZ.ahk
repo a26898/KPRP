@@ -8043,7 +8043,7 @@ yPos := 40                            ; 20 px отступ сверху
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
-Gui, Show, x%xPos% y%yPos%, КС ВЗ
+Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
 return
 
 :?:/МК_111::
@@ -8116,7 +8116,7 @@ yPos := 40                            ; 20 px отступ сверху
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
-Gui, Show, x%xPos% y%yPos%, КС ВЗ
+Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
 return
 
 :?:/МК_2::
