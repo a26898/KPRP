@@ -7973,6 +7973,26 @@ SendPlay {Enter}
 %vybor%("say Я выпишу Вам Мелоксикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
+; Функция для определения активного монитора
+GetActiveMonitorInfo() {
+    WinGet, activeHwnd, ID, A
+    if !activeHwnd
+        return false
+    
+    WinGetPos, winX, winY, winW, winH, ahk_id %activeHwnd%
+    centerX := winX + winW // 2
+    centerY := winY + winH // 2
+    
+    SysGet, monitorCount, MonitorCount
+    Loop, %monitorCount% {
+        SysGet, monArea, Monitor, %A_Index%
+        if (centerX >= monAreaLeft && centerX <= monAreaRight && centerY >= monAreaTop && centerY <= monAreaBottom) {
+            return { left: monAreaLeft, top: monAreaTop, right: monAreaRight, bottom: monAreaBottom }
+        }
+    }
+    return false
+}
+
 
 :?:/МК_1::
 SendPlay {Enter}
@@ -7981,13 +8001,15 @@ SetTitleMatchMode, 2
 FileEncoding, UTF-8
 
 url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
-savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"  ; <--- сохраняем туда, куда нужно
+savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
+
 ; Скачать таблицу
 UrlDownloadToFile, %url%, %savePath%
 
 if !FileExist(savePath)
 {
     MsgBox, Не удалось скачать таблицу!
+    return
 }
 
 content := "Временный запрет                     Красный список`n"
@@ -8032,15 +8054,24 @@ if (height > maxHeight)
 winWidth := 740
 winHeight := height
 
-; Получить размеры основного экрана
-SysGet, screenWidth, 78
-SysGet, screenHeight, 79
+; Позиционирование на активном мониторе
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 40
+    yPos := monitorInfo.top + 40
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, primary, MonitorPrimary
+    SysGet, mon, Monitor, %primary%
+    xPos := monRight - winWidth - 40
+    yPos := monTop + 40
+}
 
-; Позиционировать окно с правой стороны основного экрана
-xPos := screenWidth - winWidth - 40   ; 20 px отступ от правого края экрана
-yPos := 40                            ; 20 px отступ сверху
-
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+Gui, New  ; Создаем новое GUI окно
+Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
 Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
@@ -8054,13 +8085,15 @@ SetTitleMatchMode, 2
 FileEncoding, UTF-8
 
 url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
-savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"  ; <--- сохраняем туда, куда нужно
+savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
+
 ; Скачать таблицу
 UrlDownloadToFile, %url%, %savePath%
 
 if !FileExist(savePath)
 {
     MsgBox, Не удалось скачать таблицу!
+    return
 }
 
 content := "Временный запрет                     Красный список`n"
@@ -8105,15 +8138,24 @@ if (height > maxHeight)
 winWidth := 740
 winHeight := height
 
-; Получить размеры основного экрана
-SysGet, screenWidth, 78
-SysGet, screenHeight, 79
+; Позиционирование на активном мониторе
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 40
+    yPos := monitorInfo.top + 40
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, primary, MonitorPrimary
+    SysGet, mon, Monitor, %primary%
+    xPos := monRight - winWidth - 40
+    yPos := monTop + 40
+}
 
-; Позиционировать окно с правой стороны основного экрана
-xPos := screenWidth - winWidth - 40   ; 20 px отступ от правого края экрана
-yPos := 40                            ; 20 px отступ сверху
-
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+Gui, New  ; Создаем новое GUI окно
+Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
 Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
