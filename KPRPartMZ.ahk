@@ -4323,7 +4323,6 @@ SendPlay {Enter}
 %vybor%("say Назовите свое ФИО? ", "  " zaderzhka " ")
 %vybor%("say А ещё где и кем работаете? ", "  " zaderzhka " ")
 
-
 Return
 
 
@@ -4331,22 +4330,78 @@ Return
 SendPlay {Enter}
 %vybor%("say Замечательно, кем и когда направлен на медицинское освидетельствование? ", "  " zaderzhka " ")
 %vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
-%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
-
+%vybor%("me внёс полученную информацию в бланк ", "  " zaderzhka " ")
+%vybor%("do Акт заполнен на половину. ", "  " zaderzhka " ")
+%vybor%("me отложил бланк и ручку на стол ", "  " zaderzhka " ")
 Return
 
 :?:/Алкоголь_3::
 SendPlay {Enter}
-%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
-
-
+%vybor%("do В шкафу новая насадка и алкотестер. ", "  " zaderzhka " ")
+%vybor%("me достал из шкафа новую насадку и алкотестер ", "  " zaderzhka " ")
+%vybor%("do Алкотестер и насадка в руке. ", "  " zaderzhka " ")
+%vybor%("me поставил новую насадку ", "  " zaderzhka " ")
+%vybor%("do Насадка на алкотестере.  ", "  " zaderzhka " ")
+%vybor%("say Сделайте глубокий выдох в трубку.  ", "  " zaderzhka " ")
+%vybor%("do На экране алкотестера значения [число].  ", "  " zaderzhka " ")
 
 Return
 
 :?:/Алкоголь_4::
 SendPlay {Enter}
-%vybor%("say На этом все. Удачи, будьте аккуратнее. ", "  " zaderzhka " ")
+%vybor%(" " stol "  ", "  " zaderzhka " ")
+%vybor%("do На столе находится упаковка медицинских перчаток, склянка медицинского спирта, вата и игла. ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку с медицинскими перчатками, надел их на руки ", "  " zaderzhka " ")
+%vybor%("me взяв со стола склянку медицинского спирта, открыл её ", "  " zaderzhka " ")
+%vybor%("me взяв вату со стола, смочил её спиртом ", "  " zaderzhka " ")
+%vybor%("me отложил склянку на стол ", "  " zaderzhka " ")
+%vybor%("me обработал указательный палец правой руки ", "  " zaderzhka " ")
+%vybor%("do Рядом стоит урна. ", "  " zaderzhka " ")
+%vybor%("me выбросил использованную вату в урну ", "  " zaderzhka " ")
+%vybor%("do Упакованная полоска экспресс-теста на алкоголь лежит на столе. ", "  " zaderzhka " ")
+%vybor%("me открыв упаковку, достал полоску экспресс-теста ", "  " zaderzhka " ")
+%vybor%("me взяв со стола иглу, подставил её к указательному пальцу правой руки ", "  " zaderzhka " ")
+%vybor%("me сделав укол, подставил полоску экспресс-теста к пальцу ", "  " zaderzhka " ")
+%vybor%("do На тест-полоску капнуло необходимое количество крови. ", "  " zaderzhka " ")
+%vybor%("do Экспресс-тест показал положительный результат? ", "  " zaderzhka " ")
+%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
 
+Return
+
+:?:/Алкоголь_5::
+SendPlay {Enter}
+%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
+%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
+%vybor%("me взяв ручку, заполнил акт и отметил, что содержание алкоголя в организме не соответствует норме ", "  " zaderzhka " ")
+%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил печать "ГВРП Маршалова А. - Минздрав РП" на строке заключения ", "  " zaderzhka " ")
+%vybor%("me поставил личную подпись", "  " zaderzhka " ")
+%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
+
+
+Return
+
+:?:/Алкоголь_6::
+SendPlay {Enter}
+%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
+%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
+%vybor%("me взяв ручку, заполнил акт и отметил, что содержание алкоголя в организме соответствует норме ", "  " zaderzhka " ")
+%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил печать "ГВРП Маршалова А. - Минздрав РП" на строке заключения ", "  " zaderzhka " ")
+%vybor%("me поставил личную подпись", "  " zaderzhka " ")
+%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
+
+Return
+
+:?:/Алкоголь_7::
+SendPlay {Enter}
+%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
+%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
+%vybor%("me взяв ручку, составил акт и поставил отметку об отказе от медицинского освидетельствования ", "  " zaderzhka " ")
+%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил печать "ГВРП Маршалова А. - Минздрав РП" на строке заключения ", "  " zaderzhka " ")
+%vybor%("me поставил личную подпись", "  " zaderzhka " ")
+%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
 
 Return
 
@@ -4385,33 +4440,68 @@ Return
 
 :?:/Наркотики_1::
 SendPlay {Enter}
-%vybor%("do На полке лежит различное оборудование.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " с полки экспресс тест на наркотики  ", "  " zaderzhka " ")
-%vybor%("me распечатал" floor " герметичную оболочку баночки  ", "  " zaderzhka " ")
-%vybor%("me передал" floor " тест человеку напротив  ", "  " zaderzhka " ")
-%vybor%("say Возьмите.  ", "  " zaderzhka " ")
-%vybor%("say Вам необходимо заполнить контейнер уриной до вот этого уровня. ", "  " zaderzhka " ")
-%vybor%("me показал" floor " на отметку в тестере  ", "  " zaderzhka " ")
+%vybor%(" " stol "  ", "  " zaderzhka " ")
+%vybor%("do На столе лежит чистый бланк медицинского освидетельствования и ручка. ", "  " zaderzhka " ")
+%vybor%("me внёс полученную информацию в бланк ", "  " zaderzhka " ")
+%vybor%("say Назовите свое ФИО? ", "  " zaderzhka " ")
+%vybor%("say А ещё где и кем работаете? ", "  " zaderzhka " ")
+
 Return
 
 :?:/Наркотики_2::
 SendPlay {Enter}
-%vybor%("say Давайте я посмотрю.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " тест у человека напротив ", "  " zaderzhka " ")
-%vybor%("me достал" floor " тест-полоску из контейнера   ", "  " zaderzhka " ")
-%vybor%("me посмотрел" floor " на тест-полоску   ", "  " zaderzhka " ")
-%vybor%("do У человека есть наркотическое опьянение? ", "  " zaderzhka " ")
+%vybor%("say Замечательно, кем и когда направлен на медицинское освидетельствование? ", "  " zaderzhka " ")
+%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
+%vybor%("me внёс полученную информацию в бланк ", "  " zaderzhka " ")
+%vybor%("do Акт заполнен на половину. ", "  " zaderzhka " ")
+%vybor%("me отложил бланк и ручку на стол ", "  " zaderzhka " ")
+
 Return
 
 :?:/Наркотики_3::
 SendPlay {Enter}
-%vybor%("say У вас обнаружено наркотическое опьянение.   ", " " zaderzhka " ")
+%vybor%("do В медицинской сумке находятся необходимые медицинские инструменты.   ", " " zaderzhka " ")
+%vybor%("me открыв суму, достал из неё баночку   ", " " zaderzhka " ")
+%vybor%("say Возьмите пожалуйста баночку.   ", " " zaderzhka " ")
+%vybor%("say Сейчас Вам под присмотром сотрудников полиции необходимо отойти, сходить в туалет по-маленькому и принести полученный результат сюда.   ", " " zaderzhka " ")
+%vybor%("say Мочой должна быть наполнена как минимум половина баночки. Ждем Вас тут.   ", " " zaderzhka " ")
 Return
 
 :?:/Наркотики_4::
 SendPlay {Enter}
-%vybor%("say Вы не в состоянии наркотического опьянения. ", " " zaderzhka " ")
+%vybor%("me взяв баночку, открыл ее ", " " zaderzhka " ")
+%vybor%("me достал из сумки тест-полоску для экспресс-теста на наркотики ", " " zaderzhka " ")
+%vybor%("me опустил полоску в мочевую жидкость пациента ", " " zaderzhka " ")
+%vybor%("do Какой результат показала тест-полоска? ", " " zaderzhka " ")
+%vybor%("b /do Положительный. или /do Отрицательный.", "  " zaderzhka " ")
 Return
+
+:?:/Наркотики_5::
+SendPlay {Enter}
+%vybor%("do На тест-полоске отобразились две бордовые линии. ", " " zaderzhka " ")
+%vybor%("say Наркотиков в моче пациента не наблюдается, все чисто. ", " " zaderzhka " ")
+%vybor%("me закрыв баночку с анализами пациента, убрал ее в медицинскую сумку ", " " zaderzhka " ")
+Return
+
+:?:/Наркотики_6::
+SendPlay {Enter}
+%vybor%("do На тест-полоске отобразилась одна бордовая линия. ", " " zaderzhka " ")
+%vybor%("say Тест показал, что Вы употребляли наркотические вещества. Проследуйте за сотрудниками полиции. ", " " zaderzhka " ")
+%vybor%("me закрыв баночку с анализами пациента, убрал ее в медицинскую сумку ", " " zaderzhka " ")
+Return
+
+:?:/Наркотики_7::
+SendPlay {Enter}
+%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления наркотиков и состояния опьянения. ", "  " zaderzhka " ")
+%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
+%vybor%("me взяв ручку, составил акт и поставил отметку об отказе от медицинского освидетельствования ", "  " zaderzhka " ")
+%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
+%vybor%("me взяв штемпель со стола, поставил печать "ГВРП Маршалова А. - Минздрав РП" на строке заключения ", "  " zaderzhka " ")
+%vybor%("me поставил личную подпись", "  " zaderzhka " ")
+%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
+
+Return
+
 
 :?:/Ребро_1::
 SendPlay {Enter}
@@ -9834,14 +9924,19 @@ Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Алкоголь_1
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Алкоголь_2
 Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Алкоголь_3
 Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Алкоголь_4
+Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Алкоголь_5
+Gui, 3:Add, Text, x10 y115 h20 w120 +BackgroundTrans, /Алкоголь_6
+Gui, 3:Add, Text, x10 y135 h20 w120 +BackgroundTrans, /Алкоголь_7
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x130 y15 h500 w370 +BackgroundTrans, [Проверка на Алкоголь]
-Gui, 3:Add, Text, x130 y35 h500 w370 +BackgroundTrans, [Проверка на Алкоголь]
-Gui, 3:Add, Text, x130 y55 h500 w370 +BackgroundTrans, [Проверка на Алкоголь превышена норма]
-Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [Проверка на Алкоголь не превышена норма]
-
+Gui, 3:Add, Text, x130 y15 h500 w370 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
+Gui, 3:Add, Text, x130 y35 h500 w370 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x130 y55 h500 w370 +BackgroundTrans, [АЛКОТЕСТЕР]
+Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [ВЗЯТИЕ КРОВИ]
+Gui, 3:Add, Text, x130 y95 h500 w370 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ превышена норма в 0,3 промилле]
+Gui, 3:Add, Text, x130 y115 h500 w370 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ не превышена норма в 0,3 промилле]
+Gui, 3:Add, Text, x130 y135 h500 w370 +BackgroundTrans, [Проверка на Алкоголь Акт отказа]
 
 Gui, 3:show, center h120 w520, Проверка на Алкоголь
 Return
@@ -9857,13 +9952,19 @@ Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Наркотики_1
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Наркотики_2
 Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Наркотики_3
 Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Наркотики_4
+Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Наркотики_5
+Gui, 3:Add, Text, x10 y115 h20 w120 +BackgroundTrans, /Наркотики_6
+Gui, 3:Add, Text, x10 y135 h20 w120 +BackgroundTrans, /Наркотики_7
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка на Наркотики]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка на Наркотики]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Проверка на Наркотики ответ да]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Проверка на Наркотики ответ нет]
+Gui, 3:Add, Text, x130 y15 h500 w370 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
+Gui, 3:Add, Text, x130 y35 h500 w370 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x130 y55 h500 w370 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
+Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
+Gui, 3:Add, Text, x130 y95 h500 w370 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче не были найдены следы наркотиков]
+Gui, 3:Add, Text, x130 y115 h500 w370 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче были обнаружены наркотики]
+Gui, 3:Add, Text, x130 y135 h500 w370 +BackgroundTrans, [Проверка на Наркотики Акт отказа]
 
 Gui, 3:show, center h120 w450, Проверка на Наркотики
 Return
