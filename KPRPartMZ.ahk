@@ -7993,6 +7993,93 @@ GetActiveMonitorInfo() {
     return false
 }
 
+:?:/ВЗ+::
+SendPlay {Enter}
+SetTitleMatchMode, 2
+FileEncoding, UTF-8
+
+url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
+savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
+
+; Скачать таблицу
+UrlDownloadToFile, %url%, %savePath%
+
+if !FileExist(savePath)
+{
+    MsgBox, Не удалось скачать таблицу!
+    return
+}
+
+content := "Временный запрет                     Красный список`n"
+content .= "---------------------------------------------------------------`n"
+
+FileRead, fileData, %savePath%
+
+Loop, Parse, fileData, `n, `r
+{
+    if (A_Index = 1)
+        continue
+    line := A_LoopField
+    fields := StrSplit(line, "`t")
+    if (fields.Length() >= 9)
+    {
+        nickE := fields[5]
+        passF := fields[6]
+        nickH := fields[8]
+        passI := fields[9]
+
+        ; Выравнивание
+        nickE := Format("{:-20}", nickE)
+        passF := Format("{:-12}", passF)
+        nickH := Format("{:-30}", nickH)
+
+        if (nickE != "" || nickH != "")
+            content .= nickE passF "|   " nickH passI "`n"
+    }
+}
+
+; Подсчёт высоты окна
+lines := 0
+Loop, Parse, content, `n, `r
+    lines++
+
+lineHeight := 18
+maxHeight := 600
+height := lines * lineHeight
+if (height > maxHeight)
+    height := maxHeight
+
+winWidth := 740
+winHeight := height
+
+; Позиционирование на активном мониторе
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 40
+    yPos := monitorInfo.top + 40
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, primary, MonitorPrimary
+    SysGet, mon, Monitor, %primary%
+    xPos := monRight - winWidth - 40
+    yPos := monTop + 40
+}
+
+Gui, ВЗ:New  ; Создаем новое GUI окно
+Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
+Gui, Font, s10, Courier New
+Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
+Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
+return
+
+:?:/ВЗ-::
+SendPlay {Enter}
+Gui, ВЗ:Destroy  ; Явно указываем имя GUI
+return
+
 
 :?:/МК_1::
 SendPlay {Enter}
@@ -8070,7 +8157,7 @@ else
     yPos := monTop + 40
 }
 
-Gui, New  ; Создаем новое GUI окно
+Gui, ВЗ:New  ; Создаем новое GUI окно
 Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
@@ -8154,7 +8241,7 @@ else
     yPos := monTop + 40
 }
 
-Gui, New  ; Создаем новое GUI окно
+Gui, ВЗ:New   ; Создаем новое GUI окно
 Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
 Gui, Font, s10, Courier New
 Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
@@ -8276,7 +8363,7 @@ SendPlay {Enter}
 %vybor%("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
 %vybor%("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
 %vybor%("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
-Gui, Destroy
+Gui, ВЗ:Destroy
 Return
 
 
