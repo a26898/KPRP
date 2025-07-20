@@ -8608,7 +8608,7 @@ if rand = 112
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say Сейчас пройдёт тренировка:" Word ". ","  " zaderzhka " ")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -8619,7 +8619,7 @@ SetTimer, UpdateTime, 1000 ;
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, xCenter y0 w200 h70
+Gui, Show, NoActivate xCenter y0 w200 h70
 Sleep 120000
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\5_minut.mp3
 Return
@@ -8629,7 +8629,7 @@ Return
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say На этом тренировка:" Word " окончена. ","  " zaderzhka " ")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Gui, Destroy
 Return
 
@@ -8650,7 +8650,7 @@ if rand = 6
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say Сейчас пройдёт мероприятие:" Word ". ","  " zaderzhka " ")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -8661,7 +8661,7 @@ SetTimer, UpdateTime, 1000 ;
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, xCenter y0 w200 h70
+Gui, Show, NoActivate xCenter y0 w200 h70
 Sleep 120000
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\5_minut.mp3
 Return
@@ -8686,7 +8686,7 @@ return
 SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say На этом мероприятие:" Word " окончено. ","  " zaderzhka " "), NumberCall
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Gui, Destroy
 Return
 
@@ -8739,6 +8739,9 @@ MsgBox, 48, Предупреждение, Вы ввели: Фамилия нап
 IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
+
+WinWaitActive, ahk_exe gta_sa.exe
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -8749,8 +8752,7 @@ SetTimer, UpdateTime, 1000 ;
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, xCenter y0 w200 h70
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -8761,7 +8763,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Заступил" floor " на пост:" Post ". ", "1000")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_5.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
@@ -8783,7 +8785,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Пост:" Post ". ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 }
 sleep 1000
 IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
@@ -8797,7 +8799,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Завершил" floor " пост:" Post ". ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Gui, Destroy
 sleep 1000
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_4.mp3
@@ -8820,7 +8822,7 @@ If (Patrol != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_3.mp3
 sleep 10000
 Gui, Destroy
@@ -8862,6 +8864,8 @@ MsgBox, 48, Предупреждение, Вы ввели: Фамилия нап
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
+WinWaitActive, ahk_exe gta_sa.exe
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345
 Gui, Font, s25
@@ -8872,8 +8876,7 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, xCenter y0 w200 h70
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
@@ -8884,7 +8887,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Выехал" female " на патрулирование города. ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
@@ -8905,7 +8908,7 @@ Loop, %Skolko%
         %vybor%("r [" TAG "] Патрулирование города. ", "500")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%(" " Skrin_1 " ", "500")
+    %vybor%("" Skrin_1 "", "500")
 }
 sleep 1000
 SendPlay {Enter}
@@ -8917,7 +8920,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 Return
@@ -8939,7 +8942,7 @@ If (Patrol != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 10000
@@ -8978,8 +8981,7 @@ MsgBox, 48, Предупреждение, Вы ввели: Фамилия нап
 
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-
-Sleep 7000
+WinWaitActive, ahk_exe gta_sa.exe
 SendPlay {Enter}
 %vybor%("me достал" floor " из кармана КПК, запустил" floor " его", "1500")
 %vybor%("me открывает базу поступивших вызовов", "1500")
@@ -8992,7 +8994,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Принял" floor " вызов: " to " ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Return
 
 
@@ -9011,7 +9013,7 @@ If (Patrol != "") {
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 %vybor%("cancel", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Return
 
 
@@ -9029,7 +9031,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Обработан на месте // Вызов: " to ".", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Return
 
 
@@ -9050,7 +9052,7 @@ If (Patrol != "") {
     %vybor%("r [" TAG "] Госпитализирован // Вызов: " to ".", "1000")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 Return
 
 
@@ -9178,6 +9180,8 @@ If (Patrol_1 != "") {
 }
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
+WinWaitActive, ahk_exe gta_sa.exe
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345
 Gui, Font, s25
@@ -9188,8 +9192,7 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, xCenter y0 w200 h70
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9202,7 +9205,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_5.mp3
 
 Loop, %Skolko%
@@ -9227,7 +9230,7 @@ Loop, %Skolko%
         %vybor%("ro [" Bol_ro_1 "] Патрулирование республики. ", "1000")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%(" " Skrin_1 " ", "500")
+    %vybor%("" Skrin_1 "", "500")
 }
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
@@ -9243,7 +9246,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_4.mp3
 Gui, Destroy
 sleep 1000
@@ -9274,7 +9277,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_3.mp3
 Gui, Destroy
 sleep 10000
@@ -9320,6 +9323,8 @@ MsgBox, 48, Предупреждение, Вы ввели: Фамилия нап
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
+WinWaitActive, ahk_exe gta_sa.exe
+
 ; Параметры окна
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345
@@ -9331,8 +9336,7 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, xCenter y0 w200 h70
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9345,7 +9349,7 @@ If (Patrol != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
 
 Loop, %Skolko%
@@ -9369,7 +9373,7 @@ Loop, %Skolko%
     }
 
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%(" " Skrin_1 " ", "500")
+    %vybor%("" Skrin_1 "", "500")
 }
 
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
@@ -9386,7 +9390,7 @@ If (Patrol != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 1000
@@ -9409,7 +9413,7 @@ If (Patrol != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay,C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
 Gui, Destroy
 sleep 10000
@@ -9458,6 +9462,8 @@ If (Patrol_1 != "") {
 }
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
+WinWaitActive, ahk_exe gta_sa.exe
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345
 Gui, Font, s25
@@ -9468,8 +9474,7 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, xCenter y0 w200 h70
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9482,7 +9487,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_5.mp3
 
 Loop, %Skolko%
@@ -9507,7 +9512,7 @@ Loop, %Skolko%
         %vybor%("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%(" " Skrin_1 " ", "500")
+    %vybor%("" Skrin_1 "", "500")
 }
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 sleep 1000
@@ -9523,7 +9528,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_4.mp3
 Gui, Destroy
 sleep 1000
@@ -9555,7 +9560,7 @@ If (Patrol_1 != "") {
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_3.mp3
 Gui, Destroy
 sleep 10000
@@ -9581,6 +9586,8 @@ If !RegExMatch(Skolko, "^\d+$") {
 MsgBox, 48, Предупреждение, Количество минут: %Skolko%0 Разворачивайте игру!
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
+WinWaitActive, ahk_exe gta_sa.exe
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
 Gui, Font, s25 
@@ -9590,15 +9597,13 @@ SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
 Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, xCenter y0 w200 h70
-
-Sleep 7000
+Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 %vybor%("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_5.mp3
 
 Loop, %Skolko%
@@ -9615,7 +9620,7 @@ Loop, %Skolko%
     %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
     %vybor%("r [" TAG "] Продолжаю дежурство на посту:Регистратура.", "1000")
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%(" " Skrin_1 " ", "500")
+    %vybor%("" Skrin_1 "", "500")
 }
 
 SendPlay {Enter}
@@ -9623,7 +9628,7 @@ SendPlay {Enter}
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 %vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_4.mp3
 Gui, Destroy
 Return
@@ -9638,7 +9643,7 @@ SendPlay {Enter}
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 %vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%(" " Skrin_1 " ", "500")
+%vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_3.mp3
 Gui, Destroy
 sleep 10000

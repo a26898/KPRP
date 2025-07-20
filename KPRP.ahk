@@ -1193,6 +1193,7 @@ IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Ta
 IniRead, ToggleTimer, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
 IniRead, vybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniRead, userVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
+IniRead, Skrin_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
@@ -1641,6 +1642,8 @@ if Taymer_Nastroyka=ERROR
 Taymer_Nastroyka=Включен
 if vybor=ERROR
 vybor=SendChat
+if Skrin_1=ERROR
+Skrin_1=screenshot
 
 if userVybor=ERROR
 userVybor=Автоотправка
@@ -3334,8 +3337,7 @@ Gui, 6:Add, Picture, x0 y0 w480   h765 +BackgroundTrans, C:\ProgramData\KPRP\KPR
 Gui, 6:Add, Picture, x620 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
-Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot, %Skrinshot%||Включен|Выключен
-
+Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot gSkrinshotChanged, %Skrinshot%||Включен|Выключен
 
 Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||0|3000|3500|4000|4500|5000|5500|6000|6500|7000|13000
 
@@ -3393,6 +3395,16 @@ else if (userVybor = "Автоотправка") {
     GuiControl, 6:ChooseString, Zaderzhka_lektsiya, %StaraiaZaderzhkaLektsiya%
 }
 Return
+
+SkrinshotChanged:
+Gui, 6:Submit, NoHide
+if (Skrinshot = "Включен") {
+    Skrin_1 := "screenshot"
+} else {
+    Skrin_1 := ""
+}
+return
+
 
 
 Vybor_organizatsii:
@@ -4403,7 +4415,7 @@ IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User,
 IniWrite, %ToggleTimer%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
 IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
-
+IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
 
 IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
