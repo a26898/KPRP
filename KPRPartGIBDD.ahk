@@ -51,7 +51,7 @@ Loop, read, %KPRPGIBDD1%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -78,7 +78,7 @@ Loop, read, %KPRPGIBDD2%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -108,7 +108,7 @@ Loop, read, %KPRPGIBDD3%
 
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -137,7 +137,7 @@ Loop, read, %KPRPGIBDD4%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -166,7 +166,7 @@ Loop, read, %KPRPGIBDD5%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -194,7 +194,7 @@ Loop, read, %KPRPGIBDD6%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -222,7 +222,7 @@ Loop, read, %KPRPGIBDD7%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -251,7 +251,7 @@ Loop, read, %KPRPGIBDD8%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -280,7 +280,7 @@ Loop, read, %KPRPGIBDD9%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -310,7 +310,7 @@ Loop, read, %KPRPGIBDD10%
         line := StrReplace(line, "%Female%", Female)
 
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -337,7 +337,7 @@ Loop, read, %KPRPGIBDD11%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -365,7 +365,7 @@ Loop, read, %KPRPGIBDD12%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -393,7 +393,7 @@ Loop, read, %KPRPGIBDD13%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -421,7 +421,7 @@ Loop, read, %KPRPGIBDD14%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -449,7 +449,7 @@ Loop, read, %KPRPGIBDD15%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -476,7 +476,7 @@ Loop, read, %KPRPGIBDD16%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -503,7 +503,7 @@ Loop, read, %KPRPGIBDD17%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -531,7 +531,7 @@ Loop, read, %KPRPGIBDD18%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -558,7 +558,7 @@ Loop, read, %KPRPGIBDD19%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -586,7 +586,7 @@ Loop, read, %KPRPGIBDD20%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -614,7 +614,7 @@ Loop, read, %KPRPGIBDD21%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -641,7 +641,7 @@ Loop, read, %KPRPGIBDD22%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -669,7 +669,7 @@ Loop, read, %KPRPGIBDD23%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -697,7 +697,7 @@ Loop, read, %KPRPGIBDD24%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -725,7 +725,7 @@ Loop, read, %KPRPGIBDD25%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -754,7 +754,7 @@ Loop, read, %KPRPGIBDD26%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
@@ -781,7 +781,7 @@ Loop, read, %KPRPGIBDD27%
         line := StrReplace(line, "%Skrin_1%", Skrin_1)
         line := StrReplace(line, "%Female%", Female)
 
-        SendChat(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
     }
 }
 Return
