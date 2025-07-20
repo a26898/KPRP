@@ -42,7 +42,9 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gLaziness13, C:\Progra
 Gui, 5:Add, Picture, x730 y40 w128 w96  +BackgroundTrans gLaziness3, C:\ProgramData\KPRP\KPRP-main\Change.png
 Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\ProgramData\KPRP\KPRP-main\Registry.png
 Gui, 5:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\Call.png
+
 Gui, 5:Add, Picture, x130 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\Random.png
+Gui, 5:Add, Picture, x130 y260 w128 w96 +BackgroundTrans gLaziness4, C:\ProgramData\KPRP\KPRP-main\VZ.png
 
 
 Gui, 5:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
@@ -12051,6 +12053,23 @@ Gui, 3:Add, Text, x150  y75 w300 h20 +BackgroundTrans , [Смена напарн
 Gui, 3:show, center h130 w350, Смена данных в докладах
 Return
 
+
+;--------------------------------------------------------------------------------
+
+Laziness4:
+Gui, 3:Destroy,
+Gui, 3:Add, Picture, x0 y0 h130 w350,
+
+Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ВЗ+
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ВЗ-
+
+Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
+Gui, 3:Add, Text, x70  y15 w450 h20 +BackgroundTrans , [Показать черный список запрета и красный список]
+Gui, 3:Add, Text, x70  y35 w450 h20 +BackgroundTrans , [Скрыть временный список запрета и красный список]
+
+Gui, 3:show, center h80 w490, ВЗ и КС
+Return
 
 ;--------------------------------------------------------------------------------
 
