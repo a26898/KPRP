@@ -6,6 +6,14 @@ SetTimer, CheckMoscowTime, 60000  ; Проверка каждую минуту
 Return
 
 CheckMoscowTime:
+; Проверяем день недели (1 = Воскресенье, 2 = Понедельник, ..., 7 = Суббота)
+FormatTime, dayOfWeek,, WDay
+
+if (dayOfWeek = 1 || dayOfWeek = 7) {
+    ; Воскресенье или Суббота — ничего не делаем
+    Return
+}
+
 ; Получаем текущее UTC время (в формате YYYYMMDDHH24MISS)
 utc := A_NowUTC
 

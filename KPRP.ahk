@@ -3408,7 +3408,11 @@ OnSelect:
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, АFK.ahk
-    Reload
+
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, Konets_rd.ahk	
+	Reload
 Return
 
 
@@ -5046,6 +5050,10 @@ DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, АFK.ahk
 
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, Konets_rd.ahk	
+
 Reload
 Return
 
@@ -5059,6 +5067,11 @@ SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, АFK.ahk
+
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, Konets_rd.ahk	
+
 Sleep 2500
 Reload
 return
@@ -5219,6 +5232,10 @@ Sleep 1700
 DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, АFK.ahk
+
+DetectHiddenWindows, On
+SetTitleMatchMode, 2
+WinClose, Konets_rd.ahk	
 
 
 ExitApp
