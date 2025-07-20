@@ -8264,7 +8264,7 @@ SendPlay {Enter}
 %vybor%("do На столе лежит открытая медкарта, ручка и штемпель.", "  " zaderzhka " ")
 %vybor%("me взяв ручку, начал" floor " заполнение медицинской карты ", "  " zaderzhka " ")
 %vybor%("say Назовите Ваш вес.", "  " zaderzhka " ")
-Gui, Destroy
+Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 Return
 
 :?:/МК_4::
@@ -8365,7 +8365,7 @@ SendPlay {Enter}
 %vybor%("me поставил" floor " штемпель обратно, затем взял" floor " ручку и поставил" floor " подпись под печатью", "  " zaderzhka " ")
 %vybor%("me отложил" floor " ручку, затем закрыл" floor " медицинскую карту и передал" floor " человеку напротив", "  " zaderzhka " ")
 %vybor%("say Ваша медкарта готова, можете ее забирать.", "  " zaderzhka " ")
-Gui, ВЗ:Destroy
+Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 Return
 
 
