@@ -6743,10 +6743,16 @@ SendPlay {Enter}
 %vybor%("say Это для снижения риска кровотечения после 24 часов его необходимо убрать.", "  " zaderzhka " ")
 Return
 
+global AFK_Active := false
+
 :?:/-афк::
 SendPlay {Enter}
+AFK_Active := true  ; Включаем режим АФК
 Loop
 {
+  if not AFK_Active{
+	break
+	}
   Random, Rand, 0,30
   Random, Rand1,0,60
   MouseClick ,left,800+Rand,600+Rand1, 1, 2
@@ -6756,7 +6762,14 @@ Return
 
 :?:/+афк::
 SendPlay {Enter}
-Reload
+AFK_Active := false  ; Выключаем режим АФК
+ToolTip, АФК-режим выключен, 500, 500
+SetTimer, RemoveToolTip, 2000
+Return
+
+RemoveToolTip:
+ToolTip
+SetTimer, RemoveToolTip, Off
 Return
 
 :?:/работа::
