@@ -7059,18 +7059,116 @@ Return
 SendPlay {Enter}
 %vybor%("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
 %vybor%("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
+%vybor%("say Сколько лет вы проживаете в республике?", "  " zaderzhka " ")
 Return
-
 
 :?:/ГМУ_2::
 SendPlay {Enter}
 %vybor%("say Хорошо, покажите мне ваш паспорт. ", "  " zaderzhka " ")
 Return
 
-
 :?:/ГМУ_3::
 SendPlay {Enter}
+%vybor%("me взял" floor " паспорт в руки и начал" floor " его изучать ", "  " zaderzhka " ")
+%vybor%("me изучив паспорт, вернул" floor " его владельцу напротив ", "  " zaderzhka " ")
+Return
+
+
+:?:/ГМУ_4::
+SendPlay {Enter}
 %vybor%("say Хорошо, мне вашу трудовую книжку. ", "  " zaderzhka " ")
+Return
+
+:?:/ГМУ_5::
+SendPlay {Enter}
+%vybor%("me взял" floor " трудовую книжку в руки начал" floor " изучать", "  " zaderzhka " ")
+%vybor%("me изучив трудовую книжку, вернул" floor " владельцу напротив", "  " zaderzhka " ")
+Return
+
+:?:/ГМУ_6::
+SendPlay {Enter}
+%vybor%("say Хорошо, передайте мне вашу медицинскую карту.", "  " zaderzhka " ")
+Return
+
+:?:/ГМУ_7::
+SendPlay {Enter}
+%vybor%("me взял" floor " медкарту в руки начал" floor " изучать ", "  " zaderzhka " ")
+%vybor%("me изучив медкарту, вернул" floor " владельцу напротив", "  " zaderzhka " ")
+Return
+
+:?:/ГМУ_8::
+SendPlay {Enter}
+Random, rand, 1, 15
+if rand = 1
+	Word := "СМП, ДБ, МГ, ЦГБ и ИВЛ"
+if rand = 2
+	Word := "АСМП, ТК, СК, ОКБ и ЭКГ"
+if rand = 3
+	Word := "ВСМП, РК, ТК, МЗ и УЗИ"
+if rand = 4
+	Word :=	"СМП, IC, ООС, ЦГБ и МРТ"
+if rand = 5
+	Word :=	"АСМП, БХ, 33, МЗ и ФГДС"
+if rand = 6
+	Word :=	"ВСМП, ПГ, РК, ОКБ и ФКС"
+if rand = 7
+	Word :=	"СМП, РВК, ДБ, ЦГБ и ЭЭГ"
+if rand = 8
+	Word :=	"ВСМП, РПК, ТК, МЗ и Флюорография"
+if rand = 9
+	Word :=	"АСМП, ДМ, БХ, МЗ и Томография"
+if rand = 10
+	Word :=	"СМП, ООС, ДБ, ЦГБ и Пульсоксиметр"
+if rand = 11
+	Word :=	"АСМП, ПГ, IC, ОКБ и Флюорография"
+if rand = 12
+	Word :=	"АСМП, ТК, МГ, ЦГБ и ОФЭКТ"
+if rand = 13
+	Word :=	"АСМП, РП, МГ, ЦГБ и Вакцинация"
+if rand = 14
+	Word :=	"АСМП, ТК, МГ, ЦГБ и Ринтген"
+if rand = 15
+	Word :=	"АСМП, ТК, МГ, ЦГБ и Маммография"
+SendPlay {Enter}
+%vybor%("say Что такое " Word " ? ", "  " zaderzhka " ")
+Return
+
+
+:?:/ГМУ_9::
+SendPlay {Enter}
+Random, rand, 1, 15
+if rand = 1
+	Word := "РП, МГ, ПГ"
+if rand = 2
+	Word := "ДМ, ЗЗ, СК"
+if rand = 3
+	Word := "ТК, РК, ООС"
+if rand = 4
+	Word :=	"33, ДБ, РП"
+if rand = 5
+	Word :=	"ВХ, ДМ, ПГ"
+if rand = 6
+	Word :=	"БХ, РВК, 33"
+if rand = 7
+	Word :=	"33, ДБ, МГ"
+if rand = 8
+	Word :=	"ПГ, РП, ВХ"
+if rand = 9
+	Word :=	"РПК, РВК, ООС"
+if rand = 10
+	Word :=	"РК, СК, ТК"
+if rand = 11
+	Word :=	"33, ДМ, РП"
+if rand = 12
+	Word :=	"ДМ, ДБ, ПГ"
+if rand = 13
+	Word :=	"РК, IC, БХ"
+if rand = 14
+	Word :=	"СК, МГ, ТК"
+if rand = 15
+	Word :=	"РП, ООС, РВК"
+SendPlay {Enter}
+%vybor%("b Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
 :?:/ЦГБ_1::
@@ -7198,11 +7296,10 @@ SendPlay {Enter}
 %vybor%("b Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
-:?:/ЦГБ_14::
+:?:/ЦГБ_12::
 SendPlay {Enter}
-%vybor%("say Хорошо, присядьте и повернитесь ко мне спиной. ", "  " zaderzhka " ")
-%vybor%("b Встаньте и повернитесь ко мне лицом. ", "  " zaderzhka " ")
-%vybor%("say Отлично, вы можете вставать и поворачиваться ко мне лицом. ", "  " zaderzhka " ")
+%vybor%("do В мед. сумке медицинского работника лежат ключи от АСМП.", "  " zaderzhka " ")
+%vybor%("say Что у меня в мед. сумке?", "  " zaderzhka " ")
 Return
 
 
@@ -12106,11 +12203,17 @@ Gui, 3:Add, Text, x10 y155 h500 w370 +BackgroundTrans, /ЦГБ_8
 Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /ЦГБ_9
 Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /ЦГБ_10
 Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /ЦГБ_11
+Gui, 3:Add, Text, x10 y235  h500 w370 +BackgroundTrans, /ЦГБ_12
 
 Gui, 3:Add, Text, x10 y275  h500 w370 +BackgroundTrans, /ГМУ_1
 Gui, 3:Add, Text, x10 y295  h500 w370 +BackgroundTrans, /ГМУ_2
 Gui, 3:Add, Text, x10 y315  h500 w370 +BackgroundTrans, /ГМУ_3
-
+Gui, 3:Add, Text, x10 y335  h500 w370 +BackgroundTrans, /ГМУ_4
+Gui, 3:Add, Text, x10 y355  h500 w370 +BackgroundTrans, /ГМУ_5
+Gui, 3:Add, Text, x10 y375  h500 w370 +BackgroundTrans, /ГМУ_6
+Gui, 3:Add, Text, x10 y395  h500 w370 +BackgroundTrans, /ГМУ_7
+Gui, 3:Add, Text, x10 y415  h500 w370 +BackgroundTrans, /ГМУ_8
+Gui, 3:Add, Text, x10 y435  h500 w370 +BackgroundTrans, /ГМУ_9
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
@@ -12125,13 +12228,20 @@ Gui, 3:Add, Text, x90 y155 h500 w370 +BackgroundTrans,  [Запрос дипло
 Gui, 3:Add, Text, x90 y175 h500 w370 +BackgroundTrans,  [Изучение диплома]
 Gui, 3:Add, Text, x90 y195  h500 w370 +BackgroundTrans, [Собес - РП термины в РП чат]
 Gui, 3:Add, Text, x90 y215  h500 w370 +BackgroundTrans, [Собес - РП термины в b чат]
-
-Gui, 3:Add, Text, x90 y275  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
-Gui, 3:Add, Text, x90 y295  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
-Gui, 3:Add, Text, x90 y315  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
+Gui, 3:Add, Text, x90 y235  h500 w370 +BackgroundTrans, [Собес - Психическая проверка]
 
 
-Gui, 3:show, center h360 w390, Собеседование
+Gui, 3:Add, Text, x90 y275  h500 w370 +BackgroundTrans, [Собес ГМУ - ФИО, возраст]
+Gui, 3:Add, Text, x90 y295  h500 w370 +BackgroundTrans, [Собес ГМУ - Запрос паспорта]
+Gui, 3:Add, Text, x90 y315  h500 w370 +BackgroundTrans, [Собес ГМУ - Изучение паспорта]
+Gui, 3:Add, Text, x90 y335 h500 w370 +BackgroundTrans, [Собес ГМУ - Запрос трудовой книжки]
+Gui, 3:Add, Text, x90 y355 h500 w370 +BackgroundTrans, [Собес ГМУ - Изучение трудовой книжки]
+Gui, 3:Add, Text, x90 y375 h500 w370 +BackgroundTrans,  [Собес ГМУ - Запрос медкарты]
+Gui, 3:Add, Text, x90 y395 h500 w370 +BackgroundTrans,  [Собес ГМУ - Изучение медкарты]
+Gui, 3:Add, Text, x90 y415  h500 w370 +BackgroundTrans, [Собес ГМУ - РП термины в РП чат]
+Gui, 3:Add, Text, x90 y435  h500 w370 +BackgroundTrans, [Собес ГМУ - РП термины в b чат]
+
+Gui, 3:show, center h460 w430, Собеседования в ЦГБ и ГМУ
 Return
 
 
