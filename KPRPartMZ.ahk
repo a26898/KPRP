@@ -3427,7 +3427,7 @@ SendPlay {Enter}
 %vybor%("me вылил" floor " из ведра воду в раковину     ", "  " zaderzhka " ")
 %vybor%("do Ведро  пустое.   ", "  " zaderzhka " ")
 %vybor%("me взял" floor " швабру  ", "  " zaderzhka " ")
-%vybor%("me откры" floor " шкаф и поставил" floor " в него швабру с ведром", "  " zaderzhka " ")
+%vybor%("me открыл" floor " шкаф и поставил" floor " в него швабру с ведром", "  " zaderzhka " ")
 %vybor%("me закрыл" floor "  шкаф  ", "  " zaderzhka " ")
 Return
 
@@ -3435,13 +3435,14 @@ Return
 
 :?:/Рана_1::
 SendPlay {Enter}
+%vybor%("do В мед. сумке лежит жгут, шприц в упаковке и ампула обезболивающего. ", "  " zaderzhka " ")
 %vybor%("me достал" floor "  жгут из сумки ", "  " zaderzhka " ")
 %vybor%("me затянул" floor " жгут выше кровотечения ", "  " zaderzhka " ")
 %vybor%("me взял" floor " упаковку со шприцом и ампулу с обезболивающим ", "  " zaderzhka " ")
 %vybor%("me достал" floor " шприц и выкинул" floor "  упаковку  ", "  " zaderzhka " ")
 %vybor%("me заполнил" floor " обезболивающим шприц до нужной отметки ", "  " zaderzhka " ")
 %vybor%("me вколол" floor " обезболивающее ", "  " zaderzhka " ")
-%vybor%("me выкинул" floor " шприц и ампулу ", "  " zaderzhka " ")
+%vybor%("me выкинул" floor " шприц и ампулу обезболивающего ", "  " zaderzhka " ")
 Return
 
 :?:/Сознания_ПМП::
