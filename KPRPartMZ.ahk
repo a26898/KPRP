@@ -7073,60 +7073,60 @@ SendPlay {Enter}
 %vybor%("say Хорошо, мне вашу трудовую книжку. ", "  " zaderzhka " ")
 Return
 
-:?:/ПС_1::
+:?:/ЦГБ_1::
 SendPlay {Enter}
 %vybor%("say Здравствуйте, сейчас я проведу собеседование для приема. ", "  " zaderzhka " ")
 %vybor%("say Назовите вашу фамилию, имя, отчество, ваш возраст в полных годах.", "  " zaderzhka " ")
 %vybor%("say Сколько лет вы проживаете в республике, и какое у вас образование?", "  " zaderzhka " ")
 Return
 
-:?:/ПС_2::
+:?:/ЦГБ_2::
 SendPlay {Enter}
 %vybor%("say Хорошо, передайте мне ваш паспорт. ", "  " zaderzhka " ")
 Return
 
-:?:/ПС_3::
+:?:/ЦГБ_3::
 SendPlay {Enter}
 %vybor%("me взял" floor " паспорт в руки и начал" floor " его изучать ", "  " zaderzhka " ")
 %vybor%("me изучив паспорт, вернул" floor " его владельцу напротив ", "  " zaderzhka " ")
 Return
 
 
-:?:/ПС_4::
+:?:/ЦГБ_4::
 SendPlay {Enter}
 %vybor%("say Хорошо, передайте мне вашу трудовую книжку. ", "  " zaderzhka " ")
 Return
 
 
-:?:/ПС_5::
+:?:/ЦГБ_5::
 SendPlay {Enter}
 %vybor%("me взял" floor " трудовую книжку в руки начал" floor " изучать", "  " zaderzhka " ")
 %vybor%("me изучив трудовую книжку, вернул" floor " владельцу напротив", "  " zaderzhka " ")
 Return
 
-:?:/ПС_6::
+:?:/ЦГБ_6::
 SendPlay {Enter}
 %vybor%("say Хорошо, передайте мне вашу медицинскую карту.", "  " zaderzhka " ")
 Return
 
-:?:/ПС_7::
+:?:/ЦГБ_7::
 SendPlay {Enter}
 %vybor%("me взял" floor " медкарту в руки начал" floor " изучать ", "  " zaderzhka " ")
 %vybor%("me изучив медкарту, вернул" floor " владельцу напротив", "  " zaderzhka " ")
 Return
 
-:?:/ПС_8::
+:?:/ЦГБ_8::
 SendPlay {Enter}
 %vybor%("say Хорошо, передайте мне ваш диплом о медицинском образовании.", "  " zaderzhka " ")
 Return
 
-:?:/ПС_9::
+:?:/ЦГБ_9::
 SendPlay {Enter}
 %vybor%("me взял" floor " диплом в руки и начал" floor " его изучать", "  " zaderzhka " ")
 %vybor%("me изучив диплом, вернул" floor " его владельцу напротив", "  " zaderzhka " ")
 Return
 
-:?:/ПС_10::
+:?:/ЦГБ_10::
 Random, rand, 1, 15
 if rand = 1
 	Word := "СМП, ДБ, МГ, ЦГБ и ИВЛ"
@@ -7162,7 +7162,7 @@ SendPlay {Enter}
 %vybor%("say Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
-:?:/ПС_11::
+:?:/ЦГБ_11::
 Random, rand, 1, 15
 if rand = 1
 	Word := "РП, МГ, ПГ"
@@ -7198,7 +7198,7 @@ SendPlay {Enter}
 %vybor%("b Что такое " Word " ? ", "  " zaderzhka " ")
 Return
 
-:?:/ПС_14::
+:?:/ЦГБ_14::
 SendPlay {Enter}
 %vybor%("say Хорошо, присядьте и повернитесь ко мне спиной. ", "  " zaderzhka " ")
 %vybor%("b Встаньте и повернитесь ко мне лицом. ", "  " zaderzhka " ")
@@ -12095,19 +12095,18 @@ Laziness7:
 Gui, 3:Destroy,
 
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ПС_1 
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ПС_2 
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /ПС_3 
-Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /ПС_4
-Gui, 3:Add, Text, x10 y95 h500 w370 +BackgroundTrans, /ПС_5
-Gui, 3:Add, Text, x10 y115 h500 w370 +BackgroundTrans, /ПС_6
-Gui, 3:Add, Text, x10 y135 h500 w370 +BackgroundTrans, /ПС_7
-Gui, 3:Add, Text, x10 y155 h500 w370 +BackgroundTrans, /ПС_8
-Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /ПС_9
-Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /ПС_10
-Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /ПС_11
-Gui, 3:Add, Text, x10 y235 h500 w370 +BackgroundTrans, /ПС_12
-Gui, 3:Add, Text, x10 y255 h500 w370 +BackgroundTrans, /ПС_13
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ЦГБ_1 
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ЦГБ_2 
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /ЦГБ_3 
+Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /ЦГБ_4
+Gui, 3:Add, Text, x10 y95 h500 w370 +BackgroundTrans, /ЦГБ_5
+Gui, 3:Add, Text, x10 y115 h500 w370 +BackgroundTrans, /ЦГБ_6
+Gui, 3:Add, Text, x10 y135 h500 w370 +BackgroundTrans, /ЦГБ_7
+Gui, 3:Add, Text, x10 y155 h500 w370 +BackgroundTrans, /ЦГБ_8
+Gui, 3:Add, Text, x10 y175 h500 w370 +BackgroundTrans, /ЦГБ_9
+Gui, 3:Add, Text, x10 y195  h500 w370 +BackgroundTrans, /ЦГБ_10
+Gui, 3:Add, Text, x10 y215  h500 w370 +BackgroundTrans, /ЦГБ_11
+
 Gui, 3:Add, Text, x10 y275  h500 w370 +BackgroundTrans, /ГМУ_1
 Gui, 3:Add, Text, x10 y295  h500 w370 +BackgroundTrans, /ГМУ_2
 Gui, 3:Add, Text, x10 y315  h500 w370 +BackgroundTrans, /ГМУ_3
@@ -12126,8 +12125,7 @@ Gui, 3:Add, Text, x90 y155 h500 w370 +BackgroundTrans,  [Запрос дипло
 Gui, 3:Add, Text, x90 y175 h500 w370 +BackgroundTrans,  [Изучение диплома]
 Gui, 3:Add, Text, x90 y195  h500 w370 +BackgroundTrans, [Собес - РП термины в РП чат]
 Gui, 3:Add, Text, x90 y215  h500 w370 +BackgroundTrans, [Собес - РП термины в b чат]
-Gui, 3:Add, Text, x90 y235  h500 w370 +BackgroundTrans, [Собес - Проверка на МГ]
-Gui, 3:Add, Text, x90 y255  h500 w370 +BackgroundTrans, [Собес - РП термины в b чат]
+
 Gui, 3:Add, Text, x90 y275  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
 Gui, 3:Add, Text, x90 y295  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
 Gui, 3:Add, Text, x90 y315  h500 w370 +BackgroundTrans, [Собес - черз gov на ГМУ]
