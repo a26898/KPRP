@@ -13522,7 +13522,7 @@ Gui, 7:Add, ComboBox, x90 y130 w425 vTAG, %TAG%||ГМУ|МЦО|ЗГВ|ГВ
 Gui, 7:Add, Edit, x90 y230 w425 vName, %Name%
 Gui, 7:Add, Edit, x90 y320 w425 vSurname, %Surname%
 Gui, 7:Add, Edit, x90 y420 w425 vMiddle_Name, %Middle_Name%
-Gui, 7:Add, DropDownList, x90 y510 w425 vBol_ro, %Bol_ro%||Мирный|Невский|Приволжск|ГМУ
+Gui, 7:Add, DropDownList, x90 y510 w425 vBol_ro, %Bol_ro%||Мирный|Невский|Приволжск
 Gui, 7:Add, DropDownList, x90 y610  w225 vpol,%pol%||Мужской|Женский
 
 Gui, 7:show, center , Данные
