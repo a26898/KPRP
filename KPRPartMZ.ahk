@@ -1,58 +1,57 @@
-﻿
-; Проигрываем звук (опционально)
+﻿; --- Проигрываем звук (опционально) ---
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
-; Создаём основной GUI с номером 5
+
+; --- Создаём основной GUI с номером 5 ---
 Gui, 5:+Resize +LastFound
 Gui, 5:Font, S10 Bold, %Shrift%
-; Устанавливаем HWND GUI 5
 Gui, 5:Tab, 1
 parentHWND := WinExist()
-; Добавляем вкладки с обработчиком переключения
-Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП
 
-; === Вкладка 1 ===
+; Добавляем вкладки
+Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП|Журнал активности
+
+; --- Вкладка 1 ---
 Gui, 5:Tab, 1
-
-; Фоновая картинка (если есть)
-if (FonVybor = "ERROR" or FonVybor = "") {
-    ; ничего не делаем или ставим фон по умолчанию
-} else {
+if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
-
-; Возвращаемся к первой вкладке по умолчанию
 Gui, 5:Tab, 1
+
 Gui, 5:Show, center h650 w1200, Министерство здравоохранения | КПРП работает на коммунизм!
 
-; === Запускаем встроенное приложение ===
-appPath := "C:\ProgramData\KPRP\KPRP-main\KPRP.exe"
-Run, %appPath%, , , pid
-
-; Ждём появления окна
-WinWait, ahk_exe KPRP.exe, , 5
-
-; Получаем HWND окна приложения
-WinGet, hwndApp, ID, ahk_exe KPRP.exe
-
-
-; Убедись, что скрипт AHK запущен с правами администратора
-
-DllCall("SetParent", "Ptr", hwndApp, "Ptr", parentHWND)
-
-; Устанавливаем WS_CHILD стиль вручную
+; Объявляем константы для стилей один раз
 GWL_STYLE := -16
 WS_CHILD := 0x40000000
-DllCall("SetWindowLongPtr", "Ptr", hwndApp, "Int", GWL_STYLE, "Ptr", WS_CHILD)
 
-; Устанавливаем позицию
-DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+; --- Запускаем KPRP.exe для вкладки 1 ---
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\KPRP.exe"
+Run, %appPath1%, , , pid1
+WinWait, ahk_pid %pid1%, , 5
+WinGet, hwndApp1, ID, ahk_pid %pid1%
 
-; Перерисовка и показ
-DllCall("RedrawWindow", "Ptr", hwndApp, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
-WinShow, ahk_id %hwndApp%
+DllCall("SetParent", "Ptr", hwndApp1, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp1, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
 
+; --- Запускаем Journal.exe для вкладки 10 ---
+appPath10 := "C:\ProgramData\KPRP\KPRP-main\Journal\Journal.exe"
+Run, %appPath10%, , , pid10
+WinWait, ahk_pid %pid10%, , 5
+WinGet, hwndApp10, ID, ahk_pid %pid10%
 
-Gui, 5: Tab, 2
+DllCall("SetParent", "Ptr", hwndApp10, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp10, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp10, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp10, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+
+; Скрываем окно журнала, показываем только окно КПРП
+WinShow, ahk_id %hwndApp1%
+WinHide, ahk_id %hwndApp10%
+
+; --- Вкладка 2 — добавляем картинки и кнопки ---
+Gui, 5:Tab, 2
+
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -449,59 +448,35 @@ Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine86, C:\ProgramD
 
 Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\ProgramData\KPRP\KPRP-main\Quartzization.png
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
+return
 
+; --- Обработчик смены вкладок ---
+TabChanged:
+GuiControlGet, ActiveTab,, MyTab
 
+if (ActiveTab = "КПРП") {
+    WinShow, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp10%
+} else if (ActiveTab = "Журнал активности") {
+    WinShow, ahk_id %hwndApp10%
+    WinHide, ahk_id %hwndApp1%
+} else {
+    WinHide, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp10%
+}
+return
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-; === Обработчик изменения размера GUI ===
+; --- Обработчик изменения размера окна GUI ---
 GuiSize:
 if (A_Gui = 5) {
     Width := A_GuiWidth
     Height := A_GuiHeight
-    DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+    ; Подгоняем размер окна КПРП
+    DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+    ; Подгоняем размер окна журнала
+    DllCall("SetWindowPos", "Ptr", hwndApp10, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
 }
 return
-
-; === Обработчик смены вкладки ===
-TabChanged:
-GuiControlGet, ActiveTab,, MyTab
-
-; Проверяем, выбрана ли вкладка 1 (по названию)
-if (ActiveTab = "КПРП") {
-    ; Только если на вкладке 1 — встраиваем окно заново
- ; Убедись, что скрипт AHK запущен с правами администратора
-
-DllCall("SetParent", "Ptr", hwndApp, "Ptr", parentHWND)
-
-; Устанавливаем WS_CHILD стиль вручную
-GWL_STYLE := -16
-WS_CHILD := 0x40000000
-DllCall("SetWindowLongPtr", "Ptr", hwndApp, "Int", GWL_STYLE, "Ptr", WS_CHILD)
-
-; Устанавливаем позицию
-DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
-
-; Перерисовка и показ
-DllCall("RedrawWindow", "Ptr", hwndApp, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
-WinShow, ahk_id %hwndApp%
-} else {
-    ; Прячем встроенное окно, если ушли с вкладки 1
-    WinHide, ahk_id %hwndApp%
-}
-return
-
 
 
 
