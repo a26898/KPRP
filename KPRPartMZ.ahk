@@ -26,7 +26,7 @@ WS_CHILD := 0x40000000
 ; --- Запускаем KPRP.exe для вкладки 1 ---
 appPath1 := "C:\ProgramData\KPRP\KPRP-main\KPRP.exe"
 Run, %appPath1%, , , pid1
-WinWait, ahk_pid %pid1%, , 5
+WinWait, ahk_pid %pid1%
 WinGet, hwndApp1, ID, ahk_pid %pid1%
 
 DllCall("SetParent", "Ptr", hwndApp1, "Ptr", parentHWND)
@@ -37,7 +37,7 @@ DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
 ; --- Запускаем Journal.exe для вкладки 10 ---
 appPath10 := "C:\ProgramData\KPRP\KPRP-main\Journal\Journal.exe"
 Run, %appPath10%, , , pid10
-WinWait, ahk_pid %pid10%, , 5
+WinWait, ahk_pid %pid10%
 WinGet, hwndApp10, ID, ahk_pid %pid10%
 
 DllCall("SetParent", "Ptr", hwndApp10, "Ptr", parentHWND)
