@@ -25,14 +25,14 @@ Gui, 5:Tab, 1
 Gui, 5:Show, center h650 w1200, Министерство здравоохранения | КПРП работает на коммунизм!
 
 ; === Запускаем встроенное приложение ===
-appPath := "C:\ProgramData\KPRP\KPRP-main\KPRP_Welcome.exe"
+appPath := "C:\ProgramData\KPRP\KPRP-main\KPRP Welcome.exe"
 Run, %appPath%, , , pid
 
 ; Ждём появления окна
-WinWait, ahk_exe KPRP_Welcome.exe, , 5
+WinWait, ahk_exe KPRP Welcome.exe, , 5
 
 ; Получаем HWND окна приложения
-WinGet, hwndApp, ID, ahk_exe KPRP_Welcome.exe
+WinGet, hwndApp, ID, ahk_exe KPRP Welcome.exe
 
 
 ; Убедись, что скрипт AHK запущен с правами администратора
