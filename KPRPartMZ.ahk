@@ -1,16 +1,58 @@
 ﻿
+; Проигрываем звук (опционально)
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+; Создаём основной GUI с номером 5
+Gui, 5:+Resize +LastFound
+Gui, 5:Font, S10 Bold, %Shrift%
+; Устанавливаем HWND GUI 5
+Gui, 5:Tab, 1
+parentHWND := WinExist()
+; Добавляем вкладки с обработчиком переключения
+Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП
 
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+; === Вкладка 1 ===
+Gui, 5:Tab, 1
 
-
-Gui, 5:show,  center h650 w1200 , Министерство здравоохранения | КПРП работает на коммунизм!
-if (FonVybor="ERROR" or FonVybor=""){
-Gui, 5:Add, Picture, x0 y24 w1300 h700,
+; Фоновая картинка (если есть)
+if (FonVybor = "ERROR" or FonVybor = "") {
+    ; ничего не делаем или ставим фон по умолчанию
+} else {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
-Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
-Gui, 5:Font, S10   Bold, %Shrift%
-Gui, 5:Add, Tab2,  x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans, Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП
 
+; Возвращаемся к первой вкладке по умолчанию
+Gui, 5:Tab, 1
+Gui, 5:Show, center h650 w1200, Министерство здравоохранения | КПРП работает на коммунизм!
+
+; === Запускаем встроенное приложение ===
+appPath := "C:\ProgramData\KPRP\KPRP-main\KPRP_Welcome.exe"
+Run, %appPath%, , , pid
+
+; Ждём появления окна
+WinWait, ahk_exe KPRP_Welcome.exe, , 5
+
+; Получаем HWND окна приложения
+WinGet, hwndApp, ID, ahk_exe KPRP_Welcome.exe
+
+
+; Убедись, что скрипт AHK запущен с правами администратора
+
+DllCall("SetParent", "Ptr", hwndApp, "Ptr", parentHWND)
+
+; Устанавливаем WS_CHILD стиль вручную
+GWL_STYLE := -16
+WS_CHILD := 0x40000000
+DllCall("SetWindowLongPtr", "Ptr", hwndApp, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+
+; Устанавливаем позицию
+DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+
+; Перерисовка и показ
+DllCall("RedrawWindow", "Ptr", hwndApp, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+WinShow, ahk_id %hwndApp%
+
+
+Gui, 5: Tab, 2
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -52,7 +94,7 @@ Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\
 
 
 
-Gui, 5: Tab, 2
+Gui, 5: Tab, 3
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -92,7 +134,7 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gPMP10, C:\ProgramData\
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gPMP11, C:\ProgramData\KPRP\KPRP-main\Otkrytyy_PMP.png
 
 
-Gui, 5:Tab, 3
+Gui, 5:Tab, 4
 
 
 
@@ -134,7 +176,7 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine32, C:\Program
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine16, C:\ProgramData\KPRP\KPRP-main\Temperatura.png
 
 
-Gui, 5:Tab, 4
+Gui, 5:Tab, 5
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -212,7 +254,7 @@ Gui, 5:Add, Picture, x1090 y370 w128 w96 +BackgroundTrans gMedicine121, C:\Progr
 Gui, 5:Add, Picture, x1090 y480 w128 w96 +BackgroundTrans gMedicine122, C:\ProgramData\KPRP\KPRP-main\Test_beremennos.png
 
 
-Gui, 5:Tab, 5
+Gui, 5:Tab, 6
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -275,7 +317,7 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine11, C:\Progra
 
 
 
-Gui, 5:Tab, 6
+Gui, 5:Tab, 7
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -309,7 +351,7 @@ Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gMedicine80, C:\Program
 Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine24, C:\ProgramData\KPRP\KPRP-main\Quo.png
 
 
-Gui, 5:Tab, 7
+Gui, 5:Tab, 8
 
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
@@ -384,7 +426,7 @@ Gui, 5:Add, Picture, x250  y260 w128 w96 +BackgroundTrans gLekarstva21, C:\Progr
 Gui, 5:Add, Picture, x10   y150 w128 w96 +BackgroundTrans gLekarstva22, C:\ProgramData\KPRP\KPRP-main\Reduced.png
 
 
-Gui, 5:Tab, 8
+Gui, 5:Tab, 9
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -407,6 +449,65 @@ Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine86, C:\ProgramD
 
 Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\ProgramData\KPRP\KPRP-main\Quartzization.png
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\PCD.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; === Обработчик изменения размера GUI ===
+GuiSize:
+if (A_Gui = 5) {
+    Width := A_GuiWidth
+    Height := A_GuiHeight
+    DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+}
+return
+
+; === Обработчик смены вкладки ===
+TabChanged:
+GuiControlGet, ActiveTab,, MyTab
+
+; Проверяем, выбрана ли вкладка 1 (по названию)
+if (ActiveTab = "КПРП") {
+    ; Только если на вкладке 1 — встраиваем окно заново
+ ; Убедись, что скрипт AHK запущен с правами администратора
+
+DllCall("SetParent", "Ptr", hwndApp, "Ptr", parentHWND)
+
+; Устанавливаем WS_CHILD стиль вручную
+GWL_STYLE := -16
+WS_CHILD := 0x40000000
+DllCall("SetWindowLongPtr", "Ptr", hwndApp, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+
+; Устанавливаем позицию
+DllCall("SetWindowPos", "Ptr", hwndApp, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+
+; Перерисовка и показ
+DllCall("RedrawWindow", "Ptr", hwndApp, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+WinShow, ahk_id %hwndApp%
+} else {
+    ; Прячем встроенное окно, если ушли с вкладки 1
+    WinHide, ahk_id %hwndApp%
+}
+return
+
+
+
+
+
+
+
 
 
 IniRead, gameFolder,   C:\ProgramData\KPRP\KPRP-main\Halyards\Province.ini, Mta, gameFolder
