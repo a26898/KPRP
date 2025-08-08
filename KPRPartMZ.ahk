@@ -24,7 +24,7 @@ GWL_STYLE := -16
 WS_CHILD := 0x40000000
 
 ; --- Запускаем KPRP.exe для вкладки 1 ---
-appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\PRP.exe"
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\KPRP.exe"
 Run, %appPath1%, , , pid1
 WinWait, ahk_pid %pid1%, , 5
 WinGet, hwndApp1, ID, ahk_pid %pid1%
@@ -8212,18 +8212,18 @@ Loop, Parse, fileData, `n, `r
     fields := StrSplit(line, "`t")
     if (fields.Length() >= 9)
     {
-        nickE := fields[5]
-        passF := fields[6]
-        nickH := fields[8]
-        passI := fields[9]
+    nickE := fields[4]
+    passF := fields[5]
+    nickH := fields[7]
+    passI := fields[8]
 
-        ; Выравнивание
-        nickE := Format("{:-20}", nickE)
-        passF := Format("{:-12}", passF)
-        nickH := Format("{:-30}", nickH)
+    ; Выравнивание
+    nickE := Format("{:-20}", nickE)
+    passF := Format("{:-12}", passF)
+    nickH := Format("{:-30}", nickH)
 
-        if (nickE != "" || nickH != "")
-            content .= nickE passF "|   " nickH passI "`n"
+    if (nickE != "" || nickH != "")
+        content .= nickE passF "|   " nickH passI "`n"
     }
 }
 
@@ -8301,15 +8301,16 @@ Loop, Parse, fileData, `n, `r
     fields := StrSplit(line, "`t")
     if (fields.Length() >= 9)
     {
-        nickE := fields[5]
-        passF := fields[6]
-        nickH := fields[8]
-        passI := fields[9]
+    nickE := fields[4]
+    passF := fields[5]
+    nickH := fields[7]
+    passI := fields[8]
 
-        ; Выравнивание
-        nickE := Format("{:-20}", nickE)
-        passF := Format("{:-12}", passF)
-        nickH := Format("{:-30}", nickH)
+    ; Выравнивание
+    nickE := Format("{:-20}", nickE)
+    passF := Format("{:-12}", passF)
+    nickH := Format("{:-30}", nickH)
+
 
         if (nickE != "" || nickH != "")
             content .= nickE passF "|   " nickH passI "`n"
@@ -8385,15 +8386,16 @@ Loop, Parse, fileData, `n, `r
     fields := StrSplit(line, "`t")
     if (fields.Length() >= 9)
     {
-        nickE := fields[5]
-        passF := fields[6]
-        nickH := fields[8]
-        passI := fields[9]
+    nickE := fields[4]
+    passF := fields[5]
+    nickH := fields[7]
+    passI := fields[8]
 
-        ; Выравнивание
-        nickE := Format("{:-20}", nickE)
-        passF := Format("{:-12}", passF)
-        nickH := Format("{:-30}", nickH)
+    ; Выравнивание
+    nickE := Format("{:-20}", nickE)
+    passF := Format("{:-12}", passF)
+    nickH := Format("{:-30}", nickH)
+
 
         if (nickE != "" || nickH != "")
             content .= nickE passF "|   " nickH passI "`n"
