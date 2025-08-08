@@ -3434,7 +3434,7 @@ SetTitleMatchMode, 2
 WinClose, Konets_rd.ahk	
 
 
-ProcessName := "KPRP Welcome.exe"
+ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 	Reload
@@ -5079,7 +5079,7 @@ DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, Konets_rd.ahk	
 
-ProcessName := "KPRP Welcome.exe"
+ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 Reload
@@ -5101,7 +5101,7 @@ SetTitleMatchMode, 2
 WinClose, Konets_rd.ahk	
 
 
-ProcessName := "KPRP Welcome.exe"
+ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 Sleep 2500
 Reload
@@ -5268,7 +5268,7 @@ DetectHiddenWindows, On
 SetTitleMatchMode, 2
 WinClose, Konets_rd.ahk	
 
-ProcessName := "KPRP Welcome.exe"
+ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 
