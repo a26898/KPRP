@@ -24,7 +24,7 @@ GWL_STYLE := -16
 WS_CHILD := 0x40000000
 
 ; --- Запускаем KPRP.exe для вкладки 1 ---
-appPath1 := "C:\ProgramData\KPRP\KPRP-main\\Telegramkprp\KPRP.exe"
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\KPRP.exe"
 Run, %appPath1%, , , pid1
 WinWait, ahk_pid %pid1%
 WinGet, hwndApp1, ID, ahk_pid %pid1%
