@@ -11,13 +11,11 @@ parentHWND := WinExist()
 Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП|Журнал активности
 
 ; --- Вкладка 1 ---
-Gui, 5:Tab, 1
-if (FonVybor != "ERROR" && FonVybor != "") {
-    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
-}
-Gui, 5:Tab, 1
 
 Gui, 5:Show, center h650 w1200, Министерство здравоохранения | КПРП работает на коммунизм!
+
+Gui, 5:Tab, 1
+
 
 ; Объявляем константы для стилей один раз
 GWL_STYLE := -16
@@ -51,7 +49,9 @@ WinHide, ahk_id %hwndApp10%
 
 ; --- Вкладка 2 — добавляем картинки и кнопки ---
 Gui, 5:Tab, 2
-
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -94,6 +94,9 @@ Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\
 
 
 Gui, 5: Tab, 3
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -134,7 +137,9 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gPMP11, C:\ProgramData
 
 
 Gui, 5:Tab, 4
-
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
@@ -176,6 +181,9 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine16, C:\Progra
 
 
 Gui, 5:Tab, 5
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -254,6 +262,9 @@ Gui, 5:Add, Picture, x1090 y480 w128 w96 +BackgroundTrans gMedicine122, C:\Progr
 
 
 Gui, 5:Tab, 6
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -317,6 +328,9 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine11, C:\Progra
 
 
 Gui, 5:Tab, 7
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -351,7 +365,9 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine24, C:\Program
 
 
 Gui, 5:Tab, 8
-
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
@@ -426,6 +442,9 @@ Gui, 5:Add, Picture, x10   y150 w128 w96 +BackgroundTrans gLekarstva22, C:\Progr
 
 
 Gui, 5:Tab, 9
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
 
 Gui, 5:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 5:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfo,  C:\ProgramData\KPRP\KPRP-main\Dannyye_MZ.png
