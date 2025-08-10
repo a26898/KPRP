@@ -1867,20 +1867,32 @@ Greeting()
     Greeting_Day := "Добрый день"
     Evening := 18
     Greeting_Evening := "Добрый вечер"
-    Night := 00
+    Night := 0
     Greeting_Night := "Доброй ночи"
-    if !Night
-        Night := 24
-    if (A_Hour >= Morning and A_Hour < Day)
+
+    ; Берём UTC-время
+    utcTime := A_NowUTC
+
+    ; Прибавляем 3 часа (Москва)
+    EnvAdd, utcTime, 3, Hours
+
+    ; Получаем час в МСК
+    FormatTime, moscowHour, %utcTime%, H
+
+    ; Логика приветствия
+    if (moscowHour >= Morning && moscowHour < Day)
         Greeting := Greeting_Morning
-    else if (A_Hour >= Day and A_Hour < Evening)
+    else if (moscowHour >= Day && moscowHour < Evening)
         Greeting := Greeting_Day
-    else if (A_Hour >= Evening and A_Hour < Night)
+    else if (moscowHour >= Evening && moscowHour < 24)
         Greeting := Greeting_Evening
     else
         Greeting := Greeting_Night
-    return, Greeting
+
+    return Greeting
 }
+
+
 
 
 
@@ -5447,73 +5459,6 @@ return DllCall("gdiplus\GdipDisposeImage", Ptr, pBitmap)
 Return
 
 
-
-
-; Горячие клавиши для изменения статуса
-:?:/Онл:: ; Ctrl + 1 — для "Онлайн"
-    ChangeStatus("1")
-    Return
-
-:?:/Афк:: ; Ctrl + 2 — для "Афк"
-    ChangeStatus("2")
-    Return
-
-:?:/Офф::  ; Ctrl + 3 — для "Оффлайн"
-    ChangeStatus("0")
-    Return
-
-; Функция для изменения статуса через консоль
-ChangeStatus(Status) {
-    ; Открываем Microsoft Edge с нужным URL
-    Run, msedge.exe https://journal.gtajournal.online/dashboard
-    WinWait, GTA Journal ; Ждем, пока окно не откроется
-    Sleep, 100 ; Ожидаем 5 секунд для полной загрузки страницы
-
-    ; Разворачиваем окно браузера
-    WinMaximize, GTA Journal
-    Sleep, 100  ; Ждем немного, чтобы окно точно развернулось
-
-    ; Фокусируемся на окне браузера
-    WinActivate, GTA Journal
-    Sleep, 100  ; Подождем немного, чтобы окно точно получило фокус
-
-    ; Открытие консоли браузера (Ctrl + Shift + J)
-    Send, ^+j  ; Ctrl + Shift + J для открытия консоли
-    Sleep, 300  ; Ждем 2 секунды, пока консоль откроется
-
-    ; Клик перед выполнением jsCode (поменяйте на подходящие координаты для клика)
-    Click, 1800, 500
-    Sleep, 300  ; Ждем, чтобы клик успел выполниться
-
-    ; Формируем JavaScript для изменения статуса
-    jsCode := ""
-    if (Status = "1") {
-        jsCode := "document.querySelector('.action-status .online').click();"
-    } else if (Status = "2") {
-        jsCode := "document.querySelector('.action-status .afk').click();"
-    } else if (Status = "0") {
-        jsCode := "document.querySelector('.action-status .offline').click();"
-    }
-
-    ; Отправляем JavaScript в консоль и нажимаем Enter
-    Send, % jsCode
-    Send, {Enter}
-
-    ; Ждем некоторое время, чтобы статус изменился
-    Sleep, 200 ; Ждем 2 секунды
-
-    ; Закрытие консоли (Ctrl + Shift + J)
-    Send, ^+j
-    Sleep, 100  ; Ждем, чтобы консоль закрылась
-
-    ; Закрытие браузера
-    ; Попробуем сначала закрыть окно
-    WinClose, GTA Journal
-    Sleep, 50 ; Ждем 2 секунды, чтобы окно успело закрыться
-
-    ; Если браузер не закрылся, то принудительно завершаем процесс
-    Process, Close, msedge.exe
-}
 
 
 Lektsii_MZ:
