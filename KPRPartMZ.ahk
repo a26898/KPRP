@@ -6876,16 +6876,30 @@ Gui, Font, s25
 
 startTime := A_TickCount
 
-SetTimer, UpdateTime, 1000
+SetTimer, 1UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00
+Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
 Gui, Show, NoActivate xCenter y0 w200 h70
 Return
 
 :?:/работа_::
 ;SendPlay {Enter}
 Gui, Destroy
+Return
+
+
+1UpdateTime:
+    elapsedTime := A_TickCount - startTime 
+    seconds := Floor(elapsedTime / 1000) 
+    hours := Floor(seconds / 3600) ; Часы
+    minutes := Floor((seconds - hours * 3600) / 60) 
+    seconds := Mod(seconds, 60) ; Секунды
+    formattedTime := Format("{:02}:{:02}:{:02}", hours, minutes, seconds) 
+    
+    GuiControl,, TimerText, %formattedTime%
+    
+
 Return
 
 :?:/Грудь_У::
@@ -8817,19 +8831,6 @@ SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say Сейчас пройдёт тренировка:" Word ". ","  " zaderzhka " ")
 %vybor%("" Skrin_1 "", "500")
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s25 
-
-startTime := A_TickCount 
-
-SetTimer, UpdateTime, 1000 ;
-
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, NoActivate xCenter y0 w200 h70
-Sleep 120000
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\5_minut.mp3
 Return
 
 
@@ -8859,34 +8860,7 @@ SendPlay {Enter}
 IniWrite %Word%, %FilePath%, %DataGroup%, NumberCall
 %vybor%("say Сейчас пройдёт мероприятие:" Word ". ","  " zaderzhka " ")
 %vybor%("" Skrin_1 "", "500")
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s25 
-
-startTime := A_TickCount 
-
-SetTimer, UpdateTime, 1000 ;
-
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, NoActivate xCenter y0 w200 h70
-Sleep 120000
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\5_minut.mp3
 Return
-
-:?:/Собес::
-FormatTime, curMin, , mm  ; Получаем текущую минуту (только минуты)
-alertMinutes := "8 10 18 20 28 30 38 40 48 50 58"
-
-if InStr(" " alertMinutes " ", " " curMin " ")
-{
-    Loop, 30  ; Повторяем 30 раз (30 секунд)
-    {
-        SoundBeep, 1000, 500  ; Издает звук 500 мс
-        Sleep, 500  ; Ждёт 500 мс перед следующим сигналом
-    }
-}
-return
 
 
 
@@ -8952,15 +8926,19 @@ WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
-Gui, Font, s25 
+Gui, Font, s20
 
-startTime := A_TickCount 
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
 
-SetTimer, UpdateTime, 1000 ;
 
 WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, NoActivate xCenter y0 w200 h70
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
+
+SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -8972,14 +8950,14 @@ If (Patrol != "") {
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_5.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
 {
-sleep 570000
+sleep 590000 
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_2.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
 sleep 30000
 if(A_Index = Skolko){
 		break
@@ -9010,7 +8988,7 @@ If (Patrol != "") {
 %vybor%("" Skrin_1 "", "500")
 Gui, Destroy
 sleep 1000
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Return
 
 
@@ -9031,7 +9009,7 @@ If (Patrol != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Fast_3.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 sleep 10000
 Gui, Destroy
 Reload
@@ -9075,16 +9053,21 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
+Gui, Color, 12345 
+Gui, Font, s20
 
-startTime := A_TickCount
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+
+
+WinSet, TransColor, %CustomColor3% 215
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
 
 SetTimer, UpdateTime, 1000
 
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
@@ -9096,14 +9079,14 @@ If (Patrol != "") {
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 ; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
 Loop, %Skolko%
 {
-    sleep 570000
+    sleep 590000 
     IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_2.mp3
-    sleep 30000
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
+
 	if(A_Index = Skolko){
 		break
 	}
@@ -9129,7 +9112,7 @@ If (Patrol != "") {
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Gui, Destroy
 Return
 
@@ -9151,7 +9134,7 @@ If (Patrol != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 Gui, Destroy
 sleep 10000
 Reload
@@ -9335,17 +9318,29 @@ return
 
 
 UpdateTime:
-    elapsedTime := A_TickCount - startTime 
-    seconds := Floor(elapsedTime / 1000) 
-    hours := Floor(seconds / 3600) ; Часы
-    minutes := Floor((seconds - hours * 3600) / 60) 
-    seconds := Mod(seconds, 60) ; Секунды
-    formattedTime := Format("{:02}:{:02}:{:02}", hours, minutes, seconds) 
-    
-    GuiControl,, TimerText, %formattedTime%
-    
+    ; Время дежурства — с момента запуска (не сбрасывается)
+    elapsedDuty := A_TickCount - startTime
+    elapsedDutySec := Floor(elapsedDuty / 1000)
+    hoursDuty := Floor(elapsedDutySec / 3600)
+    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
+    secondsDuty := Mod(elapsedDutySec, 60)
+    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
 
-Return
+    ; Время до доклада — обратный отсчёт от 10 минут
+    elapsedDoclad := A_TickCount - docladStart
+    if (elapsedDoclad >= docladInterval) {
+        docladStart := A_TickCount  ; сброс обратного отсчёта
+        elapsedDoclad := 0
+    }
+    remaining := docladInterval - elapsedDoclad
+    remainingSec := Floor(remaining / 1000)
+    hoursRem := Floor(remainingSec / 3600)
+    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
+    secondsRem := Mod(remainingSec, 60)
+    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
+
+    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%
+return
 
 
 
@@ -9391,16 +9386,20 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
+Gui, Color, 12345 
+Gui, Font, s20
 
-startTime := A_TickCount
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
 
-SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
+
+SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9414,17 +9413,17 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_5.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 
 Loop, %Skolko%
 {
-    sleep 570000
+    sleep 590000 
     ; Если фамилия напарника не введена, не записываем её в файл снова
     If (Patrol_1 != "") {
         IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
     }
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_2.mp3
-    sleep 30000
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
+
 	if(A_Index = Skolko){
 		break
 	}
@@ -9455,7 +9454,7 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Gui, Destroy
 sleep 1000
 Return
@@ -9486,7 +9485,7 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Republic_3.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 Gui, Destroy
 sleep 10000
 Reload
@@ -9533,18 +9532,22 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
-; Параметры окна
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
+Gui, Color, 12345 
+Gui, Font, s20
 
-startTime := A_TickCount
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+
+
+WinSet, TransColor, %CustomColor3% 215
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
 
 SetTimer, UpdateTime, 1000
 
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9558,14 +9561,14 @@ If (Patrol != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_1.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 
 Loop, %Skolko%
 {
-    sleep 570000
+    sleep 590000 
     IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-    SoundPlay,C:\ProgramData\KPRP\KPRP-main\Gorodskoy_2.mp3
-    sleep 30000
+    SoundPlay,C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
+
 	if(A_Index = Skolko){
 		break
 	}
@@ -9599,7 +9602,7 @@ If (Patrol != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Gui, Destroy
 sleep 1000
 Return
@@ -9622,7 +9625,7 @@ If (Patrol != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay,C:\ProgramData\KPRP\KPRP-main\Gorodskoy_4.mp3
+SoundPlay,C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 Gui, Destroy
 sleep 10000
 Reload
@@ -9673,16 +9676,20 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
+Gui, Color, 12345 
+Gui, Font, s20
 
-startTime := A_TickCount
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
 
-SetTimer, UpdateTime, 1000
 
 WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
+
+SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
@@ -9696,17 +9703,17 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_5.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 
 Loop, %Skolko%
 {
-    sleep 570000
+    sleep 590000 
     ; Если фамилия напарника не введена, не записываем её в файл снова
     If (Patrol_1 != "") {
         IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
     }
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_2.mp3
-    sleep 30000
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
+
 	if(A_Index = Skolko){
 		break
 	}
@@ -9737,7 +9744,7 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Gui, Destroy
 sleep 1000
 Return
@@ -9769,7 +9776,7 @@ If (Patrol_1 != "") {
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\Vozdukh_3.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 Gui, Destroy
 sleep 10000
 Reload
@@ -9798,27 +9805,31 @@ WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 Gui, Color, 12345 
-Gui, Font, s25 
+Gui, Font, s20
 
-startTime := A_TickCount 
-SetTimer, UpdateTime, 1000
+startTime := A_TickCount        ; старт для дежурства — непрерывно
+docladInterval := 590000        ; 10 минут в миллисекундах
+docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
 
 WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText cYellow Center, 00:00:00 
-Gui, Show, NoActivate xCenter y0 w200 h70
+
+Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
+Gui, Show, NoActivate xCenter y0 w350 h100
+
+SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "1000")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1000")
 %vybor%("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_5.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_1.mp3
 
 Loop, %Skolko%
 {
-    sleep 570000
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_2.mp3
-    sleep 30000
+    sleep 590000 
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_2.mp3
+
 	if(A_Index = Skolko){
 		break
 	}
@@ -9837,7 +9848,7 @@ SendPlay {Enter}
 %vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_4.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
 Gui, Destroy
 Return
 
@@ -9852,7 +9863,7 @@ SendPlay {Enter}
 %vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 %vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\PO_3.mp3
+SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
 Gui, Destroy
 sleep 10000
 Reload

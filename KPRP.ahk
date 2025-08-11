@@ -1190,10 +1190,12 @@ IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
-IniRead, ToggleTimer, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
+IniRead, Tsvet_3, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
 IniRead, vybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniRead, userVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniRead, Skrin_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
+
+
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
@@ -1644,7 +1646,8 @@ if vybor=ERROR
 vybor=SendChat
 if Skrin_1=ERROR
 Skrin_1=screenshot
-
+if Tsvet_3=ERROR
+Tsvet_3=Yellow
 if userVybor=ERROR
 userVybor=Автоотправка
 
@@ -1807,11 +1810,13 @@ Proverka()
 
 Ru()
 {
+Sleep 50
     SendMessage, 0x50,, 0x4190419,, A ;
 }
 
 En()
 {
+Sleep 50
     SendMessage, 0x50,, 0x4090409,, A ;
 }
 
@@ -3376,9 +3381,9 @@ Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya
 Gui, 6:Add, Slider, x90 y700 w295 h30 vSoundEnable Range0-1, %SoundEnable% 
 Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
 Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
-Gui, 6:Add, DropDownList, x490 y225 w195 vToggleTimer, %ToggleTimer%||Включен|Выключен
+Gui, 6:Add, DropDownList, x490 y225 w195 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
+Gui, 6:Add, ComboBox, x490 y325 w195 vTsvet_3, %Tsvet_3%||
 
-Gui, 6:Add, DropDownList, x490 y325 w195 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
 
 
 Gui, 6:show, center , Настройки
@@ -3424,6 +3429,7 @@ if (Skrinshot = "Включен") {
     Skrin_1 := ""
 }
 return
+
 
 
 
@@ -4440,10 +4446,12 @@ IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
-IniWrite, %ToggleTimer%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ToggleTimer
+IniWrite, %Tsvet_3%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
 IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
+
+
 
 IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
