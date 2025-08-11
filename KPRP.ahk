@@ -1740,6 +1740,7 @@ if (Taymer_Nastroyka = "Включен") {
 
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
+Run, "C:\ProgramData\KPRP\KPRP-main\Diskorod.exe"
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -3458,6 +3459,9 @@ Run, taskkill /IM %ProcessName% /F, , Hide
 ProcessName := "Journal.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
+ProcessName := "Diskorod.exe"
+Run, taskkill /IM %ProcessName% /F, , Hide
+
 	Reload
 Return
 
@@ -5107,6 +5111,10 @@ Run, taskkill /IM %ProcessName% /F, , Hide
 
 ProcessName := "Journal.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
+
+
+ProcessName := "Diskorod.exe"
+Run, taskkill /IM %ProcessName% /F, , Hide
 Reload
 Return
 
@@ -5130,6 +5138,9 @@ ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 ProcessName := "Journal.exe"
+Run, taskkill /IM %ProcessName% /F, , Hide
+
+ProcessName := "Diskorod.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 Sleep 2500
@@ -5302,6 +5313,10 @@ Run, taskkill /IM %ProcessName% /F, , Hide
 
 
 ProcessName := "Journal.exe"
+Run, taskkill /IM %ProcessName% /F, , Hide
+
+
+ProcessName := "Diskorod.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 ExitApp
