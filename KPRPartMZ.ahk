@@ -33,7 +33,7 @@ DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1
 DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
 
 ; --- Запускаем Journal.exe для вкладки 10 ---
-appPath10 := "C:\ProgramData\KPRP\KPRP-main\Journal\Journal.exe"
+appPath10 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Journal.exe"
 Run, %appPath10%, , , pid10
 WinWait, ahk_pid %pid10%
 WinGet, hwndApp10, ID, ahk_pid %pid10%
