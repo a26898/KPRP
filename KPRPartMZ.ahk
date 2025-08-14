@@ -3529,6 +3529,37 @@ Return
 
 
 :?:/Рана_1::
+Sleep 150
+SendPlay {Enter}
+FileEncoding, UTF-8-RAW
+
+Var := Greeting()
+Loop, read, %KPRPMZ91%
+{
+    Loop, parse, A_LoopReadLine, %A_Tab%
+    {
+        line := A_LoopField
+
+        ; Подстановка переменных
+        line := StrReplace(line, "%floor%", floor)
+        line := StrReplace(line, "%Var%", Var)
+        line := StrReplace(line, "%Name%", Name)
+        line := StrReplace(line, "%Surname%", Surname)
+		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+        line := StrReplace(line, "%JWI%", JWI)
+        line := StrReplace(line, "%TAG%", TAG)
+        line := StrReplace(line, "%Middle_Name%", Middle_Name)
+        line := StrReplace(line, "%Skrin_1%", Skrin_1)
+        line := StrReplace(line, "%Female%", Female)
+		line := StrReplace(line, "%stol%", stol)
+		
+        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
+    }
+}
+
+
+
 SendPlay {Enter}
 %vybor%("do В мед. сумке лежит жгут, шприц в упаковке и ампула обезболивающего. ", "  " zaderzhka " ")
 %vybor%("me достал" floor "  жгут из сумки ", "  " zaderzhka " ")
@@ -8593,7 +8624,7 @@ Return
 
 :?:/МК_12::
 SendPlay {Enter}
-%vybor%("say Вы не прошли осмотр и будете внесены во временный запрет на 4 дня.", "  " zaderzhka " ")
+%vybor%("say Вы не прошли осмотр и будете внесены во временный запрет на 5 дней.", "  " zaderzhka " ")
 Return
 
 
@@ -14186,7 +14217,7 @@ SelectKPRPMZ2:
     }
 
     MsgBox, 64, Файл выбран, %KPRPMZ2%
-	Goto, Change
+	Goto, Change 
 }
 return
 
