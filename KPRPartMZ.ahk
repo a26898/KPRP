@@ -8589,7 +8589,7 @@ Return
 
 :?:/МК_12::
 SendPlay {Enter}
-%vybor%("say Вы не прошли осмотр и будете внесены во временный запрет на 4 дня.", "  " zaderzhka " ")
+%vybor%("say Вы не прошли осмотр и будете внесены во временный запрет на 5 дней.", "  " zaderzhka " ")
 Return
 
 
@@ -14611,4 +14611,5 @@ SelectKPRPMZ(num) {
     Gosub, Change
 }
 return
+
 
