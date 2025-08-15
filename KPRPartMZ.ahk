@@ -2701,10 +2701,6 @@ Return
 
 
 
-
-
-
-
 :?:/Глисты_1::
 Sleep 150
 SendPlay {Enter}
@@ -8925,19 +8921,44 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
+
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
 
-WinSet, TransColor, %CustomColor3% 215
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
-
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
@@ -8966,9 +8987,9 @@ SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Продолжаю дежурство на посту:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Пост:" Post ". ", "500")
+    %vybor%("r [" TAG "] Продолжаю дежурство на посту:" Post ". ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 %vybor%("" Skrin_1 "", "500")
@@ -8980,9 +9001,9 @@ SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Завершил" floor " пост:" Post ". ", "500")
+    %vybor%("r [" TAG "] Покинул" floor " пост:" Post ". ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 %vybor%("" Skrin_1 "", "500")
@@ -9002,9 +9023,9 @@ SendPlay {Enter}
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Завершил" floor " пост:" Post " ", "500")
+    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " ", "500")
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9053,19 +9074,44 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
+
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
 
-WinSet, TransColor, %CustomColor3% 215
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
-
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
 
 SendPlay {Enter}
@@ -9073,9 +9119,9 @@ SendPlay {Enter}
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
 ; Условие для добавления информации о бригаде
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Выехал" female " на патрулирование города // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Выехал" floor " на патрулирование города // Бригада:" Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Выехал" female " на патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Выехал" floor " на патрулирование города. ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
@@ -9094,9 +9140,9 @@ Loop, %Skolko%
     %vybor%("do КПК висит на поясе.", "500")
     %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
     If (Patrol != "") {
-        %vybor%("r [" TAG "] Патрулирование города // Бригада:" Patrol ". ", "500")
+        %vybor%("r [" TAG "] Продолжаю патруль города // Бригада:" Patrol ". ", "500")
     } Else {
-        %vybor%("r [" TAG "] Патрулирование города. ", "500")
+        %vybor%("r [" TAG "] Продолжаю патруль города. ", "500")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
     %vybor%("" Skrin_1 "", "500")
@@ -9106,9 +9152,9 @@ SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Окончил" floor " патрулирование города // Бригада:" Patrol ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " патрулирование города // Бригада:" Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. ", "500")
 }
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
 %vybor%("" Skrin_1 "", "500")
@@ -9127,9 +9173,9 @@ SendPlay {Enter}
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol != "") {
-    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. // Бригада: " Patrol ". ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. // Бригада: " Patrol ". ", "500")
 } Else {
-    %vybor%("r [" TAG "] Окончил" floor " патрулирование города. ", "500")
+    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. ", "500")
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
@@ -9386,19 +9432,44 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
+
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
 
-WinSet, TransColor, %CustomColor3% 215
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
-
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
@@ -9432,9 +9503,9 @@ Loop, %Skolko%
     %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        %vybor%("ro [" Bol_ro_1 "] Патрулирование республики // Бригада:" Patrol_1 ". ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Продолжаю патруль республики // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        %vybor%("ro [" Bol_ro_1 "] Патрулирование республики. ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Продолжаю патруль республики. ", "1000")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
     %vybor%("" Skrin_1 "", "500")
@@ -9533,19 +9604,44 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
+
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
 
-WinSet, TransColor, %CustomColor3% 215
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
-
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
 
 SendPlay {Enter}
@@ -9578,9 +9674,9 @@ Loop, %Skolko%
     
     ; Если фамилия напарника не введена, вывести без нее
     If (Patrol != "") {
-        %vybor%("r [" TAG "] Воздушное патрулирование города // Бригада:" Patrol ". ", "1000")
+        %vybor%("r [" TAG "] Продолжаю воздушное патрулирование города // Бригада:" Patrol ". ", "1000")
     } Else {
-        %vybor%("r [" TAG "] Воздушное патрулирование города.", "1000")
+        %vybor%("r [" TAG "] Продолжаю воздушное патрулирование города.", "1000")
     }
 
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9676,19 +9772,44 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 WinWaitActive, ahk_exe gta_sa.exe
 
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
+
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
 
-WinSet, TransColor, %CustomColor3% 215
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
-
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
@@ -9722,9 +9843,9 @@ Loop, %Skolko%
     %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
     ; Если фамилия напарника не введена, не отображаем её в сообщении
     If (Patrol_1 != "") {
-        %vybor%("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Продолжаю воздушное патрулирование республики // Бригада:" Patrol_1 ". ", "1000")
     } Else {
-        %vybor%("ro [" Bol_ro_1 "] Воздушное патрулирование Республики Провинция. ", "1000")
+        %vybor%("ro [" Bol_ro_1 "] Продолжаю воздушное патрулирование республики. ", "1000")
     }
     %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
     %vybor%("" Skrin_1 "", "500")
@@ -9737,9 +9858,9 @@ SendPlay {Enter}
 
 ; Если фамилия напарника не введена, не отображаем её в сообщении
 If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование Республики Провинция. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование Республики Провинция. ", "500")
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9769,9 +9890,9 @@ SendPlay {Enter}
 ; Если бригада не указана, не включаем её в сообщение
 
 If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
 } Else {
-    %vybor%("ro [" Bol_ro_1 "] Окончил" floor " воздушное патрулирование р. Провинция. ", "500")
+    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование р. Провинция. ", "500")
 }
 
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
@@ -9803,20 +9924,48 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
+
 Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345 
-Gui, Font, s20
 
-startTime := A_TickCount        ; старт для дежурства — непрерывно
-docladInterval := 590000        ; 10 минут в миллисекундах
-docladStart := A_TickCount      ; старт для обратного отсчёта до доклада
+; Размер окна
+winWidth := 403
+winHeight := 109
 
-WinSet, TransColor, %CustomColor3% 215
+; Добавляем картинку
+Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
-Gui, Add, Text, vTimerText c%Tsvet_3% Center w300, Дежурство: 00:00:00`nДо доклада: 00:00:00
-Gui, Show, NoActivate xCenter y0 w350 h100
+; Добавляем текст таймера поверх картинки
+Gui, Font, s20 cgray Bold
+Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
 
+; Получаем координаты активного монитора
+monitorInfo := GetActiveMonitorInfo()
+if monitorInfo
+{
+    xPos := monitorInfo.right - winWidth - 20
+    yPos := monitorInfo.bottom - winHeight - 770
+}
+else
+{
+    ; Fallback на основной монитор
+    SysGet, monLeft, 0
+    SysGet, monTop, 1
+    SysGet, monRight, 2
+    SysGet, monBottom, 3
+    xPos := monRight - winWidth - 40
+    yPos := monBottom - winHeight - 40
+}
+
+Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
+
+
+
+; Таймер
+startTime := A_TickCount
+docladInterval := 590000
+docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
+
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9845,7 +9994,7 @@ Loop, %Skolko%
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-%vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.", "500")
+%vybor%("r [" TAG "] Покинул" floor " пост:Регистратура.", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
 %vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_3.mp3
@@ -9860,7 +10009,7 @@ Sleep 1500
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-%vybor%("r [" TAG "] Завершил" floor " пост:Регистратура.  ", "500")
+%vybor%("r [" TAG "] Покинул" floor " пост:Регистратура.  ", "500")
 %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
 %vybor%("" Skrin_1 "", "500")
 SoundPlay, C:\ProgramData\KPRP\KPRP-main\Doklad_Mariya_4.mp3
@@ -11446,17 +11595,6 @@ Return
 ;--------------------------------------------------------------------------------
 
 Medicine82:
-Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h60 w430,
-Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Вода_1
-
-
-Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка качества воды в кулер]
-
-
-Gui, 3:show, center h60 w430, Проверка качества воды
 Return
 
 ;--------------------------------------------------------------------------------
@@ -14151,1608 +14289,326 @@ Run, notepad.exe "%KPRPMZ100%"
 return
 
 
-SelectKPRPMZ1: 
-{
-    ; Сохраняем текущий путь, чтобы он не сбивался
-    LastPath := KPRPMZ1  ; Сохраняем текущий путь, чтобы не сбить его, если пользователь не выбрал файл.
-
-    FileSelectFile, KPRPMZ1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    ; Если путь пустой, значит, пользователь отменил выбор (не выбрал файл)
-    if (KPRPMZ1 = "")
-    {
-        KPRPMZ1 := LastPath  ; Восстанавливаем путь, если пользователь отменил выбор.
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ1%
-	Goto, Change
-	
-}
+; Метки для 1–100
+SelectKPRPMZ1:
+    SelectKPRPMZ(1)
 return
-
-
 SelectKPRPMZ2:
-{
-    LastPath := KPRPMZ2
-    FileSelectFile, KPRPMZ2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ2 = "")
-    {
-        KPRPMZ2 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ2%
-	Goto, Change
-}
+    SelectKPRPMZ(2)
 return
-
 SelectKPRPMZ3:
-{
-    LastPath := KPRPMZ3
-    FileSelectFile, KPRPMZ3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ3 = "")
-    {
-        KPRPMZ3 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ3%
-	Goto, Change
-}
+    SelectKPRPMZ(3)
 return
-
 SelectKPRPMZ4:
-{
-    LastPath := KPRPMZ4
-    FileSelectFile, KPRPMZ4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ4 = "")
-    {
-        KPRPMZ4 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ4%
-	Goto, Change
-}
+    SelectKPRPMZ(4)
 return
-
 SelectKPRPMZ5:
-{
-    LastPath := KPRPMZ5
-    FileSelectFile, KPRPMZ5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ5 = "")
-    {
-        KPRPMZ5 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ5%
-	Goto, Change
-}
+    SelectKPRPMZ(5)
 return
-
 SelectKPRPMZ6:
-{
-    LastPath := KPRPMZ6
-    FileSelectFile, KPRPMZ6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ6 = "")
-    {
-        KPRPMZ6 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ6%
-	Goto, Change
-}
+    SelectKPRPMZ(6)
 return
-
 SelectKPRPMZ7:
-{
-    LastPath := KPRPMZ7
-    FileSelectFile, KPRPMZ7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ7 = "")
-    {
-        KPRPMZ7 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ7%
-	Goto, Change
-}
+    SelectKPRPMZ(7)
 return
-
 SelectKPRPMZ8:
-{
-    LastPath := KPRPMZ8
-    FileSelectFile, KPRPMZ8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ8 = "")
-    {
-        KPRPMZ8 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ8%
-	Goto, Change
-}
+    SelectKPRPMZ(8)
 return
-
 SelectKPRPMZ9:
-{
-    LastPath := KPRPMZ9
-    FileSelectFile, KPRPMZ9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ9 = "")
-    {
-        KPRPMZ9 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ9%
-	Goto, Change
-}
+    SelectKPRPMZ(9)
 return
-
 SelectKPRPMZ10:
-{
-    LastPath := KPRPMZ10
-    FileSelectFile, KPRPMZ10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ10 = "")
-    {
-        KPRPMZ10 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ10%
-	Goto, Change
-}
+    SelectKPRPMZ(10)
 return
-
 SelectKPRPMZ11:
-{
-    LastPath := KPRPMZ11
-    FileSelectFile, KPRPMZ11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ11 = "")
-    {
-        KPRPMZ11 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ11%
-	Goto, Change
-}
+    SelectKPRPMZ(11)
 return
-
 SelectKPRPMZ12:
-{
-    LastPath := KPRPMZ12
-    FileSelectFile, KPRPMZ12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ12 = "")
-    {
-        KPRPMZ12 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ12%
-	Goto, Change
-}
+    SelectKPRPMZ(12)
 return
-
 SelectKPRPMZ13:
-{
-    LastPath := KPRPMZ13
-    FileSelectFile, KPRPMZ13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ13 = "")
-    {
-        KPRPMZ13 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ13%
-	Goto, Change
-}
+    SelectKPRPMZ(13)
 return
-
 SelectKPRPMZ14:
-{
-    LastPath := KPRPMZ14
-    FileSelectFile, KPRPMZ14, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ14 = "")
-    {
-        KPRPMZ14 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ14%
-	Goto, Change
-}
+    SelectKPRPMZ(14)
 return
-
 SelectKPRPMZ15:
-{
-    LastPath := KPRPMZ15
-    FileSelectFile, KPRPMZ15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ15 = "")
-    {
-        KPRPMZ15 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ15%
-	Goto, Change
-}
+    SelectKPRPMZ(15)
 return
-
 SelectKPRPMZ16:
-{
-    LastPath := KPRPMZ16
-    FileSelectFile, KPRPMZ16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ16 = "")
-    {
-        KPRPMZ16 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ16%
-	Goto, Change
-}
+    SelectKPRPMZ(16)
 return
-
 SelectKPRPMZ17:
-{
-    LastPath := KPRPMZ17
-    FileSelectFile, KPRPMZ17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ17 = "")
-    {
-        KPRPMZ17 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ17%
-	Goto, Change
-}
+    SelectKPRPMZ(17)
 return
-
 SelectKPRPMZ18:
-{
-    LastPath := KPRPMZ18
-    FileSelectFile, KPRPMZ18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ18 = "")
-    {
-        KPRPMZ18 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ18%
-	Goto, Change
-}
+    SelectKPRPMZ(18)
 return
-
 SelectKPRPMZ19:
-{
-    LastPath := KPRPMZ19
-    FileSelectFile, KPRPMZ19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ19 = "")
-    {
-        KPRPMZ19 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ19%
-	Goto, Change
-}
+    SelectKPRPMZ(19)
 return
-
 SelectKPRPMZ20:
-{
-    LastPath := KPRPMZ20
-    FileSelectFile, KPRPMZ20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ20 = "")
-    {
-        KPRPMZ20 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ20%
-	Goto, Change
-}
+    SelectKPRPMZ(20)
 return
-
 SelectKPRPMZ21:
-{
-    LastPath := KPRPMZ21
-    FileSelectFile, KPRPMZ21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ21 = "")
-    {
-        KPRPMZ21 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ21%
-	Goto, Change
-}
+    SelectKPRPMZ(21)
 return
-
 SelectKPRPMZ22:
-{
-    LastPath := KPRPMZ22
-    FileSelectFile, KPRPMZ22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ22 = "")
-    {
-        KPRPMZ22 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ22%
-	Goto, Change
-}
+    SelectKPRPMZ(22)
 return
-
 SelectKPRPMZ23:
-{
-    LastPath := KPRPMZ23
-    FileSelectFile, KPRPMZ23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ23 = "")
-    {
-        KPRPMZ23 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ23%
-	Goto, Change
-}
+    SelectKPRPMZ(23)
 return
-
 SelectKPRPMZ24:
-{
-    LastPath := KPRPMZ24
-    FileSelectFile, KPRPMZ24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ24 = "")
-    {
-        KPRPMZ24 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ24%
-	Goto, Change
-}
+    SelectKPRPMZ(24)
 return
-
 SelectKPRPMZ25:
-{
-    LastPath := KPRPMZ25
-    FileSelectFile, KPRPMZ25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ25 = "")
-    {
-        KPRPMZ25 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ25%
-	Goto, Change
-}
+    SelectKPRPMZ(25)
 return
-
 SelectKPRPMZ26:
-{
-    LastPath := KPRPMZ26
-    FileSelectFile, KPRPMZ26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ26 = "")
-    {
-        KPRPMZ26 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ26%\
-	Goto, Change
-}
+    SelectKPRPMZ(26)
 return
-
 SelectKPRPMZ27:
-{
-    LastPath := KPRPMZ27
-    FileSelectFile, KPRPMZ27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ27 = "")
-    {
-        KPRPMZ27 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ27%
-	Goto, Change
-}
+    SelectKPRPMZ(27)
 return
-
 SelectKPRPMZ28:
-{
-    LastPath := KPRPMZ28
-    FileSelectFile, KPRPMZ28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ28 = "")
-    {
-        KPRPMZ28 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ28%
-	Goto, Change
-}
+    SelectKPRPMZ(28)
 return
-
 SelectKPRPMZ29:
-{
-    LastPath := KPRPMZ29
-    FileSelectFile, KPRPMZ29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ29 = "")
-    {
-        KPRPMZ29 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ29%
-	Goto, Change
-}
+    SelectKPRPMZ(29)
 return
-
 SelectKPRPMZ30:
-{
-    LastPath := KPRPMZ30
-    FileSelectFile, KPRPMZ30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ30 = "")
-    {
-        KPRPMZ30 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ30%
-	Goto, Change
-}
+    SelectKPRPMZ(30)
 return
-
 SelectKPRPMZ31:
-{
-    LastPath := KPRPMZ31
-    FileSelectFile, KPRPMZ31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ31 = "")
-    {
-        KPRPMZ31 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ31%
-	Goto, Change
-}
+    SelectKPRPMZ(31)
 return
-
 SelectKPRPMZ32:
-{
-    LastPath := KPRPMZ32
-    FileSelectFile, KPRPMZ32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ32 = "")
-    {
-        KPRPMZ32 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ32%
-	Goto, Change
-}
+    SelectKPRPMZ(32)
 return
-
 SelectKPRPMZ33:
-{
-    LastPath := KPRPMZ33
-    FileSelectFile, KPRPMZ33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ33 = "")
-    {
-        KPRPMZ33 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ33%
-	Goto, Change
-}
+    SelectKPRPMZ(33)
 return
-
 SelectKPRPMZ34:
-{
-    LastPath := KPRPMZ34
-    FileSelectFile, KPRPMZ34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ34 = "")
-    {
-        KPRPMZ34 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ34%
-	Goto, Change
-}
+    SelectKPRPMZ(34)
 return
-
 SelectKPRPMZ35:
-{
-    LastPath := KPRPMZ35
-    FileSelectFile, KPRPMZ35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ35 = "")
-    {
-        KPRPMZ35 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ35%
-	Goto, Change
-}
+    SelectKPRPMZ(35)
 return
-
 SelectKPRPMZ36:
-{
-    LastPath := KPRPMZ36
-    FileSelectFile, KPRPMZ36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ36 = "")
-    {
-        KPRPMZ36 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ36%
-	Goto, Change
-}
+    SelectKPRPMZ(36)
 return
-
 SelectKPRPMZ37:
-{
-    LastPath := KPRPMZ37
-    FileSelectFile, KPRPMZ37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ37 = "")
-    {
-        KPRPMZ37 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ37%
-	Goto, Change
-}
+    SelectKPRPMZ(37)
 return
-
 SelectKPRPMZ38:
-{
-    LastPath := KPRPMZ38
-    FileSelectFile, KPRPMZ38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ38 = "")
-    {
-        KPRPMZ38 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ38%
-	Goto, Change
-}
+    SelectKPRPMZ(38)
 return
-
 SelectKPRPMZ39:
-{
-    LastPath := KPRPMZ39
-    FileSelectFile, KPRPMZ39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ39 = "")
-    {
-        KPRPMZ39 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ39%
-	Goto, Change
-}
+    SelectKPRPMZ(39)
 return
-
 SelectKPRPMZ40:
-{
-    LastPath := KPRPMZ40
-    FileSelectFile, KPRPMZ40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ40 = "")
-    {
-        KPRPMZ40 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ40%
-	Goto, Change
-}
+    SelectKPRPMZ(40)
 return
-
 SelectKPRPMZ41:
-{
-    LastPath := KPRPMZ41
-    FileSelectFile, KPRPMZ41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ41 = "")
-    {
-        KPRPMZ41 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ41%
-	Goto, Change
-}
+    SelectKPRPMZ(41)
 return
-
 SelectKPRPMZ42:
-{
-    LastPath := KPRPMZ42
-    FileSelectFile, KPRPMZ42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ42 = "")
-    {
-        KPRPMZ42 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ42%
-	Goto, Change
-}
+    SelectKPRPMZ(42)
 return
-
 SelectKPRPMZ43:
-{
-    LastPath := KPRPMZ43
-    FileSelectFile, KPRPMZ43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ43 = "")
-    {
-        KPRPMZ43 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ43%
-	Goto, Change
-}
+    SelectKPRPMZ(43)
 return
-
 SelectKPRPMZ44:
-{
-    LastPath := KPRPMZ44
-    FileSelectFile, KPRPMZ44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ44 = "")
-    {
-        KPRPMZ44 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ44%
-	Goto, Change
-}
+    SelectKPRPMZ(44)
 return
-
 SelectKPRPMZ45:
-{
-    LastPath := KPRPMZ45
-    FileSelectFile, KPRPMZ45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ45 = "")
-    {
-        KPRPMZ45 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ45%
-	Goto, Change
-}
+    SelectKPRPMZ(45)
 return
-
 SelectKPRPMZ46:
-{
-    LastPath := KPRPMZ46
-    FileSelectFile, KPRPMZ46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ46 = "")
-    {
-        KPRPMZ46 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ46%
-	Goto, Change
-}
+    SelectKPRPMZ(46)
 return
-
 SelectKPRPMZ47:
-{
-    LastPath := KPRPMZ47
-    FileSelectFile, KPRPMZ47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ47 = "")
-    {
-        KPRPMZ47 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ47%
-	Goto, Change
-}
+    SelectKPRPMZ(47)
 return
-
 SelectKPRPMZ48:
-{
-    LastPath := KPRPMZ48
-    FileSelectFile, KPRPMZ48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ48 = "")
-    {
-        KPRPMZ48 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ48%
-	Goto, Change
-}
+    SelectKPRPMZ(48)
 return
-
 SelectKPRPMZ49:
-{
-    LastPath := KPRPMZ49
-    FileSelectFile, KPRPMZ49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ49 = "")
-    {
-        KPRPMZ49 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ49%
-	Goto, Change
-}
+    SelectKPRPMZ(49)
 return
-
 SelectKPRPMZ50:
-{
-    LastPath := KPRPMZ50
-    FileSelectFile, KPRPMZ50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ50 = "")
-    {
-        KPRPMZ50 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ50%
-	Goto, Change
-}
+    SelectKPRPMZ(50)
 return
-
 SelectKPRPMZ51:
-{
-    LastPath := KPRPMZ51
-    FileSelectFile, KPRPMZ51, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPMZ51 = "")
-    {
-        KPRPMZ51 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPMZ51%
-	Goto, Change
-}
+    SelectKPRPMZ(51)
 return
 SelectKPRPMZ52:
-{
-    LastPath := KPRPMZ52
-    FileSelectFile, KPRPMZ52, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ52 = "")
-    {
-        KPRPMZ52 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ52%
-	Goto, Change
-}
+    SelectKPRPMZ(52)
 return
-
 SelectKPRPMZ53:
-{
-    LastPath := KPRPMZ53
-    FileSelectFile, KPRPMZ53, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ53 = "")
-    {
-        KPRPMZ53 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ53%
-	Goto, Change
-}
+    SelectKPRPMZ(53)
 return
-
 SelectKPRPMZ54:
-{
-    LastPath := KPRPMZ54
-    FileSelectFile, KPRPMZ54, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ54 = "")
-    {
-        KPRPMZ54 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ54%
-	Goto, Change
-}
+    SelectKPRPMZ(54)
 return
-
 SelectKPRPMZ55:
-{
-    LastPath := KPRPMZ55
-    FileSelectFile, KPRPMZ55, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ55 = "")
-    {
-        KPRPMZ55 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ55%
-	Goto, Change
-}
+    SelectKPRPMZ(55)
 return
-
 SelectKPRPMZ56:
-{
-    LastPath := KPRPMZ56
-    FileSelectFile, KPRPMZ56, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ56 = "")
-    {
-        KPRPMZ56 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ56%
-	Goto, Change
-}
+    SelectKPRPMZ(56)
 return
-
 SelectKPRPMZ57:
-{
-    LastPath := KPRPMZ57
-    FileSelectFile, KPRPMZ57, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ57 = "")
-    {
-        KPRPMZ57 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ57%
-	Goto, Change
-}
+    SelectKPRPMZ(57)
 return
-
 SelectKPRPMZ58:
-{
-    LastPath := KPRPMZ58
-    FileSelectFile, KPRPMZ58, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ58 = "")
-    {
-        KPRPMZ58 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ58%
-	Goto, Change
-}
+    SelectKPRPMZ(58)
 return
-
 SelectKPRPMZ59:
-{
-    LastPath := KPRPMZ59
-    FileSelectFile, KPRPMZ59, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ59 = "")
-    {
-        KPRPMZ59 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ59%
-	Goto, Change
-}
+    SelectKPRPMZ(59)
 return
-
 SelectKPRPMZ60:
-{
-    LastPath := KPRPMZ60
-    FileSelectFile, KPRPMZ60, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ60 = "")
-    {
-        KPRPMZ60 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ60%
-	Goto, Change
-}
+    SelectKPRPMZ(60)
 return
-
 SelectKPRPMZ61:
-{
-    LastPath := KPRPMZ61
-    FileSelectFile, KPRPMZ61, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ61 = "")
-    {
-        KPRPMZ61 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ61%
-	Goto, Change
-}
+    SelectKPRPMZ(61)
 return
-
 SelectKPRPMZ62:
-{
-    LastPath := KPRPMZ62
-    FileSelectFile, KPRPMZ62, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ62 = "")
-    {
-        KPRPMZ62 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ62%
-	Goto, Change
-}
+    SelectKPRPMZ(62)
 return
-
 SelectKPRPMZ63:
-{
-    LastPath := KPRPMZ63
-    FileSelectFile, KPRPMZ63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ63 = "")
-    {
-        KPRPMZ63 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ63%
-	Goto, Change
-}
+    SelectKPRPMZ(63)
 return
-
 SelectKPRPMZ64:
-{
-    LastPath := KPRPMZ64
-    FileSelectFile, KPRPMZ64, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ64 = "")
-    {
-        KPRPMZ64 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ64%
-	Goto, Change
-}
+    SelectKPRPMZ(64)
 return
-
 SelectKPRPMZ65:
-{
-    LastPath := KPRPMZ65
-    FileSelectFile, KPRPMZ65, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ65 = "")
-    {
-        KPRPMZ65 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ65%
-	Goto, Change
-}
+    SelectKPRPMZ(65)
 return
-
 SelectKPRPMZ66:
-{
-    LastPath := KPRPMZ66
-    FileSelectFile, KPRPMZ66, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ66 = "")
-    {
-        KPRPMZ66 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ66%
-	Goto, Change
-}
+    SelectKPRPMZ(66)
 return
-
 SelectKPRPMZ67:
-{
-    LastPath := KPRPMZ67
-    FileSelectFile, KPRPMZ67, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ67 = "")
-    {
-        KPRPMZ67 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ67%
-	Goto, Change
-}
+    SelectKPRPMZ(67)
 return
-
 SelectKPRPMZ68:
-{
-    LastPath := KPRPMZ68
-    FileSelectFile, KPRPMZ68, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ68 = "")
-    {
-        KPRPMZ68 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ68%
-	Goto, Change
-}
+    SelectKPRPMZ(68)
 return
-
 SelectKPRPMZ69:
-{
-    LastPath := KPRPMZ69
-    FileSelectFile, KPRPMZ69, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ69 = "")
-    {
-        KPRPMZ69 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ69%
-	Goto, Change
-}
+    SelectKPRPMZ(69)
 return
-
 SelectKPRPMZ70:
-{
-    LastPath := KPRPMZ70
-    FileSelectFile, KPRPMZ70, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ70 = "")
-    {
-        KPRPMZ70 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ70%
-	Goto, Change
-}
+    SelectKPRPMZ(70)
 return
-
 SelectKPRPMZ71:
-{
-    LastPath := KPRPMZ71
-    FileSelectFile, KPRPMZ71, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ71 = "")
-    {
-        KPRPMZ71 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ71%
-	Goto, Change
-}
+    SelectKPRPMZ(71)
 return
-
 SelectKPRPMZ72:
-{
-    LastPath := KPRPMZ72
-    FileSelectFile, KPRPMZ72, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ72 = "")
-    {
-        KPRPMZ72 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ72%
-	Goto, Change
-}
+    SelectKPRPMZ(72)
 return
-
 SelectKPRPMZ73:
-{
-    LastPath := KPRPMZ73
-    FileSelectFile, KPRPMZ73, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ73 = "")
-    {
-        KPRPMZ73 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ73%
-	Goto, Change
-}
+    SelectKPRPMZ(73)
 return
-
 SelectKPRPMZ74:
-{
-    LastPath := KPRPMZ74
-    FileSelectFile, KPRPMZ74, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ74 = "")
-    {
-        KPRPMZ74 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ74%
-	Goto, Change
-}
+    SelectKPRPMZ(74)
 return
-
 SelectKPRPMZ75:
-{
-    LastPath := KPRPMZ75
-    FileSelectFile, KPRPMZ75, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ75 = "")
-    {
-        KPRPMZ75 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ75%
-	Goto, Change
-}
+    SelectKPRPMZ(75)
 return
-
 SelectKPRPMZ76:
-{
-    LastPath := KPRPMZ76
-    FileSelectFile, KPRPMZ76, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ76 = "")
-    {
-        KPRPMZ76 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ76%
-	Goto, Change
-}
+    SelectKPRPMZ(76)
 return
-
 SelectKPRPMZ77:
-{
-    LastPath := KPRPMZ77
-    FileSelectFile, KPRPMZ77, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ77 = "")
-    {
-        KPRPMZ77 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ77%
-	Goto, Change
-}
+    SelectKPRPMZ(77)
 return
-
 SelectKPRPMZ78:
-{
-    LastPath := KPRPMZ78
-    FileSelectFile, KPRPMZ78, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ78 = "")
-    {
-        KPRPMZ78 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ78%
-	Goto, Change
-}
+    SelectKPRPMZ(78)
 return
-
 SelectKPRPMZ79:
-{
-    LastPath := KPRPMZ79
-    FileSelectFile, KPRPMZ79, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ79 = "")
-    {
-        KPRPMZ79 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ79%
-	Goto, Change
-}
+    SelectKPRPMZ(79)
 return
-
 SelectKPRPMZ80:
-{
-    LastPath := KPRPMZ80
-    FileSelectFile, KPRPMZ80, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ80 = "")
-    {
-        KPRPMZ80 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ80%
-	Goto, Change
-}
+    SelectKPRPMZ(80)
 return
-
 SelectKPRPMZ81:
-{
-    LastPath := KPRPMZ81
-    FileSelectFile, KPRPMZ81, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ81 = "")
-    {
-        KPRPMZ81 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ81%
-	Goto, Change
-}
+    SelectKPRPMZ(81)
 return
-
 SelectKPRPMZ82:
-{
-    LastPath := KPRPMZ82
-    FileSelectFile, KPRPMZ82, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ82 = "")
-    {
-        KPRPMZ82 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ82%
-	Goto, Change
-}
+    SelectKPRPMZ(82)
 return
-
 SelectKPRPMZ83:
-{
-    LastPath := KPRPMZ83
-    FileSelectFile, KPRPMZ83, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ83 = "")
-    {
-        KPRPMZ83 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ83%
-	Goto, Change
-}
+    SelectKPRPMZ(83)
 return
-
 SelectKPRPMZ84:
-{
-    LastPath := KPRPMZ84
-    FileSelectFile, KPRPMZ84, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ84 = "")
-    {
-        KPRPMZ84 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ84%
-	Goto, Change
-}
+    SelectKPRPMZ(84)
 return
-
 SelectKPRPMZ85:
-{
-    LastPath := KPRPMZ85
-    FileSelectFile, KPRPMZ85, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ85 = "")
-    {
-        KPRPMZ85 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ85%
-	Goto, Change
-}
+    SelectKPRPMZ(85)
 return
-
 SelectKPRPMZ86:
-{
-    LastPath := KPRPMZ86
-    FileSelectFile, KPRPMZ86, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ86 = "")
-    {
-        KPRPMZ86 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ86%
-	Goto, Change
-}
+    SelectKPRPMZ(86)
 return
-
 SelectKPRPMZ87:
-{
-    LastPath := KPRPMZ87
-    FileSelectFile, KPRPMZ87, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ87 = "")
-    {
-        KPRPMZ87 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ87%
-	Goto, Change
-}
+    SelectKPRPMZ(87)
 return
-
 SelectKPRPMZ88:
-{
-    LastPath := KPRPMZ88
-    FileSelectFile, KPRPMZ88, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ88 = "")
-    {
-        KPRPMZ88 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ88%
-	Goto, Change
-}
+    SelectKPRPMZ(88)
 return
-
 SelectKPRPMZ89:
-{
-    LastPath := KPRPMZ89
-    FileSelectFile, KPRPMZ89, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ89 = "")
-    {
-        KPRPMZ89 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ89%
-	Goto, Change
-}
+    SelectKPRPMZ(89)
 return
-
 SelectKPRPMZ90:
-{
-    LastPath := KPRPMZ90
-    FileSelectFile, KPRPMZ90, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ90 = "")
-    {
-        KPRPMZ90 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ90%
-	Goto, Change
-}
+    SelectKPRPMZ(90)
 return
-
 SelectKPRPMZ91:
-{
-    LastPath := KPRPMZ91
-    FileSelectFile, KPRPMZ91, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ91 = "")
-    {
-        KPRPMZ91 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ91%
-	Goto, Change
-}
+    SelectKPRPMZ(91)
 return
-
 SelectKPRPMZ92:
-{
-    LastPath := KPRPMZ92
-    FileSelectFile, KPRPMZ92, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ92 = "")
-    {
-        KPRPMZ92 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ92%
-	Goto, Change
-}
+    SelectKPRPMZ(92)
 return
-
 SelectKPRPMZ93:
-{
-    LastPath := KPRPMZ93
-    FileSelectFile, KPRPMZ93, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ93 = "")
-    {
-        KPRPMZ93 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ93%
-	Goto, Change
-}
+    SelectKPRPMZ(93)
 return
-
 SelectKPRPMZ94:
-{
-    LastPath := KPRPMZ94
-    FileSelectFile, KPRPMZ94, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ94 = "")
-    {
-        KPRPMZ94 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ94%
-	Goto, Change
-}
+    SelectKPRPMZ(94)
 return
-
 SelectKPRPMZ95:
-{
-    LastPath := KPRPMZ95
-    FileSelectFile, KPRPMZ95, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ95 = "")
-    {
-        KPRPMZ95 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ95%
-	Goto, Change
-}
+    SelectKPRPMZ(95)
 return
-
 SelectKPRPMZ96:
-{
-    LastPath := KPRPMZ96
-    FileSelectFile, KPRPMZ96, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ96 = "")
-    {
-        KPRPMZ96 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ96%
-	Goto, Change
-}
+    SelectKPRPMZ(96)
 return
-
 SelectKPRPMZ97:
-{
-    LastPath := KPRPMZ97
-    FileSelectFile, KPRPMZ97, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ97 = "")
-    {
-        KPRPMZ97 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ97%
-	Goto, Change
-}
+    SelectKPRPMZ(97)
 return
-
 SelectKPRPMZ98:
-{
-    LastPath := KPRPMZ98
-    FileSelectFile, KPRPMZ98, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ98 = "")
-    {
-        KPRPMZ98 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ98%
-	Goto, Change
-}
+    SelectKPRPMZ(98)
 return
-
 SelectKPRPMZ99:
-{
-    LastPath := KPRPMZ99
-    FileSelectFile, KPRPMZ99, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ99 = "")
-    {
-        KPRPMZ99 := LastPath
+    SelectKPRPMZ(99)
+return
+SelectKPRPMZ100:
+    SelectKPRPMZ(100)
+return
+
+
+; ---- Универсальная функция ----
+SelectKPRPMZ(num) {
+    global
+    varName := "KPRPMZ" num
+    LastPath := %varName%
+
+    FileSelectFile, selectedFile, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (selectedFile = "") {
+        %varName% := LastPath
         MsgBox, 16, Ошибка, Вы отменили выбор файла.
         return
     }
-    MsgBox, 64, Файл выбран, %KPRPMZ99%
-	Goto, Change
+
+    %varName% := selectedFile
+    MsgBox, 64, Файл выбран, % %varName%
+    Gosub, Change
 }
 return
 
-SelectKPRPMZ100:
-{
-    LastPath := KPRPMZ100
-    FileSelectFile, KPRPMZ100, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    if (KPRPMZ100 = "")
-    {
-        KPRPMZ100 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-    MsgBox, 64, Файл выбран, %KPRPMZ100%
-	Goto, Change
-}
-return

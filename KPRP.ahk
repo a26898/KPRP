@@ -1,144 +1,22 @@
 ﻿#SingleInstance Force
 #NoEnv
 
-IniRead, 11MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
-IniRead, 21MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 21MZ7
-IniRead, 31MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 31MZ7
-IniRead, 41MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 41MZ7
-IniRead, 51MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 51MZ7
-IniRead, 61MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 61MZ7
-IniRead, 71MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 71MZ7
-IniRead, 81MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 81MZ7
-IniRead, 91MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 91MZ7
-IniRead, 101MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 101MZ7
-IniRead, 111MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 111MZ7
-IniRead, 121MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 121MZ7
-IniRead, 131MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 131MZ7
-IniRead, 141MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 141MZ7
-IniRead, 151MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 151MZ7
-IniRead, 161MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 161MZ7
-IniRead, 171MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 171MZ7
-IniRead, 181MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 181MZ7
-IniRead, 191MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 191MZ7
-IniRead, 201MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 201MZ7
-IniRead, 211MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 211MZ7
-IniRead, 221MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 221MZ7
-IniRead, 231MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 231MZ7
-IniRead, 241MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 241MZ7
-IniRead, 251MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
-IniRead, 261MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
-IniRead, 271MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
-IniRead, 281MZ7, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
+ReadIniValues(prefix, iniFile, maxIndex) {
+    Loop, %maxIndex%
+    {
+        idx := A_Index * 10 + 1
+        varName := idx . prefix
+        IniRead, %varName%, %iniFile%, Edit, %varName%
+        ; Здесь можно, например, MsgBox, или обработка полученного varName
+    }
+}
 
-IniRead, 11GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 11GIBDD7
-IniRead, 21GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 21GIBDD7
-IniRead, 31GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 31GIBDD7
-IniRead, 41GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 41GIBDD7
-IniRead, 51GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 51GIBDD7
-IniRead, 61GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 61GIBDD7
-IniRead, 71GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 71GIBDD7
-IniRead, 81GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 81GIBDD7
-IniRead, 91GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 91GIBDD7
-IniRead, 101GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 101GIBDD7
-IniRead, 111GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 111GIBDD7
-IniRead, 121GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 121GIBDD7
-IniRead, 131GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 131GIBDD7
-IniRead, 141GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 141GIBDD7
-IniRead, 151GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 151GIBDD7
-IniRead, 161GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 161GIBDD7
-IniRead, 171GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 171GIBDD7
-IniRead, 181GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 181GIBDD7
-IniRead, 191GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 191GIBDD7
-IniRead, 201GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 201GIBDD7
-IniRead, 211GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 211GIBDD7
-IniRead, 221GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 221GIBDD7
-IniRead, 231GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 231GIBDD7
-IniRead, 241GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 241GIBDD7
-IniRead, 251GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 251GIBDD7
-IniRead, 261GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 261GIBDD7
-IniRead, 271GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 271GIBDD7
-IniRead, 281GIBDD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 281GIBDD7
+; Вызовы функции
+ReadIniValues("DUVD7", "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini", 28)
+ReadIniValues("Redakt", "C:\ProgramData\KPRP\KPRP-main\Redaktor.ini", 50)
+ReadIniValues("MZ7", "C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini", 28)
+ReadIniValues("GIBDD7", "C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini", 28)
 
-IniRead, 11DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
-IniRead, 21DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
-IniRead, 31DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
-IniRead, 41DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
-IniRead, 51DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
-IniRead, 61DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
-IniRead, 71DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
-IniRead, 81DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
-IniRead, 91DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
-IniRead, 101DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
-IniRead, 111DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
-IniRead, 121DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
-IniRead, 131DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
-IniRead, 141DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
-IniRead, 151DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
-IniRead, 161DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
-IniRead, 171DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
-IniRead, 181DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
-IniRead, 191DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
-IniRead, 201DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
-IniRead, 211DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
-IniRead, 221DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
-IniRead, 231DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
-IniRead, 241DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
-IniRead, 251DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
-IniRead, 261DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
-IniRead, 271DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
-IniRead, 281DUVD7, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
-
-
-IniRead, 11Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
-IniRead, 21Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
-IniRead, 31Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 31Redakt
-IniRead, 41Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 41Redakt
-IniRead, 51Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 51Redakt
-IniRead, 61Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 61Redakt
-IniRead, 71Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 71Redakt
-IniRead, 81Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 81Redakt
-IniRead, 91Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 91Redakt
-IniRead, 101Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 101Redakt
-IniRead, 111Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 111Redakt
-IniRead, 121Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 121Redakt
-IniRead, 131Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 131Redakt
-IniRead, 141Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 141Redakt
-IniRead, 151Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 151Redakt
-IniRead, 161Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 161Redakt
-IniRead, 171Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 171Redakt
-IniRead, 181Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 181Redakt
-IniRead, 191Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 191Redakt
-IniRead, 201Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 201Redakt
-IniRead, 211Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 211Redakt
-IniRead, 221Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 221Redakt
-IniRead, 231Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 231Redakt
-IniRead, 241Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 241Redakt
-IniRead, 251Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 251Redakt
-IniRead, 261Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 261Redakt
-IniRead, 271Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 271Redakt
-IniRead, 281Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 281Redakt
-IniRead, 291Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 291Redakt
-IniRead, 301Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 301Redakt
-IniRead, 311Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 311Redakt
-IniRead, 321Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 321Redakt
-IniRead, 331Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 331Redakt
-IniRead, 341Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 341Redakt
-IniRead, 351Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 351Redakt
-IniRead, 361Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 361Redakt
-IniRead, 371Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 371Redakt
-IniRead, 381Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 381Redakt
-IniRead, 391Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 391Redakt
-IniRead, 401Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 401Redakt
-IniRead, 411Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 411Redakt
-IniRead, 421Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 421Redakt
-IniRead, 431Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 431Redakt
-IniRead, 441Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 441Redakt
-IniRead, 451Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 451Redakt
-IniRead, 461Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 461Redakt
-IniRead, 471Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 471Redakt
-IniRead, 481Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 481Redakt
-IniRead, 491Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 491Redakt
-IniRead, 501Redakt, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 501Redakt
 
 odinMZ7 = %11MZ7%
 dvaMZ7 = %21MZ7%
@@ -692,464 +570,31 @@ stodvadcatshest = %1261% & %1262%
 stodvadcatsem = %1271% & %1272%
 stodvadcatsem = %1281% & %1282%
 
+Loop, 97 {
+    IniRead, Svoye_%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_%A_Index%
+}
 
-IniRead, Svoye_1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_1
-IniRead, Svoye_2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_2
-IniRead, Svoye_3, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_3
-IniRead, Svoye_4, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_4
-IniRead, Svoye_5, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_5
-IniRead, Svoye_6, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_6
-IniRead, Svoye_7, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_7
-IniRead, Svoye_8, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_8
-IniRead, Svoye_9, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_9
-IniRead, Svoye_10, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_10
-IniRead, Svoye_11, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_11
-IniRead, Svoye_12, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_12
-IniRead, Svoye_13, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_13
-IniRead, Svoye_14, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_14
-IniRead, Svoye_15, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_15
-IniRead, Svoye_16, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_16
-IniRead, Svoye_17, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_17
-IniRead, Svoye_18, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_18
-IniRead, Svoye_19, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_19
-IniRead, Svoye_20, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_20
-IniRead, Svoye_21, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_21
-IniRead, Svoye_22, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_22
-IniRead, Svoye_23, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_23
-IniRead, Svoye_24, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_24
-IniRead, Svoye_25, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_25
-IniRead, Svoye_26, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_26
-IniRead, Svoye_27, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_27
-IniRead, Svoye_28, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_28
-IniRead, Svoye_29, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_29
-IniRead, Svoye_30, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_30
-IniRead, Svoye_31, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_31
-IniRead, Svoye_32, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_32
-IniRead, Svoye_33, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_33
-IniRead, Svoye_34, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_34
-IniRead, Svoye_35, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_35
-IniRead, Svoye_36, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_36
-IniRead, Svoye_37, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_37
-IniRead, Svoye_38, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_38
-IniRead, Svoye_39, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_39
-IniRead, Svoye_40, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_40
-IniRead, Svoye_41, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_41
-IniRead, Svoye_42, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_42
-IniRead, Svoye_43, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_43
-IniRead, Svoye_44, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_44
-IniRead, Svoye_45, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_45
-IniRead, Svoye_46, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_46
-IniRead, Svoye_47, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_47
-IniRead, Svoye_48, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_48
-IniRead, Svoye_49, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_49
-IniRead, Svoye_50, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_50
+Loop, 50 {
+    IniRead, SvoyeМZ_%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_%A_Index%
+}
 
-IniRead, Svoye_51,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_51
-IniRead, Svoye_52,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_52
-IniRead, Svoye_53,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_53
-IniRead, Svoye_54,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_54
-IniRead, Svoye_55,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_55
-IniRead, Svoye_56,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_56
-IniRead, Svoye_57,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_57
-IniRead, Svoye_58,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_58
-IniRead, Svoye_59,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_59
-IniRead, Svoye_60,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_60
-IniRead, Svoye_61,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_61
-IniRead, Svoye_62,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_62
-IniRead, Svoye_63,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_63
-IniRead, Svoye_64,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_64
-IniRead, Svoye_65,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_65
-IniRead, Svoye_66,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_66
-IniRead, Svoye_67,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_67
-IniRead, Svoye_68,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_68
-IniRead, Svoye_69,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_69
-IniRead, Svoye_70,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_70
-IniRead, Svoye_71,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_71
-IniRead, Svoye_72,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_72
-IniRead, Svoye_73,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_73
-IniRead, Svoye_74,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_74
-IniRead, Svoye_75,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_75
-IniRead, Svoye_76,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_76
-IniRead, Svoye_77,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_77
-IniRead, Svoye_78,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_78
-IniRead, Svoye_79,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_79
-IniRead, Svoye_80,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_80
-IniRead, Svoye_81,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_81
-IniRead, Svoye_82,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_82
-IniRead, Svoye_83,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_83
-IniRead, Svoye_84,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_84
-IniRead, Svoye_85,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_85
-IniRead, Svoye_86,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_86
-IniRead, Svoye_87,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_87
-IniRead, Svoye_88,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_88
-IniRead, Svoye_89,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_89
-IniRead, Svoye_90,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_90
-IniRead, Svoye_91,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_91
-IniRead, Svoye_92,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_92
-IniRead, Svoye_93,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_93
-IniRead, Svoye_94,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_94
-IniRead, Svoye_95,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_95
-IniRead, Svoye_96,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_96
-IniRead, Svoye_97,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_97
+Loop, 100 {
+    IniRead, KPRPMZ%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ%A_Index%
+}
 
-IniRead, SvoyeМZ_1, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_1
-IniRead, SvoyeМZ_2, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_2
-IniRead, SvoyeМZ_3, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_3
-IniRead, SvoyeМZ_4, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_4
-IniRead, SvoyeМZ_5, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_5
-IniRead, SvoyeМZ_6, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_6
-IniRead, SvoyeМZ_7, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_7
-IniRead, SvoyeМZ_8, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_8
-IniRead, SvoyeМZ_9, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_9
-IniRead, SvoyeМZ_10, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_10
-IniRead, SvoyeМZ_11, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_11
-IniRead, SvoyeМZ_12, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_12
-IniRead, SvoyeМZ_13, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_13
-IniRead, SvoyeМZ_14, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_14
-IniRead, SvoyeМZ_15, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_15
-IniRead, SvoyeМZ_16, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_16
-IniRead, SvoyeМZ_17, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_17
-IniRead, SvoyeМZ_18, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_18
-IniRead, SvoyeМZ_19, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_19
-IniRead, SvoyeМZ_20, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_20
-IniRead, SvoyeМZ_21, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_21
-IniRead, SvoyeМZ_22, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_22
-IniRead, SvoyeМZ_23, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_23
-IniRead, SvoyeМZ_24, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_24
-IniRead, SvoyeМZ_25, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_25
-IniRead, SvoyeМZ_26, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_26
-IniRead, SvoyeМZ_27, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_27
-IniRead, SvoyeМZ_28, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_28
-IniRead, SvoyeМZ_29, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_29
-IniRead, SvoyeМZ_30, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_30
-IniRead, SvoyeМZ_31, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_31
-IniRead, SvoyeМZ_32, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_32
-IniRead, SvoyeМZ_33, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_33
-IniRead, SvoyeМZ_34, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_34
-IniRead, SvoyeМZ_35, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_35
-IniRead, SvoyeМZ_36, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_36
-IniRead, SvoyeМZ_37, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_37
-IniRead, SvoyeМZ_38, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_38
-IniRead, SvoyeМZ_39, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_39
-IniRead, SvoyeМZ_40, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_40
-IniRead, SvoyeМZ_41, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_41
-IniRead, SvoyeМZ_42, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_42
-IniRead, SvoyeМZ_43, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_43
-IniRead, SvoyeМZ_44, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_44
-IniRead, SvoyeМZ_45, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_45
-IniRead, SvoyeМZ_46, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_46
-IniRead, SvoyeМZ_47, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_47
-IniRead, SvoyeМZ_48, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_48
-IniRead, SvoyeМZ_49, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_49
-IniRead, SvoyeМZ_50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_50
-
-IniRead, KPRPMZ1, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ1
-IniRead, KPRPMZ2, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ2
-IniRead, KPRPMZ3, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ3
-IniRead, KPRPMZ4, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ4
-IniRead, KPRPMZ5, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ5
-IniRead, KPRPMZ6, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ6
-IniRead, KPRPMZ7, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ7
-IniRead, KPRPMZ8, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ8
-IniRead, KPRPMZ9, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ9
-IniRead, KPRPMZ10, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ10
-IniRead, KPRPMZ11, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ11
-IniRead, KPRPMZ12, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ12
-IniRead, KPRPMZ13, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ13
-IniRead, KPRPMZ14, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ14
-IniRead, KPRPMZ15, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ15
-IniRead, KPRPMZ16, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ16
-IniRead, KPRPMZ17, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ17
-IniRead, KPRPMZ18, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ18
-IniRead, KPRPMZ19, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ19
-IniRead, KPRPMZ20, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ20
-IniRead, KPRPMZ21, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ21
-IniRead, KPRPMZ22, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ22
-IniRead, KPRPMZ23, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ23
-IniRead, KPRPMZ24, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ24
-IniRead, KPRPMZ25, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ25
-IniRead, KPRPMZ26, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ26
-IniRead, KPRPMZ27, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ27
-IniRead, KPRPMZ28, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ28
-IniRead, KPRPMZ29, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ29
-IniRead, KPRPMZ30, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ30
-IniRead, KPRPMZ31, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ31
-IniRead, KPRPMZ32, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ32
-IniRead, KPRPMZ33, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ33
-IniRead, KPRPMZ34, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ34
-IniRead, KPRPMZ35, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ35
-IniRead, KPRPMZ36, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ36
-IniRead, KPRPMZ37, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ37
-IniRead, KPRPMZ38, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ38
-IniRead, KPRPMZ39, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ39
-IniRead, KPRPMZ40, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ40
-IniRead, KPRPMZ41, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ41
-IniRead, KPRPMZ42, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ42
-IniRead, KPRPMZ43, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ43
-IniRead, KPRPMZ44, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ44
-IniRead, KPRPMZ45, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ45
-IniRead, KPRPMZ46, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ46
-IniRead, KPRPMZ47, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ47
-IniRead, KPRPMZ48, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
-IniRead, KPRPMZ49, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
-IniRead, KPRPMZ50, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
-
-IniRead, KPRPMZ51, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ51
-IniRead, KPRPMZ52, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ52
-IniRead, KPRPMZ53, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ53
-IniRead, KPRPMZ54, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ54
-IniRead, KPRPMZ55, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ55
-IniRead, KPRPMZ56, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ56
-IniRead, KPRPMZ57, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ57
-IniRead, KPRPMZ58, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ58
-IniRead, KPRPMZ59, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ59
-IniRead, KPRPMZ60, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ60
-IniRead, KPRPMZ61, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ61
-IniRead, KPRPMZ62, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ62
-IniRead, KPRPMZ63, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ63
-IniRead, KPRPMZ64, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ64
-IniRead, KPRPMZ65, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ65
-IniRead, KPRPMZ66, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ66
-IniRead, KPRPMZ67, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ67
-IniRead, KPRPMZ68, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ68
-IniRead, KPRPMZ69, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ69
-IniRead, KPRPMZ70, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ70
-IniRead, KPRPMZ71, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ71
-IniRead, KPRPMZ72, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ72
-IniRead, KPRPMZ73, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ73
-IniRead, KPRPMZ74, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ74
-IniRead, KPRPMZ75, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ75
-IniRead, KPRPMZ76, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ76
-IniRead, KPRPMZ77, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ77
-IniRead, KPRPMZ78, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ78
-IniRead, KPRPMZ79, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ79
-IniRead, KPRPMZ80, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ80
-IniRead, KPRPMZ81, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ81
-IniRead, KPRPMZ82, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ82
-IniRead, KPRPMZ83, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ83
-IniRead, KPRPMZ84, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ84
-IniRead, KPRPMZ85, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ85
-IniRead, KPRPMZ86, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ86
-IniRead, KPRPMZ87, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ87
-IniRead, KPRPMZ88, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ88
-IniRead, KPRPMZ89, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ89
-IniRead, KPRPMZ90, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ90
-IniRead, KPRPMZ91, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ91
-IniRead, KPRPMZ92, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ92
-IniRead, KPRPMZ93, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ93
-IniRead, KPRPMZ94, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ94
-IniRead, KPRPMZ95, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ95
-IniRead, KPRPMZ96, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ96
-IniRead, KPRPMZ97, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ97
-IniRead, KPRPMZ98, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ98
-IniRead, KPRPMZ99, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ99
-IniRead, KPRPMZ100, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ100
+Loop, 50 {
+    IniRead, SvoyeGIBDD_%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_%A_Index%
+}
 
 
+Loop, 50 {
+    IniRead, KPRPGIBDD%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD%A_Index%
+}
 
 
-IniRead, SvoyeGIBDD_1, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_1
-IniRead, SvoyeGIBDD_2, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_2
-IniRead, SvoyeGIBDD_3, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_3
-IniRead, SvoyeGIBDD_4, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_4
-IniRead, SvoyeGIBDD_5, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_5
-IniRead, SvoyeGIBDD_6, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_6
-IniRead, SvoyeGIBDD_7, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_7
-IniRead, SvoyeGIBDD_8, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_8
-IniRead, SvoyeGIBDD_9, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_9
-IniRead, SvoyeGIBDD_10, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_10
-IniRead, SvoyeGIBDD_11, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_11
-IniRead, SvoyeGIBDD_12, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_12
-IniRead, SvoyeGIBDD_13, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_13
-IniRead, SvoyeGIBDD_14, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_14
-IniRead, SvoyeGIBDD_15, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_15
-IniRead, SvoyeGIBDD_16, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_16
-IniRead, SvoyeGIBDD_17, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_17
-IniRead, SvoyeGIBDD_18, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_18
-IniRead, SvoyeGIBDD_19, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_19
-IniRead, SvoyeGIBDD_20, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_20
-IniRead, SvoyeGIBDD_21, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_21
-IniRead, SvoyeGIBDD_22, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_22
-IniRead, SvoyeGIBDD_23, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_23
-IniRead, SvoyeGIBDD_24, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_24
-IniRead, SvoyeGIBDD_25, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_25
-IniRead, SvoyeGIBDD_26, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_26
-IniRead, SvoyeGIBDD_27, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_27
-IniRead, SvoyeGIBDD_28, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_28
-IniRead, SvoyeGIBDD_29, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_29
-IniRead, SvoyeGIBDD_30, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_30
-IniRead, SvoyeGIBDD_31, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_31
-IniRead, SvoyeGIBDD_32, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_32
-IniRead, SvoyeGIBDD_33, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_33
-IniRead, SvoyeGIBDD_34, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_34
-IniRead, SvoyeGIBDD_35, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_35
-IniRead, SvoyeGIBDD_36, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_36
-IniRead, SvoyeGIBDD_37, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_37
-IniRead, SvoyeGIBDD_38, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_38
-IniRead, SvoyeGIBDD_39, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_39
-IniRead, SvoyeGIBDD_40, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_40
-IniRead, SvoyeGIBDD_41, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_41
-IniRead, SvoyeGIBDD_42, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_42
-IniRead, SvoyeGIBDD_43, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_43
-IniRead, SvoyeGIBDD_44, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_44
-IniRead, SvoyeGIBDD_45, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_45
-IniRead, SvoyeGIBDD_46, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_46
-IniRead, SvoyeGIBDD_47, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_47
-IniRead, SvoyeGIBDD_48, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_48
-IniRead, SvoyeGIBDD_49, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_49
-IniRead, SvoyeGIBDD_50, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_50
-
-IniRead, KPRPGIBDD1, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD1
-IniRead, KPRPGIBDD2, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD2
-IniRead, KPRPGIBDD3, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD3
-IniRead, KPRPGIBDD4, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD4
-IniRead, KPRPGIBDD5, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD5
-IniRead, KPRPGIBDD6, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD6
-IniRead, KPRPGIBDD7, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD7
-IniRead, KPRPGIBDD8, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD8
-IniRead, KPRPGIBDD9, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD9
-IniRead, KPRPGIBDD10, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD10
-IniRead, KPRPGIBDD11, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD11
-IniRead, KPRPGIBDD12, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD12
-IniRead, KPRPGIBDD13, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD13
-IniRead, KPRPGIBDD14, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD14
-IniRead, KPRPGIBDD15, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD15
-IniRead, KPRPGIBDD16, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD16
-IniRead, KPRPGIBDD17, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD17
-IniRead, KPRPGIBDD18, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD18
-IniRead, KPRPGIBDD19, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD19
-IniRead, KPRPGIBDD20, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD20
-IniRead, KPRPGIBDD21, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD21
-IniRead, KPRPGIBDD22, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD22
-IniRead, KPRPGIBDD23, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD23
-IniRead, KPRPGIBDD24, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD24
-IniRead, KPRPGIBDD25, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD25
-IniRead, KPRPGIBDD26, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD26
-IniRead, KPRPGIBDD27, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD27
-IniRead, KPRPGIBDD28, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD28
-IniRead, KPRPGIBDD29, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD29
-IniRead, KPRPGIBDD30, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD30
-IniRead, KPRPGIBDD31, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD31
-IniRead, KPRPGIBDD32, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD32
-IniRead, KPRPGIBDD33, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD33
-IniRead, KPRPGIBDD34, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD34
-IniRead, KPRPGIBDD35, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD35
-IniRead, KPRPGIBDD36, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD36
-IniRead, KPRPGIBDD37, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD37
-IniRead, KPRPGIBDD38, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD38
-IniRead, KPRPGIBDD39, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD39
-IniRead, KPRPGIBDD40, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD40
-IniRead, KPRPGIBDD41, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD41
-IniRead, KPRPGIBDD42, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD42
-IniRead, KPRPGIBDD43, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD43
-IniRead, KPRPGIBDD44, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD44
-IniRead, KPRPGIBDD45, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD45
-IniRead, KPRPGIBDD46, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD46
-IniRead, KPRPGIBDD47, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD47
-IniRead, KPRPGIBDD48, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD48
-IniRead, KPRPGIBDD49, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD49
-IniRead, KPRPGIBDD50, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD50
-
-
-IniRead, Objects1, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
-IniRead, Objects2, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
-IniRead, Objects3, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects3
-IniRead, Objects4, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects4
-IniRead, Objects5, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects5
-IniRead, Objects6, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects6
-IniRead, Objects7, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects7
-IniRead, Objects8, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects8
-IniRead, Objects9, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects9
-IniRead, Objects10, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects10
-IniRead, Objects11, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects11
-IniRead, Objects12, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects12
-IniRead, Objects13, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects13
-IniRead, Objects14, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects14
-IniRead, Objects15, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects15
-IniRead, Objects16, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects16
-IniRead, Objects17, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects17
-IniRead, Objects18, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects18
-IniRead, Objects19, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects19
-IniRead, Objects20, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects20
-IniRead, Objects21, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects21
-IniRead, Objects22, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects22
-IniRead, Objects23, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects23
-IniRead, Objects24, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects24
-IniRead, Objects25, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects25
-IniRead, Objects26, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects26
-IniRead, Objects27, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects27
-IniRead, Objects28, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects28
-IniRead, Objects29, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects29
-IniRead, Objects30, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects30
-IniRead, Objects31, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects31
-IniRead, Objects32, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects32
-IniRead, Objects33, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects33
-IniRead, Objects34, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects34
-IniRead, Objects35, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects35
-IniRead, Objects36, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects36
-IniRead, Objects37, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects37
-IniRead, Objects38, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects38
-IniRead, Objects39, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects39
-IniRead, Objects40, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects40
-IniRead, Objects41, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects41
-IniRead, Objects42, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects42
-IniRead, Objects43, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects43
-IniRead, Objects44, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects44
-IniRead, Objects45, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects45
-IniRead, Objects46, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects46
-IniRead, Objects47, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects47
-IniRead, Objects48, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects48
-IniRead, Objects49, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects49
-IniRead, Objects50, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects50
-
-IniRead, Objects51, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects51
-IniRead, Objects52, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects52
-IniRead, Objects53, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects53
-IniRead, Objects54, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects54
-IniRead, Objects55, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects55
-IniRead, Objects56, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects56
-IniRead, Objects57, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects57
-IniRead, Objects58, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects58
-IniRead, Objects59, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects59
-IniRead, Objects60, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects60
-IniRead, Objects61, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects61
-IniRead, Objects62, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects62
-IniRead, Objects63, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects63
-IniRead, Objects64, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects64
-IniRead, Objects65, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects65
-IniRead, Objects66, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects66
-IniRead, Objects67, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects67
-IniRead, Objects68, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects68
-IniRead, Objects69, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects69
-IniRead, Objects70, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects70
-IniRead, Objects71, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects71
-IniRead, Objects72, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects72
-IniRead, Objects73, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects73
-IniRead, Objects74, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects74
-IniRead, Objects75, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects75
-IniRead, Objects76, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects76
-IniRead, Objects77, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects77
-IniRead, Objects78, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects78
-IniRead, Objects79, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects79
-IniRead, Objects70, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects80
-IniRead, Objects81, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects81
-IniRead, Objects82, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects82
-IniRead, Objects83, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects83
-IniRead, Objects84, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects84
-IniRead, Objects86, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects86
-IniRead, Objects87, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects87
-IniRead, Objects88, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects88
-IniRead, Objects89, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects89
-IniRead, Objects90, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects90
-IniRead, Objects91, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects91
-IniRead, Objects92, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects92
-IniRead, Objects93, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects93
-IniRead, Objects94, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects94
-IniRead, Objects95, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects95
-IniRead, Objects96, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects96
-IniRead, Objects97, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects97
-
-
+Loop, 97 {
+    IniRead, Objects%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects%A_Index%
+}
 
 
 IniRead, JWI, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
@@ -1160,14 +605,10 @@ IniRead, Middle_Name, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle_Na
 IniRead, Bol_ro, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniRead, pol, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
-
-
-
 IniRead, RankGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniRead, SurnameGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
 IniRead, FamiliyaGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
 IniRead, OtdelGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
-
 
 IniRead, dolzhnostDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniRead, rankDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
@@ -1177,7 +618,6 @@ IniRead, PozyvnoyDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Pozyvno
 IniRead, TegDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
 IniRead, NameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
 IniRead, OtchetskstoDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
-
 
 
 IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
@@ -1195,11 +635,7 @@ IniRead, vybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniRead, userVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniRead, Skrin_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
 
-
-
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
-
-
 
 
 
@@ -1321,259 +757,18 @@ SvoyeGIBDD_24=Передать протокол
 if SvoyeGIBDD_25=ERROR
 SvoyeGIBDD_25=Взять протокол
 
-
-if KPRPGIBDD1=ERROR
-KPRPGIBDD1=C:\ProgramData\KPRP\KPRP-main\KPRP1GIBDD.txt
-if KPRPGIBDD2=ERROR
-KPRPGIBDD2=C:\ProgramData\KPRP\KPRP-main\KPRP2GIBDD.txt
-if KPRPGIBDD3=ERROR
-KPRPGIBDD3=C:\ProgramData\KPRP\KPRP-main\KPRP3GIBDD.txt
-if KPRPGIBDD4=ERROR
-KPRPGIBDD4=C:\ProgramData\KPRP\KPRP-main\KPRP4GIBDD.txt
-if KPRPGIBDD5=ERROR
-KPRPGIBDD5=C:\ProgramData\KPRP\KPRP-main\KPRP5GIBDD.txt
-if KPRPGIBDD6=ERROR
-KPRPGIBDD6=C:\ProgramData\KPRP\KPRP-main\KPRP6GIBDD.txt
-if KPRPGIBDD7=ERROR
-KPRPGIBDD7=C:\ProgramData\KPRP\KPRP-main\KPRP7GIBDD.txt
-if KPRPGIBDD8=ERROR
-KPRPGIBDD8=C:\ProgramData\KPRP\KPRP-main\KPRP8GIBDD.txt
-if KPRPGIBDD9=ERROR
-KPRPGIBDD9=C:\ProgramData\KPRP\KPRP-main\KPRP9GIBDD.txt
-if KPRPGIBDD10=ERROR
-KPRPGIBDD10=C:\ProgramData\KPRP\KPRP-main\KPRP10GIBDD.txt
-if KPRPGIBDD11=ERROR
-KPRPGIBDD11=C:\ProgramData\KPRP\KPRP-main\KPRP11GIBDD.txt
-if KPRPGIBDD12=ERROR
-KPRPGIBDD12=C:\ProgramData\KPRP\KPRP-main\KPRP12GIBDD.txt
-if KPRPGIBDD13=ERROR
-KPRPGIBDD13=C:\ProgramData\KPRP\KPRP-main\KPRP13GIBDD.txt
-if KPRPGIBDD14=ERROR
-KPRPGIBDD14=C:\ProgramData\KPRP\KPRP-main\KPRP14GIBDD.txt
-if KPRPGIBDD15=ERROR
-KPRPGIBDD15=C:\ProgramData\KPRP\KPRP-main\KPRP15GIBDD.txt
-if KPRPGIBDD16=ERROR
-KPRPGIBDD16=C:\ProgramData\KPRP\KPRP-main\KPRP16GIBDD.txt
-if KPRPGIBDD17=ERROR
-KPRPGIBDD17=C:\ProgramData\KPRP\KPRP-main\KPRP17GIBDD.txt
-if KPRPGIBDD18=ERROR
-KPRPGIBDD18=C:\ProgramData\KPRP\KPRP-main\KPRP18GIBDD.txt
-if KPRPGIBDD19=ERROR
-KPRPGIBDD19=C:\ProgramData\KPRP\KPRP-main\KPRP19GIBDD.txt
-if KPRPGIBDD20=ERROR
-KPRPGIBDD20=C:\ProgramData\KPRP\KPRP-main\KPRP20GIBDD.txt
-if KPRPGIBDD21=ERROR
-KPRPGIBDD21=C:\ProgramData\KPRP\KPRP-main\KPRP21GIBDD.txt
-if KPRPGIBDD22=ERROR
-KPRPGIBDD22=C:\ProgramData\KPRP\KPRP-main\KPRP22GIBDD.txt
-if KPRPGIBDD23=ERROR
-KPRPGIBDD23=C:\ProgramData\KPRP\KPRP-main\KPRP23GIBDD.txt
-if KPRPGIBDD24=ERROR
-KPRPGIBDD24=C:\ProgramData\KPRP\KPRP-main\KPRP24GIBDD.txt
-if KPRPGIBDD25=ERROR
-KPRPGIBDD25=C:\ProgramData\KPRP\KPRP-main\KPRP25GIBDD.txt
-if KPRPGIBDD26=ERROR
-KPRPGIBDD26=C:\ProgramData\KPRP\KPRP-main\KPRP26GIBDD.txt
-if KPRPGIBDD27=ERROR
-KPRPGIBDD27=C:\ProgramData\KPRP\KPRP-main\KPRP27GIBDD.txt
-if KPRPGIBDD28=ERROR
-KPRPGIBDD28=C:\ProgramData\KPRP\KPRP-main\KPRP28GIBDD.txt
+Loop, 28 {
+    currentVar := "KPRPGIBDD" . A_Index
+    if (%currentVar% = "ERROR")
+        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\KPRP" . A_Index . "GIBDD.txt"
+}
 
 
-
-if Svoye_1=ERROR
-Svoye_1=Описание
-if Svoye_2=ERROR
-Svoye_2=Описание
-if Svoye_3=ERROR
-Svoye_3=Описание
-if Svoye_4=ERROR
-Svoye_4=Описание
-if Svoye_5=ERROR
-Svoye_5=Описание
-if Svoye_6=ERROR
-Svoye_6=Описание
-if Svoye_7=ERROR
-Svoye_7=Описание
-if Svoye_8=ERROR
-Svoye_8=Описание
-if Svoye_9=ERROR
-Svoye_9=Описание
-if Svoye_10=ERROR
-Svoye_10=Описание
-if Svoye_11=ERROR
-Svoye_11=Описание
-if Svoye_12=ERROR
-Svoye_12=Описание
-if Svoye_13=ERROR
-Svoye_13=Описание
-if Svoye_14=ERROR
-Svoye_14=Описание
-if Svoye_15=ERROR
-Svoye_15=Описание
-if Svoye_16=ERROR
-Svoye_16=Описание
-if Svoye_17=ERROR
-Svoye_17=Описание
-if Svoye_18=ERROR
-Svoye_18=Описание
-if Svoye_19=ERROR
-Svoye_19=Описание
-if Svoye_20=ERROR
-Svoye_20=Описание
-if Svoye_21=ERROR
-Svoye_21=Описание
-if Svoye_22=ERROR
-Svoye_22=Описание
-if Svoye_23=ERROR
-Svoye_23=Описание
-if Svoye_24=ERROR
-Svoye_24=Описание
-if Svoye_25=ERROR
-Svoye_25=Описание
-if Svoye_26=ERROR
-Svoye_26=Описание
-if Svoye_27=ERROR
-Svoye_27=Описание
-if Svoye_28=ERROR
-Svoye_28=Описание
-if Svoye_29=ERROR
-Svoye_29=Описание
-if Svoye_30=ERROR
-Svoye_30=Описание
-if Svoye_31=ERROR
-Svoye_31=Описание
-if Svoye_32=ERROR
-Svoye_32=Описание
-if Svoye_33=ERROR
-Svoye_33=Описание
-if Svoye_34=ERROR
-Svoye_34=Описание
-if Svoye_35=ERROR
-Svoye_35=Описание
-if Svoye_36=ERROR
-Svoye_36=Описание
-if Svoye_37=ERROR
-Svoye_37=Описание
-if Svoye_38=ERROR
-Svoye_38=Описание
-if Svoye_39=ERROR
-Svoye_39=Описание
-if Svoye_40=ERROR
-Svoye_40=Описание
-if Svoye_41=ERROR
-Svoye_41=Описание
-if Svoye_42=ERROR
-Svoye_42=Описание
-if Svoye_43=ERROR
-Svoye_43=Описание
-if Svoye_44=ERROR
-Svoye_44=Описание
-if Svoye_45=ERROR
-Svoye_45=Описание
-if Svoye_46=ERROR
-Svoye_46=Описание
-if Svoye_47=ERROR
-Svoye_47=Описание
-if Svoye_48=ERROR
-Svoye_48=Описание
-if Svoye_49=ERROR
-Svoye_49=Описание
-if Svoye_50=ERROR
-Svoye_50=Описание
-if Svoye_51=ERROR
-Svoye_51=Описание
-if Svoye_52=ERROR
-Svoye_52=Описание
-if Svoye_53=ERROR
-Svoye_53=Описание
-if Svoye_54=ERROR
-Svoye_54=Описание
-if Svoye_55=ERROR
-Svoye_55=Описание
-if Svoye_56=ERROR
-Svoye_56=Описание
-if Svoye_57=ERROR
-Svoye_57=Описание
-if Svoye_58=ERROR
-Svoye_58=Описание
-if Svoye_59=ERROR
-Svoye_59=Описание
-if Svoye_60=ERROR
-Svoye_60=Описание
-if Svoye_61=ERROR
-Svoye_61=Описание
-if Svoye_62=ERROR
-Svoye_62=Описание
-if Svoye_63=ERROR
-Svoye_63=Описание
-if Svoye_64=ERROR
-Svoye_64=Описание
-if Svoye_65=ERROR
-Svoye_65=Описание
-if Svoye_66=ERROR
-Svoye_66=Описание
-if Svoye_67=ERROR
-Svoye_67=Описание
-if Svoye_68=ERROR
-Svoye_68=Описание
-if Svoye_69=ERROR
-Svoye_69=Описание
-if Svoye_70=ERROR
-Svoye_70=Описание
-if Svoye_71=ERROR
-Svoye_71=Описание
-if Svoye_72=ERROR
-Svoye_72=Описание
-if Svoye_73=ERROR
-Svoye_73=Описание
-if Svoye_74=ERROR
-Svoye_74=Описание
-if Svoye_75=ERROR
-Svoye_75=Описание
-if Svoye_76=ERROR
-Svoye_76=Описание
-if Svoye_77=ERROR
-Svoye_77=Описание
-if Svoye_78=ERROR
-Svoye_78=Описание
-Svoye_79=Описание
-if Svoye_80=ERROR
-Svoye_80=Описание
-if Svoye_81=ERROR
-Svoye_81=Описание
-if Svoye_82=ERROR
-Svoye_82=Описание
-if Svoye_83=ERROR
-Svoye_83=Описание
-if Svoye_84=ERROR
-Svoye_84=Описание
-if Svoye_85=ERROR
-Svoye_85=Описание
-if Svoye_86=ERROR
-Svoye_86=Описание
-if Svoye_87=ERROR
-Svoye_87=Описание
-if Svoye_88=ERROR
-Svoye_88=Описание
-if Svoye_89=ERROR
-Svoye_89=Описание
-if Svoye_90=ERROR
-Svoye_90=Описание
-if Svoye_91=ERROR
-Svoye_91=Описание
-if Svoye_92=ERROR
-Svoye_92=Описание
-if Svoye_93=ERROR
-Svoye_93=Описание
-if Svoye_94=ERROR
-Svoye_94=Описание
-if Svoye_95=ERROR
-Svoye_95=Описание
-if Svoye_96=ERROR
-Svoye_96=Описание
-if Svoye_97=ERROR
-Svoye_97=Описание
+Loop, 97 {
+    currentVar := "Svoye_" . A_Index
+    if (%currentVar% = "ERROR")
+        %currentVar% := "Описание"
+}
 
 
 if RankGIBDD7=ERROR
@@ -1601,11 +796,6 @@ if NameDUVD7=ERROR
 NameDUVD7=Не заполнено
 if OtchetskstoDUVD7=ERROR
 OtchetskstoDUVD7=Не заполнено
-
-
-
-
-
 
 
 if JWI=ERROR
@@ -1706,16 +896,7 @@ tumba1=say Ваша задача — одновременно открыть ш�
 CityGIBDD7=Мирный
 }
 
-if (Bol_ro="ГМУ")
-{
-Bol_ro_1 =ГМУ-П
-Bol_ro_2 = GMU.png
-Bol_ro_3 =ГМУ г. Приволжск 
-stol =do У окна стоит стол.
-tumba=say Ваша задача — одновременно взять кружку и сказать что-то. И потом ее поставить обратно точно также.
-tumba1=
-CityGIBDD7=
-}
+
 
 if (Skrinshot="Включен")
 {
@@ -4415,11 +3596,6 @@ return
 
 
 
-
-
-
-Save1:
-return
 
 Change:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
