@@ -3649,608 +3649,125 @@ IniWrite, %NameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD
 IniWrite, %OtchetskstoDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
 
 
+Loop, 97
+{
+    IniWrite, % Svoye_%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_%A_Index%
+}
 
 
-IniWrite, %Svoye_1%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_1
-IniWrite, %Svoye_2%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_2
-IniWrite, %Svoye_3%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_3
-IniWrite, %Svoye_4%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_4
-IniWrite, %Svoye_5%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_5
-IniWrite, %Svoye_6%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_6
-IniWrite, %Svoye_7%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_7
-IniWrite, %Svoye_8%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_8
-IniWrite, %Svoye_9%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_9
-IniWrite, %Svoye_10%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_10
-IniWrite, %Svoye_11%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_11
-IniWrite, %Svoye_12%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_12
-IniWrite, %Svoye_13%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_13
-IniWrite, %Svoye_14%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_14
-IniWrite, %Svoye_15%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_15
-IniWrite, %Svoye_16%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_16
-IniWrite, %Svoye_17%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_17
-IniWrite, %Svoye_18%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_18
-IniWrite, %Svoye_19%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_19
-IniWrite, %Svoye_20%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_20
-IniWrite, %Svoye_21%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_21
-IniWrite, %Svoye_22%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_22
-IniWrite, %Svoye_23%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_23
-IniWrite, %Svoye_24%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_24
-IniWrite, %Svoye_25%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_25
-IniWrite, %Svoye_26%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_26
-IniWrite, %Svoye_27%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_27
-IniWrite, %Svoye_28%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_28
-IniWrite, %Svoye_29%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_29
-IniWrite, %Svoye_30%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_30
-IniWrite, %Svoye_31%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_31
-IniWrite, %Svoye_32%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_32
-IniWrite, %Svoye_33%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_33
-IniWrite, %Svoye_34%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_34
-IniWrite, %Svoye_35%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_35
-IniWrite, %Svoye_36%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_36
-IniWrite, %Svoye_37%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_37
-IniWrite, %Svoye_38%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_38
-IniWrite, %Svoye_39%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_39
-IniWrite, %Svoye_40%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_40
-IniWrite, %Svoye_41%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_41
-IniWrite, %Svoye_42%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_42
-IniWrite, %Svoye_43%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_43
-IniWrite, %Svoye_44%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_44
-IniWrite, %Svoye_45%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_45
-IniWrite, %Svoye_46%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_46
-IniWrite, %Svoye_47%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_47
-IniWrite, %Svoye_48%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_48
-IniWrite, %Svoye_49%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_49
-IniWrite, %Svoye_50%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_50
+iniPath := "C:\ProgramData\KPRP\KPRP-main\Redaktor.ini"
+startNum := 11
+endNum := 501
+step := 10
+
+Loop, % ((endNum - startNum) // step + 1)
+{
+    currentNum := startNum + (A_Index - 1) * step
+    varName := currentNum "Redakt"  ; Формируем имя переменной
+    IniWrite, % %varName%, %iniPath%, Edit, %varName%
+}
+
+Loop, 100
+{
+    varName := "Objects" . A_Index
+    IniWrite, % %varName%, %iniPath%, User, %varName%
+}
+
+iniPathKPRPMZ := "C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini"
+Slagsection := "Slag"
+prefixSvoyeМZ_ := "SvoyeМZ_"
+
+Loop, 50
+{
+    varName := prefixSvoyeМZ_ . A_Index
+    IniWrite, % %varName%, %iniPathKPRPMZ%, %Slagsection%, %varName%
+}
+
+; Конфигурационные параметры
+iniPathKPRPMZ := "C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini"
+sectionUser := "User"
+prefixKPRPMZ := "KPRPMZ"
+startNum := 1
+endNum := 100
+
+; Запись значений в INI-файл
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixKPRPMZ . currentNum
+    IniWrite, % %varName%, %iniPathKPRPMZ%, %sectionUser%, %varName%
+}
 
 
-IniWrite, %Svoye_51%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_51
-IniWrite, %Svoye_52%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_52
-IniWrite, %Svoye_53%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_53
-IniWrite, %Svoye_54%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_54
-IniWrite, %Svoye_55%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_55
-IniWrite, %Svoye_56%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_56
-IniWrite, %Svoye_57%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_57
-IniWrite, %Svoye_58%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_58
-IniWrite, %Svoye_59%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_59
-IniWrite, %Svoye_60%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_60
-IniWrite, %Svoye_61%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_61
-IniWrite, %Svoye_62%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_62
-IniWrite, %Svoye_63%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_63
-IniWrite, %Svoye_64%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_64
-IniWrite, %Svoye_65%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_65
-IniWrite, %Svoye_66%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_66
-IniWrite, %Svoye_67%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_67
-IniWrite, %Svoye_68%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_68
-IniWrite, %Svoye_69%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_69
-IniWrite, %Svoye_70%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_70
-IniWrite, %Svoye_71%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_71
-IniWrite, %Svoye_72%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_72
-IniWrite, %Svoye_73%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_73
-IniWrite, %Svoye_74%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_74
-IniWrite, %Svoye_75%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_75
-IniWrite, %Svoye_76%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_76
-IniWrite, %Svoye_77%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_77
-IniWrite, %Svoye_78%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_78
-IniWrite, %Svoye_79%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_79
-IniWrite, %Svoye_80%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_80
-IniWrite, %Svoye_81%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_81
-IniWrite, %Svoye_82%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_82
-IniWrite, %Svoye_83%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_83
-IniWrite, %Svoye_84%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_84
-IniWrite, %Svoye_85%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_85
-IniWrite, %Svoye_86%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_86
-IniWrite, %Svoye_87%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_87
-IniWrite, %Svoye_88%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_88
-IniWrite, %Svoye_89%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_89
-IniWrite, %Svoye_90%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_90
-IniWrite, %Svoye_91%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_91
-IniWrite, %Svoye_92%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_92
-IniWrite, %Svoye_93%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_93
-IniWrite, %Svoye_94%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_94
-IniWrite, %Svoye_95%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_95
-IniWrite, %Svoye_96%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_96
-IniWrite, %Svoye_97%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_97
+; Настройки
+iniPathRaskladka_MZ := "C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini"
+sectionEdit := "Edit"
+baseNameMZ7 := "MZ7"  ; Базовое имя переменной
+startNum := 11     ; Начальное число
+endNum := 281      ; Конечное число
+step := 10         ; Шаг увеличения
+
+; Основной цикл записи
+currentNum := startNum
+while (currentNum <= endNum)
+{
+    varName := currentNum . baseNameMZ7
+    IniWrite, % %varName%, %iniPathRaskladka_MZ%, %sectionEdit%, %varName%
+    currentNum += step
+}
+
+; Настройки
+iniPathKPRPGIBDD := "C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini"
+sectionSlag1 := "Slag"
+prefixSvoyeGIBDD_ := "SvoyeGIBDD_"
+startNum := 1
+endNum := 50
+
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixSvoyeGIBDD_ . currentNum
+    IniWrite, % %varName%, %iniPathKPRPGIBDD%, %sectionSlag1%, %varName%
+}
 
 
+; Конфигурационные параметры
+iniPathKPRPGIBDD := "C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini"
+sectionUser := "User"
+prefixKPRPGIBDD := "KPRPGIBDD"  ; Префикс переменных
+startNum := 1          ; Начальный номер
+endNum := 50           ; Конечный номер
 
-IniWrite, %11Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 11Redakt
-IniWrite, %21Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 21Redakt
-IniWrite, %31Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 31Redakt
-IniWrite, %41Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 41Redakt
-IniWrite, %51Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 51Redakt
-IniWrite, %61Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 61Redakt
-IniWrite, %71Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 71Redakt
-IniWrite, %81Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 81Redakt
-IniWrite, %91Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 91Redakt
-IniWrite, %101Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 101Redakt
-IniWrite, %111Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 111Redakt
-IniWrite, %121Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 121Redakt
-IniWrite, %131Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 131Redakt
-IniWrite, %141Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 141Redakt
-IniWrite, %151Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 151Redakt
-IniWrite, %161Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 161Redakt
-IniWrite, %171Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 171Redakt
-IniWrite, %181Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 181Redakt
-IniWrite, %191Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 191Redakt
-IniWrite, %201Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 201Redakt
-IniWrite, %211Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 211Redakt
-IniWrite, %221Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 221Redakt
-IniWrite, %231Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 231Redakt
-IniWrite, %241Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 241Redakt
-IniWrite, %251Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 251Redakt
-IniWrite, %261Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 261Redakt
-IniWrite, %271Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 271Redakt
-IniWrite, %281Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 281Redakt
-IniWrite, %291Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 291Redakt
-IniWrite, %301Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 301Redakt
-IniWrite, %311Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 311Redakt
-IniWrite, %321Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 321Redakt
-IniWrite, %331Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 331Redakt
-IniWrite, %341Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 341Redakt
-IniWrite, %351Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 351Redakt
-IniWrite, %361Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 361Redakt
-IniWrite, %371Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 371Redakt
-IniWrite, %381Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 381Redakt
-IniWrite, %391Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 391Redakt
-IniWrite, %401Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 401Redakt
-IniWrite, %411Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 411Redakt
-IniWrite, %421Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 421Redakt
-IniWrite, %431Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 431Redakt
-IniWrite, %441Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 441Redakt
-IniWrite, %451Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 451Redakt
-IniWrite, %461Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 461Redakt
-IniWrite, %471Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 471Redakt
-IniWrite, %481Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 481Redakt
-IniWrite, %491Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 491Redakt
-IniWrite, %501Redakt%,  C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Edit, 501Redakt
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixKPRPGIBDD . currentNum
+    IniWrite, % %varName%, %iniPathKPRPGIBDD%, %sectionUser%, %varName%
+}
 
-IniWrite, %Objects1%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects1
-IniWrite, %Objects2%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects2
-IniWrite, %Objects3%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects3
-IniWrite, %Objects4%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects4
-IniWrite, %Objects5%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects5
-IniWrite, %Objects6%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects6
-IniWrite, %Objects7%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects7
-IniWrite, %Objects8%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects8
-IniWrite, %Objects9%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects9
-IniWrite, %Objects10%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects10
-IniWrite, %Objects11%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects11
-IniWrite, %Objects12%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects12
-IniWrite, %Objects13%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects13
-IniWrite, %Objects14%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects14
-IniWrite, %Objects15%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects15
-IniWrite, %Objects16%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects16
-IniWrite, %Objects17%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects17
-IniWrite, %Objects18%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects18
-IniWrite, %Objects19%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects19
-IniWrite, %Objects20%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects20
-IniWrite, %Objects21%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects21
-IniWrite, %Objects22%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects22
-IniWrite, %Objects23%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects23
-IniWrite, %Objects24%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects24
-IniWrite, %Objects25%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects25
-IniWrite, %Objects26%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects26
-IniWrite, %Objects27%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects27
-IniWrite, %Objects28%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects28
-IniWrite, %Objects29%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects29
-IniWrite, %Objects30%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects30
-IniWrite, %Objects31%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects31
-IniWrite, %Objects32%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects32
-IniWrite, %Objects33%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects33
-IniWrite, %Objects34%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects34
-IniWrite, %Objects36%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects36
-IniWrite, %Objects37%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects37
-IniWrite, %Objects38%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects38
-IniWrite, %Objects39%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects39
-IniWrite, %Objects40%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects40
-IniWrite, %Objects41%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects41
-IniWrite, %Objects42%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects42
-IniWrite, %Objects43%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects43
-IniWrite, %Objects44%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects44
-IniWrite, %Objects45%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects45
-IniWrite, %Objects46%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects46
-IniWrite, %Objects47%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects47
-IniWrite, %Objects48%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects48
-IniWrite, %Objects49%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects49
-IniWrite, %Objects50%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects50
+iniPathRaskladka_GIBDD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini"
+sectionEdit := "Edit"
+baseNameGIBDD7 := "GIBDD7"
 
-IniWrite, %Objects51%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects51
-IniWrite, %Objects52%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects52
-IniWrite, %Objects53%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects53
-IniWrite, %Objects54%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects54
-IniWrite, %Objects55%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects55
-IniWrite, %Objects56%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects56
-IniWrite, %Objects57%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects57
-IniWrite, %Objects58%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects58
-IniWrite, %Objects59%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects59
-IniWrite, %Objects60%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects60
-IniWrite, %Objects61%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects61
-IniWrite, %Objects62%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects62
-IniWrite, %Objects63%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects63
-IniWrite, %Objects64%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects64
-IniWrite, %Objects65%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects65
-IniWrite, %Objects66%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects66
-IniWrite, %Objects67%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects67
-IniWrite, %Objects68%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects68
-IniWrite, %Objects69%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects69
-IniWrite, %Objects70%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects70
-IniWrite, %Objects71%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects71
-IniWrite, %Objects72%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects72
-IniWrite, %Objects73%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects73
-IniWrite, %Objects74%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects74
-IniWrite, %Objects75%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects75
-IniWrite, %Objects76%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects76
-IniWrite, %Objects77%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects77
-IniWrite, %Objects78%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects78
-IniWrite, %Objects79%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects79
-IniWrite, %Objects70%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects80
-IniWrite, %Objects81%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects81
-IniWrite, %Objects82%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects82
-IniWrite, %Objects83%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects83
-IniWrite, %Objects84%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects84
-IniWrite, %Objects86%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects86
-IniWrite, %Objects87%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects87
-IniWrite, %Objects88%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects88
-IniWrite, %Objects89%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects89
-IniWrite, %Objects90%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects90
-IniWrite, %Objects91%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects91
-IniWrite, %Objects92%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects92
-IniWrite, %Objects93%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects93
-IniWrite, %Objects94%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects94
-IniWrite, %Objects95%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects95
-IniWrite, %Objects96%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects96
-IniWrite, %Objects97%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects97
+Loop, 28  ; (281-11)/10 + 1 = 28 итераций
+{
+    currentNum := 11 + (A_Index-1)*10
+    varName := currentNum . baseNameGIBDD7
+    IniWrite, % %varName%, %iniPathRaskladka_GIBDD%, %sectionEdit%, %varName%
+}
 
-IniWrite, %SvoyeМZ_1%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_1
-IniWrite, %SvoyeМZ_2%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_2
-IniWrite, %SvoyeМZ_3%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_3
-IniWrite, %SvoyeМZ_4%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_4
-IniWrite, %SvoyeМZ_5%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_5
-IniWrite, %SvoyeМZ_6%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_6
-IniWrite, %SvoyeМZ_7%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_7
-IniWrite, %SvoyeМZ_8%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_8
-IniWrite, %SvoyeМZ_9%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_9
-IniWrite, %SvoyeМZ_10%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_10
-IniWrite, %SvoyeМZ_11%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_11
-IniWrite, %SvoyeМZ_12%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_12
-IniWrite, %SvoyeМZ_13%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_13
-IniWrite, %SvoyeМZ_14%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_14
-IniWrite, %SvoyeМZ_15%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_15
-IniWrite, %SvoyeМZ_16%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_16
-IniWrite, %SvoyeМZ_17%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_17
-IniWrite, %SvoyeМZ_18%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_18
-IniWrite, %SvoyeМZ_19%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_19
-IniWrite, %SvoyeМZ_20%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_20
-IniWrite, %SvoyeМZ_21%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_21
-IniWrite, %SvoyeМZ_22%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_22
-IniWrite, %SvoyeМZ_23%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_23
-IniWrite, %SvoyeМZ_24%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_24
-IniWrite, %SvoyeМZ_25%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_25
-IniWrite, %SvoyeМZ_26%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_26
-IniWrite, %SvoyeМZ_27%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_27
-IniWrite, %SvoyeМZ_28%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_28
-IniWrite, %SvoyeМZ_29%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_29
-IniWrite, %SvoyeМZ_30%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_30
-IniWrite, %SvoyeМZ_31%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_31
-IniWrite, %SvoyeМZ_32%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_32
-IniWrite, %SvoyeМZ_33%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_33
-IniWrite, %SvoyeМZ_34%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_34
-IniWrite, %SvoyeМZ_35%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_35
-IniWrite, %SvoyeМZ_36%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_36
-IniWrite, %SvoyeМZ_37%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_37
-IniWrite, %SvoyeМZ_38%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_38
-IniWrite, %SvoyeМZ_39%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_39
-IniWrite, %SvoyeМZ_40%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_40
-IniWrite, %SvoyeМZ_41%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_41
-IniWrite, %SvoyeМZ_42%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_42
-IniWrite, %SvoyeМZ_43%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_43
-IniWrite, %SvoyeМZ_44%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_44
-IniWrite, %SvoyeМZ_45%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_45
-IniWrite, %SvoyeМZ_46%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_46
-IniWrite, %SvoyeМZ_47%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_47
-IniWrite, %SvoyeМZ_48%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_48
-IniWrite, %SvoyeМZ_49%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_49
-IniWrite, %SvoyeМZ_50%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_50
+iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
+sectionEdit := "Edit"
+baseNameDUVD7 := "DUVD7"
 
-
-IniWrite, %KPRPMZ1%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ1
-IniWrite, %KPRPMZ2%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ2
-IniWrite, %KPRPMZ3%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ3
-IniWrite, %KPRPMZ4%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ4
-IniWrite, %KPRPMZ5%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ5
-IniWrite, %KPRPMZ6%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ6
-IniWrite, %KPRPMZ7%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ7
-IniWrite, %KPRPMZ8%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ8
-IniWrite, %KPRPMZ9%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ9
-IniWrite, %KPRPMZ10%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ10
-IniWrite, %KPRPMZ11%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ11
-IniWrite, %KPRPMZ12%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ12
-IniWrite, %KPRPMZ13%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ13
-IniWrite, %KPRPMZ14%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ14
-IniWrite, %KPRPMZ15%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ15
-IniWrite, %KPRPMZ16%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ16
-IniWrite, %KPRPMZ17%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ17
-IniWrite, %KPRPMZ18%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ18
-IniWrite, %KPRPMZ19%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ19
-IniWrite, %KPRPMZ20%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ20
-IniWrite, %KPRPMZ21%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ21
-IniWrite, %KPRPMZ22%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ22
-IniWrite, %KPRPMZ23%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ23
-IniWrite, %KPRPMZ24%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ24
-IniWrite, %KPRPMZ25%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ25
-IniWrite, %KPRPMZ26%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ26
-IniWrite, %KPRPMZ27%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ27
-IniWrite, %KPRPMZ28%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ28
-IniWrite, %KPRPMZ29%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ29
-IniWrite, %KPRPMZ30%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ30
-IniWrite, %KPRPMZ31%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ31
-IniWrite, %KPRPMZ32%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ32
-IniWrite, %KPRPMZ33%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ33
-IniWrite, %KPRPMZ34%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ34
-IniWrite, %KPRPMZ35%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ35
-IniWrite, %KPRPMZ36%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ36
-IniWrite, %KPRPMZ37%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ37
-IniWrite, %KPRPMZ38%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ38
-IniWrite, %KPRPMZ39%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ39
-IniWrite, %KPRPMZ40%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ40
-IniWrite, %KPRPMZ41%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ41
-IniWrite, %KPRPMZ42%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ42
-IniWrite, %KPRPMZ43%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ43
-IniWrite, %KPRPMZ44%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ44
-IniWrite, %KPRPMZ45%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ45
-IniWrite, %KPRPMZ46%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ46
-IniWrite, %KPRPMZ47%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ47
-IniWrite, %KPRPMZ48%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ48
-IniWrite, %KPRPMZ49%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ49
-IniWrite, %KPRPMZ50%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ50
-IniWrite, %KPRPMZ51%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ51
-IniWrite, %KPRPMZ52%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ52
-IniWrite, %KPRPMZ53%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ53
-IniWrite, %KPRPMZ54%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ54
-IniWrite, %KPRPMZ55%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ55
-IniWrite, %KPRPMZ56%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ56
-IniWrite, %KPRPMZ57%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ57
-IniWrite, %KPRPMZ58%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ58
-IniWrite, %KPRPMZ59%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ59
-IniWrite, %KPRPMZ60%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ60
-IniWrite, %KPRPMZ61%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ61
-IniWrite, %KPRPMZ62%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ62
-IniWrite, %KPRPMZ63%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ63
-IniWrite, %KPRPMZ64%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ64
-IniWrite, %KPRPMZ65%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ65
-IniWrite, %KPRPMZ66%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ66
-IniWrite, %KPRPMZ67%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ67
-IniWrite, %KPRPMZ68%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ68
-IniWrite, %KPRPMZ69%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ69
-IniWrite, %KPRPMZ70%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ70
-IniWrite, %KPRPMZ71%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ71
-IniWrite, %KPRPMZ72%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ72
-IniWrite, %KPRPMZ73%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ73
-IniWrite, %KPRPMZ74%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ74
-IniWrite, %KPRPMZ75%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ75
-IniWrite, %KPRPMZ76%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ76
-IniWrite, %KPRPMZ77%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ77
-IniWrite, %KPRPMZ78%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ78
-IniWrite, %KPRPMZ79%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ79
-IniWrite, %KPRPMZ80%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ80
-IniWrite, %KPRPMZ81%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ81
-IniWrite, %KPRPMZ82%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ82
-IniWrite, %KPRPMZ83%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ83
-IniWrite, %KPRPMZ84%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ84
-IniWrite, %KPRPMZ85%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ85
-IniWrite, %KPRPMZ86%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ86
-IniWrite, %KPRPMZ87%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ87
-IniWrite, %KPRPMZ88%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ88
-IniWrite, %KPRPMZ89%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ89
-IniWrite, %KPRPMZ90%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ90
-IniWrite, %KPRPMZ91%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ91
-IniWrite, %KPRPMZ92%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ92
-IniWrite, %KPRPMZ93%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ93
-IniWrite, %KPRPMZ94%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ94
-IniWrite, %KPRPMZ95%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ95
-IniWrite, %KPRPMZ96%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ96
-IniWrite, %KPRPMZ97%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ97
-IniWrite, %KPRPMZ98%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ98
-IniWrite, %KPRPMZ99%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ99
-IniWrite, %KPRPMZ100%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ100
-
-
-IniWrite, %11MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 11MZ7
-IniWrite, %21MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 21MZ7
-IniWrite, %31MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 31MZ7
-IniWrite, %41MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 41MZ7
-IniWrite, %51MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 51MZ7
-IniWrite, %61MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 61MZ7
-IniWrite, %71MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 71MZ7
-IniWrite, %81MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 81MZ7
-IniWrite, %91MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 91MZ7
-IniWrite, %101MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 101MZ7
-IniWrite, %111MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 111MZ7
-IniWrite, %121MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 121MZ7
-IniWrite, %131MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 131MZ7
-IniWrite, %141MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 141MZ7
-IniWrite, %151MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 151MZ7
-IniWrite, %161MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 161MZ7
-IniWrite, %171MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 171MZ7
-IniWrite, %181MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 181MZ7
-IniWrite, %191MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 191MZ7
-IniWrite, %201MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 201MZ7
-IniWrite, %211MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 211MZ7
-IniWrite, %221MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 221MZ7
-IniWrite, %231MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 231MZ7
-IniWrite, %241MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 241MZ7
-IniWrite, %251MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 251MZ7
-IniWrite, %261MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 261MZ7
-IniWrite, %271MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 271MZ7
-IniWrite, %281MZ7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini, Edit, 281MZ7
-
-
-
-
-IniWrite, %SvoyeGIBDD_1%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_1
-IniWrite, %SvoyeGIBDD_2%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_2
-IniWrite, %SvoyeGIBDD_3%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_3
-IniWrite, %SvoyeGIBDD_4%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_4
-IniWrite, %SvoyeGIBDD_5%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_5
-IniWrite, %SvoyeGIBDD_6%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_6
-IniWrite, %SvoyeGIBDD_7%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_7
-IniWrite, %SvoyeGIBDD_8%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_8
-IniWrite, %SvoyeGIBDD_9%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_9
-IniWrite, %SvoyeGIBDD_10%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_10
-IniWrite, %SvoyeGIBDD_11%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_11
-IniWrite, %SvoyeGIBDD_12%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_12
-IniWrite, %SvoyeGIBDD_13%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_13
-IniWrite, %SvoyeGIBDD_14%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_14
-IniWrite, %SvoyeGIBDD_15%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_15
-IniWrite, %SvoyeGIBDD_16%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_16
-IniWrite, %SvoyeGIBDD_17%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_17
-IniWrite, %SvoyeGIBDD_18%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_18
-IniWrite, %SvoyeGIBDD_19%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_19
-IniWrite, %SvoyeGIBDD_20%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_20
-IniWrite, %SvoyeGIBDD_21%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_21
-IniWrite, %SvoyeGIBDD_22%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_22
-IniWrite, %SvoyeGIBDD_23%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_23
-IniWrite, %SvoyeGIBDD_24%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_24
-IniWrite, %SvoyeGIBDD_25%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_25
-IniWrite, %SvoyeGIBDD_26%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_26
-IniWrite, %SvoyeGIBDD_27%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_27
-IniWrite, %SvoyeGIBDD_28%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_28
-IniWrite, %SvoyeGIBDD_29%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_29
-IniWrite, %SvoyeGIBDD_30%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_30
-IniWrite, %SvoyeGIBDD_31%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_31
-IniWrite, %SvoyeGIBDD_32%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_32
-IniWrite, %SvoyeGIBDD_33%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_33
-IniWrite, %SvoyeGIBDD_34%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_34
-IniWrite, %SvoyeGIBDD_35%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_35
-IniWrite, %SvoyeGIBDD_36%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_36
-IniWrite, %SvoyeGIBDD_37%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_37
-IniWrite, %SvoyeGIBDD_38%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_38
-IniWrite, %SvoyeGIBDD_39%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_39
-IniWrite, %SvoyeGIBDD_40%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_40
-IniWrite, %SvoyeGIBDD_41%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_41
-IniWrite, %SvoyeGIBDD_42%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_42
-IniWrite, %SvoyeGIBDD_43%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_43
-IniWrite, %SvoyeGIBDD_44%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_44
-IniWrite, %SvoyeGIBDD_45%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_45
-IniWrite, %SvoyeGIBDD_46%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_46
-IniWrite, %SvoyeGIBDD_47%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_47
-IniWrite, %SvoyeGIBDD_48%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_48
-IniWrite, %SvoyeGIBDD_49%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_49
-IniWrite, %SvoyeGIBDD_50%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, Slag, SvoyeGIBDD_50
-
-
-IniWrite, %KPRPGIBDD1%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD1
-IniWrite, %KPRPGIBDD2%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD2
-IniWrite, %KPRPGIBDD3%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD3
-IniWrite, %KPRPGIBDD4%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD4
-IniWrite, %KPRPGIBDD5%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD5
-IniWrite, %KPRPGIBDD6%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD6
-IniWrite, %KPRPGIBDD7%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD7
-IniWrite, %KPRPGIBDD8%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD8
-IniWrite, %KPRPGIBDD9%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD9
-IniWrite, %KPRPGIBDD10%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD10
-IniWrite, %KPRPGIBDD11%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD11
-IniWrite, %KPRPGIBDD12%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD12
-IniWrite, %KPRPGIBDD13%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD13
-IniWrite, %KPRPGIBDD14%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD14
-IniWrite, %KPRPGIBDD15%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD15
-IniWrite, %KPRPGIBDD16%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD16
-IniWrite, %KPRPGIBDD17%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD17
-IniWrite, %KPRPGIBDD18%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD18
-IniWrite, %KPRPGIBDD19%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD19
-IniWrite, %KPRPGIBDD20%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD20
-IniWrite, %KPRPGIBDD21%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD21
-IniWrite, %KPRPGIBDD22%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD22
-IniWrite, %KPRPGIBDD23%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD23
-IniWrite, %KPRPGIBDD24%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD24
-IniWrite, %KPRPGIBDD25%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD25
-IniWrite, %KPRPGIBDD26%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD26
-IniWrite, %KPRPGIBDD27%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD27
-IniWrite, %KPRPGIBDD28%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD28
-IniWrite, %KPRPGIBDD29%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD29
-IniWrite, %KPRPGIBDD30%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD30
-IniWrite, %KPRPGIBDD31%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD31
-IniWrite, %KPRPGIBDD32%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD32
-IniWrite, %KPRPGIBDD33%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD33
-IniWrite, %KPRPGIBDD34%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD34
-IniWrite, %KPRPGIBDD35%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD35
-IniWrite, %KPRPGIBDD36%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD36
-IniWrite, %KPRPGIBDD37%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD37
-IniWrite, %KPRPGIBDD38%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD38
-IniWrite, %KPRPGIBDD39%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD39
-IniWrite, %KPRPGIBDD40%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD40
-IniWrite, %KPRPGIBDD41%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD41
-IniWrite, %KPRPGIBDD42%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD42
-IniWrite, %KPRPGIBDD43%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD43
-IniWrite, %KPRPGIBDD44%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD44
-IniWrite, %KPRPGIBDD45%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD45
-IniWrite, %KPRPGIBDD46%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD46
-IniWrite, %KPRPGIBDD47%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD47
-IniWrite, %KPRPGIBDD48%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD48
-IniWrite, %KPRPGIBDD49%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD49
-IniWrite, %KPRPGIBDD50%, C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini, User, KPRPGIBDD50
-
-IniWrite, %11GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 11GIBDD7
-IniWrite, %21GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 21GIBDD7
-IniWrite, %31GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 31GIBDD7
-IniWrite, %41GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 41GIBDD7
-IniWrite, %51GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 51GIBDD7
-IniWrite, %61GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 61GIBDD7
-IniWrite, %71GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 71GIBDD7
-IniWrite, %81GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 81GIBDD7
-IniWrite, %91GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 91GIBDD7
-IniWrite, %101GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 101GIBDD7
-IniWrite, %111GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 111GIBDD7
-IniWrite, %121GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 121GIBDD7
-IniWrite, %131GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 131GIBDD7
-IniWrite, %141GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 141GIBDD7
-IniWrite, %151GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 151GIBDD7
-IniWrite, %161GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 161GIBDD7
-IniWrite, %171GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 171GIBDD7
-IniWrite, %181GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 181GIBDD7
-IniWrite, %191GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 191GIBDD7
-IniWrite, %201GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 201GIBDD7
-IniWrite, %211GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 211GIBDD7
-IniWrite, %221GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 221GIBDD7
-IniWrite, %231GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 231GIBDD7
-IniWrite, %241GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 241GIBDD7
-IniWrite, %251GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 251GIBDD7
-IniWrite, %261GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 261GIBDD7
-IniWrite, %271GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 271GIBDD7
-IniWrite, %281GIBDD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini, Edit, 281GIBDD7
-
-
-
-
-IniWrite, %11DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 11DUVD7
-IniWrite, %21DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 21DUVD7
-IniWrite, %31DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 31DUVD7
-IniWrite, %41DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 41DUVD7
-IniWrite, %51DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 51DUVD7
-IniWrite, %61DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 61DUVD7
-IniWrite, %71DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 71DUVD7
-IniWrite, %81DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 81DUVD7
-IniWrite, %91DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 91DUVD7
-IniWrite, %101DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 101DUVD7
-IniWrite, %111DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 111DUVD7
-IniWrite, %121DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 121DUVD7
-IniWrite, %131DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 131DUVD7
-IniWrite, %141DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 141DUVD7
-IniWrite, %151DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 151DUVD7
-IniWrite, %161DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 161DUVD7
-IniWrite, %171DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 171DUVD7
-IniWrite, %181DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 181DUVD7
-IniWrite, %191DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 191DUVD7
-IniWrite, %201DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 201DUVD7
-IniWrite, %211DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 211DUVD7
-IniWrite, %221DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 221DUVD7
-IniWrite, %231DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 231DUVD7
-IniWrite, %241DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 241DUVD7
-IniWrite, %251DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 251DUVD7
-IniWrite, %261DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 261DUVD7
-IniWrite, %271DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 271DUVD7
-IniWrite, %281DUVD7%, C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini, Edit, 281DUVD7
-
+Loop, 28  ; Рассчитываем количество итераций: (281-11)/10 + 1 = 28
+{
+    currentNum := 11 + (A_Index-1)*10
+    varName := currentNum . baseNameDUVD7
+    IniWrite, % %varName%, %iniPathRaskladka_DUVD%, %sectionEdit%, %varName%
+}
 
 
 
