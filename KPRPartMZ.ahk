@@ -498,927 +498,185 @@ if (A_Gui = 5) {
 return
 
 
+; Функция отправки КРПР-МЗ по номеру шаблона
+SendKPRPMZ(num) {
+    ; --- Глобальные переменные с данными для подстановки ---
+    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
+    
+    ; --- Глобальные переменные с настройками ---
+    global vybor, zaderzhka
+    
+    ; --- Глобальные переменные с путями к файлам-шаблонам ---
+    global KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9
+    global KPRPMZ10, KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18
+    global KPRPMZ19, KPRPMZ20, KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28
 
+    ; --- Короткая пауза перед отправкой ---
+    Sleep 150
+    SendPlay {Enter} ; имитация нажатия Enter
+	FileEncoding, UTF-8-RAW ; Делает русский язык
+	
+	
+    ; Получаем переменную Var из функции Greeting()
+    Var := Greeting()
 
+    ; --- Массив всех файлов-шаблонов (AutoHotkey v1) ---
+    fileVars := Array(KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9
+        , KPRPMZ10, KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18
+        , KPRPMZ19, KPRPMZ20, KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28)
 
+    ; --- Проверка, что номер шаблона в диапазоне 1-28 ---
+    if (num < 1 || num > 28)
+        return  ; если номер неправильный — выходим
 
+    ; --- Получаем путь к нужному файлу-шаблону ---
+    fileVar := fileVars[num]
 
-
-IniRead, gameFolder,   C:\ProgramData\KPRP\KPRP-main\Halyards\Province.ini, Mta, gameFolder
-
-FileCLog := gameFolder "\MTA\logs\console.log"  ; Путь к файлу лога
-
-GuiControlGet, SoundEnable, 6:, SoundEnable
-
-; Если SoundEnable не 1, выходим
-if (SoundEnable != 1)
-    return
-
-Loop
-{
-    lastLine := GetNewLine(FileCLog)
-
-    ; Проверка, содержит ли последняя строка "/to [ID]"
-    if (InStr(lastLine, "/to [ID]"))
+    ; --- Читаем файл построчно ---
+    Loop, read, %fileVar%
     {
-        Sleep, 2000
-        SoundPlay, C:\ProgramData\KPRP\KPRP-main\call.mp3
+        ; --- Разделяем строку по табуляциям ---
+        Loop, parse, A_LoopReadLine, %A_Tab%
+        {
+            line := A_LoopField  ; текущий кусок строки
+
+            ; --- Подстановка всех переменных в текст ---
+            line := StrReplace(line, "%floor%", floor)
+            line := StrReplace(line, "%Var%", Var)
+            line := StrReplace(line, "%Name%", Name)
+            line := StrReplace(line, "%Surname%", Surname)
+            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
+            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
+            line := StrReplace(line, "%JWI%", JWI)
+            line := StrReplace(line, "%TAG%", TAG)
+            line := StrReplace(line, "%Middle_Name%", Middle_Name)
+            line := StrReplace(line, "%Skrin_1%", Skrin_1)
+            line := StrReplace(line, "%Female%", Female)
+            line := StrReplace(line, "%stol%", stol)
+
+            ; --- Отправка строки с задержкой ---
+            %vybor%(line, "  " zaderzhka " ")
+        }
     }
-
-    Sleep, 1000 ; чтобы не грузить процессор
 }
-
-; Функция для получения новой строки из файла
-GetNewLine(filename)
-{
-    static oldSize := 0
-    static lastLine := ""
-
-    FileGetSize, newSize, %filename%
-
-    ; Если размер файла не изменился — ничего не делать
-    if (newSize = oldSize)
-        return ""
-
-    oldSize := newSize
-
-    ; Прочитать последнюю непустую строку из файла
-    last := ""
-    Loop, Read, %filename%
-    {
-        if A_LoopReadLine
-            last := A_LoopReadLine
-    }
-
-    return last
-}
-
-
-
-Return
 
 
 0001MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ1%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(1)
 Return
 
 0002MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ2%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(2)
 Return
-
 
 0003MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ3%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
- 		line := StrReplace(line, "%stol%", stol)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(3)
 Return
-
 
 0004MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ4%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(4)
 Return
 
-
 0005MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ5%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(5)
 Return
 
 0006MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ6%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(6)
 Return
-
 
 0007MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ7%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(7)
 Return
-
-
 
 0008MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ8%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(8)
 Return
-
 
 0009MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ9%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(9)
 Return
 
-
-
 0010MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ10%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(10)
 Return
 
 0011MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ11%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(11)
 Return
-
 
 0012MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ12%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(12)
 Return
-
 
 0013MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ13%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(13)
 Return
-
-
 
 0014MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ14%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(14)
 Return
 
-
 0015MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ15%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)		
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(15)
 Return
 
 0016MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ16%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(16)
 Return
 
 0017MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ17%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(17)
 Return
 
-
 0018MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ18%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)		
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(18)
 Return
 
 0019MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ19%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(19)
 Return
-
 
 0020MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ20%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(20)
 Return
 
-
 0021MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ21%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(21)
 Return
 
 0022MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ22%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(22)
 Return
-
 
 0023MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ23%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(23)
 Return
-
 
 0024MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ24%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(24)
 Return
-
 
 0025MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ25%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(25)
 Return
 
-
-
 0026MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ26%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(26)
 Return
 
 0027MZ7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ27%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendKPRPMZ(27)
 Return
+
+0028MZ7:
+    SendKPRPMZ(28)
+Return
+
+
+
+
+
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
@@ -8926,6 +8184,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -8953,13 +8215,12 @@ else
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
-
-
 ; Таймер
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
+
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9079,6 +8340,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -9105,8 +8370,6 @@ else
 }
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-
 
 ; Таймер
 startTime := A_TickCount
@@ -9437,6 +8700,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -9464,13 +8731,12 @@ else
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
-
-
 ; Таймер
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
+
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9609,6 +8875,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -9635,8 +8905,6 @@ else
 }
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-
 
 ; Таймер
 startTime := A_TickCount
@@ -9777,6 +9045,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -9804,13 +9076,13 @@ else
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 
-
-
 ; Таймер
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
+
+
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -9931,6 +9203,10 @@ Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 winWidth := 403
 winHeight := 109
 
+; Создаем регион с закругленными углами (радиус 10 пикселей)
+radius := 20
+WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
 ; Добавляем картинку
 Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
 
@@ -9957,8 +9233,6 @@ else
 }
 
 Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-
 
 ; Таймер
 startTime := A_TickCount
