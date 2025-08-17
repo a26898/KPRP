@@ -986,7 +986,6 @@ Return
     SendKPRPMZ(100)
 Return
 
-
 :?:/КТГ_1::
     SendKPRPMZ(101)
 Return
@@ -1058,14 +1057,46 @@ Return
     SendKPRPMZ(118)
 Return
 
+:?:/Стетоскоп_1::
+  SendKPRPMZ(119)
+Return
 
+:?:/Стетоскоп_2::
+  SendKPRPMZ(120)
+Return
+
+:?:/Стетоскоп_3::
+  SendKPRPMZ(121)
+Return
+
+:?:/Стетоскоп_4::
+  SendKPRPMZ(122)
+Return
+
+:?:/МРТ_1::
+  SendKPRPMZ(123)
+Return
+
+:?:/МРТ_2::
+  SendKPRPMZ(124)
+Return
+
+:?:/МРТ_3::
+  SendKPRPMZ(125)
+Return
+
+:?:/МРТ_4::
+  SendKPRPMZ(126)
+Return
+
+:?:/МРТ_5::
+  SendKPRPMZ(127)
+Return
 
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
-
-
 
 
 :?:/Форма::
@@ -2494,23 +2525,6 @@ SendPlay {Enter}
 Return
 
 
-:?:/Стетоскоп_1::
-SendPlay {Enter}
-%vybor%("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
-%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
-%vybor%("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
-%vybor%("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
-Return
-
-:?:/Стетоскоп_2::
-SendPlay {Enter}
-%vybor%("me прислонил головку стетоскопа к легким ", "  " zaderzhka " ")
-%vybor%("say Дышите... ", "  " zaderzhka " ")
-%vybor%("say Не дышите  ", "  " zaderzhka " ")
-%vybor%("me прислонил" floor " головку стетоскопа к легким на спину  ", "  " zaderzhka " ")
-%vybor%("say Можете одеваться. ", "  " zaderzhka " ")
-%vybor%("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
-Return
 
 :?:/Сердце_4::
 SendPlay {Enter}
@@ -3133,47 +3147,6 @@ SendPlay {Enter}
 %vybor%("say отказывать коллегам в помощи и совете;", "  " zaderzhka " ")
 %vybor%("say постоянно совершенствовать свое профессиональное мастерство, беречь и развивать благородные традиции медицины.", "  " zaderzhka " ")
 Return
-
-:?:/Мрт_1::
-SendPlay {Enter}
-%vybor%("say Здравствуйте, перед началом процедуры, я должен" floor " кратко рассказать о ней.", "  " zaderzhka " ")
-%vybor%("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
-%vybor%("do На столе лежит коробка.", "  " zaderzhka " ")
-%vybor%("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
-%vybor%("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
-Return
-
-
-:?:/Мрт_2::
-SendPlay {Enter}
-%vybor%("do В углу комнаты стоит аппарат МРТ.", "  " zaderzhka " ")
-%vybor%("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
-Return
-
-:?:/Мрт_3::
-SendPlay {Enter}
-%vybor%("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на кнопку на аппарате МРТ", "  " zaderzhka " ")
-%vybor%("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
-%vybor%("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
-%vybor%("do Увидены ли отклонения на снимках?", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
-Return
-
-:?:/Мрт_5::
-SendPlay {Enter}
-%vybor%("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
-%vybor%("say Я рекомендую пройти дальнейшее обследование для уточнения диагноза.", "  " zaderzhka " ")
-%vybor%("say Я сообщу о результатах лечащему врачу.", "  " zaderzhka " ")
-Return
-
-:?:/Мрт_4::
-SendPlay {Enter}
-%vybor%("say У Вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
-Return
-
 
 
 :?:/Годность_1::
@@ -7787,22 +7760,36 @@ Return
 
 Medicine22:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h140 w320,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Мрт_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Мрт_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Мрт_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Мрт_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /Мрт_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /МРТ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /МРТ_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /МРТ_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /МРТ_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /МРТ_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [МРТ ответ нет]
-Gui, 3:Add, Text, x100 y95 h500 w370 +BackgroundTrans, [МРТ ответ да]
-Gui, 3:show, center h140 w320, МРТ
+Gui, 3:Add, Text, x75 y25 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x75 y75 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x75 y125 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x75 y175 h500 w370 +BackgroundTrans, [МРТ ответ нет]
+Gui, 3:Add, Text, x75 y225 h200 w320 +BackgroundTrans, [МРТ ответ да]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ123,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ123,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ124,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ124,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ125,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ125,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ126,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ126,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ127,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ127,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h320 w540, МРТ
 Return
 
 
@@ -8534,15 +8521,33 @@ Return
 
 Medicine59:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w420,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Стетоскоп_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Стетоскоп_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Стетоскоп_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Стетоскоп_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Стетоскоп_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Стетоскоп_4
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
-Gui, 3:show, center h80 w420, Проверка шумов в лёгких
+Gui, 3:Add, Text, x130 y25 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
+Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
+Gui, 3:Add, Text, x130 y125 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
+Gui, 3:Add, Text, x130 y175 h500 w370 +BackgroundTrans, [Проверка шумов в лёгких]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ119,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ119,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ120,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ120,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ121,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ121,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ122,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ122,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Проверка шумов в лёгких
 Return
 
 
