@@ -1034,10 +1034,37 @@ Return
     SendKPRPMZ(112)
 Return
 
+:?:/КТ_1::
+    SendKPRPMZ(113)
+Return
+
+:?:/КТ_2::
+    SendKPRPMZ(114)
+Return
+
+:?:/КТ_3::
+    SendKPRPMZ(115)
+Return
+
+:?:/КТ_4::
+    SendKPRPMZ(116)
+Return
+
+:?:/КТ_5::
+    SendKPRPMZ(117)
+Return
+
+:?:/КТ_6::
+    SendKPRPMZ(118)
+Return
+
+
+
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
+
 
 
 
@@ -3949,39 +3976,7 @@ SendPlay {Enter}
 %vybor%("say  Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
 %vybor%("say  Чтобы вывести остатки яда из тканей.  ", "  " zaderzhka " ")
 Return
-:?:/КТ_1::
-SendPlay {Enter}
-%vybor%("do В углу комнаты стоит готовый аппарат для компьютерной томографии. ", "  " zaderzhka " ")
-%vybor%("say Ложитесь, пожалуйста, на стол. ", "  " zaderzhka " ")
-%vybor%("say Не двигайтесь! ", "  " zaderzhka " ")
-%vybor%("me задвинул" floor " стол в прибор", "  " zaderzhka " ")
-%vybor%("me включил" floor " сканирование на аппарате", "  " zaderzhka " ")
-%vybor%("do Аппарат отсканировал пациента. ", "  " zaderzhka " ")
-%vybor%("me выключил" floor " сканирование на аппарате", "  " zaderzhka " ")
-%vybor%("do Снимок на мониторе. ", "  " zaderzhka " ")
-%vybor%("me изучил" floor " снимок", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения?", "  " zaderzhka " ")
-Return
-:?:/КТ_2::
-SendPlay {Enter}
-%vybor%("say Все хорошо. Ваш мозг не поврежден! ", "  " zaderzhka " ")
-Return
-:?:/КТ_3::
-SendPlay {Enter}
-%vybor%("say Кажется, я что-то обнаружил. ", "  " zaderzhka " ")
-%vybor%("do Это кровоизлияние в мозг?", "  " zaderzhka " ")
-Return
-:?:/КТ_4::
-SendPlay {Enter}
-%vybor%("say У вас кровоизлияние в головной мозг. ", "  " zaderzhka " ")
-%vybor%("say Вы пока останетесь в больнице. ", "  " zaderzhka " ")
-%vybor%("say Будете придерживаться режима сна и специальной диеты. ", "  " zaderzhka " ")
-%vybor%("say Мы будем следить за вашим состоянием. ", "  " zaderzhka " ")
-Return
-:?:/КТ_5::
-SendPlay {Enter}
-%vybor%("say Нет, ничего страшного. Это просто артефакты в изображении. ", "  " zaderzhka " ")
-Return
+
 
 :?:/Шейка_1::
 SendPlay {Enter}
@@ -9489,21 +9484,39 @@ Medicine116:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /КТ_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /КТ_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /КТ_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /КТ_4
-Gui, 3:Add, Text, x10 y95 h200 w320 +BackgroundTrans, /КТ_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /КТ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /КТ_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /КТ_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /КТ_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /КТ_5
+Gui, 3:Add, Text, x10 y275 h200 w320 +BackgroundTrans, /КТ_6
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x85 y15 h500 w370 +BackgroundTrans, [Компьютерная томография]
-Gui, 3:Add, Text, x85 y35 h500 w370 +BackgroundTrans, [Компьютерная томография]
-Gui, 3:Add, Text, x85 y55 h500 w370 +BackgroundTrans, [Компьютерная томография ответ да]
-Gui, 3:Add, Text, x85 y75 h500 w370 +BackgroundTrans, [Компьютерная томография ответ да]
-Gui, 3:Add, Text, x85 y95 h200 w320 +BackgroundTrans, [Компьютерная томография ответ нет]
+Gui, 3:Add, Text, x75 y25 h500 w370 +BackgroundTrans, [Компьютерная томография]
+Gui, 3:Add, Text, x75 y75 h500 w370 +BackgroundTrans, [Компьютерная томография]
+Gui, 3:Add, Text, x75 y125 h500 w370 +BackgroundTrans, [Компьютерная томография]
+Gui, 3:Add, Text, x75 y175 h500 w370 +BackgroundTrans, [Компьютерная томография ответ да]
+Gui, 3:Add, Text, x75 y225 h200 w320 +BackgroundTrans, [Компьютерная томография ответ да]
+Gui, 3:Add, Text, x75 y275 h200 w320 +BackgroundTrans, [Компьютерная томография ответ нет]
 
-Gui, 3:show, center h140 w400, Компьютерная томография
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ113,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ113,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ114,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ114,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ115,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ115,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ116,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ116,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ117,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ117,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y260 w48 h48 +BackgroundTrans gSelectKPRPMZ118,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y260 w48 h48 +BackgroundTrans gNotebookKPRPMZ118,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h320 w540, Компьютерная томография
 Return
+
 
 ;--------------------------------------------------------------------------------
 
