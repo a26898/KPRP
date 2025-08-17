@@ -1113,12 +1113,26 @@ Return
   SendKPRPMZ(132)
 Return
 
+:?:/Зонд_1::
+  SendKPRPMZ(133)
+Return
+
+:?:/Зонд_2::
+  SendKPRPMZ(134)
+Return
+
+:?:/Зонд_3::
+  SendKPRPMZ(135)
+Return
+
+:?:/Зонд_4::
+  SendKPRPMZ(136)
+Return
 
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
-
 
 
 
@@ -1578,33 +1592,6 @@ SendPlay {Enter}
 %vybor%("say Вашей прямой кишкой всё в порядке.", " " zaderzhka " ")
 %vybor%("say Можете одеваться. ", " " zaderzhka " ")
 Return
-
-:?:/Зонд_1::
-SendPlay {Enter}
-%vybor%("do На столе лежит урогенитальный зонд. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " урогенитальный зонд со стола ", "  " zaderzhka " ")
-%vybor%("say Сейчас, будет немного неприятно, потерпите. ", "  " zaderzhka " ")
-%vybor%("me ввёл" floor " урогенитальный зонд в уретру пациента  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " пробу с внутренней стенки уретры ", "  " zaderzhka " ")
-%vybor%("me достал" floor " урогенитальный зонд из уретры человека ", "  " zaderzhka " ")
-%vybor%("do На столе стоит микробиологический анализатор. ", "  " zaderzhka " ")
-%vybor%("me опустил" floor " урогенитальный зонд в анализатор ", "  " zaderzhka " ")
-%vybor%("me включил" floor " микробиологический анализатор ", "  " zaderzhka " ")
-%vybor%("me запустил" floor " процесс диагностики мазка  ", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
-Return
-
-:?:/Зонд_2::
-SendPlay {Enter}
-%vybor%("say К сожалению, у Вас имеется шанс заболевания венерическим заболеванием. ", " " zaderzhka " ")
-%vybor%("say Как можно скорее обратитесь к своему лечащему врачу. ", " " zaderzhka " ")
-Return
-
-:?:/Зонд_3::
-SendPlay {Enter}
-%vybor%("say Вы здоровы можете одеваться. ", " " zaderzhka " ")
-Return
-
 
 :?:/Донор::
 SendPlay {Enter}
@@ -2226,7 +2213,6 @@ SendPlay {Enter}
 %vybor%("todo Сделайте выдох и постарайтесь больше не тужиться*придерживая голову ребенка   ", "  " zaderzhka " ")
 %vybor%("do Ребенок полностью появился на свет.  ", "  " zaderzhka " ")
 %vybor%("say Спокойствие. Теперь необходимо разрезать пуповину.  ", "  " zaderzhka " ")
-%vybor%("do Через плечо надета мед. сумка с множеством препаратов.  ", "  " zaderzhka " ")
 %vybor%("me достав нитки для бинтов, сделал" floor " 2 узла на расстоянии 5 и 10 см выше пупка ребенка   ", "  " zaderzhka " ")
 %vybor%("me достав ножницы из сумки, аккуратно перерезал" floor "  пуповину между узлами  ", "  " zaderzhka " ")
 %vybor%("me аккуратно похлопал" floor "  ребенка по ягодицам и спине  ", "  " zaderzhka " ")
@@ -7447,18 +7433,35 @@ Return
 
 Medicine6:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h100 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Зонд_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Зонд_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Зонд_3
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Зонд_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Зонд_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Зонд_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Зонд_4
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x125 y15 h500 w370 +BackgroundTrans, [Взятие]
-Gui, 3:Add, Text, x125 y35 h500 w370 +BackgroundTrans, [Взятие ответ да]
-Gui, 3:Add, Text, x125 y55 h500 w370 +BackgroundTrans, [Взятие ответ нет]
-Gui, 3:show, center h100 w330, Взятие мазка
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Взятие мазка]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Взятие мазка]
+Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Взятие ответ да]
+Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Взятие ответ нет]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ133,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ133,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ134,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ134,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ135,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ135,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ136,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ136,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Взятие мазка
 Return
+
 
 
 ;--------------------------------------------------------------------------------
