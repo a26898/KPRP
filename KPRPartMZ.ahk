@@ -1093,10 +1093,33 @@ Return
   SendKPRPMZ(127)
 Return
 
+:?:/МРА_1::
+  SendKPRPMZ(128)
+Return
+
+:?:/МРА_2::
+  SendKPRPMZ(129)
+Return
+
+:?:/МРА_3::
+  SendKPRPMZ(130)
+Return
+
+:?:/МРА_4::
+  SendKPRPMZ(131)
+Return
+
+:?:/МРА_5::
+  SendKPRPMZ(132)
+Return
+
+
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
+
+
 
 
 :?:/Форма::
@@ -4033,43 +4056,6 @@ SendPlay {Enter}
 %vybor%("me достал" floor "  иглу и выкинул" floor "  ее в урну", "  " zaderzhka " ")
 %vybor%("me убрал" floor "  глюкометр, и дырокол в шкаф", "  " zaderzhka " ")
 %vybor%("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
-Return
-:?:/МРА_1::
-SendPlay {Enter}
-%vybor%("say Здравствуйте, перед началом процедуры, я долженл" floor " кратко рассказать о ней.", "  " zaderzhka " ")
-%vybor%("say Сейчас вы должны снять с себя все металлические предметы.", "  " zaderzhka " ")
-%vybor%("do На столе лежит коробка.", "  " zaderzhka " ")
-%vybor%("me взяв коробку в руку, поставил" floor " её на кушетку", "  " zaderzhka " ")
-%vybor%("say Вот сюда все вещи кладите.", "  " zaderzhka " ")
-Return
-
-
-:?:/МРА_2::
-SendPlay {Enter}
-%vybor%("do В углу комнаты стоит аппарат МРА.", "  " zaderzhka " ")
-%vybor%("say Ложитесь пожалуйста на стол прибора.", "  " zaderzhka " ")
-Return
-
-:?:/МРА_3::
-SendPlay {Enter}
-%vybor%("say Сейчас не двигайтесь, если Вам будет плохо, сообщайте.", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на кнопку на аппарате МРА", "  " zaderzhka " ")
-%vybor%("do Стол с пациентом задвинулся в аппарат.", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на вторую кнопку аппарата для начала сканирования", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на монитор прибора", "  " zaderzhka " ")
-%vybor%("me пролистал" floor " несколько снимков", "  " zaderzhka " ")
-%vybor%("do У человека есть отклонения?", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на кнопку выдвижения стола из аппарата", "  " zaderzhka " ")
-Return
-
-:?:/МРА_4::
-SendPlay {Enter}
-%vybor%("say У вас всё хорошо, отклонений на снимках выявлено не было.", "  " zaderzhka " ")
-Return
-
-:?:/МРА_5::
-SendPlay {Enter}
-%vybor%("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
 Return
 
 
@@ -7770,11 +7756,11 @@ Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /МРТ_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x75 y25 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x75 y75 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x75 y125 h500 w370 +BackgroundTrans, [МРТ]
-Gui, 3:Add, Text, x75 y175 h500 w370 +BackgroundTrans, [МРТ ответ нет]
-Gui, 3:Add, Text, x75 y225 h200 w320 +BackgroundTrans, [МРТ ответ да]
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [МРТ]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [МРТ ответ нет]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [МРТ ответ да]
 
 
 Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ123,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
@@ -7789,7 +7775,7 @@ Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ127,C:\Prog
 Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ127,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
 
 
-Gui, 3:show, center h320 w540, МРТ
+Gui, 3:show, center h280 w540, МРТ
 Return
 
 
@@ -9600,23 +9586,38 @@ Return
 
 Medicine120:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h140 w320,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /МРА_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /МРА_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /МРА_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /МРА_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /МРА_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /МРА_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /МРА_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /МРА_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /МРА_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /МРА_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [МРА]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [МРА]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [МРА]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [МРА ответ нет]
-Gui, 3:Add, Text, x100 y95 h500 w370 +BackgroundTrans, [МРА ответ да]
-Gui, 3:show, center h140 w320, МРА метод получения изображения кровеносных сосудов
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [МРА]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [МРА]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [МРА]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [МРА ответ нет]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [МРА ответ да]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ128,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ128,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ129,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ129,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ130,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ130,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ131,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ131,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ132,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ132,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h280 w540, МРА метод получения изображения кровеносных сосудов
 Return
+
+
 
 ;--------------------------------------------------------------------------------
 
