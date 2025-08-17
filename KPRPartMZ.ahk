@@ -258,7 +258,7 @@ Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine22, C:\Progra
 Gui, 5:Add, Picture, x1090 y150 w128 w96 +BackgroundTrans gMedicine119, C:\ProgramData\KPRP\KPRP-main\Glucometer.png
 Gui, 5:Add, Picture, x1090 y260 w128 w96 +BackgroundTrans gMedicine120, C:\ProgramData\KPRP\KPRP-main\MRA.png
 Gui, 5:Add, Picture, x1090 y370 w128 w96 +BackgroundTrans gMedicine121, C:\ProgramData\KPRP\KPRP-main\KTG.png
-Gui, 5:Add, Picture, x1090 y480 w128 w96 +BackgroundTrans gMedicine122, C:\ProgramData\KPRP\KPRP-main\Test_beremennos.png
+Gui, 5:Add, Picture, x1090 y480 w128 w96 +BackgroundTrans gMedicine122, C:\ProgramData\KPRP\KPRP-main\Test_KPRPMZennos.png
 
 
 Gui, 5:Tab, 6
@@ -507,9 +507,29 @@ SendKPRPMZ(num) {
     global vybor, zaderzhka
     
     ; --- Глобальные переменные с путями к файлам-шаблонам ---
-    global KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9
-    global KPRPMZ10, KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18
-    global KPRPMZ19, KPRPMZ20, KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28
+    global KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9, KPRPMZ10
+    global KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18, KPRPMZ19, KPRPMZ20
+    global KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28, KPRPMZ29, KPRPMZ30
+    global KPRPMZ31, KPRPMZ32, KPRPMZ33, KPRPMZ34, KPRPMZ35, KPRPMZ36, KPRPMZ37, KPRPMZ38, KPRPMZ39, KPRPMZ40
+    global KPRPMZ41, KPRPMZ42, KPRPMZ43, KPRPMZ44, KPRPMZ45, KPRPMZ46, KPRPMZ47, KPRPMZ48, KPRPMZ49, KPRPMZ50
+    global KPRPMZ51, KPRPMZ52, KPRPMZ53, KPRPMZ54, KPRPMZ55, KPRPMZ56, KPRPMZ57, KPRPMZ58, KPRPMZ59, KPRPMZ60
+    global KPRPMZ61, KPRPMZ62, KPRPMZ63, KPRPMZ64, KPRPMZ65, KPRPMZ66, KPRPMZ67, KPRPMZ68, KPRPMZ69, KPRPMZ70
+    global KPRPMZ71, KPRPMZ72, KPRPMZ73, KPRPMZ74, KPRPMZ75, KPRPMZ76, KPRPMZ77, KPRPMZ78, KPRPMZ79, KPRPMZ80
+    global KPRPMZ81, KPRPMZ82, KPRPMZ83, KPRPMZ84, KPRPMZ85, KPRPMZ86, KPRPMZ87, KPRPMZ88, KPRPMZ89, KPRPMZ90
+    global KPRPMZ91, KPRPMZ92, KPRPMZ93, KPRPMZ94, KPRPMZ95, KPRPMZ96, KPRPMZ97, KPRPMZ98, KPRPMZ99, KPRPMZ100
+    global KPRPMZ101, KPRPMZ102, KPRPMZ103, KPRPMZ104, KPRPMZ105, KPRPMZ106, KPRPMZ107, KPRPMZ108, KPRPMZ109, KPRPMZ110
+    global KPRPMZ111, KPRPMZ112, KPRPMZ113, KPRPMZ114, KPRPMZ115, KPRPMZ116, KPRPMZ117, KPRPMZ118, KPRPMZ119, KPRPMZ120
+    global KPRPMZ121, KPRPMZ122, KPRPMZ123, KPRPMZ124, KPRPMZ125, KPRPMZ126, KPRPMZ127, KPRPMZ128, KPRPMZ129, KPRPMZ130
+    global KPRPMZ131, KPRPMZ132, KPRPMZ133, KPRPMZ134, KPRPMZ135, KPRPMZ136, KPRPMZ137, KPRPMZ138, KPRPMZ139, KPRPMZ140
+    global KPRPMZ141, KPRPMZ142, KPRPMZ143, KPRPMZ144, KPRPMZ145, KPRPMZ146, KPRPMZ147, KPRPMZ148, KPRPMZ149, KPRPMZ150
+    global KPRPMZ151, KPRPMZ152, KPRPMZ153, KPRPMZ154, KPRPMZ155, KPRPMZ156, KPRPMZ157, KPRPMZ158, KPRPMZ159, KPRPMZ160
+    global KPRPMZ161, KPRPMZ162, KPRPMZ163, KPRPMZ164, KPRPMZ165, KPRPMZ166, KPRPMZ167, KPRPMZ168, KPRPMZ169, KPRPMZ170
+    global KPRPMZ171, KPRPMZ172, KPRPMZ173, KPRPMZ174, KPRPMZ175, KPRPMZ176, KPRPMZ177, KPRPMZ178, KPRPMZ179, KPRPMZ180
+    global KPRPMZ181, KPRPMZ182, KPRPMZ183, KPRPMZ184, KPRPMZ185, KPRPMZ186, KPRPMZ187, KPRPMZ188, KPRPMZ189, KPRPMZ190
+    global KPRPMZ191, KPRPMZ192, KPRPMZ193, KPRPMZ194, KPRPMZ195, KPRPMZ196, KPRPMZ197, KPRPMZ198, KPRPMZ199, KPRPMZ200
+    global KPRPMZ201, KPRPMZ202, KPRPMZ203, KPRPMZ204, KPRPMZ205, KPRPMZ206, KPRPMZ207, KPRPMZ208, KPRPMZ209, KPRPMZ210
+    global KPRPMZ211, KPRPMZ212, KPRPMZ213, KPRPMZ214, KPRPMZ215, KPRPMZ216, KPRPMZ217, KPRPMZ218, KPRPMZ219, KPRPMZ220
+    global KPRPMZ221, KPRPMZ222, KPRPMZ223, KPRPMZ224, KPRPMZ225, KPRPMZ226, KPRPMZ227, KPRPMZ228, KPRPMZ229, KPRPMZ230
 
     ; --- Короткая пауза перед отправкой ---
     Sleep 150
@@ -521,12 +541,33 @@ SendKPRPMZ(num) {
     Var := Greeting()
 
     ; --- Массив всех файлов-шаблонов (AutoHotkey v1) ---
-    fileVars := Array(KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9
-        , KPRPMZ10, KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18
-        , KPRPMZ19, KPRPMZ20, KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28)
+    fileVars := Array(KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9, KPRPMZ10
+        , KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18, KPRPMZ19, KPRPMZ20
+        , KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28, KPRPMZ29, KPRPMZ30
+        , KPRPMZ31, KPRPMZ32, KPRPMZ33, KPRPMZ34, KPRPMZ35, KPRPMZ36, KPRPMZ37, KPRPMZ38, KPRPMZ39, KPRPMZ40
+        , KPRPMZ41, KPRPMZ42, KPRPMZ43, KPRPMZ44, KPRPMZ45, KPRPMZ46, KPRPMZ47, KPRPMZ48, KPRPMZ49, KPRPMZ50
+        , KPRPMZ51, KPRPMZ52, KPRPMZ53, KPRPMZ54, KPRPMZ55, KPRPMZ56, KPRPMZ57, KPRPMZ58, KPRPMZ59, KPRPMZ60
+        , KPRPMZ61, KPRPMZ62, KPRPMZ63, KPRPMZ64, KPRPMZ65, KPRPMZ66, KPRPMZ67, KPRPMZ68, KPRPMZ69, KPRPMZ70
+        , KPRPMZ71, KPRPMZ72, KPRPMZ73, KPRPMZ74, KPRPMZ75, KPRPMZ76, KPRPMZ77, KPRPMZ78, KPRPMZ79, KPRPMZ80
+        , KPRPMZ81, KPRPMZ82, KPRPMZ83, KPRPMZ84, KPRPMZ85, KPRPMZ86, KPRPMZ87, KPRPMZ88, KPRPMZ89, KPRPMZ90
+        , KPRPMZ91, KPRPMZ92, KPRPMZ93, KPRPMZ94, KPRPMZ95, KPRPMZ96, KPRPMZ97, KPRPMZ98, KPRPMZ99, KPRPMZ100
+        , KPRPMZ101, KPRPMZ102, KPRPMZ103, KPRPMZ104, KPRPMZ105, KPRPMZ106, KPRPMZ107, KPRPMZ108, KPRPMZ109, KPRPMZ110
+        , KPRPMZ111, KPRPMZ112, KPRPMZ113, KPRPMZ114, KPRPMZ115, KPRPMZ116, KPRPMZ117, KPRPMZ118, KPRPMZ119, KPRPMZ120
+        , KPRPMZ121, KPRPMZ122, KPRPMZ123, KPRPMZ124, KPRPMZ125, KPRPMZ126, KPRPMZ127, KPRPMZ128, KPRPMZ129, KPRPMZ130
+        , KPRPMZ131, KPRPMZ132, KPRPMZ133, KPRPMZ134, KPRPMZ135, KPRPMZ136, KPRPMZ137, KPRPMZ138, KPRPMZ139, KPRPMZ140
+        , KPRPMZ141, KPRPMZ142, KPRPMZ143, KPRPMZ144, KPRPMZ145, KPRPMZ146, KPRPMZ147, KPRPMZ148, KPRPMZ149, KPRPMZ150
+        , KPRPMZ151, KPRPMZ152, KPRPMZ153, KPRPMZ154, KPRPMZ155, KPRPMZ156, KPRPMZ157, KPRPMZ158, KPRPMZ159, KPRPMZ160
+        , KPRPMZ161, KPRPMZ162, KPRPMZ163, KPRPMZ164, KPRPMZ165, KPRPMZ166, KPRPMZ167, KPRPMZ168, KPRPMZ169, KPRPMZ170
+        , KPRPMZ171, KPRPMZ172, KPRPMZ173, KPRPMZ174, KPRPMZ175, KPRPMZ176, KPRPMZ177, KPRPMZ178, KPRPMZ179, KPRPMZ180
+        , KPRPMZ181, KPRPMZ182, KPRPMZ183, KPRPMZ184, KPRPMZ185, KPRPMZ186, KPRPMZ187, KPRPMZ188, KPRPMZ189, KPRPMZ190
+        , KPRPMZ191, KPRPMZ192, KPRPMZ193, KPRPMZ194, KPRPMZ195, KPRPMZ196, KPRPMZ197, KPRPMZ198, KPRPMZ199, KPRPMZ200
+        , KPRPMZ201, KPRPMZ202, KPRPMZ203, KPRPMZ204, KPRPMZ205, KPRPMZ206, KPRPMZ207, KPRPMZ208, KPRPMZ209, KPRPMZ210
+        , KPRPMZ211, KPRPMZ212, KPRPMZ213, KPRPMZ214, KPRPMZ215, KPRPMZ216, KPRPMZ217, KPRPMZ218, KPRPMZ219, KPRPMZ220
+        , KPRPMZ221, KPRPMZ222, KPRPMZ223, KPRPMZ224, KPRPMZ225, KPRPMZ226, KPRPMZ227, KPRPMZ228, KPRPMZ229, KPRPMZ230)
+
 
     ; --- Проверка, что номер шаблона в диапазоне 1-28 ---
-    if (num < 1 || num > 28)
+    if (num < 1 || num > 230)
         return  ; если номер неправильный — выходим
 
     ; --- Получаем путь к нужному файлу-шаблону ---
@@ -673,1150 +714,331 @@ Return
     SendKPRPMZ(28)
 Return
 
+:?:/Лек_1::
+    SendKPRPMZ(4)
+Return
+
+:?:/Лек_2::
+    SendKPRPMZ(5)
+Return
+
+:?:/Лек_3::
+    SendKPRPMZ(6)
+Return
+
+:?:/Лек_4::
+    SendKPRPMZ(7)
+Return
+
+:?:/Лек_5::
+    SendKPRPMZ(8)
+Return
+
+:?:/Лек_6::
+    SendKPRPMZ(9)
+Return
+
+:?:/Аптека::
+    SendKPRPMZ(25)
+Return
+
+
+:?:/ВМС_1::
+    SendKPRPMZ(29)  
+Return
+
+:?:/ВМС_2::
+    SendKPRPMZ(30)  
+Return
+
+:?:/Желудок::
+    SendKPRPMZ(31)
+Return
+
+:?:/Пуля::
+    SendKPRPMZ(32)
+Return
+
+:?:/Шприц::
+    SendKPRPMZ(33)
+Return
+
+:?:/Цистоскоп_1::
+    SendKPRPMZ(34)  
+Return
+
+:?:/Цистоскоп_2::
+    SendKPRPMZ(35)  
+Return
+
+:?:/Цистоскоп_3::
+    SendKPRPMZ(36)  
+Return
+
+:?:/Цистоскоп_4::
+    SendKPRPMZ(37)  
+Return
+
+:?:/Вакцинация::
+    SendKPRPMZ(38)
+Return
+
+:?:/Зрения_1::
+    SendKPRPMZ(39)
+Return
+:?:/Зрения_2::
+    SendKPRPMZ(40)
+Return
+:?:/Зрения_3::
+    SendKPRPMZ(41)
+Return
+:?:/Зрения_4::
+    SendKPRPMZ(42)
+Return
+:?:/Зрения_5::
+    SendKPRPMZ(43)
+Return
+:?:/Зрения_6::
+    SendKPRPMZ(44)
+Return
+:?:/Зрения_7::
+    SendKPRPMZ(45)
+Return
+:?:/Зрения_8::
+    SendKPRPMZ(46)
+Return
+:?:/Зрения_9::
+    SendKPRPMZ(47)
+Return
+
+
+:?:/Вши_1::
+    SendKPRPMZ(48)
+Return
+:?:/Вши_2::
+    SendKPRPMZ(49)
+Return
+:?:/Вши_3::
+    SendKPRPMZ(50)
+Return
+:?:/Вши_4::
+    SendKPRPMZ(51)
+Return
+
+:?:/Флюшка_1::
+    SendKPRPMZ(52)
+Return
+:?:/Флюшка_2::
+    SendKPRPMZ(53)
+Return
+:?:/Флюшка_3::
+    SendKPRPMZ(54)
+Return
+:?:/Флюшка_4::
+    SendKPRPMZ(55)
+Return
+:?:/Флюшка_5::
+    SendKPRPMZ(56)
+Return
+
+:?:/Температура_1::
+    SendKPRPMZ(57)
+Return
+:?:/Температура_2::
+    SendKPRPMZ(58)
+Return
+:?:/Температура_3::
+    SendKPRPMZ(59)
+Return
+:?:/Температура_4::
+    SendKPRPMZ(60)
+Return
+
+:?:/Маммограф_1::
+    SendKPRPMZ(61)
+Return
+:?:/Маммограф_2::
+    SendKPRPMZ(62)
+Return
+:?:/Маммограф_3::
+    SendKPRPMZ(63)
+Return
+:?:/Маммограф_4::
+    SendKPRPMZ(64)
+Return
+
+:?:/Прибор_1::
+    SendKPRPMZ(65)
+Return
+:?:/Прибор_2::
+    SendKPRPMZ(66)
+Return
+:?:/Прибор_3::
+    SendKPRPMZ(67)
+Return
+:?:/Прибор_4::
+    SendKPRPMZ(68)
+Return
+
+:?:/Глисты_1::
+    SendKPRPMZ(69)
+Return
+:?:/Глисты_2::
+    SendKPRPMZ(70)
+Return
+:?:/Глисты_3::
+    SendKPRPMZ(71)
+Return
+:?:/Глисты_4::
+    SendKPRPMZ(72)
+Return
+
+:?:/ЭКГ_1::
+    SendKPRPMZ(73)
+Return
+:?:/ЭКГ_2::
+    SendKPRPMZ(74)
+Return
+:?:/ЭКГ_3::
+    SendKPRPMZ(75)
+Return
+:?:/ЭКГ_4::
+    SendKPRPMZ(76)
+Return
+
+:?:/Гинек_1::
+    SendKPRPMZ(77)
+Return
+:?:/Гинек_2::
+    SendKPRPMZ(78)
+Return
+:?:/Гинек_3::
+    SendKPRPMZ(79)
+Return
+:?:/Гинек_4::
+    SendKPRPMZ(80)
+Return
+:?:/Гинек_5::
+    SendKPRPMZ(81)
+Return
+
+:?:/Матка_1::
+    SendKPRPMZ(82)
+Return
+:?:/Матка_2::
+    SendKPRPMZ(83)
+Return
+
+:?:/Чувства_0::
+    SendKPRPMZ(84)
+Return
+:?:/Чувства_1::
+    SendKPRPMZ(85)
+Return
+:?:/Чувства_2::
+    SendKPRPMZ(86)
+Return
+:?:/Чувства_3::
+    SendKPRPMZ(87)
+Return
+:?:/Чувства_4::
+    SendKPRPMZ(88)
+Return
+:?:/Чувства_5::
+    SendKPRPMZ(89)
+Return
+:?:/Чувства_6::
+    SendKPRPMZ(90)
+Return
+
+:?:/Палец_1::
+    SendKPRPMZ(91)
+Return
+:?:/Палец_2::
+    SendKPRPMZ(92)
+Return
+:?:/Палец_3::
+    SendKPRPMZ(93)
+Return
+
+:?:/Сахар_1::
+    SendKPRPMZ(94)
+Return
+:?:/Сахар_2::
+    SendKPRPMZ(95)
+Return
+:?:/Сахар_3::
+    SendKPRPMZ(96)
+Return
+:?:/Сахар_4::
+    SendKPRPMZ(97)
+Return
+
+:?:/Сколиоз_1::
+    SendKPRPMZ(98)
+Return
+
+:?:/Сколиоз_2::
+    SendKPRPMZ(99)
+Return
+
+:?:/Сколиоз_3::
+    SendKPRPMZ(100)
+Return
+
+
+:?:/КТГ_1::
+    SendKPRPMZ(101)
+Return
+
+:?:/КТГ_2::
+    SendKPRPMZ(102)
+Return
+:?:/КТГ_3::
+    SendKPRPMZ(103)
+Return
+
+:?:/КТГ_4::
+    SendKPRPMZ(104)
+Return
+
+:?:/КТГ_5::
+    SendKPRPMZ(105)
+Return
+
+:?:/Берм_1::
+    SendKPRPMZ(106)
+Return
+
+:?:/Берм_2::
+    SendKPRPMZ(107)
+Return
+
+:?:/Берм_3::
+    SendKPRPMZ(108)
+Return
+
+:?:/Берм_4::
+    SendKPRPMZ(109)
+Return
+
+:?:/Берм_5::
+    SendKPRPMZ(110)
+Return
+
+:?:/ЛЛ_1::
+    SendKPRPMZ(111)
+Return
+
+:?:/ЛЛ_2::
+    SendKPRPMZ(112)
+Return
 
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
 
-
-; ================================
-; Функция отправки шаблонов ВМС
-; num - номер шаблона (29–30)
-; ================================
-SendVMS(num) {
-    ; Глобальные переменные, которые будут использоваться внутри функции
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ29, KPRPMZ30
-
-    ; ================================
-    ; Создаем массив с путями к шаблонам
-    ; Индексы 29–30 соответствуют конкретным файлам шаблонов
-    ; ================================
-    fileVars := []
-    fileVars[29] := KPRPMZ29
-    fileVars[30] := KPRPMZ30
-
-    ; Проверяем, существует ли шаблон с таким номером
-    if (!fileVars[num])
-        return  ; если шаблона нет, выходим из функции
-
-    ; ================================
-    ; Подготовка к отправке данных
-    ; ================================
-    Sleep 150           ; небольшая пауза перед вводом
-    SendPlay {Enter}    ; отправляем Enter, чтобы активировать поле ввода
-    FileEncoding, UTF-8-RAW   ; установка кодировки файлов
-
-    ; Получаем приветствие или переменную Var
-    Var := Greeting()
-
-    ; ================================
-    ; Чтение файла шаблона построчно
-    ; ================================
-    Loop, read, % fileVars[num]  ; читаем строки из файла
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%  ; разбиваем строку по табуляции
-        {
-            line := A_LoopField  ; текущая подстрока
-
-            ; ================================
-            ; Подстановка переменных в строку
-            ; ================================
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-
-           %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-        }
-    }
-}
-
-
-:?:/ВМС_1::
-    SendVMS(29)  ; вызываем шаблон 29
-Return
-
-:?:/ВМС_2::
-    SendVMS(30)  ; вызываем шаблон 30
-Return
-
-
-
-:?:/Желудок::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ31%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-:?:/Пуля::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ32%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-
-:?:/Шприц::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ33%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-; ================================
-; Функция отправки шаблонов цистоскопии
-; num - номер шаблона (34–37)
-; ================================
-SendCystoscope(num) {
-    ; Глобальные переменные, которые будут использоваться внутри функции
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ34, KPRPMZ35, KPRPMZ36, KPRPMZ37
-
-    ; ================================
-    ; Создаем массив с путями к шаблонам
-    ; Индексы 34–37 соответствуют конкретным файлам шаблонов
-    ; ================================
-    fileVars := []
-    fileVars[34] := KPRPMZ34
-    fileVars[35] := KPRPMZ35
-    fileVars[36] := KPRPMZ36
-    fileVars[37] := KPRPMZ37
-
-    ; Проверяем, существует ли шаблон с таким номером
-    if (!fileVars[num])
-        return  ; если шаблона нет, выходим из функции
-
-    ; ================================
-    ; Подготовка к отправке данных
-    ; ================================
-    Sleep 150           ; небольшая пауза перед вводом
-    SendPlay {Enter}    ; отправляем Enter, чтобы активировать поле ввода
-    FileEncoding, UTF-8-RAW   ; установка кодировки файлов 
-
-    ; Получаем приветствие или переменную Var
-    Var := Greeting()
-
-    ; ================================
-    ; Чтение файла шаблона построчно
-    ; ================================
-    Loop, read, % fileVars[num]  ; читаем строки из файла
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%  ; разбиваем строку по табуляции
-        {
-            line := A_LoopField  ; текущая подстрока
-
-            ; ================================
-            ; Подстановка переменных в строку
-            ; ================================
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-			
-            %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-        }
-    }
-}
-
-:?:/Цистоскоп_1::
-    SendCystoscope(34)  ; вызываем шаблон 34
-Return
-
-:?:/Цистоскоп_2::
-    SendCystoscope(35)  ; вызываем шаблон 35
-Return
-
-:?:/Цистоскоп_3::
-    SendCystoscope(36)  ; вызываем шаблон 36
-Return
-
-:?:/Цистоскоп_4::
-    SendCystoscope(37)  ; вызываем шаблон 37
-Return
-
-
-
-:?:/Вакцинация::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPMZ38%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%Name%", Name)
-        line := StrReplace(line, "%Surname%", Surname)
-		line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-        line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-        line := StrReplace(line, "%JWI%", JWI)
-        line := StrReplace(line, "%TAG%", TAG)
-        line := StrReplace(line, "%Middle_Name%", Middle_Name)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-		line := StrReplace(line, "%stol%", stol)
-		
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
-Return
-
-
-SendZreniya(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ39, KPRPMZ40, KPRPMZ41, KPRPMZ42, KPRPMZ43, KPRPMZ44, KPRPMZ45, KPRPMZ46, KPRPMZ47
-
-    files := []
-    files[1] := KPRPMZ39
-    files[2] := KPRPMZ40
-    files[3] := KPRPMZ41
-    files[4] := KPRPMZ42
-    files[5] := KPRPMZ43
-    files[6] := KPRPMZ44
-    files[7] := KPRPMZ45
-    files[8] := KPRPMZ46
-    files[9] := KPRPMZ47
-
-    if (!files[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-    Var := Greeting()
-
-    Loop, read, % files[num] 
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            
-            %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-        }
-    }
-}
-
-:?:/Зрения_1::
-    SendZreniya(1)
-Return
-:?:/Зрения_2::
-    SendZreniya(2)
-Return
-:?:/Зрения_3::
-    SendZreniya(3)
-Return
-:?:/Зрения_4::
-    SendZreniya(4)
-Return
-:?:/Зрения_5::
-    SendZreniya(5)
-Return
-:?:/Зрения_6::
-    SendZreniya(6)
-Return
-:?:/Зрения_7::
-    SendZreniya(7)
-Return
-:?:/Зрения_8::
-    SendZreniya(8)
-Return
-:?:/Зрения_9::
-    SendZreniya(9)
-Return
-
-SendVshi(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ48, KPRPMZ49, KPRPMZ50, KPRPMZ51
-
-    fileVars := []
-    fileVars[48] := KPRPMZ48
-    fileVars[49] := KPRPMZ49
-    fileVars[50] := KPRPMZ50
-    fileVars[51] := KPRPMZ51
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Вши_1::
-    SendVshi(48)
-Return
-:?:/Вши_2::
-    SendVshi(49)
-Return
-:?:/Вши_3::
-    SendVshi(50)
-Return
-:?:/Вши_4::
-    SendVshi(51)
-Return
-
-
-SendFlyushka(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ52, KPRPMZ53, KPRPMZ54, KPRPMZ55, KPRPMZ56
-
-    fileVars := []
-    fileVars[52] := KPRPMZ52
-    fileVars[53] := KPRPMZ53
-    fileVars[54] := KPRPMZ54
-    fileVars[55] := KPRPMZ55
-    fileVars[56] := KPRPMZ56
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Флюшка_1::
-    SendFlyushka(52)
-Return
-:?:/Флюшка_2::
-    SendFlyushka(53)
-Return
-:?:/Флюшка_3::
-    SendFlyushka(54)
-Return
-:?:/Флюшка_4::
-    SendFlyushka(55)
-Return
-:?:/Флюшка_5::
-    SendFlyushka(56)
-Return
-
-SendTemperatura(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ57, KPRPMZ58, KPRPMZ59, KPRPMZ60
-
-    fileVars := []
-    fileVars[57] := KPRPMZ57
-    fileVars[58] := KPRPMZ58
-    fileVars[59] := KPRPMZ59
-    fileVars[60] := KPRPMZ60
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Температура_1::
-    SendTemperatura(57)
-Return
-:?:/Температура_2::
-    SendTemperatura(58)
-Return
-:?:/Температура_3::
-    SendTemperatura(59)
-Return
-:?:/Температура_4::
-    SendTemperatura(60)
-Return
-
-
-SendMammograf(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ61, KPRPMZ62, KPRPMZ63, KPRPMZ64
-
-    fileVars := []
-    fileVars[61] := KPRPMZ61
-    fileVars[62] := KPRPMZ62
-    fileVars[63] := KPRPMZ63
-    fileVars[64] := KPRPMZ64
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Маммограф_1::
-    SendMammograf(61)
-Return
-:?:/Маммограф_2::
-    SendMammograf(62)
-Return
-:?:/Маммограф_3::
-    SendMammograf(63)
-Return
-:?:/Маммограф_4::
-    SendMammograf(64)
-Return
-
-SendPribor(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ65, KPRPMZ66, KPRPMZ67, KPRPMZ68
-
-    fileVars := []
-    fileVars[65] := KPRPMZ65
-    fileVars[66] := KPRPMZ66
-    fileVars[67] := KPRPMZ67
-    fileVars[68] := KPRPMZ68
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Прибор_1::
-    SendPribor(65)
-Return
-:?:/Прибор_2::
-    SendPribor(66)
-Return
-:?:/Прибор_3::
-    SendPribor(67)
-Return
-:?:/Прибор_4::
-    SendPribor(68)
-Return
-
-
-
-SendGlisty(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ69, KPRPMZ70, KPRPMZ71, KPRPMZ72
-
-    fileVars := []
-    fileVars[69] := KPRPMZ69
-    fileVars[70] := KPRPMZ70
-    fileVars[71] := KPRPMZ71
-    fileVars[72] := KPRPMZ72
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Глисты_1::
-    SendGlisty(69)
-Return
-:?:/Глисты_2::
-    SendGlisty(70)
-Return
-:?:/Глисты_3::
-    SendGlisty(71)
-Return
-:?:/Глисты_4::
-    SendGlisty(72)
-Return
-
-
-SendEKG(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ73, KPRPMZ74, KPRPMZ75, KPRPMZ76
-
-    fileVars := []
-    fileVars[73] := KPRPMZ73
-    fileVars[74] := KPRPMZ74
-    fileVars[75] := KPRPMZ75
-    fileVars[76] := KPRPMZ76
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/ЭКГ_1::
-    SendEKG(73)
-Return
-:?:/ЭКГ_2::
-    SendEKG(74)
-Return
-:?:/ЭКГ_3::
-    SendEKG(75)
-Return
-:?:/ЭКГ_4::
-    SendEKG(76)
-Return
-
-
-SendGynec(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ77, KPRPMZ78, KPRPMZ79, KPRPMZ80, KPRPMZ81
-
-    fileVars := []
-    fileVars[77] := KPRPMZ77
-    fileVars[78] := KPRPMZ78
-    fileVars[79] := KPRPMZ79
-    fileVars[80] := KPRPMZ80
-    fileVars[81] := KPRPMZ81
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Гинек_1::
-    SendGynec(77)
-Return
-:?:/Гинек_2::
-    SendGynec(78)
-Return
-:?:/Гинек_3::
-    SendGynec(79)
-Return
-:?:/Гинек_4::
-    SendGynec(80)
-Return
-:?:/Гинек_5::
-    SendGynec(81)
-Return
-
-SendMatka(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ82, KPRPMZ83
-
-    fileVars := []
-    fileVars[82] := KPRPMZ82
-    fileVars[83] := KPRPMZ83
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Матка_1::
-    SendMatka(82)
-Return
-:?:/Матка_2::
-    SendMatka(83)
-Return
-
-
-SendChuvstva(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ84, KPRPMZ85, KPRPMZ86, KPRPMZ87, KPRPMZ88, KPRPMZ89, KPRPMZ90
-
-    files := []
-    files[0] := KPRPMZ84
-    files[1] := KPRPMZ85
-    files[2] := KPRPMZ86
-    files[3] := KPRPMZ87
-    files[4] := KPRPMZ88
-    files[5] := KPRPMZ89
-    files[6] := KPRPMZ90
-
-    if (!files[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % files[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-
-:?:/Чувства_0::
-    SendChuvstva(0)
-Return
-:?:/Чувства_1::
-    SendChuvstva(1)
-Return
-:?:/Чувства_2::
-    SendChuvstva(2)
-Return
-:?:/Чувства_3::
-    SendChuvstva(3)
-Return
-:?:/Чувства_4::
-    SendChuvstva(4)
-Return
-:?:/Чувства_5::
-    SendChuvstva(5)
-Return
-:?:/Чувства_6::
-    SendChuvstva(6)
-Return
-
-
-SendPalets(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ91, KPRPMZ92, KPRPMZ93
-
-    fileVars := []
-    fileVars[91] := KPRPMZ91
-    fileVars[92] := KPRPMZ92
-	fileVars[93] := KPRPMZ93
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Палец_1::
-    SendPalets(91)
-Return
-:?:/Палец_2::
-    SendPalets(92)
-Return
-:?:/Палец_3::
-    SendPalets(93)
-Return
-
-SendSugar(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ94, KPRPMZ95, KPRPMZ96, KPRPMZ97
-
-    fileVars := []
-    fileVars[94] := KPRPMZ94
-    fileVars[95] := KPRPMZ95
-	fileVars[96] := KPRPMZ96
-	fileVars[97] := KPRPMZ97
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-:?:/Сахар_1::
-    SendSugar(94)
-Return
-:?:/Сахар_2::
-    SendSugar(95)
-Return
-:?:/Сахар_3::
-    SendSugar(96)
-Return
-:?:/Сахар_4::
-    SendSugar(97)
-Return
-
-
-SendScoliosis(num) {
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    global KPRPMZ98, KPRPMZ99, KPRPMZ96, KPRPMZ100
-
-    fileVars := []
-    fileVars[98] := KPRPMZ98
-    fileVars[99] := KPRPMZ99
-	fileVars[100] := KPRPMZ100
-
-
-    if (!fileVars[num])
-        return
-
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-
-    Var := Greeting()
-
-    Loop, read, % fileVars[num]
-    {
-        Loop, parse, A_LoopReadLine, %A_Tab%
-        {
-            line := A_LoopField
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-            %vybor%(line, "  " . zaderzhka . " ")
-        }
-    }
-}
-
-
-:?:/Сколиоз_1::
-    SendScoliosis(98)
-Return
-
-:?:/Сколиоз_2::
-    SendScoliosis(99)
-Return
-
-:?:/Сколиоз_3::
-    SendScoliosis(100)
-Return
-
-
-
-
-
-
-:?:/Лек_1::
-SendPlay {Enter}
-%vybor%("say На что жалуетесь?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_2::
-SendPlay {Enter}
-%vybor%("say Есть ли у Вас предшествующие заболевания?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_3::
-SendPlay {Enter}
-%vybor%("say Имеются ли у Вас аллергические реакции?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_4::
-SendPlay {Enter}
-%vybor%("say Принимаете ли Вы лекарственные препараты?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_5::
-SendPlay {Enter}
-%vybor%("say Имеете алкогольную или наркотическую зависимость?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_6::
-SendPlay {Enter}
-%vybor%("say Какой Вы ведёте образ жизни?", "  " zaderzhka " ")
-Return
-
-:?:/Лек_7::
-SendPlay {Enter}
-%vybor%("say Есть ли у Вас наследственные заболевания?", "  " zaderzhka " ")
-Return
-
-
-:?:/Аптека::
-SendPlay {Enter}
-%vybor%("say Гражданин мы не выдаем таблетки, мы выписываем рецепты на приобретение определенных. ", "  " zaderzhka " ")
-%vybor%("say Если вас что-то беспокоит, пройдите в стационар и ожидайте свободного врача. ", "  " zaderzhka " ")
-%vybor%("say Так-же таблетки или другие лекарственные препараты приобретаются только в aптеках всех городов Республики Провинции.", "  " zaderzhka " ")
-Return
 
 
 :?:/Форма::
@@ -2006,8 +1228,6 @@ SendPlay {Enter}
 %vybor%("me взял" floor " из мед.сумки повязку и наложил" floor " её на челюсть   ", "  " zaderzhka " ")
 %vybor%("say Согласны на госпитализацию?   ", "  " zaderzhka " ")
 Return
-
-
 
 
 :?:/УЗИ::
@@ -4884,122 +4104,7 @@ SendPlay {Enter}
 %vybor%("say На снимках были обнаружены отклонения.", "  " zaderzhka " ")
 Return
 
-:?:/КТГ_1::
-SendPlay {Enter}
-%vybor%("say Здравствуйте, снимайте с себя одежду и ложитесь на кушетку.", "  " zaderzhka " ")
-%vybor%("do КТГ стоит у стены.", "  " zaderzhka " ")
-Return
 
-:?:/КТГ_2::
-SendPlay {Enter}
-%vybor%("do Пояс на аппарате.", "  " zaderzhka " ")
-%vybor%("me взял" floor " пояс и прикрепил" floor " его к животу пациентки", "  " zaderzhka " ")
-%vybor%("me взял" floor " датчик и прикрепил" floor " его к поясу", "  " zaderzhka " ")
-%vybor%("do КТГ готов к использованию.", "  " zaderzhka " ")
-%vybor%("me запустил" floor " прибор", "  " zaderzhka " ")
-%vybor%("do Электрокардиограф записывает график КТГ.", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на монитор", "  " zaderzhka " ")
-%vybor%("me взял" floor " датчик и передал" floor " его пациентки", "  " zaderzhka " ")
-%vybor%("say Когда вы услышите любое движение ребенка, нажмите кнопку на датчике.", "  " zaderzhka " ")
-Return
-:?:/КТГ_3::
-SendPlay {Enter}
-%vybor%("me взглянул" floor " на монитор ", "  " zaderzhka " ")
-%vybor%("me остановил" floor " запись и выключил прибор", "  " zaderzhka " ")
-%vybor%("me снял" floor " пояс с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-%vybor%("me снял" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-%vybor%("me забрал" floor " датчик с живота пациентки и положил" floor " на стол", "  " zaderzhka " ")
-%vybor%("me изучил" floor " график и поставил" floor " диагноз", "  " zaderzhka " ")
-%vybor%("do Обнаружено ли кислородное голодание у плода?", "  " zaderzhka " ")
-Return
-
-:?:/КТГ_4::
-SendPlay {Enter}
-%vybor%("say У плода кислородное голодание.", "  " zaderzhka " ")
-%vybor%("say Приходите через день", "  " zaderzhka " ")
-Return
-
-:?:/КТГ_5::
-SendPlay {Enter}
-%vybor%("say Не волнуйтесь, все в порядке.", "  " zaderzhka " ")
-%vybor%("say Приходите через 10 дней.", "  " zaderzhka " ")
-Return
-
-:?:/Берм_1::
-SendPlay {Enter}
-%vybor%("do На столе лежит баночка.", "  " zaderzhka " ")
-%vybor%("me взял" floor " баночку в руку", "  " zaderzhka " ")
-%vybor%("me передал" floor " баночку человеку напротив", "  " zaderzhka " ")
-%vybor%("say Возьмите, вам в неё нужно будет пописать.", "  " zaderzhka " ")
-Return
-
-:?:/Берм_2::
-SendPlay {Enter}
-%vybor%("do На столе лежит полоска с тестом.", "  " zaderzhka " ")
-%vybor%("me взял" floor " тест в руку", "  " zaderzhka " ")
-%vybor%("me передал" floor " тест человеку напротив", "  " zaderzhka " ")
-%vybor%("say После того, как вы пописали в баночку,", "  " zaderzhka " ")
-%vybor%("say Окуните полоску, стрелочкой вниз.", "  " zaderzhka " ")
-Return
-
-:?:/Берм_3::
-SendPlay {Enter}
-%vybor%("Так. Давайте сюда ваш тестик.", "  " zaderzhka " ")
-%vybor%("me взял" floor " тест в руку", "  " zaderzhka " ")
-%vybor%("me посмотрел" floor " на тест", "  " zaderzhka " ")
-%vybor%("do На тесте есть 2 полоски?", "  " zaderzhka " ")
-Return
-
-:?:/Берм_4::
-SendPlay {Enter}
-%vybor%("say Вы беременны.    ", "  " zaderzhka " ")
-Return
-
-:?:/Берм_5::
-SendPlay {Enter}
-%vybor%("say Вы не беременны. ", "  " zaderzhka " ")
-Return
-:?:/ЛЛ_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
-Return
-
-:?:/ЛЛ_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " со стола шприц", "  " zaderzhka " ")
-%vybor%("me наполнил" floor " шприц жидкостью для местной анестезии", "  " zaderzhka " ")
-%vybor%("me сделал" floor " укол ниже пупка", "  " zaderzhka " ")
-%vybor%("do Анестезия введена.", "  " zaderzhka " ")
-%vybor%("me положил" floor " шприц на стол", "  " zaderzhka " ")
-%vybor%("me взял" floor " маркер", "  " zaderzhka " ")
-%vybor%("me отметил" floor " место надреза", "  " zaderzhka " ")
-%vybor%("me положил" floor " маркер на стол", "  " zaderzhka " ")
-%vybor%("do Маркер на столе.", "  " zaderzhka " ")
-%vybor%("me взял" floor " скальпель в руку", "  " zaderzhka " ")
-%vybor%("me сделал" floor " небольшой надрез до одного милиметра", "  " zaderzhka " ")
-%vybor%("do Надрез сделан.", "  " zaderzhka " ")
-%vybor%("me положил" floor " скальпель на стол", "  " zaderzhka " ")
-%vybor%("me взял" floor " в руку ствол аппарата для лазерной лепасакции", "  " zaderzhka " ")
-%vybor%("me ввёл" floor " трубку аппарата в надрез", "  " zaderzhka " ")
-%vybor%("me включил" floor " аппарат", "  " zaderzhka " ")
-%vybor%("do Аппарат закончил топить жир и отсасывать его.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " трубку аппарата из надреза", "  " zaderzhka " ")
-%vybor%("me выключил" floor " аппарат", "  " zaderzhka " ")
-%vybor%("me положил ствол аппарата на стол", "  " zaderzhka " ")
-%vybor%("do Пластырь в руке.", "  " zaderzhka " ")
-%vybor%("me заклеял" floor " разрез пластырем", "  " zaderzhka " ")
-%vybor%("me взял" floor " бандаж со стола", "  " zaderzhka " ")
-%vybor%("me надел" floor " бандаж на человека напротив", "  " zaderzhka " ")
-Return
 
 :?:/УВТ_1::
 SendPlay {Enter}
@@ -10499,61 +9604,99 @@ Return
 
 Medicine121:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h140 w320,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /КТГ_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /КТГ_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /КТГ_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /КТГ_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /КТГ_5
-
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /КТГ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /КТГ_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /КТГ_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /КТГ_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /КТГ_5
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [КТГ]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [КТГ]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [КТГ]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [КТГ ответ да]
-Gui, 3:Add, Text, x100 y95 h500 w370 +BackgroundTrans, [КТГ ответ нет]
-Gui, 3:show, center h140 w320, КТГ плода
+Gui, 3:Add, Text, x105 y25 h500 w370 +BackgroundTrans, [КТГ]
+Gui, 3:Add, Text, x105 y75 h500 w370 +BackgroundTrans, [КТГ]
+Gui, 3:Add, Text, x105 y125 h500 w370 +BackgroundTrans, [КТГ]
+Gui, 3:Add, Text, x105 y175 h500 w370 +BackgroundTrans, [КТГ ответ да]
+Gui, 3:Add, Text, x105 y225 h200 w320 +BackgroundTrans, [КТГ ответ нет]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ101,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ101,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ102,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ102,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ103,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ103,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ104,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ104,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ105,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ105,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h280 w540, КТГ плода
+
+
 Return
 
 ;--------------------------------------------------------------------------------
 
 Medicine122:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h140 w370,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Берм_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Берм_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Берм_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Берм_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /Берм_5
-
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /Берм_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Берм_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /Берм_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /Берм_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /Берм_5
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Тест беременность]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Тест беременность]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [Тест беременность]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Тест беременность ответ да]
-Gui, 3:Add, Text, x100 y95 h500 w370 +BackgroundTrans, [Тест беременность ответ нет]
-Gui, 3:show, center h140 w370, Тест беременность
+Gui, 3:Add, Text, x105 y25 h500 w370 +BackgroundTrans, [Тест беременность]
+Gui, 3:Add, Text, x105 y75 h500 w370 +BackgroundTrans, [Тест беременность]
+Gui, 3:Add, Text, x105 y125 h500 w370 +BackgroundTrans, [Тест беременность]
+Gui, 3:Add, Text, x105 y175 h500 w370 +BackgroundTrans, [Тест беременность ответ да]
+Gui, 3:Add, Text, x105 y225 h200 w320 +BackgroundTrans, [Тест беременность ответ да]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ106,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ106,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ107,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ107,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ108,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ108,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ109,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ109,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ110,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ110,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h280 w540, Тест беременность
 Return
 
 ;--------------------------------------------------------------------------------
 
 Medicine123:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /ЛЛ_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /ЛЛ_2
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /ЛЛ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /ЛЛ_2
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Лазерная липосакция]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Лазерная липосакция]
+Gui, 3:Add, Text, x105 y25 h500 w370 +BackgroundTrans, [Лазерная липосакция]
+Gui, 3:Add, Text, x105 y75 h500 w370 +BackgroundTrans, [Лазерная липосакция]
 
-Gui, 3:show, center h80 w350, Лазерная липосакция
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ106,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ106,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ107,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ107,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h120 w540,  Лазерная липосакция
 Return
+
+
+
 
 
 ;--------------------------------------------------------------------------------
