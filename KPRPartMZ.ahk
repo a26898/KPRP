@@ -1588,9 +1588,27 @@ Return
   SendKPRPMZ(250)
 Return
 
+:?:/Донор_1::
+  SendKPRPMZ(251)
+Return
+
+:?:/Донор_2::
+  SendKPRPMZ(252)
+Return
+
+:?:/Донор_3::
+  SendKPRPMZ(253)
+Return
+
+:?:/Донор_4::
+  SendKPRPMZ(254)
+Return
+
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
+
+
 
 
 
@@ -1644,7 +1662,6 @@ SendPlay {Enter}
 %vybor%("me достал" floor " мокрую швабру из ведра ", "  " zaderzhka " ")
 %vybor%("me отжал" floor " швабру в ведро  ", "  " zaderzhka " ")
 Return
-
 
 
 :?:/ПХД_2::
@@ -3097,8 +3114,6 @@ SendPlay {Enter}
 %vybor%("do Что показал пульсоксиметр? ", "  " zaderzhka " ")
 Return
 
-
-
 :?:/Миостимулятор_1::
 SendPlay {Enter}
 %vybor%("do В шкафу лежит миостимулятор.", "  " zaderzhka " ")
@@ -3122,56 +3137,6 @@ SendPlay {Enter}
 %vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
 Return
 
-
-:?:/Донор_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-Return
-
-
-:?:/Донор_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " донора за руку ", "  " zaderzhka " ")
-%vybor%("me взял" floor " клеенчатый валик ", "  " zaderzhka " ")
-%vybor%("me подложил" floor " клеёнчатый валик под локоть донора", "  " zaderzhka " ")
-%vybor%("me зафиксировал" floor " руку донора ладонью кверху ", "  " zaderzhka " ")
-%vybor%("me взял" floor " пробирку и иглу с переходником с мед.лотка ", "  " zaderzhka " ")
-%vybor%("me присоеденил" floor " пробирку к игле ", "  " zaderzhka " ")
-%vybor%("me положил" floor " собранную систему в мед.лоток ", "  " zaderzhka " ")
-%vybor%("me взял" floor " жгут и спиртовую салфетку с мед.лотка ", "  " zaderzhka " ")
-%vybor%("me обработал" floor " спиртовой салфеткой область локтевого сгиба на руке донора", "  " zaderzhka " ")
-%vybor%("me затянул" floor " жгут на плече донора", "  " zaderzhka " ")
-%vybor%("say Сожмите, пожалуйста кулак.", "  " zaderzhka " ")
-Return
-
-:?:/Донор_3::
-SendPlay {Enter}
-%vybor%("me взял" floor " из мед.лотка собранную систему", "  " zaderzhka " ")
-%vybor%("me ввел" floor " иглу в вену", "  " zaderzhka " ")
-%vybor%("me снял" floor " жгут с плеча донора", "  " zaderzhka " ")
-%vybor%("say Можете разжать руку", "  " zaderzhka " ")
-Return
-
-
-:?:/Донор_4::
-SendPlay {Enter}
-%vybor%("me медленно оттянул" floor " поршень шприца вверх ", "  " zaderzhka " ")
-%vybor%("do Пробирка наполнилась кровью.", "  " zaderzhka " ")
-%vybor%("me приложил" floor " спиртовую салфетку к месту прокола ", "  " zaderzhka " ")
-%vybor%("me ввел" floor " иглу из вены ", "  " zaderzhka " ")
-%vybor%("me отсоеденил" floor " пробирку от иглы ", "  " zaderzhka " ")
-%vybor%("me поместил" floor " пробирку в держатель для пробирок ", "  " zaderzhka " ")
-%vybor%("me положил" floor " использованную иглу в мед.лоток ", "  " zaderzhka " ")
-%vybor%("say Спасибо за донорство. ", "  " zaderzhka " ")
-Return
 
 :?:/Инфаркт_1::
 SendPlay {Enter}
@@ -8807,20 +8772,33 @@ Return
 
 Medicine104:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Донор_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Донор_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Донор_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Донор_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Донор_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Донор_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Донор_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Донор_4
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Донор крови]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Донор крови]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Донор крови]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Донор крови]
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Донор крови]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Донор крови]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Донор крови]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Донор крови]
 
-Gui, 3:show, center h120 w380, Донор крови
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ251,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ251,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ252,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ252,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ253,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ253,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ254,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ254,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Донор крови
 Return
 
 
