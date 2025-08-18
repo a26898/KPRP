@@ -1171,15 +1171,15 @@ Return
   SendKPRPMZ(146)
 Return
 
-:?:/Дифтерияе_1::
+:?:/Дифтерия_1::
   SendKPRPMZ(147)
 Return
 
-:?:/Дифтерияе_2::
+:?:/Дифтерия_2::
   SendKPRPMZ(148)
 Return
 
-:?:/Дифтерияе_3::
+:?:/Дифтерия_3::
   SendKPRPMZ(149)
 Return
 
@@ -1411,12 +1411,186 @@ Return
   SendKPRPMZ(206)
 Return
 
+:?:/Клизма_1::
+  SendKPRPMZ(207)
+Return
+
+:?:/Клизма_2::
+  SendKPRPMZ(208)
+Return
+
+:?:/Соринка_1::
+  SendKPRPMZ(209)
+Return
+
+:?:/Соринка_2::
+  SendKPRPMZ(210)
+Return
+
+:?:/Соринка_3::
+  SendKPRPMZ(211)
+Return
+
+:?:/Заноза_1::
+  SendKPRPMZ(212)
+Return
+
+:?:/Заноза_2::
+  SendKPRPMZ(213)
+Return
+
+:?:/Гвоздь_1::
+  SendKPRPMZ(214)
+Return
+
+:?:/Гвоздь_2::
+  SendKPRPMZ(215)
+Return
+
+:?:/Мозоль_1::
+  SendKPRPMZ(216)
+Return
+
+:?:/Мозоль_2::
+  SendKPRPMZ(217)
+Return
+
+:?:/Бородавка_1::
+  SendKPRPMZ(218)
+Return
+
+:?:/Бородавка_2::
+  SendKPRPMZ(219)
+Return
+
+:?:/Пчела_1::
+  SendKPRPMZ(220)
+Return
+
+:?:/Пчела_2::
+  SendKPRPMZ(221)
+Return
+
+:?:/Тату_1::
+  SendKPRPMZ(222)
+Return
+
+:?:/Тату_2::
+  SendKPRPMZ(223)
+Return
+
+:?:/Тату_3::
+  SendKPRPMZ(224)
+Return
+
+:?:/Змея_1::
+  SendKPRPMZ(225)
+Return
+
+:?:/Змея_2::
+SendPlay {Enter}
+  SendKPRPMZ(226)
+Return
+
+:?:/Бешенство_1::
+  SendKPRPMZ(227)
+Return
+
+:?:/Бешенство_2::
+  SendKPRPMZ(228)
+Return
+
+:?:/Бешенство_3::
+  SendKPRPMZ(229)
+Return
+
+:?:/Бешенство_4::
+  SendKPRPMZ(230)
+Return
+
+:?:/Мудрости_1::
+  SendKPRPMZ(231)
+Return
+
+:?:/Мудрости_2::
+  SendKPRPMZ(232)
+Return
+
+:?:/Мудрости_3::
+  SendKPRPMZ(233)
+Return
+
+:?:/Мудрости_4::
+  SendKPRPMZ(234)
+Return
+
+:?:/Кариес_1::
+  SendKPRPMZ(235)
+Return
+
+:?:/Кариес_2::
+  SendKPRPMZ(236)
+Return
+
+:?:/Кариес_3::
+  SendKPRPMZ(237)
+Return
+
+:?:/Молочный_1::
+  SendKPRPMZ(238)
+Return
+
+:?:/Молочный_2::
+  SendKPRPMZ(239)
+Return
+
+:?:/Шейка_1::
+  SendKPRPMZ(240)
+Return
+
+:?:/Шейка_2::
+  SendKPRPMZ(241)
+Return
+
+:?:/Шейка_3::
+  SendKPRPMZ(242)
+Return
+
+:?:/Шейка_4::
+  SendKPRPMZ(243)
+Return
+
+:?:/Шейка_5::
+  SendKPRPMZ(244)
+Return
+
+:?:/ЭндоУЗИ_1::
+  SendKPRPMZ(245)
+Return
+
+:?:/ЭндоУЗИ_2::
+  SendKPRPMZ(246)
+Return
+
+:?:/ЭндоУЗИ_3::
+  SendKPRPMZ(247)
+Return
+
+:?:/М>Ж::
+  SendKPRPMZ(248)
+Return
+
+:?:/Ж>М::
+  SendKPRPMZ(249)
+Return
+
+:?:/Ингалятор::
+  SendKPRPMZ(250)
+Return
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
-
-
 
 
 
@@ -1534,7 +1708,6 @@ SendPlay {Enter}
 Return
 
 
-
 :?:/Нож::
 SendPlay {Enter}
 %vybor%("do На столе лежат все необходимые инструменты для обработки раны.  ", "  " zaderzhka " ")
@@ -1577,7 +1750,6 @@ SendPlay {Enter}
 %vybor%("me снял" floor " маску с пациента ", "  " zaderzhka " ")
 %vybor%("say тдыхайте и соблюдайте диету. Всего доброго. ", "  " zaderzhka " ")
 Return
-
 
 
 :?:/Челюсти_ПМП::
@@ -1630,36 +1802,6 @@ SendPlay {Enter}
 %vybor%("me снял" floor " маску с пациента ", "  " zaderzhka " ")
 %vybor%("say Операция завершена. Отдыхайте, все будет хорошо. ", "  " zaderzhka " ")
 Return
-
-
-:?:/Клизма_1::
-SendPlay {Enter}
-%vybor%("do В шкафу необходимые вещи. ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " шкаф   ", "  " zaderzhka " ")
-%vybor%("me взял" floor " одноразовую пелёнку  ", "  " zaderzhka " ")
-%vybor%("me постелил" floor " пелёнку на койку ", "  " zaderzhka " ")
-%vybor%("say Снимите всю нижнюю одежду.  ", "  " zaderzhka " ")
-%vybor%("say Ложитесь на левый бок, согните ноги.  ", "  " zaderzhka " ")
-Return
-
-:?:/Клизма_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " клизму ", "  " zaderzhka " ")
-%vybor%("do В стеллаже баночка с раствором Энема клин. ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " стеллаж   ", "  " zaderzhka " ")
-%vybor%("me взял" floor " баночку раствором   ", "  " zaderzhka " ")
-%vybor%("me открыв баночку, аккуратно ввёл" floor " раствор в клизму   ", "  " zaderzhka " ")
-%vybor%("me поставил" floor " баночку с оставшимся раствором в стеллаж   ", "  " zaderzhka " ")
-%vybor%("me закрыл" floor " стеллаж   ", "  " zaderzhka " ")
-%vybor%("me взял" floor " вазелиновое масло из шкафа   ", "  " zaderzhka " ")
-%vybor%("me закрыл" floor " шкаф   ", "  " zaderzhka " ")
-%vybor%("me смазал" floor " конец трубки клизмы вазелиновым маслом  ", "  " zaderzhka " ")
-%vybor%("me осторожно вводит трубку в задний проход пациента   ", "  " zaderzhka " ")
-%vybor%("me начал" floor " водить раствор в пациента   ", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " трубку из заднего прохода    ", "  " zaderzhka " ")
-%vybor%("say Садитесь на туалет и ожидайте выхода каловых масс. ", "  " zaderzhka " ")
-Return
-
 
 
 :?:/Нога_1::
@@ -1745,8 +1887,6 @@ SendPlay {Enter}
 %vybor%("me снял" floor " перчатки с рук, затем выкинул" floor " их в урну", "  " zaderzhka " ")
 Return
 
-
-
 :?:/Капельница::
 SendPlay {Enter}
 %vybor%("do На столе лежат ватка, Хлоргексидин, упакованный катетер и пакеты с препаратом.", "  " zaderzhka " ")
@@ -1797,7 +1937,6 @@ SendPlay {Enter}
 %vybor%("me положил" floor "  использованную иглу в мед.лоток ", "  " zaderzhka " ")
 %vybor%("say Спасибо за донорство. ", "  " zaderzhka " ")
 Return
-
 
 
 :?:/Открытый::
@@ -2121,7 +2260,6 @@ SendPlay {Enter}
 Return
 
 
-
 :?:/АВД_1::
 SendPlay {Enter}
 %vybor%("me снял" floor " с пациента одежду ", " " zaderzhka " ")
@@ -2411,92 +2549,6 @@ SendPlay {Enter}
 %vybor%("say На этом все. Всего хорошего. ", "  " zaderzhka " ")
 Return
 
-:?:/Мудрости_1::
-SendPlay {Enter}
-%vybor%("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
-%vybor%("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
-Return
-
-:?:/Мудрости_2::
-SendPlay {Enter}
-%vybor%("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
-%vybor%("say Откройте рот. ", "  " zaderzhka " ")
-%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
-Return
-
-:?:/Мудрости_3::
-SendPlay {Enter}
-%vybor%("me взял со стола шприц с анестетиком Артекаин , после чего ввёл ее ", "  " zaderzhka " ")
-%vybor%("say Сейчас я прикоснусь к вашему зубу, а вы скажите, чувствуете ли боль ", "  " zaderzhka " ")
-%vybor%("me движением руки начал" floor " шевелить зуб ", "  " zaderzhka " ")
-%vybor%("do Пациент чувствует боль? ", "  " zaderzhka " ")
-Return
-
-:?:/Мудрости_4::
-SendPlay {Enter}
-%vybor%("me взял" floor " со стола скальпель, после чего сделал" floor " разрез десны и положил" floor " на место ", "  " zaderzhka " ")
-%vybor%("me движением правой руки взял" floor " со стола щипцы, после чего начал" floor " вытаскивать зуб ", "  " zaderzhka " ")
-%vybor%("me левой рукой взял" floor " со стола элеватор, затем освободил" floor " лунку от зуба ", "  " zaderzhka " ")
-%vybor%("do Зуб мудрости полностью удален.  ", "  " zaderzhka " ")
-%vybor%("me положил" floor " инструмент на стол, после чего взял" floor " вату и приложил к ране ", "  " zaderzhka " ")
-%vybor%("say Поздравляю, Ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
-Return
-
-:?:/Кариес_1::
-SendPlay {Enter}
-%vybor%("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
-%vybor%("say ...есть ли у вас непереносимость каких-либо медикаментов? ", "  " zaderzhka " ")
-Return
-
-:?:/Кариес_2::
-SendPlay {Enter}
-%vybor%("say Хорошо, приступим к удалению зуба мудрости. ", "  " zaderzhka " ")
-%vybor%("say Откройте рот. ", "  " zaderzhka " ")
-%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
-Return
-
-:?:/Кариес_3::
-SendPlay {Enter}
-%vybor%("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола шприц с обезболивающим, после чего вколол" floor " содержимое под десну ", "  " zaderzhka " ")
-%vybor%("do На столе лежит крышка от шприца. ", "  " zaderzhka " ")
-%vybor%("do В углу комнаты стоит урна.", "  " zaderzhka " ")
-%vybor%("me взял" floor " крышку, после чего закрыл" floor " шприц и выбросил" floor " его в урну ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола скальпель, после чего сделал" floor " небольшой разрез десны ", "  " zaderzhka " ")
-%vybor%("me положил" floor " скальпель на стол, после чего взял" floor " салфетку, вытер кровь и выбросил" floor " в урну ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола пинцет, после чего приподнял" floor " корень зуба, затем повернул" floor " его ", "  " zaderzhka " ")
-%vybor%("do Корень зуба стал свободно виден. ", "  " zaderzhka " ")
-%vybor%("me перехватив пинцет свободной рукой, начал" floor " выдавливать корень зуба ", "  " zaderzhka " ")
-%vybor%("do Зуб полностью удален. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола вату, после чего приложил" floor " на место удаленного зуба ", "  " zaderzhka " ")
-%vybor%("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение трёх часов. ", "  " zaderzhka " ")
-Return
-
-:?:/Молочный_1::
-SendPlay {Enter}
-%vybor%("say Откройте рот. ", "  " zaderzhka " ")
-%vybor%("b /me открыл(a) рот ", "  " zaderzhka " ")
-Return
-
-:?:/Молочный_2::
-SendPlay {Enter}
-%vybor%("do На хирургическом столе лежат необходимые инструменты. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола каппу, после чего вставил" floor " ее в рот пациента ", "  " zaderzhka " ")
-%vybor%("say Cейчас я нанесу обезболивающий бальзам, чтобы вы не чувствовали боли. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола тюбик с бальзамом, после чего нанес" Female " его на палец ", "  " zaderzhka " ")
-%vybor%("do Выдавленный крем виднеется на пальце. ", "  " zaderzhka " ")
-%vybor%("me закрыл" floor " тюбик, после чего положил" floor " его на стол ", "  " zaderzhka " ")
-%vybor%("me нанес" Female " крем на больной зуб ", "  " zaderzhka " ")
-%vybor%("say Приготовьтесь, сейчас будет удаление зуба. Не переживайте, это не больно. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола щипцы, после чего поднес к зубу, и круговыми движениями освободил" floor " зуб ", "  " zaderzhka " ")
-%vybor%("do Зуб успешно удален. ", "  " zaderzhka " ")
-%vybor%("do На ране пациента виднеется кровь.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола вату, предварительно смоченную антисептиком, после чего поднес" Female " к ране ", "  " zaderzhka " ")
-%vybor%("me движением правой руки выбросил" floor " зуб, после чего положил" floor " щипцы на стол в место отходов ", "  " zaderzhka " ")
-%vybor%("say Поздравляю, ваш зуб успешно удален. Теперь вам не стоит есть в течение двух часов. ", "  " zaderzhka " ")
-Return
-
 :?:/Реминерализирующая::
 SendPlay {Enter}
 %vybor%("say Чтобы придать ваш зубам обратно блеск, то мы проведем реминерализирующую терапию. ", "  " zaderzhka " ")
@@ -2512,55 +2564,6 @@ SendPlay {Enter}
 %vybor%("say Хорошо, пока можете закрывать рот. Советуем вам прийти ещё несколько раз на прием...  ", "  " zaderzhka " ")
 Return
 
-:?:/Радиация_1::
-SendPlay {Enter}
-%vybor%("do На стеллаже лежит антисептик. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " антисептик ", "  " zaderzhka " ")
-%vybor%("do Через плечо висит мед.сумка. ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " мед.сумку ", "  " zaderzhka " ")
-%vybor%("do В медицинской сумке находится вата. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " вату из мед.сумки ", "  " zaderzhka " ")
-%vybor%("me смочил" floor " вату антисептиком ", "  " zaderzhka " ")
-%vybor%("do На стеллаже лежат куски стерильных бинтов. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " кусок бинта ", "  " zaderzhka " ")
-%vybor%("me обработал" floor " место поражения антисептиком ", "  " zaderzhka " ")
-%vybor%("me наложил" floor " повязку из бинтов на пораженный участок ", "  " zaderzhka " ")
-%vybor%("do Недалеко от кушетки расположена урна. ", "  " zaderzhka " ")
-%vybor%("me выкинул" floor " вату в урну ", "  " zaderzhka " ")
-%vybor%("do В мед.сумке лежат шприцы и раствор промидола. ", "  " zaderzhka " ")
-%vybor%("me взя" floor "л шприц и раствор ", "  " zaderzhka " ")
-%vybor%("me снял" floor " колпачок со шприца и выкинул" floor " в урну ", "  " zaderzhka " ")
-%vybor%("me начал" floor " набирать раствор в шприц ", "  " zaderzhka " ")
-%vybor%("me взял" floor " кусок ваты из сумки и смочил" floor " вату антисептиком ", "  " zaderzhka " ")
-%vybor%("say Спустите штаны. ", "  " zaderzhka " ")
-%vybor%("b me снял(а) штаны ", "  " zaderzhka " ")
-Return
-
-:?:/Радиация_2::
-SendPlay {Enter}
-%vybor%("me обработал" floor " место будущего укола ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вводить препарат в мышцу ", "  " zaderzhka " ")
-%vybor%("me выкинул" floor " шприц в урну ", "  " zaderzhka " ")
-%vybor%("me прижал" floor " место укола ватой ", "  " zaderzhka " ")
-%vybor%("say Держите и одевайте штаны. ", "  " zaderzhka " ")
-%vybor%("b me держит вату и одевает штаны ", "  " zaderzhka " ")
-%vybor%("say Сейчас я вам выпишу направление. Будете к нам приходить на инфузионную терапию и обследования. ", "  " zaderzhka " ")
-%vybor%("do На стеллаже лежит стопка пустых бланков направлений. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " бланк и положил" floor " его на стол ", "  " zaderzhka " ")
-%vybor%("do На нагрудном кармане закреплена ручка. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " ручку ", "  " zaderzhka " ")
-%vybor%("say Ваша Фамилия и Имя. ", "  " zaderzhka " ")
-Return
-
-:?:/Радиация_3::
-SendPlay {Enter}
-%vybor%("me начал" floor " заполнять бланк ", "  " zaderzhka " ")
-%vybor%("me прикрепил ручку к нагрудному карману ", "  " zaderzhka " ")
-%vybor%("me взял" floor " готовый бланк ", "  " zaderzhka " ")
-%vybor%("me передал" floor " бланк ", "  " zaderzhka " ")
-%vybor%("b me взял(а) бланк ", "  " zaderzhka " ")
-%vybor%("say Держите. ", "  " zaderzhka " ")
-Return
 
 :?:/Визиографическое_1::
 SendPlay {Enter}
@@ -3061,7 +3064,6 @@ SendPlay {Enter}
 %vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
 
-
 :?:/Хранение_1::
 SendPlay {Enter}
 %vybor%("do На плече висит медицинская сумка.", "  " zaderzhka " ")
@@ -3080,7 +3082,6 @@ SendPlay {Enter}
 %vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
 
-
 :?:/Пульсоксиметр_1::
 SendPlay {Enter}
 %vybor%("me достал" floor " из мед сумки пульсоксиметр", "  " zaderzhka " ")
@@ -3096,22 +3097,7 @@ SendPlay {Enter}
 %vybor%("do Что показал пульсоксиметр? ", "  " zaderzhka " ")
 Return
 
-:?:/Ингалятор::
-SendPlay {Enter}
-%vybor%("do В шкафу ингалятор.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " шкаф ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из шкафа ингалятор", "  " zaderzhka " ")
-%vybor%("me поставил" floor " ингалятор на стол", "  " zaderzhka " ")
-%vybor%("me подключил" floor " ингалятор к сети ", "  " zaderzhka " ")
-%vybor%("me достал" floor " одноразовый шприц из шкафа ", "  " zaderzhka " ")
-%vybor%("me набрал" floor " в шприц раствор хлорид натрия ", "  " zaderzhka " ")
-%vybor%("me наполнил" floor " ингалятор из шприца", "  " zaderzhka " ")
-%vybor%("me включил" floor " ингалятор ", "  " zaderzhka " ")
-%vybor%("say Прижмите респиратор к лицу. ", "  " zaderzhka " ")
-%vybor%("say Если у вас закончилась жидкость, говорите. ", "  " zaderzhka " ")
-%vybor%("say Дышите равномерно, не задерживайте дыхание. Постарайтесь не двигаться. ", "  " zaderzhka " ")
-%vybor%("say Если почувствуете головокружение или дискомфорт, сообщите мне. ", "  " zaderzhka " ")
-Return
+
 
 :?:/Миостимулятор_1::
 SendPlay {Enter}
@@ -3135,350 +3121,7 @@ SendPlay {Enter}
 %vybor%("me убрал" floor " миостимулятор в шаф ", "  " zaderzhka " ")
 %vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
 Return
-:?:/ЭндоУЗИ_1::
-SendPlay {Enter}
-%vybor%("say Сейчас я проведу Вам Эндосонография.  ", "  " zaderzhka " ")
-%vybor%("say Открывайте рот. ", "  " zaderzhka " ")
-Return
 
-:?:/ЭндоУЗИ_2::
-SendPlay {Enter}
-%vybor%("do Аппарат ЭндоУЗИ стоит у койки. ", "  " zaderzhka " ")
-%vybor%("me включил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вводить зонд в пищевод пациента ", "  " zaderzhka " ")
-%vybor%("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
-%vybor%("me продолжил" floor " вводить зонд в желудок пациента ", "  " zaderzhka " ")
-%vybor%("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
-%vybor%("me смотрит на экран ", "  " zaderzhka " ")
-%vybor%("do Обнаружили отклонения? ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вынимать зонд из желудка пациента ", "  " zaderzhka " ")
-%vybor%("me положил" floor " зонд на стол   ", "  " zaderzhka " ")
-%vybor%("me выключил" floor " аппарат ЭндоУЗИ ", "  " zaderzhka " ")
-Return
-
-
-:?:/Тату_1::
-SendPlay {Enter}
-%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
-%vybor%("do Лазерный аппарат стоит у стены. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " защитные очки и передал" floor " их пациенту ", "  " zaderzhka " ")
-%vybor%("say Надевайте и ложитесь на койку. ", "  " zaderzhka " ")
-Return
-
-:?:/Тату_2::
-SendPlay {Enter}
-%vybor%("me осмотрел пациента ", "  " zaderzhka " ")
-%vybor%("do На столе лежит специальный гель. ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " гель и намазал" floor " его на место удаление ", "  " zaderzhka " ")
-%vybor%("me надел" floor " защитные очки ", "  " zaderzhka " ")
-%vybor%("me включил" floor " аппарат ", "  " zaderzhka " ")
-%vybor%("me начал" floor " выводить татуировку ", "  " zaderzhka " ")
-Return
-
-:?:/Тату_3::
-SendPlay {Enter}
-%vybor%("me закончил" floor " выводить татуировку ", "  " zaderzhka " ")
-%vybor%("me снял" floor " защитные очки ", "  " zaderzhka " ")
-%vybor%("me выключил" floor " аппарат ", "  " zaderzhka " ")
-%vybor%("say Процедура окончена, можете одеваться. ", "  " zaderzhka " ")
-Return
-
-
-
-:?:/Гвоздь_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
-Return
-
-:?:/Гвоздь_2::
-SendPlay {Enter}
-%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и ампулу с антибиотиком, открыл" floor " ампулу  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
-%vybor%("me аккуратно вколол шприц с антибиотиком в кожу пациента возле раны  ", "  " zaderzhka " ")
-%vybor%("me положил" floor " шприц на тумбочку  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола  ", "  " zaderzhka " ")
-%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
-%vybor%("me положил" floor " шприц на тумбочку ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит ватный тампон и ампула с анестезией.  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы ", "  " zaderzhka " ")
-%vybor%("do На тумбочке по-прежнему лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " место укола ", "  " zaderzhka " ")
-%vybor%("me аккуратно вколол шприц с анестезией в кожу пациента возле раны  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит простерилизованный скальпель. ", "  " zaderzhka " ")
-%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи возле раны ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
-%vybor%("me взяв пинцет, осторожно вытащил" floor " инородный предмет и положил" floor " его на тумбочку ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и перекись, обработал" floor " место занесения железной арматуры ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить. ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит заживляющая мазь. ", "  " zaderzhka " ")
-%vybor%("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место раны ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны ", "  " zaderzhka " ")
-%vybor%("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня. ", "  " zaderzhka " ")
-Return
-
-:?:/Мозоль_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
-Return
-
-
-:?:/Мозоль_2::
-SendPlay {Enter}
-%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " мазоль на теле пациента  ", "  " zaderzhka " ")
-%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента возле мазоли  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
-%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте мазоли  ", "  " zaderzhka " ")
-%vybor%("me аккуратно скальпелем удалил" floor " нарост под кожей  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.  ", "  " zaderzhka " ")
-%vybor%("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил" floor " рану  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит заживляющая мазь.  ", "  " zaderzhka " ")
-%vybor%("me взяв мазь на тумбочке, аккуратно нанёс" Female " её на место мозоли  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место мозоли  ", "  " zaderzhka " ")
-%vybor%("say Вот и всё. Швы сами рассосутся примерно через неделю.", "  " zaderzhka " ")
-%vybor%("say Я вам пропишу ибуклин в качестве обезболивающего.", "  " zaderzhka " ")
-%vybor%("say Его стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
-%vybor%("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
-Return
-
-
-:?:/Бородавка_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-%vybor%("say Раздевайтесь. ", "  " zaderzhka " ")
-Return
-
-
-:?:/Бородавка_2::
-SendPlay {Enter}
-%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и ампулу с анестезией, открыл" floor " ампулу  ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке шприц, набрал" floor " в него содержимое ампулы  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит упаковка спиртовых салфеток.  ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку спиртовых салфеток, взял" floor " одну салфетку и аккуратно протёр" Female " кожу возле раны  ", "  " zaderzhka " ")
-%vybor%("me аккуратно вколол" floor " шприц с анестезией в кожу пациента   ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит простерилизованный скальпель.  ", "  " zaderzhka " ")
-%vybor%("me положив шприц на тумбочку, взял" floor " скальпель и аккуратно сделал" floor " надрез кожи в месте бородавки  ", "  " zaderzhka " ")
-%vybor%("me скальпелем осторожно вырезал бородавку из-под кожи  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит операционная иголка и саморассасывающаяся нить.    ", "  " zaderzhka " ")
-%vybor%("me положив скальпель на тумбочку, взял" floor " иголку с ниткой и аккуратно зашил рану   ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит заживляющая мазь.   ", "  " zaderzhka " ")
-%vybor%("me взяв мазь на тумбочке, аккуратно нанёс её на место раны   ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон, аккуратно положил" floor " его на место раны   ", "  " zaderzhka " ")
-%vybor%("say Вот и всё. Мы закончили. Швы сами рассосутся примерно через 2 дня.   ", "  " zaderzhka " ")
-Return
-
-:?:/Соринка_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-Return
-
-
-:?:/Соринка_2::
-SendPlay {Enter}
-%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами.  ", "  " zaderzhka " ")
-%vybor%("say Расслабьте лицо. Старайтесь не морщиться.  ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит специальная тканевая салфетка.  ", "  " zaderzhka " ")
-%vybor%("me взяв тканевую салфетку, по направлению к носу аккуратно вытащил" floor " соринку из глаза  ", "  " zaderzhka " ")
-%vybor%("me тканевой салфеткой аккуратно протёр" Female " область глаз у носа и положил" floor " салфетку на тумбочку  ", "  " zaderzhka " ")
-%vybor%("say Попробуйте аккуратно проморгаться. Глаза не трите крайнем случае можете промыть аккуратно водой.  ", "  " zaderzhka " ")
-%vybor%("todo Всего доброго, не болейте*улыбнувшись.  ", "  " zaderzhka " ")
-Return
-
-:?:/Заноза_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-Return
-
-
-:?:/Заноза_2::
-SendPlay {Enter}
-%vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и перекись, аккуратно обработа" floor "л место вокруг раны ", "  " zaderzhka " ")
-%vybor%("me внимательно осмотрел место занесения занозы ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит простерилизованный пинцет. ", "  " zaderzhka " ")
-%vybor%("me взяв пинцет, осторожно вытащил" floor " заносу и положил" floor " её на тумбочку ", "  " zaderzhka " ")
-%vybor%("me взяв на тумбочке ватный тампон и перекись, обработа" floor "л место занесения занозы ", "  " zaderzhka " ")
-%vybor%("do На тумбочке лежит пачка пластырей. ", "  " zaderzhka " ")
-%vybor%("me открыв пачку пластырей, достал" floor " из неё один пластырь, открыл" floor " его и аккуратно закрепил" floor " на месте раны ", "  " zaderzhka " ")
-%vybor%("todo Вот и всё. Мы закончили. Всего доброго, не болейте*улыбнувшись. ", "  " zaderzhka " ")
-Return
-
-:?:/М>Ж::
-SendPlay {Enter}
-%vybor%("do На столе лежат перчатки и мед.маска.   ", "  " zaderzhka " ")
-%vybor%("me взял" floor " перчатки   ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки   ", "  " zaderzhka " ")
-%vybor%("do Рядом стоит аппарат наркоза.   ", "  " zaderzhka " ")
-%vybor%("me подключил" floor " аппарат наркоза к пациенту   ", "  " zaderzhka " ")
-%vybor%("do В операционной установлены все необходимые медицинские инструменты. ", "  " zaderzhka " ")
-%vybor%("me подключил" floor " пациента к датчикам ", "  " zaderzhka " ")
-%vybor%("me проверил" floor " показания артериального давления, пульса и сатурации пациента ", "  " zaderzhka " ")
-%vybor%("do На мониторе отображаются стабильные показатели состояния пациента. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " одноразовые перчатки со стола и надел" floor " их ", "  " zaderzhka " ")
-%vybor%("do Рядом находится дозатор с антисептиком. ", "  " zaderzhka " ")
-%vybor%("me обработал" floor " руки антисептиком поверх перчаток ", "  " zaderzhka " ")
-%vybor%("me взял" floor " маркер со стола и отметил" floor " линии разрезов на мошонке и половом члене ", "  " zaderzhka " ")
-%vybor%("say Приступаю к основной части операции. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " скальпель со стола и аккуратно сделал" floor " разрезы по отмеченным линиям ", "  " zaderzhka " ")
-%vybor%("me взял" floor " хирургический пинцет и начал" floor " отслаивать кожные покровы от подлежащих тканей ", "  " zaderzhka " ")
-%vybor%("me отделил" floor " кожу полового члена, сохранив её для последующего формирования влагалища ", "  " zaderzhka " ")
-%vybor%("me вскрыл" floor " мошонку и аккуратно удалил" floor " яички ", "  " zaderzhka " ")
-%vybor%("do В лотке находится контейнер для изъятых тканей. ", "  " zaderzhka " ")
-%vybor%("me поместил" floor " изъятые ткани в стерильный контейнер", "  " zaderzhka " ")
-%vybor%("me взял" floor " сосудистый зажим и остановил" floor " кровотечение из семенных канатиков", "  " zaderzhka " ")
-%vybor%("me наложил" floor " лигатуры на сосуды и завершил" floor " подготовку тканей", "  " zaderzhka " ")
-%vybor%("do На столе лежит вагинальный расширитель.", "  " zaderzhka " ")
-%vybor%("me взял" floor " вагинальный расширитель и начал" floor " формировать полость для влагалища", "  " zaderzhka " ")
-%vybor%("me использовал" floor " тупфер с антисептиком для обработки полости", "  " zaderzhka " ")
-%vybor%("me укрепил" floor " стенки влагалища лоскутами кожи, взятыми из полового члена", "  " zaderzhka " ")
-%vybor%("me зафиксировал" floor " ткани саморассасывающимися швами", "  " zaderzhka " ")
-%vybor%("do Полость влагалища сформирована.", "  " zaderzhka " ")
-%vybor%("me взял" floor " скальпель со стола и аккуратно сформировал" floor " малые и большие половые губы из кожи мошонки", "  " zaderzhka " ")
-%vybor%("me наложил" floor " швы на края сформированных губ", "  " zaderzhka " ")
-%vybor%("me использовал" floor " часть ткани головки полового члена для формирования клитора", "  " zaderzhka " ")
-%vybor%("me закрепил" floor " клитор в анатомически правильном положении", "  " zaderzhka " ")
-%vybor%("do Половые губы и клитор сформированы.", "  " zaderzhka " ")
-%vybor%("me взял" floor " дезинфицирующий раствор и обработал" floor " область швов", "  " zaderzhka " ")
-%vybor%("me наложил" floor " стерильные повязки на все разрезы", "  " zaderzhka " ")
-%vybor%("do Рядом лежит компрессионное белье.", "  " zaderzhka " ")
-%vybor%("me надел" floor " компрессионное белье на пациента для предотвращения отёков", "  " zaderzhka " ")
-%vybor%("me отключил" floor " аппарат наркоза и снял кислородную маску с пациента", "  " zaderzhka " ")
-%vybor%("me проверил" floor " показатели состояния пациента после завершения операции", "  " zaderzhka " ")
-%vybor%("say Операция прошла успешно. Вам потребуется наблюдение в течение недели для контроля заживления.", "  " zaderzhka " ")
-Return
-
-
-:?:/Ж>М::
-SendPlay {Enter}
-%vybor%("do На столе лежат перчатки и мед.маска.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " перчатки  ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки  ", "  " zaderzhka " ")
-%vybor%("do Рядом стоит аппарат наркоза.  ", "  " zaderzhka " ")
-%vybor%("me подключил" floor " аппарат наркоза к пациенту  ", "  " zaderzhka " ")
-%vybor%("do На столе расположены все необходимые хирургические инструменты.", "  " zaderzhka " ")
-%vybor%("me подключил" floor " пациента к датчикам", "  " zaderzhka " ")
-%vybor%("me проверил" floor " показатели артериального давления, пульса и сатурации пациента", "  " zaderzhka " ")
-%vybor%("me взял" floor " одноразовые перчатки и надел" floor " их", "  " zaderzhka " ")
-%vybor%("me обработал" floor " руки антисептиком из дозатора", "  " zaderzhka " ")
-%vybor%("me взял" floor " маркер со стола и отметил" floor " линии разрезов на груди и в паховой области", "  " zaderzhka " ")
-%vybor%("say Начинаю подготовку к операции.", "  " zaderzhka " ")
-%vybor%("me взял" floor " скальпель со стола и сделал" floor " надрезы по линиям на обеих грудных железах", "  " zaderzhka " ")
-%vybor%("me аккуратно отделил" floor " кожные покровы от железистых тканей", "  " zaderzhka " ")
-%vybor%("me удалил" floor " железистые ткани с помощью зажима и ножниц", "  " zaderzhka " ")
-%vybor%("me остановил" floor " кровотечение при помощи электрокоагулятора", "  " zaderzhka " ")
-%vybor%("me сформировал" floor " контуры грудной клетки, наложив швы и подтянув кожу", "  " zaderzhka " ")
-%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-%vybor%("do На столе лежат стерильные повязки.", "  " zaderzhka " ")
-%vybor%("me наложил" floor " стерильные повязки на область груди", "  " zaderzhka " ")
-%vybor%("me сделал" floor " разрезы в области паха для формирования мошонки", "  " zaderzhka " ")
-%vybor%("me создал" floor " мошонку из кожи половых губ, зафиксировав её саморассасывающимися швами", "  " zaderzhka " ")
-%vybor%("me наложил" floor " швы на края разрезов", "  " zaderzhka " ")
-%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-%vybor%("me взял" floor " участок кожи с предплечья пациента, чтобы использовать его для фаллопластики", "  " zaderzhka " ")
-%vybor%("do В хирургическом лотке лежит выделенный кожный лоскут.", "  " zaderzhka " ")
-%vybor%("me сформировал" floor " цилиндрический участок из кожи для создания пениса", "  " zaderzhka " ")
-%vybor%("me соединил" floor " кожный лоскут с тканями в области паха", "  " zaderzhka " ")
-%vybor%("me подключил" floor " сосуды и нервы к новообразованному пенису", "  " zaderzhka " ")
-%vybor%("do На столе лежит хирургический микроскоп.", "  " zaderzhka " ")
-%vybor%("me использовал" floor " микроскоп для точного соединения сосудов и нервов", "  " zaderzhka " ")
-%vybor%("me наложил" floor " швы на место соединения тканей", "  " zaderzhka " ")
-%vybor%("me обработал" floor " швы антисептиком", "  " zaderzhka " ")
-%vybor%("me взял" floor " стерильные повязки и наложил" floor " их на все операционные раны", "  " zaderzhka " ")
-%vybor%("me проверил" floor " показатели состояния пациента на мониторе", "  " zaderzhka " ")
-%vybor%("do На мониторе отображаются стабильные жизненные показатели.", "  " zaderzhka " ")
-%vybor%("me отключил" floor " аппарат наркоза и снял" floor " кислородную маску", "  " zaderzhka " ")
-%vybor%("say Операция завершена. Вам потребуется несколько недель для восстановления.", "  " zaderzhka " ")
-%vybor%("say Также следует носить компрессионное бельё и проходить регулярные осмотры.", "  " zaderzhka " ")
-Return
-
-
-:?:/Пчела_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
-%vybor%("me открывает его ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взяв мыло, начинает мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло обратно в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do На столе лежит упаковка с одноразовыми перчатками. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из неё одноразовые медицинские перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки на руки ", "  " zaderzhka " ")
-Return
-
-
-:?:/Пчела_2::
-SendPlay {Enter}
-%vybor%("say Лежитесь и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
-%vybor%("me взял" floor " в руки жгут", "  " zaderzhka " ")
-%vybor%("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
-%vybor%("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
-%vybor%("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
-%vybor%("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
-%vybor%("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
-%vybor%("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
-%vybor%("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
-%vybor%("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
-%vybor%("me убрал" floor " насос с зоны укуса, затем отсоединил насадку", "  " zaderzhka " ")
-%vybor%("me положил" floor " насос и насадку на тумбочку.", "  " zaderzhka " ")
-%vybor%("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
-%vybor%("do Стерильная повязка на столе.", "  " zaderzhka " ")
-%vybor%("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
-%vybor%("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
-%vybor%("say Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
-%vybor%("say Чтобы вывести остатки яда из тканей. ", "  " zaderzhka " ")
-Return
 
 :?:/Донор_1::
 SendPlay {Enter}
@@ -3540,7 +3183,6 @@ SendPlay {Enter}
 %vybor%("do Какое давление у пациента?", "  " zaderzhka " ")
 Return
 
-
 :?:/Инфаркт_2::
 SendPlay {Enter}
 %vybor%("todo У Вас не очень хорошее давление, возьмите таблетки*достав таблетки из сумки и передав их пациенту", "  " zaderzhka " ")
@@ -3552,7 +3194,6 @@ Return
 SendPlay {Enter}
 %vybor%("todo Так-с, давление у Вас нормальное*сняв аппарат с пациента и убрав его в сумку", "  " zaderzhka " ")
 Return
-
 
 :?:/Инфаркт_4::
 SendPlay {Enter}
@@ -3583,47 +3224,7 @@ SendPlay {Enter}
 %vybor%("say  Если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
 Return
 
-:?:/Бешенство_1::
-SendPlay {Enter}
-%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-%vybor%("me нанес антисептик на руки и спешно растер его", "  " zaderzhka " ")
-%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-%vybor%("say Сейчас я возьму у вас мазок, который определит наличие бешенства.", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола тумпфер", "  " zaderzhka " ")
-%vybor%("say Откройте рот.", "  " zaderzhka " ")
-Return
 
-:?:/Бешенство_2::
-SendPlay {Enter}
-%vybor%("me ввел" floor " тумпфер в ротовую полость пациента ", "  " zaderzhka " ")
-%vybor%("me провел" floor " тумпфером по внутренним сторонам щёк ", "  " zaderzhka " ")
-%vybor%("me вывел" floor " тумпфер из ротовой полости пациента ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола пробирку со специальным раствором ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " пробирку и ввел" floor " туда тумпфер ", "  " zaderzhka " ")
-%vybor%("me вращает тумпфер в пробирке ", "  " zaderzhka " ")
-%vybor%("do Образец слюны перешел в раствор. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола тест-устройство ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола пипетку ", "  " zaderzhka " ")
-%vybor%("me набрал" floor " в пипетку немного раствора из пробирки ", "  " zaderzhka " ")
-%vybor%("me капнул" floor " несколько капель в специальное окошко тест-устройства  ", "  " zaderzhka " ")
-%vybor%("do На тест-устройстве происходит реакция.  ", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на тест-устройство  ", "  " zaderzhka " ")
-%vybor%("do Реакция положительная?  ", "  " zaderzhka " ")
-Return
-
-:?:/Бешенство_3::
-SendPlay {Enter}
-%vybor%("say У меня плохие новости, у вас выявлено бешенство.  ", "  " zaderzhka " ")
-%vybor%("say Сейчас я поставлю вам прививку от него. ", "  " zaderzhka " ")
-Return
-
-:?:/Бешенство_4::
-SendPlay {Enter}
-%vybor%("say Результат теста отрицательный. Бешенство у вас не выявлено.  ", "  " zaderzhka " ")
-Return
 :?:/Гем::
 SendPlay {Enter}
 %vybor%("do У кушетки стоит тумбочка со всеми необходимыми инструментами. ", "  " zaderzhka " ")
@@ -3642,97 +3243,6 @@ SendPlay {Enter}
 Return
 
 
-:?:/Змея_1::
-SendPlay {Enter}
-%vybor%("do На столе лежат перчатки.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " перчатки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки ", "  " zaderzhka " ")
-%vybor%("say Лежите и не двигайтесь, сейчас я буду выкачивать яд из раны.", "  " zaderzhka " ")
-Return
-:?:/Змея_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " в руки жгут", "  " zaderzhka " ")
-%vybor%("me наложил" floor " жгут выше места укуса", "  " zaderzhka " ")
-%vybor%("do Аппарат Аспивенин и насадки в сумке.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " сумку, после чего достал" floor " аппарат и насадки", "  " zaderzhka " ")
-%vybor%("me выбрав нужную насадку, присоединил" floor " её к аппарату", "  " zaderzhka " ")
-%vybor%("me положил" floor " остальные насадки на тумбочку", "  " zaderzhka " ")
-%vybor%("me приложил" floor " насос на зону поражения укуса", "  " zaderzhka " ")
-%vybor%("me надавил" floor " на поршень до упора", "  " zaderzhka " ")
-%vybor%("me начал" floor " выкачивать яд из раны", "  " zaderzhka " ")
-%vybor%("me приподняв поршень, ослабил" floor " давление на место укуса", "  " zaderzhka " ")
-%vybor%("me убрал" floor " насос с зоны укуса, затем отсоединил" floor " насадку", "  " zaderzhka " ")
-%vybor%("me положил" floor " насос и насадку на тумбочку ", "  " zaderzhka " ")
-%vybor%("me начал" floor " обрабатывать рану больного", "  " zaderzhka " ")
-%vybor%("do Стерильная повязка на столе.", "  " zaderzhka " ")
-%vybor%("me взял" floor " стерильную повязку со стола", "  " zaderzhka " ")
-%vybor%("me начал" floor " накладывать повязку на рану", "  " zaderzhka " ")
-%vybor%("do На столе лежит всё необходимое для укола.", "  " zaderzhka " ")
-%vybor%("me взял" floor " ватный диск и спирт", "  " zaderzhka " ")
-%vybor%("me промочил" floor " ватный диск в спирте", "  " zaderzhka " ")
-%vybor%("me продезинфицировал" floor " место ввода противозмеиной сыворотки", "  " zaderzhka " ")
-%vybor%("me выкинул" floor " ватный диск в урну", "  " zaderzhka " ")
-%vybor%("me взял" floor " одноразовую иглу и новый одноразовый шприц", "  " zaderzhka " ")
-%vybor%("me надел" floor " иглу на шприц", "  " zaderzhka " ")
-%vybor%("me взял" floor " пробирку с противозмеиной сывороткой", "  " zaderzhka " ")
-%vybor%("me наполнил" floor " шприц сывороткой", "  " zaderzhka " ")
-%vybor%("me убрал" floor " лишний воздух из шприца", "  " zaderzhka " ")
-%vybor%("me ввёл" floor " иглу в вену пациента", "  " zaderzhka " ")
-%vybor%("me ввёл" floor " сыворотку", "  " zaderzhka " ")
-%vybor%("me вынул" floor " иглу", "  " zaderzhka " ")
-%vybor%("me придавил" floor " место прокола заранее приготовленной ваткой в спирте", "  " zaderzhka " ")
-%vybor%("say  Сейчас Вам необходим покой и нужно пить очень много воды.", "  " zaderzhka " ")
-%vybor%("say  Чтобы вывести остатки яда из тканей.  ", "  " zaderzhka " ")
-Return
-
-
-:?:/Шейка_1::
-SendPlay {Enter}
-%vybor%("do Гинекологическое кресло стоит в углу палаты.", "  " zaderzhka " ")
-%vybor%("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
-Return
-
-:?:/Шейка_2::
-SendPlay {Enter}
-%vybor%("do Раковина стоит в углу палаты. ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " кран ", "  " zaderzhka " ")
-%vybor%("do В мыльнице лежит мыло. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " мыло и начал" floor " мыть руки ", "  " zaderzhka " ")
-%vybor%("me положил" floor " мыло в мыльницу ", "  " zaderzhka " ")
-%vybor%("me выключает кран ", "  " zaderzhka " ")
-%vybor%("do У стены стоит стол с хирургическими перчатками. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола упаковку хирургических перчаток и открыл" floor " её ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из упаковки хирургические перчатки и надел" floor " их ", "  " zaderzhka " ")
-%vybor%("do Кольпоскоп стоит рядом с креслом", "  " zaderzhka " ")
-%vybor%("me включил" floor " кольпоскоп", "  " zaderzhka " ")
-%vybor%("me взял" floor " стерильное зеркало", "  " zaderzhka " ")
-%vybor%("me установил" floor " стерильное зеркало в шейку матки", "  " zaderzhka " ")
-%vybor%("me направил" floor " кольпоскоп на шейку матки", "  " zaderzhka " ")
-%vybor%("me изучает данные на экране", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения?  ", "  " zaderzhka " ")
-%vybor%("do На столе стоит раствор уксусной кислоты.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " раствор уксусной кислоты", "  " zaderzhka " ")
-%vybor%("me взял" floor " палочку", "  " zaderzhka " ")
-%vybor%("me нанес" Female " раствор уксусной кислоты на палочку", "  " zaderzhka " ")
-%vybor%("me закрыл" floor " раствор уксусной кислоты ", "  " zaderzhka " ")
-%vybor%("me начал" floor " наносить раствор уксусной кислоты на шейку матки", "  " zaderzhka " ")
-%vybor%("me закончил" floor " наносить раствор уксусной кислоты и выкинул палочку", "  " zaderzhka " ")
-%vybor%("me изучает данные на экране", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
-%vybor%("do На столе стоит раствор йода.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " раствор йода", "  " zaderzhka " ")
-%vybor%("me взял" floor " палочку", "  " zaderzhka " ")
-%vybor%("me нанес" Female " раствор йода на палочку", "  " zaderzhka " ")
-%vybor%("me закрыл" floor " раствор йода ", "  " zaderzhka " ")
-%vybor%("me начал" floor " наносить раствор йода на шейку матки", "  " zaderzhka " ")
-%vybor%("me закончил" floor " наносить раствор йода и выкинул палочку", "  " zaderzhka " ")
-%vybor%("me изучает данные на экране", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения? ", "  " zaderzhka " ")
-%vybor%("me убрал" floor " зеркало из шейки матки ", "  " zaderzhka " ")
-%vybor%("me выключил" floor " кольпоскоп", "  " zaderzhka " ")
-%vybor%("me откатил" floor " кольпоскоп", "  " zaderzhka " ")
-%vybor%("say Можете одеваться", "  " zaderzhka " ")
-Return
 :?:/Глюкометр_1::
 SendPlay {Enter}
 %vybor%("do В шкафу лежит глюкометр.", "  " zaderzhka " ")
@@ -3770,8 +3280,6 @@ SendPlay {Enter}
 %vybor%("me закрыл" floor "  шкаф ", "  " zaderzhka " ")
 Return
 
-
-
 :?:/УВТ_1::
 SendPlay {Enter}
 %vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
@@ -3800,8 +3308,6 @@ SendPlay {Enter}
 %vybor%("me выключил" floor "  аппарат", "  " zaderzhka " ")
 %vybor%("me отодвинул" floor "  аппарат", "  " zaderzhka " ")
 Return
-
-
 
 :?:/Матка_У::
 SendPlay {Enter}
@@ -3856,68 +3362,6 @@ SendPlay {Enter}
 %vybor%("say Это для снижения риска кровотечения после 24 часов его необходимо убрать.", "  " zaderzhka " ")
 Return
 
-global AFK_Active := false
-
-:?:/-афк::
-SendPlay {Enter}
-AFK_Active := true  ; Включаем режим АФК
-Loop
-{
-  if not AFK_Active{
-	break
-	}
-  Random, Rand, 0,30
-  Random, Rand1,0,60
-  MouseClick ,left,800+Rand,600+Rand1, 1, 2
-  Sleep 7000
-}
-Return
-
-:?:/+афк::
-SendPlay {Enter}
-AFK_Active := false  ; Выключаем режим АФК
-ToolTip, АФК-режим выключен, 500, 500
-SetTimer, RemoveToolTip, 2000
-Return
-
-RemoveToolTip:
-ToolTip
-SetTimer, RemoveToolTip, Off
-Return
-
-:?:/работа::
-SendPlay {Enter}
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
-
-startTime := A_TickCount
-
-SetTimer, 1UpdateTime, 1000
-
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
-Return
-
-:?:/работа_::
-;SendPlay {Enter}
-Gui, Destroy
-Return
-
-
-1UpdateTime:
-    elapsedTime := A_TickCount - startTime 
-    seconds := Floor(elapsedTime / 1000) 
-    hours := Floor(seconds / 3600) ; Часы
-    minutes := Floor((seconds - hours * 3600) / 60) 
-    seconds := Mod(seconds, 60) ; Секунды
-    formattedTime := Format("{:02}:{:02}:{:02}", hours, minutes, seconds) 
-    
-    GuiControl,, TimerText, %formattedTime%
-    
-
-Return
 
 :?:/Грудь_У::
 SendPlay {Enter}
@@ -4141,7 +3585,6 @@ SendPlay {Enter}
 %vybor%("me закрыл" floor " шкаф ", "  " zaderzhka " ")
 Return
 
-
 :?:/Документация_1::
 SendPlay {Enter}
 %vybor%("do Перед сотрудником стоит стол.", "  " zaderzhka " ")
@@ -4160,8 +3603,6 @@ SendPlay {Enter}
 %vybor%("me убрал" floor " бланк и ручку в медицинскую сумку", "  " zaderzhka " ")
 %vybor%("me закрыл" floor " медицинскую сумку", "  " zaderzhka " ")
 Return
-
-
 
 :?:/Наркоман_1::
 SendPlay {Enter}
@@ -4467,6 +3908,67 @@ SendPlay {Enter}
 Return
 
 
+global AFK_Active := false
+:?:/-афк::
+SendPlay {Enter}
+AFK_Active := true  ; Включаем режим АФК
+Loop
+{
+  if not AFK_Active{
+	break
+	}
+  Random, Rand, 0,30
+  Random, Rand1,0,60
+  MouseClick ,left,800+Rand,600+Rand1, 1, 2
+  Sleep 7000
+}
+Return
+
+:?:/+афк::
+SendPlay {Enter}
+AFK_Active := false  ; Выключаем режим АФК
+ToolTip, АФК-режим выключен, 500, 500
+SetTimer, RemoveToolTip, 2000
+Return
+
+RemoveToolTip:
+ToolTip
+SetTimer, RemoveToolTip, Off
+Return
+
+:?:/работа::
+SendPlay {Enter}
+Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+Gui, Color, 12345
+Gui, Font, s25
+
+startTime := A_TickCount
+
+SetTimer, 1UpdateTime, 1000
+
+WinSet, TransColor, %CustomColor3% 215
+Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
+Gui, Show, NoActivate xCenter y0 w200 h70
+Return
+
+:?:/работа_::
+;SendPlay {Enter}
+Gui, Destroy
+Return
+
+
+1UpdateTime:
+    elapsedTime := A_TickCount - startTime 
+    seconds := Floor(elapsedTime / 1000) 
+    hours := Floor(seconds / 3600) ; Часы
+    minutes := Floor((seconds - hours * 3600) / 60) 
+    seconds := Mod(seconds, 60) ; Секунды
+    formattedTime := Format("{:02}:{:02}:{:02}", hours, minutes, seconds) 
+    
+    GuiControl,, TimerText, %formattedTime%
+    
+
+Return
 
 :?:/Аллергия_1::
 SendPlay {Enter}
@@ -4812,7 +4314,6 @@ return
 SendPlay {Enter}
 %vybor%("say Я выпишу Вам  Авиамарин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 return
-
 
 
 :?:/Успокоительное_1::
@@ -5165,7 +4666,6 @@ Return
 SendPlay {Enter}
 %vybor%("say Я выпишу Вам Перметрин. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
-
 
 :?:/Чесотка_2::
 SendPlay {Enter}
@@ -6368,8 +5868,6 @@ IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы изменили данные на: %Post%.
 return
 
-
-
 :?:/Вызов_15::
 ; Переключение на русскую раскладку
 SendMessage, 0x50, 0, 0x4190419,, A
@@ -7362,17 +6860,24 @@ Return
 
 Medicine14:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h100 w300,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Змея_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Змея_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Змея_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Змея_2
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Действия при укусе змеи]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Действия при укусе змеи]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Действия при укусе змеи]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Действия при укусе змеи]
 
-Gui, 3:show, center h80 w300, Действия при укусе змеи
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ225,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ225,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ226,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ226,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Действия при укусе змеи
 Return
+
 ;--------------------------------------------------------------------------------
 
 
@@ -7497,16 +7002,27 @@ Return
 
 Medicine19:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w300,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Клизма_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Клизма_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Клизма_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Клизма_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Клизма]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Клизма]
-Gui, 3:show, center h80 w300, Клизма
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Клизма]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Клизма]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ207,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ207,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ208,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ208,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h120 w550, Клизма
 Return
+
 
 ;--------------------------------------------------------------------------------
 
@@ -8278,19 +7794,32 @@ Return
 
 Medicine55:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w400,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Мудрости_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Мудрости_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Мудрости_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Мудрости_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Мудрости_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Мудрости_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Мудрости_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Мудрости_4
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Удаление зуба мудрости]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Если нет]
-Gui, 3:show, center h120 w400, Удаление зуба мудрости
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Удаление зуба мудрости]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Продолжение]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Продолжение]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Если нет]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ231,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ231,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ232,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ232,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ233,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ233,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ234,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ234,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Удаление зуба мудрости
 Return
 
 ;--------------------------------------------------------------------------------
@@ -8299,32 +7828,50 @@ Medicine56:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Кариес_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Кариес_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Кариес_3
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Кариес_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Кариес_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Кариес_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x125 y15 h500 w370 +BackgroundTrans, [Удаление коренного зуба]
-Gui, 3:Add, Text, x125 y35 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:Add, Text, x125 y55 h500 w370 +BackgroundTrans, [Если нет]
-Gui, 3:show, center h100 w400, Удаление коренного зуба
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Удаление коренного зуба]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Продолжение]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Если нет]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ235,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ235,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ236,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ236,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ237,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ237,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h180 w550, Удаление коренного зуба
 Return
 
 ;--------------------------------------------------------------------------------
 
 Medicine57:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w400,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Молочный_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Молочный_2
 
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Молочный_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Молочный_2
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Удаление молочного зуба]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:show, center h80 w400, Удаление молочного зуба]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Удаление молочного зуба]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Продолжение]
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ238,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ238,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ239,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ239,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Удаление молочного зуба
 Return
+
 
 ;--------------------------------------------------------------------------------
 
@@ -8424,7 +7971,7 @@ Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Давление_3
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Проверка давления]
-Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [ЕПроверка давления]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Проверка давления]
 Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Проверка давления]
 
 
@@ -8973,15 +8520,19 @@ Return
 
 Medicine93:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h60 w300,
+Gui, 3:Add, Picture, x0 y0 h60 w330,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Ингалятор
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Ингалятор
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w400 +BackgroundTrans, [Ингалятор]
+Gui, 3:Add, Text, x145 y25 h500 w370 +BackgroundTrans, [Ингалятор]
 
-Gui, 3:show, center h60 w280, Ингалятор
+Gui, 3:Add, Picture, x330 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ250,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x400 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ250,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h60 w460, Ингалятор
 Return
+
 
 ;--------------------------------------------------------------------------------
 
@@ -9005,35 +8556,58 @@ Return
 
 Medicine95:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /ЭндоУЗИ_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /ЭндоУЗИ_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /ЭндоУЗИ_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /ЭндоУЗИ_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /ЭндоУЗИ_3
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x165 y15 h500 w370 +BackgroundTrans, [Эндосонография]
-Gui, 3:Add, Text, x165 y35 h500 w370 +BackgroundTrans, [Эндосонография]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Эндосонография]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Эндосонография]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Эндосонография]
 
-Gui, 3:show, center h80 w350, Эндосонография
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ245,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ245,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ246,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ246,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ247,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ247,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h180 w550, Эндосонография
 Return
+
+
 
 ;--------------------------------------------------------------------------------
 
 Medicine96:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h100 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Тату_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Тату_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Тату_3
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Тату_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Тату_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Тату_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Лазерное удаление тату]
 
-Gui, 3:show, center h100 w380, Лазерное удаление тату
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ222,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ222,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ223,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ223,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ224,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ224,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h180 w550, Лазерное удаление тату
 Return
 
 
@@ -9073,82 +8647,134 @@ Return
 
 Medicine98:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Гвоздь_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Гвоздь_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Гвоздь_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Гвоздь_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Извлечение гвоздя]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Извлечение гвоздя]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Извлечение гвоздя
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Извлечение гвоздя]
 
-Gui, 3:show, center h80 w350, Извлечение гвоздя
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ214,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ214,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ215,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ215,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Извлечение гвоздя
 Return
+
+
 
 ;--------------------------------------------------------------------------------
 
 Medicine99:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Мозоль_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Мозоль_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Мозоль_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Мозоль_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Костная мозоль]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Костная мозоль]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Костная мозоль]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Костная мозоль]
 
-Gui, 3:show, center h80 w350, Костная мозоль
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ216,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ216,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ217,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ217,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Костная мозоль
 Return
+
+
+
 
 
 ;--------------------------------------------------------------------------------
 
 Medicine100:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Бородавка_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Бородавка_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Бородавка_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Бородавка_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Бородавка удаление]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Бородавка удаление]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Бородавка удаление]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Бородавка удаление]
 
-Gui, 3:show, center h80 w350, Бородавка удаление
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ218,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ218,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ219,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ219,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Бородавка удаление
 Return
+
+
 
 ;--------------------------------------------------------------------------------
 
 Medicine101:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Соринка_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Соринка_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Соринка_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Соринка_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Соринка_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Соринка удаление]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Соринка удаление]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Соринка удаление]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Соринка удаление]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Соринка удаление]
 
-Gui, 3:show, center h80 w350, Соринка удаление
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ209,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ209,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ210,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ210,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ211,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ211,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h180 w550,  Соринка удаление
 Return
+
 
 
 ;--------------------------------------------------------------------------------
 
 Medicine102:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Заноза_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Заноза_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Заноза_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Заноза_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Заноза извлечение]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Заноза извлечение]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Заноза извлечение]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Заноза извлечение]
 
-Gui, 3:show, center h80 w350, Заноза извлечение
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ212,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ212,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ213,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ213,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Заноза извлечение
 Return
 
 
@@ -9156,16 +8782,24 @@ Return
 
 Medicine103:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Пчела_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Пчела_2
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Пчела_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Пчела_2
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Укус пчелы]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Укус пчелы]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Укус пчелы]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Укус пчелы]
 
-Gui, 3:show, center h80 w350, Укус пчелы
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ220,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ220,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ221,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ221,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Укус пчелы
 Return
 
 
@@ -9194,17 +8828,24 @@ Return
 
 Medicine105:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /М>Ж
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Ж>М
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /М>Ж
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Ж>М
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x85 y15 h500 w370 +BackgroundTrans, [С Мужского пола на женский пол]
-Gui, 3:Add, Text, x85 y35 h500 w370 +BackgroundTrans, [С Женского пола на мужской пол]
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [С Мужского пола на женский пол]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [С Женского пола на мужской пол]
 
-Gui, 3:show, center h80 w350, Хирургическая коррекция пола
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ248,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ248,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ249,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ249,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h120 w550,  Хирургическая коррекция пола
 Return
+
 
 
 ;--------------------------------------------------------------------------------
@@ -9303,10 +8944,10 @@ Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Туберкулёз_4
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
-Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Тест на вши ответ да]
-Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Тест на вши ответ нет]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Тест на туберкулёз ответ да]
+Gui, 3:Add, Text, x135 y175 h500 w370 +BackgroundTrans, [Тест на туберкулёз ответ нет]
 
 
 Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ160,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
@@ -9326,20 +8967,29 @@ Return
 
 Medicine113:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Дифтерия_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Дифтерия_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Дифтерия_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Дифтерия_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Дифтерия_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Дифтерия_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Дифтерия_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Тест на дифтерию]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Тест на дифтерию]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Если Да]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Если Нет]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Тест на дифтерию]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Тест на дифтерию eсли да]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Тест на дифтерию если нет]
 
-Gui, 3:show, center h120 w380, Тест на бешенство
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ147,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ147,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ148,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ148,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ149,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ149,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h180 w550, Тест на дифтерию
 Return
 
 
@@ -9347,20 +8997,32 @@ Return
 
 Medicine114:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Бешенство_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Бешенство_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Бешенство_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Бешенство_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Бешенство_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Бешенство_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Бешенство_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Бешенство_4
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Тест на бешенство]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Тест на бешенство]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Если Да]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Если Нет]
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Тест на бешенство]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Тест на бешенство]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Тест на бешенство ответ да]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Тест на бешенство ответ нет]
 
-Gui, 3:show, center h120 w380, Тест на бешенство
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ227,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ227,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ228,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ228,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ229,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ229,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ230,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ230,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Тест на бешенство
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9421,17 +9083,37 @@ Return
 
 Medicine117:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w350,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Шейка_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Шейка_2
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /Шейка_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Шейка_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /Шейка_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /Шейка_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /Шейка_5
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Кольпоскопия]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Кольпоскопия]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Кольпоскопия]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Кольпоскопия]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Кольпоскопия]
+Gui, 3:Add, Text, x135 y175 h500 w370 +BackgroundTrans, [Кольпоскопия]
+Gui, 3:Add, Text, x135 y225 h200 w320 +BackgroundTrans, [Кольпоскопия]
 
-Gui, 3:show, center h80 w350, Кольпоскопия
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ240,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ240,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ241,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ241,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ242,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ242,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ243,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ243,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ244,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ244,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h280 w540, Кольпоскопия
 Return
+
+
 
 ;--------------------------------------------------------------------------------
 
