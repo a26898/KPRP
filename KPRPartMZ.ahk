@@ -530,6 +530,24 @@ SendKPRPMZ(num) {
     global KPRPMZ201, KPRPMZ202, KPRPMZ203, KPRPMZ204, KPRPMZ205, KPRPMZ206, KPRPMZ207, KPRPMZ208, KPRPMZ209, KPRPMZ210
     global KPRPMZ211, KPRPMZ212, KPRPMZ213, KPRPMZ214, KPRPMZ215, KPRPMZ216, KPRPMZ217, KPRPMZ218, KPRPMZ219, KPRPMZ220
     global KPRPMZ221, KPRPMZ222, KPRPMZ223, KPRPMZ224, KPRPMZ225, KPRPMZ226, KPRPMZ227, KPRPMZ228, KPRPMZ229, KPRPMZ230
+    global KPRPMZ231, KPRPMZ232, KPRPMZ233, KPRPMZ234, KPRPMZ235, KPRPMZ236, KPRPMZ237, KPRPMZ238, KPRPMZ239, KPRPMZ240
+    global KPRPMZ241, KPRPMZ242, KPRPMZ243, KPRPMZ244, KPRPMZ245, KPRPMZ246, KPRPMZ247, KPRPMZ248, KPRPMZ249, KPRPMZ250
+    global KPRPMZ251, KPRPMZ252, KPRPMZ253, KPRPMZ254, KPRPMZ255, KPRPMZ256, KPRPMZ257, KPRPMZ258, KPRPMZ259, KPRPMZ260
+    global KPRPMZ261, KPRPMZ262, KPRPMZ263, KPRPMZ264, KPRPMZ265, KPRPMZ266, KPRPMZ267, KPRPMZ268, KPRPMZ269, KPRPMZ270
+    global KPRPMZ271, KPRPMZ272, KPRPMZ273, KPRPMZ274, KPRPMZ275, KPRPMZ276, KPRPMZ277, KPRPMZ278, KPRPMZ279, KPRPMZ280
+    global KPRPMZ281, KPRPMZ282, KPRPMZ283, KPRPMZ284, KPRPMZ285, KPRPMZ286, KPRPMZ287, KPRPMZ288, KPRPMZ289, KPRPMZ290
+    global KPRPMZ291, KPRPMZ292, KPRPMZ293, KPRPMZ294, KPRPMZ295, KPRPMZ296, KPRPMZ297, KPRPMZ298, KPRPMZ299, KPRPMZ300
+    global KPRPMZ301, KPRPMZ302, KPRPMZ303, KPRPMZ304, KPRPMZ305, KPRPMZ306, KPRPMZ307, KPRPMZ308, KPRPMZ309, KPRPMZ310
+    global KPRPMZ311, KPRPMZ312, KPRPMZ313, KPRPMZ314, KPRPMZ315, KPRPMZ316, KPRPMZ317, KPRPMZ318, KPRPMZ319, KPRPMZ320
+    global KPRPMZ321, KPRPMZ322, KPRPMZ323, KPRPMZ324, KPRPMZ325, KPRPMZ326, KPRPMZ327, KPRPMZ328, KPRPMZ329, KPRPMZ330
+    global KPRPMZ331, KPRPMZ332, KPRPMZ333, KPRPMZ334, KPRPMZ335, KPRPMZ336, KPRPMZ337, KPRPMZ338, KPRPMZ339, KPRPMZ340
+    global KPRPMZ341, KPRPMZ342, KPRPMZ343, KPRPMZ344, KPRPMZ345, KPRPMZ346, KPRPMZ347, KPRPMZ348, KPRPMZ349, KPRPMZ350
+    global KPRPMZ351, KPRPMZ352, KPRPMZ353, KPRPMZ354, KPRPMZ355, KPRPMZ356, KPRPMZ357, KPRPMZ358, KPRPMZ359, KPRPMZ360
+    global KPRPMZ361, KPRPMZ362, KPRPMZ363, KPRPMZ364, KPRPMZ365, KPRPMZ366, KPRPMZ367, KPRPMZ368, KPRPMZ369, KPRPMZ370
+    global KPRPMZ371, KPRPMZ372, KPRPMZ373, KPRPMZ374, KPRPMZ375, KPRPMZ376, KPRPMZ377, KPRPMZ378, KPRPMZ379, KPRPMZ380
+    global KPRPMZ381, KPRPMZ382, KPRPMZ383, KPRPMZ384, KPRPMZ385, KPRPMZ386, KPRPMZ387, KPRPMZ388, KPRPMZ389, KPRPMZ390
+    global KPRPMZ391, KPRPMZ392, KPRPMZ393, KPRPMZ394, KPRPMZ395, KPRPMZ396, KPRPMZ397, KPRPMZ398, KPRPMZ399, KPRPMZ400
+
 
     ; --- Короткая пауза перед отправкой ---
     Sleep 150
@@ -540,34 +558,19 @@ SendKPRPMZ(num) {
     ; Получаем переменную Var из функции Greeting()
     Var := Greeting()
 
-    ; --- Массив всех файлов-шаблонов (AutoHotkey v1) ---
-    fileVars := Array(KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9, KPRPMZ10
-        , KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18, KPRPMZ19, KPRPMZ20
-        , KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28, KPRPMZ29, KPRPMZ30
-        , KPRPMZ31, KPRPMZ32, KPRPMZ33, KPRPMZ34, KPRPMZ35, KPRPMZ36, KPRPMZ37, KPRPMZ38, KPRPMZ39, KPRPMZ40
-        , KPRPMZ41, KPRPMZ42, KPRPMZ43, KPRPMZ44, KPRPMZ45, KPRPMZ46, KPRPMZ47, KPRPMZ48, KPRPMZ49, KPRPMZ50
-        , KPRPMZ51, KPRPMZ52, KPRPMZ53, KPRPMZ54, KPRPMZ55, KPRPMZ56, KPRPMZ57, KPRPMZ58, KPRPMZ59, KPRPMZ60
-        , KPRPMZ61, KPRPMZ62, KPRPMZ63, KPRPMZ64, KPRPMZ65, KPRPMZ66, KPRPMZ67, KPRPMZ68, KPRPMZ69, KPRPMZ70
-        , KPRPMZ71, KPRPMZ72, KPRPMZ73, KPRPMZ74, KPRPMZ75, KPRPMZ76, KPRPMZ77, KPRPMZ78, KPRPMZ79, KPRPMZ80
-        , KPRPMZ81, KPRPMZ82, KPRPMZ83, KPRPMZ84, KPRPMZ85, KPRPMZ86, KPRPMZ87, KPRPMZ88, KPRPMZ89, KPRPMZ90
-        , KPRPMZ91, KPRPMZ92, KPRPMZ93, KPRPMZ94, KPRPMZ95, KPRPMZ96, KPRPMZ97, KPRPMZ98, KPRPMZ99, KPRPMZ100
-        , KPRPMZ101, KPRPMZ102, KPRPMZ103, KPRPMZ104, KPRPMZ105, KPRPMZ106, KPRPMZ107, KPRPMZ108, KPRPMZ109, KPRPMZ110
-        , KPRPMZ111, KPRPMZ112, KPRPMZ113, KPRPMZ114, KPRPMZ115, KPRPMZ116, KPRPMZ117, KPRPMZ118, KPRPMZ119, KPRPMZ120
-        , KPRPMZ121, KPRPMZ122, KPRPMZ123, KPRPMZ124, KPRPMZ125, KPRPMZ126, KPRPMZ127, KPRPMZ128, KPRPMZ129, KPRPMZ130
-        , KPRPMZ131, KPRPMZ132, KPRPMZ133, KPRPMZ134, KPRPMZ135, KPRPMZ136, KPRPMZ137, KPRPMZ138, KPRPMZ139, KPRPMZ140
-        , KPRPMZ141, KPRPMZ142, KPRPMZ143, KPRPMZ144, KPRPMZ145, KPRPMZ146, KPRPMZ147, KPRPMZ148, KPRPMZ149, KPRPMZ150
-        , KPRPMZ151, KPRPMZ152, KPRPMZ153, KPRPMZ154, KPRPMZ155, KPRPMZ156, KPRPMZ157, KPRPMZ158, KPRPMZ159, KPRPMZ160
-        , KPRPMZ161, KPRPMZ162, KPRPMZ163, KPRPMZ164, KPRPMZ165, KPRPMZ166, KPRPMZ167, KPRPMZ168, KPRPMZ169, KPRPMZ170
-        , KPRPMZ171, KPRPMZ172, KPRPMZ173, KPRPMZ174, KPRPMZ175, KPRPMZ176, KPRPMZ177, KPRPMZ178, KPRPMZ179, KPRPMZ180
-        , KPRPMZ181, KPRPMZ182, KPRPMZ183, KPRPMZ184, KPRPMZ185, KPRPMZ186, KPRPMZ187, KPRPMZ188, KPRPMZ189, KPRPMZ190
-        , KPRPMZ191, KPRPMZ192, KPRPMZ193, KPRPMZ194, KPRPMZ195, KPRPMZ196, KPRPMZ197, KPRPMZ198, KPRPMZ199, KPRPMZ200
-        , KPRPMZ201, KPRPMZ202, KPRPMZ203, KPRPMZ204, KPRPMZ205, KPRPMZ206, KPRPMZ207, KPRPMZ208, KPRPMZ209, KPRPMZ210
-        , KPRPMZ211, KPRPMZ212, KPRPMZ213, KPRPMZ214, KPRPMZ215, KPRPMZ216, KPRPMZ217, KPRPMZ218, KPRPMZ219, KPRPMZ220
-        , KPRPMZ221, KPRPMZ222, KPRPMZ223, KPRPMZ224, KPRPMZ225, KPRPMZ226, KPRPMZ227, KPRPMZ228, KPRPMZ229, KPRPMZ230)
+
+	; создаём массив
+	fileVars := []
+
+	; заполняем массив переменными KPRPMZ1 ... KPRPMZ400
+	Loop, 400
+	{
+		fileVars.Push(KPRPMZ%A_Index%)
+	}
 
 
-    ; --- Проверка, что номер шаблона в диапазоне 1-28 ---
-    if (num < 1 || num > 230)
+    ; --- Проверка, что номер шаблона в диапазоне 1-400 ---
+    if (num < 1 || num > 400)
         return  ; если номер неправильный — выходим
 
     ; --- Получаем путь к нужному файлу-шаблону ---
@@ -810,7 +813,6 @@ Return
 :?:/Зрения_9::
     SendKPRPMZ(47)
 Return
-
 
 :?:/Вши_1::
     SendKPRPMZ(48)
@@ -1129,10 +1131,292 @@ Return
   SendKPRPMZ(136)
 Return
 
+:?:/ФГДС_1::
+  SendKPRPMZ(137)
+Return
+
+:?:/ФГДС_2::
+  SendKPRPMZ(138)
+Return
+
+:?:/ФГДС_3::
+  SendKPRPMZ(139)
+Return
+
+:?:/ФГДС_4::
+  SendKPRPMZ(140)
+Return
+
+:?:/ФГДС_5::
+  SendKPRPMZ(141)
+Return
+
+:?:/ФКС_1::
+  SendKPRPMZ(142)
+Return
+
+:?:/ФКС_2::
+  SendKPRPMZ(143)
+Return
+
+:?:/ФКС_3::
+  SendKPRPMZ(144)
+Return
+
+:?:/ФКС_4::
+  SendKPRPMZ(145)
+Return
+
+:?:/ФКС_5::
+  SendKPRPMZ(146)
+Return
+
+:?:/Дифтерияе_1::
+  SendKPRPMZ(147)
+Return
+
+:?:/Дифтерияе_2::
+  SendKPRPMZ(148)
+Return
+
+:?:/Дифтерияе_3::
+  SendKPRPMZ(149)
+Return
+
+:?:/ОПТГ_1::
+  SendKPRPMZ(150)
+Return
+
+:?:/ОПТГ_2::
+  SendKPRPMZ(151)
+Return
+
+:?:/ОПТГ_3::
+  SendKPRPMZ(152)
+Return
+
+:?:/ОПТГ_4::
+  SendKPRPMZ(153)
+Return
+
+:?:/ОПТГ_5::
+  SendKPRPMZ(154)
+Return
+
+:?:/ВИЧ_1::
+  SendKPRPMZ(155)
+Return
+
+:?:/ВИЧ_2::
+  SendKPRPMZ(156)
+Return
+
+:?:/ВИЧ_3::
+  SendKPRPMZ(157)
+Return
+
+:?:/ВИЧ_4::
+  SendKPRPMZ(158)
+Return
+
+:?:/ВИЧ_5::
+  SendKPRPMZ(159)
+Return
+
+:?:/Туберкулёз_1::
+  SendKPRPMZ(160)
+Return
+
+:?:/Туберкулёз_2::
+  SendKPRPMZ(161)
+Return
+
+:?:/Туберкулёз_3::
+  SendKPRPMZ(162)
+Return
+
+:?:/Туберкулёз_4::
+  SendKPRPMZ(163)
+Return
+
+:?:/Сотряс_1::
+  SendKPRPMZ(164)
+Return
+
+:?:/Сотряс_2::
+  SendKPRPMZ(165)
+Return
+
+:?:/Сотряс_3::
+  SendKPRPMZ(166)
+Return
+
+:?:/Плод_1::
+  SendKPRPMZ(167)
+Return
+
+:?:/Плод_2::
+  SendKPRPMZ(168)
+Return
+
+:?:/Плод_3::
+  SendKPRPMZ(169)
+Return
+
+:?:/Плод_4::
+  SendKPRPMZ(170)
+Return
+
+:?:/Плод_5::
+  SendKPRPMZ(171)
+Return
+
+:?:/Алкоголь_1::
+  SendKPRPMZ(172)
+Return
+
+:?:/Алкоголь_2::
+  SendKPRPMZ(173)
+Return
+
+:?:/Алкоголь_3::
+  SendKPRPMZ(174)
+Return
+
+:?:/Алкоголь_4::
+  SendKPRPMZ(175)
+Return
+
+:?:/Алкоголь_5::
+  SendKPRPMZ(176)
+Return
+
+:?:/Алкоголь_6::
+  SendKPRPMZ(177)
+Return
+
+:?:/Алкоголь_7::
+  SendKPRPMZ(178)
+Return
+
+:?:/Алкоголь_8::
+  SendKPRPMZ(179)
+Return
+
+:?:/Наркотики_1::
+  SendKPRPMZ(180)
+Return
+
+:?:/Наркотики_2::
+  SendKPRPMZ(181)
+Return
+
+:?:/Наркотики_3::
+  SendKPRPMZ(182)
+Return
+
+:?:/Наркотики_4::
+  SendKPRPMZ(183)
+Return
+
+:?:/Наркотики_5::
+  SendKPRPMZ(184)
+Return
+
+:?:/Наркотики_6::
+  SendKPRPMZ(185)
+Return
+
+:?:/Наркотики_7::
+  SendKPRPMZ(186)
+Return
+
+:?:/Наркотики_8::
+  SendKPRPMZ(187)
+Return
+
+:?:/Давление_1::
+  SendKPRPMZ(188)
+Return
+
+:?:/Давление_2::
+  SendKPRPMZ(189)
+Return
+
+:?:/Давление_3::
+  SendKPRPMZ(190)
+Return
+
+:?:/Рост_1::
+  SendKPRPMZ(191)
+Return
+
+:?:/Рост_2::
+  SendKPRPMZ(192)
+Return
+
+:?:/Рост_3::
+  SendKPRPMZ(193)
+Return
+
+:?:/Рост_4::
+  SendKPRPMZ(194)
+Return
+
+:?:/Коронавирус_1::
+  SendKPRPMZ(195)
+Return
+
+:?:/Коронавирус_2::
+  SendKPRPMZ(196)
+Return
+
+:?:/Коронавирус_3::
+  SendKPRPMZ(197)
+Return
+
+:?:/Коронавирус_4::
+  SendKPRPMZ(198)
+Return
+
+:?:/Сердце_4::
+  SendKPRPMZ(199)
+Return
+
+:?:/Сердце_5::
+  SendKPRPMZ(200)
+Return
+
+:?:/Сердце_6::
+  SendKPRPMZ(201)
+Return
+
+:?:/Сердце_7::
+  SendKPRPMZ(202)
+Return
+
+:?:/Ангина_1::
+  SendKPRPMZ(203)
+Return
+
+:?:/Ангина_2::
+  SendKPRPMZ(204)
+Return
+
+:?:/Ангина_3::
+  SendKPRPMZ(205)
+Return
+
+:?:/Ангина_4::
+  SendKPRPMZ(206)
+Return
+
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
+
+
 
 
 
@@ -1294,25 +1578,7 @@ SendPlay {Enter}
 %vybor%("say тдыхайте и соблюдайте диету. Всего доброго. ", "  " zaderzhka " ")
 Return
 
-:?:/ПМП_1::
-SendPlay {Enter}
-%vybor%("do В медицинской сумке лежит фонарик.", "  " zaderzhka " ")
-%vybor%("me открыл" floor " медицинскую сумку и достал" floor " из нее фонарик", "  " zaderzhka " ")
-%vybor%("me посветил" floor " фонариком в глаз пострадавшего ", "  " zaderzhka " ")
-%vybor%("b При сотрясении мозга реакция зрачка отсутствует.", "  " zaderzhka " ")
-%vybor%("do Зрачок пациента реагирует на свет?", "  " zaderzhka " ")
-%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
-Return
 
-:?:/ПМП_2::
-SendPlay {Enter}
-%vybor%("say У вас выявлено сотрясение мозга, вам необходимо отдохнуть, избегать яркого света и стресса.", "  " zaderzhka " ")
-Return
-
-:?:/ПМП_3::
-SendPlay {Enter}
-%vybor%("say Сотрясение мозга у вас не выявлено, поздравляю, но будьте осторожны.", "  " zaderzhka " ")
-Return
 
 :?:/Челюсти_ПМП::
 SendPlay {Enter}
@@ -1340,45 +1606,6 @@ SendPlay {Enter}
 %vybor%("me записал" floor " результаты исследования в медицинский журнал", "  " zaderzhka " ")
 Return
 
-:?:/Плод_1::
-SendPlay {Enter}
-%vybor%("do В углу палаты стоит гинекологическое кресло.", "  " zaderzhka " ")
-%vybor%("say Снимайте нижнее бельё и присаживайтесь.", "  " zaderzhka " ")
-Return
-:?:/Плод_2::
-SendPlay {Enter}
-%vybor%("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки ", "  " zaderzhka " ")
-%vybor%("do Около  стоит аппарат для наркоза. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " кислородную маску  ", "  " zaderzhka " ")
-%vybor%("me надел" floor " маску на пациента ", "  " zaderzhka " ")
-%vybor%("me включил" floor " аппарат для наркоза ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола перекись водорода и ватку, и обработал" floor " место операции ", "  " zaderzhka " ")
-%vybor%("do На стойке висит фетоскоп. ", "  " zaderzhka " ")
-%vybor%("me снял" floor " фетоскоп со стойки ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вводить фетоскоп в брюшную стенку ", "  " zaderzhka " ")
-%vybor%("me начал" floor " осмотр плода ", "  " zaderzhka " ")
-%vybor%("do Обнаружены отклонения? ", "  " zaderzhka " ")
-Return
-
-:?:/Плод_3::
-SendPlay {Enter}
-%vybor%("me начал" floor " вынимать фетоскоп ", "  " zaderzhka " ")
-%vybor%("me положил" floor " фетоскоп  в аппарат для дезинфекции  ", "  " zaderzhka " ")
-%vybor%("me выключил" floor " аппарат для наркоза", "  " zaderzhka " ")
-%vybor%("me снял" floor " маску с человека ", "  " zaderzhka " ")
-Return
-
-:?:/Плод_4::
-SendPlay {Enter}
-%vybor%("say Есть пороки развития. ", " " zaderzhka " ")
-Return
-
-:?:/Плод_5::
-SendPlay {Enter}
-%vybor%("say Все хорошо. ", " " zaderzhka " ")
-Return
 
 :?:/Стерилизация::
 SendPlay {Enter}
@@ -1539,59 +1766,7 @@ SendPlay {Enter}
 %vybor%("say Если потребуется помощь, позовите.", "  " zaderzhka " ")
 Return
 
-:?:/ФГДС_1::
-SendPlay {Enter}
-%vybor%("say Здравствуйте. Сейчас я проведу Вам гастроскопию.  Ложитесь на кушеткуна левый бок.  ", "  " zaderzhka " ")
-%vybor%("do На столике лежит капа.  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " капу в руку  ", "  " zaderzhka " ")
-%vybor%("Так... Вот, откройте ротзакусите капу.  ", "  " zaderzhka " ")
 
-Return
-
-:?:/ФГДС_2::
-SendPlay {Enter}
-%vybor%("me вставил" floor " капу в рот пациента  ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вводить гастроскоп в пищевод пациента ", "  " zaderzhka " ")
-%vybor%("me начал" floor " изучать пищевод ", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения в пищеводе?  ", "  " zaderzhka " ")
-%vybor%("me продолжил" floor " вводить гастроскоп в желудок пациента ", "  " zaderzhka " ")
-%vybor%("me начал" floor " осматривать стенки желудка ", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения в желудке?  ", "  " zaderzhka " ")
-%vybor%("me осмотрел" floor " двенадцатипёрстную кишку ", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения в двенадцатипёрстной кишке?  ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вынимать гастроскоп из желудка пациента ", "  " zaderzhka " ")
-%vybor%("me положил" floor " гастроскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
-Return
-
-:?:/ФКС_1::
-SendPlay {Enter}
-%vybor%("say Здравствуйте. Сейчас, я проведу Вам, колоноскопию. ", "  " zaderzhka " ")
-%vybor%("do На столе лежат стерильные перчатки. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " перчатки в руки ", "  " zaderzhka " ")
-%vybor%("me надел" floor " перчатки  ", "  " zaderzhka " ")
-%vybor%("do На стойке висит эндоскоп. ", "  " zaderzhka " ")
-%vybor%("me снял" floor " эндоскоп со стойки ", "  " zaderzhka " ")
-%vybor%("me взял" floor " смазку в руку ", "  " zaderzhka " ")
-%vybor%("me смазал" floor " эндоскоп смазкой ", "  " zaderzhka " ")
-%vybor%("me поставил" floor " смазку на стол ", "  " zaderzhka " ")
-%vybor%("me начал" floor " вводить эндоскоп в ректальное отверстие пациента ", "  " zaderzhka " ")
-%vybor%("me начал" floor " визуальный осмотр состояния прямой кишки ", "  " zaderzhka " ")
-%vybor%("do Обнаружены ли отклонения?", "  " zaderzhka " ")
-%vybor%("me начал" floor " вынимать эндоскоп из ректального отверстия пациента ", "  " zaderzhka " ")
-%vybor%("me положил" floor "  эндоскоп в аппарат для дезинфекции ", "  " zaderzhka " ")
-Return
-
-:?:/ФКС_2::
-SendPlay {Enter}
-%vybor%("say К сожалению, у Вас есть некоторые заболевания прямой кишки. ", " " zaderzhka " ")
-%vybor%("say Можете одеваться. ", " " zaderzhka " ")
-Return
-
-:?:/ФКС_3::
-SendPlay {Enter}
-%vybor%("say Вашей прямой кишкой всё в порядке.", " " zaderzhka " ")
-%vybor%("say Можете одеваться. ", " " zaderzhka " ")
-Return
 
 :?:/Донор::
 SendPlay {Enter}
@@ -1947,97 +2122,6 @@ Return
 
 
 
-:?:/Алкоголь_1::
-SendPlay {Enter}
-%vybor%(" " stol "  ", "  " zaderzhka " ")
-%vybor%("do На столе лежит чистый бланк медицинского освидетельствования и ручка. ", "  " zaderzhka " ")
-%vybor%("me заполнил" floor " полученную информацию в бланк ", "  " zaderzhka " ")
-%vybor%("say Назовите свое ФИО? ", "  " zaderzhka " ")
-%vybor%("say А ещё где и кем работаете? ", "  " zaderzhka " ")
-
-Return
-
-
-:?:/Алкоголь_2::
-SendPlay {Enter}
-%vybor%("say Замечательно, кем и когда направлен на медицинское освидетельствование? ", "  " zaderzhka " ")
-%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
-%vybor%("me заполнил" floor " полученную информацию в бланк ", "  " zaderzhka " ")
-%vybor%("do Акт заполнен на половину. ", "  " zaderzhka " ")
-%vybor%("me отложил" floor " бланк и ручку на стол ", "  " zaderzhka " ")
-Return
-
-:?:/Алкоголь_3::
-SendPlay {Enter}
-%vybor%("do В шкафу новая насадка и алкотестер. ", "  " zaderzhka " ")
-%vybor%("me достал" floor " из шкафа новую насадку и алкотестер ", "  " zaderzhka " ")
-%vybor%("do Алкотестер и насадка в руке. ", "  " zaderzhka " ")
-%vybor%("me поставил" floor " новую насадку ", "  " zaderzhka " ")
-%vybor%("do Насадка на алкотестере.  ", "  " zaderzhka " ")
-%vybor%("say Сделайте глубокий выдох в трубку.  ", "  " zaderzhka " ")
-%vybor%("do На экране алкотестера значения [число].  ", "  " zaderzhka " ")
-
-Return
-
-:?:/Алкоголь_4::
-SendPlay {Enter}
-%vybor%(" " stol "  ", "  " zaderzhka " ")
-%vybor%("do На столе находится упаковка медицинских перчаток, склянка медицинского спирта, вата и игла. ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку с медицинскими перчатками, надел" floor " их на руки ", "  " zaderzhka " ")
-%vybor%("me взяв со стола склянку медицинского спирта, открыл" floor " её ", "  " zaderzhka " ")
-%vybor%("me взяв вату со стола, смочил" floor " её спиртом ", "  " zaderzhka " ")
-%vybor%("me отложил" floor " склянку на стол ", "  " zaderzhka " ")
-%vybor%("me обработал" floor " указательный палец правой руки ", "  " zaderzhka " ")
-%vybor%("do Рядом стоит урна. ", "  " zaderzhka " ")
-%vybor%("me выбросил" floor " использованную вату в урну ", "  " zaderzhka " ")
-%vybor%("do Упакованная полоска экспресс-теста на алкоголь лежит на столе. ", "  " zaderzhka " ")
-%vybor%("me открыв упаковку, достал" floor " полоску экспресс-теста ", "  " zaderzhka " ")
-%vybor%("me взяв со стола иглу, подставил" floor " её к указательному пальцу правой руки ", "  " zaderzhka " ")
-%vybor%("me сделав укол, подставил" floor " полоску экспресс-теста к пальцу ", "  " zaderzhka " ")
-%vybor%("do На тест-полоску капнуло необходимое количество крови. ", "  " zaderzhka " ")
-%vybor%("do Экспресс-тест показал положительный результат? ", "  " zaderzhka " ")
-%vybor%("b /do Да. или /do Нет.", "  " zaderzhka " ")
-
-Return
-
-:?:/Алкоголь_5::
-SendPlay {Enter}
-%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
-%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
-%vybor%("me взяв ручку, заполнил" floor " акт и отметил" floor ", что содержание алкоголя в организме не соответствует норме ", "  " zaderzhka " ")
-%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
-%vybor%("me взяв штемпель со стола, поставил" floor " печать «ГВРП МакКарти С. А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-%vybor%("me поставил" floor " личную подпись", "  " zaderzhka " ")
-%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
-
-
-Return
-
-:?:/Алкоголь_6::
-SendPlay {Enter}
-%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
-%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
-%vybor%("me взяв ручку, заполнил" floor " акт и отметил" floor ", что содержание алкоголя в организме соответствует норме ", "  " zaderzhka " ")
-%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
-%vybor%("me взяв штемпель со стола, поставил" floor " печать «ГВРП МакКарти С. А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-%vybor%("me поставил" floor " личную подпись", "  " zaderzhka " ")
-%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
-
-Return
-
-:?:/Алкоголь_7::
-SendPlay {Enter}
-%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления алкоголя и состояния опьянения. ", "  " zaderzhka " ")
-%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
-%vybor%("me взяв ручку, составил" floor " акт и поставил" floor " отметку об отказе от медицинского освидетельствования ", "  " zaderzhka " ")
-%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
-%vybor%("me взяв штемпель со стола, поставил" floor " печать «ГВРП МакКарти С. А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-%vybor%("me поставил" floor " личную подпись", "  " zaderzhka " ")
-%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
-
-Return
-
-
 :?:/АВД_1::
 SendPlay {Enter}
 %vybor%("me снял" floor " с пациента одежду ", " " zaderzhka " ")
@@ -2068,70 +2152,6 @@ Return
 SendPlay {Enter}
 %vybor%("me выключил" floor " АВД апарат и вытащил" floor " электроды ", "  " zaderzhka " ")
 %vybor%("me поставил" floor " апарат на полку  ", "  " zaderzhka " ")
-Return
-
-:?:/Наркотики_1::
-SendPlay {Enter}
-%vybor%(" " stol "  ", "  " zaderzhka " ")
-%vybor%("do На столе лежит чистый бланк медицинского освидетельствования и ручка. ", "  " zaderzhka " ")
-%vybor%("me заполнил" floor " полученную информацию в бланк ", "  " zaderzhka " ")
-%vybor%("say Назовите свое ФИО? ", "  " zaderzhka " ")
-%vybor%("say А ещё где и кем работаете? ", "  " zaderzhka " ")
-
-Return
-
-:?:/Наркотики_2::
-SendPlay {Enter}
-%vybor%("say Замечательно, кем и когда направлен на медицинское освидетельствование? ", "  " zaderzhka " ")
-%vybor%("say По какой причине Вы проходите медицинское свидетельство? ", "  " zaderzhka " ")
-%vybor%("me заполнил" floor " полученную информацию в бланк ", "  " zaderzhka " ")
-%vybor%("do Акт заполнен на половину. ", "  " zaderzhka " ")
-%vybor%("me отложил" floor " бланк и ручку на стол ", "  " zaderzhka " ")
-
-Return
-
-:?:/Наркотики_3::
-SendPlay {Enter}
-%vybor%("do В медицинской сумке находятся необходимые медицинские инструменты.   ", " " zaderzhka " ")
-%vybor%("me открыв сумку, достал" floor " из неё баночку   ", " " zaderzhka " ")
-%vybor%("say Возьмите пожалуйста баночку.   ", " " zaderzhka " ")
-%vybor%("say Сейчас Вам под присмотром сотрудников полиции необходимо отойти, сходить в туалет по-маленькому и принести полученный результат сюда.   ", " " zaderzhka " ")
-%vybor%("say Мочой должна быть наполнена как минимум половина баночки. Ждем Вас тут.   ", " " zaderzhka " ")
-Return
-
-:?:/Наркотики_4::
-SendPlay {Enter}
-%vybor%("me взяв баночку, открыл" floor " ее ", " " zaderzhka " ")
-%vybor%("me достал" floor " из сумки тест-полоску для экспресс-теста на наркотики ", " " zaderzhka " ")
-%vybor%("me опустил" floor " полоску в мочевую жидкость пациента ", " " zaderzhka " ")
-%vybor%("do Какой результат показала тест-полоска? ", " " zaderzhka " ")
-%vybor%("b /do Положительный. или /do Отрицательный.", "  " zaderzhka " ")
-Return
-
-:?:/Наркотики_5::
-SendPlay {Enter}
-%vybor%("do На тест-полоске отобразились две бордовые линии. ", " " zaderzhka " ")
-%vybor%("say Наркотиков в моче пациента не наблюдается, все чисто. ", " " zaderzhka " ")
-%vybor%("me закрыв баночку с анализами пациента, убрал" floor " ее в медицинскую сумку ", " " zaderzhka " ")
-Return
-
-:?:/Наркотики_6::
-SendPlay {Enter}
-%vybor%("do На тест-полоске отобразилась одна бордовая линия. ", " " zaderzhka " ")
-%vybor%("say Тест показал, что Вы употребляли наркотические вещества. Проследуйте за сотрудниками полиции. ", " " zaderzhka " ")
-%vybor%("me закрыв баночку с анализами пациента, убрал" floor " ее в медицинскую сумку ", " " zaderzhka " ")
-Return
-
-:?:/Наркотики_7::
-SendPlay {Enter}
-%vybor%("do На столе лежит акт медицинского освидетельствования для установления факта употребления наркотиков и состояния опьянения. ", "  " zaderzhka " ")
-%vybor%("do Рядом с актом лежит ручка. ", "  " zaderzhka " ")
-%vybor%("me взяв ручку, составил" floor " акт и поставил отметку об отказе от медицинского освидетельствования ", "  " zaderzhka " ")
-%vybor%("do На столе лежит штемпель. ", "  " zaderzhka " ")
-%vybor%("me взяв штемпель со стола, поставил" floor " печать «ГВРП МакКарти С. А. - Минздрав РП» на строке заключения", "  " zaderzhka " ")
-%vybor%("me поставил" floor " личную подпись", "  " zaderzhka " ")
-%vybor%("do Заполненный и заверенный акт лежит на столе. ", "  " zaderzhka " ")
-
 Return
 
 
@@ -2391,47 +2411,6 @@ SendPlay {Enter}
 %vybor%("say На этом все. Всего хорошего. ", "  " zaderzhka " ")
 Return
 
-:?:/ОПТГ_1::
-SendPlay {Enter}
-%vybor%("say Сейчас я проведу вам процедуру под названием ОПТГ... ", "  " zaderzhka " ")
-%vybor%("say ...это панорамный рентгеновский снимок верхней и нижней челюсти. ", "  " zaderzhka " ")
-%vybor%("do В кабинете стоит препарат для ОПТГ. ", "  " zaderzhka " ")
-%vybor%("do на столе лежат одноразовые мундштуки для прикусывания. ", "  " zaderzhka " ")
-%vybor%("say На вас есть металлические предметы? Серьги, цепочки, кольца и т.д. ", "  " zaderzhka " ")
-Return
-
-:?:/ОПТГ_2::
-SendPlay {Enter}
-%vybor%("say Становитесь на платформу и ставьте подборок на специальное место... ", "  " zaderzhka " ")
-%vybor%("say ...так же я сейчас вам дам мундштук, который нужно будет прикусить. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " мундштук и подал" floor " его пациенту ", "  " zaderzhka " ")
-%vybor%("say Прикусите его во рту и поставьте подбородок на специальную выемку перед вами. ", "  " zaderzhka " ")
-Return
-
-:?:/ОПТГ_3::
-SendPlay {Enter}
-%vybor%("say Теперь не двигайтесь, процедура скоро начнется. ", "5500")
-%vybor%("do Перед входом в кабинет находится пульт управления прибором. ", "  " zaderzhka " ")
-%vybor%("me зажал" floor " кнопку на пульте ", "  " zaderzhka " ")
-%vybor%("do Из кабинета слышны характерные звуки работы прибора. ", "  " zaderzhka " ")
-%vybor%("do Загорелась зеленая лампочка. ", "  " zaderzhka " ")
-%vybor%("me отпустил" floor " кнопку и ожидает окончания процедуры ", "  " zaderzhka " ")
-%vybor%("do Внутри кабинета на компьютере появляется снимок. ", "  " zaderzhka " ")
-Return
-
-:?:/ОПТГ_4::
-SendPlay {Enter}
-%vybor%("say Отлично, можете убирать подбородок с подставки и отдавайте мундштук. ", "  " zaderzhka " ")
-Return
-
-:?:/ОПТГ_5::
-SendPlay {Enter}
-%vybor%("do В углу кабинета стоит мусорка. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " мундштук и выкинул его в мусорку ", "  " zaderzhka " ")
-%vybor%("say хорошо, теперь можете забрать свои украшения, если оставляли. Процедура окончена. ", "  " zaderzhka " ")
-Return
-
-
 :?:/Мудрости_1::
 SendPlay {Enter}
 %vybor%("say Мы заботимся о вашем здоровье, поэтому предварительно узнаем.. ", "  " zaderzhka " ")
@@ -2531,57 +2510,6 @@ SendPlay {Enter}
 %vybor%("me взял" floor " водно-воздушный пистолет и высушил" floor " поверхность зубов ", "  " zaderzhka " ")
 %vybor%("me с помощью кисточки тонким слоем нанес" Female " на поверхность зубов лак ", "  " zaderzhka " ")
 %vybor%("say Хорошо, пока можете закрывать рот. Советуем вам прийти ещё несколько раз на прием...  ", "  " zaderzhka " ")
-Return
-
-
-
-:?:/Сердце_4::
-SendPlay {Enter}
-%vybor%("do Стетоскоп висит на шее. ", "  " zaderzhka " ")
-%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши  ", "  " zaderzhka " ")
-%vybor%("me взял" floor " головку стетоскопа ", "  " zaderzhka " ")
-%vybor%("say Поднимайте куртку с футболкой. ", "  " zaderzhka " ")
-Return
-
-:?:/Сердце_5::
-SendPlay {Enter}
-%vybor%("me прислонил" floor " головку стетоскопа к сердцу на спину ", "  " zaderzhka " ")
-%vybor%("say Можете одеваться. ", "  " zaderzhka " ")
-%vybor%("me вытащив ушные наконечники с ушей, повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
-Return
-
-:?:/Давление_1::
-SendPlay {Enter}
-%vybor%("do В медицинской сумке лежит механический тонометр.", " " zaderzhka " ")
-%vybor%("me открыв мед. сумку, взял" floor " механический тонометр ", "  " zaderzhka " ")
-%vybor%("say Давайте руку. ", "  " zaderzhka " ")
-Return
-
-:?:/Давление_2::
-SendPlay {Enter}
-%vybor%("me надел" floor " манжет на руку человеку напротив ", "  " zaderzhka " ")
-%vybor%("me сняв стетоскоп с шеи, вставил" floor " наконечники в уши ", "  " zaderzhka " ")
-%vybor%("me приложил" floor " головку стетоскопа к среднему сгибу руки ", "  " zaderzhka " ")
-%vybor%("me накачивая манжету, взглянул" floor " на циферблат тонометра ", "  " zaderzhka " ")
-%vybor%("do Давление в норме? ", "  " zaderzhka " ")
-%vybor%("me сняв манжету, убрал" floor " ручной тонометр в мед. сумку ", "  " zaderzhka " ")
-%vybor%("me повесил" floor " стетоскоп на шею ", "  " zaderzhka " ")
-Return
-
-:?:/Рост_1::
-SendPlay {Enter}
-%vybor%("do Ростомер с весами стоит в углу.", "  " zaderzhka " ")
-%vybor%("say Снимайте обувь, вставайте на весы, держите спину прямо.", "  " zaderzhka " ")
-Return
-
-:?:/Рост_2::
-SendPlay {Enter}
-%vybor%("me взглянул" floor " на показатели весов ", "  " zaderzhka " ")
-%vybor%("me подтянув измерительный прибор к голове сотрудника, зафиксировал" floor " его ", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на показатели роста", "  " zaderzhka " ")
-%vybor%("do Какой рост у пациента?", "  " zaderzhka " ")
-%vybor%("do Какой вес у пациента?", "  " zaderzhka " ")
-%vybor%("say Хорошо, можете обуваться", "  " zaderzhka " ")
 Return
 
 :?:/Радиация_1::
@@ -2791,47 +2719,6 @@ SendPlay {Enter}
 %vybor%("me открыв шкаф, взял" floor " эластичный бинт и начал" floor " накладывать его на место растяжения ", "  " zaderzhka " ")
 %vybor%("say Вот и всё! Принимайте обезболивающее 3-4 раза в день и не делайте резких движений. ", "  " zaderzhka " ")
 %vybor%("say Всего хорошего, не болейте! ", "  " zaderzhka " ")
-Return
-
-:?:/Коронавирус_1::
-SendPlay {Enter}
-%vybor%("do У стены стоит дозатор с антисептиком. ", "  " zaderzhka " ")
-%vybor%("me нанёс" Female " антисептик на руки и спешно растёр его ", "  " zaderzhka " ")
-%vybor%("me вытащил" floor "  из кармана медицинские перчатки и надел" floor "  их ", "  " zaderzhka " ")
-%vybor%("me вытащил" floor "  из кармана медицинскую маску и надел" floor "  её ", "  " zaderzhka " ")
-%vybor%("do Рядом лежит специальный защитный костюм. ", "  " zaderzhka " ")
-%vybor%("me взял" floor "  специальный защитный костюм и надел" floor "  его ", "  " zaderzhka " ")
-%vybor%("say Сейчас я возьму у вас мазок, который определит наличие COVID-19. ", "  " zaderzhka " ")
-%vybor%("do Рядом стоит медицинский стол с необходимыми материалами. ", "  " zaderzhka " ")
-%vybor%("me взял" floor "  в левую руку медицинский шпатель ", "  " zaderzhka " ")
-%vybor%("me взял" floor "  в правую руку стерильную палочку с ватой ", "  " zaderzhka " ")
-%vybor%("me прижав язык пациента шпателем, ввел" floor "  палочку в ротовую полость ", "  " zaderzhka " ")
-%vybor%("me провел" floor "  тампоном по миндалинам, затем по дужке к язычку ", "  " zaderzhka " ")
-%vybor%("me вынул" floor "  тампон из ротовой полости, не касаясь слизистых поверхностей ", "  " zaderzhka " ")
-%vybor%("do На столе стоит лоток для отработанных материалов. ", "  " zaderzhka " ")
-%vybor%("me отложил" floor "  шпатель в лоток для отработанных материалов ", "  " zaderzhka " ")
-%vybor%("me взял" floor "  в левую руку стерильную пробирку и открыл" floor "  её ", "  " zaderzhka " ")
-%vybor%("me положил" floor "  вату в пробирку и закрыл" floor "  её крышкой ", "  " zaderzhka " ")
-%vybor%("say Прошу вас подождать результатов анализа и не покидать палату. ", "  " zaderzhka " ")
-%vybor%("do На столе лежит тест-полоска. ", "  " zaderzhka " ")
-%vybor%("me открыв пробирку, достал" floor "  из неё вату ", "  " zaderzhka " ")
-%vybor%("me нанёс материал с ваты на тест-полоску ", "  " zaderzhka " ")
-%vybor%("do На тест-полоске происходит реакция. ", "  " zaderzhka " ")
-%vybor%("me следит за реакцией на тест-полоске ", "  " zaderzhka " ")
-%vybor%("do Результат положительный?", "  " zaderzhka " ")
-Return
-
-:?:/Коронавирус_2::
-SendPlay {Enter}
-%vybor%("say У меня плохие новости, у вас выявлен COVID-19. ", "  " zaderzhka " ")
-%vybor%("say Отправляйтесь домой и не контактируйте с людьми.  ", "  " zaderzhka " ")
-%vybor%("say Если вам станет плохо - вызывайте скорую помощь. ", "  " zaderzhka " ")
-Return
-
-:?:/Коронавирус_3::
-SendPlay {Enter}
-%vybor%("say Результат теста отрицательный. COVID-19 у вас не выявлен. ", "  " zaderzhka " ")
-
 Return
 
 
@@ -3298,43 +3185,6 @@ Return
 
 
 
-:?:/Ангина_1::
-SendPlay {Enter}
-%vybor%("do Возле кушетки стоит хирургический столик. ", "  " zaderzhka " ")
-%vybor%("do На столике лежат разнообразные хирургические инструменты с медицинскими принадлежностями. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола упаковку с экспресс-тестом Ангин и вскрыл" floor " её ", "  " zaderzhka " ")
-%vybor%("do Спец.основа на столе. ", "  " zaderzhka " ")
-%vybor%("me взял" floor " пробирку из упаковки и положил" floor " ее на спец.основу ", "  " zaderzhka " ")
-%vybor%("me извлек из упаковки 2 раствора, ватную палочку, тест, и положив его на стол ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " раствор желтого цвета, и капнув 2 капли в пробирку ", "  " zaderzhka " ")
-%vybor%("me открыл" floor " красный раствор, и капнув 4 капли в пробирку ", "  " zaderzhka " ")
-%vybor%("say Гражданин, широко откройте рот. ", "  " zaderzhka " ")
-Return
-
-
-:?:/Ангина_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " ватную палочку со стола и сделал" floor " мазок в районе миндалин и задней стенке глотки ", "  " zaderzhka " ")
-%vybor%("me поместил" floor " ватную палочку в пробирку с раствором ", "  " zaderzhka " ")
-%vybor%("me перемешал" floor " 10 раз раствор при помощи ватной палочки ", "  " zaderzhka " ")
-%vybor%("me достал" floor " ватную палочку из пробирки ", "  " zaderzhka " ")
-%vybor%("me поднял" floor " к тесту ватную палочку и надавил" floor " ", "  " zaderzhka " ")
-%vybor%("me выбросил" floor " ватную палочку в ведро ", "  " zaderzhka " ")
-%vybor%("do На тесте есть 2 полоски? ", "  " zaderzhka " ")
-Return
-
-
-:?:/Ангина_3::
-SendPlay {Enter}
-%vybor%("Вы болены, я выпишу вам Фурацилин Авексима, стоимость 500 рублей, вы согласны? ", "  " zaderzhka " ")
-Return
-
-
-:?:/Ангина_4::
-SendPlay {Enter}
-%vybor%("Вы здоровы можете идти. ", "  " zaderzhka " ")
-Return
-
 :?:/Гвоздь_1::
 SendPlay {Enter}
 %vybor%("do У стены стоит кран. ", "  " zaderzhka " ")
@@ -3732,130 +3582,6 @@ SendPlay {Enter}
 %vybor%("say Теперь, думаю, можете идти. ", "  " zaderzhka " ")
 %vybor%("say  Если заметите какие-либо проблемы — приходите на обследование в больницу.", "  " zaderzhka " ")
 Return
-
-
-:?:/ВИЧ_1::
-SendPlay {Enter}
-%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-%vybor%("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
-%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-%vybor%("say Сейчас я сделаю вам тест, который определит наличие ВИЧ.", "  " zaderzhka " ")
-%vybor%("say Но сначала возьмите стакан и прополощите рот водой.", "  " zaderzhka " ")
-%vybor%("do На столе стоит стакан с водой.", "  " zaderzhka " ")
-Return
-
-:?:/ВИЧ_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " со стола упаковку со стерильным тампоном", "  " zaderzhka " ")
-%vybor%("me вскрыл" floor " упаковку и вытащил" floor " оттуда тампон, держа его за палочку", "  " zaderzhka " ")
-%vybor%("say Откройте рот.", "  " zaderzhka " ")
-Return
-
-:?:/ВИЧ_3::
-SendPlay {Enter}
-%vybor%("me ввел" floor " тампон в ротовую полость пациента", "  " zaderzhka " ")
-%vybor%("me провел" floor " тампоном вдоль верхней десны вперед и назад", "  " zaderzhka " ")
-%vybor%("me перевернул" floor " тампон", "  " zaderzhka " ")
-%vybor%("me провел" floor " тампоном вдоль нижней десны вперед и назад", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " тампон из ротовой полости пациента", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола прибор для проведения экспресс-тестов", "  " zaderzhka " ")
-%vybor%("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
-%vybor%("me нанес" Female " биоматериал с тампона на тест-полоску", "  " zaderzhka " ")
-%vybor%("me нажал" floor " кнопку включения прибора", "  " zaderzhka " ")
-%vybor%("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на экран прибора", "  " zaderzhka " ")
-%vybor%("do Результат положительный?", "  " zaderzhka " ")
-Return
-
-:?:/ВИЧ_4::
-SendPlay {Enter}
-%vybor%("say У меня плохие новости, у вас обнаружен ВИЧ.", "  " zaderzhka " ")
-%vybor%("say Теперь вам необходимо пожизненно принимать лекарства для снижения активности ВИЧ.", "  " zaderzhka " ")
-%vybor%("say Я выпишу вам препараты Тенофовир и Эмтрицитабин.", "  " zaderzhka " ")
-%vybor%("say Стоимость составляет 500 рублей. Вы согласны?", "  " zaderzhka " ")
-Return
-
-:?:/ВИЧ_5::
-SendPlay {Enter}
-%vybor%("say Результат теста отрицательный. ВИЧ у вас не выявлен.", "  " zaderzhka " ")
-Return
-
-
-:?:/Туберкулёз_1::
-SendPlay {Enter}
-%vybor%("do На стене висит дозатор с антисептиком.", "  " zaderzhka " ")
-%vybor%("me нанес" Female " антисептик на руки и спешно растер его", "  " zaderzhka " ")
-%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их", "  " zaderzhka " ")
-%vybor%("do Перед сотрудником стоит медицинский стол.", "  " zaderzhka " ")
-%vybor%("do На медицинском столе лежат все необходимые материалы.", "  " zaderzhka " ")
-%vybor%("say Давайте руку.", "  " zaderzhka " ")
-Return
-:?:/Туберкулёз_2::
-SendPlay {Enter}
-%vybor%("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её", "  " zaderzhka " ")
-%vybor%("me протер" Female " палец пациента спиртовой салфеткой", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола ланцет и распаковал" floor " его", "  " zaderzhka " ")
-%vybor%("say Сейчас я буду брать у вас кровь из пальца.", "  " zaderzhka " ")
-%vybor%("me проколол" floor " ланцетом кожу пальца пациента", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола устройство для проведения экспресс-тестов", "  " zaderzhka " ")
-%vybor%("me нажал" floor " на кнопку включения прибора", "  " zaderzhka " ")
-%vybor%("do В прибор вставлена тест-полоска.", "  " zaderzhka " ")
-%vybor%("me взял" floor " палец пациента и провел" floor " им по тест-полоске", "  " zaderzhka " ")
-%vybor%("do Прибор провел измерения и вывел результат на экран.", "  " zaderzhka " ")
-%vybor%("me взглянул" floor " на экран устройства", "  " zaderzhka " ")
-%vybor%("do Результат положительный?", "  " zaderzhka " ")
-Return
-:?:/Туберкулёз_3::
-SendPlay {Enter}
-%vybor%("say У меня плохие новости, у вас обнаружен туберкулёз.", "  " zaderzhka " ")
-%vybor%("say Вас необходимо госпитализировать в больницу.", "  " zaderzhka " ")
-%vybor%("say А пока я выпишу вам антибиотик Супракс.", "  " zaderzhka " ")
-%vybor%("say Его стоимость 500 рублей. Вы согласны?", "  " zaderzhka " ")
-Return
-
-:?:/Туберкулёз_4::
-SendPlay {Enter}
-%vybor%("say Результат отрицательный, туберкулёз у вас не обнаружен.  ", "  " zaderzhka " ")
-Return
-
-:?:/Дифтерияе_1::
-SendPlay {Enter}
-%vybor%("do На стене висит дозатор с антисептиком..", "  " zaderzhka " ")
-%vybor%("me нанес" Female " антисептик на руки и спешно растерс" Female " его.", "  " zaderzhka " ")
-%vybor%("do В кармане лежат медицинские перчатки.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " из кармана медицинские перчатки и надел" floor " их.", "  " zaderzhka " ")
-%vybor%("do Перед сотрудником стоит медицинский стол..", "  " zaderzhka " ")
-%vybor%("do На медицинском столе лежат все необходимые материалы..", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола спиртовую салфетку и распаковал" floor " её.", "  " zaderzhka " ")
-%vybor%("me протерс" Female " место укола спиртовой салфеткой.", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола шприц и распаковал" floor " его.", "  " zaderzhka " ")
-%vybor%("me взял" floor " со стола ампулу с внутрикожной пробой и распаковал" floor " её.", "  " zaderzhka " ")
-%vybor%("me вставил" floor " шприц в ампулу и набрал" floor " в него лекарство.", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " шприц из ампулы.", "  " zaderzhka " ")
-%vybor%("me ввел" floor " шприц под кожу пациента", "  " zaderzhka " ")
-%vybor%("me нажав на поршень шприца, ввел" floor " внутрикожную пробу", "  " zaderzhka " ")
-%vybor%("me вытащил" floor " шприц из-под кожи пациента", "  " zaderzhka " ")
-%vybor%("do В месте инъекции происходит положительная реакция?", "  " zaderzhka " ")
-%vybor%("b Если реакция положительная, значит дифтерия обнаружена.", "  " zaderzhka " ")
-Return
-
-
-:?:/Дифтерияе_2::
-SendPlay {Enter}
-%vybor%("say У меня плохие новости, у вас обнаружена дифтерия.", "  " zaderzhka " ")
-%vybor%("say Сейчас я сделаю вам укол противодифтерийной сыворотки.", "  " zaderzhka " ")
-Return
-
-
-:?:/Дифтерияе_3::
-SendPlay {Enter}
-%vybor%("say Реакция отрицательная, дифтерия у вас не обнаружена.", "  " zaderzhka " ")
-Return
-
 
 :?:/Бешенство_1::
 SendPlay {Enter}
@@ -7541,19 +7267,37 @@ Return
 
 Medicine10:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w300,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ФГДС_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ФГДС_2
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /ФГДС_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /ФГДС_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /ФГДС_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /ФГДС_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /ФГДС_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Гастроскопия]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Гастроскопия]
-Gui, 3:show, center h80 w300, Гастроскопия
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Гастроскопия]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Гастроскопия]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Гастроскопия]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Гастроскопия]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [Гастроскопия]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ137,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ137,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ138,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ138,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ139,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ139,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ140,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ140,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ141,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ141,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h280 w540, Гастроскопия
 Return
-
-
 
 ;--------------------------------------------------------------------------------
 
@@ -7715,18 +7459,38 @@ Return
 
 Medicine18:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h100 w300,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ФКС_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ФКС_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /ФКС_3
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /ФКС_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /ФКС_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /ФКС_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /ФКС_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /ФКС_5
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Колоноскопия ]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Колоноскопия ответ да]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [Колоноскопия ответ нет]
-Gui, 3:show, center h100 w300, Колоноскопия
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Колоноскопия]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Колоноскопия]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Колоноскопия]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Колоноскопия ответ да]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [Колоноскопия ответ нет]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ142,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ142,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ143,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ143,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ144,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ144,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ145,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ145,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ146,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ146,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h280 w540, Колоноскопия
 Return
+
 
 
 ;--------------------------------------------------------------------------------
@@ -7938,58 +7702,99 @@ Return
 
 Medicine30:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w520,
+Gui, 3:Add, Picture, x0 y0 h200 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Алкоголь_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Алкоголь_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Алкоголь_3
-Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Алкоголь_4
-Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Алкоголь_5
-Gui, 3:Add, Text, x10 y115 h20 w120 +BackgroundTrans, /Алкоголь_6
-Gui, 3:Add, Text, x10 y135 h20 w120 +BackgroundTrans, /Алкоголь_7
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Алкоголь_1
+Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Алкоголь_2
+Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Алкоголь_3
+Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Алкоголь_4
+Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Алкоголь_5
+Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /Алкоголь_6
+Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /Алкоголь_7
+Gui, 3:Add, Text, x10 y440 h200 w120 +BackgroundTrans, /Алкоголь_8
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x130 y15 h500 w370 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
-Gui, 3:Add, Text, x130 y35 h500 w370 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
-Gui, 3:Add, Text, x130 y55 h500 w370 +BackgroundTrans, [АЛКОТЕСТЕР]
-Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [ВЗЯТИЕ КРОВИ]
-Gui, 3:Add, Text, x130 y95 h500 w490 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ превышена норма в 0,3 промилле]
-Gui, 3:Add, Text, x130 y115 h500 w490 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ не превышена норма в 0,3 промилле]
-Gui, 3:Add, Text, x130 y135 h500 w370 +BackgroundTrans, [Проверка на Алкоголь Акт отказа]
+Gui, 3:Add, Text, x145 y25 h700 w570 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
+Gui, 3:Add, Text, x145 y85 h700 w570 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x145 y145 h700 w570 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x145 y205 h700 w570 +BackgroundTrans, [АЛКОТЕСТЕР]
+Gui, 3:Add, Text, x145 y260 h700 w570 +BackgroundTrans, [ВЗЯТИЕ КРОВИ]
+Gui, 3:Add, Text, x145 y325 h700 w570 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ превышена норма в 0,3 промилле]
+Gui, 3:Add, Text, x145 y385 h700 w570 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ не превышена норма в 0,3 промилле]
+Gui, 3:Add, Text, x145 y445 h700 w570 +BackgroundTrans, [Проверка на алкоголь Акт отказа]
 
-Gui, 3:show, center h180 w600, Проверка на Алкоголь
+
+Gui, 3:Add, Picture, x630 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ172, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ172,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ173,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ173,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ174,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ174,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ175,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ175,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ176,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ176,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ177,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ177,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ178,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ178,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ179,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ179,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+
+Gui, 3:show, center h500 w800, Проверка на алкоголь
 Return
 
 ;--------------------------------------------------------------------------------
 
 Medicine31:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w450,
+Gui, 3:Add, Picture, x0 y0 h200 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Наркотики_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Наркотики_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Наркотики_3
-Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Наркотики_4
-Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Наркотики_5
-Gui, 3:Add, Text, x10 y115 h20 w120 +BackgroundTrans, /Наркотики_6
-Gui, 3:Add, Text, x10 y135 h20 w120 +BackgroundTrans, /Наркотики_7
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Наркотики_1
+Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /Наркотики_2
+Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /Наркотики_3
+Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /Наркотики_4
+Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /Наркотики_5
+Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /Наркотики_6
+Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /Наркотики_7
+Gui, 3:Add, Text, x10 y440 h200 w120 +BackgroundTrans, /Наркотики_8
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x130 y15 h500 w370 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
-Gui, 3:Add, Text, x130 y35 h500 w370 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
-Gui, 3:Add, Text, x130 y55 h500 w370 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
-Gui, 3:Add, Text, x130 y75 h500 w370 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
-Gui, 3:Add, Text, x130 y95 h500 w490 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче не были найдены следы наркотиков]
-Gui, 3:Add, Text, x130 y115 h500 w490 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче были обнаружены наркотики]
-Gui, 3:Add, Text, x130 y135 h500 w370 +BackgroundTrans, [Проверка на Наркотики Акт отказа]
+Gui, 3:Add, Text, x145 y25 h700 w570 +BackgroundTrans, [НАЧАЛО СОСТАВЛЕНИЯ АКТА]
+Gui, 3:Add, Text, x145 y85 h700 w570 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x145 y145 h700 w570 +BackgroundTrans, [СОСТАВЛЕНИЕ АКТА]
+Gui, 3:Add, Text, x145 y205 h700 w570 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
+Gui, 3:Add, Text, x145 y260 h700 w570 +BackgroundTrans, [ПРОВЕДЕНИЕ ПРОЦЕДУРЫ]
+Gui, 3:Add, Text, x145 y325 h700 w570 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче не были найдены следы наркотиков]
+Gui, 3:Add, Text, x145 y385 h700 w570 +BackgroundTrans, [ЗАКЛЮЧЕНИЕ в моче были обнаружены наркотики]
+Gui, 3:Add, Text, x145 y445 h700 w570 +BackgroundTrans, [Проверка на Наркотики акт отказа]
 
-Gui, 3:show, center h180 w600, Проверка на Наркотики
+
+Gui, 3:Add, Picture, x630 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ180, C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ180,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ181,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ181,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ182,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ182,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ183,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ183,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ184,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ184,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ185,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ185,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ186,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ186,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x630 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ187,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x700 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ187,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h500 w800, Проверка на наркотики
 Return
-
 
 
 ;--------------------------------------------------------------------------------
@@ -8301,20 +8106,33 @@ Medicine47:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Плод_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Плод_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /Плод_3
-Gui, 3:Add, Text, x10 y75 h20 w120 +BackgroundTrans, /Плод_4
-Gui, 3:Add, Text, x10 y95 h20 w120 +BackgroundTrans, /Плод_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /Плод_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Плод_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /Плод_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /Плод_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /Плод_5
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Фетоскопия]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Фетоскопия]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Фетоскопия]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Фетоскопия ответ да]
-Gui, 3:Add, Text, x145 y95 h500 w370 +BackgroundTrans, [Фетоскопия ответ нет]
-Gui, 3:show, center h140 w400, Фетоскопия
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Фетоскопия]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Фетоскопия]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Фетоскопия]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Фетоскопия ответ да]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [Фетоскопия ответ нет]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ167,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ167,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ168,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ168,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ169,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ169,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ170,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ170,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ171,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ171,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h280 w540, Фетоскопия
 Return
 
 ;--------------------------------------------------------------------------------
@@ -8423,22 +8241,38 @@ Return
 
 Medicine54:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h140 w500,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ОПТГ_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ОПТГ_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /ОПТГ_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /ОПТГ_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /ОПТГ_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /ОПТГ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /ОПТГ_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /ОПТГ_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /ОПТГ_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /ОПТГ_5
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Панорамный снимок, он же Рентген всех зубов]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Если нет]
-Gui, 3:Add, Text, x100 y55 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Продолжение]
-Gui, 3:Add, Text, x100 y95 h500 w370 +BackgroundTrans, [Окончание]
-Gui, 3:show, center h140 w500, Панорамный снимок, он же Рентген всех зубов
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Панорамный снимок]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Если нет]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Продолжение]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Продолжение]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [Окончание]
+
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ150,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ150,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ151,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ151,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ152,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ152,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ153,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ153,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ154,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ154,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h280 w540, Панорамный снимок он же Рентген всех зубов
 Return
+
 
 ;--------------------------------------------------------------------------------
 
@@ -8544,55 +8378,96 @@ Return
 
 Medicine60:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w420,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Сердце_4
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Сердце_5
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Сердце_4
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Сердце_5
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Сердце_6
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Сердце_7
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
+Gui, 3:Add, Text, x120 y25 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
+Gui, 3:Add, Text, x120 y75 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
+Gui, 3:Add, Text, x120 y125 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
+Gui, 3:Add, Text, x120 y175 h500 w370 +BackgroundTrans, [Проверка шумов в сердце]
 
-Gui, 3:show, center h80 w420,
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ199,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ199,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ200,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ200,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ201,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ201,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ202,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ202,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Проверка на вши
 Return
+
+
+
 
 ;--------------------------------------------------------------------------------
 
 Medicine61:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w420,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Давление_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Давление_2
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Давление_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Давление_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Давление_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x165 y15 h500 w370 +BackgroundTrans, [Проверка давления]
-Gui, 3:Add, Text, x165 y35 h500 w370 +BackgroundTrans, [Проверка давления]
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [Проверка давления]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [ЕПроверка давления]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Проверка давления]
 
-Gui, 3:show, center h80 w420, Проверка давления
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ188,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ188,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ189,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ189,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ190,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ190,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h180 w550, Проверка давления
 Return
 
 ;--------------------------------------------------------------------------------
 
 Medicine62:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h80 w400,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Рост_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Рост_2
-
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Рост_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Рост_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Рост_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Рост_4
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
-Gui, 3:Add, Text, x100 y35 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
+Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
+Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Взвешивание, измерение роста]
 
-Gui, 3:show, center h80 w400, Взвешивание, измерение роста
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ191,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ191,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ192,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ192,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ193,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ193,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ194,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ194,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Взвешивание, измерение роста
 Return
-
 ;--------------------------------------------------------------------------------
 
 Medicine63:
@@ -8692,19 +8567,33 @@ Return
 
 Medicine69:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w450,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Коронавирус_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Коронавирус_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Коронавирус_3
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Коронавирус_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Коронавирус_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Коронавирус_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Коронавирус_4
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x165 y15 h500 w370 +BackgroundTrans, [Тест на Коронавирус]
-Gui, 3:Add, Text, x165 y35 h500 w370 +BackgroundTrans, [Тест на Коронавирус ответ да]
-Gui, 3:Add, Text, x165 y55 h500 w370 +BackgroundTrans, [Тест на Коронавирус ответ нет]
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Тест на коронавирус]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Тест на коронавирус]
+Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Тест на коронавирус ответ да]
+Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Тест на коронавирус ответ нет]
 
-Gui, 3:show, center h120 w450, Тест на Коронавирус
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ195,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ195,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ196,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ196,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ197,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ197,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ198,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ198,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Тест на коронавирус
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9152,20 +9041,32 @@ Return
 
 Medicine97:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Ангина_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Ангина_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Ангина_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Ангина_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Ангина_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Ангина_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Ангина_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Ангина_4
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Тест на ангину]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Тест на ангину]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Тест на ангину ответ да]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Тест на ангину ответ нет]
+Gui, 3:Add, Text, x120 y25 h500 w370 +BackgroundTrans, [Тест на ангину]
+Gui, 3:Add, Text, x120 y75 h500 w370 +BackgroundTrans, [Тест на ангину]
+Gui, 3:Add, Text, x120 y125 h500 w370 +BackgroundTrans, [Тест на ангину ответ да]
+Gui, 3:Add, Text, x120 y175 h500 w370 +BackgroundTrans, [Тест на ангину ответ нет]
 
-Gui, 3:show, center h120 w380, Тест на ангину
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ203,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ203,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ204,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ204,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ205,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ205,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ206,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ206,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Тест на ангину
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9309,21 +9210,7 @@ Return
 ;--------------------------------------------------------------------------------
 
 Medicine107:
-Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
-Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Масло_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Масло_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Масло_3
 
-
-Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Проверка масла]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Масло в норме]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Долить]
-
-
-Gui, 3:show, center h100 w380, Проверка масла
 Return
 
 ;--------------------------------------------------------------------------------
@@ -9362,15 +9249,7 @@ Return
 ;--------------------------------------------------------------------------------
 
 Medicine110:
-Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h60 w390,
-Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Мойка_ПАЗ
 
-Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Мойка ПАЗА]
-
-Gui, 3:show, center h60 w350, Мойка ПАЗА
 Return
 
 
@@ -9378,44 +9257,70 @@ Return
 
 Medicine111:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h140 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Вич_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Вич_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Вич_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Вич_4
-Gui, 3:Add, Text, x10 y95 h200 w320 +BackgroundTrans, /Вич_5
+Gui, 3:Add, Text, x10 y25 h200 w320 +BackgroundTrans, /ВИЧ_1
+Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /ВИЧ_2
+Gui, 3:Add, Text, x10 y125 h200 w320 +BackgroundTrans, /ВИЧ_3
+Gui, 3:Add, Text, x10 y175 h200 w320 +BackgroundTrans, /ВИЧ_4
+Gui, 3:Add, Text, x10 y225 h200 w320 +BackgroundTrans, /ВИЧ_5
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Тест на вич]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Тест на вич]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Тест на вич]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Если Да]
-Gui, 3:Add, Text, x145 y95 h200 w320 +BackgroundTrans, [Если Нет]
+Gui, 3:Add, Text, x125 y25 h500 w370 +BackgroundTrans, [Тест на вич]
+Gui, 3:Add, Text, x125 y75 h500 w370 +BackgroundTrans, [Тест на вич]
+Gui, 3:Add, Text, x125 y125 h500 w370 +BackgroundTrans, [Тест на вич]
+Gui, 3:Add, Text, x125 y175 h500 w370 +BackgroundTrans, [Если да]
+Gui, 3:Add, Text, x125 y225 h200 w320 +BackgroundTrans, [Если нет]
 
-Gui, 3:show, center h120 w380, Тест на вич
+
+Gui, 3:Add, Picture, x390 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ155,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ155,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ156,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ156,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ157,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ157,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ158,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ158,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x390 y210 w48 h48 +BackgroundTrans gSelectKPRPMZ159,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x470 y210 w48 h48 +BackgroundTrans gNotebookKPRPMZ159,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 3:show, center h280 w540, Тест на ВИЧ
 Return
+
 
 ;--------------------------------------------------------------------------------
 
 Medicine112:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h120 w380,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w320 +BackgroundTrans, /Туберкулёз_1
-Gui, 3:Add, Text, x10 y35 h200 w320 +BackgroundTrans, /Туберкулёз_2
-Gui, 3:Add, Text, x10 y55 h200 w320 +BackgroundTrans, /Туберкулёз_3
-Gui, 3:Add, Text, x10 y75 h200 w320 +BackgroundTrans, /Туберкулёз_4
+
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Туберкулёз_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Туберкулёз_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Туберкулёз_3
+Gui, 3:Add, Text, x10 y175 h20 w120 +BackgroundTrans, /Туберкулёз_4
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
-Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
-Gui, 3:Add, Text, x145 y55 h500 w370 +BackgroundTrans, [Если Да]
-Gui, 3:Add, Text, x145 y75 h500 w370 +BackgroundTrans, [Если Нет]
+Gui, 3:Add, Text, x100 y25 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
+Gui, 3:Add, Text, x100 y75 h500 w370 +BackgroundTrans, [Тест на туберкулёз]
+Gui, 3:Add, Text, x100 y125 h500 w370 +BackgroundTrans, [Тест на вши ответ да]
+Gui, 3:Add, Text, x100 y175 h500 w370 +BackgroundTrans, [Тест на вши ответ нет]
 
-Gui, 3:show, center h120 w380, Тест на туберкулёз
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ160,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ160,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ161,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ161,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ162,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ162,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y160 w48 h48 +BackgroundTrans gSelectKPRPMZ163,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y160 w48 h48 +BackgroundTrans gNotebookKPRPMZ163,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h220 w550, Тест на туберкулёз
 Return
-
 
 ;--------------------------------------------------------------------------------
 
@@ -10287,18 +10192,29 @@ Return
 
 PMP13:
 Gui, 3:Destroy,
-Gui, 3:Add, Picture, x0 y0 h100 w310,
+Gui, 3:Add, Picture, x0 y0 h100 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y15 h200 w250 +BackgroundTrans, /ПМП_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ПМП_2
-Gui, 3:Add, Text, x10 y55 h20 w120 +BackgroundTrans, /ПМП_3
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /Сотряс_1
+Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /Сотряс_2
+Gui, 3:Add, Text, x10 y125 h20 w120 +BackgroundTrans, /Сотряс_3
+
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x100 y15 h500 w370 +BackgroundTrans, [ПМП при сотрясении]
-Gui, 3:Add, Text, x100 y35 h200 w120 +BackgroundTrans, [Если /do Да]
-Gui, 3:Add, Text, x100 y55 h20 w120 +BackgroundTrans,  [Если /do Нет]
-Gui, 3:show, center h100 w310, ПМП при сотрясении
+Gui, 3:Add, Text, x135 y25 h500 w370 +BackgroundTrans, [ПМП при сотрясении]
+Gui, 3:Add, Text, x135 y75 h500 w370 +BackgroundTrans, [Если /do Да]
+Gui, 3:Add, Text, x135 y125 h500 w370 +BackgroundTrans, [Если /do Нет]
+
+
+Gui, 3:Add, Picture, x380 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ164,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ164,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y60 w48 h48 +BackgroundTrans gSelectKPRPMZ165,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y60 w48 h48 +BackgroundTrans gNotebookKPRPMZ165,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 3:Add, Picture, x380 y110 w48 h48 +BackgroundTrans gSelectKPRPMZ166,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x460 y110 w48 h48 +BackgroundTrans gNotebookKPRPMZ166,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+Gui, 3:show, center h180 w550, ПМП при сотрясении
 Return
 
 
@@ -10416,7 +10332,7 @@ Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Живот_2
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, Consolas
-Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [ВыписатьНо-шпу]
+Gui, 3:Add, Text, x145 y15 h500 w370 +BackgroundTrans, [Выписать:Но-шпу]
 Gui, 3:Add, Text, x145 y35 h500 w370 +BackgroundTrans, [Выписать:Дротаверин]
 Return
 
@@ -11400,10 +11316,6 @@ Gui, 4:Add, Picture, x770 y725 w64 h64  +BackgroundTrans gVoprosKPRPMZ,   C:\Pro
 
 Gui, 4:Show, w1000 h790, Редактор раскладки сочетания клавиш
 Return
-
-
-
-
 
 
 
@@ -12951,7 +12863,6 @@ NotebookKPRPMZ400:
 return
 
 
-; Метки для 1–100
 SelectKPRPMZ1:
     SelectKPRPMZ(1)
 return
@@ -14479,5 +14390,4 @@ SelectKPRPMZ(num) {
     Gosub, Change
 }
 return
-
 
