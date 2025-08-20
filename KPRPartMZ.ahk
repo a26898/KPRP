@@ -3481,25 +3481,6 @@ SendPlay {Enter}
 %vybor%("say Я выпишу Вам Мелоксикам. Его стоимость 500 рублей. Вы согласны? ", "1000")
 Return
 
-; Функция для определения активного монитора
-GetActiveMonitorInfo() {
-    WinGet, activeHwnd, ID, A
-    if !activeHwnd
-        return false
-    
-    WinGetPos, winX, winY, winW, winH, ahk_id %activeHwnd%
-    centerX := winX + winW // 2
-    centerY := winY + winH // 2
-    
-    SysGet, monitorCount, MonitorCount
-    Loop, %monitorCount% {
-        SysGet, monArea, Monitor, %A_Index%
-        if (centerX >= monAreaLeft && centerX <= monAreaRight && centerY >= monAreaTop && centerY <= monAreaBottom) {
-            return { left: monAreaLeft, top: monAreaTop, right: monAreaRight, bottom: monAreaBottom }
-        }
-    }
-    return false
-}
 
 :?:/ВЗ+::
 SendPlay {Enter}
@@ -3913,50 +3894,11 @@ IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
-
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
-
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
 %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
@@ -4070,44 +4012,7 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
@@ -4359,30 +4264,22 @@ MsgBox, 48, Предупреждение, Вы изменили данные н�
 return
 
 
-
 UpdateTime:
-    ; Время дежурства — с момента запуска (не сбрасывается)
-    elapsedDuty := A_TickCount - startTime
-    elapsedDutySec := Floor(elapsedDuty / 1000)
-    hoursDuty := Floor(elapsedDutySec / 3600)
-    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
-    secondsDuty := Mod(elapsedDutySec, 60)
-    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
+    elapsed := A_TickCount - startTime
+    FormatTimeStr := Format("{:02}:{:02}:{:02}"
+        , Floor(elapsed/3600000)
+        , Mod(Floor(elapsed/60000),60)
+        , Mod(Floor(elapsed/1000),60))
 
-    ; Время до доклада — обратный отсчёт от 10 минут
-    elapsedDoclad := A_TickCount - docladStart
-    if (elapsedDoclad >= docladInterval) {
-        docladStart := A_TickCount  ; сброс обратного отсчёта
-        elapsedDoclad := 0
-    }
-    remaining := docladInterval - elapsedDoclad
-    remainingSec := Floor(remaining / 1000)
-    hoursRem := Floor(remainingSec / 3600)
-    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
-    secondsRem := Mod(remainingSec, 60)
-    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
+    remaining := docladInterval - (A_TickCount - docladStart)
+    if (remaining < 0)
+        remaining := 0
+    RemTimeStr := Format("{:02}:{:02}:{:02}"
+        , Floor(remaining/3600000)
+        , Mod(Floor(remaining/60000),60)
+        , Mod(Floor(remaining/1000),60))
 
-    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%
+    GuiControl,, TimerText, Дежурство: %FormatTimeStr%`nДо доклада: %RemTimeStr%
 return
 
 
@@ -4425,45 +4322,7 @@ If (Patrol_1 != "") {
 IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
-
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
@@ -4601,44 +4460,7 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
@@ -4771,49 +4593,11 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount
 SetTimer, UpdateTime, 1000
-
 
 SendPlay {Enter}
 %vybor%("do КПК висит на поясе.", "500")
@@ -4928,45 +4712,7 @@ IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
 
 WinWaitActive, ahk_exe gta_sa.exe
 
-
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-
-; Размер окна
-winWidth := 403
-winHeight := 109
-
-; Создаем регион с закругленными углами (радиус 10 пикселей)
-radius := 20
-WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
-
-; Добавляем картинку
-Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
-
-; Добавляем текст таймера поверх картинки
-Gui, Font, s20 cgray Bold
-Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
-
-; Получаем координаты активного монитора
-monitorInfo := GetActiveMonitorInfo()
-if monitorInfo
-{
-    xPos := monitorInfo.right - winWidth - 20
-    yPos := monitorInfo.bottom - winHeight - 770
-}
-else
-{
-    ; Fallback на основной монитор
-    SysGet, monLeft, 0
-    SysGet, monTop, 1
-    SysGet, monRight, 2
-    SysGet, monBottom, 3
-    xPos := monRight - winWidth - 40
-    yPos := monBottom - winHeight - 40
-}
-
-Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
-
-; Таймер
+CreateAdaptiveGUI()
 startTime := A_TickCount
 docladInterval := 590000
 docladStart := A_TickCount

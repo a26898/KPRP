@@ -917,11 +917,8 @@ if (Taymer_Nastroyka = "Включен") {
     Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
 }
 
-
-
-
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
-Run, "C:\ProgramData\KPRP\KPRP-main\Diskorod.exe"
+Run, "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -1079,7 +1076,92 @@ Greeting()
     return Greeting
 }
 
+; Функция создания уведомляющего GUI
+CreateAdaptiveGUI() {
+    global winWidth, winHeight, xPos, yPos, NotifyPic, TimerText
+    
+    Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 
+    ; Размер окна с учетом DPI
+    winWidth := 403
+    winHeight := 109
+
+    ; Получаем масштаб DPI
+    DllCall("Shcore.dll\GetScaleFactorForMonitor", "ptr", DllCall("MonitorFromWindow", "ptr", WinExist(), "uint", 2, "ptr"), "int*", scaleFactor)
+    dpiScale := (scaleFactor ? scaleFactor/100 : 1)
+
+    ; Корректируем размеры под DPI
+    winWidth := Round(winWidth * dpiScale)
+    winHeight := Round(winHeight * dpiScale)
+    radius := Round(20 * dpiScale)
+
+    ; Создаем регион с закругленными углами
+    WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+
+    ; Добавляем картинку (объявляем переменную как глобальную)
+    Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+
+    ; Добавляем текст таймера с адаптивным шрифтом (объявляем переменную как глобальную)
+    fontSize := Round(20 * dpiScale)
+    Gui, Font, s%fontSize% cgray Bold
+    Gui, Add, Text, vTimerText x30 y20 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00
+
+    ; Получаем координаты активного монитора с безопасным позиционированием
+    monitorInfo := GetActiveMonitorInfo()
+    if monitorInfo
+    {
+        ; Безопасное позиционирование (не выходит за границы экрана)
+        xPos := monitorInfo.right - winWidth - Round(20 * dpiScale)
+        yPos := monitorInfo.bottom - winHeight - Round(770 * dpiScale)
+        
+        ; Проверка для маленьких разрешений (1366x768 и меньше)
+        if (monitorInfo.right - monitorInfo.left <= 1366)
+        {
+            yPos := monitorInfo.bottom - winHeight - Round(460 * dpiScale)
+        }
+    }
+    else
+    {
+        ; Fallback на основной монитор с безопасным позиционированием
+        SysGet, monRight, 2
+        SysGet, monBottom, 3
+        xPos := monRight - winWidth - Round(40 * dpiScale)
+        yPos := monBottom - winHeight - Round(40 * dpiScale)
+    }
+
+    ; Показываем GUI
+    Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
+}
+
+
+; Функция получения активного монитора
+GetActiveMonitorInfo() {
+    ; Получаем HWND активного окна
+    WinGet, hWnd, ID, A
+    if !hWnd
+        return false
+
+    ; Определяем монитор, где находится окно
+    hMon := DllCall("MonitorFromWindow", "ptr", hWnd, "uint", 2, "ptr")
+    if !hMon
+        return false
+
+    ; Структура MONITORINFO
+    VarSetCapacity(mi, 40, 0)
+    NumPut(40, mi, 0, "uint")
+
+    ; Заполняем структуру
+    if !DllCall("GetMonitorInfo", "ptr", hMon, "ptr", &mi)
+        return false
+
+    ; Читаем координаты рабочей области
+    left   := NumGet(mi, 4, "int")
+    top    := NumGet(mi, 8, "int")
+    right  := NumGet(mi, 12, "int")
+    bottom := NumGet(mi, 16, "int")
+
+    return {left:left, top:top, right:right, bottom:bottom}
+}
 
 
 
