@@ -578,7 +578,7 @@ Loop, 50 {
     IniRead, SvoyeМZ_%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_%A_Index%
 }
 
-Loop, 400 {
+Loop, 500 {
     IniRead, KPRPMZ%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ%A_Index%
 }
 
@@ -690,7 +690,7 @@ SvoyeМZ_24=Откат /ro
 if SvoyeМZ_25=ERROR
 SvoyeМZ_25=Аптека (таблетка)
 
-Loop, 400
+Loop, 500
 {
     ; Генерируем название переменной, например, KPRPMZ1, KPRPMZ2 и т.д.
     varName := "KPRPMZ" A_Index
@@ -3688,7 +3688,7 @@ iniPathKPRPMZ := "C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini"
 sectionUser := "User"
 prefixKPRPMZ := "KPRPMZ"
 startNum := 1
-endNum := 400
+endNum := 500
 
 ; Запись значений в INI-файл
 Loop, % endNum - startNum + 1
