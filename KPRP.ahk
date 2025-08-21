@@ -918,7 +918,7 @@ if (Taymer_Nastroyka = "Включен") {
 }
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
-Run, "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
+;Run, "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -4262,4 +4262,5 @@ Return
 Lektsii_MZ:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 #Include *i C:\ProgramData\KPRP\KPRP-main\LecturesMZ.ahk
+
 
