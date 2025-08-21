@@ -907,7 +907,7 @@ if (Skrinshot="Выключен")
 Skrin_1=
 }
 
-
+;Краш
 ;if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
 ;    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
 ;    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
@@ -929,6 +929,9 @@ else
 {
 
 }
+=======
+;Run, "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
+>>>>>>> 6df83fde7df3416c06f32dc0d7ce2b3c69b8b3f4
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
@@ -4272,4 +4275,5 @@ Return
 Lektsii_MZ:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 #Include *i C:\ProgramData\KPRP\KPRP-main\LecturesMZ.ahk
+
 
