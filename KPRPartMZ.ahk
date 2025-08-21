@@ -488,118 +488,53 @@ if (A_Gui = 5) {
 return
 
 
-; Функция отправки КРПР-МЗ по номеру шаблона
 SendKPRPMZ(num) {
-    ; --- Глобальные переменные с данными для подстановки ---
+    ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    
-    ; --- Глобальные переменные с настройками ---
     global vybor, zaderzhka
     
-    ; --- Глобальные переменные с путями к файлам-шаблонам ---
-    global KPRPMZ1, KPRPMZ2, KPRPMZ3, KPRPMZ4, KPRPMZ5, KPRPMZ6, KPRPMZ7, KPRPMZ8, KPRPMZ9, KPRPMZ10
-    global KPRPMZ11, KPRPMZ12, KPRPMZ13, KPRPMZ14, KPRPMZ15, KPRPMZ16, KPRPMZ17, KPRPMZ18, KPRPMZ19, KPRPMZ20
-    global KPRPMZ21, KPRPMZ22, KPRPMZ23, KPRPMZ24, KPRPMZ25, KPRPMZ26, KPRPMZ27, KPRPMZ28, KPRPMZ29, KPRPMZ30
-    global KPRPMZ31, KPRPMZ32, KPRPMZ33, KPRPMZ34, KPRPMZ35, KPRPMZ36, KPRPMZ37, KPRPMZ38, KPRPMZ39, KPRPMZ40
-    global KPRPMZ41, KPRPMZ42, KPRPMZ43, KPRPMZ44, KPRPMZ45, KPRPMZ46, KPRPMZ47, KPRPMZ48, KPRPMZ49, KPRPMZ50
-    global KPRPMZ51, KPRPMZ52, KPRPMZ53, KPRPMZ54, KPRPMZ55, KPRPMZ56, KPRPMZ57, KPRPMZ58, KPRPMZ59, KPRPMZ60
-    global KPRPMZ61, KPRPMZ62, KPRPMZ63, KPRPMZ64, KPRPMZ65, KPRPMZ66, KPRPMZ67, KPRPMZ68, KPRPMZ69, KPRPMZ70
-    global KPRPMZ71, KPRPMZ72, KPRPMZ73, KPRPMZ74, KPRPMZ75, KPRPMZ76, KPRPMZ77, KPRPMZ78, KPRPMZ79, KPRPMZ80
-    global KPRPMZ81, KPRPMZ82, KPRPMZ83, KPRPMZ84, KPRPMZ85, KPRPMZ86, KPRPMZ87, KPRPMZ88, KPRPMZ89, KPRPMZ90
-    global KPRPMZ91, KPRPMZ92, KPRPMZ93, KPRPMZ94, KPRPMZ95, KPRPMZ96, KPRPMZ97, KPRPMZ98, KPRPMZ99, KPRPMZ100
-    global KPRPMZ101, KPRPMZ102, KPRPMZ103, KPRPMZ104, KPRPMZ105, KPRPMZ106, KPRPMZ107, KPRPMZ108, KPRPMZ109, KPRPMZ110
-    global KPRPMZ111, KPRPMZ112, KPRPMZ113, KPRPMZ114, KPRPMZ115, KPRPMZ116, KPRPMZ117, KPRPMZ118, KPRPMZ119, KPRPMZ120
-    global KPRPMZ121, KPRPMZ122, KPRPMZ123, KPRPMZ124, KPRPMZ125, KPRPMZ126, KPRPMZ127, KPRPMZ128, KPRPMZ129, KPRPMZ130
-    global KPRPMZ131, KPRPMZ132, KPRPMZ133, KPRPMZ134, KPRPMZ135, KPRPMZ136, KPRPMZ137, KPRPMZ138, KPRPMZ139, KPRPMZ140
-    global KPRPMZ141, KPRPMZ142, KPRPMZ143, KPRPMZ144, KPRPMZ145, KPRPMZ146, KPRPMZ147, KPRPMZ148, KPRPMZ149, KPRPMZ150
-    global KPRPMZ151, KPRPMZ152, KPRPMZ153, KPRPMZ154, KPRPMZ155, KPRPMZ156, KPRPMZ157, KPRPMZ158, KPRPMZ159, KPRPMZ160
-    global KPRPMZ161, KPRPMZ162, KPRPMZ163, KPRPMZ164, KPRPMZ165, KPRPMZ166, KPRPMZ167, KPRPMZ168, KPRPMZ169, KPRPMZ170
-    global KPRPMZ171, KPRPMZ172, KPRPMZ173, KPRPMZ174, KPRPMZ175, KPRPMZ176, KPRPMZ177, KPRPMZ178, KPRPMZ179, KPRPMZ180
-    global KPRPMZ181, KPRPMZ182, KPRPMZ183, KPRPMZ184, KPRPMZ185, KPRPMZ186, KPRPMZ187, KPRPMZ188, KPRPMZ189, KPRPMZ190
-    global KPRPMZ191, KPRPMZ192, KPRPMZ193, KPRPMZ194, KPRPMZ195, KPRPMZ196, KPRPMZ197, KPRPMZ198, KPRPMZ199, KPRPMZ200
-    global KPRPMZ201, KPRPMZ202, KPRPMZ203, KPRPMZ204, KPRPMZ205, KPRPMZ206, KPRPMZ207, KPRPMZ208, KPRPMZ209, KPRPMZ210
-    global KPRPMZ211, KPRPMZ212, KPRPMZ213, KPRPMZ214, KPRPMZ215, KPRPMZ216, KPRPMZ217, KPRPMZ218, KPRPMZ219, KPRPMZ220
-    global KPRPMZ221, KPRPMZ222, KPRPMZ223, KPRPMZ224, KPRPMZ225, KPRPMZ226, KPRPMZ227, KPRPMZ228, KPRPMZ229, KPRPMZ230
-    global KPRPMZ231, KPRPMZ232, KPRPMZ233, KPRPMZ234, KPRPMZ235, KPRPMZ236, KPRPMZ237, KPRPMZ238, KPRPMZ239, KPRPMZ240
-    global KPRPMZ241, KPRPMZ242, KPRPMZ243, KPRPMZ244, KPRPMZ245, KPRPMZ246, KPRPMZ247, KPRPMZ248, KPRPMZ249, KPRPMZ250
-    global KPRPMZ251, KPRPMZ252, KPRPMZ253, KPRPMZ254, KPRPMZ255, KPRPMZ256, KPRPMZ257, KPRPMZ258, KPRPMZ259, KPRPMZ260
-    global KPRPMZ261, KPRPMZ262, KPRPMZ263, KPRPMZ264, KPRPMZ265, KPRPMZ266, KPRPMZ267, KPRPMZ268, KPRPMZ269, KPRPMZ270
-    global KPRPMZ271, KPRPMZ272, KPRPMZ273, KPRPMZ274, KPRPMZ275, KPRPMZ276, KPRPMZ277, KPRPMZ278, KPRPMZ279, KPRPMZ280
-    global KPRPMZ281, KPRPMZ282, KPRPMZ283, KPRPMZ284, KPRPMZ285, KPRPMZ286, KPRPMZ287, KPRPMZ288, KPRPMZ289, KPRPMZ290
-    global KPRPMZ291, KPRPMZ292, KPRPMZ293, KPRPMZ294, KPRPMZ295, KPRPMZ296, KPRPMZ297, KPRPMZ298, KPRPMZ299, KPRPMZ300
-    global KPRPMZ301, KPRPMZ302, KPRPMZ303, KPRPMZ304, KPRPMZ305, KPRPMZ306, KPRPMZ307, KPRPMZ308, KPRPMZ309, KPRPMZ310
-    global KPRPMZ311, KPRPMZ312, KPRPMZ313, KPRPMZ314, KPRPMZ315, KPRPMZ316, KPRPMZ317, KPRPMZ318, KPRPMZ319, KPRPMZ320
-    global KPRPMZ321, KPRPMZ322, KPRPMZ323, KPRPMZ324, KPRPMZ325, KPRPMZ326, KPRPMZ327, KPRPMZ328, KPRPMZ329, KPRPMZ330
-    global KPRPMZ331, KPRPMZ332, KPRPMZ333, KPRPMZ334, KPRPMZ335, KPRPMZ336, KPRPMZ337, KPRPMZ338, KPRPMZ339, KPRPMZ340
-    global KPRPMZ341, KPRPMZ342, KPRPMZ343, KPRPMZ344, KPRPMZ345, KPRPMZ346, KPRPMZ347, KPRPMZ348, KPRPMZ349, KPRPMZ350
-    global KPRPMZ351, KPRPMZ352, KPRPMZ353, KPRPMZ354, KPRPMZ355, KPRPMZ356, KPRPMZ357, KPRPMZ358, KPRPMZ359, KPRPMZ360
-    global KPRPMZ361, KPRPMZ362, KPRPMZ363, KPRPMZ364, KPRPMZ365, KPRPMZ366, KPRPMZ367, KPRPMZ368, KPRPMZ369, KPRPMZ370
-    global KPRPMZ371, KPRPMZ372, KPRPMZ373, KPRPMZ374, KPRPMZ375, KPRPMZ376, KPRPMZ377, KPRPMZ378, KPRPMZ379, KPRPMZ380
-    global KPRPMZ381, KPRPMZ382, KPRPMZ383, KPRPMZ384, KPRPMZ385, KPRPMZ386, KPRPMZ387, KPRPMZ388, KPRPMZ389, KPRPMZ390
-    global KPRPMZ391, KPRPMZ392, KPRPMZ393, KPRPMZ394, KPRPMZ395, KPRPMZ396, KPRPMZ397, KPRPMZ398, KPRPMZ399, KPRPMZ400
-    global KPRPMZ401, KPRPMZ402, KPRPMZ403, KPRPMZ404, KPRPMZ405, KPRPMZ406, KPRPMZ407, KPRPMZ408, KPRPMZ409, KPRPMZ410
-    global KPRPMZ411, KPRPMZ412, KPRPMZ413, KPRPMZ414, KPRPMZ415, KPRPMZ416, KPRPMZ417, KPRPMZ418, KPRPMZ419, KPRPMZ420
-    global KPRPMZ421, KPRPMZ422, KPRPMZ423, KPRPMZ424, KPRPMZ425, KPRPMZ426, KPRPMZ427, KPRPMZ428, KPRPMZ429, KPRPMZ430
-    global KPRPMZ431, KPRPMZ432, KPRPMZ433, KPRPMZ434, KPRPMZ435, KPRPMZ436, KPRPMZ437, KPRPMZ438, KPRPMZ439, KPRPMZ440
-    global KPRPMZ441, KPRPMZ442, KPRPMZ443, KPRPMZ444, KPRPMZ445, KPRPMZ446, KPRPMZ447, KPRPMZ448, KPRPMZ449, KPRPMZ450
-    global KPRPMZ451, KPRPMZ452, KPRPMZ453, KPRPMZ454, KPRPMZ455, KPRPMZ456, KPRPMZ457, KPRPMZ458, KPRPMZ459, KPRPMZ460
-    global KPRPMZ461, KPRPMZ462, KPRPMZ463, KPRPMZ464, KPRPMZ465, KPRPMZ466, KPRPMZ467, KPRPMZ468, KPRPMZ469, KPRPMZ470
-    global KPRPMZ471, KPRPMZ472, KPRPMZ473, KPRPMZ474, KPRPMZ475, KPRPMZ476, KPRPMZ477, KPRPMZ478, KPRPMZ479, KPRPMZ480
-    global KPRPMZ481, KPRPMZ482, KPRPMZ483, KPRPMZ484, KPRPMZ485, KPRPMZ486, KPRPMZ487, KPRPMZ488, KPRPMZ489, KPRPMZ490
-    global KPRPMZ491, KPRPMZ492, KPRPMZ493, KPRPMZ494, KPRPMZ495, KPRPMZ496, KPRPMZ497, KPRPMZ498, KPRPMZ499, KPRPMZ500
-
-
     ; --- Короткая пауза перед отправкой ---
     Sleep 150
-    SendPlay {Enter} ; имитация нажатия Enter
-	FileEncoding, UTF-8-RAW ; Делает русский язык
-	
-	
-    ; Получаем переменную Var из функции Greeting()
-    Var := Greeting()
-
-
-	; создаём массив
-	fileVars := []
-
-	; заполняем массив переменными KPRPMZ1 ... KPRPMZ500
-	Loop, 500
-	{
-		fileVars.Push(KPRPMZ%A_Index%)
-	}
-
-
-    ; --- Проверка, что номер шаблона в диапазоне 1-500 ---
+    SendPlay {Enter}
+    FileEncoding, UTF-8-RAW
+    
+    ; --- Проверка диапазона ---
     if (num < 1 || num > 500)
-        return  ; если номер неправильный — выходим
-
-    ; --- Получаем путь к нужному файлу-шаблону ---
-    fileVar := fileVars[num]
-
-    ; --- Читаем файл построчно ---
-    Loop, read, %fileVar%
+        return
+    
+    ; --- Получаем переменную Var ---
+    Var := Greeting()
+    
+    ; --- Получаем путь к файлу ---
+    filePath := KPRPMZ%num%
+    
+    ; --- Проверяем существование файла ---
+    if !FileExist(filePath)
+        return
+    
+    ; --- Читаем и обрабатываем файл ---
+    FileRead, content, %filePath%
+    
+    ; --- Подстановка переменных ---
+    content := StrReplace(content, "%floor%", floor)
+    content := StrReplace(content, "%Var%", Var)
+    content := StrReplace(content, "%Name%", Name)
+    content := StrReplace(content, "%Surname%", Surname)
+    content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
+    content := StrReplace(content, "%Bol_ro_3%", Bol_ro_3)
+    content := StrReplace(content, "%JWI%", JWI)
+    content := StrReplace(content, "%TAG%", TAG)
+    content := StrReplace(content, "%Middle_Name%", Middle_Name)
+    content := StrReplace(content, "%Skrin_1%", Skrin_1)
+    content := StrReplace(content, "%Female%", Female)
+    content := StrReplace(content, "%stol%", stol)
+    
+    ; --- Разделяем на строки и отправляем ---
+    Loop, parse, content, `n, `r
     {
-        ; --- Разделяем строку по табуляциям ---
-        Loop, parse, A_LoopReadLine, %A_Tab%
+        if (A_LoopField != "") ; Пропускаем пустые строки
         {
-            line := A_LoopField  ; текущий кусок строки
-
-            ; --- Подстановка всех переменных в текст ---
-            line := StrReplace(line, "%floor%", floor)
-            line := StrReplace(line, "%Var%", Var)
-            line := StrReplace(line, "%Name%", Name)
-            line := StrReplace(line, "%Surname%", Surname)
-            line := StrReplace(line, "%Bol_ro_1%", Bol_ro_1)
-            line := StrReplace(line, "%Bol_ro_3%", Bol_ro_3)
-            line := StrReplace(line, "%JWI%", JWI)
-            line := StrReplace(line, "%TAG%", TAG)
-            line := StrReplace(line, "%Middle_Name%", Middle_Name)
-            line := StrReplace(line, "%Skrin_1%", Skrin_1)
-            line := StrReplace(line, "%Female%", Female)
-            line := StrReplace(line, "%stol%", stol)
-
-            ; --- Отправка строки с задержкой ---
-            %vybor%(line, "  " zaderzhka " ")
+            %vybor%(A_LoopField, "  " zaderzhka " ")
         }
     }
 }
@@ -744,7 +679,6 @@ Return
 :?:/Аптека::
     SendKPRPMZ(25)
 Return
-
 
 :?:/ВМС_1::
     SendKPRPMZ(29)  
@@ -4196,9 +4130,7 @@ If (Patrol != "") {
 %vybor%("" Skrin_1 "", "500")
 Return
 
-
-
-:?:/Напарник_16::
+:?:/Напарник_1::
 SendMessage, 0x50, 0, 0x4190419,, A
 InputBox, Patrol_1, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
 if (ErrorLevel) {
@@ -4213,9 +4145,7 @@ IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol_1%.
 return
 
-
-
-:?:/Напарник_15::
+:?:/Напарник::
 SendMessage, 0x50, 0, 0x4190419,, A
 InputBox, Patrol, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
 if (ErrorLevel) {
@@ -4230,8 +4160,7 @@ IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol%.
 return
 
-
-:?:/Пост_15::
+:?:/Пост_0::
 SendMessage, 0x50,, 0x4190419,, A
 InputBox, Post, Ввод данных, Введите пост, затем нажмите "OK"
 if (ErrorLevel) {
@@ -4246,7 +4175,7 @@ IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы изменили данные на: %Post%.
 return
 
-:?:/Вызов_15::
+:?:/Вызов_0::
 ; Переключение на русскую раскладку
 SendMessage, 0x50, 0, 0x4190419,, A
 
@@ -4261,25 +4190,6 @@ If !RegExMatch(to, "^\d+$") {
 }
 IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
 MsgBox, 48, Предупреждение, Вы изменили данные на: %to%.
-return
-
-
-UpdateTime:
-    elapsed := A_TickCount - startTime
-    FormatTimeStr := Format("{:02}:{:02}:{:02}"
-        , Floor(elapsed/3600000)
-        , Mod(Floor(elapsed/60000),60)
-        , Mod(Floor(elapsed/1000),60))
-
-    remaining := docladInterval - (A_TickCount - docladStart)
-    if (remaining < 0)
-        remaining := 0
-    RemTimeStr := Format("{:02}:{:02}:{:02}"
-        , Floor(remaining/3600000)
-        , Mod(Floor(remaining/60000),60)
-        , Mod(Floor(remaining/1000),60))
-
-    GuiControl,, TimerText, Дежурство: %FormatTimeStr%`nДо доклада: %RemTimeStr%
 return
 
 
@@ -4387,9 +4297,6 @@ Gui, Destroy
 sleep 1000
 Return
 
-
-
-
 :?:/Республика_1::
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 ; Если фамилия напарника (бригада) не введена, очистить переменную
@@ -4418,9 +4325,6 @@ Gui, Destroy
 sleep 10000
 Reload
 Return
-
-
-
 
 
 :?:/Город_0::
@@ -4525,8 +4429,6 @@ Gui, Destroy
 sleep 1000
 Return
 
-
-
 :?:/Город_2::
 IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
 Sleep 1500
@@ -4548,10 +4450,6 @@ Gui, Destroy
 sleep 10000
 Reload
 Return
-
-
-
-
 
 :?:/Республика_0::
 SendMessage, 0x50, 0, 0x4190419,, A
@@ -4658,9 +4556,6 @@ Gui, Destroy
 sleep 1000
 Return
 
-
-
-
 :?:/Республика_2::
 IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
 ; Если фамилия напарника (бригада) не введена, очистить переменную
@@ -4690,8 +4585,6 @@ Gui, Destroy
 sleep 10000
 Reload
 Return
-
-
 
 :?:/ПО::
 SendMessage, 0x50, 0, 0x4190419,, A
@@ -4754,8 +4647,6 @@ Gui, Destroy
 Return
 
 
-
-
 :?:/ПО_1::
 Sleep 1500
 SendPlay {Enter}
@@ -4770,6 +4661,24 @@ sleep 10000
 Reload
 Return
 
+
+UpdateTime:
+    elapsed := A_TickCount - startTime
+    FormatTimeStr := Format("{:02}:{:02}:{:02}"
+        , Floor(elapsed/3600000)
+        , Mod(Floor(elapsed/60000),60)
+        , Mod(Floor(elapsed/1000),60))
+
+    remaining := docladInterval - (A_TickCount - docladStart)
+    if (remaining < 0)
+        remaining := 0
+    RemTimeStr := Format("{:02}:{:02}:{:02}"
+        , Floor(remaining/3600000)
+        , Mod(Floor(remaining/60000),60)
+        , Mod(Floor(remaining/1000),60))
+
+    GuiControl,, TimerText, Дежурство: %FormatTimeStr%`nДо доклада: %RemTimeStr%
+return
 
 
 Medicine1:
@@ -8165,10 +8074,10 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h130 w350,
 
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Напарник_15
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Пост_15
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Вызов_15
-Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /Напарник_16
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Напарник
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Пост_0
+Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Вызов_0
+Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /Напарник_1
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
 Gui, 3:Add, Text, x150  y15 w300 h20 +BackgroundTrans , [Смена напарника (/r)]
@@ -9628,7 +9537,6 @@ Return
 ;--------------------------------------------------------------------------------
 
 Info:
-
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 7:Destroy,
@@ -9651,7 +9559,6 @@ Return
 
 
 EditMZ:
-
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 4:Destroy,
@@ -13662,7 +13569,6 @@ return
 SelectKPRPMZ500:
     SelectKPRPMZ(500)
 return
-
 
 
 ; ---- Универсальная функция ----
