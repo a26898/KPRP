@@ -918,7 +918,17 @@ if (Taymer_Nastroyka = "Включен") {
 }
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
-Run, "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
+
+filePath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
+
+if FileExist(filePath1)
+{
+    Run, %filePath%
+}
+else
+{
+
+}
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
