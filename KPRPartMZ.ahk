@@ -488,1726 +488,1674 @@ if (A_Gui = 5) {
 return
 
 
-SendKPRPMZ(num) {
-    ; --- Глобальные переменные ---
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
-    global vybor, zaderzhka
-    
-    ; --- Короткая пауза перед отправкой ---
-    Sleep 150
-    SendPlay {Enter}
-    FileEncoding, UTF-8-RAW
-    
-    ; --- Проверка диапазона ---
-    if (num < 1 || num > 500)
-        return
-    
-    ; --- Получаем переменную Var ---
-    Var := Greeting()
-    
-    ; --- Получаем путь к файлу ---
-    filePath := KPRPMZ%num%
-    
-    ; --- Проверяем существование файла ---
-    if !FileExist(filePath)
-        return
-    
-    ; --- Читаем и обрабатываем файл ---
-    FileRead, content, %filePath%
-    
-    ; --- Подстановка переменных ---
-    content := StrReplace(content, "%floor%", floor)
-    content := StrReplace(content, "%Var%", Var)
-    content := StrReplace(content, "%Name%", Name)
-    content := StrReplace(content, "%Surname%", Surname)
-    content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
-    content := StrReplace(content, "%Bol_ro_3%", Bol_ro_3)
-    content := StrReplace(content, "%JWI%", JWI)
-    content := StrReplace(content, "%TAG%", TAG)
-    content := StrReplace(content, "%Middle_Name%", Middle_Name)
-    content := StrReplace(content, "%Skrin_1%", Skrin_1)
-    content := StrReplace(content, "%Female%", Female)
-    content := StrReplace(content, "%stol%", stol)
-    
-    ; --- Разделяем на строки и отправляем ---
-    Loop, parse, content, `n, `r
-    {
-        if (A_LoopField != "") ; Пропускаем пустые строки
-        {
-            %vybor%(A_LoopField, "  " zaderzhka " ")
-        }
-    }
-}
-
-
 0001MZ7:
-    SendKPRPMZ(1)
+    SendTemplate("KPRPMZ", 1)
 Return
 
 0002MZ7:
-    SendKPRPMZ(2)
+    SendTemplate("KPRPMZ", 2)
 Return
 
 0003MZ7:
-    SendKPRPMZ(3)
+    SendTemplate("KPRPMZ", 3)
 Return
 
 0004MZ7:
-    SendKPRPMZ(4)
+    SendTemplate("KPRPMZ", 4)
 Return
 
 0005MZ7:
-    SendKPRPMZ(5)
+    SendTemplate("KPRPMZ", 5)
 Return
 
 0006MZ7:
-    SendKPRPMZ(6)
+    SendTemplate("KPRPMZ", 6)
 Return
 
 0007MZ7:
-    SendKPRPMZ(7)
+    SendTemplate("KPRPMZ", 7)
 Return
 
 0008MZ7:
-    SendKPRPMZ(8)
+    SendTemplate("KPRPMZ", 8)
 Return
 
 0009MZ7:
-    SendKPRPMZ(9)
+    SendTemplate("KPRPMZ", 9)
 Return
 
 0010MZ7:
-    SendKPRPMZ(10)
+    SendTemplate("KPRPMZ", 10)
 Return
 
 0011MZ7:
-    SendKPRPMZ(11)
+    SendTemplate("KPRPMZ", 11)
 Return
 
 0012MZ7:
-    SendKPRPMZ(12)
+    SendTemplate("KPRPMZ", 12)
 Return
 
 0013MZ7:
-    SendKPRPMZ(13)
+    SendTemplate("KPRPMZ", 13)
 Return
 
 0014MZ7:
-    SendKPRPMZ(14)
+    SendTemplate("KPRPMZ", 14)
 Return
 
 0015MZ7:
-    SendKPRPMZ(15)
+    SendTemplate("KPRPMZ", 15)
 Return
 
 0016MZ7:
-    SendKPRPMZ(16)
+    SendTemplate("KPRPMZ", 16)
 Return
 
 0017MZ7:
-    SendKPRPMZ(17)
+    SendTemplate("KPRPMZ", 17)
 Return
 
 0018MZ7:
-    SendKPRPMZ(18)
+    SendTemplate("KPRPMZ", 18)
 Return
 
 0019MZ7:
-    SendKPRPMZ(19)
+    SendTemplate("KPRPMZ", 19)
 Return
 
 0020MZ7:
-    SendKPRPMZ(20)
+    SendTemplate("KPRPMZ", 20)
 Return
 
 0021MZ7:
-    SendKPRPMZ(21)
+    SendTemplate("KPRPMZ", 21)
 Return
 
 0022MZ7:
-    SendKPRPMZ(22)
+    SendTemplate("KPRPMZ", 22)
 Return
 
 0023MZ7:
-    SendKPRPMZ(23)
+    SendTemplate("KPRPMZ", 23)
 Return
 
 0024MZ7:
-    SendKPRPMZ(24)
+    SendTemplate("KPRPMZ", 24)
 Return
 
 0025MZ7:
-    SendKPRPMZ(25)
+    SendTemplate("KPRPMZ", 25)
 Return
 
 0026MZ7:
-    SendKPRPMZ(26)
+    SendTemplate("KPRPMZ", 26)
 Return
 
 0027MZ7:
-    SendKPRPMZ(27)
+    SendTemplate("KPRPMZ", 27)
 Return
 
 0028MZ7:
-    SendKPRPMZ(28)
+    SendTemplate("KPRPMZ", 28)
 Return
 
 :?:/Лек_1::
-    SendKPRPMZ(4)
+    SendTemplate("KPRPMZ", 4)
 Return
 
 :?:/Лек_2::
-    SendKPRPMZ(5)
+    SendTemplate("KPRPMZ", 5)
 Return
 
 :?:/Лек_3::
-    SendKPRPMZ(6)
+    SendTemplate("KPRPMZ", 6)
 Return
 
 :?:/Лек_4::
-    SendKPRPMZ(7)
+    SendTemplate("KPRPMZ", 7)
 Return
 
 :?:/Лек_5::
-    SendKPRPMZ(8)
+    SendTemplate("KPRPMZ", 8)
 Return
 
 :?:/Лек_6::
-    SendKPRPMZ(9)
+    SendTemplate("KPRPMZ", 9)
 Return
 
 :?:/Аптека::
-    SendKPRPMZ(25)
+    SendTemplate("KPRPMZ", 25)
 Return
 
 :?:/ВМС_1::
-    SendKPRPMZ(29)  
+    SendTemplate("KPRPMZ", 29)  
 Return
 
 :?:/ВМС_2::
-    SendKPRPMZ(30)  
+    SendTemplate("KPRPMZ", 30)  
 Return
 
 :?:/Желудок::
-    SendKPRPMZ(31)
+    SendTemplate("KPRPMZ", 31)
 Return
 
 :?:/Пуля::
-    SendKPRPMZ(32)
+    SendTemplate("KPRPMZ", 32)
 Return
 
 :?:/Шприц::
-    SendKPRPMZ(33)
+    SendTemplate("KPRPMZ", 33)
 Return
 
 :?:/Цистоскоп_1::
-    SendKPRPMZ(34)  
+    SendTemplate("KPRPMZ", 34)  
 Return
 
 :?:/Цистоскоп_2::
-    SendKPRPMZ(35)  
+    SendTemplate("KPRPMZ", 35)  
 Return
 
 :?:/Цистоскоп_3::
-    SendKPRPMZ(36)  
+    SendTemplate("KPRPMZ", 36)  
 Return
 
 :?:/Цистоскоп_4::
-    SendKPRPMZ(37)  
+    SendTemplate("KPRPMZ", 37)  
 Return
 
 :?:/Вакцинация::
-    SendKPRPMZ(38)
+    SendTemplate("KPRPMZ", 38)
 Return
 
 :?:/Зрения_1::
-    SendKPRPMZ(39)
+    SendTemplate("KPRPMZ", 39)
 Return
 :?:/Зрения_2::
-    SendKPRPMZ(40)
+    SendTemplate("KPRPMZ", 40)
 Return
 :?:/Зрения_3::
-    SendKPRPMZ(41)
+    SendTemplate("KPRPMZ", 41)
 Return
 :?:/Зрения_4::
-    SendKPRPMZ(42)
+    SendTemplate("KPRPMZ", 42)
 Return
 :?:/Зрения_5::
-    SendKPRPMZ(43)
+    SendTemplate("KPRPMZ", 43)
 Return
 :?:/Зрения_6::
-    SendKPRPMZ(44)
+    SendTemplate("KPRPMZ", 44)
 Return
 :?:/Зрения_7::
-    SendKPRPMZ(45)
+    SendTemplate("KPRPMZ", 45)
 Return
 :?:/Зрения_8::
-    SendKPRPMZ(46)
+    SendTemplate("KPRPMZ", 46)
 Return
 :?:/Зрения_9::
-    SendKPRPMZ(47)
+    SendTemplate("KPRPMZ", 47)
 Return
 
 :?:/Вши_1::
-    SendKPRPMZ(48)
+    SendTemplate("KPRPMZ", 48)
 Return
 :?:/Вши_2::
-    SendKPRPMZ(49)
+    SendTemplate("KPRPMZ", 49)
 Return
 :?:/Вши_3::
-    SendKPRPMZ(50)
+    SendTemplate("KPRPMZ", 50)
 Return
 :?:/Вши_4::
-    SendKPRPMZ(51)
+    SendTemplate("KPRPMZ", 51)
 Return
 
 :?:/Флюшка_1::
-    SendKPRPMZ(52)
+    SendTemplate("KPRPMZ", 52)
 Return
 :?:/Флюшка_2::
-    SendKPRPMZ(53)
+    SendTemplate("KPRPMZ", 53)
 Return
 :?:/Флюшка_3::
-    SendKPRPMZ(54)
+    SendTemplate("KPRPMZ", 54)
 Return
 :?:/Флюшка_4::
-    SendKPRPMZ(55)
+    SendTemplate("KPRPMZ", 55)
 Return
 :?:/Флюшка_5::
-    SendKPRPMZ(56)
+    SendTemplate("KPRPMZ", 56)
 Return
 
 :?:/Температура_1::
-    SendKPRPMZ(57)
+    SendTemplate("KPRPMZ", 57)
 Return
 
 :?:/Температура_2::
-    SendKPRPMZ(58)
+    SendTemplate("KPRPMZ", 58)
 Return
 
 :?:/Температура_3::
-    SendKPRPMZ(59)
+    SendTemplate("KPRPMZ", 59)
 Return
 
 :?:/Температура_4::
-    SendKPRPMZ(60)
+    SendTemplate("KPRPMZ", 60)
 Return
 
 :?:/Маммограф_1::
-    SendKPRPMZ(61)
+    SendTemplate("KPRPMZ", 61)
 Return
 
 :?:/Маммограф_2::
-    SendKPRPMZ(62)
+    SendTemplate("KPRPMZ", 62)
 Return
 
 :?:/Маммограф_3::
-    SendKPRPMZ(63)
+    SendTemplate("KPRPMZ", 63)
 Return
 
 :?:/Маммограф_4::
-    SendKPRPMZ(64)
+    SendTemplate("KPRPMZ", 64)
 Return
 
 :?:/Прибор_1::
-    SendKPRPMZ(65)
+    SendTemplate("KPRPMZ", 65)
 Return
 
 :?:/Прибор_2::
-    SendKPRPMZ(66)
+    SendTemplate("KPRPMZ", 66)
 Return
 
 :?:/Прибор_3::
-    SendKPRPMZ(67)
+    SendTemplate("KPRPMZ", 67)
 Return
 
 :?:/Прибор_4::
-    SendKPRPMZ(68)
+    SendTemplate("KPRPMZ", 68)
 Return
 
 :?:/Глисты_1::
-    SendKPRPMZ(69)
+    SendTemplate("KPRPMZ", 69)
 Return
 
 :?:/Глисты_2::
-    SendKPRPMZ(70)
+    SendTemplate("KPRPMZ", 70)
 Return
 
 :?:/Глисты_3::
-    SendKPRPMZ(71)
+    SendTemplate("KPRPMZ", 71)
 Return
 
 :?:/Глисты_4::
-    SendKPRPMZ(72)
+    SendTemplate("KPRPMZ", 72)
 Return
 
 :?:/ЭКГ_1::
-    SendKPRPMZ(73)
+    SendTemplate("KPRPMZ", 73)
 Return
 
 :?:/ЭКГ_2::
-    SendKPRPMZ(74)
+    SendTemplate("KPRPMZ", 74)
 Return
 
 :?:/ЭКГ_3::
-    SendKPRPMZ(75)
+    SendTemplate("KPRPMZ", 75)
 Return
 
 :?:/ЭКГ_4::
-    SendKPRPMZ(76)
+    SendTemplate("KPRPMZ", 76)
 Return
 
 
 :?:/Гинек_1::
-    SendKPRPMZ(77)
+    SendTemplate("KPRPMZ", 77)
 Return
 
 :?:/Гинек_2::
-    SendKPRPMZ(78)
+    SendTemplate("KPRPMZ", 78)
 Return
 
 :?:/Гинек_3::
-    SendKPRPMZ(79)
+    SendTemplate("KPRPMZ", 79)
 Return
 
 :?:/Гинек_4::
-    SendKPRPMZ(80)
+    SendTemplate("KPRPMZ", 80)
 Return
 
 :?:/Гинек_5::
-    SendKPRPMZ(81)
+    SendTemplate("KPRPMZ", 81)
 Return
 
 :?:/Матка_1::
-    SendKPRPMZ(82)
+    SendTemplate("KPRPMZ", 82)
 Return
 
 :?:/Матка_2::
-    SendKPRPMZ(83)
+    SendTemplate("KPRPMZ", 83)
 Return
 
 :?:/Чувства_0::
-    SendKPRPMZ(84)
+    SendTemplate("KPRPMZ", 84)
 Return
 :?:/Чувства_1::
-    SendKPRPMZ(85)
+    SendTemplate("KPRPMZ", 85)
 Return
 :?:/Чувства_2::
-    SendKPRPMZ(86)
+    SendTemplate("KPRPMZ", 86)
 Return
 :?:/Чувства_3::
-    SendKPRPMZ(87)
+    SendTemplate("KPRPMZ", 87)
 Return
 :?:/Чувства_4::
-    SendKPRPMZ(88)
+    SendTemplate("KPRPMZ", 88)
 Return
 
 :?:/Чувства_5::
-    SendKPRPMZ(89)
+    SendTemplate("KPRPMZ", 89)
 Return
 
 :?:/Чувства_6::
-    SendKPRPMZ(90)
+    SendTemplate("KPRPMZ", 90)
 Return
 
 :?:/Палец_1::
-    SendKPRPMZ(91)
+    SendTemplate("KPRPMZ", 91)
 Return
 
 :?:/Палец_2::
-    SendKPRPMZ(92)
+    SendTemplate("KPRPMZ", 92)
 Return
 
 :?:/Палец_3::
-    SendKPRPMZ(93)
+    SendTemplate("KPRPMZ", 93)
 Return
 
 :?:/Сахар_1::
-    SendKPRPMZ(94)
+    SendTemplate("KPRPMZ", 94)
 Return
 
 :?:/Сахар_2::
-    SendKPRPMZ(95)
+    SendTemplate("KPRPMZ", 95)
 Return
 
 :?:/Сахар_3::
-    SendKPRPMZ(96)
+    SendTemplate("KPRPMZ", 96)
 Return
 
 :?:/Сахар_4::
-    SendKPRPMZ(97)
+    SendTemplate("KPRPMZ", 97)
 Return
 
 :?:/Сколиоз_1::
-    SendKPRPMZ(98)
+    SendTemplate("KPRPMZ", 98)
 Return
 
 :?:/Сколиоз_2::
-    SendKPRPMZ(99)
+    SendTemplate("KPRPMZ", 99)
 Return
 
 :?:/Сколиоз_3::
-    SendKPRPMZ(100)
+    SendTemplate("KPRPMZ", 100)
 Return
 
 :?:/КТГ_1::
-    SendKPRPMZ(101)
+    SendTemplate("KPRPMZ", 101)
 Return
 
 :?:/КТГ_2::
-    SendKPRPMZ(102)
+    SendTemplate("KPRPMZ", 102)
 Return
 :?:/КТГ_3::
-    SendKPRPMZ(103)
+    SendTemplate("KPRPMZ", 103)
 Return
 
 :?:/КТГ_4::
-    SendKPRPMZ(104)
+    SendTemplate("KPRPMZ", 104)
 Return
 
 :?:/КТГ_5::
-    SendKPRPMZ(105)
+    SendTemplate("KPRPMZ", 105)
 Return
 
 :?:/Берм_1::
-    SendKPRPMZ(106)
+    SendTemplate("KPRPMZ", 106)
 Return
 
 :?:/Берм_2::
-    SendKPRPMZ(107)
+    SendTemplate("KPRPMZ", 107)
 Return
 
 :?:/Берм_3::
-    SendKPRPMZ(108)
+    SendTemplate("KPRPMZ", 108)
 Return
 
 :?:/Берм_4::
-    SendKPRPMZ(109)
+    SendTemplate("KPRPMZ", 109)
 Return
 
 :?:/Берм_5::
-    SendKPRPMZ(110)
+    SendTemplate("KPRPMZ", 110)
 Return
 
 :?:/ЛЛ_1::
-    SendKPRPMZ(111)
+    SendTemplate("KPRPMZ", 111)
 Return
 
 :?:/ЛЛ_2::
-    SendKPRPMZ(112)
+    SendTemplate("KPRPMZ", 112)
 Return
 
 :?:/КТ_1::
-    SendKPRPMZ(113)
+    SendTemplate("KPRPMZ", 113)
 Return
 
 :?:/КТ_2::
-    SendKPRPMZ(114)
+    SendTemplate("KPRPMZ", 114)
 Return
 
 :?:/КТ_3::
-    SendKPRPMZ(115)
+    SendTemplate("KPRPMZ", 115)
 Return
 
 :?:/КТ_4::
-    SendKPRPMZ(116)
+    SendTemplate("KPRPMZ", 116)
 Return
 
 :?:/КТ_5::
-    SendKPRPMZ(117)
+    SendTemplate("KPRPMZ", 117)
 Return
 
 :?:/КТ_6::
-    SendKPRPMZ(118)
+    SendTemplate("KPRPMZ", 118)
 Return
 
 :?:/Стетоскоп_1::
-  SendKPRPMZ(119)
+    SendTemplate("KPRPMZ", 119)
 Return
 
 :?:/Стетоскоп_2::
-  SendKPRPMZ(120)
+    SendTemplate("KPRPMZ", 120)
 Return
 
 :?:/Стетоскоп_3::
-  SendKPRPMZ(121)
+    SendTemplate("KPRPMZ", 121)
 Return
 
 :?:/Стетоскоп_4::
-  SendKPRPMZ(122)
+    SendTemplate("KPRPMZ", 122)
 Return
 
 :?:/МРТ_1::
-  SendKPRPMZ(123)
+    SendTemplate("KPRPMZ", 123)
 Return
 
 :?:/МРТ_2::
-  SendKPRPMZ(124)
+    SendTemplate("KPRPMZ", 124)
 Return
 
 :?:/МРТ_3::
-  SendKPRPMZ(125)
+    SendTemplate("KPRPMZ", 125)
 Return
 
 :?:/МРТ_4::
-  SendKPRPMZ(126)
+    SendTemplate("KPRPMZ", 126)
 Return
 
 :?:/МРТ_5::
-  SendKPRPMZ(127)
+    SendTemplate("KPRPMZ", 127)
 Return
 
 :?:/МРА_1::
-  SendKPRPMZ(128)
+    SendTemplate("KPRPMZ", 128)
 Return
 
 :?:/МРА_2::
-  SendKPRPMZ(129)
+    SendTemplate("KPRPMZ", 129)
 Return
 
 :?:/МРА_3::
-  SendKPRPMZ(130)
+    SendTemplate("KPRPMZ", 130)
 Return
 
 :?:/МРА_4::
-  SendKPRPMZ(131)
+    SendTemplate("KPRPMZ", 131)
 Return
 
 :?:/МРА_5::
-  SendKPRPMZ(132)
+    SendTemplate("KPRPMZ", 132)
 Return
 
 :?:/Зонд_1::
-  SendKPRPMZ(133)
+    SendTemplate("KPRPMZ", 133)
 Return
 
 :?:/Зонд_2::
-  SendKPRPMZ(134)
+    SendTemplate("KPRPMZ", 134)
 Return
 
 :?:/Зонд_3::
-  SendKPRPMZ(135)
+    SendTemplate("KPRPMZ", 135)
 Return
 
 :?:/Зонд_4::
-  SendKPRPMZ(136)
+    SendTemplate("KPRPMZ", 136)
 Return
 
 :?:/ФГДС_1::
-  SendKPRPMZ(137)
+    SendTemplate("KPRPMZ", 137)
 Return
 
 :?:/ФГДС_2::
-  SendKPRPMZ(138)
+    SendTemplate("KPRPMZ", 138)
 Return
 
 :?:/ФГДС_3::
-  SendKPRPMZ(139)
+    SendTemplate("KPRPMZ", 139)
 Return
 
 :?:/ФГДС_4::
-  SendKPRPMZ(140)
+    SendTemplate("KPRPMZ", 140)
 Return
 
 :?:/ФГДС_5::
-  SendKPRPMZ(141)
+    SendTemplate("KPRPMZ", 141)
 Return
 
 :?:/ФКС_1::
-  SendKPRPMZ(142)
+    SendTemplate("KPRPMZ", 142)
 Return
 
 :?:/ФКС_2::
-  SendKPRPMZ(143)
+    SendTemplate("KPRPMZ", 143)
 Return
 
 :?:/ФКС_3::
-  SendKPRPMZ(144)
+    SendTemplate("KPRPMZ", 144)
 Return
 
 :?:/ФКС_4::
-  SendKPRPMZ(145)
+    SendTemplate("KPRPMZ", 145)
 Return
 
 :?:/ФКС_5::
-  SendKPRPMZ(146)
+    SendTemplate("KPRPMZ", 146)
 Return
 
 :?:/Дифтерия_1::
-  SendKPRPMZ(147)
+    SendTemplate("KPRPMZ", 147)
 Return
 
 :?:/Дифтерия_2::
-  SendKPRPMZ(148)
+    SendTemplate("KPRPMZ", 148)
 Return
 
 :?:/Дифтерия_3::
-  SendKPRPMZ(149)
+    SendTemplate("KPRPMZ", 149)
 Return
 
 :?:/ОПТГ_1::
-  SendKPRPMZ(150)
+    SendTemplate("KPRPMZ", 150)
 Return
 
 :?:/ОПТГ_2::
-  SendKPRPMZ(151)
+    SendTemplate("KPRPMZ", 151)
 Return
 
 :?:/ОПТГ_3::
-  SendKPRPMZ(152)
+    SendTemplate("KPRPMZ", 152)
 Return
 
 :?:/ОПТГ_4::
-  SendKPRPMZ(153)
+    SendTemplate("KPRPMZ", 153)
 Return
 
 :?:/ОПТГ_5::
-  SendKPRPMZ(154)
+    SendTemplate("KPRPMZ", 154)
 Return
 
 :?:/ВИЧ_1::
-  SendKPRPMZ(155)
+    SendTemplate("KPRPMZ", 155)
 Return
 
 :?:/ВИЧ_2::
-  SendKPRPMZ(156)
+    SendTemplate("KPRPMZ", 156)
 Return
 
 :?:/ВИЧ_3::
-  SendKPRPMZ(157)
+    SendTemplate("KPRPMZ", 157)
 Return
 
 :?:/ВИЧ_4::
-  SendKPRPMZ(158)
+    SendTemplate("KPRPMZ", 158)
 Return
 
 :?:/ВИЧ_5::
-  SendKPRPMZ(159)
+    SendTemplate("KPRPMZ", 159)
 Return
 
 :?:/Туберкулёз_1::
-  SendKPRPMZ(160)
+    SendTemplate("KPRPMZ", 160)
 Return
 
 :?:/Туберкулёз_2::
-  SendKPRPMZ(161)
+    SendTemplate("KPRPMZ", 161)
 Return
 
 :?:/Туберкулёз_3::
-  SendKPRPMZ(162)
+    SendTemplate("KPRPMZ", 162)
 Return
 
 :?:/Туберкулёз_4::
-  SendKPRPMZ(163)
+    SendTemplate("KPRPMZ", 163)
 Return
 
 :?:/Сотряс_1::
-  SendKPRPMZ(164)
+    SendTemplate("KPRPMZ", 164)
 Return
 
 :?:/Сотряс_2::
-  SendKPRPMZ(165)
+    SendTemplate("KPRPMZ", 165)
 Return
 
 :?:/Сотряс_3::
-  SendKPRPMZ(166)
+    SendTemplate("KPRPMZ", 166)
 Return
 
 :?:/Плод_1::
-  SendKPRPMZ(167)
+    SendTemplate("KPRPMZ", 167)
 Return
 
 :?:/Плод_2::
-  SendKPRPMZ(168)
+    SendTemplate("KPRPMZ", 168)
 Return
 
 :?:/Плод_3::
-  SendKPRPMZ(169)
+    SendTemplate("KPRPMZ", 169)
 Return
 
 :?:/Плод_4::
-  SendKPRPMZ(170)
+    SendTemplate("KPRPMZ", 170)
 Return
 
 :?:/Плод_5::
-  SendKPRPMZ(171)
+    SendTemplate("KPRPMZ", 171)
 Return
 
 :?:/Алкоголь_1::
-  SendKPRPMZ(172)
+    SendTemplate("KPRPMZ", 172)
 Return
 
 :?:/Алкоголь_2::
-  SendKPRPMZ(173)
+    SendTemplate("KPRPMZ", 173)
 Return
 
 :?:/Алкоголь_3::
-  SendKPRPMZ(174)
+    SendTemplate("KPRPMZ", 174)
 Return
 
 :?:/Алкоголь_4::
-  SendKPRPMZ(175)
+    SendTemplate("KPRPMZ", 175)
 Return
 
 :?:/Алкоголь_5::
-  SendKPRPMZ(176)
+    SendTemplate("KPRPMZ", 176)
 Return
 
 :?:/Алкоголь_6::
-  SendKPRPMZ(177)
+    SendTemplate("KPRPMZ", 177)
 Return
 
 :?:/Алкоголь_7::
-  SendKPRPMZ(178)
+    SendTemplate("KPRPMZ", 178)
 Return
 
 :?:/Алкоголь_8::
-  SendKPRPMZ(179)
+    SendTemplate("KPRPMZ", 179)
 Return
 
 :?:/Наркотики_1::
-  SendKPRPMZ(180)
+    SendTemplate("KPRPMZ", 180)
 Return
 
 :?:/Наркотики_2::
-  SendKPRPMZ(181)
+    SendTemplate("KPRPMZ", 181)
 Return
 
 :?:/Наркотики_3::
-  SendKPRPMZ(182)
+    SendTemplate("KPRPMZ", 182)
 Return
 
 :?:/Наркотики_4::
-  SendKPRPMZ(183)
+    SendTemplate("KPRPMZ", 183)
 Return
 
 :?:/Наркотики_5::
-  SendKPRPMZ(184)
+    SendTemplate("KPRPMZ", 184)
 Return
 
 :?:/Наркотики_6::
-  SendKPRPMZ(185)
+    SendTemplate("KPRPMZ", 185)
 Return
 
 :?:/Наркотики_7::
-  SendKPRPMZ(186)
+    SendTemplate("KPRPMZ", 186)
 Return
 
 :?:/Наркотики_8::
-  SendKPRPMZ(187)
+    SendTemplate("KPRPMZ", 187)
 Return
 
 :?:/Давление_1::
-  SendKPRPMZ(188)
+    SendTemplate("KPRPMZ", 188)
 Return
 
 :?:/Давление_2::
-  SendKPRPMZ(189)
+    SendTemplate("KPRPMZ", 189)
 Return
 
 :?:/Давление_3::
-  SendKPRPMZ(190)
+    SendTemplate("KPRPMZ", 190)
 Return
 
 :?:/Рост_1::
-  SendKPRPMZ(191)
+    SendTemplate("KPRPMZ", 191)
 Return
 
 :?:/Рост_2::
-  SendKPRPMZ(192)
+    SendTemplate("KPRPMZ", 192)
 Return
 
 :?:/Рост_3::
-  SendKPRPMZ(193)
+    SendTemplate("KPRPMZ", 193)
 Return
 
 :?:/Рост_4::
-  SendKPRPMZ(194)
+    SendTemplate("KPRPMZ", 194)
 Return
 
 :?:/Коронавирус_1::
-  SendKPRPMZ(195)
+    SendTemplate("KPRPMZ", 195)
 Return
 
 :?:/Коронавирус_2::
-  SendKPRPMZ(196)
+    SendTemplate("KPRPMZ", 196)
 Return
 
 :?:/Коронавирус_3::
-  SendKPRPMZ(197)
+    SendTemplate("KPRPMZ", 197)
 Return
 
 :?:/Коронавирус_4::
-  SendKPRPMZ(198)
+    SendTemplate("KPRPMZ", 198)
 Return
 
 :?:/Сердце_4::
-  SendKPRPMZ(199)
+    SendTemplate("KPRPMZ", 199)
 Return
 
 :?:/Сердце_5::
-  SendKPRPMZ(200)
+    SendTemplate("KPRPMZ", 200)
 Return
 
 :?:/Сердце_6::
-  SendKPRPMZ(201)
+    SendTemplate("KPRPMZ", 201)
 Return
 
 :?:/Сердце_7::
-  SendKPRPMZ(202)
+    SendTemplate("KPRPMZ", 202)
 Return
 
 :?:/Ангина_1::
-  SendKPRPMZ(203)
+    SendTemplate("KPRPMZ", 203)
 Return
 
 :?:/Ангина_2::
-  SendKPRPMZ(204)
+    SendTemplate("KPRPMZ", 204)
 Return
 
 :?:/Ангина_3::
-  SendKPRPMZ(205)
+    SendTemplate("KPRPMZ", 205)
 Return
 
 :?:/Ангина_4::
-  SendKPRPMZ(206)
+    SendTemplate("KPRPMZ", 206)
 Return
 
 :?:/Клизма_1::
-  SendKPRPMZ(207)
+    SendTemplate("KPRPMZ", 207)
 Return
 
 :?:/Клизма_2::
-  SendKPRPMZ(208)
+    SendTemplate("KPRPMZ", 208)
 Return
 
 :?:/Соринка_1::
-  SendKPRPMZ(209)
+    SendTemplate("KPRPMZ", 209)
 Return
 
 :?:/Соринка_2::
-  SendKPRPMZ(210)
+    SendTemplate("KPRPMZ", 210)
 Return
 
 :?:/Соринка_3::
-  SendKPRPMZ(211)
+    SendTemplate("KPRPMZ", 211)
 Return
 
 :?:/Заноза_1::
-  SendKPRPMZ(212)
+    SendTemplate("KPRPMZ", 212)
 Return
 
 :?:/Заноза_2::
-  SendKPRPMZ(213)
+    SendTemplate("KPRPMZ", 213)
 Return
 
 :?:/Гвоздь_1::
-  SendKPRPMZ(214)
+    SendTemplate("KPRPMZ", 214)
 Return
 
 :?:/Гвоздь_2::
-  SendKPRPMZ(215)
+    SendTemplate("KPRPMZ", 215)
 Return
 
 :?:/Мозоль_1::
-  SendKPRPMZ(216)
+    SendTemplate("KPRPMZ", 216)
 Return
 
 :?:/Мозоль_2::
-  SendKPRPMZ(217)
+    SendTemplate("KPRPMZ", 217)
 Return
 
 :?:/Бородавка_1::
-  SendKPRPMZ(218)
+    SendTemplate("KPRPMZ", 218)
 Return
 
 :?:/Бородавка_2::
-  SendKPRPMZ(219)
+    SendTemplate("KPRPMZ", 219)
 Return
 
 :?:/Пчела_1::
-  SendKPRPMZ(220)
+    SendTemplate("KPRPMZ", 220)
 Return
 
 :?:/Пчела_2::
-  SendKPRPMZ(221)
+    SendTemplate("KPRPMZ", 221)
 Return
 
 :?:/Тату_1::
-  SendKPRPMZ(222)
+    SendTemplate("KPRPMZ", 222)
 Return
 
 :?:/Тату_2::
-  SendKPRPMZ(223)
+    SendTemplate("KPRPMZ", 223)
 Return
 
 :?:/Тату_3::
-  SendKPRPMZ(224)
+    SendTemplate("KPRPMZ", 224)
 Return
 
 :?:/Змея_1::
-  SendKPRPMZ(225)
+    SendTemplate("KPRPMZ", 225)
 Return
 
 :?:/Змея_2::
 SendPlay {Enter}
-  SendKPRPMZ(226)
+    SendTemplate("KPRPMZ", 226)
 Return
 
 :?:/Бешенство_1::
-  SendKPRPMZ(227)
+    SendTemplate("KPRPMZ", 227)
 Return
 
 :?:/Бешенство_2::
-  SendKPRPMZ(228)
+    SendTemplate("KPRPMZ", 228)
 Return
 
 :?:/Бешенство_3::
-  SendKPRPMZ(229)
+    SendTemplate("KPRPMZ", 229)
 Return
 
 :?:/Бешенство_4::
-  SendKPRPMZ(230)
+    SendTemplate("KPRPMZ", 230)
 Return
 
 :?:/Мудрости_1::
-  SendKPRPMZ(231)
+    SendTemplate("KPRPMZ", 231)
 Return
 
 :?:/Мудрости_2::
-  SendKPRPMZ(232)
+    SendTemplate("KPRPMZ", 232)
 Return
 
 :?:/Мудрости_3::
-  SendKPRPMZ(233)
+    SendTemplate("KPRPMZ", 233)
 Return
 
 :?:/Мудрости_4::
-  SendKPRPMZ(234)
+    SendTemplate("KPRPMZ", 234)
 Return
 
 :?:/Кариес_1::
-  SendKPRPMZ(235)
+    SendTemplate("KPRPMZ", 235)
 Return
 
 :?:/Кариес_2::
-  SendKPRPMZ(236)
+    SendTemplate("KPRPMZ", 236)
 Return
 
 :?:/Кариес_3::
-  SendKPRPMZ(237)
+    SendTemplate("KPRPMZ", 237)
 Return
 
 :?:/Молочный_1::
-  SendKPRPMZ(238)
+    SendTemplate("KPRPMZ", 238)
 Return
 
 :?:/Молочный_2::
-  SendKPRPMZ(239)
+    SendTemplate("KPRPMZ", 239)
 Return
 
 :?:/Шейка_1::
-  SendKPRPMZ(240)
+    SendTemplate("KPRPMZ", 240)
 Return
 
 :?:/Шейка_2::
-  SendKPRPMZ(241)
+    SendTemplate("KPRPMZ", 241)
 Return
 
 :?:/Шейка_3::
-  SendKPRPMZ(242)
+    SendTemplate("KPRPMZ", 242)
 Return
 
 :?:/Шейка_4::
-  SendKPRPMZ(243)
+    SendTemplate("KPRPMZ", 243)
 Return
 
 :?:/Шейка_5::
-  SendKPRPMZ(244)
+    SendTemplate("KPRPMZ", 244)
 Return
 
 :?:/ЭндоУЗИ_1::
-  SendKPRPMZ(245)
+    SendTemplate("KPRPMZ", 245)
 Return
 
 :?:/ЭндоУЗИ_2::
-  SendKPRPMZ(246)
+    SendTemplate("KPRPMZ", 246)
 Return
 
 :?:/ЭндоУЗИ_3::
-  SendKPRPMZ(247)
+    SendTemplate("KPRPMZ", 247)
 Return
 
 :?:/М>Ж::
-  SendKPRPMZ(248)
+    SendTemplate("KPRPMZ", 248)
 Return
 
 :?:/Ж>М::
-  SendKPRPMZ(249)
+    SendTemplate("KPRPMZ", 249)
 Return
 
 :?:/Ингалятор::
-  SendKPRPMZ(250)
+    SendTemplate("KPRPMZ", 250)
 Return
 
 :?:/Донор_1::
-  SendKPRPMZ(251)
+    SendTemplate("KPRPMZ", 251)
 Return
 
 :?:/Донор_2::
-  SendKPRPMZ(252)
+    SendTemplate("KPRPMZ", 252)
 Return
 
 :?:/Донор_3::
-  SendKPRPMZ(253)
+    SendTemplate("KPRPMZ", 253)
 Return
 
 :?:/Донор_4::
-  SendKPRPMZ(254)
+    SendTemplate("KPRPMZ", 254)
 Return
 
 :?:/ЭЭГ_1::
-  SendKPRPMZ(255)
+    SendTemplate("KPRPMZ", 255)
 Return
 
 :?:/ЭЭГ_2::
-  SendKPRPMZ(256)
+    SendTemplate("KPRPMZ", 256)
 Return
 
 :?:/ЭЭГ_3::
-  SendKPRPMZ(257)
+    SendTemplate("KPRPMZ", 257)
 Return
 
 :?:/ЭЭГ_4::
-  SendKPRPMZ(258)
+    SendTemplate("KPRPMZ", 258)
 Return
 
 :?:/ЭЭГ_5::
-  SendKPRPMZ(259)
+    SendTemplate("KPRPMZ", 259)
 Return
 
 :?:/Глю_1::
-  SendKPRPMZ(260)
+    SendTemplate("KPRPMZ", 260)
 Return
 
 :?:/Глю_2::
-  SendKPRPMZ(261)
+    SendTemplate("KPRPMZ", 261)
 Return
 
 :?:/Глю_3::
-  SendKPRPMZ(262)
+    SendTemplate("KPRPMZ", 262)
 Return
 
 :?:/Глю_4::
-  SendKPRPMZ(263)
+    SendTemplate("KPRPMZ", 263)
 Return
 
 :?:/Глю_5::
-  SendKPRPMZ(264)
+    SendTemplate("KPRPMZ", 264)
 Return
 
 :?:/ОФЭКТ_1::
-  SendKPRPMZ(265)
+    SendTemplate("KPRPMZ", 265)
 Return
 
 :?:/ОФЭКТ_2::
-  SendKPRPMZ(266)
+    SendTemplate("KPRPMZ", 266)
 Return
 
 :?:/ОФЭКТ_3::
-  SendKPRPMZ(267)
+    SendTemplate("KPRPMZ", 267)
 Return
 
 :?:/ОФЭКТ_4::
-  SendKPRPMZ(268)
+    SendTemplate("KPRPMZ", 268)
 Return
 
 :?:/Пул_1::
-  SendKPRPMZ(269)
+    SendTemplate("KPRPMZ", 269)
 Return
 
 :?:/Пул_2::
-  SendKPRPMZ(270)
+    SendTemplate("KPRPMZ", 270)
 Return
 
 :?:/Рентген_1::
-  SendKPRPMZ(271)
+    SendTemplate("KPRPMZ", 271)
 Return
 
 :?:/Рентген_2::
-  SendKPRPMZ(272)
+    SendTemplate("KPRPMZ", 272)
 Return
 
 :?:/Рентген_3::
-  SendKPRPMZ(273)
+    SendTemplate("KPRPMZ", 273)
 Return
 
 :?:/Рентген_4::
-  SendKPRPMZ(274)
+    SendTemplate("KPRPMZ", 274)
 Return
 
 :?:/Рентген_5::
-  SendKPRPMZ(275)
+    SendTemplate("KPRPMZ", 275)
 Return
 
 :?:/Годность::
-  SendKPRPMZ(276)
+    SendTemplate("KPRPMZ", 276)
 Return
 
 :?:/Хранение::
-  SendKPRPMZ(277)
+    SendTemplate("KPRPMZ", 277)
 Return
 
 :?:/Белье::
-  SendKPRPMZ(278)
+    SendTemplate("KPRPMZ", 278)
 Return
 
 :?:/Кварц_1::
-  SendKPRPMZ(279)
+    SendTemplate("KPRPMZ", 279)
 Return
 
 :?:/Кварц_2::
-  SendKPRPMZ(280)
+    SendTemplate("KPRPMZ", 280)
 Return
 
 :?:/Докум::
-  SendKPRPMZ(281)
+    SendTemplate("KPRPMZ", 281)
 Return
 
 :?:/Мойка::
-  SendKPRPMZ(282)
+    SendTemplate("KPRPMZ", 282)
 Return
 
 :?:/ПХД_1::
-  SendKPRPMZ(283)
+    SendTemplate("KPRPMZ", 283)
 Return
 
 :?:/ПХД_2::
-  SendKPRPMZ(284)
+    SendTemplate("KPRPMZ", 284)
 Return
 
 :?:/Миос_1::
-  SendKPRPMZ(285)
+    SendTemplate("KPRPMZ", 285)
 Return
 
 :?:/Миос_2::
-  SendKPRPMZ(286)
+    SendTemplate("KPRPMZ", 286)
 Return
 
 :?:/Миос_3::
-  SendKPRPMZ(287)
+    SendTemplate("KPRPMZ", 287)
 Return
 
 :?:/Виз_1::
-  SendKPRPMZ(288)
+    SendTemplate("KPRPMZ", 288)
 Return
 
 :?:/Виз_2::
-  SendKPRPMZ(289)
+    SendTemplate("KPRPMZ", 289)
 Return
 
 :?:/Виз_3::
-  SendKPRPMZ(290)
+    SendTemplate("KPRPMZ", 290)
 Return
 
 :?:/Виз_4::
-  SendKPRPMZ(291)
+    SendTemplate("KPRPMZ", 291)
 Return
 
 :?:/Отбел_1::
-  SendKPRPMZ(292)
+    SendTemplate("KPRPMZ", 292)
 Return
 
 :?:/Отбел_2::
-  SendKPRPMZ(293)
+    SendTemplate("KPRPMZ", 293)
 Return
 
 :?:/Отбел_3::
-  SendKPRPMZ(294)
+    SendTemplate("KPRPMZ", 294)
 Return
 
 :?:/Спутник_1::
-  SendKPRPMZ(295)
+    SendTemplate("KPRPMZ", 295)
 Return
 
 :?:/Спутник_2::
-  SendKPRPMZ(296)
+    SendTemplate("KPRPMZ", 296)
 Return
 
 :?:/Наркоман_1::
-  SendKPRPMZ(297)
+    SendTemplate("KPRPMZ", 297)
 Return
 
 :?:/Наркоман_2::
-  SendKPRPMZ(298)
+    SendTemplate("KPRPMZ", 298)
 Return
 
 :?:/Бешенство_4::
-  SendKPRPMZ(299)
+    SendTemplate("KPRPMZ", 299)
 Return
 
 :?:/Бешенство_5::
-  SendKPRPMZ(300)
+    SendTemplate("KPRPMZ", 300)
 Return
 
 :?:/УЗИ_1::
-  SendKPRPMZ(301)
+    SendTemplate("KPRPMZ", 301)
 Return
 
 :?:/УЗИ_2::
-  SendKPRPMZ(302)
+    SendTemplate("KPRPMZ", 302)
 Return
 
 :?:/Хим_1::
-  SendKPRPMZ(303)
+    SendTemplate("KPRPMZ", 303)
 Return
 
 :?:/Хим_2::
-  SendKPRPMZ(304)
+    SendTemplate("KPRPMZ", 304)
 Return
 
 :?:/Рем_1::
-  SendKPRPMZ(305)
+    SendTemplate("KPRPMZ", 305)
 Return
 
 :?:/Рем_2::
-  SendKPRPMZ(306)
+    SendTemplate("KPRPMZ", 306)
 Return
 
 :?:/Вена_1::
-  SendKPRPMZ(307)
+    SendTemplate("KPRPMZ", 307)
 Return
 
 :?:/Вена_2::
-  SendKPRPMZ(308)
+    SendTemplate("KPRPMZ", 308)
 Return
 
 :?:/Клятва::
-  SendKPRPMZ(309)
+    SendTemplate("KPRPMZ", 309)
 Return
 
 :?:/Форма::
-  SendKPRPMZ(310)
+    SendTemplate("KPRPMZ", 310)
 Return
 
 :?:/ИВЛ_ЦГБ::
-  SendKPRPMZ(311)
+    SendTemplate("KPRPMZ", 311)
 Return
 
 :?:/ИВЛ_АСМП::
-  SendKPRPMZ(312)
+    SendTemplate("KPRPMZ", 312)
 Return
 
 :?:/ИВЛ::
-  SendKPRPMZ(313)
+    SendTemplate("KPRPMZ", 313)
 Return
 
 :?:/Капельница_1::
-  SendKPRPMZ(314)
+    SendTemplate("KPRPMZ", 314)
 Return
 
 :?:/Капельница_2::
-  SendKPRPMZ(315)
+    SendTemplate("KPRPMZ", 315)
 Return
 
 :?:/Легкое_У_1::
-  SendKPRPMZ(316)
+    SendTemplate("KPRPMZ", 316)
 Return
 
 :?:/Легкое_У_2::
-  SendKPRPMZ(317)
+    SendTemplate("KPRPMZ", 317)
 Return
 
 :?:/Грудь_УУ_1::
-  SendKPRPMZ(318)
+    SendTemplate("KPRPMZ", 318)
 Return
 
 :?:/Грудь_УУ_2::
-  SendKPRPMZ(319)
+    SendTemplate("KPRPMZ", 319)
 Return
 
 :?:/Пло_Х_1::
-  SendKPRPMZ(320)
+    SendTemplate("KPRPMZ", 320)
 Return
 
 :?:/Пло_Х_2::
-  SendKPRPMZ(321)
+    SendTemplate("KPRPMZ", 321)
 Return
 
 :?:/Грудь_У_1::
-  SendKPRPMZ(322)
+    SendTemplate("KPRPMZ", 322)
 Return
 
 :?:/Грудь_У_2::
-  SendKPRPMZ(323)
+    SendTemplate("KPRPMZ", 323)
 Return
 
 :?:/Матка_У_1::
-  SendKPRPMZ(324)
+    SendTemplate("KPRPMZ", 324)
 Return
 
 :?:/Матка_У_2::
-  SendKPRPMZ(325)
+    SendTemplate("KPRPMZ", 325)
 Return
 
 :?:/УВТ_1::
-  SendKPRPMZ(326)
+    SendTemplate("KPRPMZ", 326)
 Return
 
 :?:/УВТ_2::
-  SendKPRPMZ(327)
+    SendTemplate("KPRPMZ", 327)
 Return
 
 :?:/Гем_1::
-  SendKPRPMZ(328)
+    SendTemplate("KPRPMZ", 328)
 Return
 
 :?:/Гем_2::
-  SendKPRPMZ(329)
+    SendTemplate("KPRPMZ", 329)
 Return
 
 :?:/Нож_1::
-  SendKPRPMZ(330)
+    SendTemplate("KPRPMZ", 330)
 Return
 
 :?:/Нож_2::
-  SendKPRPMZ(331)
+    SendTemplate("KPRPMZ", 331)
 Return
 
 :?:/Аппендикс_1::
-  SendKPRPMZ(332)
+    SendTemplate("KPRPMZ", 332)
 Return
 
 :?:/Аппендикс_2::
-  SendKPRPMZ(333)
+    SendTemplate("KPRPMZ", 333)
 Return
 
 :?:/Соз_1::
-  SendKPRPMZ(334)
+    SendTemplate("KPRPMZ", 334)
 Return
 
 :?:/Соз_2::
-  SendKPRPMZ(335)
+    SendTemplate("KPRPMZ", 335)
 Return
 
 :?:/Соз_3::
-  SendKPRPMZ(336)
+    SendTemplate("KPRPMZ", 336)
 Return
 
 :?:/Родинка_1::
-  SendKPRPMZ(337)
+    SendTemplate("KPRPMZ", 337)
 Return
 
 :?:/Родинка_2::
-  SendKPRPMZ(338)
+    SendTemplate("KPRPMZ", 338)
 Return
 
 :?:/Родинка_3::
-  SendKPRPMZ(339)
+    SendTemplate("KPRPMZ", 339)
 Return
 
 :?:/Кард_1::
-  SendKPRPMZ(340)
+    SendTemplate("KPRPMZ", 340)
 Return
 
 :?:/Кард_2::
-  SendKPRPMZ(341)
+    SendTemplate("KPRPMZ", 341)
 Return
 
 :?:/Инфаркт_1::
-  SendKPRPMZ(342)
+    SendTemplate("KPRPMZ", 342)
 Return
 
 :?:/Инфаркт_2::
-  SendKPRPMZ(343)
+    SendTemplate("KPRPMZ", 343)
 Return
 
 :?:/Инфаркт_3::
-  SendKPRPMZ(344)
+    SendTemplate("KPRPMZ", 344)
 Return
 
 :?:/Инфаркт_4::
-  SendKPRPMZ(345)
+    SendTemplate("KPRPMZ", 345)
 Return
 
 :?:/Инфаркт_5::
-  SendKPRPMZ(346)
+    SendTemplate("KPRPMZ", 346)
 Return
 
 :?:/Инфаркт_6::
-  SendKPRPMZ(347)
+    SendTemplate("KPRPMZ", 347)
 Return
 
 :?:/Роды_1::
-  SendKPRPMZ(348)
+    SendTemplate("KPRPMZ", 348)
 Return
 
 :?:/Роды_2::
-  SendKPRPMZ(349)
+    SendTemplate("KPRPMZ", 349)
 Return
 
 :?:/Роды_3::
-  SendKPRPMZ(350)
+    SendTemplate("KPRPMZ", 350)
 Return
 
 :?:/Роды_4::
-  SendKPRPMZ(351)
+    SendTemplate("KPRPMZ", 351)
 Return
 
 :?:/Стер_2::
-  SendKPRPMZ(352)
+    SendTemplate("KPRPMZ", 352)
 Return
 
 :?:/Стер_2::
-  SendKPRPMZ(353)
+    SendTemplate("KPRPMZ", 353)
 Return
 
 :?:/Венозное::
-  SendKPRPMZ(354)
+    SendTemplate("KPRPMZ", 354)
 Return
 
 :?:/Артериальное::
-  SendKPRPMZ(355)
+    SendTemplate("KPRPMZ", 355)
 Return
 
 :?:/ЗЧМТ_1::
-  SendKPRPMZ(356)
+    SendTemplate("KPRPMZ", 356)
 Return
 
 :?:/ЗЧМТ_2::
-  SendKPRPMZ(357)
+    SendTemplate("KPRPMZ", 357)
 Return
 
 :?:/Нос_1::
-  SendKPRPMZ(358)
+    SendTemplate("KPRPMZ", 358)
 Return
 
 :?:/Нос_2::
-  SendKPRPMZ(359)
+    SendTemplate("KPRPMZ", 359)
 Return
 
 :?:/Откр::
-  SendKPRPMZ(360)
+    SendTemplate("KPRPMZ", 360)
 Return
 
 :?:/Закр::
-  SendKPRPMZ(361)
+    SendTemplate("KPRPMZ", 361)
 Return
 
 :?:/Ожог_3::
-  SendKPRPMZ(362)
+    SendTemplate("KPRPMZ", 362)
 Return
 
 :?:/Ожог_4::
-  SendKPRPMZ(363)
+    SendTemplate("KPRPMZ", 363)
 Return
 
 :?:/Пуля_1::
-  SendKPRPMZ(364)
+    SendTemplate("KPRPMZ", 364)
 Return
 
 :?:/Пуля_2::
-  SendKPRPMZ(365)
+    SendTemplate("KPRPMZ", 365)
 Return
 
 :?:/Пуля_3::
-  SendKPRPMZ(366)
+    SendTemplate("KPRPMZ", 366)
 Return
 
 :?:/Нога_1::
-  SendKPRPMZ(367)
+    SendTemplate("KPRPMZ", 367)
 Return
 
 :?:/Грыжа::
-  SendKPRPMZ(368)
+    SendTemplate("KPRPMZ", 368)
 Return
 
 :?:/Мороз_1::
-  SendKPRPMZ(369)
+    SendTemplate("KPRPMZ", 369)
 Return
 
 :?:/Мороз_2::
-  SendKPRPMZ(370)
+    SendTemplate("KPRPMZ", 370)
 Return
 
 :?:/Позв_1::
-  SendKPRPMZ(371)
+    SendTemplate("KPRPMZ", 371)
 Return
 
 :?:/Позв_2::
-  SendKPRPMZ(372)
+    SendTemplate("KPRPMZ", 372)
 Return
 
 :?:/Позв_3::
-  SendKPRPMZ(373)
+    SendTemplate("KPRPMZ", 373)
 Return
 
 :?:/Ребро_1::
-  SendKPRPMZ(374)
+    SendTemplate("KPRPMZ", 374)
 Return
 
 :?:/Ребро_2::
-  SendKPRPMZ(375)
+    SendTemplate("KPRPMZ", 375)
 Return
 
 :?:/Ребро_3::
-  SendKPRPMZ(376)
+    SendTemplate("KPRPMZ", 376)
 Return
 
 :?:/АВД_1::
-  SendKPRPMZ(377)
+    SendTemplate("KPRPMZ", 377)
 Return
 
 :?:/АВД_2::
-  SendKPRPMZ(378)
+    SendTemplate("KPRPMZ", 378)
 Return
 
 :?:/Челюс::
-  SendKPRPMZ(379)
+    SendTemplate("KPRPMZ", 379)
 Return
 
 :?:/Нос_ПМП::
-  SendKPRPMZ(380)
+    SendTemplate("KPRPMZ", 380)
 Return
 
 :?:/Нос::
-  SendKPRPMZ(381)
+    SendTemplate("KPRPMZ", 381)
 Return
 
 :?:/Нога_2::
-  SendKPRPMZ(382)
+    SendTemplate("KPRPMZ", 382)
 Return
 
 :?:/Рана::
-  SendKPRPMZ(383)
+    SendTemplate("KPRPMZ", 383)
 Return
 
 :?:/Пер::
-  SendKPRPMZ(384)
+    SendTemplate("KPRPMZ", 384)
 Return
 
 :?:/Грудь_1::
-  SendKPRPMZ(385)
+    SendTemplate("KPRPMZ", 385)
 Return
 
 :?:/Грудь_2::
-  SendKPRPMZ(386)
+    SendTemplate("KPRPMZ", 386)
 Return
 
 :?:/Раст::
-  SendKPRPMZ(387)
+    SendTemplate("KPRPMZ", 387)
 Return
 
 :?:/Ожоги_1::
-  SendKPRPMZ(388)
+    SendTemplate("KPRPMZ", 388)
 Return
 
 :?:/Ожоги_2::
-  SendKPRPMZ(389)
+    SendTemplate("KPRPMZ", 389)
 Return
 
 :?:/Пересадка_1::
-  SendKPRPMZ(390)
+    SendTemplate("KPRPMZ", 390)
 Return
 
 :?:/Пересадка_2::
-  SendKPRPMZ(391)
+    SendTemplate("KPRPMZ", 391)
 Return
 
 :?:/Рассечение_г::
-  SendKPRPMZ(392)
+    SendTemplate("KPRPMZ", 392)
 Return
 
 :?:/Кровь_1::
-  SendKPRPMZ(393)
+    SendTemplate("KPRPMZ", 393)
 Return
 
 :?:/Кровь_2::
-  SendKPRPMZ(394)
+    SendTemplate("KPRPMZ", 394)
 Return
 
 :?:/Ранение::
-  SendKPRPMZ(395)
+    SendTemplate("KPRPMZ", 395)
 Return
 
 :?:/Вывих::
-  SendKPRPMZ(396)
+    SendTemplate("KPRPMZ", 396)
 Return
 
 :?:/Открытый::
-  SendKPRPMZ(397)
+    SendTemplate("KPRPMZ", 397)
 Return
 
 :?:/ГМУ_1::
-  SendKPRPMZ(398)
+    SendTemplate("KPRPMZ", 398)
 Return
 
 :?:/ЦГБ_1::
-  SendKPRPMZ(399)
+    SendTemplate("KPRPMZ", 399)
 Return
 
 :?:/ГМУ_2::
-  SendKPRPMZ(400)
+    SendTemplate("KPRPMZ", 400)
 Return
 
 :?:/ЦГБ_2::
-  SendKPRPMZ(400)
+    SendTemplate("KPRPMZ", 400)
 Return
 
 :?:/ГМУ_3::
-  SendKPRPMZ(401)
+    SendTemplate("KPRPMZ", 401)
 Return
 
 :?:/ЦГБ_3::
-  SendKPRPMZ(401)
+    SendTemplate("KPRPMZ", 401)
 Return
 
 :?:/ГМУ_4::
-  SendKPRPMZ(402)
+    SendTemplate("KPRPMZ", 402)
 Return
 
 :?:/ЦГБ_4::
-  SendKPRPMZ(402)
+    SendTemplate("KPRPMZ", 402)
 Return
 
 :?:/ГМУ_5::
-  SendKPRPMZ(403)
+    SendTemplate("KPRPMZ", 403)
 Return
 
 :?:/ЦГБ_5::
-  SendKPRPMZ(403)
+    SendTemplate("KPRPMZ", 403)
 Return
 
 :?:/ГМУ_6::
-  SendKPRPMZ(404)
+    SendTemplate("KPRPMZ", 404)
 Return
 
 :?:/ЦГБ_6::
-  SendKPRPMZ(404)
+    SendTemplate("KPRPMZ", 404)
 Return
 
 :?:/ГМУ_7::
-  SendKPRPMZ(405)
+    SendTemplate("KPRPMZ", 405)
 Return
 
 :?:/ЦГБ_7::
-  SendKPRPMZ(405)
+    SendTemplate("KPRPMZ", 405)
 Return
 
 :?:/ЦГБ_8::
-  SendKPRPMZ(406)
+    SendTemplate("KPRPMZ", 406)
 Return
 
 :?:/ЦГБ_9::
-  SendKPRPMZ(407)
+    SendTemplate("KPRPMZ", 407)
 Return
 
 :?:/ЦГБ_12::
-  SendKPRPMZ(410)
+    SendTemplate("KPRPMZ", 410)
 Return
 
 :?:/МК_1::
-  SendKPRPMZ(411)
+    SendTemplate("KPRPMZ", 411)
 SetTitleMatchMode, 2
 FileEncoding, UTF-8
 
@@ -2291,7 +2239,7 @@ return
 
 
 :?:/МК_0::
-  SendKPRPMZ(412)
+    SendTemplate("KPRPMZ", 412)
 SetTitleMatchMode, 2
 FileEncoding, UTF-8
 
@@ -2375,45 +2323,45 @@ return
 
 
 :?:/МК_2::
-  SendKPRPMZ(413)
+    SendTemplate("KPRPMZ", 413)
 Return
 
 :?:/МК_3::
-  SendKPRPMZ(414)
+    SendTemplate("KPRPMZ", 414)
 Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 Return
 
 :?:/МК_4::
-  SendKPRPMZ(415)
+    SendTemplate("KPRPMZ", 415)
 Return
 
 :?:/МК_5::
-  SendKPRPMZ(416)
+    SendTemplate("KPRPMZ", 416)
 Return
 
 :?:/МК_6::
-  SendKPRPMZ(417)
+    SendTemplate("KPRPMZ", 417)
 Return
 
 :?:/МК_7::
-  SendKPRPMZ(418)
+    SendTemplate("KPRPMZ", 418)
 Return
 
 :?:/МК_8::
-  SendKPRPMZ(419)
+    SendTemplate("KPRPMZ", 419)
 Return
 
 :?:/МК_10::
-  SendKPRPMZ(421)
+    SendTemplate("KPRPMZ", 421)
 Return
 
 :?:/МК_11::
-  SendKPRPMZ(422)
+    SendTemplate("KPRPMZ", 422)
 Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 Return
 
 :?:/МК_12::
-  SendKPRPMZ(423)
+    SendTemplate("KPRPMZ", 423)
 Return
 
 

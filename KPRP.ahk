@@ -597,6 +597,11 @@ Loop, 97 {
 }
 
 
+Loop, 1260 {
+    IniRead, Lectures%A_Index%, C:\ProgramData\KPRP\KPRP-main\Lectures.ini, User, Lectures%A_Index%
+}
+
+
 IniRead, JWI, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniRead, TAG, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniRead, Name, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -703,6 +708,19 @@ Loop, 500
     }
 }
 
+
+Loop, 1260
+{
+    ; Генерируем название переменной, например,
+    varName := "Lectures" A_Index
+    
+    ; Получаем значение переменной (если оно равно "ERROR")
+    if %varName% = ERROR
+    {
+        ; Если значение ERROR, присваиваем путь
+        %varName% := "C:\ProgramData\KPRP\KPRP-main\LecturesartMZ\Lection_" A_Index ".txt"
+    }
+}
 
 
 
@@ -989,7 +1007,6 @@ SendRU(text) {
 
 
 
-
 Proverka()
 {
     if (!A_IsCompiled && !InStr(A_AhkPath, "_UIA")) {
@@ -1174,6 +1191,65 @@ GetActiveMonitorInfo() {
     return {left:left, top:top, right:right, bottom:bottom}
 }
 
+; Функция редактор отыгровок
+SelectObjects(objectNumber) {
+    VarName := "Objects" . objectNumber
+    FileSelectFile, %VarName%, 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+}
+
+SendTemplate(type, num) {
+    ; --- Глобальные переменные ---
+    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
+    global vybor, zaderzhka
+    
+    Sleep 150
+    SendPlay {Enter}
+    FileEncoding, UTF-8-RAW
+    
+    ; --- Получаем переменную Var ---
+    Var := Greeting()
+    
+    ; --- Определяем путь к файлу ---
+    if (type = "Redakt") {
+        filePath := Objects%num%
+    } else if (type = "KPRPMZ") {
+        filePath := KPRPMZ%num%
+    } else if (type = "Lectures") {
+        filePath := Lectures%num%
+    } else {
+        return  ; неизвестный тип
+    }
+    
+    ; --- Проверяем существование файла ---
+    if !FileExist(filePath)
+        return
+    
+    ; --- Читаем и обрабатываем файл ---
+    FileRead, content, %filePath%
+    
+    ; --- Подстановка переменных ---
+    content := StrReplace(content, "%floor%", floor)
+    content := StrReplace(content, "%Var%", Var)
+    content := StrReplace(content, "%Name%", Name)
+    content := StrReplace(content, "%Surname%", Surname)
+    content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
+    content := StrReplace(content, "%Bol_ro_3%", Bol_ro_3)
+    content := StrReplace(content, "%JWI%", JWI)
+    content := StrReplace(content, "%TAG%", TAG)
+    content := StrReplace(content, "%Middle_Name%", Middle_Name)
+    content := StrReplace(content, "%Skrin_1%", Skrin_1)
+    content := StrReplace(content, "%Female%", Female)
+    content := StrReplace(content, "%stol%", stol)
+    
+    ; --- Разделяем на строки и отправляем ---
+    Loop, parse, content, `n, `r
+    {
+        if (A_LoopField != "") {
+            %vybor%(A_LoopField, "  " zaderzhka " ")
+        }
+    }
+}
+
 
 
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
@@ -1252,12 +1328,12 @@ if FileExist(selectedFile) {
 if (SelectedItem = "") {
     Gui, 2:Font, S15 Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
+    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
 }
 Return
 
-SaveSelection:
+SaveSeLectures:
     Gui, 2:Submit
     FileDelete, %selectedFile%
     FileAppend, %SelectedItem%, %selectedFile%
@@ -1326,11 +1402,6 @@ GetWindowsUpdateVersion() {
 
 
 
-
-
-
-
-
 UZ:
 #Include *i C:\ProgramData\KPRP\KPRP-main\KPRPartUZ.ahk
 Return
@@ -1348,1285 +1419,392 @@ MZ:
 Return
 
 0001Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects1%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 1)
 Return
 
 0002Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects2%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 2)
 Return
 
 0003Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects3%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 3)
 Return
 
 0004Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects4%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 4)
 Return
 
 0005Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects5%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 5)
 Return
 
 0006Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects6%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 6)
 Return
 
 0007Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects7%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 7)
 Return
 
 0008Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects8%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 8)
 Return
 
 0009Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects9%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 9)
 Return
 
 0010Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects10%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 10)
 Return
 
 0011Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects11%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 11)
 Return
 
 0012Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects12%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 12)
 Return
 
 0013Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects13%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 13)
 Return
 
 0014Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects14%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 14)
 Return
 
 0015Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects15%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 15)
 Return
 
 0016Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects16%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 16)
 Return
 
 0017Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects17%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 17)
 Return
 
 0018Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects18%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 18)
 Return
 
 0019Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects19%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 19)
 Return
 
 0020Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects20%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 20)
 Return
 
 0021Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects21%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 21)
 Return
 
 0022Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects22%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 22)
 Return
 
 0023Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects23%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 23)
 Return
 
 0024Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects24%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 24)
 Return
 
 0025Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects25%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 25)
 Return
 
 0026Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects26%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 26)
 Return
 
 0027Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects27%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 27)
 Return
 
 0028Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects28%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 28)
 Return
 
 0029Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects29%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 29)
 Return
 
 0030Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects30%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 30)
 Return
 
 0031Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects31%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 31)
 Return
 
 0032Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects32%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 32)
 Return
-
 
 0033Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects33%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 33)
 Return
-
 
 0034Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects34%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 34)
 Return
-
 
 0035Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects35%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 35)
 Return
-
 
 0036Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects36%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 36)
 Return
 
-
 0037Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects37%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 37)
 Return
 
 0038Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects38%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 38)
 Return
 
-
 0039Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects39%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 39)
 Return
 
 0040Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects40%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 40)
 Return
 
 0041Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects41%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 41)
 Return
 
 0042Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects42%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 42)
 Return
-
 
 0043Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects43%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 43)
 Return
 
-
 0044Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects44%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 44)
 Return
 
 0045Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects45%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 45)
 Return
-
 
 0046Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects46%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 46)
 Return
-
 
 0047Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects47%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 47)
 Return
-
 
 0048Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects48%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 48)
 Return
-
 
 0049Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects49%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 49)
 Return
-
 
 0050Redakt:
-Sleep 150
-SendInput, {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects50%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 50)
 Return
-
-
-
-
 
 :?:/РП_51::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects51%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 51)
 Return
 
-
 :?:/РП_52::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects52%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 52)
 Return
 
 :?:/РП_53::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects53%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 53)
 Return
 
 :?:/РП_54::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects54%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 54)
 Return
 
 :?:/РП_55::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects55%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 55)
 Return
 
 :?:/РП_56::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects56%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 56)
 Return
 
 :?:/РП_57::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects57%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 57)
 Return
 
 :?:/РП_58::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects58%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 58)
 Return
 
 :?:/РП_59::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects59%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 59)
 Return
 
 :?:/РП_60::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects60%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 60)
 Return
 
-
 :?:/РП_61::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects61%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 61)
 Return
 
 :?:/РП_62::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects62%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
-Return
-:?:/РП_63::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects63%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 62)
 Return
 
+:?:/РП_63::
+    SendTemplate("Redakt", 63)
+Return
 
 :?:/РП_64::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects64%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 64)
 Return
 
 :?:/РП_65::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects65%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 65)
 Return
 
 :?:/РП_66::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects66%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 66)
 Return
 
 :?:/РП_67::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects67%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 67)
 Return
 
 :?:/РП_68::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects68%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 68)
 Return
 
 :?:/РП_69::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects69%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 69)
 Return
-
 
 :?:/РП_70::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects70%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 70)
 Return
 
-:?:/РП_71%::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects71%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+:?:/РП_71::
+    SendTemplate("Redakt", 71)
 Return
 
 :?:/РП_72::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects72%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 72)
 Return
 
 :?:/РП_73::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects73%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 73)
 Return
 
 :?:/РП_74::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects74%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 74)
 Return
 
 :?:/РП_75::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects75%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 75)
 Return
 
 :?:/РП_76::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects76%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 76)
 Return
 
 :?:/РП_77::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects77%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 77)
 Return
 
 :?:/РП_78::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects78%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 78)
 Return
 
 :?:/РП_79::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects79%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 79)
 Return
 
 :?:/РП_80::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects80%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 80)
 Return
 
 :?:/РП_81::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects81%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 81)
 Return
 
 :?:/РП_82::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects82%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 82)
 Return
 
 :?:/РП_83::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects83%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 83)
 Return
 
 :?:/РП_84::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects84%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 84)
 Return
 
 :?:/РП_85::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects85%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 85)
 Return
 
 :?:/РП_86::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects86%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 86)
 Return
 
 :?:/РП_87::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects87%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 87)
 Return
 
 :?:/РП_88::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects88%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 88)
 Return
 
 :?:/РП_89::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects89%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 89)
 Return
 
 :?:/РП_90::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects90%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 90)
 Return
 
 :?:/РП_91::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects91%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 91)
 Return
 
 :?:/РП_92::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects92%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 92)
 Return
 
 :?:/РП_93::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects93%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 93)
 Return
 
 :?:/РП_94::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects94%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 94)
 Return
 
 :?:/РП_95::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects95%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 95)
+Return
 
 :?:/РП_96::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects96%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 96)
 Return
 
 :?:/РП_97::
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-Loop, read, %Objects97%
-{
-Loop, parse, A_LoopReadLine, %A_Tab%
-{
-%vybor%("" A_LoopField "", "  " zaderzhka " ")
-}
-}
+    SendTemplate("Redakt", 97)
 Return
-
 
 
 
@@ -2711,7 +1889,7 @@ return
 Vybor_organizatsii:
 Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200 gOnSelect, РЖД|МЗ|ГУВД|ГИБДД|Армия
-Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSelection, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 Gui, 2:Show, w250 h120, Выбор организации
 Return
 
@@ -3003,19 +2181,9 @@ Gui, 10:Show, w1200 h700, Редактор отыгровок сочетание
 Return
 
 
-
-
-
-
-
-
-
-
 Editor:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
-
 Gui, 11:Destroy,
-
 
 Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
 
@@ -3180,514 +2348,399 @@ Gui, 11:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects95, C:\P
 Gui, 11:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects96, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
 Gui, 11:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects97, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
 
-
 Gui, 11:Add, Picture, x1115 y605 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
-
 Gui, 11:Show, w1200 h670, Редактор отыгровок команды
 return
 
+
+
 SelectObjects1:
-{
-FileSelectFile, Objects1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(1)
+return
+
 SelectObjects2:
-{
-FileSelectFile, Objects2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(2)
+return
+
 SelectObjects3:
-{
-FileSelectFile, Objects3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(3)
+return
+
 SelectObjects4:
-{
-FileSelectFile, Objects4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(4)
+return
+
 SelectObjects5:
-{
-FileSelectFile, Objects5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(5)
+return
+
 SelectObjects6:
-{
-FileSelectFile, Objects6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(6)
+return
+
 SelectObjects7:
-{
-FileSelectFile, Objects7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(7)
+return
+
 SelectObjects8:
-{
-FileSelectFile, Objects8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(8)
+return
+
 SelectObjects9:
-{
-FileSelectFile, Objects9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(9)
+return
+
 SelectObjects10:
-{
-FileSelectFile, Objects10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(10)
 return
+
 SelectObjects11:
-{
-FileSelectFile, Objects11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(11)
 return
+
 SelectObjects12:
-{
-FileSelectFile, Objects12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(12)
 return
+
 SelectObjects13:
-{
-FileSelectFile, Objects13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(13)
 return
+
 SelectObjects14:
-{
-FileSelectFile, Objects13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(14)
 return
+
 SelectObjects15:
-{
-FileSelectFile, Objects15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(15)
 return
+
 SelectObjects16:
-{
-FileSelectFile, Objects16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(16)
 return
+
 SelectObjects17:
-{
-FileSelectFile, Objects17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(17)
 return
+
 SelectObjects18:
-{
-FileSelectFile, Objects18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(18)
 return
+
 SelectObjects19:
-{
-FileSelectFile, Objects19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(19)
 return
+
 SelectObjects20:
-{
-FileSelectFile, Objects20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(20)
 return
+
 SelectObjects21:
-{
-FileSelectFile, Objects21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(21)
 return
+
 SelectObjects22:
-{
-FileSelectFile, Objects22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(22)
 return
+
 SelectObjects23:
-{
-FileSelectFile, Objects23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(23)
 return
+
 SelectObjects24:
-{
-FileSelectFile, Objects24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(24)
 return
+
 SelectObjects25:
-{
-FileSelectFile, Objects25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(25)
 return
+
 SelectObjects26:
-{
-FileSelectFile, Objects26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(26)
 return
+
 SelectObjects27:
-{
-FileSelectFile, Objects27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(27)
 return
+
 SelectObjects28:
-{
-FileSelectFile, Objects28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(28)
 return
+
 SelectObjects29:
-{
-FileSelectFile, Objects29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(29)
 return
+
 SelectObjects30:
-{
-FileSelectFile, Objects30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(30)
 return
+
 SelectObjects31:
-{
-FileSelectFile, Objects31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(31)
 return
+
 SelectObjects32:
-{
-FileSelectFile, Objects32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(32)
 return
+
 SelectObjects33:
-{
-FileSelectFile, Objects33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(33)
 return
+
 SelectObjects34:
-{
-FileSelectFile, Objects34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(34)
 return
+
 SelectObjects35:
-{
-FileSelectFile, Objects35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(35)
 return
+
 SelectObjects36:
-{
-FileSelectFile, Objects36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(36)
 return
+
 SelectObjects37:
-{
-FileSelectFile, Objects37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(37)
 return
+
 SelectObjects38:
-{
-FileSelectFile, Objects38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(38)
 return
+
 SelectObjects39:
-{
-FileSelectFile, Objects39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(39)
 return
+
 SelectObjects40:
-{
-FileSelectFile, Objects40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(40)
 return
+
 SelectObjects41:
-{
-FileSelectFile, Objects41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(41)
 return
+
 SelectObjects42:
-{
-FileSelectFile, Objects42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(42)
 return
+
 SelectObjects43:
-{
-FileSelectFile, Objects43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(43)
 return
+
 SelectObjects44:
-{
-FileSelectFile, Objects44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(44)
 return
+
 SelectObjects45:
-{
-FileSelectFile, Objects45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(45)
 return
+
 SelectObjects46:
-{
-FileSelectFile, Objects46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(46)
 return
+
 SelectObjects47:
-{
-FileSelectFile, Objects47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(47)
 return
+
 SelectObjects48:
-{
-FileSelectFile, Objects48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-SelectObjects49:
-{
-FileSelectFile, Objects49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-SelectObjects50:
-{
-FileSelectFile, Objects50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(48)
 return
 
+SelectObjects49:
+    SelectObjects(49)
+return
 
+SelectObjects50:
+    SelectObjects(50)
+return
 
 SelectObjects51:
-{
-FileSelectFile, Objects51, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(51)
+return
+
 SelectObjects52:
-{
-FileSelectFile, Objects52, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(52)
+return
+
 SelectObjects53:
-{
-FileSelectFile, Objects53, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(53)
+return
+
 SelectObjects54:
-{
-FileSelectFile, Objects54, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(54)
+return
+
 SelectObjects55:
-{
-FileSelectFile, Objects55, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(55)
+return
+
 SelectObjects56:
-{
-FileSelectFile, Objects56, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(56)
+return
+
 SelectObjects57:
-{
-FileSelectFile, Objects57, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(57)
+return
+
 SelectObjects58:
-{
-FileSelectFile, Objects58, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(58)
+return
+
 SelectObjects59:
-{
-FileSelectFile, Objects59, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-Return
+    SelectObjects(59)
+return
+
 SelectObjects60:
-{
-FileSelectFile, Objects60, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(60)
 return
+
 SelectObjects61:
-{
-FileSelectFile, Objects61, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(61)
 return
+
 SelectObjects62:
-{
-FileSelectFile, Objects62, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(62)
 return
+
 SelectObjects63:
-{
-FileSelectFile, Objects63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(63)
 return
+
 SelectObjects64:
-{
-FileSelectFile, Objects63, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(64)
 return
+
 SelectObjects65:
-{
-FileSelectFile, Objects65, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(65)
 return
+
 SelectObjects66:
-{
-FileSelectFile, Objects66, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(66)
 return
+
 SelectObjects67:
-{
-FileSelectFile, Objects67, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(67)
 return
+
 SelectObjects68:
-{
-FileSelectFile, Objects68, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(68)
 return
+
 SelectObjects69:
-{
-FileSelectFile, Objects69, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(69)
 return
+
 SelectObjects70:
-{
-FileSelectFile, Objects70, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(70)
 return
+
 SelectObjects71:
-{
-FileSelectFile, Objects71, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(71)
 return
+
 SelectObjects72:
-{
-FileSelectFile, Objects72, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(72)
 return
+
 SelectObjects73:
-{
-FileSelectFile, Objects73, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(73)
 return
+
 SelectObjects74:
-{
-FileSelectFile, Objects74, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(74)
 return
+
 SelectObjects75:
-{
-FileSelectFile, Objects75, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(75)
 return
+
 SelectObjects76:
-{
-FileSelectFile, Objects76, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(76)
 return
+
 SelectObjects77:
-{
-FileSelectFile, Objects77, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(77)
 return
+
 SelectObjects78:
-{
-FileSelectFile, Objects78, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(78)
 return
+
 SelectObjects79:
-{
-FileSelectFile, Objects79, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(79)
 return
+
 SelectObjects80:
-{
-FileSelectFile, Objects80, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(80)
 return
+
 SelectObjects81:
-{
-FileSelectFile, Objects81, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(81)
 return
+
 SelectObjects82:
-{
-FileSelectFile, Objects82, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(82)
 return
+
 SelectObjects83:
-{
-FileSelectFile, Objects83, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(83)
 return
+
 SelectObjects84:
-{
-FileSelectFile, Objects84, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(84)
 return
+
 SelectObjects85:
-{
-FileSelectFile, Objects85, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(85)
 return
+
 SelectObjects86:
-{
-FileSelectFile, Objects86, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(86)
 return
+
 SelectObjects87:
-{
-FileSelectFile, Objects87, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(87)
 return
+
 SelectObjects88:
-{
-FileSelectFile, Objects88, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(88)
 return
+
 SelectObjects89:
-{
-FileSelectFile, Objects89, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(89)
 return
+
 SelectObjects90:
-{
-FileSelectFile, Objects90, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(90)
 return
+
 SelectObjects91:
-{
-FileSelectFile, Objects91, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(91)
 return
+
 SelectObjects92:
-{
-FileSelectFile, Objects92, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(92)
 return
+
 SelectObjects93:
-{
-FileSelectFile, Objects93, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(93)
 return
+
 SelectObjects94:
-{
-FileSelectFile, Objects94, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(94)
 return
+
 SelectObjects95:
-{
-FileSelectFile, Objects95, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(95)
 return
+
 SelectObjects96:
-{
-FileSelectFile, Objects96, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(96)
 return
+
 SelectObjects97:
-{
-FileSelectFile, Objects97, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
+    SelectObjects(97)
 return
-SelectObjects98:
-{
-FileSelectFile, Objects98, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-SelectObjects99:
-{
-FileSelectFile, Objects99, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-SelectObjects100:
-{
-FileSelectFile, Objects100, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-}
-return
-
-
-
 
 
 Change:
@@ -3697,7 +2750,6 @@ Sleep 2500
 
 Gui, Submit, NoHide
 
-
 IniWrite, %JWI%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniWrite, %TAG%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniWrite, %Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -3706,8 +2758,6 @@ IniWrite, %Middle_Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle
 IniWrite, %Bol_ro%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniWrite, %Rank%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Rank
 IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
-
-
 
 IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
@@ -3724,13 +2774,10 @@ IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
 
-
-
 IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
 IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
 IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
 IniWrite, %OtdelGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
-
 
 IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
@@ -3746,6 +2793,22 @@ Loop, 97
 {
     IniWrite, % Svoye_%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_%A_Index%
 }
+
+; Конфигурационные параметры
+iniPathLectures := "C:\ProgramData\KPRP\KPRP-main\Lectures.ini"
+sectionUser := "User"
+prefixLectures := "Lectures"
+startNum := 1
+endNum := 1260
+
+; Запись значений в INI-файл
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixLectures . currentNum
+    IniWrite, % %varName%, %iniPathLectures%, %sectionUser%, %varName%
+}
+
 
 
 iniPath := "C:\ProgramData\KPRP\KPRP-main\Redaktor.ini"
@@ -3906,8 +2969,6 @@ Return
 
 
 
-
-
 Reload:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
 
@@ -3991,13 +3052,6 @@ MsgBox, 64, Спасибо!, Ваше предложение было отпра
 Return
 
 
-
-
-
-
-
-
-
 Bugreport:
 MsgBox, % 4+32+256, Баг-репорт, Вы действительно хотите перейти в Баг-репорт?
 IfMsgBox, No
@@ -4054,8 +3108,6 @@ Response := HttpObj.ResponseText
 
 MsgBox, 64, Спасибо!, Ваш баг-репорт был отправлен.`nОтвет сервера: %Response%
 Return
-
-
 
 
 
@@ -4266,8 +3318,6 @@ return DllCall("gdiplus\GdipDisposeImage", Ptr, pBitmap)
 }
 }
 Return
-
-
 
 
 Lektsii_MZ:
