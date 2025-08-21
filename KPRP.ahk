@@ -923,7 +923,7 @@ filePath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
 
 if FileExist(filePath1)
 {
-    Run, %filePath%
+    Run, %filePath1%
 }
 else
 {
