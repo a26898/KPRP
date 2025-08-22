@@ -4610,22 +4610,29 @@ Reload
 Return
 
 
-UpdateTime:
-    elapsed := A_TickCount - startTime
-    FormatTimeStr := Format("{:02}:{:02}:{:02}"
-        , Floor(elapsed/3600000)
-        , Mod(Floor(elapsed/60000),60)
-        , Mod(Floor(elapsed/1000),60))
+ UpdateTime:
+    ; Время дежурства — с момента запуска (не сбрасывается)
+    elapsedDuty := A_TickCount - startTime
+    elapsedDutySec := Floor(elapsedDuty / 1000)
+    hoursDuty := Floor(elapsedDutySec / 3600)
+    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
+    secondsDuty := Mod(elapsedDutySec, 60)
+    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
 
-    remaining := docladInterval - (A_TickCount - docladStart)
-    if (remaining < 0)
-        remaining := 0
-    RemTimeStr := Format("{:02}:{:02}:{:02}"
-        , Floor(remaining/3600000)
-        , Mod(Floor(remaining/60000),60)
-        , Mod(Floor(remaining/1000),60))
+    ; Время до доклада — обратный отсчёт от 10 минут
+    elapsedDoclad := A_TickCount - docladStart
+    if (elapsedDoclad >= docladInterval) {
+        docladStart := A_TickCount  ; сброс обратного отсчёта
+        elapsedDoclad := 0
+    }
+    remaining := docladInterval - elapsedDoclad
+    remainingSec := Floor(remaining / 1000)
+    hoursRem := Floor(remainingSec / 3600)
+    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
+    secondsRem := Mod(remainingSec, 60)
+    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
 
-    GuiControl,, TimerText, Дежурство: %FormatTimeStr%`nДо доклада: %RemTimeStr%
+    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%
 return
 
 
