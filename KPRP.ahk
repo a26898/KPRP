@@ -615,7 +615,6 @@ IniRead, SurnameGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Surname
 IniRead, FamiliyaGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
 IniRead, OtdelGIBDD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
 
-IniRead, dolzhnostDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
 IniRead, rankDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
 IniRead, surnameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
 IniRead, CityDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
@@ -796,8 +795,7 @@ FamiliyaGIBDD7=Не заполнено
 if OtdelGIBDD7=ERROR
 OtdelGIBDD7=Не заполнено
 
-if dolzhnostDUVD7=ERROR
-dolzhnostDUVD7=Не заполнено
+
 if rankDUVD7=ERROR
 rankDUVD7=Не заполнено
 if CityDUVD7=ERROR
@@ -1225,8 +1223,10 @@ SelectObjects(objectNumber) {
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
+	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
+	
     global vybor, zaderzhka
-    
+
     Sleep 150
     SendPlay {Enter}
     FileEncoding, UTF-8-RAW
@@ -1241,6 +1241,8 @@ SendTemplate(type, num) {
         filePath := KPRPMZ%num%
     } else if (type = "Lectures") {
         filePath := Lectures%num%
+    } else if (type = "KPRPGIBDD") {
+        filePath := KPRPGIBDD%num%
     } else {
         return  ; неизвестный тип
     }
@@ -1265,6 +1267,12 @@ SendTemplate(type, num) {
     content := StrReplace(content, "%Skrin_1%", Skrin_1)
     content := StrReplace(content, "%Female%", Female)
     content := StrReplace(content, "%stol%", stol)
+	
+	content := StrReplace(content, "%SurnameGIBDD7%", SurnameGIBDD7)
+    content := StrReplace(content, "%rankGIBDD7%", rankGIBDD7)
+    content := StrReplace(content, "%OtdelGIBDD7%", OtdelGIBDD7)
+    content := StrReplace(content, "%CityGIBDD7%", CityGIBDD7)
+
     
     ; --- Разделяем на строки и отправляем ---
     Loop, parse, content, `n, `r
@@ -1274,6 +1282,7 @@ SendTemplate(type, num) {
         }
     }
 }
+
 
 
 
@@ -2794,7 +2803,7 @@ IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Surn
 IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
 IniWrite, %OtdelGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
 
-IniWrite, %dolzhnostDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, dolzhnostDUVD7
+
 IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
 IniWrite, %surnameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
 IniWrite, %CityDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7

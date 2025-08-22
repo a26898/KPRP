@@ -1,15 +1,57 @@
 ﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
-Gui, 12:show,  center h650 w1200 , AНК для государственной инспекции безопасности дорожного движения
-if (FonVybor="ERROR" or FonVybor=""){
-Gui, 12:Add, Picture, x0 y24 w1300 h650,
-}
-Gui, 12:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
-Gui, 12:Font, S10   Bold, %Shrift%
-Gui, 12:Add, Tab2,  x0 y0 w1280 h28 c%Tsvet% +BackgroundTrans, Общее
+ --- Создаём основной GUI с номером 5 ---
+Gui, 12: +LastFound
+Gui, 12:Font, S10 Bold, %Shrift%
+Gui, 12:Tab, 1
+parentHWND := WinExist()
 
-Gui, 12:Add, Button, x10 y40 w300 h40 , /КоАП_нужная статья Пример:/КоАП_19.4
-Gui, 12:Add, Button, x10 y90 w300 h40 , /УК_нужная статья Пример:/УК_5.7
+; Добавляем вкладки
+Gui, 12:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged1, КПРП|Общее|Журнал активности
+
+; --- Вкладка 1 ---
+
+Gui, 12:Show, center h650 w1200, Государственная инспекция безопасности дорожного движения| КПРП работает на коммунизм!
+
+Gui, 12:Tab, 1
+
+; ---------------- Константы ----------------
+
+; Объявляем константы для стилей один раз
+GWL_STYLE := -16
+WS_CHILD := 0x40000000
+
+; --- Запускаем KPRP.exe для вкладки 1 ---
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\KPRP.exe"
+Run, %appPath1%, , , pid1
+WinWait, ahk_pid %pid1%
+WinGet, hwndApp1, ID, ahk_pid %pid1%
+
+DllCall("SetParent", "Ptr", hwndApp1, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp1, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+
+; --- Запускаем Journal.exe для вкладки 10 ---
+appPath3 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Journal.exe"
+Run, %appPath3%, , , pid3
+WinWait, ahk_pid %pid3%
+WinGet, hwndApp3, ID, ahk_pid %pid3%
+
+DllCall("SetParent", "Ptr", hwndApp3, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp3, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp3, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp3, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+
+; Скрываем окно журнала, показываем только окно КПРП
+WinShow, ahk_id %hwndApp1%
+WinHide, ahk_id %hwndApp3%
+
+
+; --- Вкладка 2 — добавляем картинки и кнопки ---
+Gui, 12:Tab, 2
+Gui, 12:Add, Button, x10 y40 w300 h40 , /КоАП Пример:/КоАП19.4
+Gui, 12:Add, Button, x10 y90 w300 h40 , /УК Пример:/УК5.7
 
 Gui, 12:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
 Gui, 12:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfoGIBDD,  C:\ProgramData\KPRP\KPRP-main\Police.png
@@ -26,771 +68,147 @@ Gui, 12:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\Progra
 
 Gui, 12:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
 Gui, 12:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
+
 Return
 
-0001GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
+TabChanged1:
+GuiControlGet, ActiveTab,, MyTab
 
-Var := Greeting()
-Loop, read, %KPRPGIBDD1%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
+if (ActiveTab = "КПРП") {
+    WinShow, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp3%
+} else if (ActiveTab = "Журнал активности") {
+    WinShow, ahk_id %hwndApp3%
+    WinHide, ahk_id %hwndApp1%
+} else {
+    WinHide, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp3%
 }
+return
+
+; --- Обработчик изменения размера окна GUI ---
+GuiSize1:
+if (A_Gui = 12) {
+    Width := A_GuiWidth
+    Height := A_GuiHeight
+    ; Подгоняем размер окна КПРП
+    DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+    ; Подгоняем размер окна журнала
+    DllCall("SetWindowPos", "Ptr", hwndApp3, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+}
+return
+
+
+0001GIBDD7:
+    SendTemplate("KPRPGIBDD", 1)
 Return
 
 0002GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD2%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-	    line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 2)
 Return
-
 
 0003GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD3%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-	    line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 3)
 Return
-
 
 0004GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD4%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 4)
 Return
 
-
 0005GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD5%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 5)
 Return
 
 0006GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD6%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 6)
 Return
-
 
 0007GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD7%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 7)
 Return
-
-
 
 0008GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD8%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 8)
 Return
-
 
 0009GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD9%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 9)
 Return
 
-
-
 0010GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD10%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 10)
 Return
 
 0011GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD11%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 11)
 Return
-
 
 0012GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD12%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 12)
 Return
-
 
 0013GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD13%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 13)
 Return
-
-
 
 0014GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD14%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 14)
 Return
 
-
 0015GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD15%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 15)
 Return
 
 0016GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD16%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 16)
 Return
 
 0017GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD17%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 17)
 Return
 
-
 0018GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD18%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 18)
 Return
 
 0019GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD19%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 19)
 Return
-
 
 0020GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD20%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 20)
 Return
 
-
 0021GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD21%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 21)
 Return
 
 0022GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD22%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 22)
 Return
-
 
 0023GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD23%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 23)
 Return
-
 
 0024GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD24%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 24)
 Return
-
 
 0025GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD25%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 25)
 Return
 
-
-
 0026GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD26%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 26)
 Return
 
 0027GIBDD7:
-Sleep 150
-SendPlay {Enter}
-FileEncoding, UTF-8-RAW
-
-Var := Greeting()
-Loop, read, %KPRPGIBDD27%
-{
-    Loop, parse, A_LoopReadLine, %A_Tab%
-    {
-        line := A_LoopField
-
-        ; Подстановка переменных
-        line := StrReplace(line, "%floor%", floor)
-        line := StrReplace(line, "%Var%", Var)
-        line := StrReplace(line, "%SurnameGIBDD7%", SurnameGIBDD7)
-        line := StrReplace(line, "%rankGIBDD7%", rankGIBDD7)
-        line := StrReplace(line, "%OtdelGIBDD7%", OtdelGIBDD7)
-		line := StrReplace(line, "%CityGIBDD7%", CityGIBDD7)
-        line := StrReplace(line, "%Skrin_1%", Skrin_1)
-        line := StrReplace(line, "%Female%", Female)
-
-        %vybor%(line, "  " zaderzhka " ")  ; Отправка строки без кавычек
-    }
-}
+    SendTemplate("KPRPGIBDD", 27)
 Return
 
 
-
-
 InfoGIBDD:
-
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 19:Destroy,
@@ -814,7 +232,6 @@ EditGIBDD:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 18:Destroy,
-
 IniRead, 11GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 11GIBDD7
 IniRead, 21GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 21GIBDD7
 IniRead, 31GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 31GIBDD7
@@ -1073,806 +490,107 @@ NotebookKPRPGIBDD28:
 Run, notepad.exe "%KPRPGIBDD28%" 
 return
 
-SelectKPRPGIBDD1: 
-{
-    ; Сохраняем текущий путь, чтобы он не сбивался
-    LastPath := KPRPGIBDD1  ; Сохраняем текущий путь, чтобы не сбить его, если пользователь не выбрал файл.
 
-    FileSelectFile, KPRPGIBDD1, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    ; Если путь пустой, значит, пользователь отменил выбор (не выбрал файл)
-    if (KPRPGIBDD1 = "")
-    {
-        KPRPGIBDD1 := LastPath  ; Восстанавливаем путь, если пользователь отменил выбор.
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD1%
-}
+SelectKPRPGIBDD1:
+    SelectKPRPGIBDD(1)
 return
-
-
 SelectKPRPGIBDD2:
-{
-    LastPath := KPRPGIBDD2
-    FileSelectFile, KPRPGIBDD2, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD2 = "")
-    {
-        KPRPGIBDD2 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD2%
-}
+    SelectKPRPGIBDD(2)
 return
-
 SelectKPRPGIBDD3:
-{
-    LastPath := KPRPGIBDD3
-    FileSelectFile, KPRPGIBDD3, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD3 = "")
-    {
-        KPRPGIBDD3 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD3%
-}
+    SelectKPRPGIBDD(3)
 return
-
 SelectKPRPGIBDD4:
-{
-    LastPath := KPRPGIBDD4
-    FileSelectFile, KPRPGIBDD4, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD4 = "")
-    {
-        KPRPGIBDD4 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD4%
-}
+    SelectKPRPGIBDD(4)
 return
-
 SelectKPRPGIBDD5:
-{
-    LastPath := KPRPGIBDD5
-    FileSelectFile, KPRPGIBDD5, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD5 = "")
-    {
-        KPRPGIBDD5 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD5%
-}
+    SelectKPRPGIBDD(5)
 return
-
 SelectKPRPGIBDD6:
-{
-    LastPath := KPRPGIBDD6
-    FileSelectFile, KPRPGIBDD6, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD6 = "")
-    {
-        KPRPGIBDD6 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD6%
-}
+    SelectKPRPGIBDD(6)
 return
-
 SelectKPRPGIBDD7:
-{
-    LastPath := KPRPGIBDD7
-    FileSelectFile, KPRPGIBDD7, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD7 = "")
-    {
-        KPRPGIBDD7 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD7%
-}
+    SelectKPRPGIBDD(7)
 return
-
 SelectKPRPGIBDD8:
-{
-    LastPath := KPRPGIBDD8
-    FileSelectFile, KPRPGIBDD8, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD8 = "")
-    {
-        KPRPGIBDD8 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD8%
-}
+    SelectKPRPGIBDD(8)
 return
-
 SelectKPRPGIBDD9:
-{
-    LastPath := KPRPGIBDD9
-    FileSelectFile, KPRPGIBDD9, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD9 = "")
-    {
-        KPRPGIBDD9 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD9%
-}
+    SelectKPRPGIBDD(9)
 return
-
 SelectKPRPGIBDD10:
-{
-    LastPath := KPRPGIBDD10
-    FileSelectFile, KPRPGIBDD10, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD10 = "")
-    {
-        KPRPGIBDD10 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD10%
-}
+    SelectKPRPGIBDD(10)
 return
-
 SelectKPRPGIBDD11:
-{
-    LastPath := KPRPGIBDD11
-    FileSelectFile, KPRPGIBDD11, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD11 = "")
-    {
-        KPRPGIBDD11 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD11%
-}
+    SelectKPRPGIBDD(11)
 return
-
 SelectKPRPGIBDD12:
-{
-    LastPath := KPRPGIBDD12
-    FileSelectFile, KPRPGIBDD12, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD12 = "")
-    {
-        KPRPGIBDD12 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD12%
-}
+    SelectKPRPGIBDD(12)
 return
-
 SelectKPRPGIBDD13:
-{
-    LastPath := KPRPGIBDD13
-    FileSelectFile, KPRPGIBDD13, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD13 = "")
-    {
-        KPRPGIBDD13 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD13%
-}
+    SelectKPRPGIBDD(13)
 return
-
 SelectKPRPGIBDD14:
-{
-    LastPath := KPRPGIBDD14
-    FileSelectFile, KPRPGIBDD14, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD14 = "")
-    {
-        KPRPGIBDD14 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD14%
-}
+    SelectKPRPGIBDD(14)
 return
-
 SelectKPRPGIBDD15:
-{
-    LastPath := KPRPGIBDD15
-    FileSelectFile, KPRPGIBDD15, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD15 = "")
-    {
-        KPRPGIBDD15 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD15%
-}
+    SelectKPRPGIBDD(15)
 return
-
 SelectKPRPGIBDD16:
-{
-    LastPath := KPRPGIBDD16
-    FileSelectFile, KPRPGIBDD16, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD16 = "")
-    {
-        KPRPGIBDD16 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD16%
-}
+    SelectKPRPGIBDD(16)
 return
-
 SelectKPRPGIBDD17:
-{
-    LastPath := KPRPGIBDD17
-    FileSelectFile, KPRPGIBDD17, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD17 = "")
-    {
-        KPRPGIBDD17 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD17%
-}
+    SelectKPRPGIBDD(17)
 return
-
 SelectKPRPGIBDD18:
-{
-    LastPath := KPRPGIBDD18
-    FileSelectFile, KPRPGIBDD18, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD18 = "")
-    {
-        KPRPGIBDD18 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD18%
-}
+    SelectKPRPGIBDD(18)
 return
-
 SelectKPRPGIBDD19:
-{
-    LastPath := KPRPGIBDD19
-    FileSelectFile, KPRPGIBDD19, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD19 = "")
-    {
-        KPRPGIBDD19 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD19%
-}
+    SelectKPRPGIBDD(19)
 return
-
 SelectKPRPGIBDD20:
-{
-    LastPath := KPRPGIBDD20
-    FileSelectFile, KPRPGIBDD20, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD20 = "")
-    {
-        KPRPGIBDD20 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD20%
-}
+    SelectKPRPGIBDD(20)
 return
-
 SelectKPRPGIBDD21:
-{
-    LastPath := KPRPGIBDD21
-    FileSelectFile, KPRPGIBDD21, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD21 = "")
-    {
-        KPRPGIBDD21 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD21%
-}
+    SelectKPRPGIBDD(21)
 return
-
 SelectKPRPGIBDD22:
-{
-    LastPath := KPRPGIBDD22
-    FileSelectFile, KPRPGIBDD22, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD22 = "")
-    {
-        KPRPGIBDD22 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD22%
-}
+    SelectKPRPGIBDD(22)
 return
-
 SelectKPRPGIBDD23:
-{
-    LastPath := KPRPGIBDD23
-    FileSelectFile, KPRPGIBDD23, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD23 = "")
-    {
-        KPRPGIBDD23 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD23%
-}
+    SelectKPRPGIBDD(23)
 return
-
 SelectKPRPGIBDD24:
-{
-    LastPath := KPRPGIBDD24
-    FileSelectFile, KPRPGIBDD24, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD24 = "")
-    {
-        KPRPGIBDD24 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD24%
-}
+    SelectKPRPGIBDD(24)
 return
-
 SelectKPRPGIBDD25:
-{
-    LastPath := KPRPGIBDD25
-    FileSelectFile, KPRPGIBDD25, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD25 = "")
-    {
-        KPRPGIBDD25 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD25%
-}
+    SelectKPRPGIBDD(25)
 return
-
 SelectKPRPGIBDD26:
-{
-    LastPath := KPRPGIBDD26
-    FileSelectFile, KPRPGIBDD26, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD26 = "")
-    {
-        KPRPGIBDD26 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD26%
-}
+    SelectKPRPGIBDD(26)
 return
-
 SelectKPRPGIBDD27:
-{
-    LastPath := KPRPGIBDD27
-    FileSelectFile, KPRPGIBDD27, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD27 = "")
-    {
-        KPRPGIBDD27 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD27%
-}
+    SelectKPRPGIBDD(27)
 return
-
 SelectKPRPGIBDD28:
-{
-    LastPath := KPRPGIBDD28
-    FileSelectFile, KPRPGIBDD28, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD28 = "")
-    {
-        KPRPGIBDD28 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD28%
-}
+    SelectKPRPGIBDD(28)
 return
 
-SelectKPRPGIBDD29:
-{
-    LastPath := KPRPGIBDD29
-    FileSelectFile, KPRPGIBDD29, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+SelectKPRPGIBDD(num) {
+    global
+    varName := "KPRPGIBDD" num
+    LastPath := %varName%
+
+    FileSelectFile, selectedFile, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
     
-    if (KPRPGIBDD29 = "")
-    {
-        KPRPGIBDD29 := LastPath
+    if (selectedFile = "") {
+        %varName% := LastPath
         MsgBox, 16, Ошибка, Вы отменили выбор файла.
         return
     }
 
-    MsgBox, 64, Файл выбран, %KPRPGIBDD29%
-}
-return
-
-SelectKPRPGIBDD30:
-{
-    LastPath := KPRPGIBDD30
-    FileSelectFile, KPRPGIBDD30, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD30 = "")
-    {
-        KPRPGIBDD30 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD30%
-}
-return
-
-SelectKPRPGIBDD31:
-{
-    LastPath := KPRPGIBDD31
-    FileSelectFile, KPRPGIBDD31, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD31 = "")
-    {
-        KPRPGIBDD31 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD31%
-}
-return
-
-SelectKPRPGIBDD32:
-{
-    LastPath := KPRPGIBDD32
-    FileSelectFile, KPRPGIBDD32, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD32 = "")
-    {
-        KPRPGIBDD32 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD32%
-}
-return
-
-SelectKPRPGIBDD33:
-{
-    LastPath := KPRPGIBDD33
-    FileSelectFile, KPRPGIBDD33, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD33 = "")
-    {
-        KPRPGIBDD33 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD33%
-}
-return
-
-SelectKPRPGIBDD34:
-{
-    LastPath := KPRPGIBDD34
-    FileSelectFile, KPRPGIBDD34, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD34 = "")
-    {
-        KPRPGIBDD34 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD34%
-}
-return
-
-SelectKPRPGIBDD35:
-{
-    LastPath := KPRPGIBDD35
-    FileSelectFile, KPRPGIBDD35, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD35 = "")
-    {
-        KPRPGIBDD35 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD35%
-}
-return
-
-SelectKPRPGIBDD36:
-{
-    LastPath := KPRPGIBDD36
-    FileSelectFile, KPRPGIBDD36, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD36 = "")
-    {
-        KPRPGIBDD36 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD36%
-}
-return
-
-SelectKPRPGIBDD37:
-{
-    LastPath := KPRPGIBDD37
-    FileSelectFile, KPRPGIBDD37, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD37 = "")
-    {
-        KPRPGIBDD37 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD37%
-}
-return
-
-SelectKPRPGIBDD38:
-{
-    LastPath := KPRPGIBDD38
-    FileSelectFile, KPRPGIBDD38, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD38 = "")
-    {
-        KPRPGIBDD38 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD38%
-}
-return
-
-SelectKPRPGIBDD39:
-{
-    LastPath := KPRPGIBDD39
-    FileSelectFile, KPRPGIBDD39, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD39 = "")
-    {
-        KPRPGIBDD39 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD39%
-}
-return
-
-SelectKPRPGIBDD40:
-{
-    LastPath := KPRPGIBDD40
-    FileSelectFile, KPRPGIBDD40, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD40 = "")
-    {
-        KPRPGIBDD40 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD40%
-}
-return
-
-SelectKPRPGIBDD41:
-{
-    LastPath := KPRPGIBDD41
-    FileSelectFile, KPRPGIBDD41, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD41 = "")
-    {
-        KPRPGIBDD41 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD41%
-}
-return
-
-SelectKPRPGIBDD42:
-{
-    LastPath := KPRPGIBDD42
-    FileSelectFile, KPRPGIBDD42, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD42 = "")
-    {
-        KPRPGIBDD42 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD42%
-}
-return
-
-SelectKPRPGIBDD43:
-{
-    LastPath := KPRPGIBDD43
-    FileSelectFile, KPRPGIBDD43, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD43 = "")
-    {
-        KPRPGIBDD43 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD43%
-}
-return
-
-SelectKPRPGIBDD44:
-{
-    LastPath := KPRPGIBDD44
-    FileSelectFile, KPRPGIBDD44, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD44 = "")
-    {
-        KPRPGIBDD44 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD44%
-}
-return
-
-SelectKPRPGIBDD45:
-{
-    LastPath := KPRPGIBDD45
-    FileSelectFile, KPRPGIBDD45, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD45 = "")
-    {
-        KPRPGIBDD45 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD45%
-}
-return
-
-SelectKPRPGIBDD46:
-{
-    LastPath := KPRPGIBDD46
-    FileSelectFile, KPRPGIBDD46, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD46 = "")
-    {
-        KPRPGIBDD46 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD46%
-}
-return
-
-SelectKPRPGIBDD47:
-{
-    LastPath := KPRPGIBDD47
-    FileSelectFile, KPRPGIBDD47, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD47 = "")
-    {
-        KPRPGIBDD47 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD47%
-}
-return
-
-SelectKPRPGIBDD48:
-{
-    LastPath := KPRPGIBDD48
-    FileSelectFile, KPRPGIBDD48, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD48 = "")
-    {
-        KPRPGIBDD48 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD48%
-}
-return
-
-SelectKPRPGIBDD49:
-{
-    LastPath := KPRPGIBDD49
-    FileSelectFile, KPRPGIBDD49, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD49 = "")
-    {
-        KPRPGIBDD49 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD49%
-}
-return
-
-SelectKPRPGIBDD50:
-{
-    LastPath := KPRPGIBDD50
-    FileSelectFile, KPRPGIBDD50, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
-    
-    if (KPRPGIBDD50 = "")
-    {
-        KPRPGIBDD50 := LastPath
-        MsgBox, 16, Ошибка, Вы отменили выбор файла.
-        return
-    }
-
-    MsgBox, 64, Файл выбран, %KPRPGIBDD50%
+    %varName% := selectedFile
+    MsgBox, 64, Файл выбран, % %varName%
+    Gosub, Change
 }
 return
