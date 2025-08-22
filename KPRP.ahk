@@ -627,12 +627,10 @@ IniRead, OtchetskstoDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Otch
 
 IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniRead, Zaderzhka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
-IniRead, Zaderzhka_lektsiya, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
 IniRead, Shrift, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniRead, Tsvet, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
-IniRead, SoundEnable, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 IniRead, Tsvet_3, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
@@ -830,8 +828,6 @@ if Bol_ro=ERROR
 Bol_ro=Приволжск
 if Zaderzhka=ERROR
 Zaderzhka=3000
-if Zaderzhka_lektsiya=ERROR
-Zaderzhka_lektsiya=5555
 if Shrift=ERROR
 Shrift=Arial
 if Tsvet=ERROR
@@ -844,8 +840,6 @@ if pol=ERROR
 pol=Мужской
 if Skrinshot=ERROR
 Skrinshot=Выключен
-if SoundEnable=ERROR
-SoundEnable=1
 if MaxMinutes=ERROR
 MaxMinutes=4
 if Taymer_Nastroyka=ERROR
@@ -932,7 +926,7 @@ Skrin_1=
 ;}
 
 if (Taymer_Nastroyka = "Включен") {
-    Run, "C:\ProgramData\KPRP\KPRP-main\АFK.ahk"
+    SetTimer, CheckProcessMinimized, 1000
 }
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
@@ -967,6 +961,37 @@ Menu, Tray, default, Свернуть
 Menu, Tray, Add
 Menu, Tray, Add, GuiClose
 Menu, Tray, Rename, GuiClose,  Выход
+
+
+
+CheckProcessMinimized() {
+    global MaxMinutes, ProcessName, SoundFile
+    static MinimizedDuration := 0
+
+    MaxMinimizedTime := MaxMinutes * 60  ; Переводим в секунды
+
+    ; Проверка, запущен ли процесс
+    IfWinExist, ahk_exe gta_sa.exe
+    {
+        ; Получаем состояние окна
+        WinGet, MinMaxState, MinMax, ahk_exe gta_sa.exe
+        
+        ; Если окно свернуто
+        if (MinMaxState = -1) {
+            MinimizedDuration++
+            
+            ; Если превышено время
+            if (MinimizedDuration >= MaxMinimizedTime) {
+                SoundPlay, C:\ProgramData\KPRP\KPRP-main\AFK.mp3
+                MinimizedDuration := 0
+            }
+        }
+        else {
+            MinimizedDuration := 0
+        }
+    }
+}
+
 
 
 
@@ -1811,13 +1836,13 @@ Return
 Vania:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 Gui, 6:Destroy,
-Gui, 6:Add, Picture, x0 y0 w480   h765 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 6:Add, Picture, x620 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 6:Add, Picture, x0 y0 w480   h575 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
+Gui, 6:Add, Picture, x620 y500 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot gSkrinshotChanged, %Skrinshot%||Включен|Выключен
 
-Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||0|3000|3500|4000|4500|5000|5500|6000|6500|7000|13000
+Gui, 6:Add, DropDownList, x90 y135 w295 vZaderzhka, %Zaderzhka%||0|3000|3500|4000|4500|5000|5500|6000|6500|7000
 
 if FonVybor=
 Gui, 6:Add, Button, x90 y225 w295 gSvoy_Fon, Выбрать картинку
@@ -1829,9 +1854,6 @@ Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
 
 
-Gui, 6:Add, DropDownList, x90 y600 w295 vZaderzhka_lektsiya, %Zaderzhka_lektsiya%||0|4000|4500|5000|5500|6000|6500|7000
-
-Gui, 6:Add, Slider, x90 y700 w295 h30 vSoundEnable Range0-1, %SoundEnable% 
 Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
 Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
 Gui, 6:Add, DropDownList, x490 y225 w195 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
@@ -1852,14 +1874,12 @@ if (userVybor = "Ручной ввод") {
 
     ; Сохраняем текущие значения задержек
     StaraiaZaderzhka := Zaderzhka
-    StaraiaZaderzhkaLektsiya := Zaderzhka_lektsiya
+
 
     ; Ставим задержки в 0 и отключаем
     GuiControl, 6:ChooseString, Zaderzhka, 0
     GuiControl, 6:Disable, Zaderzhka
 
-    GuiControl, 6:ChooseString, Zaderzhka_lektsiya, 0
-    GuiControl, 6:Disable, Zaderzhka_lektsiya
 }
 else if (userVybor = "Автоотправка") {
     ; Меняем основную переменную режима
@@ -1869,8 +1889,7 @@ else if (userVybor = "Автоотправка") {
     GuiControl, 6:Enable, Zaderzhka
     GuiControl, 6:ChooseString, Zaderzhka, %StaraiaZaderzhka%
 
-    GuiControl, 6:Enable, Zaderzhka_lektsiya
-    GuiControl, 6:ChooseString, Zaderzhka_lektsiya, %StaraiaZaderzhkaLektsiya%
+
 }
 Return
 
@@ -2747,9 +2766,7 @@ Change:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
 Sleep 2500
 
-
 Gui, Submit, NoHide
-
 IniWrite, %JWI%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniWrite, %TAG%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniWrite, %Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -2761,12 +2778,10 @@ IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
 
 IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
-IniWrite, %Zaderzhka_lektsiya%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka_lektsiya
 IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
 IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
 IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
-IniWrite, %SoundEnable%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, SoundEnable
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
 IniWrite, %Tsvet_3%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
