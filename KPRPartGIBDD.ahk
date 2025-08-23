@@ -11,7 +11,7 @@ Gui, 12:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged1
 
 ; --- Вкладка 1 ---
 
-Gui, 12:Show, center h650 w1200, Государственная инспекция безопасности дорожного движения| КПРП работает на коммунизм!
+Gui, 12:Show, center h650 w1200, Государственная инспекция безопасности дорожного движения | КПРП работает на коммунизм!
 
 Gui, 12:Tab, 1
 
@@ -393,7 +393,7 @@ InfovariableGIBDD7:
 
 %floor%: " floor " - Добавляет а на конце.
 %Female%: " Female " - Добавляет ла на конце.
-%Var%: " Var " - Доброго времени суток, в зависимости от времени на ПК.
+%Var%: " Var " - Доброго времени суток, по МСК.
 %SurnameGIBDD7%: " SurnameGIBDD7 " - Фамилия.
 %RankGIBDD7 %: " RankDUVD7 " - Должность.
 %OtdelGIBDD7%: " OtdelGIBDD7 " - Ваш отдел.

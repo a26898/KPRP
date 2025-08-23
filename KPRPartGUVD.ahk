@@ -1,25 +1,114 @@
 ﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
-Gui, 13:show,  center h650 w1300 , AНК для главного управления внутренних дел
-if (FonVybor="ERROR" or FonVybor=""){
-Gui, 13:Add, Picture, x0 y24 w1300 h650,
-}
-Gui, 13:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
-Gui, 13:Font, S10   Bold, %Shrift%
-Gui, 13:Add, Tab2,  x0 y0 w1380 h28 c%Tsvet% +BackgroundTrans, Общее
+; --- Создаём основной GUI с номером 13 ---
+Gui, 13: +LastFound
+Gui, 13:Font, S10 Bold, %Shrift%
+Gui, 13:Tab, 1
+parentHWND := WinExist()
 
-Gui, 13:Add, Picture, x10 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
-Gui, 13:Add, Picture, x100 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
-Gui, 13:Add, Picture, x200 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 13:Add, Picture, x300 y600 w48 w48   +BackgroundTrans gEditDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png
-Gui, 13:Add, Picture, x400 y600 w48 w48   +BackgroundTrans gInfoDUVD7, C:\ProgramData\KPRP\KPRP-main\Test.png 
-Gui, 13:Add, Picture, x940 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
-Gui, 13:Add, Picture, x1040 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
-Gui, 13:Add, Picture, x1140 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
+; Добавляем вкладки
+Gui, 13:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged2, КПРП|Общее|Журнал активности
+
+; --- Вкладка 1 ---
+Gui, 13:Show, center h650 w1200, Управление внутренних дел | КПРП работает на коммунизм!
+Gui, 13:Tab, 1
+
+; ---------------- Константы ----------------
+GWL_STYLE := -16
+WS_CHILD := 0x40000000
+
+; --- Запускаем KPRP.exe для вкладки 1 ---
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\KPRP.exe"
+Run, %appPath1%, , , pid1
+WinWait, ahk_pid %pid1%
+WinGet, hwndApp1, ID, ahk_pid %pid1%
+
+DllCall("SetParent", "Ptr", hwndApp1, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp1, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+
+; --- Запускаем Journal.exe для вкладки 10 ---
+appPath3 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Journal.exe"
+Run, %appPath3%, , , pid3
+WinWait, ahk_pid %pid3%
+WinGet, hwndApp3, ID, ahk_pid %pid3%
+
+DllCall("SetParent", "Ptr", hwndApp3, "Ptr", parentHWND)
+DllCall("SetWindowLongPtr", "Ptr", hwndApp3, "Int", GWL_STYLE, "Ptr", WS_CHILD)
+DllCall("SetWindowPos", "Ptr", hwndApp3, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
+DllCall("RedrawWindow", "Ptr", hwndApp3, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
+
+; Скрываем окно журнала, показываем только окно КПРП
+WinShow, ahk_id %hwndApp1%
+WinHide, ahk_id %hwndApp3%
+
+; --- Вкладка 2 — добавляем картинки и кнопки ---
+Gui, 13:Tab, 2
+if (FonVybor != "ERROR" && FonVybor != "") {
+    Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
+}
+
+
+Gui, 13:Add, Button, x10 y40 w300 h40 , /КоАП Пример:/КоАП19.4
+Gui, 13:Add, Button, x10 y90 w300 h40 , /УК Пример:/УК5.7
+
+Gui, 13:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
+Gui, 13:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfoDUVD,  C:\ProgramData\KPRP\KPRP-main\Police.png
+Gui, 13:Add, Picture, x220 y600 w48 w48   +BackgroundTrans gEditDUVD, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
+Gui, 13:Add, Picture, x320 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
+Gui, 13:Add, Picture, x420 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
+Gui, 13:Add, Picture, x520 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
+Gui, 13:Add, Picture, x620 y600 w48 w48   +BackgroundTrans gUluchsheniya, C:\ProgramData\KPRP\KPRP-main\Uluchsheniya.png
+Gui, 13:Add, Picture, x720 y600 w48 w48   +BackgroundTrans gHelp, C:\ProgramData\KPRP\KPRP-main\Tekhpodderzhka.png
+Gui, 13:Add, Picture, x820 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
+Gui, 13:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
+
+Gui, 13:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
 
 Gui, 13:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
 Gui, 13:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
+
 Return
+
+; --- Переключение вкладок ---
+TabChanged2:
+GuiControlGet, ActiveTab,, MyTab
+
+if (ActiveTab = "КПРП") {
+    WinShow, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp3%
+} else if (ActiveTab = "Журнал активности") {
+    WinShow, ahk_id %hwndApp3%
+    WinHide, ahk_id %hwndApp1%
+} else {
+    WinHide, ahk_id %hwndApp1%
+    WinHide, ahk_id %hwndApp3%
+}
+return
+
+; --- Обработчик изменения размера окна GUI ---
+GuiSize2:
+if (A_Gui = 13) {
+    Width := A_GuiWidth
+    Height := A_GuiHeight
+    ; Подгоняем размер окна КПРП
+    DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+    ; Подгоняем размер окна журнала
+    DllCall("SetWindowPos", "Ptr", hwndApp3, "Ptr", 0, "Int", 0, "Int", 24, "Int", Width, "Int", Height - 24, "UInt", 0x0040)
+}
+return
+
+
+
+
+
+
+
+
+
+
+
 
 :?:/КоАП3.1::
 SendPlay {Enter}
@@ -810,33 +899,507 @@ SendPlay {Enter}
 Return
 
 
+0001DUVD7:
+    SendTemplate("KPRPDUVD", 1)
+Return
 
-InfoDUVD7:
+0002DUVD7:
+    SendTemplate("KPRPDUVD", 2)
+Return
+
+0003DUVD7:
+    SendTemplate("KPRPDUVD", 3)
+Return
+
+0004DUVD7:
+    SendTemplate("KPRPDUVD", 4)
+Return
+
+0005DUVD7:
+    SendTemplate("KPRPDUVD", 5)
+Return
+
+0006DUVD7:
+    SendTemplate("KPRPDUVD", 6)
+Return
+
+0007DUVD7:
+    SendTemplate("KPRPDUVD", 7)
+Return
+
+0008DUVD7:
+    SendTemplate("KPRPDUVD", 8)
+Return
+
+0009DUVD7:
+    SendTemplate("KPRPDUVD", 9)
+Return
+
+0010DUVD7:
+    SendTemplate("KPRPDUVD", 10)
+Return
+
+0011DUVD7:
+    SendTemplate("KPRPDUVD", 11)
+Return
+
+0012DUVD7:
+    SendTemplate("KPRPDUVD", 12)
+Return
+
+0013DUVD7:
+    SendTemplate("KPRPDUVD", 13)
+Return
+
+0014DUVD7:
+    SendTemplate("KPRPDUVD", 14)
+Return
+
+0015DUVD7:
+    SendTemplate("KPRPDUVD", 15)
+Return
+
+0016DUVD7:
+    SendTemplate("KPRPDUVD", 16)
+Return
+
+0017DUVD7:
+    SendTemplate("KPRPDUVD", 17)
+Return
+
+0018DUVD7:
+    SendTemplate("KPRPDUVD", 18)
+Return
+
+0019DUVD7:
+    SendTemplate("KPRPDUVD", 19)
+Return
+
+0020DUVD7:
+    SendTemplate("KPRPDUVD", 20)
+Return
+
+0021DUVD7:
+    SendTemplate("KPRPDUVD", 21)
+Return
+
+0022DUVD7:
+    SendTemplate("KPRPDUVD", 22)
+Return
+
+0023DUVD7:
+    SendTemplate("KPRPDUVD", 23)
+Return
+
+0024DUVD7:
+    SendTemplate("KPRPDUVD", 24)
+Return
+
+0025DUVD7:
+    SendTemplate("KPRPDUVD", 25)
+Return
+
+0026DUVD7:
+    SendTemplate("KPRPDUVD", 26)
+Return
+
+0027DUVD7:
+    SendTemplate("KPRPDUVD", 27)
+Return
+
+
+
+InfoDUVD:
 
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
 Gui, 15:Destroy,
-Gui, 15:Add, Picture, x0 y10 w475   h720 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod.png
+Gui, 15:Add, Picture, x0 y10 w475 h720 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_DUVD.png
 Gui, 15:Add, Picture, x470 y700 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 15:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 15:Add, ComboBox, x90 y40  w425 vrankDUVD7, %rankDUVD7%||Рядовой|Сержант|Старшина|Прапорщик|Лейтенант|Старший лейтенант|Капитан|Майор|Подполковник|Полковник|Генерал
-Gui, 15:Add, ComboBox, x90 y120 w425 vCityDUVD7, %CityDUVD7%||Приволжск|Мирный|Невский
-Gui, 15:Add, ComboBox, x90 y230 w425 vTegDUVD7, %TegDUVD7%||
-Gui, 15:Add, Edit, x90 y320 w425 vNameDUVD7, %NameDUVD7%
-Gui, 15:Add, Edit, x90 y420 w425 vsurnameDUVD7, %surnameDUVD7%
-Gui, 15:Add, Edit, x90 y520 w425 vOtchetskstoDUVD7,%OtchetskstoDUVD7%
-Gui, 15:Add, Edit, x90 y620 w425 vPozyvnoyDUVD7,%PozyvnoyDUVD7%
-Gui, 15:Add, DropDownList, x90 y710  w225 vpol, %pol%||Мужской|Женский
+Gui, 15:Add, Edit, x90 y150 w425 vTegDUVD7, %TegDUVD7% 
+Gui, 15:Add, ComboBox, x90 y250 w425 vCityDUVD7, %CityDUVD7%||Приволжск|Мирный|Невский
+Gui, 15:Add, Edit, x90 y360 w425 vsurnameDUVD7, %surnameDUVD7%
+Gui, 15:Add, Edit, x90 y460 w425 vPozyvnoyDUVD7, %PozyvnoyDUVD7%
+Gui, 15:Add, Edit, x90 y550 w425 vpostDUVD7,%postDUVD7%
+Gui, 15:Add, DropDownList, x90 y650 w425 vpol,%pol%||Мужской|Женский
+
 
 Gui, 15:show, center , Данные
 Return
 
 
 
-EditDUVD7:
+EditDUVD:
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 
+Gui, 19:Destroy,
+IniRead, 11DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 11DUVD7
+IniRead, 21DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 21DUVD7
+IniRead, 31DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 31DUVD7
+IniRead, 41DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 41DUVD7
+IniRead, 51DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 51DUVD7
+IniRead, 61DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 61DUVD7
+IniRead, 71DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 71DUVD7
+IniRead, 81DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 81DUVD7
+IniRead, 91DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 91DUVD7
+IniRead, 101DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 101DUVD7
+IniRead, 111DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 111DUVD7
+IniRead, 121DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 121DUVD7
+IniRead, 131DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 131DUVD7
+IniRead, 141DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 141DUVD7
+IniRead, 151DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 151DUVD7
+IniRead, 161DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 161DUVD7
+IniRead, 171DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 171DUVD7
+IniRead, 181DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 181DUVD7
+IniRead, 191DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 191DUVD7
+IniRead, 201DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 201DUVD7
+IniRead, 211DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 211DUVD7
+IniRead, 221DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 221DUVD7
+IniRead, 231DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 231DUVD7
+IniRead, 241DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 241DUVD7
+IniRead, 251DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 251DUVD7
+IniRead, 261DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 261DUVD7
+IniRead, 271DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 271DUVD7
+IniRead, 281DUVD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini , Edit, 281DUVD7
+
+
+Gui, 19:Font, S11 C%Tsvet_1% Bold, Arial
+
+Gui, 19:Add, Hotkey, x10 y26 w150 v11DUVD7, %odinDUVD7%
+Gui, 19:Add, Hotkey, x10 y86 w150 v21DUVD7, %dvaDUVD7%
+Gui, 19:Add, Hotkey, x10 y146 w150 v31DUVD7, %triDUVD7%
+Gui, 19:Add, Hotkey, x10 y206 w150 v41DUVD7, %chetireDUVD7%
+Gui, 19:Add, Hotkey, x10 y266 w150 v51DUVD7, %pyatDUVD7%
+Gui, 19:Add, Hotkey, x10 y326 w150 v61DUVD7, %shestDUVD7%
+Gui, 19:Add, Hotkey, x10 y386 w150 v71DUVD7, %semDUVD7%
+Gui, 19:Add, Hotkey, x10 y446 w150 v81DUVD7, %vosemDUVD7%
+Gui, 19:Add, Hotkey, x10 y506 w150 v91DUVD7, %devyatDUVD7%
+Gui, 19:Add, Hotkey, x10 y566 w150 v101DUVD7, %desyatDUVD7%
+Gui, 19:Add, Hotkey, x10 y626 w150 v111DUVD7, %odinadcatDUVD7%
+Gui, 19:Add, Hotkey, x10 y686 w150 v121DUVD7, %dvinadcatDUVD7%
+Gui, 19:Add, Hotkey, x10 y746 w150  v251DUVD7, %dvadcatpyatDUVD7%
+
+
+Gui, 19:Add, Hotkey, x500 y26 w150 v131DUVD7, %trinadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y86 w150 v141DUVD7, %chetirnadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y146 w150 v151DUVD7, %pyatnadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y206 w150 v161DUVD7, %shestnadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y266 w150 v171DUVD7, %semnagcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y326 w150 v181DUVD7, %vosemnagcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y386 w150 v191DUVD7, %devyatnadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y446 w150 v201DUVD7, %dvadcatDUVD7%
+Gui, 19:Add, Hotkey, x500 y506 w150 v211DUVD7, %dvadcatodinDUVD7%
+Gui, 19:Add, Hotkey, x500 y566 w150 v221DUVD7, %dvadcatdvaDUVD7%
+Gui, 19:Add, Hotkey, x500 y626 w150 v231DUVD7, %dvadcattriDUVD7%
+Gui, 19:Add, Hotkey, x500 y686 w150 v241DUVD7, %dvadcatchetireDUVD7%
+Gui, 19:Add, Edit, x500 y746  w150 Disabled, Alt+P 
+
+
+Gui, 19:Add, Edit, x170 y26 w180 vSvoyeDUVD_1, %SvoyeDUVD_1%
+Gui, 19:Add, Edit, x170 y86 w180 vSvoyeDUVD_2, %SvoyeDUVD_2%
+Gui, 19:Add, Edit, x170 y146 w180 vSvoyeDUVD_3, %SvoyeDUVD_3%
+Gui, 19:Add, Edit, x170 y206 w180 vSvoyeDUVD_4, %SvoyeDUVD_4%
+Gui, 19:Add, Edit, x170 y266 w180 vSvoyeDUVD_5, %SvoyeDUVD_5%
+Gui, 19:Add, Edit, x170 y326 w180 vSvoyeDUVD_6, %SvoyeDUVD_6%
+Gui, 19:Add, Edit, x170 y386 w180 vSvoyeDUVD_7, %SvoyeDUVD_7%
+Gui, 19:Add, Edit, x170 y446 w180 vSvoyeDUVD_8, %SvoyeDUVD_8%
+Gui, 19:Add, Edit, x170 y506 w180 vSvoyeDUVD_9, %SvoyeDUVD_9%
+Gui, 19:Add, Edit, x170 y566 w180 vSvoyeDUVD_10, %SvoyeDUVD_10%
+Gui, 19:Add, Edit, x170 y626 w180 vSvoyeDUVD_11, %SvoyeDUVD_11%
+Gui, 19:Add, Edit, x170 y686 w180 vSvoyeDUVD_12, %SvoyeDUVD_12%
+Gui, 19:Add, Edit, x170 y746 w180 vSvoyeDUVD_25, %SvoyeDUVD_25%
+
+Gui, 19:Add, Edit, x660 y26 w180 vSvoyeDUVD_13, %SvoyeDUVD_13%
+Gui, 19:Add, Edit, x660 y86 w180 vSvoyeDUVD_14, %SvoyeDUVD_14%
+Gui, 19:Add, Edit, x660 y146 w180 vSvoyeDUVD_15, %SvoyeDUVD_15%
+Gui, 19:Add, Edit, x660 y206 w180 vSvoyeDUVD_16, %SvoyeDUVD_16%
+Gui, 19:Add, Edit, x660 y266 w180 vSvoyeDUVD_17, %SvoyeDUVD_17%
+Gui, 19:Add, Edit, x660 y326 w180 vSvoyeDUVD_18, %SvoyeDUVD_18%
+Gui, 19:Add, Edit, x660 y386 w180 vSvoyeDUVD_19, %SvoyeDUVD_19%
+Gui, 19:Add, Edit, x660 y446 w180 vSvoyeDUVD_20, %SvoyeDUVD_20%
+Gui, 19:Add, Edit, x660 y506 w180 vSvoyeDUVD_21, %SvoyeDUVD_21%
+Gui, 19:Add, Edit, x660 y566 w180 vSvoyeDUVD_22, %SvoyeDUVD_22%
+Gui, 19:Add, Edit, x660 y626 w180 vSvoyeDUVD_23, %SvoyeDUVD_23%
+Gui, 19:Add, Edit, x660 y686 w180 vSvoyeDUVD_24, %SvoyeDUVD_24%
+Gui, 19:Add, Edit, x660 y746 w70  Disabled, пауза
+
+
+Gui, 19:Add, Picture, x370 y16 w48 h48 +BackgroundTrans gSelectKPRPDUVD1,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y76 w48 h48 +BackgroundTrans gSelectKPRPDUVD2,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y136 w48 h48 +BackgroundTrans gSelectKPRPDUVD3,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y196 w48 h48 +BackgroundTrans gSelectKPRPDUVD4 ,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y256 w48 h48 +BackgroundTrans gSelectKPRPDUVD5,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y316 w48 h48 +BackgroundTrans gSelectKPRPDUVD6,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y376 w48 h48 +BackgroundTrans gSelectKPRPDUVD7,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y436 w48 h48 +BackgroundTrans gSelectKPRPDUVD8,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y496 w48 h48 +BackgroundTrans gSelectKPRPDUVD9,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y556 w48 h48 +BackgroundTrans gSelectKPRPDUVD10,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y616 w48 h48 +BackgroundTrans gSelectKPRPDUVD11,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y676 w48 h48 +BackgroundTrans gSelectKPRPDUVD12,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x370 y736 w48 h48 +BackgroundTrans gSelectKPRPDUVD25,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+
+Gui, 19:Add, Picture, x860 y16 w48 h48 +BackgroundTrans gSelectKPRPDUVD13,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y76 w48 h48 +BackgroundTrans gSelectKPRPDUVD14,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y136 w48 h48 +BackgroundTrans gSelectKPRPDUVD15,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y196 w48 h48 +BackgroundTrans gSelectKPRPDUVD16,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y256 w48 h48 +BackgroundTrans gSelectKPRPDUVD17,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPDUVD18,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPDUVD19,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPDUVD20,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPDUVD21,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 19:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+
+Gui, 19:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPDUVD1,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPDUVD2,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y136 w48 h48 +BackgroundTrans gNotebookKPRPDUVD3,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y196 w48 h48 +BackgroundTrans gNotebookKPRPDUVD4 ,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y256 w48 h48 +BackgroundTrans gNotebookKPRPDUVD5,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y316 w48 h48 +BackgroundTrans gNotebookKPRPDUVD6,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y376 w48 h48 +BackgroundTrans gNotebookKPRPDUVD7,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y436 w48 h48 +BackgroundTrans gNotebookKPRPDUVD8,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y496 w48 h48 +BackgroundTrans gNotebookKPRPDUVD9,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y556 w48 h48 +BackgroundTrans gNotebookKPRPDUVD10,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y616 w48 h48 +BackgroundTrans gNotebookKPRPDUVD11,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y676 w48 h48 +BackgroundTrans gNotebookKPRPDUVD12,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x440 y736 w48 h48 +BackgroundTrans gNotebookKPRPDUVD25,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 19:Add, Picture, x930 y16 w48 h48 +BackgroundTrans gNotebookKPRPDUVD13,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y76 w48 h48 +BackgroundTrans gNotebookKPRPDUVD14,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y136 w48 h48 +BackgroundTrans gNotebookKPRPDUVD15,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y196 w48 h48 +BackgroundTrans gNotebookKPRPDUVD16,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y256 w48 h48 +BackgroundTrans gNotebookKPRPDUVD17,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPDUVD18,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPDUVD19,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPDUVD20,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPDUVD21,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 19:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+Gui, 19:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 19:Add, Picture, x850 y725 w64 h64  +BackgroundTrans gInfovariableDUVD7,   C:\ProgramData\KPRP\KPRP-main\InfovariableMZ.png
+Gui, 19:Add, Picture, x770 y725 w64 h64  +BackgroundTrans gVoprosKPRPMZ,   C:\ProgramData\KPRP\KPRP-main\VoprosKPRPMZ.png
+
+
+Gui, 19:Show, w1000 h790, Редактор раскладки сочетания клавиш
 Return
+
+
+InfovariableDUVD7:
+ MsgBox, 64, Информация, % "
+(
+Значения переменных:
+
+%floor%: " floor " - Добавляет а на конце.
+%Female%: " Female " - Добавляет ла на конце.
+%Var%: " Var " - Доброго времени суток, по МСК.
+%RankDUVD7 %: " RankDUVD7 " - Должность.
+%TegDUVD7%: " TegDUVD7 " - Ваш отдел.
+%CityDUVD7%: " CityDUVD7 " - Город работы.
+%surnameDUVD7%: " surnameDUVD7 " - Фамилия.
+%PozyvnoyDUVD7%: " PozyvnoyDUVD7 " - Позывной.
+
+%Skrin_1%: " Skrin_1 " - Делает скриншот.
+
+)"
+  
+Return
+
+
+NotebookKPRPDUVD1: 
+Run, notepad.exe "%KPRPDUVD1%" 
+return
+NotebookKPRPDUVD2: 
+Run, notepad.exe "%KPRPDUVD2%"
+ return
+NotebookKPRPDUVD3:
+Run, notepad.exe "%KPRPDUVD3%" 
+return
+NotebookKPRPDUVD4: 
+Run, notepad.exe "%KPRPDUVD4%" 
+return
+NotebookKPRPDUVD5: 
+Run, notepad.exe "%KPRPDUVD5%" 
+return
+NotebookKPRPDUVD6: 
+Run, notepad.exe "%KPRPDUVD6%" 
+return
+NotebookKPRPDUVD7:
+Run, notepad.exe "%KPRPDUVD7%" 
+return
+NotebookKPRPDUVD8: 
+Run, notepad.exe "%KPRPDUVD8%" 
+return
+NotebookKPRPDUVD9: 
+Run, notepad.exe "%KPRPDUVD9%" 
+return
+NotebookKPRPDUVD10: 
+Run, notepad.exe "%KPRPDUVD10%"
+return
+NotebookKPRPDUVD11: 
+Run, notepad.exe "%KPRPDUVD11%" 
+return
+NotebookKPRPDUVD12: 
+Run, notepad.exe "%KPRPDUVD12%" 
+return
+NotebookKPRPDUVD13: 
+Run, notepad.exe "%KPRPDUVD13%" 
+return
+NotebookKPRPDUVD14: 
+Run, notepad.exe "%KPRPDUVD14%" 
+return
+NotebookKPRPDUVD15: 
+Run, notepad.exe "%KPRPDUVD15%" 
+return
+NotebookKPRPDUVD16: 
+Run, notepad.exe "%KPRPDUVD16%" 
+return
+NotebookKPRPDUVD17: 
+Run, notepad.exe "%KPRPDUVD17%" 
+return
+NotebookKPRPDUVD18: 
+Run, notepad.exe "%KPRPDUVD18%" 
+return
+NotebookKPRPDUVD19: 
+Run, notepad.exe "%KPRPDUVD19%" 
+return
+NotebookKPRPDUVD20: 
+Run, notepad.exe "%KPRPDUVD20%" 
+return
+NotebookKPRPDUVD21: 
+Run, notepad.exe "%KPRPDUVD21%" 
+return
+NotebookKPRPDUVD22: 
+Run, notepad.exe "%KPRPDUVD22%" 
+return
+NotebookKPRPDUVD23: 
+Run, notepad.exe "%KPRPDUVD23%" 
+return
+NotebookKPRPDUVD24: 
+Run, notepad.exe "%KPRPDUVD24%" 
+return
+NotebookKPRPDUVD25: 
+Run, notepad.exe "%KPRPDUVD25%" 
+return
+NotebookKPRPDUVD26: 
+Run, notepad.exe "%KPRPDUVD26%" 
+return
+NotebookKPRPDUVD27: 
+Run, notepad.exe "%KPRPDUVD27%" 
+return
+NotebookKPRPDUVD28: 
+Run, notepad.exe "%KPRPDUVD28%" 
+return
+
+
+SelectKPRPDUVD1:
+    SelectKPRPDUVD(1)
+return
+SelectKPRPDUVD2:
+    SelectKPRPDUVD(2)
+return
+SelectKPRPDUVD3:
+    SelectKPRPDUVD(3)
+return
+SelectKPRPDUVD4:
+    SelectKPRPDUVD(4)
+return
+SelectKPRPDUVD5:
+    SelectKPRPDUVD(5)
+return
+SelectKPRPDUVD6:
+    SelectKPRPDUVD(6)
+return
+SelectKPRPDUVD7:
+    SelectKPRPDUVD(7)
+return
+SelectKPRPDUVD8:
+    SelectKPRPDUVD(8)
+return
+SelectKPRPDUVD9:
+    SelectKPRPDUVD(9)
+return
+SelectKPRPDUVD10:
+    SelectKPRPDUVD(10)
+return
+SelectKPRPDUVD11:
+    SelectKPRPDUVD(11)
+return
+SelectKPRPDUVD12:
+    SelectKPRPDUVD(12)
+return
+SelectKPRPDUVD13:
+    SelectKPRPDUVD(13)
+return
+SelectKPRPDUVD14:
+    SelectKPRPDUVD(14)
+return
+SelectKPRPDUVD15:
+    SelectKPRPDUVD(15)
+return
+SelectKPRPDUVD16:
+    SelectKPRPDUVD(16)
+return
+SelectKPRPDUVD17:
+    SelectKPRPDUVD(17)
+return
+SelectKPRPDUVD18:
+    SelectKPRPDUVD(18)
+return
+SelectKPRPDUVD19:
+    SelectKPRPDUVD(19)
+return
+SelectKPRPDUVD20:
+    SelectKPRPDUVD(20)
+return
+SelectKPRPDUVD21:
+    SelectKPRPDUVD(21)
+return
+SelectKPRPDUVD22:
+    SelectKPRPDUVD(22)
+return
+SelectKPRPDUVD23:
+    SelectKPRPDUVD(23)
+return
+SelectKPRPDUVD24:
+    SelectKPRPDUVD(24)
+return
+SelectKPRPDUVD25:
+    SelectKPRPDUVD(25)
+return
+SelectKPRPDUVD26:
+    SelectKPRPDUVD(26)
+return
+SelectKPRPDUVD27:
+    SelectKPRPDUVD(27)
+return
+SelectKPRPDUVD28:
+    SelectKPRPDUVD(28)
+return
+
+SelectKPRPDUVD(num) {
+    global
+    varName := "KPRPDUVD" num
+    LastPath := %varName%
+
+    FileSelectFile, selectedFile, % 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
+    
+    if (selectedFile = "") {
+        %varName% := LastPath
+        MsgBox, 16, Ошибка, Вы отменили выбор файла.
+        return
+    }
+
+    %varName% := selectedFile
+    MsgBox, 64, Файл выбран, % %varName%
+    Gosub, Change
+}
+return
 
 
 

@@ -592,6 +592,16 @@ Loop, 50 {
 }
 
 
+Loop, 50 {
+    IniRead, SvoyeDUVD_%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini, Slag, SvoyeDUVD_%A_Index%
+}
+
+
+Loop, 50 {
+    IniRead, KPRPDUVD%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini, User, KPRPDUVD%A_Index%
+}
+
+
 Loop, 97 {
     IniRead, Objects%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, User, Objects%A_Index%
 }
@@ -621,7 +631,7 @@ IniRead, CityDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
 IniRead, PozyvnoyDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
 IniRead, TegDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
 IniRead, NameDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
-IniRead, OtchetskstoDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
+IniRead, postDUVD7, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, postDUVD7
 
 
 IniRead, FonVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
@@ -779,6 +789,66 @@ Loop, 28 {
 }
 
 
+
+if SvoyeDUVD_1=ERROR
+SvoyeDUVD_1=Служебное удостоверение
+if SvoyeDUVD_2=ERROR
+SvoyeDUVD_2=Проверка документов
+if SvoyeDUVD_3=ERROR
+SvoyeDUVD_3=Приветствие коллег
+if SvoyeDUVD_4=ERROR
+SvoyeDUVD_4=Объявление в федеральный розыск
+if SvoyeDUVD_5=ERROR
+SvoyeDUVD_5=wanted
+if SvoyeDUVD_6=ERROR
+SvoyeDUVD_6=crimrec
+if SvoyeDUVD_7=ERROR
+SvoyeDUVD_7=Удостоверение лич. с помощью КПК
+if SvoyeDUVD_8=ERROR
+SvoyeDUVD_8=Очистить лицо гражданину
+if SvoyeDUVD_9=ERROR
+SvoyeDUVD_9=Прекращение конвоирования
+if SvoyeDUVD_10=ERROR
+SvoyeDUVD_10=Рация вкл
+if SvoyeDUVD_11=ERROR
+SvoyeDUVD_11=Рация выл
+if SvoyeDUVD_12=ERROR
+SvoyeDUVD_12=Пред. в /m
+if SvoyeDUVD_13=ERROR
+SvoyeDUVD_13=Пред. вслучае неповиновения
+if SvoyeDUVD_14=ERROR 
+SvoyeDUVD_14=Пред. открытием огня
+if SvoyeDUVD_15=ERROR
+SvoyeDUVD_15=Пред. о транспорте МВД
+if SvoyeDUVD_16=ERROR
+SvoyeDUVD_16=Пешее преследование
+if SvoyeDUVD_17=ERROR
+SvoyeDUVD_17=Оформление протокола 
+if SvoyeDUVD_18=ERROR
+SvoyeDUVD_18=Передача конвоиру
+if SvoyeDUVD_19=ERROR
+SvoyeDUVD_19=Разбить стекло
+if SvoyeDUVD_20=ERROR
+SvoyeDUVD_20=Разбить стекло удачно
+if SvoyeDUVD_21=ERROR
+SvoyeDUVD_21=Отсутствует
+if SvoyeDUVD_22=ERROR
+SvoyeDUVD_22=Отсутствует
+if SvoyeDUVD_23=ERROR
+SvoyeDUVD_23=Отсутствует
+if SvoyeDUVD_24=ERROR
+SvoyeDUVD_24=Отсутствует
+if SvoyeDUVD_25=ERROR
+SvoyeDUVD_25=Отсутствует
+
+Loop, 28 {
+    currentVar := "KPRPDUVD" . A_Index
+    if (%currentVar% = "ERROR")
+        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\KPRP" . A_Index . "DUVD.txt"
+}
+
+
+
 Loop, 97 {
     currentVar := "Svoye_" . A_Index
     if (%currentVar% = "ERROR")
@@ -808,8 +878,8 @@ if TegDUVD7=ERROR
 TegDUVD7=Не заполнено
 if NameDUVD7=ERROR
 NameDUVD7=Не заполнено
-if OtchetskstoDUVD7=ERROR
-OtchetskstoDUVD7=Не заполнено
+if postDUVD7=ERROR
+postDUVD7=Не заполнено
 
 
 if JWI=ERROR
@@ -1224,6 +1294,7 @@ SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
 	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
+	global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
 	
     global vybor, zaderzhka
 
@@ -1243,6 +1314,8 @@ SendTemplate(type, num) {
         filePath := Lectures%num%
     } else if (type = "KPRPGIBDD") {
         filePath := KPRPGIBDD%num%
+    } else if (type = "KPRPDUVD") {
+        filePath := KPRPDUVD%num%
     } else {
         return  ; неизвестный тип
     }
@@ -1272,8 +1345,17 @@ SendTemplate(type, num) {
     content := StrReplace(content, "%rankGIBDD7%", rankGIBDD7)
     content := StrReplace(content, "%OtdelGIBDD7%", OtdelGIBDD7)
     content := StrReplace(content, "%CityGIBDD7%", CityGIBDD7)
+	
+	
+	content := StrReplace(content, "%rankDUVD7%", rankDUVD7)
+    content := StrReplace(content, "%CityDUVD7%", CityDUVD7)
+    content := StrReplace(content, "%PozyvnoyDUVD7%", PozyvnoyDUVD7)
+    content := StrReplace(content, "%surnameDUVD7%", surnameDUVD7)
+	content := StrReplace(content, "%TegDUVD7%", TegDUVD7)
+	content := StrReplace(content, "%NameDUVD7%", NameDUVD7)
+	content := StrReplace(content, "%postDUVD7%", postDUVD7)
 
-    
+
     ; --- Разделяем на строки и отправляем ---
     Loop, parse, content, `n, `r
     {
@@ -1282,7 +1364,6 @@ SendTemplate(type, num) {
         }
     }
 }
-
 
 
 
@@ -2810,8 +2891,7 @@ IniWrite, %CityDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD
 IniWrite, %PozyvnoyDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
 IniWrite, %TegDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
 IniWrite, %NameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
-IniWrite, %OtchetskstoDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtchetskstoDUVD7
-
+IniWrite, %postDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, postDUVD7
 
 Loop, 97
 {
@@ -2930,6 +3010,67 @@ Loop, % endNum - startNum + 1
 iniPathRaskladka_GIBDD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini"
 sectionEdit := "Edit"
 baseNameGIBDD7 := "GIBDD7"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; Настройки
+iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
+sectionSlag1 := "Slag"
+prefixSvoyeDUVD_ := "SvoyeDUVD_"
+startNum := 1
+endNum := 50
+
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixSvoyeDUVD_ . currentNum
+    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionSlag1%, %varName%
+}
+
+
+; Конфигурационные параметры
+iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
+sectionUser := "User"
+prefixKPRPDUVD := "KPRPDUVD"  ; Префикс переменных
+startNum := 1          ; Начальный номер
+endNum := 50           ; Конечный номер
+
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixKPRPDUVD . currentNum
+    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionUser%, %varName%
+}
+
+iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
+sectionEdit := "Edit"
+baseNameDUVD7 := "DUVD7"
+
+
+
+
+
+
+
+
+
+
 
 Loop, 28  ; (281-11)/10 + 1 = 28 итераций
 {

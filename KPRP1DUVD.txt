@@ -1,0 +1,1 @@
+say Здравия желаю, %postDUVD7% %rankDUVD7% полиции %surnameDUVD7%, УВД по городу %CityDUVD7%.
