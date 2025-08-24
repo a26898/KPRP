@@ -1,3 +1,2 @@
-me достал%floor% каталку из АСМП
-getcouch
-drivecouch
+me переложил%floor% человека на каталку 
+loadcouch

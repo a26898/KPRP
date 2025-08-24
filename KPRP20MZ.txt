@@ -1,2 +1,2 @@
-me переложил%floor% человека на каталку 
-loadcouch
+me закатил%floor% каталку в АСМП
+getcouch

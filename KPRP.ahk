@@ -642,7 +642,7 @@ IniRead, Tsvet_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniRead, Skrinshot, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
 IniRead, MaxMinutes, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniRead, Taymer_Nastroyka, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
-IniRead, Tsvet_3, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
+IniRead, ImgChestToken, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ImgChestToken
 IniRead, vybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniRead, userVybor, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniRead, Skrin_1, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
@@ -654,47 +654,45 @@ IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 if SvoyeМZ_1=ERROR
 SvoyeМZ_1=Бейдж
 if SvoyeМZ_2=ERROR
-SvoyeМZ_2=За мной
+SvoyeМZ_2=На что жалуетесь?
 if SvoyeМZ_3=ERROR
-SvoyeМZ_3=На что жалуетесь?
+SvoyeМZ_3=Вопрос 1
 if SvoyeМZ_4=ERROR
-SvoyeМZ_4=Вопрос 1
+SvoyeМZ_4=Вопрос 2
 if SvoyeМZ_5=ERROR
-SvoyeМZ_5=Вопрос 2
+SvoyeМZ_5=Вопрос 3
 if SvoyeМZ_6=ERROR
-SvoyeМZ_6=Вопрос 3
+SvoyeМZ_6=Вопрос 4
 if SvoyeМZ_7=ERROR
-SvoyeМZ_7=Вопрос 4
+SvoyeМZ_7=Вопрос 5
 if SvoyeМZ_8=ERROR
-SvoyeМZ_8=Вопрос 5
+SvoyeМZ_8=Вопрос 6
 if SvoyeМZ_9=ERROR
-SvoyeМZ_9=Вопрос 6
+SvoyeМZ_9=Осмотор
 if SvoyeМZ_10=ERROR
-SvoyeМZ_10=Осмотор
+SvoyeМZ_10=Лечение
 if SvoyeМZ_11=ERROR
-SvoyeМZ_11=Лечение
+SvoyeМZ_11=Лечения себя
 if SvoyeМZ_12=ERROR
-SvoyeМZ_12=Лечения себя
+SvoyeМZ_12=Прощание
 if SvoyeМZ_13=ERROR
-SvoyeМZ_13=Прощание
+SvoyeМZ_13=Отказ
 if SvoyeМZ_14=ERROR
-SvoyeМZ_14=Отказ
+SvoyeМZ_14=Мегафон
 if SvoyeМZ_15=ERROR
-SvoyeМZ_15=Мегафон
+SvoyeМZ_15=Вкл.КПК
 if SvoyeМZ_16=ERROR
-SvoyeМZ_16=Вкл.КПК
+SvoyeМZ_16=Выкл.КПК 
 if SvoyeМZ_17=ERROR
-SvoyeМZ_17=Выкл.КПК 
+SvoyeМZ_17=Иформация о медкарте 
 if SvoyeМZ_18=ERROR
-SvoyeМZ_18=Иформация о медкарте 
+SvoyeМZ_18=Достать каталку  
 if SvoyeМZ_19=ERROR
-SvoyeМZ_19=Достать каталку  
+SvoyeМZ_19=Переложитьчеловека 
 if SvoyeМZ_20=ERROR
-SvoyeМZ_20=Переложитьчеловека 
+SvoyeМZ_20=Убарть в АСМП 
 if SvoyeМZ_21=ERROR
-SvoyeМZ_21=Убарть в АСМП 
-if SvoyeМZ_22=ERROR
-SvoyeМZ_22=Госпитализация 
+SvoyeМZ_21=Госпитализация 
 if SvoyeМZ_23=ERROR
 SvoyeМZ_23=Откат /r 
 if SvoyeМZ_24=ERROR
@@ -916,8 +914,8 @@ if vybor=ERROR
 vybor=SendChat
 if Skrin_1=ERROR
 Skrin_1=screenshot
-if Tsvet_3=ERROR
-Tsvet_3=Yellow
+if ImgChestToken=ERROR
+ImgChestToken=Yellow
 if userVybor=ERROR
 userVybor=Автоотправка
 
@@ -988,6 +986,7 @@ Skrin_1=
 }
 
 
+
 ;if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
 ;    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
 ;    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
@@ -1029,6 +1028,48 @@ Menu, Tray, default, Свернуть
 Menu, Tray, Add
 Menu, Tray, Add, GuiClose
 Menu, Tray, Rename, GuiClose,  Выход
+
+
+TempFolder := A_Temp . "\screenshots"
+FileCreateDir, %TempFolder%
+AlbumFiles := []
+
+
+TakeScreenshot(filePath)
+{
+    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
+    psCmd .= "$bmp = New-Object Drawing.Bitmap([System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width,[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height); "
+    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
+    psCmd .= "$gfx.CopyFromScreen([System.Drawing.Point]::Empty,[System.Drawing.Point]::Empty,$bmp.Size); "
+    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
+    RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
+    IfExist, %filePath%
+        return true
+    else
+        return false
+}
+
+UploadAlbumPost(filesArray, token)
+{
+    curlCmd := "curl -s -H ""Authorization: Bearer " . token . """"
+    for index, file in filesArray
+        curlCmd .= " -F ""images[]=@""" . file . """"""
+    curlCmd .= " https://api.imgchest.com/v1/post"
+
+    RunWait, %ComSpec% /C %curlCmd% > "%A_Temp%\imgchest_response.json",, Hide
+    FileRead, resp, %A_Temp%\imgchest_response.json
+
+    if RegExMatch(resp, """link"":\s*""([^""]+)""", m)
+    {
+        link := m1
+        StringReplace, link, link, \, /, All
+        if !RegExMatch(link, "^https?://")
+            link := "https://" link
+        return link
+    }
+    else
+        return ""
+}
 
 
 
@@ -1927,7 +1968,7 @@ Vania:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
 Gui, 6:Destroy,
 Gui, 6:Add, Picture, x0 y0 w480   h575 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 6:Add, Picture, x620 y500 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 6:Add, Picture, x720 y500 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot gSkrinshotChanged, %Skrinshot%||Включен|Выключен
@@ -1944,15 +1985,19 @@ Gui, 6:Add, ComboBox, x90 y420 w295 vTsvet,  %Tsvet%||
 Gui, 6:Add, ComboBox, x90 y510 w295 vTsvet_1, %Tsvet_1%||
 
 
-Gui, 6:Add, DropDownList, x490 y40 w195 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
-Gui, 6:Add, Edit, x490 y135 w195 vMaxMinutes, %MaxMinutes%
-Gui, 6:Add, DropDownList, x490 y225 w195 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
-Gui, 6:Add, ComboBox, x490 y325 w195 vTsvet_3, %Tsvet_3%||
-
+Gui, 6:Add, DropDownList, x490 y40 w295 vTaymer_Nastroyka,%Taymer_Nastroyka%||Включен|Выключен
+Gui, 6:Add, Edit, x490 y135 w295 vMaxMinutes, %MaxMinutes%
+Gui, 6:Add, DropDownList, x490 y225 w295 vuserVybor gVyborChanged, %userVybor%||Автоотправка|Ручной ввод
+Gui, 6:Add, Edit, x490 y300 w295 vImgChestToken, %ImgChestToken%
+Gui, 6:Add, Button, x490 y400 w295 gToken, Создать API Token
 
 
 Gui, 6:show, center , Настройки
 Gosub, VyborChanged
+Return
+
+Token:
+Run, https://imgchest.com/profile/api
 Return
 
 VyborChanged:
@@ -2874,7 +2919,7 @@ IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
 IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
 IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
 IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
-IniWrite, %Tsvet_3%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_3
+IniWrite, %ImgChestToken%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ImgChestToken
 IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
 IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
 IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1

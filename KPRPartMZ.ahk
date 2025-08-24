@@ -573,15 +573,46 @@ Return
 Return
 
 0022MZ7:
-    SendTemplate("KPRPMZ", 22)
+    AlbumFiles := []
+    ToolTip, Альбом создан.`nТеперь добавляйте скриншоты 
+    SetTimer, RemoveToolTip, -2000
 Return
 
 0023MZ7:
-    SendTemplate("KPRPMZ", 23)
+    if !IsObject(AlbumFiles)
+    {
+        ToolTip, Ошибка: Сначала создайте альбом Ctrl+Shift+S
+        SetTimer, RemoveToolTip, -2000
+        return
+    }
+    file := TempFolder . "\screen" . (AlbumFiles.MaxIndex() + 1) . ".png"
+    if TakeScreenshot(file)
+    {
+        AlbumFiles.Push(file)
+        ToolTip, Скриншот добавлен в альбом
+        SetTimer, RemoveToolTip, -1500
+    }
+    else
+    {
+        ToolTip, Ошибка: Не удалось сделать скриншот
+        SetTimer, RemoveToolTip, -2000
+    }
 Return
 
 0024MZ7:
-    SendTemplate("KPRPMZ", 24)
+    if !IsObject(AlbumFiles) || AlbumFiles.MaxIndex() = 0
+    {
+        ToolTip, Ошибка: Альбом пуст или не создан
+        SetTimer, RemoveToolTip, -2000
+        return
+    }
+    link := UploadAlbumPost(AlbumFiles, ImgChestToken)
+    if (link = "")
+        ToolTip, Ошибка: Не удалось загрузить альбом
+    else
+        ToolTip, Альбом загружен:`n%link%
+    SetTimer, RemoveToolTip, -5000
+    AlbumFiles := [] ; очистка для следующего альбома
 Return
 
 0025MZ7:
@@ -9605,9 +9636,9 @@ Gui, 4:Add, Edit, x660 y326 w180 vSvoyeМZ_18, %SvoyeМZ_18%
 Gui, 4:Add, Edit, x660 y386 w180 vSvoyeМZ_19, %SvoyeМZ_19%
 Gui, 4:Add, Edit, x660 y446 w180 vSvoyeМZ_20, %SvoyeМZ_20%
 Gui, 4:Add, Edit, x660 y506 w180 vSvoyeМZ_21, %SvoyeМZ_21%
-Gui, 4:Add, Edit, x660 y566 w180 vSvoyeМZ_22, %SvoyeМZ_22%
-Gui, 4:Add, Edit, x660 y626 w180 vSvoyeМZ_23, %SvoyeМZ_23%
-Gui, 4:Add, Edit, x660 y686 w180 vSvoyeМZ_24, %SvoyeМZ_24%
+Gui, 4:Add, Edit, x660 y566 w280 Disabled, Создать альбом на imgchest.com
+Gui, 4:Add, Edit, x660 y626 w280 Disabled, Добавить скриншоты в альбом
+Gui, 4:Add, Edit, x660 y686 w280 Disabled, Загрузить альбом на imgchest.com 
 Gui, 4:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
@@ -9634,9 +9665,9 @@ Gui, 4:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPMZ18,C:\Progr
 Gui, 4:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPMZ19,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
 Gui, 4:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPMZ20,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
 Gui, 4:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPMZ21,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 4:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPMZ22,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 4:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPMZ23,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 4:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPMZ24,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+;Gui, 4:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPMZ22,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+;Gui, 4:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPMZ23,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+;Gui, 4:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPMZ24,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
 
 Gui, 4:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPMZ1,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
 Gui, 4:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPMZ2,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
@@ -9661,9 +9692,11 @@ Gui, 4:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPMZ18,C:\Pro
 Gui, 4:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPMZ19,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
 Gui, 4:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPMZ20,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
 Gui, 4:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPMZ21,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 4:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPMZ22,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 4:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPMZ23,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 4:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPMZ24,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+
+
+;Gui, 4:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPMZ22,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+;Gui, 4:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPMZ23,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+;Gui, 4:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPMZ24,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
 
 
 Gui, 4:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
