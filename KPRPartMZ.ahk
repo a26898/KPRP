@@ -9636,9 +9636,9 @@ Gui, 4:Add, Edit, x660 y326 w180 vSvoyeМZ_18, %SvoyeМZ_18%
 Gui, 4:Add, Edit, x660 y386 w180 vSvoyeМZ_19, %SvoyeМZ_19%
 Gui, 4:Add, Edit, x660 y446 w180 vSvoyeМZ_20, %SvoyeМZ_20%
 Gui, 4:Add, Edit, x660 y506 w180 vSvoyeМZ_21, %SvoyeМZ_21%
-Gui, 4:Add, Edit, x660 y566 w280 Disabled, Создать альбом на imgchest.com
-Gui, 4:Add, Edit, x660 y626 w280 Disabled, Добавить скриншоты в альбом
-Gui, 4:Add, Edit, x660 y686 w280 Disabled, Загрузить альбом на imgchest.com 
+Gui, 4:Add, Edit, x660 y566 w320 Disabled, Создать альбом на imgchest.com
+Gui, 4:Add, Edit, x660 y626 w320 Disabled, Добавить скриншоты в альбом до 20 штук.
+Gui, 4:Add, Edit, x660 y686 w320 Disabled, Загрузить альбом на imgchest.com 
 Gui, 4:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
