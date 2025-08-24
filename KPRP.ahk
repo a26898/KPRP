@@ -2088,6 +2088,7 @@ FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini
 FileDelete,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini
 FileDelete, C:\ProgramData\KPRP\KPRP-main\Raskladka_MZ.ini
+Reload
 Return
 
 
@@ -3055,20 +3056,6 @@ Loop, % endNum - startNum + 1
 iniPathRaskladka_GIBDD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini"
 sectionEdit := "Edit"
 baseNameGIBDD7 := "GIBDD7"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
