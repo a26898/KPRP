@@ -1,4 +1,4 @@
-﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+﻿SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 
  --- Создаём основной GUI с номером 5 ---
 Gui, 12: +LastFound
@@ -53,21 +53,21 @@ Gui, 12:Tab, 2
 Gui, 12:Add, Button, x10 y40 w300 h40 , /КоАП Пример:/КоАП19.4
 Gui, 12:Add, Button, x10 y90 w300 h40 , /УК Пример:/УК5.7
 
-Gui, 12:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\Clear.png
-Gui, 12:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfoGIBDD,  C:\ProgramData\KPRP\KPRP-main\Police.png
-Gui, 12:Add, Picture, x220 y600 w48 w48   +BackgroundTrans gEditGIBDD, C:\ProgramData\KPRP\KPRP-main\Raskladka.png
-Gui, 12:Add, Picture, x320 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\Editor.png
-Gui, 12:Add, Picture, x420 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\Offers.png
-Gui, 12:Add, Picture, x520 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\Bug_report.png
-Gui, 12:Add, Picture, x620 y600 w48 w48   +BackgroundTrans gUluchsheniya, C:\ProgramData\KPRP\KPRP-main\Uluchsheniya.png
-Gui, 12:Add, Picture, x720 y600 w48 w48   +BackgroundTrans gHelp, C:\ProgramData\KPRP\KPRP-main\Tekhpodderzhka.png
-Gui, 12:Add, Picture, x820 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\Smena_fraktsii.png
-Gui, 12:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\Help.png
+Gui, 12:Add, Picture, x20 y600 w48 w48   +BackgroundTrans gSvoy, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Clear.png
+Gui, 12:Add, Picture, x120 y600 w48 w48   +BackgroundTrans gInfoGIBDD,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Police.png
+Gui, 12:Add, Picture, x220 y600 w48 w48   +BackgroundTrans gEditGIBDD, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka.png
+Gui, 12:Add, Picture, x320 y600 w48 w48   +BackgroundTrans gEditor, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Editor.png
+Gui, 12:Add, Picture, x420 y600 w48 w48   +BackgroundTrans gOffers, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Offers.png
+Gui, 12:Add, Picture, x520 y600 w48 w48   +BackgroundTrans gBugreport, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Bug_report.png
+Gui, 12:Add, Picture, x620 y600 w48 w48   +BackgroundTrans gUluchsheniya, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Uluchsheniya.png
+Gui, 12:Add, Picture, x720 y600 w48 w48   +BackgroundTrans gHelp, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Tekhpodderzhka.png
+Gui, 12:Add, Picture, x820 y600 w48 w48   +BackgroundTrans  gVybor_organizatsii, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Smena_fraktsii.png
+Gui, 12:Add, Picture, x920 y600 w48 w48   +BackgroundTrans  gVania, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Help.png
 
-Gui, 12:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\restart.png
+Gui, 12:Add, Picture, x1120 y600 w48 w48   +BackgroundTrans   gReload, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\restart.png
 
-Gui, 12:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\%Bol_ro_2%
-Gui, 12:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRP.png
+Gui, 12:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\%Bol_ro_2%
+Gui, 12:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\KPRP.png
 
 Return
 
@@ -209,11 +209,11 @@ Return
 
 
 InfoGIBDD:
-SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 
 Gui, 19:Destroy,
-Gui, 19:Add, Picture, x0 y10 w475   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_GIBDD.png
-Gui, 19:Add, Picture, x470 y600 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 19:Add, Picture, x0 y10 w475   h672 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Vod_GIBDD.png
+Gui, 19:Add, Picture, x470 y600 w64 h64   +BackgroundTrans gChangeInfoGIBDD, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 
 Gui, 19:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 19:Add, ComboBox, x90 y40  w425  vRankGIBDD7, %RankGIBDD7%||Рядовой|Сержант|Старшина|Прапорщик|Лейтенант|Старший лейтенант|Капитан|Майор|Подполковник|Полковник|Генерал
@@ -229,37 +229,37 @@ Return
 
 
 EditGIBDD:
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 
 Gui, 18:Destroy,
-IniRead, 11GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 11GIBDD7
-IniRead, 21GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 21GIBDD7
-IniRead, 31GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 31GIBDD7
-IniRead, 41GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 41GIBDD7
-IniRead, 51GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 51GIBDD7
-IniRead, 61GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 61GIBDD7
-IniRead, 71GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 71GIBDD7
-IniRead, 81GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 81GIBDD7
-IniRead, 91GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 91GIBDD7
-IniRead, 101GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 101GIBDD7
-IniRead, 111GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 111GIBDD7
-IniRead, 121GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 121GIBDD7
-IniRead, 131GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 131GIBDD7
-IniRead, 141GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 141GIBDD7
-IniRead, 151GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 151GIBDD7
-IniRead, 161GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 161GIBDD7
-IniRead, 171GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 171GIBDD7
-IniRead, 181GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 181GIBDD7
-IniRead, 191GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 191GIBDD7
-IniRead, 201GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 201GIBDD7
-IniRead, 211GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 211GIBDD7
-IniRead, 221GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 221GIBDD7
-IniRead, 231GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 231GIBDD7
-IniRead, 241GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 241GIBDD7
-IniRead, 251GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 251GIBDD7
-IniRead, 261GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 261GIBDD7
-IniRead, 271GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 271GIBDD7
-IniRead, 281GIBDD7,  C:\ProgramData\KPRP\KPRP-main\Raskladka_GIBDD.ini , Edit, 281GIBDD7
+IniRead, 11GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 11GIBDD7
+IniRead, 21GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 21GIBDD7
+IniRead, 31GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 31GIBDD7
+IniRead, 41GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 41GIBDD7
+IniRead, 51GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 51GIBDD7
+IniRead, 61GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 61GIBDD7
+IniRead, 71GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 71GIBDD7
+IniRead, 81GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 81GIBDD7
+IniRead, 91GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 91GIBDD7
+IniRead, 101GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 101GIBDD7
+IniRead, 111GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 111GIBDD7
+IniRead, 121GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 121GIBDD7
+IniRead, 131GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 131GIBDD7
+IniRead, 141GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 141GIBDD7
+IniRead, 151GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 151GIBDD7
+IniRead, 161GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 161GIBDD7
+IniRead, 171GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 171GIBDD7
+IniRead, 181GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 181GIBDD7
+IniRead, 191GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 191GIBDD7
+IniRead, 201GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 201GIBDD7
+IniRead, 211GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 211GIBDD7
+IniRead, 221GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 221GIBDD7
+IniRead, 231GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 231GIBDD7
+IniRead, 241GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 241GIBDD7
+IniRead, 251GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 251GIBDD7
+IniRead, 261GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 261GIBDD7
+IniRead, 271GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 271GIBDD7
+IniRead, 281GIBDD7,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Raskladka_GIBDD.ini , Edit, 281GIBDD7
 
 
 Gui, 18:Font, S11 C%Tsvet_1% Bold, Arial
@@ -323,63 +323,63 @@ Gui, 18:Add, Edit, x660 y686 w180 vSvoyeGIBDD_24, %SvoyeGIBDD_24%
 Gui, 18:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
-Gui, 18:Add, Picture, x370 y16 w48 h48 +BackgroundTrans gSelectKPRPGIBDD1,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y76 w48 h48 +BackgroundTrans gSelectKPRPGIBDD2,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y136 w48 h48 +BackgroundTrans gSelectKPRPGIBDD3,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y196 w48 h48 +BackgroundTrans gSelectKPRPGIBDD4 ,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y256 w48 h48 +BackgroundTrans gSelectKPRPGIBDD5,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y316 w48 h48 +BackgroundTrans gSelectKPRPGIBDD6,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y376 w48 h48 +BackgroundTrans gSelectKPRPGIBDD7,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y436 w48 h48 +BackgroundTrans gSelectKPRPGIBDD8,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y496 w48 h48 +BackgroundTrans gSelectKPRPGIBDD9,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD10,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD11,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD12,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x370 y736 w48 h48 +BackgroundTrans gSelectKPRPGIBDD25,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y16 w48 h48 +BackgroundTrans gSelectKPRPGIBDD1,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y76 w48 h48 +BackgroundTrans gSelectKPRPGIBDD2,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y136 w48 h48 +BackgroundTrans gSelectKPRPGIBDD3,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y196 w48 h48 +BackgroundTrans gSelectKPRPGIBDD4 ,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y256 w48 h48 +BackgroundTrans gSelectKPRPGIBDD5,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y316 w48 h48 +BackgroundTrans gSelectKPRPGIBDD6,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y376 w48 h48 +BackgroundTrans gSelectKPRPGIBDD7,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y436 w48 h48 +BackgroundTrans gSelectKPRPGIBDD8,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y496 w48 h48 +BackgroundTrans gSelectKPRPGIBDD9,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD10,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD11,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD12,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x370 y736 w48 h48 +BackgroundTrans gSelectKPRPGIBDD25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 
-Gui, 18:Add, Picture, x860 y16 w48 h48 +BackgroundTrans gSelectKPRPGIBDD13,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y76 w48 h48 +BackgroundTrans gSelectKPRPGIBDD14,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y136 w48 h48 +BackgroundTrans gSelectKPRPGIBDD15,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y196 w48 h48 +BackgroundTrans gSelectKPRPGIBDD16,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y256 w48 h48 +BackgroundTrans gSelectKPRPGIBDD17,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPGIBDD18,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y16 w48 h48 +BackgroundTrans gSelectKPRPGIBDD13,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y76 w48 h48 +BackgroundTrans gSelectKPRPGIBDD14,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y136 w48 h48 +BackgroundTrans gSelectKPRPGIBDD15,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y196 w48 h48 +BackgroundTrans gSelectKPRPGIBDD16,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y256 w48 h48 +BackgroundTrans gSelectKPRPGIBDD17,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPGIBDD18,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 18:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 
-Gui, 18:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD1,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD2,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y136 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD3,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y196 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD4 ,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y256 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD5,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y316 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD6,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y376 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD7,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y436 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD8,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y496 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD9,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD10,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD11,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD12,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x440 y736 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD25,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD1,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD2,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y136 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD3,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y196 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD4 ,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y256 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD5,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y316 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD6,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y376 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD7,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y436 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD8,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y496 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD9,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD10,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD11,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD12,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x440 y736 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
-Gui, 18:Add, Picture, x930 y16 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD13,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y76 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD14,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y136 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD15,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y196 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD16,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y256 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD17,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD18,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y16 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD13,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y76 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD14,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y136 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD15,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y196 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD16,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y256 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD17,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD18,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 18:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
-Gui, 18:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
-Gui, 18:Add, Picture, x850 y725 w64 h64  +BackgroundTrans gInfovariableGIBDD7,   C:\ProgramData\KPRP\KPRP-main\InfovariableMZ.png
-Gui, 18:Add, Picture, x770 y725 w64 h64  +BackgroundTrans gVoprosKPRPMZ,   C:\ProgramData\KPRP\KPRP-main\VoprosKPRPMZ.png
+Gui, 18:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChangeRaskladka_GIBDD,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
+Gui, 18:Add, Picture, x850 y725 w64 h64  +BackgroundTrans gInfovariableGIBDD7,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\InfovariableMZ.png
+Gui, 18:Add, Picture, x770 y725 w64 h64  +BackgroundTrans gVoprosKPRPMZ,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\VoprosKPRPMZ.png
 
 
 Gui, 18:Show, w1000 h790, Редактор раскладки сочетания клавиш
@@ -591,6 +591,6 @@ SelectKPRPGIBDD(num) {
 
     %varName% := selectedFile
     MsgBox, 64, Файл выбран, % %varName%
-    Gosub, Change
+    Gosub, ChangeRaskladka_GIBDD
 }
 return

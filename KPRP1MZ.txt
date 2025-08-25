@@ -1,2 +1,0 @@
-say %Var%, меня зовут %Name% %Surname%.
-do На груди висит бейдж:[%Bol_ro_3%][%JWI%][%TAG%][%Surname% %Name% %Middle_Name%].

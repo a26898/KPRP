@@ -700,7 +700,7 @@ SvoyeМZ_24=Откат /ro
 if SvoyeМZ_25=ERROR
 SvoyeМZ_25=Аптека (таблетка)
 
-Loop, 500
+Loop, 700
 {
     ; Генерируем название переменной, например, KPRPMZ1, KPRPMZ2 и т.д.
     varName := "KPRPMZ" A_Index
@@ -709,7 +709,7 @@ Loop, 500
     if %varName% = ERROR
     {
         ; Если значение ERROR, присваиваем путь
-        %varName% := "C:\ProgramData\KPRP\KPRP-main\KPRP" A_Index "MZ.txt"
+        %varName% := "C:\ProgramData\KPRP\KPRP-main\OtygrovkiMZ\KPRP" A_Index "MZ.txt"
     }
 }
 
@@ -783,7 +783,7 @@ SvoyeGIBDD_25=Взять протокол
 Loop, 28 {
     currentVar := "KPRPGIBDD" . A_Index
     if (%currentVar% = "ERROR")
-        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\KPRP" . A_Index . "GIBDD.txt"
+        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\OtygrovkiGIBDD\KPRP" . A_Index . "GIBDD.txt"
 }
 
 
@@ -842,7 +842,7 @@ SvoyeDUVD_25=Отсутствует
 Loop, 28 {
     currentVar := "KPRPDUVD" . A_Index
     if (%currentVar% = "ERROR")
-        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\KPRP" . A_Index . "DUVD.txt"
+        %currentVar% := "C:\ProgramData\KPRP\KPRP-main\OtygrovkiDUVD\KPRP" . A_Index . "DUVD.txt"
 }
 
 
@@ -1017,6 +1017,9 @@ Menu, Tray, Add
 Menu, Tray, Add, Help
 Menu, Tray, Rename, Help, Техническая поддержка
 Menu, Tray, Add
+Menu, Tray, Add, Svoy1
+Menu, Tray, Rename, Svoy1, Починить КПРП
+Menu, Tray, Add
 Menu, Tray, Add, Bugreport
 Menu, Tray, Rename, Bugreport, Баг-репорт
 Menu, Tray, Add
@@ -1141,7 +1144,7 @@ CheckProcessMinimized() {
             
             ; Если превышено время
             if (MinimizedDuration >= MaxMinimizedTime) {
-                SoundPlay, C:\ProgramData\KPRP\KPRP-main\AFK.mp3
+                SoundPlay, C:\ProgramData\KPRP\KPRPMP3\KPRP-main\AFK.mp3
                 MinimizedDuration := 0
             }
         }
@@ -1152,6 +1155,277 @@ CheckProcessMinimized() {
 }
 
 
+
+CloseBadProcesses() {
+    ; Закрываем окно по заголовку
+    SetTitleMatchMode, 2
+    WinClose, Konets_rd.ahk
+
+    ; Список процессов, которые нужно завершить
+    processes := ["KPRP.exe", "Journal.exe", "Diskorod.exe"]
+
+    for index, proc in processes {
+        Run, taskkill /IM %proc% /F, , Hide
+    }
+}
+
+
+
+; === ВЗ КС ===
+ShowRedList() {
+
+    SetTitleMatchMode, 2
+    FileEncoding, UTF-8
+    url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
+    savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
+
+    ; Скачать таблицу
+    UrlDownloadToFile, %url%, %savePath%
+    if !FileExist(savePath) {
+        MsgBox, Не удалось скачать таблицу!
+        return
+    }
+
+    content := "Временный запрет                     Красный список`n"
+    content .= "---------------------------------------------------------------`n"
+
+    FileRead, fileData, %savePath%
+    Loop, Parse, fileData, `n, `r
+    {
+        if (A_Index = 1)
+            continue
+        line := A_LoopField
+        fields := StrSplit(line, "`t")
+        if (fields.Length() >= 9) {
+            nickE := fields[4]
+            passF := fields[5]
+            nickH := fields[7]
+            passI := fields[8]
+
+            ; Выравнивание
+            nickE := Format("{:-20}", nickE)
+            passF := Format("{:-12}", passF)
+            nickH := Format("{:-30}", nickH)
+
+            if (nickE != "" || nickH != "")
+                content .= nickE passF "|   " nickH passI "`n"
+        }
+    }
+
+    ; Подсчёт строк
+    lines := 0
+    Loop, Parse, content, `n, `r
+        lines++
+
+    lineHeight := 18
+    maxHeight := 600
+    height := lines * lineHeight
+    if (height > maxHeight)
+        height := maxHeight
+
+    winWidth := 740
+    winHeight := height
+
+    ; Позиция окна
+    monitorInfo := GetActiveMonitorInfo()
+    if monitorInfo {
+        xPos := monitorInfo.right - winWidth - 40
+        yPos := monitorInfo.top + 40
+    } else {
+        SysGet, primary, MonitorPrimary
+        SysGet, mon, Monitor, %primary%
+        xPos := monRight - winWidth - 40
+        yPos := monTop + 40
+    }
+
+    Gui, ВЗ:New
+    Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
+    Gui, Font, s10, Courier New
+    Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
+    Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
+}
+
+
+
+; === Рядом термины ===
+GetRandomWord() {
+    Words := []
+    Words[1] := "РП, МГ, ПГ"
+    Words[2] := "ДМ, ЗЗ, СК"
+    Words[3] := "ТК, РК, ООС"
+    Words[4] := "33, ДБ, РП"
+    Words[5] := "ВХ, ДМ, ПГ"
+    Words[6] := "БХ, РВК, 33"
+    Words[7] := "33, ДБ, МГ"
+    Words[8] := "ПГ, РП, ВХ"
+    Words[9] := "РПК, РВК, ООС"
+    Words[10] := "РК, СК, ТК"
+    Words[11] := "33, ДМ, РП"
+    Words[12] := "ДМ, ДБ, ПГ"
+    Words[13] := "РК, IC, БХ"
+    Words[14] := "СК, МГ, ТК"
+    Words[15] := "РП, ООС, РВК"
+
+    Random, rand, 1, 15
+    return Words[rand]
+}
+
+; === Рядом термины МЗ ===
+GetRandomMedicalWord() {
+    Words := []
+    Words[1] :=  "СМП, ДБ, МГ, ЦГБ и ИВЛ"
+    Words[2] :=  "АСМП, ТК, СК, ОКБ и ЭКГ"
+    Words[3] :=  "ВСМП, РК, ТК, МЗ и УЗИ"
+    Words[4] :=  "СМП, IC, ООС, ЦГБ и МРТ"
+    Words[5] :=  "АСМП, БХ, 33, МЗ и ФГДС"
+    Words[6] :=  "ВСМП, ПГ, РК, ОКБ и ФКС"
+    Words[7] :=  "СМП, РВК, ДБ, ЦГБ и ЭЭГ"
+    Words[8] :=  "ВСМП, РПК, ТК, МЗ и Флюорография"
+    Words[9] :=  "АСМП, ДМ, БХ, МЗ и Томография"
+    Words[10] := "СМП, ООС, ДБ, ЦГБ и Пульсоксиметр"
+    Words[11] := "АСМП, ПГ, IC, ОКБ и Флюорография"
+    Words[12] := "АСМП, ТК, МГ, ЦГБ и ОФЭКТ"
+    Words[13] := "АСМП, РП, МГ, ЦГБ и Вакцинация"
+    Words[14] := "АСМП, ТК, МГ, ЦГБ и Рентген"
+    Words[15] := "АСМП, ТК, МГ, ЦГБ и Маммография"
+
+    Random, rand, 1, Words.Length()
+    return Words[rand]
+}
+
+; === Рядом тренировка МЗ ===
+GetRandomProcedure() {
+    Procedures := []
+    Procedures[1] := "ЭКГ"
+    Procedures[2] := "УЗИ"
+    Procedures[3] := "ФКС"
+    Procedures[4] := "ФГДС"
+    Procedures[5] := "Вывих челюсти"
+    Procedures[6] := "Флюорография"
+    Procedures[7] := "ЭЭГ"
+    Procedures[8] := "МРТ"
+    Procedures[9] := "ОФЭКТ"
+    Procedures[10] := "ОПТГ"
+    Procedures[11] := "Клизма"
+    Procedures[12] := "Цистоскопия"
+    Procedures[13] := "Фетоскопия"
+    Procedures[14] := "Взятие мазка"
+    Procedures[15] := "Маммография"
+    Procedures[16] := "Вакцинация"
+    Procedures[17] := "Вакцинация от бешенства"
+    Procedures[18] := "Вакцинация от коронавируса"
+    Procedures[19] := "Капельница"
+    Procedures[20] := "Анализ сахара в крови"
+    Procedures[21] := "Химиотерапия"
+    Procedures[22] := "Отравление"
+    Procedures[23] := "Отбеливание зубов"
+    Procedures[24] := "Рентген зуба"
+    Procedures[25] := "Стерилизация"
+    Procedures[26] := "Реминерализующая терапия"
+    Procedures[27] := "ЗЧМТ"
+    Procedures[28] := "Грыжа"
+    Procedures[29] := "Пулевое ранение"
+    Procedures[30] := "Ножевое ранение"
+    Procedures[31] := "Ожог"
+    Procedures[32] := "Родинка"
+    Procedures[33] := "Роды"
+    Procedures[34] := "ВМС"
+    Procedures[35] := "Увеличение груди"
+    Procedures[36] := "Рассечение головы"
+    Procedures[37] := "Аппендицит"
+    Procedures[38] := "Трансплантация"
+    Procedures[39] := "Перевязывание раны"
+    Procedures[40] := "Рентген"
+    Procedures[41] := "Перелом ребер"
+    Procedures[42] := "Перелом позвоночника"
+    Procedures[43] := "Нос"
+    Procedures[44] := "Открытый перелом"
+    Procedures[45] := "Растяжение"
+    Procedures[46] := "Хирургическая коррекция пола М>Ж"
+    Procedures[47] := "Кровотечение носа"
+    Procedures[48] := "Давление"
+    Procedures[49] := "Сколиоз"
+    Procedures[50] := "Глисты"
+    Procedures[51] := "Проверка на вши"
+    Procedures[52] := "Зрения"
+    Procedures[53] := "Температура"
+    Procedures[54] := "Проверка на наркотики"
+    Procedures[55] := "Проверка на алкоголь"
+    Procedures[56] := "Дефибриллятор"
+    Procedures[57] := "Первая помощь"
+    Procedures[58] := "Сотрясение"
+    Procedures[59] := "Удушье"
+    Procedures[60] := "Обморожение"
+    Procedures[61] := "Коронавирус"
+    Procedures[62] := "Проверка шумов в легких"
+    Procedures[63] := "Проверка веса и роста"
+    Procedures[64] := "Проверка шумов в сердце"
+    Procedures[65] := "Рана"
+    Procedures[66] := "Вывих ноги"
+    Procedures[67] := "Удаление коренного зуба"
+    Procedures[68] := "Удаление молочного зуба"
+    Procedures[69] := "Удаление зуба мудрости"
+    Procedures[70] := "Гистероскопия"
+    Procedures[71] := "Ингалятор"
+    Procedures[72] := "Миостимулятор"
+    Procedures[73] := "Эндосонография"
+    Procedures[74] := "Удаление тату"
+    Procedures[75] := "Тест на ангину"
+    Procedures[76] := "Извлечение гвоздя"
+    Procedures[77] := "Костная мозоль"
+    Procedures[78] := "Укол от наркозависимости"
+    Procedures[79] := "Удаление бородавки"
+    Procedures[80] := "ЭКС"
+    Procedures[81] := "Соринка в глазу"
+    Procedures[82] := "Заноза в руке"
+    Procedures[83] := "Подвернул ногу"
+    Procedures[84] := "Донорство крови"
+    Procedures[85] := "ПМП при инфаркте"
+    Procedures[86] := "Проверка на ВИЧ"
+    Procedures[87] := "Проверка на туберкулез"
+    Procedures[88] := "Проверка на дифтерию"
+    Procedures[89] := "Проверка на бешенство"
+    Procedures[90] := "Укус змеи"
+    Procedures[91] := "Выведение геморроя"
+    Procedures[92] := "Компьютерная томография"
+    Procedures[93] := "Гинекологический осмотр"
+    Procedures[94] := "Кольпоскопия"
+    Procedures[95] := "Глюкометр"
+    Procedures[96] := "ИВЛ"
+    Procedures[97] := "Хирургическая коррекция пола Ж>М"
+    Procedures[98] := "МРА"
+    Procedures[99] := "КГТ"
+    Procedures[100] := "МРТ матки"
+    Procedures[101] := "МРТ яичников"
+    Procedures[102] := "Тест на беременность"
+    Procedures[103] := "МРТ органов малого таза"
+    Procedures[104] := "МРТ позвоночника"
+    Procedures[105] := "МРТ почек"
+    Procedures[106] := "Лазерная липосакция"
+    Procedures[107] := "Камень в почках"
+    Procedures[108] := "Удаление матки"
+    Procedures[109] := "Удаление груди"
+    Procedures[110] := "Удаление легкого"
+    Procedures[111] := "Хирургическое лечение плоскостопия"
+    Procedures[112] := "Уменьшение груди"
+
+    Random, rand, 1, Procedures.Length()
+    return Procedures[rand]
+}
+
+; === Рядом МП МЗ ===
+GetRandomHygieneTask() {
+    Tasks := []
+    Tasks[1] := "Стерилизация медицинских предметов"
+    Tasks[2] := "Проверка срока годности лекарств"
+    Tasks[3] := "Проверка условий хранения препаратов"
+    Tasks[4] := "Проверка срока годности перчаток"
+    Tasks[5] := "Дезинфекция в палатах"
+    Tasks[6] := "Кварцевание палат"
+
+    Random, rand, 1, Tasks.Length()
+    return Tasks[rand]
+}
 
 
 ProverkaAdmin()
@@ -1311,7 +1585,7 @@ CreateAdaptiveGUI() {
     WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
 
     ; Добавляем картинку (объявляем переменную как глобальную)
-    Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\notification.png
+    Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\notification.png
 
     ; Добавляем текст таймера с адаптивным шрифтом (объявляем переменную как глобальную)
     fontSize := Round(20 * dpiScale)
@@ -1383,7 +1657,8 @@ SelectObjects(objectNumber) {
 
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
-    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol
+    global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol, Terms, 
+	global TermsMZ, WorkoutMZ, MPMZ
 	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
 	global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
 	
@@ -1395,6 +1670,10 @@ SendTemplate(type, num) {
     
     ; --- Получаем переменную Var ---
     Var := Greeting()
+	Terms := GetRandomWord()
+	TermsMZ := GetRandomMedicalWord
+	WorkoutMZ := GetRandomProcedure()
+	MPMZ := GetRandomHygieneTask()
     
     ; --- Определяем путь к файлу ---
     if (type = "Redakt") {
@@ -1419,8 +1698,14 @@ SendTemplate(type, num) {
     FileRead, content, %filePath%
     
     ; --- Подстановка переменных ---
-    content := StrReplace(content, "%floor%", floor)
-    content := StrReplace(content, "%Var%", Var)
+	
+	content := StrReplace(content, "%Var%", Var)
+	content := StrReplace(content, "%Terms%", Terms)
+	content := StrReplace(content, "%floor%", floor)
+	content := StrReplace(content, "%Skrin_1%", Skrin_1)
+    content := StrReplace(content, "%Female%", Female)
+    
+   
     content := StrReplace(content, "%Name%", Name)
     content := StrReplace(content, "%Surname%", Surname)
     content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
@@ -1428,9 +1713,11 @@ SendTemplate(type, num) {
     content := StrReplace(content, "%JWI%", JWI)
     content := StrReplace(content, "%TAG%", TAG)
     content := StrReplace(content, "%Middle_Name%", Middle_Name)
-    content := StrReplace(content, "%Skrin_1%", Skrin_1)
-    content := StrReplace(content, "%Female%", Female)
     content := StrReplace(content, "%stol%", stol)
+	content := StrReplace(content, "%TermsMZ%", TermsMZ)
+	content := StrReplace(content, "%WorkoutMZ%", WorkoutMZ)
+	content := StrReplace(content, "%MPMZ%", MPMZ)
+	
 	
 	content := StrReplace(content, "%SurnameGIBDD7%", SurnameGIBDD7)
     content := StrReplace(content, "%rankGIBDD7%", rankGIBDD7)
@@ -2015,10 +2302,10 @@ Return
 
 
 Vania:
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 Gui, 6:Destroy,
-Gui, 6:Add, Picture, x0 y0 w480   h575 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\Vod_Skrin.png
-Gui, 6:Add, Picture, x720 y500 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 6:Add, Picture, x0 y0 w480   h575 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Vod_Skrin.png
+Gui, 6:Add, Picture, x720 y500 w64 h64   +BackgroundTrans gChange, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 
 Gui, 6:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 6:Add, DropDownList, x90 y40 w295 vSkrinshot gSkrinshotChanged, %Skrinshot%||Включен|Выключен
@@ -2093,7 +2380,7 @@ return
 Vybor_organizatsii:
 Gui, 2:Font, S15 C%Tsvet_1% Bold, Consolas
 Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200 gOnSelect, РЖД|МЗ|ГУВД|ГИБДД|Армия
-Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 Gui, 2:Show, w250 h120, Выбор организации
 Return
 
@@ -2121,8 +2408,12 @@ Run, taskkill /IM %ProcessName% /F, , Hide
 	Reload
 Return
 
-
-
+Svoy1:
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini
+FileDelete,  C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini
+Reload
+Return
 
 Svoy:
 MsgBox, % 4+32+256, Удаление данных, Вы действительно, хотите удалить все данные?
@@ -2156,8 +2447,274 @@ Return
 Run https://vk.com/im?media=&sel=-187717337
 Return
 
+
+Search:
+LabelMap := {}
+
+LabelMap["сахар, анализ сахара в крови, анализ сахара, сахара, Сахар, Анализ сахара в крови"] := "Medicine2"
+LabelMap["шприц, аллергический приступ, приступ, Шприц, Аллергический приступ"] := "Medicine3"
+LabelMap["вакцинация, Вакцинация"] := "Medicine4"
+LabelMap["кровь, внутреннее кровотечение, внутреннее, Кровь, Внутреннее кровотечение"] := "Medicine5"
+LabelMap["зонд, взятие мазка, мозок, Зонд, Взятие мазка"] := "Medicine6"
+LabelMap["венаб, взятие крови из вены, Венаб, Взятие крови из вены"] := "Medicine7"
+LabelMap["палец, взятие крови из пальца, Палец, Взятие крови из пальца"] := "Medicine8"
+LabelMap["вмс, внутриматочная спираль, внутриматочная, ВМС, Внутриматочная спираль"] := "Medicine9"
+LabelMap["фгдс, фиброгастродуоденоскопия, гастроскопия, ФГДС, Фиброгастродуоденоскопия"] := "Medicine10"
+LabelMap["матка, гистероскопия, Матка, Гистероскопия"] := "Medicine11"
+LabelMap["авд, дефибриллятор, АВД, Дефибриллятор"] := "Medicine13"
+LabelMap["змея, действия при укусе змеи, Змея, Действия при укусе змеи"] := "Medicine14"
+LabelMap["экг, электрокардиография, ЭКГ, Электрокардиография"] := "Medicine15"
+LabelMap["температура, Температура"] := "Medicine16"
+LabelMap["капельница, Капельница"] := "Medicine17"
+LabelMap["фкс, колоноскопия, ФКС, Колоноскопия"] := "Medicine18"
+LabelMap["клизма, Клизма"] := "Medicine19"
+LabelMap["мрт, магнитно-резонансная томография, МРТ, Магнитно-резонансная томография"] := "Medicine22"
+LabelMap["нож, ножевое ранение, Нож, Ножевое ранение"] := "Medicine23"
+LabelMap["нос, носовое кровотечение, носовое, Нос, Носовое кровотечение"] := "Medicine24"
+LabelMap["ожоги, Ожоги"] := "Medicine25"
+LabelMap["желудок, отравление желудка, Желудок, Отравление желудка"] := "Medicine26"
+LabelMap["открытый, открытый перелом, Открытый, Открытый перелом"] := "Medicine27"
+LabelMap["вши, проверка на вши, Вши, Проверка на вши"] := "Medicine28"
+LabelMap["глисты, проверка на глисты, Глисты, Проверка на глисты"] := "Medicine29"
+LabelMap["алкоголь, проверка на алкоголь, Алкоголь, Проверка на алкоголь"] := "Medicine30"
+LabelMap["наркотики, проверка на наркотики, Наркотики, Проверка на наркотики"] := "Medicine31"
+LabelMap["чувства, приведение в чувства, Чувства, Приведение в чувства"] := "Medicine33"
+LabelMap["сколиоз, Сколиоз"] := "Medicine34"
+LabelMap["роды, Роды"] := "Medicine35"
+LabelMap["позв, перелом позвоночника, Позв, Перелом позвоночника"] := "Medicine36"
+LabelMap["ребро, перелом рёбер, Ребро, Перелом рёбер"] := "Medicine37"
+LabelMap["пуля, пулевое ранение, Пуля, Пулевое ранение"] := "Medicine38"
+LabelMap["рентген, Рентген"] := "Medicine39"
+LabelMap["стер, стерилизация женщины, Стер, Стерилизация женщины"] := "Medicine40"
+LabelMap["прибор, томография, Прибор, Томография"] := "Medicine41"
+LabelMap["аппендикс, Аппендикс"] := "Medicine42"
+LabelMap["узи, ультразвуковое исследование, УЗИ, Ультразвуковое исследование"] := "Medicine43"
+LabelMap["грудь, увеличение груди, Грудь, Увеличение груди"] := "Medicine44"
+LabelMap["грыжа, удаление позвоночной грыжи, Грыжа, Удаление позвоночной грыжи"] := "Medicine45"
+LabelMap["флюшка, флюрография, Флюшка, Флюрография"] := "Medicine46"
+LabelMap["плод, фетоскопия, Плод, Фетоскопия"] := "Medicine47"
+LabelMap["цистоскоп, Цистоскоп"] := "Medicine48"
+LabelMap["ээг, электро-энцефалограмма, ЭЭГ, Электро-энцефалограмма"] := "Medicine49"
+LabelMap["вывих, действия при вывихе, Вывих, Действия при вывихе"] := "Medicine50"
+LabelMap["кард, имплантация кардиостимулятора, кардиостимулятор, Кард, Имплантация кардиостимулятора"] := "Medicine51"
+LabelMap["бешенство, Бешенство"] := "Medicine52"
+LabelMap["родинка, Родинка"] := "Medicine53"
+LabelMap["оптг, рентген всех зубов, ОПТГ, Рентген всех зубов"] := "Medicine54"
+LabelMap["мудрости, удаление зуба мудрости, Мудрости, Удаление зуба мудрости"] := "Medicine55"
+LabelMap["кариес, удаление коренного зуба, Кариес, Удаление коренного зуба"] := "Medicine56"
+LabelMap["молочный, удаление молочного зуба, Молочный, Удаление молочного зуба"] := "Medicine57"
+LabelMap["рем, реминерализирующая терапия, Рем, Реминерализирующая терапия"] := "Medicine58"
+LabelMap["стетоскоп, проверка шумов в лёгких, Стетоскоп, Проверка шумов в лёгких"] := "Medicine59"
+LabelMap["сердце, проверка шумов в сердце, Сердце, Проверка шумов в сердце"] := "Medicine60"
+LabelMap["давление, проверка давления, Давление, Проверка давления"] := "Medicine61"
+LabelMap["рост, взвешивание, измерение роста, Рост, Взвешивание, Измерение роста"] := "Medicine62"
+LabelMap["радиация, Радиация"] := "Medicine63"
+LabelMap["виз, визиографическое исследование зуба, Виз, Визиографическое исследование зуба"] := "Medicine64"
+LabelMap["отбел, отбеливание зубов, Отбел, Отбеливание зубов"] := "Medicine65"
+LabelMap["ранение, раненые операции, Ранение, Ранение операция"] := "Medicine66"
+LabelMap["рассечение_г, рассечение головы, Рассечение_г, Рассечение головы"] := "Medicine67"
+LabelMap["раст, растяжение, Раст, Растяжение"] := "Medicine68"
+LabelMap["коронавирус, тест на коронавирус, Коронавирус, Тест на коронавирус"] := "Medicine69"
+LabelMap["маммограф, маммография, Маммограф, Маммография"] := "Medicine70"
+LabelMap["томосинтез, Томосинтез"] := "Medicine71"
+LabelMap["офэкт, однофотонная эмиссионная компьютерная томография, ОФЭКТ, Однофотонная эмиссионная компьютерная томография"] := "Medicine72"
+LabelMap["хим, химиотерапия, Хим, Химиотерапия"] := "Medicine73"
+LabelMap["спутник, вакцинация от коронавируса, Спутник, Вакцинация от коронавируса"] := "Medicine74"
+LabelMap["зчмт, закрытая черепно-мозговая травма, ЗЧМТ, Закрытая черепно-мозговая травма"] := "Medicine75"
+LabelMap["пересадка, пересадка органов, Пересадка, Пересадка органов"] := "Medicine76"
+LabelMap["нос, нос перелом, Нос, Нос перелом"] := "Medicine77"
+LabelMap["пер, перевязывание раны, Пер, Перевязывание раны"] := "Medicine78"
+LabelMap["клятва, Клятва"] := "Medicine79"
+LabelMap["нога, подвернул ногу, Нога, Подвернул ногу"] := "Medicine80"
+LabelMap["мк, медицинская карта, МК, Медицинская карта"] := "Medicine81"
+LabelMap["зрения, проверка зрения, Зрения, Проверка зрения"] := "Medicine32"
+LabelMap["годность, проверка срока годности препаратов, Годность, Проверка срока годности препаратов"] := "Medicine83"
+LabelMap["хранение, проверка условий хранения препаратов, Хранение, Проверка условий хранения препаратов"] := "Medicine84"
+LabelMap["пул, пульсоксиметр, Пул, Пульсоксиметр"] := "Medicine85"
+LabelMap["белье, замена белья, Белье, Замена белья"] := "Medicine86"
+LabelMap["докум, проверка наличия необходимой документации, Докум, Проверка документации"] := "Medicine87"
+LabelMap["наркоман, вакцинация от наркозависимости, Наркоман, Вакцинация от наркозависимости"] := "Medicine88"
+LabelMap["ингалятор, Ингалятор"] := "Medicine93"
+LabelMap["миос, миостимулятор, Миос, Миостимулятор"] := "Medicine94"
+LabelMap["эндоузи, эндосонография, ЭндоУЗИ, Эндосонография"] := "Medicine95"
+LabelMap["тату, лазерное удаление тату, Тату, Лазерное удаление тату"] := "Medicine96"
+LabelMap["ангина, тест на ангину, Ангина, Тест на ангину"] := "Medicine97"
+LabelMap["гвоздь, извлечение гвоздя, Гвоздь, Извлечение гвоздя"] := "Medicine98"
+LabelMap["мозол, костная мозоль, Мозол, Костная мозоль"] := "Medicine99"
+LabelMap["бородавка, бородавка удаление, Бородавка, Удаление бородавки"] := "Medicine100"
+LabelMap["соринка, соринка удаление, Соринка, Удаление соринки"] := "Medicine101"
+LabelMap["заноза, заноза извлечение, Заноза, Извлечение занозы"] := "Medicine102"
+LabelMap["пчела, укус пчелы, Пчела, Укус пчелы"] := "Medicine103"
+LabelMap["донор, донор крови, Донор, Донор крови"] := "Medicine104"
+LabelMap["м>ж, ж>м, хирургическая коррекция пола, М>Ж, Ж>М"] := "Medicine105"
+LabelMap["кварц, кварцевание, Кварц, Кварцевание"] := "Medicine108"
+LabelMap["пхд, ПХД"] := "Medicine109"
+LabelMap["вич, тест на вич, ВИЧ, Тест на ВИЧ"] := "Medicine111"
+LabelMap["туберкулёз, тест на туберкулёз, Туберкулёз, Тест на туберкулёз"] := "Medicine112"
+LabelMap["дифтерия, тест на дифтерию, Дифтерия, Тест на дифтерию"] := "Medicine113"
+LabelMap["бешенство, тест на бешенство, Бешенство, Тест на бешенство"] := "Medicine114"
+LabelMap["гем, выведение геморроя, Гем, Выведение геморроя"] := "Medicine115"
+LabelMap["кт, компьютерная томография, КТ, Компьютерная томография"] := "Medicine116"
+LabelMap["шейка, кольпоскопия, Шейка, Кольпоскопия"] := "Medicine117"
+LabelMap["гинек, гинекологическое обследование, Гинек, Гинекологическое обследование"] := "Medicine118"
+LabelMap["глю, глюкометр, Глю, Глюкометр"] := "Medicine119"
+LabelMap["мра, мр-ангиография, МРА, МР-ангиография"] := "Medicine120"
+LabelMap["ктг, кардиотокография, ктг плода, КТГ, Кардиотокография"] := "Medicine121"
+LabelMap["берм, тест беременность, Берм, Тест беременность"] := "Medicine122"
+LabelMap["лл, лазерная липосакция, ЛЛ, Лазерная липосакция"] := "Medicine123"
+LabelMap["увт, камень в почках малых размеров, камень в почках, УВТ, Камень в почках"] := "Medicine124"
+LabelMap["матка_у, гистерэктомия, Матка_У, Гистерэктомия"] := "Medicine125"
+LabelMap["легкое_у, удаление легкого, Легкое_У, Удаление легкого"] := "Medicine126"
+LabelMap["пло_х, хирургическое лечение плоскостопия, Пло_Х, Хирургическое лечение плоскостопия"] := "Medicine127"
+LabelMap["грудь_уу, удаление груди, Грудь_УУ, Удаление груди"] := "Medicine128"
+LabelMap["грудь_у, уменьшение груди, Грудь_У, Уменьшение груди"] := "Medicine129"
+
+
+LabelMap["пост, пост асмп, Пост, Пост АСМП"] := "Laziness1"
+LabelMap["вызов, Вызов"] := "Laziness2"
+LabelMap["напарник, смена данных в докладах, Напарник, Смена данных в докладах"] := "Laziness3"
+LabelMap["вз, кс, ВЗ, КС"] := "Laziness4"
+LabelMap["цгб, гму, собеседования, ЦГБ, ГМУ, Собеседования"] := "Laziness7"
+LabelMap["мп, трен, радном, МП, Трен, Радном"] := "Laziness31"
+LabelMap["республика, патруль республки аcмп, Республика, Патруль республки АСМП"] := "Laziness14"
+LabelMap["республика_0, патруль республки, Республика_0, Патруль республки"] := "Laziness13"
+LabelMap["город, патруль города аcмп, Город, Патруль города АСМП"] := "Laziness8"
+LabelMap["город_0, патруль города, Город_0, Патруль города"] := "Laziness12"
+LabelMap["мойка, Мойка"] := "Laziness20"
+LabelMap["по, пост регистратура, регистратура, ПО, Пост Регистратура, Регистратура"] := "Laziness26"
+
+
+LabelMap["рана, остановить кровотечения, Рана, Остановить кровотечения"] := "PMP1"
+LabelMap["венозное, артериальное, кровотечения, Венозное, Артериальное, Кровотечения"] := "PMP2"
+LabelMap["мороз, пмп при обморожении, Мороз, ПМП при обморожении"] := "PMP3"
+LabelMap["ожог, пмп при ожогах, Ожог, ПМП при ожогах"] := "PMP4"
+LabelMap["пуля, пмп при пулевом ранение, Пуля, ПМП при пулевом ранение"] := "PMP5"
+LabelMap["у_пмп, пмп при удушье, У_ПМП, ПМП при удушье"] := "PMP6"
+LabelMap["челюс, пмп при вывихе челюсти, Челюс, ПМП при вывихе челюсти"] := "PMP7"
+LabelMap["нога, вывих ноги, Нога, Вывих ноги"] := "PMP8"
+LabelMap["соз_1, пмп при потере сознания, Соз_1, ПМП при потере сознания"] := "PMP9"
+LabelMap["закр, пмп при закрытом переломе, Закр, ПМП при закрытом переломе"] := "PMP10"
+LabelMap["откр, пмп при открытом переломе, Откр, ПМП при открытом переломе"] := "PMP11"
+LabelMap["нос, пмп при переломе носа, Нос, ПМП при переломе носа"] := "PMP12"
+LabelMap["сотрясение, Сотрясение"] := "PMP13"
+LabelMap["инфаркт, пмп при инфаркте, Инфаркт, ПМП при инфаркте"] := "PMP14"
+
+
+LabelMap["аллергия, Аллергия"] := "Lekarstva1"
+LabelMap["глаз, Глаз"] := "Lekarstva2"
+LabelMap["ухо, Ухо"] := "Lekarstva3"
+LabelMap["почки, Почки"] := "Lekarstva4"
+LabelMap["живот, Живот"] := "Lekarstva5"
+LabelMap["суставы, Суставы"] := "Lekarstva6"
+LabelMap["печень, Печень"] := "Lekarstva7"
+LabelMap["горло, Горло"] := "Lekarstva8"
+LabelMap["витамин, Витамин"] := "Lekarstva9"
+LabelMap["геморой, Геморой"] := "Lekarstva10"
+LabelMap["голова, Голова"] := "Lekarstva11"
+LabelMap["потенция, Потенция"] := "Lekarstva12"
+LabelMap["диарея, Диарея"] := "Lekarstva13"
+LabelMap["диабет, Диабет"] := "Lekarstva14"
+LabelMap["изжога, Изжога"] := "Lekarstva15"
+LabelMap["кашель, Кашель"] := "Lekarstva16"
+LabelMap["пузырь, Пузырь"] := "Lekarstva17"
+LabelMap["мигрень, Мигрень"] := "Lekarstva18"
+LabelMap["насморк, Насморк"] := "Lekarstva19"
+LabelMap["ожог, Ожог"] := "Lekarstva20"
+LabelMap["повышенное, Повышенное"] := "Lekarstva21"
+LabelMap["пониженное, Пониженное"] := "Lekarstva22"
+LabelMap["жар, Жар"] := "Lekarstva23"
+LabelMap["судороги, Судороги"] := "Lekarstva24"
+LabelMap["сердце, Сердце"] := "Lekarstva25"
+LabelMap["тошнота, Тошнота"] := "Lekarstva26"
+LabelMap["обезбол, Обезбол"] := "Lekarstva27"
+LabelMap["успокоительное, Успокоительное"] := "Lekarstva28"
+LabelMap["бессонница, Бессонница"] := "Lekarstva29"
+LabelMap["стресс, Стресс"] := "Lekarstva30"
+LabelMap["температура, Температура"] := "Lekarstva31"
+LabelMap["астма, Астма"] := "Lekarstva32"
+LabelMap["понос, Понос"] := "Lekarstva33"
+LabelMap["язва, Язва"] := "Lekarstva34"
+LabelMap["молочница, Молочница"] := "Lekarstva35"
+LabelMap["инфаркт, Инфаркт"] := "Lekarstva36"
+LabelMap["головокружение, Головокружение"] := "Lekarstva37"
+LabelMap["гастрит, Гастрит"] := "Lekarstva38"
+LabelMap["зубная, Зубная"] := "Lekarstva39"
+LabelMap["глисты, Глисты"] := "Lekarstva40"
+LabelMap["противовирусные, Противовирусные"] := "Lekarstva41"
+LabelMap["инсульт, Инсульт"] := "Lekarstva42"
+LabelMap["антисептики, Антисептики"] := "Lekarstva43"
+LabelMap["вздутие, Вздутие"] := "Lekarstva44"
+LabelMap["грибок, Грибок"] := "Lekarstva45"
+LabelMap["чесотка, Чесотка"] := "Lekarstva46"
+LabelMap["член, Член"] := "Lekarstva47"
+LabelMap["менструация, Менструация"] := "Lekarstva48"
+
+
+Keys := []
+for Label, Func in LabelMap {
+    Loop, Parse, Label, `,
+    {
+        word := Trim(A_LoopField)
+        StringLower, wordLower, word
+        Keys.Push({key: wordLower, func: Func})
+    }
+}
+
+; Сортировка по алфавиту
+Keys.Sort("CompareKeys")
+CompareKeys(a, b) {
+    return (a.key < b.key) ? -1 : (a.key > b.key)
+}
+
+; --- Ввод от пользователя ---
+InputBox, UserInput, Поиск, Введите слово (например ЭКГ или часть слова):
+if ErrorLevel {
+    return
+}
+
+StringLower, UserInputLower, UserInput
+
+; --- Двоичный поиск (точное совпадение) ---
+low := 1
+high := Keys.MaxIndex()
+found := false
+
+while (low <= high) {
+    mid := (low + high) // 2
+    current := Keys[mid].key
+
+    if (UserInputLower = current) {
+        Gosub, % Keys[mid].func
+        found := true
+        break
+    } else if (UserInputLower < current) {
+        high := mid - 1
+    } else {
+        low := mid + 1
+    }
+}
+
+; --- Если точного совпадения нет, ищем по частичному совпадению ---
+if (!found) {
+    for i, obj in Keys {
+        if (InStr(obj.key, UserInputLower)) {
+            Gosub, % obj.func
+            found := true
+            break
+        }
+    }
+}
+
+; --- Если вообще ничего не нашли ---
+if (!found)
+    MsgBox,64, Ничего не найдено, Ничего не найдено.
+return
+
+
+
+
 Offers:
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 
 Gui, 10:Destroy,
 
@@ -2251,23 +2808,23 @@ Gui, 10:Add, Edit, x170 y575 w150 vSvoye_15, %Svoye_15%
 Gui, 10:Add, Edit, x170 y615 w150 vSvoye_16, %Svoye_16%
 Gui, 10:Add, Edit, x170 y655 w150 vSvoye_49, %Svoye_49%
 
-Gui, 10:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects1,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects2,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects3,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects4 ,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects5,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects6,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects7,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects8,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects9,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects10,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects11,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects12,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects13,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects14,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects15,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects16,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x330 y647 w48 w48 +BackgroundTrans gSelectObjects49,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects1,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects2,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects3,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects4 ,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects5,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects6,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects7,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects8,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects9,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects10,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects11,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects12,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects13,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects14,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects15,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects16,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x330 y647 w48 w48 +BackgroundTrans gSelectObjects49,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
 
 Gui, 10:Add, Hotkey, x400 y15 w150 v171Redakt, %semnagcatRedakt%
@@ -2309,23 +2866,23 @@ Gui, 10:Add, Edit, x560 y655 w150 vSvoye_50, %Svoye_50%
 
 
 
-Gui, 10:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects17,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects18,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects19,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects20 ,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects21,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects22,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects23,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects24,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects25,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects26,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects27,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects28,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects29,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects30,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects31,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects32,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x720 y647 w48 w48 +BackgroundTrans gSelectObjects50,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects17,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects18,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects20 ,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects26,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects27,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects28,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects29,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects30,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects31,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects32,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x720 y647 w48 w48 +BackgroundTrans gSelectObjects50,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
 
 Gui, 10:Add, Hotkey, x790 y15 w150 v331Redakt, %tricatctriRedakt%
@@ -2363,31 +2920,31 @@ Gui, 10:Add, Edit, x950 y575 w150 vSvoye_47, %Svoye_47%
 Gui, 10:Add, Edit, x950 y615 w150 vSvoye_48, %Svoye_48%
 
 
-Gui, 10:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects33,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects34,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects35,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects36,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects37,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects38,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects39,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects40,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects41,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects42,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects43,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects44,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects45,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects46,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects47,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 10:Add, Picture, x1110 y607 w48 w48 +BackgroundTrans gSelectObjects48,C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects33,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects34,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects35,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects36,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects37,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects38,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects39,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects40,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects41,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects42,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects43,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects44,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects45,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects46,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects47,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 10:Add, Picture, x1110 y607 w48 w48 +BackgroundTrans gSelectObjects48,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
-Gui, 10:Add, Picture, x1110 y635 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 10:Add, Picture, x1110 y635 w64 h64  +BackgroundTrans gChangeOffers,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 
 Gui, 10:Show, w1200 h700, Редактор отыгровок сочетание клавиш
 Return
 
 
 Editor:
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 Gui, 11:Destroy,
 
 Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
@@ -2428,22 +2985,22 @@ Gui, 11:Add, Edit, x70 y575 w250 vSvoye_65, %Svoye_65%
 Gui, 11:Add, Edit, x70 y615 w250 vSvoye_66, %Svoye_66%
 
 
-Gui, 11:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects51, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects52, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects53, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects54 , C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects55, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects56, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects57, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects58, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects59, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects60, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects61, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects62, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects63, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects64, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects65, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects66, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y7 w48 w48 +BackgroundTrans gSelectObjects51,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y47 w48 w48 +BackgroundTrans gSelectObjects52,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y87 w48 w48 +BackgroundTrans gSelectObjects53,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y127 w48 w48 +BackgroundTrans gSelectObjects54 ,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y167 w48 w48 +BackgroundTrans gSelectObjects55,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y207 w48 w48 +BackgroundTrans gSelectObjects56,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y247 w48 w48 +BackgroundTrans gSelectObjects57,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y287 w48 w48 +BackgroundTrans gSelectObjects58,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y327 w48 w48 +BackgroundTrans gSelectObjects59,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y367 w48 w48 +BackgroundTrans gSelectObjects60,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y407 w48 w48 +BackgroundTrans gSelectObjects61,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y447 w48 w48 +BackgroundTrans gSelectObjects62,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y487 w48 w48 +BackgroundTrans gSelectObjects63,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y527 w48 w48 +BackgroundTrans gSelectObjects64,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y567 w48 w48 +BackgroundTrans gSelectObjects65,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x330 y607 w48 w48 +BackgroundTrans gSelectObjects66,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
 
 Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
@@ -2482,23 +3039,22 @@ Gui, 11:Add, Edit, x460 y535 w250 vSvoye_80, %Svoye_80%
 Gui, 11:Add, Edit, x460 y575 w250 vSvoye_81, %Svoye_81%
 Gui, 11:Add, Edit, x460 y615 w250 vSvoye_82, %Svoye_82%
 
-
-Gui, 11:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects67, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects68, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects69, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects70 , C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects71, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects72, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects73, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects74, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects75, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects76, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects77, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects78, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects79, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects80, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects81, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects82, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y7 w48 w48 +BackgroundTrans gSelectObjects67, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y47 w48 w48 +BackgroundTrans gSelectObjects68, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y87 w48 w48 +BackgroundTrans gSelectObjects69, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y127 w48 w48 +BackgroundTrans gSelectObjects70 , C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y167 w48 w48 +BackgroundTrans gSelectObjects71, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y207 w48 w48 +BackgroundTrans gSelectObjects72, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y247 w48 w48 +BackgroundTrans gSelectObjects73, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y287 w48 w48 +BackgroundTrans gSelectObjects74, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y327 w48 w48 +BackgroundTrans gSelectObjects75, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y367 w48 w48 +BackgroundTrans gSelectObjects76, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y407 w48 w48 +BackgroundTrans gSelectObjects77, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y447 w48 w48 +BackgroundTrans gSelectObjects78, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y487 w48 w48 +BackgroundTrans gSelectObjects79, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y527 w48 w48 +BackgroundTrans gSelectObjects80, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y567 w48 w48 +BackgroundTrans gSelectObjects81, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x720 y607 w48 w48 +BackgroundTrans gSelectObjects82, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
 
 Gui, 11:Font, S11 C%Tsvet% Bold, %Shrift%
@@ -2535,25 +3091,23 @@ Gui, 11:Add, Edit, x850 y495 w250 vSvoye_95, %Svoye_95%
 Gui, 11:Add, Edit, x850 y535 w250 vSvoye_96, %Svoye_96%
 Gui, 11:Add, Edit, x850 y575 w250 vSvoye_97, %Svoye_97%
 
+Gui, 11:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects83, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects84, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects85, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects86, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects87, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects88, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects89, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects90, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects91, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects92, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects93, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects94, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects95, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects96, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
+Gui, 11:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects97, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Skrinshoty.png
 
-
-Gui, 11:Add, Picture, x1110 y7 w48 w48 +BackgroundTrans gSelectObjects83, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y47 w48 w48 +BackgroundTrans gSelectObjects84, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y87 w48 w48 +BackgroundTrans gSelectObjects85, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y127 w48 w48 +BackgroundTrans gSelectObjects86, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y167 w48 w48 +BackgroundTrans gSelectObjects87, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y207 w48 w48 +BackgroundTrans gSelectObjects88, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y247 w48 w48 +BackgroundTrans gSelectObjects89, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y287 w48 w48 +BackgroundTrans gSelectObjects90, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y327 w48 w48 +BackgroundTrans gSelectObjects91, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y367 w48 w48 +BackgroundTrans gSelectObjects92, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y407 w48 w48 +BackgroundTrans gSelectObjects93, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y447 w48 w48 +BackgroundTrans gSelectObjects94, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y487 w48 w48 +BackgroundTrans gSelectObjects95, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y527 w48 w48 +BackgroundTrans gSelectObjects96, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-Gui, 11:Add, Picture, x1110 y567 w48 w48 +BackgroundTrans gSelectObjects97, C:\ProgramData\KPRP\KPRP-main\Skrinshoty.png
-
-Gui, 11:Add, Picture, x1115 y605 w64 h64  +BackgroundTrans gChange,   C:\ProgramData\KPRP\KPRP-main\Ok_64.png
+Gui, 11:Add, Picture, x1115 y605 w64 h64  +BackgroundTrans gChangeOffers,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 Gui, 11:Show, w1200 h670, Редактор отыгровок команды
 return
 
@@ -2947,12 +3501,10 @@ SelectObjects97:
     SelectObjects(97)
 return
 
-
-Change:
-SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
-Sleep 2500
-
+ChangeMZ:
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
 Gui, Submit, NoHide
+Sleep 400
 IniWrite, %JWI%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, JWI
 IniWrite, %TAG%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TAG
 IniWrite, %Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Name
@@ -2961,55 +3513,18 @@ IniWrite, %Middle_Name%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Middle
 IniWrite, %Bol_ro%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Bol_ro
 IniWrite, %Rank%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, Rank
 IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
 
-IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
-IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
-IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
-IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
-IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
-IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
-IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
-IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
-IniWrite, %ImgChestToken%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ImgChestToken
-IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
-IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
-IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
-
-IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
-IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
-IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
-IniWrite, %OtdelGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
-
-
-IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
-IniWrite, %surnameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
-IniWrite, %CityDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
-IniWrite, %PozyvnoyDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
-IniWrite, %TegDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
-IniWrite, %NameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
-IniWrite, %postDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, postDUVD7
+ChangeOffers:
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+Gui, Submit, NoHide
 
 Loop, 97
 {
     IniWrite, % Svoye_%A_Index%, C:\ProgramData\KPRP\KPRP-main\Redaktor.ini, Slag, Svoye_%A_Index%
 }
-
-; Конфигурационные параметры
-iniPathLectures := "C:\ProgramData\KPRP\KPRP-main\Lectures.ini"
-sectionUser := "User"
-prefixLectures := "Lectures"
-startNum := 1
-endNum := 1260
-
-; Запись значений в INI-файл
-Loop, % endNum - startNum + 1
-{
-    currentNum := startNum + A_Index - 1
-    varName := prefixLectures . currentNum
-    IniWrite, % %varName%, %iniPathLectures%, %sectionUser%, %varName%
-}
-
-
 
 iniPath := "C:\ProgramData\KPRP\KPRP-main\Redaktor.ini"
 startNum := 11
@@ -3022,6 +3537,16 @@ Loop, % ((endNum - startNum) // step + 1)
     varName := currentNum "Redakt"  ; Формируем имя переменной
     IniWrite, % %varName%, %iniPath%, Edit, %varName%
 }
+
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
+
+
+ChangeRaskladka_MZ:
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+Gui, Submit, NoHide
 
 Loop, 100
 {
@@ -3044,7 +3569,7 @@ iniPathKPRPMZ := "C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini"
 sectionUser := "User"
 prefixKPRPMZ := "KPRPMZ"
 startNum := 1
-endNum := 500
+endNum := 700
 
 ; Запись значений в INI-файл
 Loop, % endNum - startNum + 1
@@ -3071,6 +3596,106 @@ while (currentNum <= endNum)
     IniWrite, % %varName%, %iniPathRaskladka_MZ%, %sectionEdit%, %varName%
     currentNum += step
 }
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
+
+
+
+ChangeInfoDUVD:
+Gui, Submit, NoHide
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+Sleep 400
+IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
+IniWrite, %rankDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, rankDUVD7
+IniWrite, %surnameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, surnameDUVD7
+IniWrite, %CityDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, CityDUVD7
+IniWrite, %PozyvnoyDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, PozyvnoyDUVD7
+IniWrite, %TegDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, TegDUVD7
+IniWrite, %NameDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, NameDUVD7
+IniWrite, %postDUVD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, postDUVD7
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
+
+
+
+ChangeRaskladka_DUVD:
+Gui, Submit, NoHide
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+; Настройки
+iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
+sectionSlag1 := "Slag"
+prefixSvoyeDUVD_ := "SvoyeDUVD_"
+startNum := 1
+endNum := 50
+
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixSvoyeDUVD_ . currentNum
+    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionSlag1%, %varName%
+}
+
+
+; Конфигурационные параметры
+iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
+sectionUser := "User"
+prefixKPRPDUVD := "KPRPDUVD"  ; Префикс переменных
+startNum := 1          ; Начальный номер
+endNum := 50           ; Конечный номер
+
+; Основной цикл записи
+Loop, % endNum - startNum + 1
+{
+    currentNum := startNum + A_Index - 1
+    varName := prefixKPRPDUVD . currentNum
+    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionUser%, %varName%
+}
+
+iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
+sectionEdit := "Edit"
+baseNameDUVD7 := "DUVD7"
+
+
+iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
+sectionEdit := "Edit"
+baseNameDUVD7 := "DUVD7"
+
+Loop, 28  ; Рассчитываем количество итераций: (281-11)/10 + 1 = 28
+{
+    currentNum := 11 + (A_Index-1)*10
+    varName := currentNum . baseNameDUVD7
+    IniWrite, % %varName%, %iniPathRaskladka_DUVD%, %sectionEdit%, %varName%
+}
+
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
+
+
+ChangeInfoGIBDD:
+Gui, Submit, NoHide
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+Sleep 400
+IniWrite, %pol%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, pol
+IniWrite, %RankGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, RankGIBDD7
+IniWrite, %SurnameGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, SurnameGIBDD7
+IniWrite, %FamiliyaGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, FamiliyaGIBDD7
+IniWrite, %OtdelGIBDD7%, C:\ProgramData\KPRP\KPRP-main\Dannyye.ini, User, OtdelGIBDD7
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
+
+
+ChangeRaskladka_GIBDD:
+Gui, Submit, NoHide
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
 
 ; Настройки
 iniPathKPRPGIBDD := "C:\ProgramData\KPRP\KPRP-main\KPRPGIBDD.ini"
@@ -3109,51 +3734,6 @@ baseNameGIBDD7 := "GIBDD7"
 
 
 
-; Настройки
-iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
-sectionSlag1 := "Slag"
-prefixSvoyeDUVD_ := "SvoyeDUVD_"
-startNum := 1
-endNum := 50
-
-; Основной цикл записи
-Loop, % endNum - startNum + 1
-{
-    currentNum := startNum + A_Index - 1
-    varName := prefixSvoyeDUVD_ . currentNum
-    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionSlag1%, %varName%
-}
-
-
-; Конфигурационные параметры
-iniPathKPRPDUVD := "C:\ProgramData\KPRP\KPRP-main\KPRPDUVD.ini"
-sectionUser := "User"
-prefixKPRPDUVD := "KPRPDUVD"  ; Префикс переменных
-startNum := 1          ; Начальный номер
-endNum := 50           ; Конечный номер
-
-; Основной цикл записи
-Loop, % endNum - startNum + 1
-{
-    currentNum := startNum + A_Index - 1
-    varName := prefixKPRPDUVD . currentNum
-    IniWrite, % %varName%, %iniPathKPRPDUVD%, %sectionUser%, %varName%
-}
-
-iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
-sectionEdit := "Edit"
-baseNameDUVD7 := "DUVD7"
-
-
-
-
-
-
-
-
-
-
-
 Loop, 28  ; (281-11)/10 + 1 = 28 итераций
 {
     currentNum := 11 + (A_Index-1)*10
@@ -3161,18 +3741,50 @@ Loop, 28  ; (281-11)/10 + 1 = 28 итераций
     IniWrite, % %varName%, %iniPathRaskladka_GIBDD%, %sectionEdit%, %varName%
 }
 
-iniPathRaskladka_DUVD := "C:\ProgramData\KPRP\KPRP-main\Raskladka_DUVD.ini"
-sectionEdit := "Edit"
-baseNameDUVD7 := "DUVD7"
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+return
 
-Loop, 28  ; Рассчитываем количество итераций: (281-11)/10 + 1 = 28
+
+
+ChangeLectures:
+iniPathLectures := "C:\ProgramData\KPRP\KPRP-main\Lectures.ini"
+sectionUser := "User"
+prefixLectures := "Lectures"
+startNum := 1
+endNum := 1260
+
+; Запись значений в INI-файл
+Loop, % endNum - startNum + 1
 {
-    currentNum := 11 + (A_Index-1)*10
-    varName := currentNum . baseNameDUVD7
-    IniWrite, % %varName%, %iniPathRaskladka_DUVD%, %sectionEdit%, %varName%
+    currentNum := startNum + A_Index - 1
+    varName := prefixLectures . currentNum
+    IniWrite, % %varName%, %iniPathLectures%, %sectionUser%, %varName%
 }
+DetectHiddenWindows, On
+CloseBadProcesses()
+Reload
+Return
 
 
+
+Change:
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
+Gui, Submit, NoHide
+
+IniWrite, %Skrinshot%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrinshot
+IniWrite, %Zaderzhka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Zaderzhka
+IniWrite, %FonVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, FonVybor
+IniWrite, %Shrift%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Shrift
+IniWrite, %Tsvet%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet
+IniWrite, %Tsvet_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Tsvet_1
+IniWrite, %MaxMinutes%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, MaxMinutes
+IniWrite, %Taymer_Nastroyka%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Taymer_Nastroyka
+IniWrite, %ImgChestToken%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, ImgChestToken
+IniWrite, %vybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, vybor
+IniWrite, %userVybor%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, userVybor
+IniWrite, %Skrin_1%, C:\ProgramData\KPRP\KPRP-main\Nastroyki.ini, User, Skrin_1
 
 if (Pol="Мужской")
 {
@@ -3195,49 +3807,16 @@ Skrin_1=
 }
 
 DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, АFK.ahk
-
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, Konets_rd.ahk	
-
-ProcessName := "KPRP.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-ProcessName := "Journal.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-
-ProcessName := "Diskorod.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
+CloseBadProcesses()
 Reload
 Return
 
 
-
 Reload:
-SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_5_1.mp3
-
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
 DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, АFK.ahk
-
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, Konets_rd.ahk	
-
-
-ProcessName := "KPRP.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-ProcessName := "Journal.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-ProcessName := "Diskorod.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-Sleep 2500
+CloseBadProcesses()
+Sleep 400
 Reload
 return
 
@@ -3382,27 +3961,11 @@ GuiClose:
 9GuiClose:
 12GuiClose:
 13GuiClose:
-SoundPlay,  C:\ProgramData\KPRP\KPRP-main\muzyka_18.mp3
-Sleep 1700
+SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_18.mp3
+Sleep 700
 
 DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, АFK.ahk
-
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-WinClose, Konets_rd.ahk	
-
-ProcessName := "KPRP.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-
-ProcessName := "Journal.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-
-ProcessName := "Diskorod.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
+CloseBadProcesses()
 
 ExitApp
 
@@ -3568,7 +4131,7 @@ Return
 
 
 Lektsii_MZ:
-SoundPlay,   C:\ProgramData\KPRP\KPRP-main\muzyka_14.mp3
+SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3
 #Include *i C:\ProgramData\KPRP\KPRP-main\LecturesMZ.ahk
 
 
