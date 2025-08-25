@@ -1464,14 +1464,23 @@ SendRU(text) {
 }
 
 
-
-Proverka()
-{
+Proverka() {
+    ; Проверяем, скомпилирован ли скрипт и запущен ли с uiAccess
     if (!A_IsCompiled && !InStr(A_AhkPath, "_UIA")) {
-        Run % "*uiAccess " A_ScriptFullPath
-        ExitApp
+        try {
+            Run % "*uiAccess " A_ScriptFullPath
+            ExitApp
+        } catch e {
+            MsgBox, 16, Ошибка, 
+            (LTrim
+				Установите AutoHotkey по инструкции.
+                С правами UI Access.`n
+            )
+            ExitApp
+        }
     }
 }
+
 
 Ru()
 {
