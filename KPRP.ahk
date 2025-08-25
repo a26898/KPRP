@@ -909,15 +909,15 @@ Skrinshot=Выключен
 if MaxMinutes=ERROR
 MaxMinutes=4
 if Taymer_Nastroyka=ERROR
-Taymer_Nastroyka=Включен
+Taymer_Nastroyka=Выключен
 if vybor=ERROR
-vybor=SendChat
+vybor=SendRU
 if Skrin_1=ERROR
 Skrin_1=screenshot
 if ImgChestToken=ERROR
-ImgChestToken=Yellow
+ImgChestToken=Укажите АРI
 if userVybor=ERROR
-userVybor=Автоотправка
+userVybor=Ручной ввод
 
 
 if FonVybor=ERROR
