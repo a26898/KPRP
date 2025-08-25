@@ -578,7 +578,7 @@ Loop, 50 {
     IniRead, SvoyeМZ_%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, Slag, SvoyeМZ_%A_Index%
 }
 
-Loop, 500 {
+Loop, 700 {
     IniRead, KPRPMZ%A_Index%, C:\ProgramData\KPRP\KPRP-main\KPRPMZ.ini, User, KPRPMZ%A_Index%
 }
 
