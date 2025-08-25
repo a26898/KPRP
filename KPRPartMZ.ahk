@@ -584,6 +584,18 @@ Return
 FinishAlbum()
 Return
 
+:?:/Скрин+::
+CreateAlbum()
+Return
+
+:?:/Скрин::
+AddScreenshot()
+Return
+
+:?:/Скрин=::
+FinishAlbum()
+Return
+
 0025MZ7:
     SendTemplate("KPRPMZ", 25)
 Return
@@ -601,27 +613,27 @@ Return
 Return
 
 :?:/Лек_1::
-    SendTemplate("KPRPMZ", 4)
+    SendTemplate("KPRPMZ", 3)
 Return
 
 :?:/Лек_2::
-    SendTemplate("KPRPMZ", 5)
+    SendTemplate("KPRPMZ", 4)
 Return
 
 :?:/Лек_3::
-    SendTemplate("KPRPMZ", 6)
+    SendTemplate("KPRPMZ", 5)
 Return
 
 :?:/Лек_4::
-    SendTemplate("KPRPMZ", 7)
+    SendTemplate("KPRPMZ", 6)
 Return
 
 :?:/Лек_5::
-    SendTemplate("KPRPMZ", 8)
+    SendTemplate("KPRPMZ", 7)
 Return
 
 :?:/Лек_6::
-    SendTemplate("KPRPMZ", 9)
+    SendTemplate("KPRPMZ", 8)
 Return
 
 :?:/Аптека::
