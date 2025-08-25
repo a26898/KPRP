@@ -1071,6 +1071,56 @@ UploadAlbumPost(filesArray, token)
         return ""
 }
 
+; === Глобальные переменные ===
+global AlbumFiles := []
+global TempFolder := A_Temp
+
+; === Создать альбом ===
+CreateAlbum() {
+    global AlbumFiles
+    AlbumFiles := []
+    ToolTip, Альбом создан.`nТеперь добавляйте скриншоты (0 сделано)
+    SetTimer, RemoveToolTip, -2000
+}
+
+; === Добавить скриншот ===
+AddScreenshot() {
+    global AlbumFiles, TempFolder
+    if !IsObject(AlbumFiles) {
+        ToolTip, Ошибка: Сначала создайте альбом
+        SetTimer, RemoveToolTip, -2000
+        return
+    }
+    file := TempFolder . "\screen" . (AlbumFiles.MaxIndex() + 1) . ".png"
+    if TakeScreenshot(file) {
+        AlbumFiles.Push(file)
+        count := AlbumFiles.MaxIndex()
+        ToolTip, Скриншот добавлен.`nВсего: %count% До 20 максисму.
+        SetTimer, RemoveToolTip, -2000
+    } else {
+        ToolTip, Ошибка: Не удалось сделать скриншот
+        SetTimer, RemoveToolTip, -2000
+    }
+}
+
+; === Завершить альбом и загрузить ===
+FinishAlbum() {
+    global AlbumFiles, ImgChestToken
+    if !IsObject(AlbumFiles) || AlbumFiles.MaxIndex() = 0 {
+        ToolTip, Ошибка: Альбом пуст или не создан
+        SetTimer, RemoveToolTip, -2000
+        return
+    }
+    link := UploadAlbumPost(AlbumFiles, ImgChestToken)
+    if (link = "") {
+        ToolTip, Ошибка: Не удалось загрузить альбом
+    } else {
+        count := AlbumFiles.MaxIndex()
+        ToolTip, Альбом загружен.`nСкриншотов: %count%`n%link%
+    }
+    SetTimer, RemoveToolTip, -5000
+    AlbumFiles := [] ; очистка
+}
 
 
 CheckProcessMinimized() {

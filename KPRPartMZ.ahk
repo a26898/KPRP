@@ -573,46 +573,15 @@ Return
 Return
 
 0022MZ7:
-    AlbumFiles := []
-    ToolTip, Альбом создан.`nТеперь добавляйте скриншоты 
-    SetTimer, RemoveToolTip, -2000
+CreateAlbum()
 Return
 
 0023MZ7:
-    if !IsObject(AlbumFiles)
-    {
-        ToolTip, Ошибка: Сначала создайте альбом Ctrl+Shift+S
-        SetTimer, RemoveToolTip, -2000
-        return
-    }
-    file := TempFolder . "\screen" . (AlbumFiles.MaxIndex() + 1) . ".png"
-    if TakeScreenshot(file)
-    {
-        AlbumFiles.Push(file)
-        ToolTip, Скриншот добавлен в альбом
-        SetTimer, RemoveToolTip, -1500
-    }
-    else
-    {
-        ToolTip, Ошибка: Не удалось сделать скриншот
-        SetTimer, RemoveToolTip, -2000
-    }
+AddScreenshot()
 Return
 
 0024MZ7:
-    if !IsObject(AlbumFiles) || AlbumFiles.MaxIndex() = 0
-    {
-        ToolTip, Ошибка: Альбом пуст или не создан
-        SetTimer, RemoveToolTip, -2000
-        return
-    }
-    link := UploadAlbumPost(AlbumFiles, ImgChestToken)
-    if (link = "")
-        ToolTip, Ошибка: Не удалось загрузить альбом
-    else
-        ToolTip, Альбом загружен:`n%link%
-    SetTimer, RemoveToolTip, -5000
-    AlbumFiles := [] ; очистка для следующего альбома
+FinishAlbum()
 Return
 
 0025MZ7:
