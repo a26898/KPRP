@@ -10886,6 +10886,406 @@ NotebookKPRPMZ500:
     Run, notepad.exe "%KPRPMZ500%"
 return
 
+NotebookKPRPMZ601:
+    Run, notepad.exe "%KPRPMZ601%"
+return
+
+NotebookKPRPMZ602:
+    Run, notepad.exe "%KPRPMZ602%"
+return
+
+NotebookKPRPMZ603:
+    Run, notepad.exe "%KPRPMZ603%"
+return
+
+NotebookKPRPMZ604:
+    Run, notepad.exe "%KPRPMZ604%"
+return
+
+NotebookKPRPMZ605:
+    Run, notepad.exe "%KPRPMZ605%"
+return
+
+NotebookKPRPMZ606:
+    Run, notepad.exe "%KPRPMZ606%"
+return
+
+NotebookKPRPMZ607:
+    Run, notepad.exe "%KPRPMZ607%"
+return
+
+NotebookKPRPMZ608:
+    Run, notepad.exe "%KPRPMZ608%"
+return
+
+NotebookKPRPMZ609:
+    Run, notepad.exe "%KPRPMZ609%"
+return
+
+NotebookKPRPMZ610:
+    Run, notepad.exe "%KPRPMZ610%"
+return
+
+NotebookKPRPMZ611:
+    Run, notepad.exe "%KPRPMZ611%"
+return
+
+NotebookKPRPMZ612:
+    Run, notepad.exe "%KPRPMZ612%"
+return
+
+NotebookKPRPMZ613:
+    Run, notepad.exe "%KPRPMZ613%"
+return
+
+NotebookKPRPMZ614:
+    Run, notepad.exe "%KPRPMZ614%"
+return
+
+NotebookKPRPMZ615:
+    Run, notepad.exe "%KPRPMZ615%"
+return
+
+NotebookKPRPMZ616:
+    Run, notepad.exe "%KPRPMZ616%"
+return
+
+NotebookKPRPMZ617:
+    Run, notepad.exe "%KPRPMZ617%"
+return
+
+NotebookKPRPMZ618:
+    Run, notepad.exe "%KPRPMZ618%"
+return
+
+NotebookKPRPMZ619:
+    Run, notepad.exe "%KPRPMZ619%"
+return
+
+NotebookKPRPMZ620:
+    Run, notepad.exe "%KPRPMZ620%"
+return
+
+NotebookKPRPMZ621:
+    Run, notepad.exe "%KPRPMZ621%"
+return
+
+NotebookKPRPMZ622:
+    Run, notepad.exe "%KPRPMZ622%"
+return
+
+NotebookKPRPMZ623:
+    Run, notepad.exe "%KPRPMZ623%"
+return
+
+NotebookKPRPMZ624:
+    Run, notepad.exe "%KPRPMZ624%"
+return
+
+NotebookKPRPMZ625:
+    Run, notepad.exe "%KPRPMZ625%"
+return
+
+NotebookKPRPMZ626:
+    Run, notepad.exe "%KPRPMZ626%"
+return
+
+NotebookKPRPMZ627:
+    Run, notepad.exe "%KPRPMZ627%"
+return
+
+NotebookKPRPMZ628:
+    Run, notepad.exe "%KPRPMZ628%"
+return
+
+NotebookKPRPMZ629:
+    Run, notepad.exe "%KPRPMZ629%"
+return
+
+NotebookKPRPMZ630:
+    Run, notepad.exe "%KPRPMZ630%"
+return
+
+NotebookKPRPMZ631:
+    Run, notepad.exe "%KPRPMZ631%"
+return
+
+NotebookKPRPMZ632:
+    Run, notepad.exe "%KPRPMZ632%"
+return
+
+NotebookKPRPMZ633:
+    Run, notepad.exe "%KPRPMZ633%"
+return
+
+NotebookKPRPMZ634:
+    Run, notepad.exe "%KPRPMZ634%"
+return
+
+NotebookKPRPMZ635:
+    Run, notepad.exe "%KPRPMZ635%"
+return
+
+NotebookKPRPMZ636:
+    Run, notepad.exe "%KPRPMZ636%"
+return
+
+NotebookKPRPMZ637:
+    Run, notepad.exe "%KPRPMZ637%"
+return
+
+NotebookKPRPMZ638:
+    Run, notepad.exe "%KPRPMZ638%"
+return
+
+NotebookKPRPMZ639:
+    Run, notepad.exe "%KPRPMZ639%"
+return
+
+NotebookKPRPMZ640:
+    Run, notepad.exe "%KPRPMZ640%"
+return
+
+NotebookKPRPMZ641:
+    Run, notepad.exe "%KPRPMZ641%"
+return
+
+NotebookKPRPMZ642:
+    Run, notepad.exe "%KPRPMZ642%"
+return
+
+NotebookKPRPMZ643:
+    Run, notepad.exe "%KPRPMZ643%"
+return
+
+NotebookKPRPMZ644:
+    Run, notepad.exe "%KPRPMZ644%"
+return
+
+NotebookKPRPMZ645:
+    Run, notepad.exe "%KPRPMZ645%"
+return
+
+NotebookKPRPMZ646:
+    Run, notepad.exe "%KPRPMZ646%"
+return
+
+NotebookKPRPMZ647:
+    Run, notepad.exe "%KPRPMZ647%"
+return
+
+NotebookKPRPMZ648:
+    Run, notepad.exe "%KPRPMZ648%"
+return
+
+NotebookKPRPMZ649:
+    Run, notepad.exe "%KPRPMZ649%"
+return
+
+NotebookKPRPMZ650:
+    Run, notepad.exe "%KPRPMZ650%"
+return
+
+NotebookKPRPMZ651:
+    Run, notepad.exe "%KPRPMZ651%"
+return
+
+NotebookKPRPMZ652:
+    Run, notepad.exe "%KPRPMZ652%"
+return
+
+NotebookKPRPMZ653:
+    Run, notepad.exe "%KPRPMZ653%"
+return
+
+NotebookKPRPMZ654:
+    Run, notepad.exe "%KPRPMZ654%"
+return
+
+NotebookKPRPMZ655:
+    Run, notepad.exe "%KPRPMZ655%"
+return
+
+NotebookKPRPMZ656:
+    Run, notepad.exe "%KPRPMZ656%"
+return
+
+NotebookKPRPMZ657:
+    Run, notepad.exe "%KPRPMZ657%"
+return
+
+NotebookKPRPMZ658:
+    Run, notepad.exe "%KPRPMZ658%"
+return
+
+NotebookKPRPMZ659:
+    Run, notepad.exe "%KPRPMZ659%"
+return
+
+NotebookKPRPMZ660:
+    Run, notepad.exe "%KPRPMZ660%"
+return
+
+NotebookKPRPMZ661:
+    Run, notepad.exe "%KPRPMZ661%"
+return
+
+NotebookKPRPMZ662:
+    Run, notepad.exe "%KPRPMZ662%"
+return
+
+NotebookKPRPMZ663:
+    Run, notepad.exe "%KPRPMZ663%"
+return
+
+NotebookKPRPMZ664:
+    Run, notepad.exe "%KPRPMZ664%"
+return
+
+NotebookKPRPMZ665:
+    Run, notepad.exe "%KPRPMZ665%"
+return
+
+NotebookKPRPMZ666:
+    Run, notepad.exe "%KPRPMZ666%"
+return
+
+NotebookKPRPMZ667:
+    Run, notepad.exe "%KPRPMZ667%"
+return
+
+NotebookKPRPMZ668:
+    Run, notepad.exe "%KPRPMZ668%"
+return
+
+NotebookKPRPMZ669:
+    Run, notepad.exe "%KPRPMZ669%"
+return
+
+NotebookKPRPMZ670:
+    Run, notepad.exe "%KPRPMZ670%"
+return
+
+NotebookKPRPMZ671:
+    Run, notepad.exe "%KPRPMZ671%"
+return
+
+NotebookKPRPMZ672:
+    Run, notepad.exe "%KPRPMZ672%"
+return
+
+NotebookKPRPMZ673:
+    Run, notepad.exe "%KPRPMZ673%"
+return
+
+NotebookKPRPMZ674:
+    Run, notepad.exe "%KPRPMZ674%"
+return
+
+NotebookKPRPMZ675:
+    Run, notepad.exe "%KPRPMZ675%"
+return
+
+NotebookKPRPMZ676:
+    Run, notepad.exe "%KPRPMZ676%"
+return
+
+NotebookKPRPMZ677:
+    Run, notepad.exe "%KPRPMZ677%"
+return
+
+NotebookKPRPMZ678:
+    Run, notepad.exe "%KPRPMZ678%"
+return
+
+NotebookKPRPMZ679:
+    Run, notepad.exe "%KPRPMZ679%"
+return
+
+NotebookKPRPMZ680:
+    Run, notepad.exe "%KPRPMZ680%"
+return
+
+NotebookKPRPMZ681:
+    Run, notepad.exe "%KPRPMZ681%"
+return
+
+NotebookKPRPMZ682:
+    Run, notepad.exe "%KPRPMZ682%"
+return
+
+NotebookKPRPMZ683:
+    Run, notepad.exe "%KPRPMZ683%"
+return
+
+NotebookKPRPMZ684:
+    Run, notepad.exe "%KPRPMZ684%"
+return
+
+NotebookKPRPMZ685:
+    Run, notepad.exe "%KPRPMZ685%"
+return
+
+NotebookKPRPMZ686:
+    Run, notepad.exe "%KPRPMZ686%"
+return
+
+NotebookKPRPMZ687:
+    Run, notepad.exe "%KPRPMZ687%"
+return
+
+NotebookKPRPMZ688:
+    Run, notepad.exe "%KPRPMZ688%"
+return
+
+NotebookKPRPMZ689:
+    Run, notepad.exe "%KPRPMZ689%"
+return
+
+NotebookKPRPMZ690:
+    Run, notepad.exe "%KPRPMZ690%"
+return
+
+NotebookKPRPMZ691:
+    Run, notepad.exe "%KPRPMZ691%"
+return
+
+NotebookKPRPMZ692:
+    Run, notepad.exe "%KPRPMZ692%"
+return
+
+NotebookKPRPMZ693:
+    Run, notepad.exe "%KPRPMZ693%"
+return
+
+NotebookKPRPMZ694:
+    Run, notepad.exe "%KPRPMZ694%"
+return
+
+NotebookKPRPMZ695:
+    Run, notepad.exe "%KPRPMZ695%"
+return
+
+NotebookKPRPMZ696:
+    Run, notepad.exe "%KPRPMZ696%"
+return
+
+NotebookKPRPMZ697:
+    Run, notepad.exe "%KPRPMZ697%"
+return
+
+NotebookKPRPMZ698:
+    Run, notepad.exe "%KPRPMZ698%"
+return
+
+NotebookKPRPMZ699:
+    Run, notepad.exe "%KPRPMZ699%"
+return
+
+NotebookKPRPMZ700:
+    Run, notepad.exe "%KPRPMZ700%"
+return
+
 
 SelectKPRPMZ1:
     SelectKPRPMZ(1)
@@ -12791,6 +13191,807 @@ return
 SelectKPRPMZ500:
     SelectKPRPMZ(500)
 return
+
+SelectKPRPMZ501:
+    SelectKPRPMZ(501)
+return
+
+SelectKPRPMZ502:
+    SelectKPRPMZ(502)
+return
+
+SelectKPRPMZ503:
+    SelectKPRPMZ(503)
+return
+
+SelectKPRPMZ504:
+    SelectKPRPMZ(504)
+return
+
+SelectKPRPMZ505:
+    SelectKPRPMZ(505)
+return
+
+SelectKPRPMZ506:
+    SelectKPRPMZ(506)
+return
+
+SelectKPRPMZ507:
+    SelectKPRPMZ(507)
+return
+
+SelectKPRPMZ508:
+    SelectKPRPMZ(508)
+return
+
+SelectKPRPMZ509:
+    SelectKPRPMZ(509)
+return
+
+SelectKPRPMZ510:
+    SelectKPRPMZ(510)
+return
+
+SelectKPRPMZ511:
+    SelectKPRPMZ(511)
+return
+
+SelectKPRPMZ512:
+    SelectKPRPMZ(512)
+return
+
+SelectKPRPMZ513:
+    SelectKPRPMZ(513)
+return
+
+SelectKPRPMZ514:
+    SelectKPRPMZ(514)
+return
+
+SelectKPRPMZ515:
+    SelectKPRPMZ(515)
+return
+
+SelectKPRPMZ516:
+    SelectKPRPMZ(516)
+return
+
+SelectKPRPMZ517:
+    SelectKPRPMZ(517)
+return
+
+SelectKPRPMZ518:
+    SelectKPRPMZ(518)
+return
+
+SelectKPRPMZ519:
+    SelectKPRPMZ(519)
+return
+
+SelectKPRPMZ520:
+    SelectKPRPMZ(520)
+return
+
+SelectKPRPMZ521:
+    SelectKPRPMZ(521)
+return
+
+SelectKPRPMZ522:
+    SelectKPRPMZ(522)
+return
+
+SelectKPRPMZ523:
+    SelectKPRPMZ(523)
+return
+
+SelectKPRPMZ524:
+    SelectKPRPMZ(524)
+return
+
+SelectKPRPMZ525:
+    SelectKPRPMZ(525)
+return
+
+SelectKPRPMZ526:
+    SelectKPRPMZ(526)
+return
+
+SelectKPRPMZ527:
+    SelectKPRPMZ(527)
+return
+
+SelectKPRPMZ528:
+    SelectKPRPMZ(528)
+return
+
+SelectKPRPMZ529:
+    SelectKPRPMZ(529)
+return
+
+SelectKPRPMZ530:
+    SelectKPRPMZ(530)
+return
+
+SelectKPRPMZ531:
+    SelectKPRPMZ(531)
+return
+
+SelectKPRPMZ532:
+    SelectKPRPMZ(532)
+return
+
+SelectKPRPMZ533:
+    SelectKPRPMZ(533)
+return
+
+SelectKPRPMZ534:
+    SelectKPRPMZ(534)
+return
+
+SelectKPRPMZ535:
+    SelectKPRPMZ(535)
+return
+
+SelectKPRPMZ536:
+    SelectKPRPMZ(536)
+return
+
+SelectKPRPMZ537:
+    SelectKPRPMZ(537)
+return
+
+SelectKPRPMZ538:
+    SelectKPRPMZ(538)
+return
+
+SelectKPRPMZ539:
+    SelectKPRPMZ(539)
+return
+
+SelectKPRPMZ540:
+    SelectKPRPMZ(540)
+return
+
+SelectKPRPMZ541:
+    SelectKPRPMZ(541)
+return
+
+SelectKPRPMZ542:
+    SelectKPRPMZ(542)
+return
+
+SelectKPRPMZ543:
+    SelectKPRPMZ(543)
+return
+
+SelectKPRPMZ544:
+    SelectKPRPMZ(544)
+return
+
+SelectKPRPMZ545:
+    SelectKPRPMZ(545)
+return
+
+SelectKPRPMZ546:
+    SelectKPRPMZ(546)
+return
+
+SelectKPRPMZ547:
+    SelectKPRPMZ(547)
+return
+
+SelectKPRPMZ548:
+    SelectKPRPMZ(548)
+return
+
+SelectKPRPMZ549:
+    SelectKPRPMZ(549)
+return
+
+SelectKPRPMZ550:
+    SelectKPRPMZ(550)
+return
+
+SelectKPRPMZ551:
+    SelectKPRPMZ(551)
+return
+
+SelectKPRPMZ552:
+    SelectKPRPMZ(552)
+return
+
+SelectKPRPMZ553:
+    SelectKPRPMZ(553)
+return
+
+SelectKPRPMZ554:
+    SelectKPRPMZ(554)
+return
+
+SelectKPRPMZ555:
+    SelectKPRPMZ(555)
+return
+
+SelectKPRPMZ556:
+    SelectKPRPMZ(556)
+return
+
+SelectKPRPMZ557:
+    SelectKPRPMZ(557)
+return
+
+SelectKPRPMZ558:
+    SelectKPRPMZ(558)
+return
+
+SelectKPRPMZ559:
+    SelectKPRPMZ(559)
+return
+
+SelectKPRPMZ560:
+    SelectKPRPMZ(560)
+return
+
+SelectKPRPMZ561:
+    SelectKPRPMZ(561)
+return
+
+SelectKPRPMZ562:
+    SelectKPRPMZ(562)
+return
+
+SelectKPRPMZ563:
+    SelectKPRPMZ(563)
+return
+
+SelectKPRPMZ564:
+    SelectKPRPMZ(564)
+return
+
+SelectKPRPMZ565:
+    SelectKPRPMZ(565)
+return
+
+SelectKPRPMZ566:
+    SelectKPRPMZ(566)
+return
+
+SelectKPRPMZ567:
+    SelectKPRPMZ(567)
+return
+
+SelectKPRPMZ568:
+    SelectKPRPMZ(568)
+return
+
+SelectKPRPMZ569:
+    SelectKPRPMZ(569)
+return
+
+SelectKPRPMZ570:
+    SelectKPRPMZ(570)
+return
+
+SelectKPRPMZ571:
+    SelectKPRPMZ(571)
+return
+
+SelectKPRPMZ572:
+    SelectKPRPMZ(572)
+return
+
+SelectKPRPMZ573:
+    SelectKPRPMZ(573)
+return
+
+SelectKPRPMZ574:
+    SelectKPRPMZ(574)
+return
+
+SelectKPRPMZ575:
+    SelectKPRPMZ(575)
+return
+
+SelectKPRPMZ576:
+    SelectKPRPMZ(576)
+return
+
+SelectKPRPMZ577:
+    SelectKPRPMZ(577)
+return
+
+SelectKPRPMZ578:
+    SelectKPRPMZ(578)
+return
+
+SelectKPRPMZ579:
+    SelectKPRPMZ(579)
+return
+
+SelectKPRPMZ580:
+    SelectKPRPMZ(580)
+return
+
+SelectKPRPMZ581:
+    SelectKPRPMZ(581)
+return
+
+SelectKPRPMZ582:
+    SelectKPRPMZ(582)
+return
+
+SelectKPRPMZ583:
+    SelectKPRPMZ(583)
+return
+
+SelectKPRPMZ584:
+    SelectKPRPMZ(584)
+return
+
+SelectKPRPMZ585:
+    SelectKPRPMZ(585)
+return
+
+SelectKPRPMZ586:
+    SelectKPRPMZ(586)
+return
+
+SelectKPRPMZ587:
+    SelectKPRPMZ(587)
+return
+
+SelectKPRPMZ588:
+    SelectKPRPMZ(588)
+return
+
+SelectKPRPMZ589:
+    SelectKPRPMZ(589)
+return
+
+SelectKPRPMZ590:
+    SelectKPRPMZ(590)
+return
+
+SelectKPRPMZ591:
+    SelectKPRPMZ(591)
+return
+
+SelectKPRPMZ592:
+    SelectKPRPMZ(592)
+return
+
+SelectKPRPMZ593:
+    SelectKPRPMZ(593)
+return
+
+SelectKPRPMZ594:
+    SelectKPRPMZ(594)
+return
+
+SelectKPRPMZ595:
+    SelectKPRPMZ(595)
+return
+
+SelectKPRPMZ596:
+    SelectKPRPMZ(596)
+return
+
+SelectKPRPMZ597:
+    SelectKPRPMZ(597)
+return
+
+SelectKPRPMZ598:
+    SelectKPRPMZ(598)
+return
+
+SelectKPRPMZ599:
+    SelectKPRPMZ(599)
+return
+
+SelectKPRPMZ600:
+    SelectKPRPMZ(600)
+return
+
+SelectKPRPMZ601:
+    SelectKPRPMZ(601)
+return
+
+SelectKPRPMZ602:
+    SelectKPRPMZ(602)
+return
+
+SelectKPRPMZ603:
+    SelectKPRPMZ(603)
+return
+
+SelectKPRPMZ604:
+    SelectKPRPMZ(604)
+return
+
+SelectKPRPMZ605:
+    SelectKPRPMZ(605)
+return
+
+SelectKPRPMZ606:
+    SelectKPRPMZ(606)
+return
+
+SelectKPRPMZ607:
+    SelectKPRPMZ(607)
+return
+
+SelectKPRPMZ608:
+    SelectKPRPMZ(608)
+return
+
+SelectKPRPMZ609:
+    SelectKPRPMZ(609)
+return
+
+SelectKPRPMZ610:
+    SelectKPRPMZ(610)
+return
+
+SelectKPRPMZ611:
+    SelectKPRPMZ(611)
+return
+
+SelectKPRPMZ612:
+    SelectKPRPMZ(612)
+return
+
+SelectKPRPMZ613:
+    SelectKPRPMZ(613)
+return
+
+SelectKPRPMZ614:
+    SelectKPRPMZ(614)
+return
+
+SelectKPRPMZ615:
+    SelectKPRPMZ(615)
+return
+
+SelectKPRPMZ616:
+    SelectKPRPMZ(616)
+return
+
+SelectKPRPMZ617:
+    SelectKPRPMZ(617)
+return
+
+SelectKPRPMZ618:
+    SelectKPRPMZ(618)
+return
+
+SelectKPRPMZ619:
+    SelectKPRPMZ(619)
+return
+
+SelectKPRPMZ620:
+    SelectKPRPMZ(620)
+return
+
+SelectKPRPMZ621:
+    SelectKPRPMZ(621)
+return
+
+SelectKPRPMZ622:
+    SelectKPRPMZ(622)
+return
+
+SelectKPRPMZ623:
+    SelectKPRPMZ(623)
+return
+
+SelectKPRPMZ624:
+    SelectKPRPMZ(624)
+return
+
+SelectKPRPMZ625:
+    SelectKPRPMZ(625)
+return
+
+SelectKPRPMZ626:
+    SelectKPRPMZ(626)
+return
+
+SelectKPRPMZ627:
+    SelectKPRPMZ(627)
+return
+
+SelectKPRPMZ628:
+    SelectKPRPMZ(628)
+return
+
+SelectKPRPMZ629:
+    SelectKPRPMZ(629)
+return
+
+SelectKPRPMZ630:
+    SelectKPRPMZ(630)
+return
+
+SelectKPRPMZ631:
+    SelectKPRPMZ(631)
+return
+
+SelectKPRPMZ632:
+    SelectKPRPMZ(632)
+return
+
+SelectKPRPMZ633:
+    SelectKPRPMZ(633)
+return
+
+SelectKPRPMZ634:
+    SelectKPRPMZ(634)
+return
+
+SelectKPRPMZ635:
+    SelectKPRPMZ(635)
+return
+
+SelectKPRPMZ636:
+    SelectKPRPMZ(636)
+return
+
+SelectKPRPMZ637:
+    SelectKPRPMZ(637)
+return
+
+SelectKPRPMZ638:
+    SelectKPRPMZ(638)
+return
+
+SelectKPRPMZ639:
+    SelectKPRPMZ(639)
+return
+
+SelectKPRPMZ640:
+    SelectKPRPMZ(640)
+return
+
+SelectKPRPMZ641:
+    SelectKPRPMZ(641)
+return
+
+SelectKPRPMZ642:
+    SelectKPRPMZ(642)
+return
+
+SelectKPRPMZ643:
+    SelectKPRPMZ(643)
+return
+
+SelectKPRPMZ644:
+    SelectKPRPMZ(644)
+return
+
+SelectKPRPMZ645:
+    SelectKPRPMZ(645)
+return
+
+SelectKPRPMZ646:
+    SelectKPRPMZ(646)
+return
+
+SelectKPRPMZ647:
+    SelectKPRPMZ(647)
+return
+
+SelectKPRPMZ648:
+    SelectKPRPMZ(648)
+return
+
+SelectKPRPMZ649:
+    SelectKPRPMZ(649)
+return
+
+SelectKPRPMZ650:
+    SelectKPRPMZ(650)
+return
+
+SelectKPRPMZ651:
+    SelectKPRPMZ(651)
+return
+
+SelectKPRPMZ652:
+    SelectKPRPMZ(652)
+return
+
+SelectKPRPMZ653:
+    SelectKPRPMZ(653)
+return
+
+SelectKPRPMZ654:
+    SelectKPRPMZ(654)
+return
+
+SelectKPRPMZ655:
+    SelectKPRPMZ(655)
+return
+
+SelectKPRPMZ656:
+    SelectKPRPMZ(656)
+return
+
+SelectKPRPMZ657:
+    SelectKPRPMZ(657)
+return
+
+SelectKPRPMZ658:
+    SelectKPRPMZ(658)
+return
+
+SelectKPRPMZ659:
+    SelectKPRPMZ(659)
+return
+
+SelectKPRPMZ660:
+    SelectKPRPMZ(660)
+return
+
+SelectKPRPMZ661:
+    SelectKPRPMZ(661)
+return
+
+SelectKPRPMZ662:
+    SelectKPRPMZ(662)
+return
+
+SelectKPRPMZ663:
+    SelectKPRPMZ(663)
+return
+
+SelectKPRPMZ664:
+    SelectKPRPMZ(664)
+return
+
+SelectKPRPMZ665:
+    SelectKPRPMZ(665)
+return
+
+SelectKPRPMZ666:
+    SelectKPRPMZ(666)
+return
+
+SelectKPRPMZ667:
+    SelectKPRPMZ(667)
+return
+
+SelectKPRPMZ668:
+    SelectKPRPMZ(668)
+return
+
+SelectKPRPMZ669:
+    SelectKPRPMZ(669)
+return
+
+SelectKPRPMZ670:
+    SelectKPRPMZ(670)
+return
+
+SelectKPRPMZ671:
+    SelectKPRPMZ(671)
+return
+
+SelectKPRPMZ672:
+    SelectKPRPMZ(672)
+return
+
+SelectKPRPMZ673:
+    SelectKPRPMZ(673)
+return
+
+SelectKPRPMZ674:
+    SelectKPRPMZ(674)
+return
+
+SelectKPRPMZ675:
+    SelectKPRPMZ(675)
+return
+
+SelectKPRPMZ676:
+    SelectKPRPMZ(676)
+return
+
+SelectKPRPMZ677:
+    SelectKPRPMZ(677)
+return
+
+SelectKPRPMZ678:
+    SelectKPRPMZ(678)
+return
+
+SelectKPRPMZ679:
+    SelectKPRPMZ(679)
+return
+
+SelectKPRPMZ680:
+    SelectKPRPMZ(680)
+return
+
+SelectKPRPMZ681:
+    SelectKPRPMZ(681)
+return
+
+SelectKPRPMZ682:
+    SelectKPRPMZ(682)
+return
+
+SelectKPRPMZ683:
+    SelectKPRPMZ(683)
+return
+
+SelectKPRPMZ684:
+    SelectKPRPMZ(684)
+return
+
+SelectKPRPMZ685:
+    SelectKPRPMZ(685)
+return
+
+SelectKPRPMZ686:
+    SelectKPRPMZ(686)
+return
+
+SelectKPRPMZ687:
+    SelectKPRPMZ(687)
+return
+
+SelectKPRPMZ688:
+    SelectKPRPMZ(688)
+return
+
+SelectKPRPMZ689:
+    SelectKPRPMZ(689)
+return
+
+SelectKPRPMZ690:
+    SelectKPRPMZ(690)
+return
+
+SelectKPRPMZ691:
+    SelectKPRPMZ(691)
+return
+
+SelectKPRPMZ692:
+    SelectKPRPMZ(692)
+return
+
+SelectKPRPMZ693:
+    SelectKPRPMZ(693)
+return
+
+SelectKPRPMZ694:
+    SelectKPRPMZ(694)
+return
+
+SelectKPRPMZ695:
+    SelectKPRPMZ(695)
+return
+
+SelectKPRPMZ696:
+    SelectKPRPMZ(696)
+return
+
+SelectKPRPMZ697:
+    SelectKPRPMZ(697)
+return
+
+SelectKPRPMZ698:
+    SelectKPRPMZ(698)
+return
+
+SelectKPRPMZ699:
+    SelectKPRPMZ(699)
+return
+
+SelectKPRPMZ700:
+    SelectKPRPMZ(700)
+return
+
 
 
 ; ---- Универсальная функция ----
