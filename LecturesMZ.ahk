@@ -5,7 +5,7 @@ Gui, 16:Add, Tab2, x0 y0 w1250 h25 cFF2400  +BackgroundTrans,  1|2|3|4|5|6|7|8|9
 
 Gui, 16:Tab, 1
 Gui, 16:Font, S10 CFF2400
-Gui, 16:Add, Text, x10 y60  w300 h20 cFF2400  +BackgroundTrans,    
+Gui, 16:Add, Text, x10 y60  w300 h20 cFF2400  +BackgroundTrans,    /Лекция
 Gui, 16:Add, Text, x10 y90  w300 h20 cFF2400   +BackgroundTrans,   /Лекция_1
 Gui, 16:Add, Text, x10 y120 w300 h20 cFF2400   +BackgroundTrans,  /Лекция_2
 Gui, 16:Add, Text, x10 y150 w300 h20 cFF2400   +BackgroundTrans,  /Лекция_3
@@ -26,7 +26,7 @@ Gui, 16:Add, Text, x10 y570 w300 h20 cFF2400   +BackgroundTrans,  /Лекция_
 Gui, 16:Add, Text, x10 y600 w300 h20 cFF2400   +BackgroundTrans,  /Лекция_18
 Gui, 16:Add, Text, x10 y630 w300 h20 cFF2400   +BackgroundTrans,  /Лекция_19
 
-Gui, 16:Add, Text, x100 y60 w300 h20 c000000 +BackgroundTrans,  
+Gui, 16:Add, Text, x100 y60 w300 h20 c000000 +BackgroundTrans,  [Рандом лекция]
 Gui, 16:Add, Text, x100  y90 w300 h20 c000000 +BackgroundTrans, [Вступительная лекция (ГМУ)]
 Gui, 16:Add, Text, x100  y120 w300 h20 c000000 +BackgroundTrans, [Оказание помощи в стационаре (ГМУ)]
 Gui, 16:Add, Text, x100  y150 w300 h20 c000000 +BackgroundTrans,  [Оказание ПМП (ГМУ)]
@@ -4558,8 +4558,9 @@ Gui, 16:Add, Text, x400 y600 w300 h20 c000000 +BackgroundTrans, |
 Gui, 16:Add, Text, x400 y615 w300 h20 c000000 +BackgroundTrans, |
 Return
 
-:?:/Лекция_0::
-    SendTemplate("Lectures", 1)
+:?:/Лекция::
+    Random, num, 7, 1260   
+    SendTemplate("Lectures", num)
 Return
 
 :?:/Лекция_1::

@@ -1469,8 +1469,6 @@ GetPatrolName() {
 }
 
 
-
-
 ; === Функция для ввода названия поста ===
 GetPostName() {
     global Post, FilePath, DataGroup
@@ -1755,7 +1753,7 @@ SelectObjects(objectNumber) {
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol, Terms, 
-	global TermsMZ, WorkoutMZ, MPMZ, Post, Patrol, to
+	global TermsMZ, WorkoutMZ, WorkoutMZ1, MPMZ, MPMZ1, Post, Patrol, to
 	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
 	global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
 	global SozdatAlbom, DobavitSkrin, ZagruzitAlbom
@@ -1770,9 +1768,11 @@ SendTemplate(type, num) {
     Var := Greeting()
 	Terms := GetRandomWord()
 	TermsMZ := GetRandomMedicalWord
+	WorkoutMZ1:= WorkoutMZ
 	WorkoutMZ := GetRandomProcedure()
+	MPMZ1 := MPMZ  
 	MPMZ := GetRandomHygieneTask()
-	
+
     ; --- Определяем путь к файлу ---
     if (type = "Redakt") {
         filePath := Objects%num%
@@ -1829,7 +1829,9 @@ SendTemplate(type, num) {
     content := StrReplace(content, "%stol%", stol)
 	content := StrReplace(content, "%TermsMZ%", TermsMZ)
 	content := StrReplace(content, "%WorkoutMZ%", WorkoutMZ)
+	content := StrReplace(content, "%WorkoutMZ1%", WorkoutMZ1)
 	content := StrReplace(content, "%MPMZ%", MPMZ)
+	content := StrReplace(content, "%MPMZ1%", MPMZ1)
 	
 	
 	content := StrReplace(content, "%SurnameGIBDD7%", SurnameGIBDD7)

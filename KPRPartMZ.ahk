@@ -2240,22 +2240,18 @@ Return
 Return
 
 :?:/Трен::
-IniWrite %WorkoutMZ%, %FilePath%, %DataGroup%, NumberCall
     SendTemplate("KPRPMZ", 425)
 Return
 
 :?:/Трен_0::
-IniWrite %WorkoutMZ%, %FilePath%, %DataGroup%, NumberCall
     SendTemplate("KPRPMZ", 426)
 Return
 
 :?:/МП::
     SendTemplate("KPRPMZ", 427)
-IniWrite %MPMZ%, %FilePath%, %DataGroup%, NumberCall	
 Return
 
 :?:/МП_0::
-IniWrite %MPMZ%, %FilePath%, %DataGroup%, NumberCall
     SendTemplate("KPRPMZ", 428)
 Return
 
