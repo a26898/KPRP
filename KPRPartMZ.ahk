@@ -2924,7 +2924,6 @@ Return
 
     SendTemplate("KPRPMZ", 593)
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-
     Loop, %Skolko% {
         Sleep, 590000
         SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
@@ -2946,7 +2945,7 @@ Return
     SendTemplate("KPRPMZ", 595)
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
     Gui, Destroy
-    Sleep, 10000
+    Sleep, 15000
     Reload
 Return
 
@@ -3006,7 +3005,7 @@ Return
     }
 
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-    Sleep, 10000
+    Sleep, 15000
     Gui, Destroy
     Reload
 Return
@@ -3065,7 +3064,7 @@ Return
 
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
     Gui, Destroy
-    Sleep, 10000
+    Sleep, 15000
     Reload
 Return
 
@@ -3124,7 +3123,7 @@ Return
 
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
     Gui, Destroy
-    Sleep, 10000
+    Sleep, 15000
     Reload
 Return
 
@@ -3183,7 +3182,7 @@ Return
 
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
     Gui, Destroy
-    Sleep, 10000
+    Sleep, 15000
     Reload
 Return
 
@@ -3242,7 +3241,7 @@ Return
 
     SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
     Gui, Destroy
-    Sleep, 10000
+    Sleep, 15000
     Reload
 Return
 
@@ -3381,6 +3380,8 @@ Return
 
 
 UpdateTime:
+    global count   ; используем глобальную переменную
+    
     ; Время дежурства — с момента запуска (не сбрасывается)
     elapsedDuty := A_TickCount - startTime
     elapsedDutySec := Floor(elapsedDuty / 1000)
@@ -3402,7 +3403,8 @@ UpdateTime:
     secondsRem := Mod(remainingSec, 60)
     formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
 
-    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%
+    ; обновляем GUI с добавлением счётчика скриншотов
+    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%`nСкриншотов:%count%
 return
 
 
