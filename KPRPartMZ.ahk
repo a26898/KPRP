@@ -2916,61 +2916,459 @@ Return
 Return
 
 
+:?:/ПО::
+    GetMinutes()
+    WinWaitActive, ahk_exe gta_sa.exe
+    CreateAdaptiveGUI()
+
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    SendTemplate("KPRPMZ", 593)
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
+        
+        if (A_Index = Skolko) {
+            break
+        }
+        
+        SendTemplate("KPRPMZ", 594)
+    }
+
+    SendTemplate("KPRPMZ", 595)
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+    Gui, Destroy
+Return
+
+
+:?:/ПО_1::
+    SendTemplate("KPRPMZ", 595)
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Gui, Destroy
+    Sleep, 10000
+    Reload
+Return
+
+
+:?:/Пост::
+    GetMinutes()
+    GetPatrolName()
+    GetPostName()
+    WinWaitActive, ahk_exe gta_sa.exe
+    CreateAdaptiveGUI()
+    
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 596)
+    } Else {
+        SendTemplate("KPRPMZ", 597)
+    }
+    
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
+        
+        if (A_Index = Skolko) {
+            break
+        }
+
+        If (Patrol != "") {
+            SendTemplate("KPRPMZ", 598)
+        } Else {
+            SendTemplate("KPRPMZ", 599)
+        }
+    }
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 600)
+    } Else {
+        SendTemplate("KPRPMZ", 601)
+    }
+
+    Gui, Destroy
+    Sleep, 1000
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+Return
+
+:?:/Пост_1::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 600)
+    } Else {
+        SendTemplate("KPRPMZ", 601)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Sleep, 10000
+    Gui, Destroy
+    Reload
+Return
+
+:?:/Город::
+    GetMinutes()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+
+    CreateAdaptiveGUI()
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 602)
+    } Else {
+        SendTemplate("KPRPMZ", 603)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
+
+        if (A_Index = Skolko) {
+            break
+        }
+
+        If (Patrol != "") {
+            SendTemplate("KPRPMZ", 604)
+        } Else {
+            SendTemplate("KPRPMZ", 605)
+        }
+    }
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 606)
+    } Else {
+        SendTemplate("KPRPMZ", 607)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+    Gui, Destroy
+Return
+
+
+:?:/Город_1::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 606)
+    } Else {
+        SendTemplate("KPRPMZ", 607)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Gui, Destroy
+    Sleep, 10000
+    Reload
+Return
+
+:?:/Республика::
+    GetMinutes()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+    CreateAdaptiveGUI()
+
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 608)
+    } Else {
+        SendTemplate("KPRPMZ", 609)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
+
+        if (A_Index = Skolko) {
+            break
+        }
+
+        If (Patrol_1 != "") {
+            SendTemplate("KPRPMZ", 610)
+        } Else {
+            SendTemplate("KPRPMZ", 611)
+        }
+    }
+
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 612)
+    } Else {
+        SendTemplate("KPRPMZ", 613)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+    Gui, Destroy
+    Sleep, 1000
+Return
+
+
+:?:/Республика_1::
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 612)
+    } Else {
+        SendTemplate("KPRPMZ", 613)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Gui, Destroy
+    Sleep, 10000
+    Reload
+Return
+
+:?:/Город_0::
+    GetMinutes()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+    CreateAdaptiveGUI()
+
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 614)
+    } Else {
+        SendTemplate("KPRPMZ", 615)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Doklad_Mariya_2.mp3
+
+        if (A_Index = Skolko) {
+            break
+        }
+
+        If (Patrol != "") {
+            SendTemplate("KPRPMZ", 616)
+        } Else {
+            SendTemplate("KPRPMZ", 617)
+        }
+    }
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 618)
+    } Else {
+        SendTemplate("KPRPMZ", 619)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+    Gui, Destroy
+    Sleep, 1000
+Return
+
+
+:?:/Город_2::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 618)
+    } Else {
+        SendTemplate("KPRPMZ", 619)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Gui, Destroy
+    Sleep, 10000
+    Reload
+Return
+
+:?:/Республика_0::
+    GetMinutes()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+    CreateAdaptiveGUI()
+
+    startTime := A_TickCount
+    docladInterval := 590000
+    docladStart := A_TickCount
+    SetTimer, UpdateTime, 1000
+
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 620)
+    } Else {
+        SendTemplate("KPRPMZ", 621)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
+
+    Loop, %Skolko% {
+        Sleep, 590000
+        SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
+
+        if (A_Index = Skolko) {
+            break
+        }
+
+        If (Patrol_1 != "") {
+            SendTemplate("KPRPMZ", 622)
+        } Else {
+            SendTemplate("KPRPMZ", 623)
+        }
+    }
+
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 624)
+    } Else {
+        SendTemplate("KPRPMZ", 625)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
+    Gui, Destroy
+    Sleep, 1000
+Return
+
+
+:?:/Республика_2::
+    If (Patrol_1 != "") {
+        SendTemplate("KPRPMZ", 624)
+    } Else {
+        SendTemplate("KPRPMZ", 625)
+    }
+
+    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
+    Gui, Destroy
+    Sleep, 10000
+    Reload
+Return
+
+:?:/Вызов_1::
+    GetCallNumber()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 626)
+    } Else {
+        SendTemplate("KPRPMZ", 627)
+    }
+Return
+
+:?:/Вызов_2::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 628)
+    } Else {
+        SendTemplate("KPRPMZ", 629)
+    }
+Return
+
+:?:/Вызов_3::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 630)
+    } Else {
+        SendTemplate("KPRPMZ", 631)
+    }
+Return
+
+:?:/Вызов_4::
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 632)
+    } Else {
+        SendTemplate("KPRPMZ", 633)
+    }
+Return
+
 
 Pause::Pause ; Assign the toggle-pause function to the "pause" key...
 !p::Pause ; ... or assign it to Win+p or some other hotkey.
 return
 
 
+:?:/Врменя::
+    GetMinutes()
+return
+
+:?:/Напарник::
+    GetPatrolName()
+return
+
+:?:/Пост_0::
+    GetPostName()
+return
+
+:?:/Вызов_0::
+    GetCallNumber()
+return
+
+:?:/ВЗ+::
+ShowRedList()
+return
+
+:?:/ВЗ-::
+SendPlay {Enter}
+Gui, ВЗ:Destroy  ; Явно указываем имя GUI
+return
 
 global AFK_Active := false
+
 :?:/-афк::
-SendPlay {Enter}
-AFK_Active := true  ; Включаем режим АФК
-Loop
-{
-  if not AFK_Active{
-	break
-	}
-  Random, Rand, 0,30
-  Random, Rand1,0,60
-  MouseClick ,left,800+Rand,600+Rand1, 1, 2
-  Sleep 7000
-}
+    SendPlay {Enter}
+    AFK_Active := true  ; Включаем режим АФК
+
+    Loop {
+        if not AFK_Active {
+            break
+        }
+
+        Random, Rand, 0, 30
+        Random, Rand1, 0, 60
+        MouseClick, left, 800 + Rand, 600 + Rand1, 1, 2
+        Sleep, 7000
+    }
 Return
+
 
 :?:/+афк::
-SendPlay {Enter}
-AFK_Active := false  ; Выключаем режим АФК
-ToolTip, АФК-режим выключен, 500, 500
-SetTimer, RemoveToolTip, 2000
-Return
-
-RemoveToolTip:
-ToolTip
-SetTimer, RemoveToolTip, Off
+    SendPlay {Enter}
+    AFK_Active := false  ; Выключаем режим АФК
+    ToolTip, АФК-режим выключен, 500, 500
+    SetTimer, RemoveToolTip, 2000
 Return
 
 :?:/работа::
-SendPlay {Enter}
-Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-Gui, Color, 12345
-Gui, Font, s25
+    SendPlay {Enter}
+    Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+    Gui, Color, 12345
+    Gui, Font, s25
 
-startTime := A_TickCount
+    startTime := A_TickCount
 
-SetTimer, 1UpdateTime, 1000
+    SetTimer, 1UpdateTime, 1000
 
-WinSet, TransColor, %CustomColor3% 215
-Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
-Gui, Show, NoActivate xCenter y0 w200 h70
+    WinSet, TransColor, %CustomColor3% 215
+    Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
+    Gui, Show, NoActivate xCenter y0 w200 h70
 Return
+
 
 :?:/работа_::
-;SendPlay {Enter}
-Gui, Destroy
+    ;SendPlay {Enter}
+    Gui, Destroy
 Return
 
+
+RemoveToolTip:
+    ToolTip
+    SetTimer, RemoveToolTip, Off
+Return
 
 1UpdateTime:
     elapsedTime := A_TickCount - startTime 
@@ -2986,896 +3384,7 @@ Return
 Return
 
 
-
-:?:/ВЗ+::
-ShowRedList()
-return
-
-:?:/ВЗ-::
-SendPlay {Enter}
-Gui, ВЗ:Destroy  ; Явно указываем имя GUI
-return
-
-
-:?:/Пост::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (только русские буквы)
-InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-; Проверка на наличие только русских букв, если введено что-то
-If (Patrol != "" && !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод названия поста (только русские буквы)
-InputBox, Post, Ввод данных, Введите название поста, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-; Проверка на наличие только русских букв
-If !RegExMatch(Post, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$") {
-    MsgBox, 16, Ошибка, Введите только русские буквы для названия поста.
-    Return
-}
-
-; Ввод количества минут (только цифры)
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-; Проверка на наличие только цифр
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol%  Вы ввели: пост: %Post% Количество минут: %Skolko%0 Разворачивайте игру!
-IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-; Условие для добавления информации о бригаде
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Заступил" floor " на пост:" Post " // Бригада: " Patrol ". ", "1000")
-} Else {
-    %vybor%("r [" TAG "] Заступил" floor " на пост:" Post ". ", "1000")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
-Loop, %Skolko%
-{
-sleep 590000 
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
-sleep 30000
-if(A_Index = Skolko){
-		break
-	}
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Продолжаю дежурство на посту:" Post " // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Продолжаю дежурство на посту:" Post ". ", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%("" Skrin_1 "", "500")
-}
-sleep 1000
-IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Покинул" floor " пост:" Post ". ", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%("" Skrin_1 "", "500")
-Gui, Destroy
-sleep 1000
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Return
-
-
-
-:?:/Пост_1::
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-sleep 1200
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Покинул" floor " пост:" Post " ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-sleep 10000
-Gui, Destroy
-Reload
-return
-
-
-
-:?:/Город::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (только русские буквы)
-InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только русских букв, если введено что-то
-If (Patrol != "" && !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод количества минут (только цифры)
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только цифр для количества минут
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol%  Количество минут: %Skolko%0 Разворачивайте игру!
-
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него" floor " ", "500")
-; Условие для добавления информации о бригаде
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Выехал" floor " на патрулирование города // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Выехал" floor " на патрулирование города. ", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-; Цикл, который каждые 10 мин отписывает в чат, идет до Skolko
-Loop, %Skolko%
-{
-    sleep 590000 
-    IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
-
-	if(A_Index = Skolko){
-		break
-	}
-    SendPlay {Enter}
-    %vybor%("do КПК висит на поясе.", "500")
-    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-    If (Patrol != "") {
-        %vybor%("r [" TAG "] Продолжаю патруль города // Бригада:" Patrol ". ", "500")
-    } Else {
-        %vybor%("r [" TAG "] Продолжаю патруль города. ", "500")
-    }
-    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%("" Skrin_1 "", "500")
-}
-sleep 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Завершил" floor " патрулирование города // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. ", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Gui, Destroy
-Return
-
-
-
-:?:/Город_1:: 
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-sleep 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. // Бригада: " Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Завершил" floor " патрулирование города. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-Gui, Destroy
-sleep 10000
-Reload
-Return
-
-
-
-:?:/Вызов_1::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (разрешены только русские буквы, можно оставить пустым)
-InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету — оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-; Проверка: если введено что-то — только русские буквы
-If (Patrol != "" && !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод номера вызова (только цифры)
-InputBox, to, Ввод данных, Введите номер вызова, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-; Проверка: только цифры
-If !RegExMatch(to, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для номера вызова.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol% № вызова: %to%`nРазворачивайте игру!
-
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-WinWaitActive, ahk_exe gta_sa.exe
-SendPlay {Enter}
-%vybor%("me достал" floor " из кармана КПК, запустил" floor " его", "1500")
-%vybor%("me открывает базу поступивших вызовов", "1500")
-%vybor%("me фиксирует последние данные GPS пациента", "1500")
-%vybor%("to " to " ", "500")
-%vybor%("me зажав кнопку на КПК, начал" floor " что-то говорить в него", "1500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Принял" floor " вызов: " to " // Бригада: " Patrol " ", "500")
-} Else {
-    %vybor%("r [" TAG "] Принял" floor " вызов: " to " ", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "1000")
-%vybor%("" Skrin_1 "", "500")
-Return
-
-
-
-:?:/Вызов_3::
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "1500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "1500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Ложный // Вызов: " to " // Бригада: " Patrol ".", "500")
-} Else {
-    %vybor%("r [" TAG "] Ложный // Вызов: " to ".", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%("cancel", "500")
-%vybor%("" Skrin_1 "", "500")
-Return
-
-
-
-:?:/Вызов_4::
-
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Обработан на месте // Вызов: " to " // Бригада: " Patrol ".", "500")
-} Else {
-    %vybor%("r [" TAG "] Обработан на месте // Вызов: " to ".", "500")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%("" Skrin_1 "", "500")
-Return
-
-
-:?:/Вызов_2::
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-Sleep 150
-SendPlay {Enter}
-%vybor%("speclight_onoff", "500")
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me сняв КПК с пояса, вызвал" floor " через него дежурного врача", "  " zaderzhka " ")
-%vybor%("do Через некоторое время пришёл врач и забрал каталку с пациентом.", "  " zaderzhka " ")
-%vybor%("hospital", "500")
-%vybor%("me зажав кнопку, начал" floor " что-то говорить в него", "1000")
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Госпитализирован // Вызов: " to " // Бригада: " Patrol ".", "1000")
-} Else {
-    %vybor%("r [" TAG "] Госпитализирован // Вызов: " to ".", "1000")
-}
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "1000")
-%vybor%("" Skrin_1 "", "500")
-Return
-
-:?:/Напарник_1::
-SendMessage, 0x50, 0, 0x4190419,, A
-InputBox, Patrol_1, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-If !RegExMatch(Patrol_1, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$") {
-    MsgBox, 16, Ошибка, Введите только русские буквы.
-    Return
-}
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol_1%.
-return
-
-:?:/Напарник::
-SendMessage, 0x50, 0, 0x4190419,, A
-InputBox, Patrol, Ввод данных, Введите фамилию напарника, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-If !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$") {
-    MsgBox, 16, Ошибка, Введите только русские буквы.
-    Return
-}
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-MsgBox, 48, Предупреждение, Вы изменили данные на: %Patrol%.
-return
-
-:?:/Пост_0::
-SendMessage, 0x50,, 0x4190419,, A
-InputBox, Post, Ввод данных, Введите пост, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-If !RegExMatch(Post, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$") {
-    MsgBox, 16, Ошибка, Введите только русские буквы.
-    Return
-}
-IniWrite %Post%, %FilePath%, %DataGroup%, NumberCall
-MsgBox, 48, Предупреждение, Вы изменили данные на: %Post%.
-return
-
-:?:/Вызов_0::
-; Переключение на русскую раскладку
-SendMessage, 0x50, 0, 0x4190419,, A
-
-InputBox, to, Ввод данных, Введите номер вызова, затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-If !RegExMatch(to, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для номера вызова.
-    Return
-}
-IniWrite %to%, %FilePath%, %DataGroup%, NumberCall
-MsgBox, 48, Предупреждение, Вы изменили данные на: %to%.
-return
-
-
-:?:/Республика::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (только русские буквы)
-InputBox, Patrol_1, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только русских букв
-If (Patrol_1 != "" && !RegExMatch(Patrol_1, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод количества минут (только цифры)
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только цифр для количества минут
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol_1% Количество минут: %Skolko%0 Разворачивайте игру!
-
-; Если фамилия напарника не введена, очищаем её в файле
-If (Patrol_1 != "") {
-    IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-} Else {
-    IniWrite "", %FilePath%, %DataGroup%, NumberCall ; Если фамилия не введена, записываем пустое значение
-}
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Выехал" floor " на патруль республики. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-
-Loop, %Skolko%
-{
-    sleep 590000 
-    ; Если фамилия напарника не введена, не записываем её в файл снова
-    If (Patrol_1 != "") {
-        IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-    }
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
-
-	if(A_Index = Skolko){
-		break
-	}
-    SendPlay {Enter}
-    %vybor%("do КПК висит на поясе.", "500")
-    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-    ; Если фамилия напарника не введена, не отображаем её в сообщении
-    If (Patrol_1 != "") {
-        %vybor%("ro [" Bol_ro_1 "] Продолжаю патруль республики // Бригада:" Patrol_1 ". ", "1000")
-    } Else {
-        %vybor%("ro [" Bol_ro_1 "] Продолжаю патруль республики. ", "1000")
-    }
-    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%("" Skrin_1 "", "500")
-}
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-sleep 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Gui, Destroy
-sleep 1000
-Return
-
-:?:/Республика_1::
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-; Если фамилия напарника (бригада) не введена, очистить переменную
-If (Patrol_1 = "") {
-    IniWrite "", %FilePath%, %DataGroup%, NumberCall ; Очистка данных для бригады
-} Else {
-    IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-}
-
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если бригада не указана, не включаем её в сообщение
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " патруль республики. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-Gui, Destroy
-sleep 10000
-Reload
-Return
-
-
-:?:/Город_0::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (только русские буквы)
-InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только русских букв, если фамилия введена
-If (Patrol != "" && !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод количества минут (только цифры)
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только цифр для количества минут
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-; Подтверждение введенных данных
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol% Количество минут: %Skolko% Разворачивайте игру!
-
-; Запись данных в файл
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, вывести без нее
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Вылетел" floor " на воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Вылетел" floor "  воздушное патрулирование города.", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-
-Loop, %Skolko%
-{
-    sleep 590000 
-    IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-    SoundPlay,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Doklad_Mariya_2.mp3
-
-	if(A_Index = Skolko){
-		break
-	}
-    SendPlay {Enter}
-    %vybor%("do КПК висит на поясе.", "500")
-    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-    
-    ; Если фамилия напарника не введена, вывести без нее
-    If (Patrol != "") {
-        %vybor%("r [" TAG "] Продолжаю воздушное патрулирование города // Бригада:" Patrol ". ", "1000")
-    } Else {
-        %vybor%("r [" TAG "] Продолжаю воздушноец патрулирование города.", "1000")
-    }
-
-    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%("" Skrin_1 "", "500")
-}
-
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-sleep 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, вывести без нее
-If (Patrol != "") {
-    %vybor%("r [" TAG "] Завершил" floor " воздушное патрулирование города  // Бригада:" Patrol ". ", "500")
-} Else {
-    %vybor%("r [" TAG "] Завершил" floor " воздушное патрулирование города. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Gui, Destroy
-sleep 1000
-Return
-
-:?:/Город_2::
-IniWrite %Patrol%, %FilePath%, %DataGroup%, NumberCall
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol != "") {
-    %vybor%("r [" TAG "]  Окончил" floor " воздушное патрулирование города // Бригада: " Patrol ". ", "1000")
-} Else {
-    %vybor%("r [" TAG "]  Окончил" floor " воздушное патрулирование города.", "1000")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay,C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-Gui, Destroy
-sleep 10000
-Reload
-Return
-
-:?:/Республика_0::
-SendMessage, 0x50, 0, 0x4190419,, A
-; Ввод фамилии напарника (только русские буквы)
-InputBox, Patrol_1, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только русских букв
-If (Patrol_1 != "" && !RegExMatch(Patrol_1, "^[А-Яа-яЁё\s<>,:;''\[\]\|]+$")) {
-    MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
-    Return
-}
-
-; Ввод количества минут (только цифры)
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка на наличие только цифр для количества минут
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Вы ввели: Фамилия напарника: %Patrol_1% Количество минут: %Skolko%0 Разворачивайте игру!
-
-; Если фамилия напарника не введена, очищаем её в файле
-If (Patrol_1 != "") {
-    IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-} Else {
-    IniWrite "", %FilePath%, %DataGroup%, NumberCall ; Если фамилия не введена, записываем пустое значение
-}
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Вылетел" floor " на воздушное патрулирование Республики Провинция. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-
-Loop, %Skolko%
-{
-    sleep 590000 
-    ; Если фамилия напарника не введена, не записываем её в файл снова
-    If (Patrol_1 != "") {
-        IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-    }
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
-
-	if(A_Index = Skolko){
-		break
-	}
-    SendPlay {Enter}
-    %vybor%("do КПК висит на поясе.", "500")
-    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-    ; Если фамилия напарника не введена, не отображаем её в сообщении
-    If (Patrol_1 != "") {
-        %vybor%("ro [" Bol_ro_1 "] Продолжаю воздушное патрулирование республики // Бригада:" Patrol_1 ". ", "1000")
-    } Else {
-        %vybor%("ro [" Bol_ro_1 "] Продолжаю воздушное патрулирование республики. ", "1000")
-    }
-    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%("" Skrin_1 "", "500")
-}
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-sleep 1000
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если фамилия напарника не введена, не отображаем её в сообщении
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование Республики Провинция // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование Республики Провинция. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Gui, Destroy
-sleep 1000
-Return
-
-:?:/Республика_2::
-IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-; Если фамилия напарника (бригада) не введена, очистить переменную
-If (Patrol_1 = "") {
-    IniWrite "", %FilePath%, %DataGroup%, NumberCall ; Очистка данных для бригады
-} Else {
-    IniWrite %Patrol_1%, %FilePath%, %DataGroup%, NumberCall
-}
-
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-
-; Если бригада не указана, не включаем её в сообщение
-
-If (Patrol_1 != "") {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование р. Провинция // Бригада:" Patrol_1 ". ", "500")
-} Else {
-    %vybor%("ro [" Bol_ro_1 "] Завершил" floor " воздушное патрулирование р. Провинция. ", "500")
-}
-
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-Gui, Destroy
-sleep 10000
-Reload
-Return
-
-:?:/ПО::
-SendMessage, 0x50, 0, 0x4190419,, A
-InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
-if (ErrorLevel) {
-    MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
-    Return
-}
-
-; Проверка: введено только число
-If !RegExMatch(Skolko, "^\d+$") {
-    MsgBox, 16, Ошибка, Введите только цифры для количества минут.
-    Return
-}
-
-MsgBox, 48, Предупреждение, Количество минут: %Skolko%0 Разворачивайте игру!
-IniWrite %Skolko%, %FilePath%, %DataGroup%, NumberCall
-
-WinWaitActive, ahk_exe gta_sa.exe
-
-CreateAdaptiveGUI()
-startTime := A_TickCount
-docladInterval := 590000
-docladStart := A_TickCount
-SetTimer, UpdateTime, 1000
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-%vybor%("r [" TAG "] Заступил" floor " на пост:Регистратура.", "500")
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_1.mp3
-
-Loop, %Skolko%
-{
-    sleep 590000 
-    SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_2.mp3
-
-	if(A_Index = Skolko){
-		break
-	}
-    IniRead, Lancia, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Statistika.ini, Statistic, Lancia
-    SendPlay {Enter}
-    %vybor%("do КПК висит на поясе.", "500")
-    %vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-    %vybor%("r [" TAG "] Продолжаю дежурство на посту:Регистратура.", "1000")
-    %vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-    %vybor%("" Skrin_1 "", "500")
-}
-
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-%vybor%("r [" TAG "] Покинул" floor " пост:Регистратура.", "500")
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс", "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_3.mp3
-Gui, Destroy
-Return
-
-
-:?:/ПО_1::
-Sleep 1500
-SendPlay {Enter}
-%vybor%("do КПК висит на поясе.", "500")
-%vybor%("me снял" floor " КПК с пояса и, зажав кнопку, начал" floor " что-то говорить в него", "500")
-%vybor%("r [" TAG "] Покинул" floor " пост:Регистратура.  ", "500")
-%vybor%("me отжав кнопку, закончил" floor " что-то говорить в КПК и повесил" floor " его обратно на пояс",  "500")
-%vybor%("" Skrin_1 "", "500")
-SoundPlay, C:\ProgramData\KPRP\KPRP-main\KPRPMP3\Doklad_Mariya_4.mp3
-Gui, Destroy
-sleep 10000
-Reload
-Return
-
-
- UpdateTime:
+UpdateTime:
     ; Время дежурства — с момента запуска (не сбрасывается)
     elapsedDuty := A_TickCount - startTime
     elapsedDutySec := Floor(elapsedDuty / 1000)
@@ -7297,13 +6806,13 @@ Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Напарник
 Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Пост_0
 Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /Вызов_0
-Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /Напарник_1
+Gui, 3:Add, Text, x10 y75 h500 w370 +BackgroundTrans, /Врменя
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x150  y15 w300 h20 +BackgroundTrans , [Смена напарника (/r)]
+Gui, 3:Add, Text, x150  y15 w300 h20 +BackgroundTrans , [Смена напарника]
 Gui, 3:Add, Text, x150  y35 w300 h20 +BackgroundTrans , [Смена поста]
 Gui, 3:Add, Text, x150  y55 w300 h20 +BackgroundTrans , [Смена вызова]
-Gui, 3:Add, Text, x150  y75 w300 h20 +BackgroundTrans , [Смена напарника(/ro)]
+Gui, 3:Add, Text, x150  y75 w300 h20 +BackgroundTrans , [Смена времени на дежурстве]
 
 Gui, 3:show, center h130 w350, Смена данных в докладах
 Return

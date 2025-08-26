@@ -1427,6 +1427,91 @@ GetRandomHygieneTask() {
     return Tasks[rand]
 }
 
+; === Функция для ввода количества минут ===
+GetMinutes() {
+    global Skolko, FilePath, DataGroup
+
+    SendMessage, 0x50, 0, 0x4190419,, A
+    InputBox, Skolko, Ввод данных, Введите количество минут (например 10 минут = 1), затем нажмите "OK"
+    if (ErrorLevel) {
+        MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+        Return
+    }
+
+    if !RegExMatch(Skolko, "^\d+$") {
+        MsgBox, 16, Ошибка, Введите только цифры для количества минут.
+        Return
+    }
+
+    MsgBox, 48, Предупреждение, Количество минут: %Skolko%0 
+    IniWrite, %Skolko%, %FilePath%, %DataGroup%, NumberCall
+}
+
+; === Функция для ввода фамилии напарника ===
+GetPatrolName() {
+    global Patrol, FilePath, DataGroup
+
+    SendMessage, 0x50, 0, 0x4190419,, A
+    InputBox, Patrol, Ввод данных, Введите фамилию напарника (Если нету оставить пустым), затем нажмите "OK"
+    if (ErrorLevel) {
+        MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+        Return
+    }
+
+    if (Patrol != "" && !RegExMatch(Patrol, "^[А-Яа-яЁё\s<>,:;'\[\]\|]+$")) {
+        MsgBox, 16, Ошибка, Введите только русские буквы для фамилии напарника.
+        Return
+    }
+
+    text := "Фамилия напарника: " (Patrol = "" ? "не указана" : Patrol)
+    MsgBox, 48, Предупреждение, %text%
+    IniWrite, %Patrol%, %FilePath%, %DataGroup%, PatrolName
+}
+
+
+
+
+; === Функция для ввода названия поста ===
+GetPostName() {
+    global Post, FilePath, DataGroup
+
+    SendMessage, 0x50, 0, 0x4190419,, A
+    InputBox, Post, Ввод данных, Введите название поста, затем нажмите "OK"
+    if (ErrorLevel) {
+        MsgBox, 16, Ошибка,  Вы отменили ввод данных. Скрипт остановлен.
+        Return
+    }
+
+    if !RegExMatch(Post, "^[А-Яа-яЁё\s<>,:;'\[\]\|]+$") {
+        MsgBox, 16, Ошибка, Введите только русские буквы для названия поста.
+        Return
+    }
+
+    MsgBox, 48, Предупреждение, Название поста: %Post%
+    IniWrite, %Post%, %FilePath%, %DataGroup%, PostName
+}
+
+; === Функция для ввода номера вызова ===
+GetCallNumber() {
+    global to, FilePath, DataGroup
+
+    SendMessage, 0x50, 0, 0x4190419,, A
+    InputBox, to, Ввод данных, Введите номер вызова, затем нажмите "OK"
+    if (ErrorLevel) {
+        MsgBox, 16, Ошибка, Вы отменили ввод данных. Скрипт остановлен.
+        Return
+    }
+
+    if !RegExMatch(to, "^\d+$") {
+        MsgBox, 16, Ошибка, Введите только цифры для номера вызова.
+        Return
+    }
+
+    text := "Номер вызова: " to
+    MsgBox, 48, Предупреждение, %text%
+    IniWrite, %to%, %FilePath%, %DataGroup%, CallNumber
+}
+
 
 ProverkaAdmin()
 {
@@ -1664,13 +1749,17 @@ SelectObjects(objectNumber) {
     FileSelectFile, %VarName%, 1+2, %A_WorkingDir%, Редактор отыгровок, Текстовые файлы (*.txt)
 }
 
+
+
+
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol, Terms, 
-	global TermsMZ, WorkoutMZ, MPMZ
+	global TermsMZ, WorkoutMZ, MPMZ, Post, Patrol, to
 	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
 	global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
-	
+	global SozdatAlbom, DobavitSkrin, ZagruzitAlbom
+
     global vybor, zaderzhka
 
     Sleep 150
@@ -1683,7 +1772,7 @@ SendTemplate(type, num) {
 	TermsMZ := GetRandomMedicalWord
 	WorkoutMZ := GetRandomProcedure()
 	MPMZ := GetRandomHygieneTask()
-    
+	
     ; --- Определяем путь к файлу ---
     if (type = "Redakt") {
         filePath := Objects%num%
@@ -1705,6 +1794,16 @@ SendTemplate(type, num) {
     
     ; --- Читаем и обрабатываем файл ---
     FileRead, content, %filePath%
+	
+	; --- Вызов функций только если есть метки ---
+    if InStr(content, "%SozdatAlbom%")
+        SozdatAlbom := CreateAlbum()
+
+    if InStr(content, "%DobavitSkrin%")
+        DobavitSkrin := AddScreenshot()
+
+    if InStr(content, "%ZagruzitAlbom%")
+        ZagruzitAlbom := FinishAlbum()
     
     ; --- Подстановка переменных ---
 	
@@ -1713,8 +1812,13 @@ SendTemplate(type, num) {
 	content := StrReplace(content, "%floor%", floor)
 	content := StrReplace(content, "%Skrin_1%", Skrin_1)
     content := StrReplace(content, "%Female%", Female)
-    
-   
+	content := StrReplace(content, "%SozdatAlbom%", SozdatAlbom)
+	content := StrReplace(content, "%DobavitSkrin%", DobavitSkrin)
+	content := StrReplace(content, "%ZagruzitAlbom%", ZagruzitAlbom)
+	content := StrReplace(content, "%Post%", Post)
+	content := StrReplace(content, "%Patrol%", Patrol)
+	content := StrReplace(content, "%to%", to)
+	
     content := StrReplace(content, "%Name%", Name)
     content := StrReplace(content, "%Surname%", Surname)
     content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
