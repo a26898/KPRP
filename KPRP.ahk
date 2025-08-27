@@ -1010,6 +1010,8 @@ else
 }
 
 
+
+
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
 Menu, Tray, Rename, Group, КПРП © 2019-2025
@@ -1682,7 +1684,7 @@ CreateAdaptiveGUI() {
     ; Добавляем текст таймера с адаптивным шрифтом (объявляем переменную как глобальную)
     fontSize := Round(20 * dpiScale)
     Gui, Font, s%fontSize% cgray Bold
-    Gui, Add, Text, vTimerText x30 y10 w%winWidth% h%winHeight% Center BackgroundTrans, Дежурство: 00:00:00`nДо доклада: 00:00:00`nСкриншотов:0
+    Gui, Add, Text, vTimerText x30 y10 w%winWidth% h%winHeight% Center BackgroundTrans, Скриншотов:0
 
     ; Получаем координаты активного монитора с безопасным позиционированием
     monitorInfo := GetActiveMonitorInfo()

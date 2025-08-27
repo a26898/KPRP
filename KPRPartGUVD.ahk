@@ -18,7 +18,7 @@ GWL_STYLE := -16
 WS_CHILD := 0x40000000
 
 ; --- Запускаем KPRP.exe для вкладки 1 ---
-appPath1 := "C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Telegramkprp\KPRP.exe"
+appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\KPRP.exe"
 Run, %appPath1%, , , pid1
 WinWait, ahk_pid %pid1%
 WinGet, hwndApp1, ID, ahk_pid %pid1%
@@ -29,7 +29,7 @@ DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1
 DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
 
 ; --- Запускаем Journal.exe для вкладки 10 ---
-appPath3 := "C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Telegramkprp\Journal.exe"
+appPath3 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Journal.exe"
 Run, %appPath3%, , , pid3
 WinWait, ahk_pid %pid3%
 WinGet, hwndApp3, ID, ahk_pid %pid3%
@@ -984,15 +984,15 @@ Return
 Return
 
 0022DUVD7:
-    SendTemplate("KPRPDUVD", 22)
+CreateAlbum()
 Return
 
 0023DUVD7:
-    SendTemplate("KPRPDUVD", 23)
+AddScreenshot()
 Return
 
 0024DUVD7:
-    SendTemplate("KPRPDUVD", 24)
+FinishAlbum()
 Return
 
 0025DUVD7:
@@ -1121,9 +1121,9 @@ Gui, 19:Add, Edit, x660 y326 w180 vSvoyeDUVD_18, %SvoyeDUVD_18%
 Gui, 19:Add, Edit, x660 y386 w180 vSvoyeDUVD_19, %SvoyeDUVD_19%
 Gui, 19:Add, Edit, x660 y446 w180 vSvoyeDUVD_20, %SvoyeDUVD_20%
 Gui, 19:Add, Edit, x660 y506 w180 vSvoyeDUVD_21, %SvoyeDUVD_21%
-Gui, 19:Add, Edit, x660 y566 w180 vSvoyeDUVD_22, %SvoyeDUVD_22%
-Gui, 19:Add, Edit, x660 y626 w180 vSvoyeDUVD_23, %SvoyeDUVD_23%
-Gui, 19:Add, Edit, x660 y686 w180 vSvoyeDUVD_24, %SvoyeDUVD_24%
+Gui, 19:Add, Edit, x660 y566 w320 Disabled, Создать альбом на imgchest.com
+Gui, 19:Add, Edit, x660 y626 w320 Disabled, Добавить скриншоты в альбом до 20 штук.
+Gui, 19:Add, Edit, x660 y686 w320 Disabled, Загрузить альбом на imgchest.com 
 Gui, 19:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
@@ -1150,9 +1150,9 @@ Gui, 19:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPDUVD18,C:\Pr
 Gui, 19:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPDUVD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 19:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPDUVD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 19:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPDUVD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 19:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 19:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 19:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 19:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 19:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 19:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 
 Gui, 19:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPDUVD1,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 19:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPDUVD2,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
@@ -1177,9 +1177,9 @@ Gui, 19:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPDUVD18,C:\
 Gui, 19:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPDUVD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 19:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPDUVD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 19:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPDUVD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 19:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 19:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 19:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 19:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPDUVD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 19:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPDUVD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 19:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPDUVD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
 Gui, 19:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChangeRaskladka_DUVD,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 Gui, 19:Add, Picture, x850 y725 w64 h64  +BackgroundTrans gInfovariableDUVD7,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\InfovariableMZ.png

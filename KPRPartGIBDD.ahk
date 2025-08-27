@@ -184,15 +184,15 @@ Return
 Return
 
 0022GIBDD7:
-    SendTemplate("KPRPGIBDD", 22)
+CreateAlbum()
 Return
 
 0023GIBDD7:
-    SendTemplate("KPRPGIBDD", 23)
+AddScreenshot()
 Return
 
 0024GIBDD7:
-    SendTemplate("KPRPGIBDD", 24)
+FinishAlbum()
 Return
 
 0025GIBDD7:
@@ -317,9 +317,9 @@ Gui, 18:Add, Edit, x660 y326 w180 vSvoyeGIBDD_18, %SvoyeGIBDD_18%
 Gui, 18:Add, Edit, x660 y386 w180 vSvoyeGIBDD_19, %SvoyeGIBDD_19%
 Gui, 18:Add, Edit, x660 y446 w180 vSvoyeGIBDD_20, %SvoyeGIBDD_20%
 Gui, 18:Add, Edit, x660 y506 w180 vSvoyeGIBDD_21, %SvoyeGIBDD_21%
-Gui, 18:Add, Edit, x660 y566 w180 vSvoyeGIBDD_22, %SvoyeGIBDD_22%
-Gui, 18:Add, Edit, x660 y626 w180 vSvoyeGIBDD_23, %SvoyeGIBDD_23%
-Gui, 18:Add, Edit, x660 y686 w180 vSvoyeGIBDD_24, %SvoyeGIBDD_24%
+Gui, 18:Add, Edit, x660 y566 w320 Disabled, Создать альбом на imgchest.com
+Gui, 18:Add, Edit, x660 y626 w320 Disabled, Добавить скриншоты в альбом до 20 штук.
+Gui, 18:Add, Edit, x660 y686 w320 Disabled, Загрузить альбом на imgchest.com 
 Gui, 18:Add, Edit, x660 y746 w70  Disabled, пауза
 
 
@@ -346,9 +346,9 @@ Gui, 18:Add, Picture, x860 y316 w48 h48 +BackgroundTrans gSelectKPRPGIBDD18,C:\P
 Gui, 18:Add, Picture, x860 y376 w48 h48 +BackgroundTrans gSelectKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 18:Add, Picture, x860 y436 w48 h48 +BackgroundTrans gSelectKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 18:Add, Picture, x860 y496 w48 h48 +BackgroundTrans gSelectKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 18:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 18:Add, Picture, x860 y556 w48 h48 +BackgroundTrans gSelectKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 18:Add, Picture, x860 y616 w48 h48 +BackgroundTrans gSelectKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 18:Add, Picture, x860 y676 w48 h48 +BackgroundTrans gSelectKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 
 Gui, 18:Add, Picture, x440 y16 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD1,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 18:Add, Picture, x440 y76 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD2,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
@@ -373,9 +373,9 @@ Gui, 18:Add, Picture, x930 y316 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD18,C:
 Gui, 18:Add, Picture, x930 y376 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD19,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 18:Add, Picture, x930 y436 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD20,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 18:Add, Picture, x930 y496 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD21,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 18:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 18:Add, Picture, x930 y556 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD22,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 18:Add, Picture, x930 y616 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD23,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 18:Add, Picture, x930 y676 w48 h48 +BackgroundTrans gNotebookKPRPGIBDD24,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
 Gui, 18:Add, Picture, x930 y725 w64 h64  +BackgroundTrans gChangeRaskladka_GIBDD,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Ok_64.png
 Gui, 18:Add, Picture, x850 y725 w64 h64  +BackgroundTrans gInfovariableGIBDD7,   C:\ProgramData\KPRP\KPRP-main\KPRPPNG\InfovariableMZ.png

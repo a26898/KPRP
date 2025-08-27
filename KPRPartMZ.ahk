@@ -70,7 +70,7 @@ Gui, 5:Add, Picture, x10 y40 w128 w96  +BackgroundTrans gLaziness7, C:\ProgramDa
 Gui, 5:Add, Picture, x10 y260 w128 w96 +BackgroundTrans gMedicine81, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Cards.png
 Gui, 5:Add, Picture, x10 y370 w128 w96 +BackgroundTrans gMedicine79, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Oath.png
 Gui, 5:Add, Picture, x10 y480 w128 w96 +BackgroundTrans gMedicine33, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Feelings.png
-Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness25, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Prizyvpng.png
+Gui, 5:Add, Picture, x10 y150 w128 w96 +BackgroundTrans gLaziness4, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\VZ.png
 Gui, 5:Add, Picture, x130 y40 w128 w96  +BackgroundTrans gMedicine13, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Defibrillator.png
 
 
@@ -85,7 +85,7 @@ Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gLaziness26, C:\Program
 Gui, 5:Add, Picture, x250 y40 w128 w96  +BackgroundTrans gLaziness1, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Call.png
 
 Gui, 5:Add, Picture, x130 y150 w128 w96 +BackgroundTrans gLaziness31, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Random.png
-Gui, 5:Add, Picture, x130 y260 w128 w96 +BackgroundTrans gLaziness4, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\VZ.png
+Gui, 5:Add, Picture, x130 y260 w128 w96 +BackgroundTrans gLaziness25, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Gov.png
 
 Gui, 5:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\%Bol_ro_2%
 Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\KPRP.png
@@ -2240,7 +2240,12 @@ Return
 Return
 
 :?:/Трен::
+    startTime := A_TickCount
+    docladInterval := 300000   
+    docladStart := A_TickCount
+    SetTimer, UpdateTimeMP, 1000
     SendTemplate("KPRPMZ", 425)
+	Gui, Destroy
 Return
 
 :?:/Трен_0::
@@ -2248,11 +2253,17 @@ Return
 Return
 
 :?:/МП::
+    startTime := A_TickCount
+    docladInterval := 300000   
+    docladStart := A_TickCount
+    SetTimer, UpdateTimeMP, 1000
+    CreateAdaptiveGUI()
     SendTemplate("KPRPMZ", 427)
 Return
 
 :?:/МП_0::
     SendTemplate("KPRPMZ", 428)
+	Gui, Destroy
 Return
 
 :?:/Аллергия_1::
@@ -3312,6 +3323,187 @@ SendPlay {Enter}
 Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 return
 
+
+:?:/Гов_1::
+CreateAdaptiveGUI()
+startTime := A_TickCount
+SetTimer, UpdateTimeGov, 1000
+SetTimer, CheckTimeSobes, 60000 ; Проверка каждую минуту
+return
+
+:?:/Гов_2::
+CreateAdaptiveGUI()
+startTime := A_TickCount
+SetTimer, UpdateTimeGov, 1000
+SetTimer, CheckTimeMedkarty, 60000 ; Проверка каждую минуту
+return
+
+
+CheckTimeSobes:
+    FormatTime, CurrentTime,, mm
+    CurrentMinute := CurrentTime + 0
+	
+	
+    ; Перезапуск в :54
+    if (CurrentMinute = 54) {
+        Reload
+        Sleep, 1000 ;
+        return
+    }
+    
+    ; Срабатывание в :00
+    if (CurrentMinute = 0) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 637)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 638)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 639)
+    }
+    ; Каждые 10 минут
+    else if (CurrentMinute = 10) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 640)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 641)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 642)
+    }
+	
+	; Каждые 20 минут
+    else if (CurrentMinute = 20) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 643)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 644)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 645)
+    }
+	
+	; Каждые 30 минут
+    else if (CurrentMinute = 30) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 646)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 647)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 648)
+    }
+	
+	; Каждые 40 минут
+    else if (CurrentMinute = 40) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 649)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 650)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 651)
+    }
+	
+	; Каждые 50 минут
+    else if (CurrentMinute = 50) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 652)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 653)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 654)
+    }
+
+    ; Каждые 8 минут
+    else if (CurrentMinute = 8 || CurrentMinute = 18 || CurrentMinute = 28 || CurrentMinute = 38 || CurrentMinute = 48 || CurrentMinute = 58) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 634)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 635)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 636)
+    }
+return
+
+
+CheckTimeMedkarty:
+    FormatTime, CurrentTime,, mm
+    CurrentMinute := CurrentTime + 0
+	
+	; Перезапуск в :54
+    if (CurrentMinute = 54) {
+        Reload
+        Sleep, 1000 ;
+        return
+    }
+    
+    ; Срабатывание в :00
+    if (CurrentMinute = 0) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 655)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 656)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 657)
+    }
+    ; Каждые 10 минут
+    else if (CurrentMinute = 10) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 658)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 659)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 660)
+    }
+	
+	; Каждые 20 минут
+    else if (CurrentMinute = 20) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 661)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 662)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 663)
+    }
+	
+	; Каждые 30 минут
+    else if (CurrentMinute = 30) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 664)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 665)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 666)
+    }
+	
+	; Каждые 40 минут
+    else if (CurrentMinute = 40) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 667)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 668)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 669)
+    }
+	
+	; Каждые 50 минут
+    else if (CurrentMinute = 50) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 670)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 671)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 672)
+    }
+
+    ; Каждые 8 минут
+    else if (CurrentMinute = 8 || CurrentMinute = 18 || CurrentMinute = 28 || CurrentMinute = 38 || CurrentMinute = 48 || CurrentMinute = 58) {
+        if (Bol_ro = "Приволжск")
+            SendTemplate("KPRPMZ", 634)
+        else if (Bol_ro = "Мирный")
+            SendTemplate("KPRPMZ", 635)
+        else if (Bol_ro = "Невский")
+            SendTemplate("KPRPMZ", 636)
+    }
+return
+
+
 global AFK_Active := false
 
 :?:/-афк::
@@ -3406,6 +3598,106 @@ UpdateTime:
     ; обновляем GUI с добавлением счётчика скриншотов
     GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%`nСкриншотов:%count%
 return
+
+
+UpdateTimeMP:
+    global count   ; используем глобальную переменную
+    
+    ; Время дежурства — с момента запуска (не сбрасывается)
+    elapsedDuty := A_TickCount - startTime
+    elapsedDutySec := Floor(elapsedDuty / 1000)
+    hoursDuty := Floor(elapsedDutySec / 3600)
+    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
+    secondsDuty := Mod(elapsedDutySec, 60)
+    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
+
+    ; Время до доклада — обратный отсчёт от 5 минут
+    elapsedDoclad := A_TickCount - docladStart
+    if (elapsedDoclad >= docladInterval) {
+        docladStart := A_TickCount  ; сброс обратного отсчёта
+        elapsedDoclad := 0
+    }
+    remaining := docladInterval - elapsedDoclad
+    remainingSec := Floor(remaining / 1000)
+    hoursRem := Floor(remainingSec / 3600)
+    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
+    secondsRem := Mod(remainingSec, 60)
+    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
+
+    ; обновляем GUI с добавлением счётчика скриншотов
+    GuiControl,, TimerText, Прошло: %formattedDuty%`n Осталось: %formattedRemaining%`nСкриншотов: %count%
+return
+
+UpdateTimeGov:
+    global count
+
+    now := A_Now
+    marksDuty := [8, 18, 28, 38, 48, 58]  ; Отметки для "репорта"
+    marksDoc  := [10, 20, 30, 40, 50, 0]   ; Отметки для "Gov"
+
+    ; --- Функция для поиска ближайшей отметки ---
+    GetNextMark(marksArray) {
+        currentTime := A_Now
+        ; Получаем текущие час и минуту как числа
+        FormatTime, currentMin,  %currentTime%, mm
+        FormatTime, currentHour, %currentTime%, HH
+        currentMin := currentMin + 0
+        currentHour := currentHour + 0
+        currentDateStr := SubStr(currentTime, 1, 8) ; Получаем дату в формате ГГГГММДД
+
+        ; Ищем следующую отметку в текущем часу
+        for index, mark in marksArray {
+            if (currentMin < mark) {
+                ; Нашли отметку в этом часу
+                targetTime := currentDateStr . Format("{:02}{:02}00", currentHour, mark)
+                return targetTime
+            }
+        }
+        ; Если не нашли в этом часу, берём первую отметку следующего часа
+        nextHour := currentHour + 1
+        nextDateStr := currentDateStr
+        if (nextHour >= 24) {
+            nextHour := 0
+            ; Переходим на следующий день
+            nextDate := currentTime
+            nextDate += 1, Days
+            FormatTime, nextDateStr, %nextDate%, yyyyMMdd
+        }
+        targetTime := nextDateStr . Format("{:02}{:02}00", nextHour, marksArray[1])
+        return targetTime
+    }
+
+    ; --- Рассчитываем целевое время ---
+    dutyTarget := GetNextMark(marksDuty)
+    docTarget  := GetNextMark(marksDoc)
+
+    ; --- Вычисляем разницу в секундах ---
+    dutyDiff := dutyTarget
+    dutyDiff -= now, Seconds
+    docDiff := docTarget
+    docDiff -= now, Seconds
+
+    ; --- Переводим разницу в читаемый вид ЧЧ:ММ:СС ---
+    dutyHr  := dutyDiff // 3600
+    dutyMin := Mod(dutyDiff // 60, 60)
+    dutySec := Mod(dutyDiff, 60)
+
+    docHr  := docDiff // 3600
+    docMin := Mod(docDiff // 60, 60)
+    docSec := Mod(docDiff, 60)
+
+    formattedDuty := Format("{1:02}:{2:02}:{3:02}", dutyHr, dutyMin, dutySec)
+    formattedDoc  := Format("{1:02}:{2:02}:{3:02}", docHr, docMin, docSec)
+
+    ; --- Выводим результат на GUI ---
+    GuiControl,, TimerText, До репорта: %formattedDuty%`nДо gov: %formattedDoc%`nСкриншотов: %count%
+return
+
+
+
+
+
+
 
 
 Medicine1:
@@ -7021,26 +7313,17 @@ Return
 Laziness25:
 Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h350 w550,
-
-
-
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
-Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /ПР_1
-Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /ПР_2
-Gui, 3:Add, Text, x10 y55 h200 w120 +BackgroundTrans, /ПР_3
-Gui, 3:Add, Text, x10 y75 h200 w120 +BackgroundTrans, /ПР_4
-Gui, 3:Add, Text, x10 y95 h200 w120 +BackgroundTrans, /ПР_5
-
+Gui, 3:Add, Text, x10 y15 h200 w120 +BackgroundTrans, /Гов_1
+Gui, 3:Add, Text, x10 y35 h200 w120 +BackgroundTrans, /Гов_2
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x90 y15 h500 w370 +BackgroundTrans, [Передайте паспорт]
-Gui, 3:Add, Text, x90 y35 h500 w370 +BackgroundTrans, [Изучение и взятие паспорта]
-Gui, 3:Add, Text, x90 y55 h500 w370 +BackgroundTrans, [Попросить передать заключение]
-Gui, 3:Add, Text, x90 y75 h500 w370 +BackgroundTrans, [Изучение и взятие заключения]
-Gui, 3:Add, Text, x90 y95 h500 w370 +BackgroundTrans, [Выдать медкарту]
+Gui, 3:Add, Text, x90 y15 h500 w570 +BackgroundTrans, [Оповещение о наборе + репорт]
+Gui, 3:Add, Text, x90 y35 h500 w570 +BackgroundTrans, [Оповещение массовой выдачи медкарт + репорт]
 
-Gui, 3:show, center h140 w350, Призыв
+
+Gui, 3:show, center h70 w500, Автоматическое оповещение через gov
 Return
 
 

@@ -1,1 +1,3 @@
 say На этом тренировка:%WorkoutMZ1% окончена.
+%DobavitSkrin%
+%ZagruzitAlbom%

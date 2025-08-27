@@ -1,1 +1,3 @@
 say Сейчас пройдёт тренировка:%WorkoutMZ%.
+%SozdatAlbom%
+%DobavitSkrin%

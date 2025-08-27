@@ -1,1 +1,3 @@
 say На этом мероприятие:%MPMZ1% окончено.
+%DobavitSkrin%
+%ZagruzitAlbom%
