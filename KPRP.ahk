@@ -1750,63 +1750,53 @@ SelectObjects(objectNumber) {
 }
 
 
-
-
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol, Terms, 
-	global TermsMZ, WorkoutMZ, WorkoutMZ1, MPMZ, MPMZ1, Post, Patrol, to
-	global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
-	global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
-	global SozdatAlbom, DobavitSkrin, ZagruzitAlbom
-
+    global TermsMZ, WorkoutMZ, WorkoutMZ1, MPMZ, MPMZ1, Post, Patrol, to
+    global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
+    global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
     global vybor, zaderzhka
 
     Sleep 150
     SendPlay {Enter}
     FileEncoding, UTF-8-RAW
-    
-    ; --- Получаем переменную Var ---
+
+    ; --- Получаем переменные ---
     Var := Greeting()
-	Terms := GetRandomWord()
-	TermsMZ := GetRandomMedicalWord
-	WorkoutMZ1:= WorkoutMZ
-	WorkoutMZ := GetRandomProcedure()
-	MPMZ1 := MPMZ  
-	MPMZ := GetRandomHygieneTask()
+    Terms := GetRandomWord()
+    TermsMZ := GetRandomMedicalWord()
+    WorkoutMZ1 := WorkoutMZ
+    WorkoutMZ := GetRandomProcedure()
+    MPMZ1 := MPMZ  
+    MPMZ := GetRandomHygieneTask()
 
     ; --- Определяем путь к файлу ---
-    if (type = "Redakt") {
+    if (type = "Redakt")
         filePath := Objects%num%
-    } else if (type = "KPRPMZ") {
+    else if (type = "KPRPMZ")
         filePath := KPRPMZ%num%
-    } else if (type = "Lectures") {
+    else if (type = "Lectures")
         filePath := Lectures%num%
-    } else if (type = "KPRPGIBDD") {
+    else if (type = "KPRPGIBDD")
         filePath := KPRPGIBDD%num%
-    } else if (type = "KPRPDUVD") {
+    else if (type = "KPRPDUVD")
         filePath := KPRPDUVD%num%
-    } else {
+    else
         return  ; неизвестный тип
-    }
-    
+
     ; --- Проверяем существование файла ---
     if !FileExist(filePath)
         return
-    
-    ; --- Читаем и обрабатываем файл ---
+
+    ; --- Читаем файл ---
     FileRead, content, %filePath%
-	
-	; --- Вызов функций только если есть метки ---
-    if InStr(content, "%SozdatAlbom%")
-        SozdatAlbom := CreateAlbum()
 
-    if InStr(content, "%DobavitSkrin%")
-        DobavitSkrin := AddScreenshot()
+    ; --- Определяем, нужны ли функции ---
+    hasSozdatAlbom := InStr(content, "%SozdatAlbom%")
+    hasDobavitSkrin := InStr(content, "%DobavitSkrin%")
+    hasZagruzitAlbom := InStr(content, "%ZagruzitAlbom%")
 
-    if InStr(content, "%ZagruzitAlbom%")
-        ZagruzitAlbom := FinishAlbum()
-    
     ; --- Подстановка переменных ---
 	
 	content := StrReplace(content, "%Var%", Var)
@@ -1851,6 +1841,14 @@ SendTemplate(type, num) {
 	content := StrReplace(content, "%postDUVD7%", postDUVD7)
 
 
+    ; --- Убираем метки функций из текста, чтобы они не мешали отправке ---
+    if hasSozdatAlbom
+        content := StrReplace(content, "%SozdatAlbom%", "")
+    if hasDobavitSkrin
+        content := StrReplace(content, "%DobavitSkrin%", "")
+    if hasZagruzitAlbom
+        content := StrReplace(content, "%ZagruzitAlbom%", "")
+
     ; --- Разделяем на строки и отправляем ---
     Loop, parse, content, `n, `r
     {
@@ -1858,7 +1856,16 @@ SendTemplate(type, num) {
             %vybor%(A_LoopField, "  " zaderzhka " ")
         }
     }
+
+    ; --- Вызываем функции только если метки есть ---
+    if hasSozdatAlbom
+        SozdatAlbom := CreateAlbum()
+    if hasDobavitSkrin
+        DobavitSkrin := AddScreenshot()
+    if hasZagruzitAlbom
+        ZagruzitAlbom := FinishAlbum()
 }
+
 
 
 
