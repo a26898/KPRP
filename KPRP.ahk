@@ -2656,10 +2656,6 @@ Sector5:
 return
 
 Sector6:
-    MsgBox, Вы выбрали сектор 6
-return
-
-Sector7:
     GetCallNumber()
     GetPatrolName()
     WinWaitActive, ahk_exe gta_sa.exe
@@ -2668,7 +2664,11 @@ Sector7:
         SendTemplate("KPRPMZ", 626)
     } Else {
         SendTemplate("KPRPMZ", 627)
-    }
+	}	
+return
+
+Sector7:
+	SendTemplate("KPRPMZ", 25)
 return
 
 Sector8:
