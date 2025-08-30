@@ -1512,6 +1512,141 @@ GetCallNumber() {
     IniWrite, %to%, %FilePath%, %DataGroup%, CallNumber
 }
 
+; Подключаем библиотеку Gdip
+#Include Gdip_All.ahk
+
+; Инициализация Gdip
+If !pToken := Gdip_Startup()
+{
+    MsgBox, 48, Ошибка!, Не удалось инициализировать GDI+
+    ExitApp
+}
+
+; Получаем информацию об активном мониторе
+SysGet, MonitorCount, 80
+MouseGetPos, mouseX, mouseY, activeWin
+activeMonitor := GetMonitorAt(mouseX, mouseY)
+SysGet, Monitor, Monitor, %activeMonitor%
+
+; Создаем GUI (прозрачный оверлей без фокуса)
+Gui, 21: -Caption +E0x80000 +E0x20 +LastFound +AlwaysOnTop +ToolWindow +OwnDialogs
+Gui, 21: Show, NA
+hwnd1 := WinExist()
+
+; Создаем графический контекст
+hbm := CreateDIBSection(MonitorRight - MonitorLeft, MonitorBottom - MonitorTop)
+hdc := CreateCompatibleDC()
+obm := SelectObject(hdc, hbm)
+G := Gdip_GraphicsFromHDC(hdc)
+Gdip_SetSmoothingMode(G, 4)
+
+; Параметры меню (центрируем на активном мониторе)
+centerX := (MonitorRight - MonitorLeft) // 2
+centerY := (MonitorBottom - MonitorTop) // 2
+radius := 270
+sectorCount := 8
+activeSector := 0
+isMenuVisible := false
+
+; Текст для секторов
+sectors := []
+sectors.Push({text: "Пульс"})
+sectors.Push({text: "СЛР"})
+sectors.Push({text: "Что болит"})
+sectors.Push({text: "Аллергия"})
+sectors.Push({text: "Выдать карту"})
+sectors.Push({text: "Вызов"})
+sectors.Push({text: "Аптека"})
+sectors.Push({text: "Ифо.медкарте"})
+; Цвета секторов (основные и выделенные)
+colors := [0xFF34495E, 0xFF34495E, 0xFF34495E, 0xFF34495E, 0xFF34495E, 0xFF34495E, 0xFF34495E, 0xFF34495E]
+highlightColors := [0xFFEB984E, 0xFFEB984E, 0xFFEB984E, 0xFFEB984E, 0xFFEB984E, 0xFFEB984E, 0xFFEB984E, 0xFFEB984E]
+
+; === ОТРИСОВКА МЕНЮ ===
+DrawRadialMenu(hoverSector := 0) {
+    global
+    
+    ; Очищаем экран (прозрачный фон)
+    Gdip_GraphicsClear(G, 0x00000000)
+    
+    ; Рисуем сектора
+    angleStep := 360 / sectorCount
+    Loop, %sectorCount%
+    {
+        startAngle := (A_Index - 1) * angleStep
+        endAngle := A_Index * angleStep
+        
+        ; Создаем путь для сектора
+        pPath := Gdip_CreatePath()
+        Gdip_AddPathPie(pPath, centerX - radius, centerY - radius, radius * 2, radius * 2, startAngle, angleStep)
+        
+        ; Выбираем цвет
+        if (A_Index = hoverSector) {
+            pBrush := Gdip_BrushCreateSolid(highlightColors[A_Index])
+        } else {
+            pBrush := Gdip_BrushCreateSolid(colors[A_Index])
+        }
+        
+        ; Закрашиваем сектор
+        Gdip_FillPath(G, pBrush, pPath)
+        Gdip_DeleteBrush(pBrush)
+        
+        ; Обводка сектора
+        pPen := Gdip_CreatePen(0xFFFFFFFF, 2)
+        Gdip_DrawPath(G, pPen, pPath)
+        Gdip_DeletePen(pPen)
+        Gdip_DeletePath(pPath)
+        
+        ; Добавляем текст
+        textAngle := (startAngle + endAngle) / 2
+		textRadius := radius * 0.7
+        textX := centerX + (radius * 0.7) * Cos(textAngle * 3.14159 / 180)
+        textY := centerY + (radius * 0.7) * Sin(textAngle * 3.14159 / 180)
+        
+        Options := "x" textX " y" textY " Center Center cffFFFFFF r4 s24"
+        Gdip_TextToGraphics(G, sectors[A_Index].text, Options, "Arial")
+    }
+    
+    ; Центральный круг
+    pBrush := Gdip_BrushCreateSolid(0xFFFFFFFF)
+    Gdip_FillEllipse(G, pBrush, centerX - 40, centerY - 40, 80, 80)
+    Gdip_DeleteBrush(pBrush)
+    
+    ; Обновляем экран
+    UpdateLayeredWindow(hwnd1, hdc, MonitorLeft, MonitorTop, MonitorRight - MonitorLeft, MonitorBottom - MonitorTop)
+}
+
+; === Определение монитора по координатам ===
+GetMonitorAt(x, y) {
+    SysGet, monitorCount, 80
+    Loop, %monitorCount% {
+        SysGet, mon, Monitor, %A_Index%
+        if (x >= monLeft && x <= monRight && y >= monTop && y <= monBottom) {
+            return A_Index
+        }
+    }
+    return 1
+}
+
+; === Определение сектора по координатам ===
+GetSector(x, y) {
+    global centerX, centerY, sectorCount, MonitorLeft, MonitorTop
+    
+    adjX := x - MonitorLeft
+    adjY := y - MonitorTop
+    dx := adjX - centerX
+    dy := adjY - centerY
+    angle := Mod(ATan2(dy, dx) * 57.29578 + 360, 360)
+    
+    sector := Ceil(angle / (360 / sectorCount))
+    return (sector = 0) ? sectorCount : sector
+}
+
+; === Функция ATan2 ===
+ATan2(y, x) {
+    return dllcall("msvcrt\atan2", "Double",y, "Double",x, "CDECL Double")
+}
+
 
 ProverkaAdmin()
 {
@@ -2424,6 +2559,121 @@ Return
 Return
 
 
+
+
+
+
+; === Таймер для выделения сектора ===
+CheckMousePosition:
+    if (!isMenuVisible) {
+        SetTimer, CheckMousePosition, Off
+        return
+    }
+    
+    MouseGetPos, mouseX, mouseY
+    adjX := mouseX - MonitorLeft
+    adjY := mouseY - MonitorTop
+    distance := Sqrt((adjX - centerX)**2 + (adjY - centerY)**2)
+    
+    if (distance <= radius) {
+        newSector := GetSector(mouseX, mouseY)
+        if (newSector != activeSector) {
+            activeSector := newSector
+            DrawRadialMenu(activeSector)
+        }
+    } else if (activeSector != 0) {
+        activeSector := 0
+        DrawRadialMenu()
+    }
+return
+
+; === Обработка клика ===
+~LButton::
+    if (!isMenuVisible)
+        return
+    
+    MouseGetPos, mouseX, mouseY
+    adjX := mouseX - MonitorLeft
+    adjY := mouseY - MonitorTop
+    distance := Sqrt((adjX - centerX)**2 + (adjY - centerY)**2)
+    
+    if (distance <= radius)
+    {
+        sector := GetSector(mouseX, mouseY)
+        
+        ; Метки для каждого сектора
+        if (sector = 1)
+            Gosub, Sector1
+        else if (sector = 2)
+            Gosub, Sector2
+        else if (sector = 3)
+            Gosub, Sector3
+        else if (sector = 4)
+            Gosub, Sector4
+        else if (sector = 5)
+            Gosub, Sector5
+        else if (sector = 6)
+            Gosub, Sector6
+        else if (sector = 7)
+            Gosub, Sector7
+        else if (sector = 8)
+            Gosub, Sector8
+        
+        ; Скрываем меню после выбора
+        isMenuVisible := false
+        SetTimer, CheckMousePosition, Off
+        Gdip_GraphicsClear(G, 0x00000000)
+        UpdateLayeredWindow(hwnd1, hdc, MonitorLeft, MonitorTop, MonitorRight - MonitorLeft, MonitorBottom - MonitorTop)
+    }
+    else if (distance > radius + 50)
+    {
+        isMenuVisible := false
+        SetTimer, CheckMousePosition, Off
+        Gdip_GraphicsClear(G, 0x00000000)
+        UpdateLayeredWindow(hwnd1, hdc, MonitorLeft, MonitorTop, MonitorRight - MonitorLeft, MonitorBottom - MonitorTop)
+    }
+return
+
+; === Метки для каждого сектора ===
+Sector1:
+	SendTemplate("KPRPMZ", 85)
+return
+
+Sector2:
+	SendTemplate("KPRPMZ", 89)
+return
+
+Sector3:
+	SendTemplate("KPRPMZ", 2)
+return
+
+Sector4:
+	SendTemplate("KPRPMZ", 4)
+return
+
+Sector5:
+	SendTemplate("KPRPMZ", 422)
+return
+
+Sector6:
+    MsgBox, Вы выбрали сектор 6
+return
+
+Sector7:
+    GetCallNumber()
+    GetPatrolName()
+    WinWaitActive, ahk_exe gta_sa.exe
+
+    If (Patrol != "") {
+        SendTemplate("KPRPMZ", 626)
+    } Else {
+        SendTemplate("KPRPMZ", 627)
+    }
+return
+
+Sector8:
+	SendTemplate("KPRPMZ", 17)
+return
 
 Vania:
 SoundPlay,   C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_14.mp3

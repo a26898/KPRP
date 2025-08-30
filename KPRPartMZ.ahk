@@ -596,9 +596,29 @@ Return
 FinishAlbum()
 Return
 
+; === Горячая клавиша для показа/скрытия меню ===
+
 0025MZ7:
-    SendTemplate("KPRPMZ", 25)
-Return
+	SendPlay {F1} 
+    isMenuVisible := !isMenuVisible
+    if (isMenuVisible)
+    {
+        MouseGetPos, mouseX, mouseY
+        activeMonitor := GetMonitorAt(mouseX, mouseY)
+        SysGet, Monitor, Monitor, %activeMonitor%
+        
+        DrawRadialMenu()
+        SetTimer, CheckMousePosition, 50
+    }
+    else
+    {
+        SetTimer, CheckMousePosition, Off
+        Gdip_GraphicsClear(G, 0x00000000)
+        UpdateLayeredWindow(hwnd1, hdc, MonitorLeft, MonitorTop, MonitorRight - MonitorLeft, MonitorBottom - MonitorTop)
+    }
+return
+
+
 
 0026MZ7:
     SendTemplate("KPRPMZ", 26)
@@ -8649,7 +8669,7 @@ Gui, 4:Add, Edit, x170 y506 w180 vSvoyeМZ_9, %SvoyeМZ_9%
 Gui, 4:Add, Edit, x170 y566 w180 vSvoyeМZ_10, %SvoyeМZ_10%
 Gui, 4:Add, Edit, x170 y626 w180 vSvoyeМZ_11, %SvoyeМZ_11%
 Gui, 4:Add, Edit, x170 y686 w180 vSvoyeМZ_12, %SvoyeМZ_12%
-Gui, 4:Add, Edit, x170 y746 w180 vSvoyeМZ_25, %SvoyeМZ_25%
+Gui, 4:Add, Edit, x170 y746 w280 Disabled, Раделаьное меню (быстрое меню)
 
 Gui, 4:Add, Edit, x660 y26 w180 vSvoyeМZ_13, %SvoyeМZ_13%
 Gui, 4:Add, Edit, x660 y86 w180 vSvoyeМZ_14, %SvoyeМZ_14%
@@ -8678,7 +8698,7 @@ Gui, 4:Add, Picture, x370 y496 w48 h48 +BackgroundTrans gSelectKPRPMZ9,C:\Progra
 Gui, 4:Add, Picture, x370 y556 w48 h48 +BackgroundTrans gSelectKPRPMZ10,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 4:Add, Picture, x370 y616 w48 h48 +BackgroundTrans gSelectKPRPMZ11,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 4:Add, Picture, x370 y676 w48 h48 +BackgroundTrans gSelectKPRPMZ12,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 4:Add, Picture, x370 y736 w48 h48 +BackgroundTrans gSelectKPRPMZ25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+;Gui, 4:Add, Picture, x370 y736 w48 h48 +BackgroundTrans gSelectKPRPMZ25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 
 Gui, 4:Add, Picture, x860 y16 w48 h48 +BackgroundTrans gSelectKPRPMZ13,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 4:Add, Picture, x860 y76 w48 h48 +BackgroundTrans gSelectKPRPMZ14,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
@@ -8705,7 +8725,7 @@ Gui, 4:Add, Picture, x440 y496 w48 h48 +BackgroundTrans gNotebookKPRPMZ9,C:\Prog
 Gui, 4:Add, Picture, x440 y556 w48 h48 +BackgroundTrans gNotebookKPRPMZ10,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 4:Add, Picture, x440 y616 w48 h48 +BackgroundTrans gNotebookKPRPMZ11,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 4:Add, Picture, x440 y676 w48 h48 +BackgroundTrans gNotebookKPRPMZ12,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 4:Add, Picture, x440 y736 w48 h48 +BackgroundTrans gNotebookKPRPMZ25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+;Gui, 4:Add, Picture, x440 y736 w48 h48 +BackgroundTrans gNotebookKPRPMZ25,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
 Gui, 4:Add, Picture, x930 y16 w48 h48 +BackgroundTrans gNotebookKPRPMZ13,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 4:Add, Picture, x930 y76 w48 h48 +BackgroundTrans gNotebookKPRPMZ14,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
