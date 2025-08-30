@@ -1513,7 +1513,7 @@ GetCallNumber() {
 }
 
 ; Подключаем библиотеку Gdip
-#Include Gdip_All.ahk
+#Include C:\ProgramData\KPRP\KPRP-main\Gdip_All.ahk
 
 ; Инициализация Gdip
 If !pToken := Gdip_Startup()
