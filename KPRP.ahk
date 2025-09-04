@@ -2080,7 +2080,7 @@ if FileExist(selectedFile) {
 if (SelectedItem = "") {
     Gui, 2:Font, S15 Bold, Consolas
     Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\\ProgramData\\KPRP\\KPRP-main\\Ok_64.png
+    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\\KPRP-main\Ok_64.png
     Gui, 2:Show, w250 h120, Выбор организации
 }
 Return
