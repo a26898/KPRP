@@ -1,1 +1,3 @@
 say Здравствуйте, передайте свой паспорт.
+%SozdatAlbom1%
+%DobavitSkrin1%
