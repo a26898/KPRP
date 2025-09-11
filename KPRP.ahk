@@ -1077,24 +1077,28 @@ UploadAlbumPost(filesArray, token)
 }
 
 ; === Глобальные переменные ===
-global AlbumFiles := []
+global AlbumFiles := ""
 global TempFolder := A_Temp
 
 ; === Создать альбом ===
 CreateAlbum() {
     global AlbumFiles
+    if (IsObject(AlbumFiles)) {
+        ToolTip, Альбом уже создан
+        SetTimer, RemoveToolTip, -2000
+        return
+    }
     AlbumFiles := []
     ToolTip, Альбом создан.`nТеперь добавляйте скриншоты (0 сделано)
     SetTimer, RemoveToolTip, -2000
 }
 
-; === Добавить скриншот ===
+; === Добавить скриншот (создаёт альбом при необходимости) ===
 AddScreenshot() {
     global AlbumFiles, TempFolder
     if !IsObject(AlbumFiles) {
-        ToolTip, Ошибка: Сначала создайте альбом
-        SetTimer, RemoveToolTip, -2000
-        return
+        ; Если альбом не создан — создаём автоматически
+        CreateAlbum()
     }
     file := TempFolder . "\screen" . (AlbumFiles.MaxIndex() + 1) . ".png"
     if TakeScreenshot(file) {
@@ -1124,8 +1128,9 @@ FinishAlbum() {
         ToolTip, Альбом загружен.`nСкриншотов: %count%`n%link%
     }
     SetTimer, RemoveToolTip, -5000
-    AlbumFiles := [] ; очистка
+    AlbumFiles := "" ; очистка
 }
+
 
 
 ; === Токен для загрузки Медкарты === 
