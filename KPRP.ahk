@@ -1331,7 +1331,33 @@ ShowRedList() {
     Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
 }
 
+filePath := gameFolder "\MTA\logs\console.log"  ; строим путь к логу через переменную
+targetText := "Уведомление: Пациент согласился с обновлением медицинской карты."
+lastFound := ""
 
+SetTimer, CheckLastLineTimer, 1000
+
+
+; ======== Функция для проверки последней строки ==================
+CheckLastLine(filePath, targetText) {
+    global lastFound  ; используем глобальную переменную, чтобы не повторять уведомление
+
+    File := FileOpen(filePath, "r", "UTF-8")
+    if !IsObject(File)
+        return
+
+    lastLine := ""
+    while !File.AtEOF
+        lastLine := Trim(File.ReadLine())
+
+    File.Close()
+
+    if (InStr(lastLine, targetText) && lastLine != lastFound) {
+		AddScreenshot1()
+		FinishAlbum1()
+        lastFound := lastLine
+    }
+}
 
 ; === Рядом термины ===
 GetRandomWord() {
@@ -2662,7 +2688,9 @@ Return
 
 
 
-
+CheckLastLineTimer:
+    CheckLastLine(filePath, targetText)
+return
 
 
 ; === Таймер для выделения сектора ===
