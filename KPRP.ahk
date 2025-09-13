@@ -1104,7 +1104,7 @@ AddScreenshot() {
     if TakeScreenshot(file) {
         AlbumFiles.Push(file)
         count := AlbumFiles.MaxIndex()
-        ToolTip, Скриншот добавлен.`nВсего: %count% До 20 максисму.
+        ToolTip, Скриншот добавлен.`nВсего: %count% До 20 максимум.
         SetTimer, RemoveToolTip, -2000
     } else {
         ToolTip, Ошибка: Не удалось сделать скриншот
