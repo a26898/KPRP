@@ -1,13 +1,13 @@
+%SozdatAlbom1%
 speclight_onoff
 do КПК висит на поясе.
 me сняв КПК с пояса, вызвал%floor% через него дежурного врача
 do Через некоторое время пришёл врач и забрал каталку с пациентом.
 hospital
+%DobavitSkrin1%
+%DobavitSkrin%
 me зажав кнопку, начал%floor% что-то говорить в него
 r [%TAG%] Госпитализирован // Вызов:%to%.
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
-%SozdatAlbom1%
-%DobavitSkrin1%
 %ZagruzitAlbom1%
-%DobavitSkrin%
 %ZagruzitAlbom%
