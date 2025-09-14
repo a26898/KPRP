@@ -1331,16 +1331,20 @@ ShowRedList() {
     Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
 }
 
+
+
 filePath := gameFolder "\MTA\logs\console.log"  ; строим путь к логу через переменную
-targetText := "Уведомление: Пациент согласился с обновлением медицинской карты."
 lastFound := ""
+
+notif1 := "Уведомление: Пациент согласился с обновлением медицинской карты."
+notif2 := "Уведомление: Пациент согласился с получением медицинской карты."
+
 
 SetTimer, CheckLastLineTimer, 1000
 
-
 ; ======== Функция для проверки последней строки ==================
-CheckLastLine(filePath, targetText) {
-    global lastFound  ; используем глобальную переменную, чтобы не повторять уведомление
+CheckLastLine(filePath) {
+    global lastFound, notif1, notif2, notif3
 
     File := FileOpen(filePath, "r", "UTF-8")
     if !IsObject(File)
@@ -1352,12 +1356,25 @@ CheckLastLine(filePath, targetText) {
 
     File.Close()
 
-    if (InStr(lastLine, targetText) && lastLine != lastFound) {
-		AddScreenshot1()
-		FinishAlbum1()
+    if (lastLine != lastFound) {
+        if (InStr(lastLine, notif1)) {
+            AddScreenshot1()
+            FinishAlbum1()
+        }
+        else if (InStr(lastLine, notif2)) {
+            AddScreenshot1()
+            FinishAlbum1()
+        }
+		
         lastFound := lastLine
     }
 }
+
+
+
+
+
+
 
 ; === Рядом термины ===
 GetRandomWord() {
@@ -2689,7 +2706,7 @@ Return
 
 
 CheckLastLineTimer:
-    CheckLastLine(filePath, targetText)
+    CheckLastLine(filePath)
 return
 
 
