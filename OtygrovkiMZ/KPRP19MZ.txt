@@ -1,2 +1,3 @@
 me переложил%floor% человека на каталку 
 loadcouch
+%DobavitSkrin2%

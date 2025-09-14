@@ -4,3 +4,5 @@ r [%TAG%] Обработан на месте // Вызов:%to%  // Бригад
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
 %DobavitSkrin%
 %ZagruzitAlbom%
+%DobavitSkrin2%
+%ZagruzitAlbom2%

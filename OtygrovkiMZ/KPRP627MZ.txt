@@ -8,3 +8,5 @@ me зажав кнопку на КПК, начал%floor% что-то говор
 r [%TAG%] Принял%floor% вызов:%to%.
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
 %DobavitSkrin%
+%SozdatAlbom2%
+%DobavitSkrin2%

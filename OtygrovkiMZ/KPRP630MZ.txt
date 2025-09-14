@@ -4,3 +4,5 @@ r [%TAG%] Ложный // Вызов:%to% // Бригада:%Patrol%.
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
 %DobavitSkrin%
 %ZagruzitAlbom%
+%DobavitSkrin2%
+%ZagruzitAlbom2%

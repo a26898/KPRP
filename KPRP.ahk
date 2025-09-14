@@ -1133,17 +1133,17 @@ FinishAlbum() {
 
 
 
-; === Токен для загрузки Медкарты === 
+; === Токен для загрузки Медкарты  ===  
 global ImgChestToken1 := "FdxlBAeh999urbVF8AG1hDgALOWIE6Wysupj3tev76933211"
 
-; === Папка для скринов Медкарты ===
+; === Папка для скринов Медкарты  ===
 global TempFolder1 := A_Temp . "\screenshots1"
 FileCreateDir, %TempFolder1%
 
 ; === Массив для хранения файлов Медкарты ===
 global AlbumFiles1 := []
 
-; === Функция для скриншотов Медкарты ===
+; === Функция для скриншотов Медкарты  ===
 TakeScreenshot1(filePath) {
     psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
     psCmd .= "$bmp = New-Object Drawing.Bitmap([System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width,[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height); "
@@ -1157,16 +1157,13 @@ TakeScreenshot1(filePath) {
         return false
 }
 
-; === Функция загрузки альбома Медкарты ===
 UploadAlbumPost1(filesArray, token) {
     curlCmd := "curl -s -H ""Authorization: Bearer " . token . """" 
     for index, file in filesArray
-        curlCmd .= " -F ""images[]=@""" . file . """"""
+        curlCmd .= " -F ""images[]=@""" . file . """""" 
     curlCmd .= " https://api.imgchest.com/v1/post"
-
     RunWait, %ComSpec% /C %curlCmd% > "%A_Temp%\imgchest_response.json",, Hide
     FileRead, resp, %A_Temp%\imgchest_response.json
-
     if RegExMatch(resp, """link"":\s*""([^""]+)""", m) {
         link := m1
         StringReplace, link, link, \, /, All
@@ -1177,37 +1174,103 @@ UploadAlbumPost1(filesArray, token) {
         return ""
 }
 
-; === Создать альбом Медкарты ===
 CreateAlbum1() {
     global AlbumFiles1
     AlbumFiles1 := []
 }
 
-; === Добавить скриншот (автоматически создаёт альбом, если его нет Медкарты) ===
 AddScreenshot1() {
     global AlbumFiles1, TempFolder1
     if !IsObject(AlbumFiles1)
         CreateAlbum1()
-
     file := TempFolder1 . "\screen1_" . (AlbumFiles1.MaxIndex() + 1) . ".png"
     if TakeScreenshot1(file) {
         AlbumFiles1.Push(file)
     }
 }
 
-; === Завершить альбом и загрузить (автоматически создаёт, если его нет) Медкарты ===
 FinishAlbum1() {
     global AlbumFiles1, ImgChestToken1
     if !IsObject(AlbumFiles1)
         CreateAlbum1()
-
     if AlbumFiles1.MaxIndex() = 0
         return ""
-
     link := UploadAlbumPost1(AlbumFiles1, ImgChestToken1)
-    AlbumFiles1 := [] ; очистка
+    AlbumFiles1 := []
     return link
 }
+
+; ================== ВЕРСИЯ 2 ==================
+
+; === Токен для загрузки Вызова 2 ===  
+global ImgChestToken2 := "7B1PNek8jf80Il1YR8iAeTnsObZ451pYTXk5S5MT7fecdcf0"
+
+; === Папка для скринов Вызова 2 ===
+global TempFolder2 := A_Temp . "\screenshots2"
+FileCreateDir, %TempFolder2%
+
+; === Массив для хранения файлов Вызова 2 ===
+global AlbumFiles2 := []
+
+; === Функция для скриншотов Вызова 2 ===
+TakeScreenshot2(filePath) {
+    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
+    psCmd .= "$bmp = New-Object Drawing.Bitmap([System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width,[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height); "
+    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
+    psCmd .= "$gfx.CopyFromScreen([System.Drawing.Point]::Empty,[System.Drawing.Point]::Empty,$bmp.Size); "
+    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
+    RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
+    IfExist, %filePath%
+        return true
+    else
+        return false
+}
+
+UploadAlbumPost2(filesArray, token) {
+    curlCmd := "curl -s -H ""Authorization: Bearer " . token . """" 
+    for index, file in filesArray
+        curlCmd .= " -F ""images[]=@""" . file . """""" 
+    curlCmd .= " https://api.imgchest.com/v1/post"
+    RunWait, %ComSpec% /C %curlCmd% > "%A_Temp%\imgchest_response.json",, Hide
+    FileRead, resp, %A_Temp%\imgchest_response.json
+    if RegExMatch(resp, """link"":\s*""([^""]+)""", m) {
+        link := m1
+        StringReplace, link, link, \, /, All
+        if !RegExMatch(link, "^https?://")
+            link := "https://" link
+        return link
+    } else
+        return ""
+}
+
+CreateAlbum2() {
+    global AlbumFiles2
+    AlbumFiles2 := []
+}
+
+AddScreenshot2() {
+    global AlbumFiles2, TempFolder2
+    if !IsObject(AlbumFiles2)
+        CreateAlbum2()
+    file := TempFolder2 . "\screen2_" . (AlbumFiles2.MaxIndex() + 1) . ".png"
+    if TakeScreenshot2(file) {
+        AlbumFiles2.Push(file)
+    }
+}
+
+FinishAlbum2() {
+    global AlbumFiles2, ImgChestToken2
+    if !IsObject(AlbumFiles2)
+        CreateAlbum2()
+    if AlbumFiles2.MaxIndex() = 0
+        return ""
+    link := UploadAlbumPost2(AlbumFiles2, ImgChestToken2)
+    AlbumFiles2 := []
+    return link
+}
+
+
+
 
 
 
@@ -2061,6 +2124,10 @@ SendTemplate(type, num) {
 	hasSozdatAlbom1 := InStr(content, "%SozdatAlbom1%")
     hasDobavitSkrin1 := InStr(content, "%DobavitSkrin1%")
     hasZagruzitAlbom1 := InStr(content, "%ZagruzitAlbom1%")
+	hasSozdatAlbom2 := InStr(content, "%SozdatAlbom2%")
+    hasDobavitSkrin2 := InStr(content, "%DobavitSkrin2%")
+    hasZagruzitAlbom2 := InStr(content, "%ZagruzitAlbom2%")
+
 
     ; --- Подстановка переменных ---
 	
@@ -2078,6 +2145,10 @@ SendTemplate(type, num) {
 	content := StrReplace(content, "%SozdatAlbom1%", SozdatAlbom1)
 	content := StrReplace(content, "%DobavitSkrin1%", DobavitSkrin1)
 	content := StrReplace(content, "%ZagruzitAlbom1%", ZagruzitAlbom1)
+	content := StrReplace(content, "%SozdatAlbom2%", SozdatAlbom2)
+	content := StrReplace(content, "%DobavitSkrin2%", DobavitSkrin2)
+	content := StrReplace(content, "%ZagruzitAlbom2%", ZagruzitAlbom2)
+
 	
     content := StrReplace(content, "%Name%", Name)
     content := StrReplace(content, "%Surname%", Surname)
@@ -2122,6 +2193,13 @@ SendTemplate(type, num) {
         content := StrReplace(content, "%DobavitSkrin1%", "")
     if hasZagruzitAlbom1
         content := StrReplace(content, "%ZagruzitAlbom1%", "")	
+	if hasSozdatAlbom2
+        content := StrReplace(content, "%SozdatAlbom2%", "")
+    if hasDobavitSkrin2
+        content := StrReplace(content, "%DobavitSkrin2%", "")
+    if hasZagruzitAlbom2
+        content := StrReplace(content, "%ZagruzitAlbom2%", "")		
+
 
     ; --- Разделяем на строки и отправляем ---
     Loop, parse, content, `n, `r
@@ -2143,7 +2221,13 @@ SendTemplate(type, num) {
     if hasDobavitSkrin1
         DobavitSkrin1 := AddScreenshot1()
     if hasZagruzitAlbom1
-        ZagruzitAlbom1 := FinishAlbum1()	
+        ZagruzitAlbom1 := FinishAlbum1()
+	if hasSozdatAlbom2
+        SozdatAlbom2 := CreateAlbum2()
+    if hasDobavitSkrin2
+        DobavitSkrin2 := AddScreenshot2()
+    if hasZagruzitAlbom2
+        ZagruzitAlbom2 := FinishAlbum2()	
 }
 
 
