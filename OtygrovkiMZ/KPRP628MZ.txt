@@ -6,5 +6,8 @@ hospital
 me зажав кнопку, начал%floor% что-то говорить в него
 r [%TAG%] Госпитализирован // Вызов:%to% // Бригада:%Patrol%.
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
+%SozdatAlbom1%
+%DobavitSkrin1%
+%ZagruzitAlbom1%
 %DobavitSkrin%
 %ZagruzitAlbom%
