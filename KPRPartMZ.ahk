@@ -3290,8 +3290,10 @@ Return
 
 :?:/Вызов_2::
     If (Patrol != "") {
+		AddScreenshot2()
         SendTemplate("KPRPMZ", 628)
     } Else {
+		AddScreenshot2()
         SendTemplate("KPRPMZ", 629)
     }
 Return
