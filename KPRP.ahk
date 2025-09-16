@@ -2259,8 +2259,6 @@ SendTemplate(type, num) {
 }
 
 
-
-
 KPRPico := "C:\\ProgramData\\KPRP\\KPRP-main\\KPRP.ico" 
 if !FileExist(KPRPico) {
     MsgBox, Ошибка: Файл %KPRPico% не найден!
@@ -2269,14 +2267,48 @@ if !FileExist(KPRPico) {
 }
 
 
-if (!FileExist(gameFolder "\Multi Theft Auto.exe")) {
-    FileSelectFolder, gameFolder,, 0, Выберите папку, где установлена MTA Province! Пример:C:\Province Games
-    if (gameFolder = "") {
-        MsgBox, Ошибка! Папка не выбрана. Скрипт завершит работу.
-        ExitApp
+; Путь к ini-файлу
+iniFile := "C:\ProgramData\KPRP\KPRP-main\Province.ini"
+
+; Читаем путь из ini, если он есть
+IniRead, gameFolder, %iniFile%, Mta, gameFolder, 
+
+; Функция для поиска файла на всех дисках
+FindGameOnAllDrives() {
+    ; Список дисков
+    drives := ""
+    DriveGet, drives, List
+    
+    ; Проходим по всем дискам
+    Loop, Parse, drives
+    {
+        drive := A_LoopField ":"
+        ; Ищем файл рекурсивно
+        Loop, Files, %drive%\Multi Theft Auto.exe, R
+        {
+            return A_LoopFileDir
+        }
     }
-    IniWrite, %gameFolder%, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
+    return ""  ; Если не найдено
 }
+
+; Проверяем, есть ли уже путь и файл
+if (gameFolder = "" || !FileExist(gameFolder "\Multi Theft Auto.exe")) {
+    gameFolder := FindGameOnAllDrives()
+
+    ; Если не нашли — предлагаем выбрать папку вручную
+    if (gameFolder = "" || !FileExist(gameFolder "\Multi Theft Auto.exe")) {
+        FileSelectFolder, gameFolder,, 0, Выберите папку, где установлена MTA Province!
+        if (gameFolder = "") {
+            MsgBox, Ошибка! Папка не выбрана. Скрипт завершит работу.
+            ExitApp
+        }
+    }
+
+    ; Сохраняем путь в ini
+    IniWrite, %gameFolder%, %iniFile%, Mta, gameFolder
+}
+
 
 IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 

@@ -2,7 +2,5 @@ do КПК висит на поясе.
 me снял%floor% КПК с пояса и, зажав кнопку, начал%floor% что-то говорить в него
 r [%TAG%] Ложный // Вызов:%to% // Бригада:%Patrol%.
 me отжав кнопку, закончил%floor% что-то говорить в КПК и повесил%floor% его обратно на пояс
-%DobavitSkrin%
-%ZagruzitAlbom%
 %DobavitSkrin2%
 %ZagruzitAlbom2%
