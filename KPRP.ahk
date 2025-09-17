@@ -1035,9 +1035,17 @@ Menu, Tray, Add, GuiClose
 Menu, Tray, Rename, GuiClose,  Выход
 
 
+; === Глобальный обработчик блокированных клавиш ===
+BlockKeysHandler() {
+    ; Просто ничего не делаем, клавиша будет игнорироваться
+    return
+}
+
 TempFolder := A_Temp . "\screenshots"
 FileCreateDir, %TempFolder%
 AlbumFiles := []
+
+
 
 
 TakeScreenshot(filePath) {
@@ -1046,11 +1054,11 @@ TakeScreenshot(filePath) {
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; === Блокируем Alt+Tab, Win и Ctrl+Esc ===
-    Hotkey, !Tab, BlockKeys, On
-    Hotkey, LWin, BlockKeys, On
-    Hotkey, RWin, BlockKeys, On
-    Hotkey, ^Esc, BlockKeys, On
+    ; === Блокируем Alt+Tab, Win и Ctrl+Esc через общий обработчик ===
+    Hotkey, !Tab, BlockKeysHandler, On
+    Hotkey, LWin, BlockKeysHandler, On
+    Hotkey, RWin, BlockKeysHandler, On
+    Hotkey, ^Esc, BlockKeysHandler, On
 
     ; Активируем игру
     WinActivate, ahk_exe gta_sa.exe
@@ -1083,9 +1091,6 @@ TakeScreenshot(filePath) {
         return true
     else
         return false
-
-    BlockKeys:
-    return
 }
 
 
@@ -1185,11 +1190,11 @@ TakeScreenshot1(filePath) {
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; === Блокируем Alt+Tab, Win и Ctrl+Esc ===
-    Hotkey, !Tab, BlockKeys, On
-    Hotkey, LWin, BlockKeys, On
-    Hotkey, RWin, BlockKeys, On
-    Hotkey, ^Esc, BlockKeys, On
+    ; === Блокируем Alt+Tab, Win и Ctrl+Esc через общий обработчик ===
+    Hotkey, !Tab, BlockKeysHandler, On
+    Hotkey, LWin, BlockKeysHandler, On
+    Hotkey, RWin, BlockKeysHandler, On
+    Hotkey, ^Esc, BlockKeysHandler, On
 
     ; Активируем игру
     WinActivate, ahk_exe gta_sa.exe
@@ -1222,9 +1227,6 @@ TakeScreenshot1(filePath) {
         return true
     else
         return false
-
-    BlockKeys:
-    return
 }
 
 
@@ -1293,11 +1295,11 @@ TakeScreenshot2(filePath) {
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; === Блокируем Alt+Tab, Win и Ctrl+Esc ===
-    Hotkey, !Tab, BlockKeys, On
-    Hotkey, LWin, BlockKeys, On
-    Hotkey, RWin, BlockKeys, On
-    Hotkey, ^Esc, BlockKeys, On
+    ; === Блокируем Alt+Tab, Win и Ctrl+Esc через общий обработчик ===
+    Hotkey, !Tab, BlockKeysHandler, On
+    Hotkey, LWin, BlockKeysHandler, On
+    Hotkey, RWin, BlockKeysHandler, On
+    Hotkey, ^Esc, BlockKeysHandler, On
 
     ; Активируем игру
     WinActivate, ahk_exe gta_sa.exe
@@ -1330,9 +1332,6 @@ TakeScreenshot2(filePath) {
         return true
     else
         return false
-
-    BlockKeys:
-    return
 }
 
 
