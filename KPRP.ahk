@@ -1347,9 +1347,12 @@ CloseBadProcesses() {
 }
 
 
+; === ВЗ + КС в одном окне с авторазмером и активным монитором ===
+; === ВЗ + КС с поиском и авторазмером ===
+global SearchBox, ListBox, originalList
 
-; === ВЗ КС ===
 ShowRedList() {
+    global SearchBox, ListBox, originalList
 
     SetTitleMatchMode, 2
     FileEncoding, UTF-8
@@ -1363,9 +1366,8 @@ ShowRedList() {
         return
     }
 
-    content := "Временный запрет                     Красный список`n"
-    content .= "---------------------------------------------------------------`n"
-
+    ; Читаем файл и формируем исходный список
+    originalList := []
     FileRead, fileData, %savePath%
     Loop, Parse, fileData, `n, `r
     {
@@ -1374,53 +1376,106 @@ ShowRedList() {
         line := A_LoopField
         fields := StrSplit(line, "`t")
         if (fields.Length() >= 9) {
+            ; Ник и паспорт без обрезки
             nickE := fields[4]
             passF := fields[5]
             nickH := fields[7]
             passI := fields[8]
 
-            ; Выравнивание
-            nickE := Format("{:-20}", nickE)
-            passF := Format("{:-12}", passF)
-            nickH := Format("{:-30}", nickH)
-
-            if (nickE != "" || nickH != "")
-                content .= nickE passF "|   " nickH passI "`n"
+            if (nickE != "")
+                originalList.Push({type: "vz", text: Format("{:-25} {:15}", nickE, passF), nick: nickE, pass: passF})
+            if (nickH != "")
+                originalList.Push({type: "ks", text: Format("{:-25} {:15}", nickH, passI), nick: nickH, pass: passI})
         }
     }
 
-    ; Подсчёт строк
-    lines := 0
-    Loop, Parse, content, `n, `r
-        lines++
-
-    lineHeight := 18
-    maxHeight := 600
-    height := lines * lineHeight
-    if (height > maxHeight)
-        height := maxHeight
-
-    winWidth := 740
-    winHeight := height
-
-    ; Позиция окна
-    monitorInfo := GetActiveMonitorInfo()
-    if monitorInfo {
-        xPos := monitorInfo.right - winWidth - 40
-        yPos := monitorInfo.top + 40
-    } else {
-        SysGet, primary, MonitorPrimary
-        SysGet, mon, Monitor, %primary%
-        xPos := monRight - winWidth - 40
-        yPos := monTop + 40
+    ; Определяем активный монитор
+    WinGetPos, winX, winY,,, A
+    SysGet, monitorCount, MonitorCount
+    activeMon := 1
+    Loop %monitorCount% {
+        SysGet, mon, Monitor, %A_Index%
+        if (winX >= monLeft && winX < monRight && winY >= monTop && winY < monBottom) {
+            activeMon := A_Index
+            break
+        }
     }
+    SysGet, mon, Monitor, %activeMon%
 
+    ; Автоширина по самой длинной строке
+    maxLineLen := 0
+    Loop, % originalList.MaxIndex() {
+        item := originalList[A_Index]
+        if (StrLen(item.text) > maxLineLen)
+            maxLineLen := StrLen(item.text)
+    }
+    charWidth := 7
+    winWidth := maxLineLen * charWidth + 20
+    if (winWidth > (monRight - monLeft) * 0.2)
+        winWidth := (monRight - monLeft) * 0.2
+
+    winHeight := 750
+    xPos := monRight - winWidth - 20
+    yPos := monTop + 40
+
+    ; Создаем GUI
     Gui, ВЗ:New
     Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
     Gui, Font, s10, Courier New
-    Gui, Add, Edit, w%winWidth% h%winHeight% ReadOnly, %content%
-    Gui, Show, NoActivate x%xPos% y%yPos%, КС ВЗ
+
+    ; Надпись и поле поиска
+    Gui, Add, Text,, Поиск:
+    Gui, Add, Edit, vSearchBox w%winWidth% h25 gUpdateList
+
+    ; Основной список
+    fullContent := GetFullContent(originalList)
+    Gui, Add, Edit, vListBox w%winWidth% h%winHeight% ReadOnly VScroll +Wrap, %fullContent%
+
+    Gui, Show, NoActivate x%xPos% y%yPos%, ВЗ+КС
+    return
 }
+
+
+
+; Возвращает полный список текста
+GetFullContent(list) {
+    content := "Временный запрет`n-----------------------`n"
+    ; Сначала VZ
+    Loop, % list.MaxIndex() {
+        item := list[A_Index]
+        if (item.type = "vz")
+            content .= item.text "`n"
+    }
+    ; Потом KS
+    content .= "`nКрасный список`n-----------------------`n"
+    Loop, % list.MaxIndex() {
+        item := list[A_Index]
+        if (item.type = "ks")
+            content .= item.text "`n"
+    }
+    return content
+}
+
+; Фильтрует список по введённому тексту
+FilterList(list, term) {
+    if term =
+        return GetFullContent(list)
+    content := "Временный запрет`n-----------------------`n"
+    Loop, % list.MaxIndex() {
+        item := list[A_Index]
+        if (item.type = "vz" && (InStr(item.nick, term) || InStr(item.pass, term)))
+            content .= item.text "`n"
+    }
+    content .= "`nКрасный список`n-----------------------`n"
+    Loop, % list.MaxIndex() {
+        item := list[A_Index]
+        if (item.type = "ks" && (InStr(item.nick, term) || InStr(item.pass, term)))
+            content .= item.text "`n"
+    }
+    return content
+}
+
+
 
 
 
@@ -2847,7 +2902,12 @@ Return
     SendTemplate("Redakt", 97)
 Return
 
-
+UpdateList:
+global SearchBox, ListBox, originalList
+Gui, Submit, NoHide
+filteredContent := FilterList(originalList, SearchBox)
+GuiControl,, ListBox, %filteredContent%
+return
 
 CheckLastLineTimer:
     CheckLastLine(filePath)
