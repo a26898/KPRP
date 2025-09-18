@@ -1042,64 +1042,49 @@ FileCreateDir, %TempFolder%
 AlbumFiles := []
 
 
-
 ; Глобальная функция для блокировки клавиш
 BlockKeysHandler() {
     return  ; просто игнорируем комбинации клавиш
 }
 
 TakeScreenshot(filePath) {
-    ; Ждём окно GTA:SA
-    WinWait, ahk_exe gta_sa.exe
+    ; Ждём активного окна GTA:SA
+    WinWaitActive, ahk_exe gta_sa.exe
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; Блокируем Alt+Tab, Win и Ctrl+Esc
+    ; ===== Блокируем Alt+Tab, Win и Ctrl+Esc =====
     Hotkey, !Tab, BlockKeysHandler, On
     Hotkey, LWin, BlockKeysHandler, On
     Hotkey, RWin, BlockKeysHandler, On
     Hotkey, ^Esc, BlockKeysHandler, On
 
-    ; Активируем игру
-    WinActivate, ahk_exe gta_sa.exe
-    WinWaitActive, ahk_exe gta_sa.exe
-
-    ; Пытаемся получить размеры окна GTA
+    ; Берём координаты и размеры активного окна
     WinGetPos, X, Y, W, H, ahk_exe gta_sa.exe
 
-    ; Если размеры окна некорректные — делаем скрин активного монитора
-    if (W <= 0 || H <= 0) {
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$scr = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap($scr.Width, $scr.Height); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen($scr.Left, $scr.Top, 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
-    else {
-        ; Иначе делаем скрин только окна GTA
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
+    ; Формируем команду PowerShell для скриншота только этого окна
+    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
+    psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
+    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
+    psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
+    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
 
-    ; Запускаем PowerShell для создания скрина
+    ; Запускаем PowerShell
     RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
 
-    ; Снимаем блокировку альтаба
+    ; ===== Снимаем блокировку после скрина =====
     Hotkey, !Tab, Off
     Hotkey, LWin, Off
     Hotkey, RWin, Off
     Hotkey, ^Esc, Off
 
-    ; Проверяем файл
+    ; Проверяем, что файл создан
     IfExist, %filePath%
         return true
     else
         return false
 }
+
 
 
 UploadAlbumPost(filesArray, token)
@@ -1194,52 +1179,37 @@ global AlbumFiles1 := []
 ; === Функция для скриншотов Медкарты  ===
 
 TakeScreenshot1(filePath) {
-    ; Ждём окно GTA:SA
-    WinWait, ahk_exe gta_sa.exe
+    ; Ждём активного окна GTA:SA
+    WinWaitActive, ahk_exe gta_sa.exe
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; Блокируем Alt+Tab, Win и Ctrl+Esc
+    ; ===== Блокируем Alt+Tab, Win и Ctrl+Esc =====
     Hotkey, !Tab, BlockKeysHandler, On
     Hotkey, LWin, BlockKeysHandler, On
     Hotkey, RWin, BlockKeysHandler, On
     Hotkey, ^Esc, BlockKeysHandler, On
 
-    ; Активируем игру
-    WinActivate, ahk_exe gta_sa.exe
-    WinWaitActive, ahk_exe gta_sa.exe
-
-    ; Пытаемся получить размеры окна GTA
+    ; Берём координаты и размеры активного окна
     WinGetPos, X, Y, W, H, ahk_exe gta_sa.exe
 
-    ; Если размеры окна некорректные — делаем скрин активного монитора
-    if (W <= 0 || H <= 0) {
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$scr = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap($scr.Width, $scr.Height); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen($scr.Left, $scr.Top, 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
-    else {
-        ; Иначе делаем скрин только окна GTA
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
+    ; Формируем команду PowerShell для скриншота только этого окна
+    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
+    psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
+    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
+    psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
+    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
 
-    ; Запускаем PowerShell для создания скрина
+    ; Запускаем PowerShell
     RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
 
-    ; Снимаем блокировку альтаба
+    ; ===== Снимаем блокировку после скрина =====
     Hotkey, !Tab, Off
     Hotkey, LWin, Off
     Hotkey, RWin, Off
     Hotkey, ^Esc, Off
 
-    ; Проверяем файл
+    ; Проверяем, что файл создан
     IfExist, %filePath%
         return true
     else
@@ -1309,52 +1279,37 @@ global AlbumFiles2 := []
 ; === Функция для скриншотов Вызова 2 ===
 
 TakeScreenshot2(filePath) {
-    ; Ждём окно GTA:SA
-    WinWait, ahk_exe gta_sa.exe
+    ; Ждём активного окна GTA:SA
+    WinWaitActive, ahk_exe gta_sa.exe
     if !WinExist("ahk_exe gta_sa.exe")
         return false
 
-    ; Блокируем Alt+Tab, Win и Ctrl+Esc
+    ; ===== Блокируем Alt+Tab, Win и Ctrl+Esc =====
     Hotkey, !Tab, BlockKeysHandler, On
     Hotkey, LWin, BlockKeysHandler, On
     Hotkey, RWin, BlockKeysHandler, On
     Hotkey, ^Esc, BlockKeysHandler, On
 
-    ; Активируем игру
-    WinActivate, ahk_exe gta_sa.exe
-    WinWaitActive, ahk_exe gta_sa.exe
-
-    ; Пытаемся получить размеры окна GTA
+    ; Берём координаты и размеры активного окна
     WinGetPos, X, Y, W, H, ahk_exe gta_sa.exe
 
-    ; Если размеры окна некорректные — делаем скрин активного монитора
-    if (W <= 0 || H <= 0) {
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$scr = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap($scr.Width, $scr.Height); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen($scr.Left, $scr.Top, 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
-    else {
-        ; Иначе делаем скрин только окна GTA
-        psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-        psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
-        psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-        psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
-        psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-    }
+    ; Формируем команду PowerShell для скриншота только этого окна
+    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
+    psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
+    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
+    psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
+    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
 
-    ; Запускаем PowerShell для создания скрина
+    ; Запускаем PowerShell
     RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
 
-    ; Снимаем блокировку альтаба
+    ; ===== Снимаем блокировку после скрина =====
     Hotkey, !Tab, Off
     Hotkey, LWin, Off
     Hotkey, RWin, Off
     Hotkey, ^Esc, Off
 
-    ; Проверяем файл
+    ; Проверяем, что файл создан
     IfExist, %filePath%
         return true
     else
