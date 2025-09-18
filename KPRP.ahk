@@ -1035,20 +1035,17 @@ Menu, Tray, Add, GuiClose
 Menu, Tray, Rename, GuiClose,  Выход
 
 
-; === Глобальный обработчик блокированных клавиш ===
-BlockKeysHandler() {
-    ; Просто ничего не делаем, клавиша будет игнорироваться
-    return
-}
+
 
 TempFolder := A_Temp . "\screenshots"
 FileCreateDir, %TempFolder%
 AlbumFiles := []
 
 
-; Глобальный обработчик заблокированных клавиш
+
+; Глобальная функция для блокировки клавиш
 BlockKeysHandler() {
-    return
+    return  ; просто игнорируем комбинации клавиш
 }
 
 TakeScreenshot(filePath) {
@@ -1195,10 +1192,6 @@ FileCreateDir, %TempFolder1%
 global AlbumFiles1 := []
 
 ; === Функция для скриншотов Медкарты  ===
-; Глобальный обработчик заблокированных клавиш
-BlockKeysHandler() {
-    return
-}
 
 TakeScreenshot1(filePath) {
     ; Ждём окно GTA:SA
@@ -1314,10 +1307,6 @@ FileCreateDir, %TempFolder2%
 global AlbumFiles2 := []
 
 ; === Функция для скриншотов Вызова 2 ===
-; Глобальный обработчик заблокированных клавиш
-BlockKeysHandler() {
-    return
-}
 
 TakeScreenshot2(filePath) {
     ; Ждём окно GTA:SA
