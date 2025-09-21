@@ -1042,6 +1042,7 @@ FileCreateDir, %TempFolder%
 AlbumFiles := []
 
 
+
 ; Глобальная функция для блокировки клавиш
 BlockKeysHandler() {
     return  ; просто игнорируем комбинации клавиш
