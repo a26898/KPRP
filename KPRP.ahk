@@ -1632,6 +1632,41 @@ GetRandomMedicalWord() {
     return Words[rand]
 }
 
+
+GetRandomColoredDigits() {
+    Digits := []
+    Digits[1] := "do На фотографии изображена цифра 1, составленная из цветных кружков."
+    Digits[2] := "do На фотографии изображена цифра 2, составленная из цветных кружков."
+    Digits[3] := "do На фотографии изображена цифра 3, составленная из цветных кружков."
+    Digits[4] := "do На фотографии изображена цифра 4, составленная из цветных кружков."
+    Digits[5] := "do На фотографии изображена цифра 5, составленная из цветных кружков."
+    Digits[6] := "do На фотографии изображена цифра 6, составленная из цветных кружков."
+    Digits[7] := "do На фотографии изображена цифра 7, составленная из цветных кружков."
+    Digits[8] := "do На фотографии изображена цифра 8, составленная из цветных кружков."
+    Digits[9] := "do На фотографии изображена цифра 9, составленная из цветных кружков."
+    Digits[10] := "do На фотографии изображено число 10, составленное из цветных кружков."
+    Digits[11] := "do На фотографии изображено число 11, составленное из цветных кружков."
+    Digits[12] := "do На фотографии изображено число 12, составленное из цветных кружков."
+    Digits[13] := "do На фотографии изображено число 13, составленное из цветных кружков."
+    Digits[14] := "do На фотографии изображено число 14, составленное из цветных кружков."
+    Digits[15] := "do На фотографии изображено число 15, составленное из цветных кружков."
+    Digits[16] := "do На фотографии изображено число 16, составленное из цветных кружков."
+    Digits[17] := "do На фотографии изображено число 17, составленное из цветных кружков."
+    Digits[18] := "do На фотографии изображено число 18, составленное из цветных кружков."
+    Digits[19] := "do На фотографии изображено число 19, составленное из цветных кружков."
+    Digits[20] := "do На фотографии изображено число 20, составленное из цветных кружков."
+    Digits[21] := "do На фотографии изображено число 21, составленное из цветных кружков."
+    Digits[22] := "do На фотографии изображено число 22, составленное из цветных кружков."
+    Digits[23] := "do На фотографии изображено число 23, составленное из цветных кружков."
+    Digits[24] := "do На фотографии изображено число 24, составленное из цветных кружков."
+    Digits[25] := "do На фотографии изображено число 25, составленное из цветных кружков."
+
+    Random, rand, 1, Digits.Length()
+    return Digits[rand]
+}
+
+
+
 ; === Рядом тренировка МЗ ===
 GetRandomProcedure() {
     Procedures := []
@@ -2225,7 +2260,7 @@ SelectObjects(objectNumber) {
 SendTemplate(type, num) {
     ; --- Глобальные переменные ---
     global floor, Name, Surname, Bol_ro_1, Bol_ro_3, JWI, TAG, Middle_Name, Skrin_1, Female, stol, Terms, 
-    global TermsMZ, WorkoutMZ, WorkoutMZ1, MPMZ, MPMZ1, Post, Patrol, to
+    global TermsMZ, TermsMZ2, WorkoutMZ, WorkoutMZ1, MPMZ, MPMZ1, Post, Patrol, to
     global SurnameGIBDD7, rankGIBDD7, OtdelGIBDD7, CityGIBDD7
     global rankDUVD7, CityDUVD7, PozyvnoyDUVD7, surnameDUVD7, TegDUVD7, NameDUVD7, postDUVD7
     global vybor, zaderzhka
@@ -2238,6 +2273,7 @@ SendTemplate(type, num) {
     Var := Greeting()
     Terms := GetRandomWord()
     TermsMZ := GetRandomMedicalWord()
+	TermsMZ2 := GetRandomColoredDigits()
     WorkoutMZ1 := WorkoutMZ
     WorkoutMZ := GetRandomProcedure()
     MPMZ1 := MPMZ  
@@ -2306,6 +2342,7 @@ SendTemplate(type, num) {
     content := StrReplace(content, "%Middle_Name%", Middle_Name)
     content := StrReplace(content, "%stol%", stol)
 	content := StrReplace(content, "%TermsMZ%", TermsMZ)
+	content := StrReplace(content, "%TermsMZ2%", TermsMZ2)
 	content := StrReplace(content, "%WorkoutMZ%", WorkoutMZ)
 	content := StrReplace(content, "%WorkoutMZ1%", WorkoutMZ1)
 	content := StrReplace(content, "%MPMZ%", MPMZ)

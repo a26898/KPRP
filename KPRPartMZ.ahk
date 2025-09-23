@@ -5903,11 +5903,11 @@ Gui, 3:Add, Text, x70 y445 h500 w370 +BackgroundTrans, [Измерить вес]
 Gui, 3:Add, Text, x70 y505 h500 w370 +BackgroundTrans, [Измерить рост]
 Gui, 3:Add, Text, x70 y565 h500 w370 +BackgroundTrans, [Термины]
 Gui, 3:Add, Text, x70 y625 h500 w370 +BackgroundTrans, [Цветная фотография (только для сотрудников)]
-Gui, 3:Add, Text, x70 y685 h500 w370 +BackgroundTrans, [На фотографии изображён дом (только для сотрудников] 
+Gui, 3:Add, Text, x70 y685 h500 w370 +BackgroundTrans, [На фотографии изображена цифра (только для сотрудников] 
 Gui, 3:Add, Text, x70 y745 h500 w370 +BackgroundTrans, [Фотографию оставьте себе (только для сотрудников)] 
 Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [Ключи в медсумке]
 Gui, 3:Add, Text, x680 y85 h500 w370 +BackgroundTrans, [Выдать медкарту]
-Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Отказ 3/3|2/2]
+Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Отказ 3/3 | 2/2]
 
 
 
