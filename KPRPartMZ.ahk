@@ -3144,7 +3144,7 @@ Return
     docladStart := A_TickCount
     SetTimer, UpdateTime, 1000
 
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 608)
     } Else {
         SendTemplate("KPRPMZ", 609)
@@ -3160,14 +3160,14 @@ Return
             break
         }
 
-        If (Patrol_1 != "") {
-            SendTemplate("KPRPMZ", 611)
-        } Else {
+        If (Patrol != "") {
             SendTemplate("KPRPMZ", 610)
+        } Else {
+            SendTemplate("KPRPMZ", 611)
         }
     }
 
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 612)
     } Else {
         SendTemplate("KPRPMZ", 613)
@@ -3180,7 +3180,7 @@ Return
 
 
 :?:/Республика_1::
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 612)
     } Else {
         SendTemplate("KPRPMZ", 613)
@@ -3262,7 +3262,7 @@ Return
     docladStart := A_TickCount
     SetTimer, UpdateTime, 1000
 
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 620)
     } Else {
         SendTemplate("KPRPMZ", 621)
@@ -3278,14 +3278,14 @@ Return
             break
         }
 
-        If (Patrol_1 != "") {
+        If (Patrol != "") {
             SendTemplate("KPRPMZ", 622)
         } Else {
             SendTemplate("KPRPMZ", 623)
         }
     }
 
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 624)
     } Else {
         SendTemplate("KPRPMZ", 625)
@@ -3298,7 +3298,7 @@ Return
 
 
 :?:/Республика_2::
-    If (Patrol_1 != "") {
+    If (Patrol != "") {
         SendTemplate("KPRPMZ", 624)
     } Else {
         SendTemplate("KPRPMZ", 625)
