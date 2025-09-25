@@ -3161,9 +3161,9 @@ Return
         }
 
         If (Patrol_1 != "") {
-            SendTemplate("KPRPMZ", 610)
-        } Else {
             SendTemplate("KPRPMZ", 611)
+        } Else {
+            SendTemplate("KPRPMZ", 610)
         }
     }
 
@@ -13876,4 +13876,5 @@ SelectKPRPMZ(num) {
     Gosub, ChangeRaskladka_MZ
 }
 return
+
 
