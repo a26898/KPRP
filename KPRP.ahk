@@ -1548,13 +1548,15 @@ lastFound := ""
 
 notif1 := "Уведомление: Пациент согласился с обновлением медицинской карты."
 notif2 := "Уведомление: Пациент согласился с получением медицинской карты."
-
+notif3 := "Уведомление: Вы можете приступить к работе, переоденьтесь в форму"
+notif4 := "Уведомление: Вы заступили на дежурство"
+notif5 := "Вы отключились от рации."
 
 SetTimer, CheckLastLineTimer, 500
 
 ; ======== Функция для проверки последней строки ==================
 CheckLastLine(filePath) {
-    global lastFound, notif1, notif2, notif3
+    global lastFound, notif1, notif2, notif3, notif4, notif5
 
     File := FileOpen(filePath, "r", "UTF-8")
     if !IsObject(File)
@@ -1567,18 +1569,30 @@ CheckLastLine(filePath) {
     File.Close()
 
     if (lastLine != lastFound) {
-        if (InStr(lastLine, notif1)) {
+        if (InStr(lastLine, notif1) || InStr(lastLine, notif2)) {
             AddScreenshot1()
             FinishAlbum1()
         }
-        else if (InStr(lastLine, notif2)) {
-            AddScreenshot1()
-            FinishAlbum1()
+        else if (InStr(lastLine, notif3)) {
+            ; Статус AFK
+            FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+            FileAppend, /afk`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
         }
-		
+        else if (InStr(lastLine, notif4)) {
+            ; Статус Online
+            FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+            FileAppend, /online`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+        }
+        else if (InStr(lastLine, notif5)) {
+            ; Статус Offline
+            FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+            FileAppend, /offline`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+        }
+
         lastFound := lastLine
     }
 }
+
 
 
 
@@ -4327,6 +4341,29 @@ SelectObjects97:
     SelectObjects(97)
 return
 
+
+
+; Когда вводите /вышел
+:?:/вышел::
+SendPlay {Enter}
+	FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+    FileAppend, /offline`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt	
+Return
+
+; Аналогично для /онлайн
+:?:/онлайн::
+SendPlay {Enter}
+	FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+    FileAppend, /online`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt	
+Return
+
+; Аналогично для /афк
+:?:/афк::
+SendPlay {Enter}
+	FileDelete, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+    FileAppend, /afk`n, C:\ProgramData\KPRP\KPRP-main\Telegramkprp\_internal\status.txt
+Return
+
 ChangeMZ:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
 Gui, Submit, NoHide
@@ -4343,7 +4380,7 @@ DetectHiddenWindows, On
 CloseBadProcesses()
 Reload
 
-ChangeOffers:
+ChanwцgeOffers:
 SoundPlay,  C:\ProgramData\KPRP\KPRP-main\KPRPMP3\muzyka_5_1.mp3
 Gui, Submit, NoHide
 
