@@ -8,11 +8,11 @@ Gui, 5:Tab, 1
 parentHWND := WinExist()
 
 ; Добавляем вкладки
-Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП|Журнал активности
+Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, Новости|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП|Журнал активности
 
 ; --- Вкладка 1 ---
 
-Gui, 5:Show, center h650 w1200, Министерство здравоохранения | КПРП работает на коммунизм!
+Gui, 5:Show, center h650 w1200, Министерство здравоохранения | Работаем на коммунизм!
 
 Gui, 5:Tab, 1
 
@@ -3628,125 +3628,125 @@ Return
 
 
 UpdateTime:
-    global count   ; используем глобальную переменную
+    ;global count   ; используем глобальную переменную
     
     ; Время дежурства — с момента запуска (не сбрасывается)
-    elapsedDuty := A_TickCount - startTime
-    elapsedDutySec := Floor(elapsedDuty / 1000)
-    hoursDuty := Floor(elapsedDutySec / 3600)
-    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
-    secondsDuty := Mod(elapsedDutySec, 60)
-    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
+    ;elapsedDuty := A_TickCount - startTime
+    ;elapsedDutySec := Floor(elapsedDuty / 1000)
+    ;hoursDuty := Floor(elapsedDutySec / 3600)
+    ;minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
+    ;secondsDuty := Mod(elapsedDutySec, 60)
+    ;formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
 
     ; Время до доклада — обратный отсчёт от 10 минут
-    elapsedDoclad := A_TickCount - docladStart
-    if (elapsedDoclad >= docladInterval) {
-        docladStart := A_TickCount  ; сброс обратного отсчёта
-        elapsedDoclad := 0
-    }
-    remaining := docladInterval - elapsedDoclad
-    remainingSec := Floor(remaining / 1000)
-    hoursRem := Floor(remainingSec / 3600)
-    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
-    secondsRem := Mod(remainingSec, 60)
-    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
+    ;elapsedDoclad := A_TickCount - docladStart
+    ;if (elapsedDoclad >= docladInterval) {
+    ;    docladStart := A_TickCount  ; сброс обратного отсчёта
+    ;    elapsedDoclad := 0
+    ;}
+    ;remaining := docladInterval - elapsedDoclad
+    ;remainingSec := Floor(remaining / 1000)
+    ;hoursRem := Floor(remainingSec / 3600)
+    ;minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
+    ;secondsRem := Mod(remainingSec, 60)
+    ;formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
 
     ; обновляем GUI с добавлением счётчика скриншотов
-    GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%`nСкриншотов:%count%
+    ;GuiControl,, TimerText, Дежурство: %formattedDuty%`nДо доклада: %formattedRemaining%`nСкриншотов:%count%
 return
 
 
 UpdateTimeMP:
-    global count   ; используем глобальную переменную
+    ;global count   ; используем глобальную переменную
     
     ; Время дежурства — с момента запуска (не сбрасывается)
-    elapsedDuty := A_TickCount - startTime
-    elapsedDutySec := Floor(elapsedDuty / 1000)
-    hoursDuty := Floor(elapsedDutySec / 3600)
-    minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
-    secondsDuty := Mod(elapsedDutySec, 60)
-    formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
+    ;elapsedDuty := A_TickCount - startTime
+    ;elapsedDutySec := Floor(elapsedDuty / 1000)
+    ;hoursDuty := Floor(elapsedDutySec / 3600)
+    ;minutesDuty := Floor((elapsedDutySec - hoursDuty * 3600) / 60)
+    ;secondsDuty := Mod(elapsedDutySec, 60)
+    ;formattedDuty := Format("{:02}:{:02}:{:02}", hoursDuty, minutesDuty, secondsDuty)
 
     ; Время до доклада — обратный отсчёт от 5 минут
-    elapsedDoclad := A_TickCount - docladStart
-    if (elapsedDoclad >= docladInterval) {
-        docladStart := A_TickCount  ; сброс обратного отсчёта
+    ;elapsedDoclad := A_TickCount - docladStart
+    ;if (elapsedDoclad >= docladInterval) {
+    ;    docladStart := A_TickCount  ; сброс обратного отсчёта
         elapsedDoclad := 0
-    }
-    remaining := docladInterval - elapsedDoclad
-    remainingSec := Floor(remaining / 1000)
-    hoursRem := Floor(remainingSec / 3600)
-    minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
-    secondsRem := Mod(remainingSec, 60)
-    formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
+    ;}
+    ;remaining := docladInterval - elapsedDoclad
+    ;remainingSec := Floor(remaining / 1000)
+    ;hoursRem := Floor(remainingSec / 3600)
+    ;minutesRem := Floor((remainingSec - hoursRem * 3600) / 60)
+    ;secondsRem := Mod(remainingSec, 60)
+    ;formattedRemaining := Format("{:02}:{:02}:{:02}", hoursRem, minutesRem, secondsRem)
 
     ; обновляем GUI с добавлением счётчика скриншотов
-    GuiControl,, TimerText, Прошло: %formattedDuty%`n Осталось: %formattedRemaining%`nСкриншотов: %count%
+    ;GuiControl,, TimerText, Прошло: %formattedDuty%`n Осталось: %formattedRemaining%`nСкриншотов: %count%
 return
 
 UpdateTimeGov:
-    global count
+    ;global count
 
-    now := A_Now
-    marksDuty := [8, 18, 28, 38, 48, 58]  ; Отметки для "репорта"
-    marksDoc  := [0, 10, 20, 30, 40, 50]   ; Отметки для "Gov"
+    ;now := A_Now
+    ;marksDuty := [8, 18, 28, 38, 48, 58]  ; Отметки для "репорта"
+    ;marksDoc  := [0, 10, 20, 30, 40, 50]   ; Отметки для "Gov"
 
     ; --- Функция для поиска ближайшей отметки ---
-    GetNextMark(marksArray) {
-        currentTime := A_Now
+    ;GetNextMark(marksArray) {
+    ;    currentTime := A_Now
         ; Получаем текущие час и минуту как числа
-        FormatTime, currentMin,  %currentTime%, mm
-        FormatTime, currentHour, %currentTime%, HH
-        currentMin := currentMin + 0
-        currentHour := currentHour + 0
-        currentDateStr := SubStr(currentTime, 1, 8) ; Получаем дату в формате ГГГГММДД
+    ;    FormatTime, currentMin,  %currentTime%, mm
+    ;    FormatTime, currentHour, %currentTime%, HH
+    ;    currentMin := currentMin + 0
+    ;    currentHour := currentHour + 0
+     ;   currentDateStr := SubStr(currentTime, 1, 8) ; Получаем дату в формате ГГГГММДД
 
         ; Ищем следующую отметку в текущем часу
-        for index, mark in marksArray {
-            if (currentMin < mark) {
+    ;    for index, mark in marksArray {
+    ;        if (currentMin < mark) {
                 ; Нашли отметку в этом часу
-                targetTime := currentDateStr . Format("{:02}{:02}00", currentHour, mark)
-                return targetTime
-            }
-        }
-        ; Если не нашли в этом часу, берём первую отметку следующего часа
-        nextHour := currentHour + 1
-        nextDateStr := currentDateStr
-        if (nextHour >= 24) {
-            nextHour := 0
-            ; Переходим на следующий день
-            nextDate := currentTime
-            nextDate += 1, Days
-            FormatTime, nextDateStr, %nextDate%, yyyyMMdd
-        }
-        targetTime := nextDateStr . Format("{:02}{:02}00", nextHour, marksArray[1])
-        return targetTime
-    }
+     ;           targetTime := currentDateStr . Format("{:02}{:02}00", currentHour, mark)
+    ;            return targetTime
+    ;        }
+    ;    }
+    ;     Если не нашли в этом часу, берём первую отметку следующего часа
+    ;    nextHour := currentHour + 1
+    ;    nextDateStr := currentDateStr
+    ;    if (nextHour >= 24) {
+    ;        nextHour := 0
+    ;        ; Переходим на следующий день
+    ;        nextDate := currentTime
+    ;        nextDate += 1, Days
+      ;      FormatTime, nextDateStr, %nextDate%, yyyyMMdd
+    ;    }
+    ;    targetTime := nextDateStr . Format("{:02}{:02}00", nextHour, marksArray[1])
+    ;    return targetTime
+    ;}
 
     ; --- Рассчитываем целевое время ---
-    dutyTarget := GetNextMark(marksDuty)
-    docTarget  := GetNextMark(marksDoc)
+    ;dutyTarget := GetNextMark(marksDuty)
+    ;docTarget  := GetNextMark(marksDoc)
 
     ; --- Вычисляем разницу в секундах ---
-    dutyDiff := dutyTarget
-    dutyDiff -= now, Seconds
-    docDiff := docTarget
-    docDiff -= now, Seconds
+    ;dutyDiff := dutyTarget
+    ;dutyDiff -= now, Seconds
+    ;docDiff := docTarget
+    ;docDiff -= now, Seconds
 
     ; --- Переводим разницу в читаемый вид ЧЧ:ММ:СС ---
-    dutyHr  := dutyDiff // 3600
-    dutyMin := Mod(dutyDiff // 60, 60)
-    dutySec := Mod(dutyDiff, 60)
+    ;dutyHr  := dutyDiff // 3600
+    ;dutyMin := Mod(dutyDiff // 60, 60)
+    ;dutySec := Mod(dutyDiff, 60)
 
-    docHr  := docDiff // 3600
-    docMin := Mod(docDiff // 60, 60)
-    docSec := Mod(docDiff, 60)
+    ;docHr  := docDiff // 3600
+    ;docMin := Mod(docDiff // 60, 60)
+    ;docSec := Mod(docDiff, 60)
 
-    formattedDuty := Format("{1:02}:{2:02}:{3:02}", dutyHr, dutyMin, dutySec)
-    formattedDoc  := Format("{1:02}:{2:02}:{3:02}", docHr, docMin, docSec)
+    ;formattedDuty := Format("{1:02}:{2:02}:{3:02}", dutyHr, dutyMin, dutySec)
+    ;formattedDoc  := Format("{1:02}:{2:02}:{3:02}", docHr, docMin, docSec)
 
     ; --- Выводим результат на GUI ---
-    GuiControl,, TimerText, До репорта: %formattedDuty%`nДо gov: %formattedDoc%`nСкриншотов: %count%
+    ;GuiControl,, TimerText, До репорта: %formattedDuty%`nДо gov: %formattedDoc%`nСкриншотов: %count%
 return
 
 

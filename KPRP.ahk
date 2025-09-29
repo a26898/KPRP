@@ -1119,12 +1119,12 @@ CreateAlbum() {
     global AlbumFiles
     if (IsObject(AlbumFiles)) {
         ToolTip, Альбом уже создан
-        SetTimer, RemoveToolTip, -2000
+        SetTimer, RemoveToolTip, -1000
         return
     }
     AlbumFiles := []
     ToolTip, Альбом создан.`nТеперь добавляйте скриншоты (0 сделано)
-    SetTimer, RemoveToolTip, -2000
+    SetTimer, RemoveToolTip, -1000
 }
 
 ; === Добавить скриншот (создаёт альбом при необходимости) ===
@@ -1139,10 +1139,10 @@ AddScreenshot() {
         AlbumFiles.Push(file)
         count := AlbumFiles.MaxIndex()
         ToolTip, Скриншот добавлен.`nВсего: %count% До 20 максимум.
-        SetTimer, RemoveToolTip, -2000
+        SetTimer, RemoveToolTip, -1000
     } else {
         ToolTip, Ошибка: Не удалось сделать скриншот
-        SetTimer, RemoveToolTip, -2000
+        SetTimer, RemoveToolTip, -1000
     }
 }
 
@@ -1151,7 +1151,7 @@ FinishAlbum() {
     global AlbumFiles, ImgChestToken
     if !IsObject(AlbumFiles) || AlbumFiles.MaxIndex() = 0 {
         ToolTip, Ошибка: Альбом пуст или не создан
-        SetTimer, RemoveToolTip, -2000
+        SetTimer, RemoveToolTip, -1000
         return
     }
     link := UploadAlbumPost(AlbumFiles, ImgChestToken)
@@ -1161,7 +1161,7 @@ FinishAlbum() {
         count := AlbumFiles.MaxIndex()
         ToolTip, Альбом загружен.`nСкриншотов: %count%`n%link%
     }
-    SetTimer, RemoveToolTip, -5000
+    SetTimer, RemoveToolTip, -1000
     AlbumFiles := "" ; очистка
 }
 
@@ -1416,86 +1416,86 @@ CloseBadProcesses() {
 global SearchBox, ListBox, originalList
 
 ShowRedList() {
-    global SearchBox, ListBox, originalList
+    ;global SearchBox, ListBox, originalList
 
-    SetTitleMatchMode, 2
-    FileEncoding, UTF-8
-    url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
-    savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
+    ;SetTitleMatchMode, 2
+   ; FileEncoding, UTF-8
+   ; url := "https://docs.google.com/spreadsheets/d/e/2PACX-1vQmmY4JZ44c7Xa7W7YpIzMKB-eGrngoEo0khF1k3C-v2mdpBoSseJrf9NWcXeE9-0swQqPdyvVmEHon/pub?gid=2036179608&single=true&output=tsv"
+   ; savePath := "C:\ProgramData\KPRP\KPRP-main\table.tsv"
 
     ; Скачать таблицу
-    UrlDownloadToFile, %url%, %savePath%
-    if !FileExist(savePath) {
-        MsgBox, Не удалось скачать таблицу!
-        return
-    }
+   ; UrlDownloadToFile, %url%, %savePath%
+   ; if !FileExist(savePath) {
+   ;     MsgBox, Не удалось скачать таблицу!
+   ;     return
+   ; }
 
     ; Читаем файл и формируем исходный список
-    originalList := []
-    FileRead, fileData, %savePath%
-    Loop, Parse, fileData, `n, `r
-    {
-        if (A_Index = 1)
-            continue
-        line := A_LoopField
-        fields := StrSplit(line, "`t")
-        if (fields.Length() >= 9) {
-            ; Ник и паспорт без обрезки
-            nickE := fields[4]
-            passF := fields[5]
-            nickH := fields[7]
-            passI := fields[8]
+   ; originalList := []
+    ;FileRead, fileData, %savePath%
+    ;Loop, Parse, fileData, `n, `r
+    ;{
+    ;    if (A_Index = 1)
+    ;       continue
+    ;    line := A_LoopField
+    ;    fields := StrSplit(line, "`t")
+    ;    if (fields.Length() >= 9) {
+    ;        ; Ник и паспорт без обрезки
+    ;        nickE := fields[4]
+    ;        passF := fields[5]
+    ;        nickH := fields[7]
+    ;        passI := fields[8]
 
-            if (nickE != "")
-                originalList.Push({type: "vz", text: Format("{:-25} {:15}", nickE, passF), nick: nickE, pass: passF})
-            if (nickH != "")
-                originalList.Push({type: "ks", text: Format("{:-25} {:15}", nickH, passI), nick: nickH, pass: passI})
-        }
-    }
+    ;        if (nickE != "")
+    ;            originalList.Push({type: "vz", text: Format("{:-25} {:15}", nickE, passF), nick: nickE, pass: passF})
+    ;        if (nickH != "")
+     ;           originalList.Push({type: "ks", text: Format("{:-25} {:15}", nickH, passI), nick: nickH, pass: passI})
+    ;    }
+   ; }
 
     ; Определяем активный монитор
-    WinGetPos, winX, winY,,, A
-    SysGet, monitorCount, MonitorCount
-    activeMon := 1
-    Loop %monitorCount% {
-        SysGet, mon, Monitor, %A_Index%
-        if (winX >= monLeft && winX < monRight && winY >= monTop && winY < monBottom) {
-            activeMon := A_Index
-            break
-        }
-    }
-    SysGet, mon, Monitor, %activeMon%
+   ; WinGetPos, winX, winY,,, A
+   ; SysGet, monitorCount, MonitorCount
+   ; activeMon := 1
+    ;Loop %monitorCount% {
+   ;     SysGet, mon, Monitor, %A_Index%
+    ;    if (winX >= monLeft && winX < monRight && winY >= monTop && winY < monBottom) {
+    ;        activeMon := A_Index
+     ;       break
+     ;   }
+    ;}
+   ; SysGet, mon, Monitor, %activeMon%
 
     ; Автоширина по самой длинной строке
-    maxLineLen := 0
-    Loop, % originalList.MaxIndex() {
-        item := originalList[A_Index]
-        if (StrLen(item.text) > maxLineLen)
-            maxLineLen := StrLen(item.text)
-    }
-    charWidth := 7
-    winWidth := maxLineLen * charWidth + 20
-    if (winWidth > (monRight - monLeft) * 0.2)
+    ;maxLineLen := 0
+    ;Loop, % originalList.MaxIndex() {
+    ;    item := originalList[A_Index]
+   ;     if (StrLen(item.text) > maxLineLen)
+   ;         maxLineLen := StrLen(item.text)
+   ; }
+    ;charWidth := 7
+    ;winWidth := maxLineLen * charWidth + 20
+    ;if (winWidth > (monRight - monLeft) * 0.2)
         winWidth := (monRight - monLeft) * 0.2
 
-    winHeight := 750
-    xPos := monRight - winWidth - 20
-    yPos := monTop + 40
+    ;winHeight := 750
+    ;xPos := monRight - winWidth - 20
+    ;yPos := monTop + 40
 
     ; Создаем GUI
-    Gui, ВЗ:New
-    Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
-    Gui, Font, s10, Courier New
+    ;Gui, ВЗ:New
+    ;Gui, +AlwaysOnTop -Caption +LastFound +ToolWindow -DPIScale
+    ;Gui, Font, s10, Courier New
 
     ; Надпись и поле поиска
-    Gui, Add, Text,, Поиск:
-    Gui, Add, Edit, vSearchBox w%winWidth% h25 gUpdateList
+    ;Gui, Add, Text,, Поиск:
+    ;Gui, Add, Edit, vSearchBox w%winWidth% h25 gUpdateList
 
     ; Основной список
-    fullContent := GetFullContent(originalList)
-    Gui, Add, Edit, vListBox w%winWidth% h%winHeight% ReadOnly VScroll +Wrap, %fullContent%
+    ;fullContent := GetFullContent(originalList)
+    ;Gui, Add, Edit, vListBox w%winWidth% h%winHeight% ReadOnly VScroll +Wrap, %fullContent%
 
-    Gui, Show, NoActivate x%xPos% y%yPos%, ВЗ+КС
+    ;Gui, Show, NoActivate x%xPos% y%yPos%, ВЗ+КС
     return
 }
 
@@ -2052,22 +2052,18 @@ ProverkaAdmin()
 }
 
 SendRU(text) {
-    ; Конвертация текста в CP1251 и вставка в буфер обмена
-    VarSetCapacity(buf, StrPut(text, "CP1251"))
-    StrPut(text, &buf, "CP1251")
-    Clipboard := StrGet(&buf, "CP1251")
+    buf := StrPut(text, "CP1251")
+    VarSetCapacity(str, buf)
+    StrPut(text, &str, "CP1251")
+    Clipboard := StrGet(&str, "CP1251")
     
-    ; Ждём нажатия Ctrl+V
-    ToolTip, Готово. Откройте F8 нажмите Ctrl+V и для отправки нажмите Enter...
-    Loop {
-        Sleep, 40
-        if GetKeyState("Ctrl", "P") && GetKeyState("V", "P") {
-            Break
-        }
-    }
+    ToolTip, Готово. Откройте F8 нажмите Ctrl+V и Enter...
+    While !(GetKeyState("Ctrl", "P") && GetKeyState("V", "P"))
+        Sleep, 100
     ToolTip
-    Sleep, 400
+    Sleep, 2000
 }
+
 
 
 Proverka() {
@@ -2179,59 +2175,59 @@ Greeting()
 
 ; Функция создания уведомляющего GUI
 CreateAdaptiveGUI() {
-    global winWidth, winHeight, xPos, yPos, NotifyPic, TimerText
+    ;global winWidth, winHeight, xPos, yPos, NotifyPic, TimerText
     
-    Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
+    ;Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
 
     ; Размер окна с учетом DPI
-    winWidth := 403
-    winHeight := 109
+    ;winWidth := 403
+    ;winHeight := 109
 
     ; Получаем масштаб DPI
-    DllCall("Shcore.dll\GetScaleFactorForMonitor", "ptr", DllCall("MonitorFromWindow", "ptr", WinExist(), "uint", 2, "ptr"), "int*", scaleFactor)
-    dpiScale := (scaleFactor ? scaleFactor/100 : 1)
+   ; DllCall("Shcore.dll\GetScaleFactorForMonitor", "ptr", DllCall("MonitorFromWindow", "ptr", WinExist(), "uint", 2, "ptr"), "int*", scaleFactor)
+    ;dpiScale := (scaleFactor ? scaleFactor/100 : 1)
 
     ; Корректируем размеры под DPI
-    winWidth := Round(winWidth * dpiScale)
-    winHeight := Round(winHeight * dpiScale)
-    radius := Round(20 * dpiScale)
+    ;winWidth := Round(winWidth * dpiScale)
+    ;winHeight := Round(winHeight * dpiScale)
+    ;radius := Round(20 * dpiScale)
 
     ; Создаем регион с закругленными углами
-    WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
+    ;WinSet, Region, 0-0 w%winWidth% h%winHeight% r%radius%-%radius%
 
     ; Добавляем картинку (объявляем переменную как глобальную)
-    Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\notification.png
+    ;Gui, Add, Picture, x0 y-1 w%winWidth% h%winHeight% vNotifyPic, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\notification.png
 
     ; Добавляем текст таймера с адаптивным шрифтом (объявляем переменную как глобальную)
-    fontSize := Round(20 * dpiScale)
-    Gui, Font, s%fontSize% cgray Bold
-    Gui, Add, Text, vTimerText x30 y10 w%winWidth% h%winHeight% Center BackgroundTrans, Скриншотов:0
+    ;fontSize := Round(20 * dpiScale)
+    ;Gui, Font, s%fontSize% cgray Bold
+    ;Gui, Add, Text, vTimerText x30 y10 w%winWidth% h%winHeight% Center BackgroundTrans, Скриншотов:0
 
     ; Получаем координаты активного монитора с безопасным позиционированием
-    monitorInfo := GetActiveMonitorInfo()
-    if monitorInfo
-    {
+    ;monitorInfo := GetActiveMonitorInfo()
+    ;if monitorInfo
+    ;{
         ; Безопасное позиционирование (не выходит за границы экрана)
-        xPos := monitorInfo.right - winWidth - Round(20 * dpiScale)
-        yPos := monitorInfo.bottom - winHeight - Round(770 * dpiScale)
+    ;    xPos := monitorInfo.right - winWidth - Round(20 * dpiScale)
+    ;    yPos := monitorInfo.bottom - winHeight - Round(770 * dpiScale)
         
         ; Проверка для маленьких разрешений (1366x768 и меньше)
-        if (monitorInfo.right - monitorInfo.left <= 1366)
-        {
-            yPos := monitorInfo.bottom - winHeight - Round(460 * dpiScale)
-        }
-    }
-    else
-    {
+    ;    if (monitorInfo.right - monitorInfo.left <= 1366)
+    ;    {
+    ;        yPos := monitorInfo.bottom - winHeight - Round(460 * dpiScale)
+    ;    }
+    ;}
+    ;else
+    ;{
         ; Fallback на основной монитор с безопасным позиционированием
-        SysGet, monRight, 2
-        SysGet, monBottom, 3
-        xPos := monRight - winWidth - Round(40 * dpiScale)
-        yPos := monBottom - winHeight - Round(40 * dpiScale)
-    }
+    ;    SysGet, monRight, 2
+    ;    SysGet, monBottom, 3
+    ;    xPos := monRight - winWidth - Round(40 * dpiScale)
+    ;    yPos := monBottom - winHeight - Round(40 * dpiScale)
+    ;}
 
     ; Показываем GUI
-    Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
+    ;Gui, Show, NoActivate x%xPos% y%yPos% w%winWidth% h%winHeight%
 }
 
 
