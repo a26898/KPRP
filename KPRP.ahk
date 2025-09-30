@@ -998,16 +998,6 @@ if (Taymer_Nastroyka = "Включен") {
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
 
-filePath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
-
-if FileExist(filePath1)
-{
-    Run, %filePath1%
-}
-else
-{
-
-}
 
 
 
@@ -1403,7 +1393,7 @@ CloseBadProcesses() {
     WinClose, Konets_rd.ahk
 
     ; Список процессов, которые нужно завершить
-    processes := ["KPRP.exe", "Journal.exe", "Diskorod.exe"]
+    processes := ["KPRP.exe", "Journal.exe"]
 
     for index, proc in processes {
         Run, taskkill /IM %proc% /F, , Hide
@@ -3236,9 +3226,6 @@ ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 ProcessName := "Journal.exe"
-Run, taskkill /IM %ProcessName% /F, , Hide
-
-ProcessName := "Diskorod.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 	Reload
