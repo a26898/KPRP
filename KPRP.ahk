@@ -1119,12 +1119,12 @@ CreateAlbum() {
     global AlbumFiles
     if (IsObject(AlbumFiles)) {
         ToolTip, Альбом уже создан
-        SetTimer, RemoveToolTip, -1000
+        SetTimer, RemoveToolTip, -100
         return
     }
     AlbumFiles := []
     ToolTip, Альбом создан.`nТеперь добавляйте скриншоты (0 сделано)
-    SetTimer, RemoveToolTip, -1000
+    SetTimer, RemoveToolTip, -100
 }
 
 ; === Добавить скриншот (создаёт альбом при необходимости) ===
