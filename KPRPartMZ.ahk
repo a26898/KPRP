@@ -2253,39 +2253,44 @@ Return
 Return
 
 :?:/МК_9::
+    SendTemplate("KPRPMZ", 675)
+	AddScreenshot1()
+Return
+
+:?:/МК_01::
     SendTemplate("KPRPMZ", 420)
 	AddScreenshot1()
 Return
 
-:?:/МК_10::
+:?:/МК_02::
     SendTemplate("KPRPMZ", 421)
 	AddScreenshot1()
 Return
 
-:?:/МК_11::
+:?:/МК_03::
     SendTemplate("KPRPMZ", 422)
 	AddScreenshot1()
 Return
 
-:?:/МК_12::
+:?:/МК_04::
     SendTemplate("KPRPMZ", 423)
 	AddScreenshot1()
 Return
 
-:?:/МК_13::
+:?:/МК_05::
     SendTemplate("KPRPMZ", 673)
 	AddScreenshot1()
 Return
 
 
-:?:/МК_14::
+:?:/МК_06::
     SendTemplate("KPRPMZ", 674)
 	AddScreenshot1()
 	FinishAlbum1()
 Return
 
 
-:?:/МК_15::
+:?:/МК_07::
     SendTemplate("KPRPMZ", 675)
 	AddScreenshot1()
 	FinishAlbum1()
@@ -5873,80 +5878,92 @@ Gui, 3:Destroy,
 Gui, 3:Add, Picture, x0 y0 h200 w400,
 Gui, 3:Font, S11 C%Tsvet% Bold, %Shrift%
 
-Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /МК_0
-Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /МК_1
-Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /МК_2
-Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /МК_3
-Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /МК_4
-Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /МК_5
-Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /МК_6
-Gui, 3:Add, Text, x10 y440 h200 w120 +BackgroundTrans, /МК_7
-Gui, 3:Add, Text, x10 y505 h200 w120 +BackgroundTrans, /МК_8
-Gui, 3:Add, Text, x10 y565 h200 w120 +BackgroundTrans, /МК_9
-Gui, 3:Add, Text, x10 y625 h200 w120 +BackgroundTrans, /МК_10
-Gui, 3:Add, Text, x10 y685 h200 w120 +BackgroundTrans, /МК_11
-Gui, 3:Add, Text, x10 y745 h200 w120 +BackgroundTrans, /МК_12
-Gui, 3:Add, Text, x600 y25 h200 w120 +BackgroundTrans, /МК_13
-Gui, 3:Add, Text, x600 y85 h200 w120 +BackgroundTrans, /МК_14
-Gui, 3:Add, Text, x600 y145 h200 w120 +BackgroundTrans, /МК_15
+Gui, 3:Add, Text, x10 y25 h200 w120 +BackgroundTrans, /МК_01
+Gui, 3:Add, Text, x10 y85 h200 w120 +BackgroundTrans, /МК_02
+Gui, 3:Add, Text, x10 y145 h200 w120 +BackgroundTrans, /МК_03
+Gui, 3:Add, Text, x10 y205 h200 w120 +BackgroundTrans, /МК_04
+Gui, 3:Add, Text, x10 y265 h200 w120 +BackgroundTrans, /МК_05
+Gui, 3:Add, Text, x10 y325 h200 w120 +BackgroundTrans, /МК_06
+Gui, 3:Add, Text, x10 y380 h200 w120 +BackgroundTrans, /МК_07
+
+Gui, 3:Add, Text, x600 y25 h200 w120 +BackgroundTrans, /МК_0
+Gui, 3:Add, Text, x600 y85 h200 w120 +BackgroundTrans, /МК_1
+Gui, 3:Add, Text, x600 y145 h200 w120 +BackgroundTrans, /МК_2
+Gui, 3:Add, Text, x600 y205 h200 w120 +BackgroundTrans, /МК_3
+Gui, 3:Add, Text, x600 y265 h200 w120 +BackgroundTrans, /МК_4
+Gui, 3:Add, Text, x600 y325 h200 w120 +BackgroundTrans, /МК_5
+Gui, 3:Add, Text, x600 y385 h200 w120 +BackgroundTrans, /МК_6
+Gui, 3:Add, Text, x600 y445 h200 w120 +BackgroundTrans, /МК_7
+Gui, 3:Add, Text, x600 y505 h200 w120 +BackgroundTrans, /МК_8
+Gui, 3:Add, Text, x600 y565 h200 w120 +BackgroundTrans, /МК_9
 
 
 Gui, 3:Font, S11 C%Tsvet_1% Bold, %Shrift%
-Gui, 3:Add, Text, x70 y25 h500 w370 +BackgroundTrans, [Попросить паспорт]
-Gui, 3:Add, Text, x70 y85 h500 w370 +BackgroundTrans, [Взять паспорт и изучить его]
-Gui, 3:Add, Text, x70 y145 h500 w370 +BackgroundTrans, [Попросить гражданского снять одежду]
-Gui, 3:Add, Text, x70 y205 h500 w370 +BackgroundTrans, [Проверить на хрипы спереди]
-Gui, 3:Add, Text, x70 y260 h500 w370 +BackgroundTrans, [Проверить на хрипы сзади]
-Gui, 3:Add, Text, x70 y325 h500 w370 +BackgroundTrans, [Попросить измерить температуру (только для сотрудников)]
-Gui, 3:Add, Text, x70 y385 h500 w370 +BackgroundTrans, [Попросить человека разуться ]
-Gui, 3:Add, Text, x70 y445 h500 w370 +BackgroundTrans, [Измерить вес]
-Gui, 3:Add, Text, x70 y505 h500 w370 +BackgroundTrans, [Измерить рост]
-Gui, 3:Add, Text, x70 y565 h500 w370 +BackgroundTrans, [Термины]
-Gui, 3:Add, Text, x70 y625 h500 w370 +BackgroundTrans, [Цветная фотография (только для сотрудников)]
-Gui, 3:Add, Text, x70 y685 h500 w370 +BackgroundTrans, [На фотографии изображена цифра (только для сотрудников] 
-Gui, 3:Add, Text, x70 y745 h500 w370 +BackgroundTrans, [Фотографию оставьте себе (только для сотрудников)] 
-Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [Ключи в медсумке]
-Gui, 3:Add, Text, x680 y85 h500 w370 +BackgroundTrans, [Выдать медкарту]
-Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Отказ 3/3 | 2/2]
+Gui, 3:Add, Text, x70 y25 h500 w370 +BackgroundTrans, [Попросить передать трудовую(гражд)]
+Gui, 3:Add, Text, x70 y85 h500 w370 +BackgroundTrans, [Взять трудовую и изучить его(гражд)]
+Gui, 3:Add, Text, x70 y145 h500 w370 +BackgroundTrans, [Термины(гражд)]
+Gui, 3:Add, Text, x70 y205 h500 w370 +BackgroundTrans, [Вопросы(гражд)]
+Gui, 3:Add, Text, x70 y260 h500 w370 +BackgroundTrans, [Вопросы(гражд)]
+Gui, 3:Add, Text, x70 y325 h500 w370 +BackgroundTrans, [Выдать медкарту(гражд)]
+Gui, 3:Add, Text, x70 y385 h500 w370 +BackgroundTrans, [Отказ 3/3(гражд)]
+
+
+Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [Попросить показать УДО(сотрудники)]
+Gui, 3:Add, Text, x680 y85 h500 w370 +BackgroundTrans, [Попросить передать паспорт(сотрудники)]
+Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Отыгровки паспорта(сотрудники)]
+Gui, 3:Add, Text, x680 y205 h500 w370 +BackgroundTrans, [Градусники(сотрудники)]
+Gui, 3:Add, Text, x680 y260 h500 w370 +BackgroundTrans, [Рост,вес(сотрудники)]
+Gui, 3:Add, Text, x680 y325 h500 w370 +BackgroundTrans, [Рост,вес(сотрудники)]
+Gui, 3:Add, Text, x680 y385 h500 w370 +BackgroundTrans, [Фотография(сотрудники)]
+Gui, 3:Add, Text, x680 y445 h500 w370 +BackgroundTrans, [Фотография(сотрудники)]
+Gui, 3:Add, Text, x680 y505 h500 w370 +BackgroundTrans, [Выдать медкарту(сотрудники)]
+Gui, 3:Add, Text, x680 y565 h500 w370 +BackgroundTrans, [Отказ 2/2(сотрудники)]
 
 
 
-Gui, 3:Add, Picture, x450 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ412, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ412,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ411,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ411,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ413,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ413,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ414,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ414,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ415,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ415,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ416,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ416,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ417,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ417,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ418,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ418,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y490 w48 h48 +BackgroundTrans gSelectKPRPMZ419,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y490 w48 h48 +BackgroundTrans gNotebookKPRPMZ419,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y550 w48 h48 +BackgroundTrans gSelectKPRPMZ420,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y550 w48 h48 +BackgroundTrans gNotebookKPRPMZ420,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y610 w48 h48 +BackgroundTrans gSelectKPRPMZ421,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y610 w48 h48 +BackgroundTrans gNotebookKPRPMZ421,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y670 w48 h48 +BackgroundTrans gSelectKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y670 w48 h48 +BackgroundTrans gNotebookKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y730 w48 h48 +BackgroundTrans gSelectKPRPMZ423,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x520 y730 w48 h48 +BackgroundTrans gNotebookKPRPMZ423,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-
-Gui, 3:Add, Picture, x990 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ673, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x1060 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ673,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x990 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ674,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x1060 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ674,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x990 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
-Gui, 3:Add, Picture, x1060 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ420, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ420,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ421,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ421,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ423,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ423,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ673,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ673,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ674,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ674,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x450 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x520 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 
 
-Gui, 3:show, center h780 w1120, Медицинская карта
+Gui, 3:Add, Picture, x990 y10 w48 h48 +BackgroundTrans gSelectKPRPMZ412, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y10 w48 h48 +BackgroundTrans gNotebookKPRPMZ412,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x990 y70 w48 h48 +BackgroundTrans gSelectKPRPMZ411,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y70 w48 h48 +BackgroundTrans gNotebookKPRPMZ411,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x990 y130 w48 h48 +BackgroundTrans gSelectKPRPMZ413,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y130 w48 h48 +BackgroundTrans gNotebookKPRPMZ413,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+
+Gui, 3:Add, Picture, x990 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ414,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ414,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x990 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ415,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ415,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x990 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ416,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ416,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+
+Gui, 3:Add, Picture, x990 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ417,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ417,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+Gui, 3:Add, Picture, x990 y430 w48 h48 +BackgroundTrans gSelectKPRPMZ418,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y430 w48 h48 +BackgroundTrans gNotebookKPRPMZ418,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+
+Gui, 3:Add, Picture, x990 y490 w48 h48 +BackgroundTrans gSelectKPRPMZ419,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y490 w48 h48 +BackgroundTrans gNotebookKPRPMZ419,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+
+Gui, 3:Add, Picture, x990 y550 w48 h48 +BackgroundTrans gSelectKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x1060 y550 w48 h48 +BackgroundTrans gNotebookKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
+
+
+Gui, 3:show, center h600 w1120, Медицинская карта
 Return
 
 
