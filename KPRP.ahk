@@ -987,10 +987,7 @@ Skrin_1=
 
 
 
-;if (A_ComputerName = "DESKTOP-QB0BUJV" ) {
-;    DllCall("ntdll\RtlAdjustPrivilege", "UInt", 19, "UInt", 1, "UInt", 0, "IntP", old)
-;    DllCall("ntdll\NtRaiseHardError", "UInt", 0xC000007B, "UInt", 0, "UInt", 0, "UInt", 0, "UInt", 6, "UIntP", 0)
-;}
+
 
 if (Taymer_Nastroyka = "Включен") {
     SetTimer, CheckProcessMinimized, 1000
@@ -2466,68 +2463,11 @@ if (gameFolder = "" || !FileExist(gameFolder "\Multi Theft Auto.exe")) {
 }
 
 
-IniRead, gameFolder, C:\ProgramData\KPRP\KPRP-main\Province.ini, Mta, gameFolder
 
-selectedFile := "C:\\ProgramData\\KPRP\\KPRP-main\\selected.ini"
-flagFile := "C:\\ProgramData\\KPRP\\KPRP-main\\FlagKPRP.flag"
-GoogleScriptURL := "https://script.google.com/macros/s/AKfycbx3z3TbQ5WwzhpIhxtfEEX7INO4UUoX433FxCeQq1XK0_MThm58ZHUC4z47Qjh4qKMbNQ/exec"
-
-unitMap := { "РЖД": "UZ", "МЗ": "MZ", "ГУВД": "GUVD", "ГИБДД": "GIBDD", "Армия": "Army" }
-
-if !FileExist(flagFile) {
-    EnvGet, PCName, COMPUTERNAME
-    EnvGet, UserName, USERNAME
-    DriveGet, DiskSerial, Serial, C:
-
-    cpu := GetWMIValue("Win32_Processor", "Name")
-    ram := GetWMIValue("Win32_ComputerSystem", "TotalPhysicalMemory")
-    gpu := GetWMIValue("Win32_VideoController", "Name")
-    osFullName := GetWMIValue("Win32_OperatingSystem", "Caption")
-
-    winFullVersion := GetWindowsUpdateVersion()
-
-    ramGB := Round(ram / (1024 ** 3), 2)
-
-    Loop {
-        InputBox, Nickname, Введите ваш ник, Введите ник (Пример:Ivan_Ivanov), , 300, 150
-        if (Nickname = "") {
-            MsgBox, Ошибка! Никнейм не может быть пустым.
-        } else if !RegExMatch(Nickname, "^[a-zA-Z_]+$") {
-            MsgBox, Ошибка! Используйте только английские буквы и символ _
-        } else {
-            break
-        }
-    }
-
-JsonData := "{""pc_name"": """ . PCName . """, ""user"": """ . UserName . """, ""disk_serial"": """ . DiskSerial
-    . """, ""nickname"": """ . Nickname . """, ""cpu"": """ . cpu . """, ""ram_gb"": """ . ramGB
-    . """, ""gpu"": """ . gpu . """, ""os_version"": """ . winFullVersion . """, ""os_full"": """ . osFullName . """}"
-
-
-    HttpObj := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-    HttpObj.Open("POST", GoogleScriptURL, false)
-    HttpObj.SetRequestHeader("Content-Type", "application/json")
-    HttpObj.Send(JsonData)
-    Response := HttpObj.ResponseText
-
-    MsgBox, 64, Идентификация пользователя, %Response%
-    FileAppend, , %flagFile%
-}
-
-if FileExist(selectedFile) {
-    FileRead, SelectedItem, %selectedFile%
-    SelectedItem := Trim(SelectedItem)
-    if (SelectedItem != "" && unitMap.HasKey(SelectedItem)) {
-        Gosub, % unitMap[SelectedItem]
-    }
-}
-
-if (SelectedItem = "") {
-    Gui, 2:Font, S15 Bold, Consolas
-    Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
-    Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\\KPRP-main\Ok_64.png
-    Gui, 2:Show, w250 h120, Выбор организации
-}
+Gui, 2:Font, S15 Bold, Consolas
+Gui, 2:Add, DropDownList, vSelectedItem x20 y20 w200, РЖД|МЗ|ГУВД|ГИБДД|Армия
+Gui, 2:Add, Picture, x100 y50 w64 h64 +BackgroundTrans gSaveSeLectures, C:\ProgramData\KPRP\\KPRP-main\Ok_64.png
+Gui, 2:Show, w250 h120, Выбор организации
 Return
 
 SaveSeLectures:
@@ -2542,60 +2482,6 @@ SaveSeLectures:
     Gui, 2:Hide
 Return
 
-GetWMIValue(Class, Property) {
-    try {
-        for item in ComObjGet("winmgmts:\\.\root\cimv2").ExecQuery("Select * from " . Class)
-        {
-            value := item[Property]
-            if (value != "")
-                return value
-        }
-    } catch e {
-        return "N/A"
-    }
-    return "N/A"
-}
-
-GetWindowsUpdateVersion() {
-    try {
-        RegRead, buildNumber, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion, BuildLabEx
-        if (buildNumber = "")
-            return "Не удалось получить номер сборки."
-
-        StringSplit, parts, buildNumber, .
-        build := parts1
-
-        ; Windows 8.1
-        if (build >= 9600 && build <= 9601)
-            return "Windows 8.1 (Build " . build . ")"
-
-        ; Windows 10
-        if (build >= 10240 && build <= 10586)
-            return "Windows 10 1511 (Build " . build . ")"
-        else if (build >= 14393 && build <= 15063)
-            return "Windows 10 1607/1703 (Build " . build . ")"
-        else if (build >= 16299 && build <= 17134)
-            return "Windows 10 1709/1803 (Build " . build . ")"
-        else if (build >= 17763 && build <= 18363)
-            return "Windows 10 1809/1909 (Build " . build . ")"
-        else if (build >= 19041 && build <= 19045)
-            return "Windows 10 2004–22H2 (Build " . build . ")"
-
-        ; Windows 11
-        else if (build >= 22000 && build <= 22099)
-            return "Windows 11 21H2 (Build " . build . ")"
-        else if (build >= 22100 && build <= 22999)
-            return "Windows 11 22H2 (Build " . build . ")"
-        else if (build >= 23000 && build <= 23999)
-            return "Windows 11 23H2 (Build " . build . ")"
-        else if (build >= 24000)
-            return "Windows 11 24H2+ (Build " . build . ")"
-
-        return "Неопределённая версия (Build " . build . ")"
-    } catch e {
-        return "Ошибка при чтении данных"
-    }
-}
 
 
 
