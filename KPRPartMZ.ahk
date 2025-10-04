@@ -2206,94 +2206,87 @@ Return
 
 :?:/МК_0::
     SendTemplate("KPRPMZ", 412)
-	CreateAlbum1()
-	AddScreenshot1()
-    ShowRedList()
 return
 
 :?:/МК_1::
-    SendTemplate("KPRPMZ", 411)
-	AddScreenshot1()
+    SendTemplate("KPRPMZ", 411)	
 return
 
 :?:/МК_2::
-    SendTemplate("KPRPMZ", 413)
-	AddScreenshot1()
+    SendTemplate("KPRPMZ", 413)	
 	Gui, ВЗ:Destroy  ; Явно указываем имя GUI
 Return
 
 :?:/МК_3::
     SendTemplate("KPRPMZ", 414)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_4::
     SendTemplate("KPRPMZ", 415)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_5::
     SendTemplate("KPRPMZ", 416)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_6::
     SendTemplate("KPRPMZ", 417)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_7::
     SendTemplate("KPRPMZ", 418)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_8::
     SendTemplate("KPRPMZ", 419)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_9::
     SendTemplate("KPRPMZ", 675)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_01::
     SendTemplate("KPRPMZ", 420)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_02::
     SendTemplate("KPRPMZ", 421)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_03::
     SendTemplate("KPRPMZ", 422)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_04::
     SendTemplate("KPRPMZ", 423)
-	AddScreenshot1()
+	
 Return
 
 :?:/МК_05::
     SendTemplate("KPRPMZ", 673)
-	AddScreenshot1()
+	
 Return
 
 
 :?:/МК_06::
     SendTemplate("KPRPMZ", 674)
-	AddScreenshot1()
-	FinishAlbum1()
+
 Return
 
 
 :?:/МК_07::
     SendTemplate("KPRPMZ", 675)
-	AddScreenshot1()
-	FinishAlbum1()
+
 Return
 
 
@@ -3329,10 +3322,8 @@ Return
 
 :?:/Вызов_2::
     If (Patrol != "") {
-		AddScreenshot2()
         SendTemplate("KPRPMZ", 628)
     } Else {
-		AddScreenshot2()
         SendTemplate("KPRPMZ", 629)
     }
 Return

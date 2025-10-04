@@ -1167,205 +1167,6 @@ FinishAlbum() {
 
 
 
-; === Токен для загрузки Медкарты  ===  
-global ImgChestToken1 := "FdxlBAeh999urbVF8AG1hDgALOWIE6Wysupj3tev76933211"
-
-; === Папка для скринов Медкарты  ===
-global TempFolder1 := A_Temp . "\screenshots1"
-FileCreateDir, %TempFolder1%
-
-; === Массив для хранения файлов Медкарты ===
-global AlbumFiles1 := []
-
-; === Функция для скриншотов Медкарты  ===
-
-TakeScreenshot1(filePath) {
-    ; Ждём активного окна GTA:SA
-    WinWaitActive, ahk_exe gta_sa.exe
-    if !WinExist("ahk_exe gta_sa.exe")
-        return false
-
-    ; ===== Блокируем Alt+Tab, Win и Ctrl+Esc =====
-    Hotkey, !Tab, BlockKeysHandler, On
-    Hotkey, LWin, BlockKeysHandler, On
-    Hotkey, RWin, BlockKeysHandler, On
-    Hotkey, ^Esc, BlockKeysHandler, On
-
-    ; Берём координаты и размеры активного окна
-    WinGetPos, X, Y, W, H, ahk_exe gta_sa.exe
-
-    ; Формируем команду PowerShell для скриншота только этого окна
-    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-    psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
-    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-    psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
-    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-
-    ; Запускаем PowerShell
-    RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
-
-    ; ===== Снимаем блокировку после скрина =====
-    Hotkey, !Tab, Off
-    Hotkey, LWin, Off
-    Hotkey, RWin, Off
-    Hotkey, ^Esc, Off
-
-    ; Проверяем, что файл создан
-    IfExist, %filePath%
-        return true
-    else
-        return false
-}
-
-
-
-
-
-
-UploadAlbumPost1(filesArray, token) {
-    curlCmd := "curl -s -H ""Authorization: Bearer " . token . """" 
-    for index, file in filesArray
-        curlCmd .= " -F ""images[]=@""" . file . """""" 
-    curlCmd .= " https://api.imgchest.com/v1/post"
-    RunWait, %ComSpec% /C %curlCmd% > "%A_Temp%\imgchest_response.json",, Hide
-    FileRead, resp, %A_Temp%\imgchest_response.json
-    if RegExMatch(resp, """link"":\s*""([^""]+)""", m) {
-        link := m1
-        StringReplace, link, link, \, /, All
-        if !RegExMatch(link, "^https?://")
-            link := "https://" link
-        return link
-    } else
-        return ""
-}
-
-CreateAlbum1() {
-    global AlbumFiles1
-    AlbumFiles1 := []
-}
-
-AddScreenshot1() {
-    global AlbumFiles1, TempFolder1
-    if !IsObject(AlbumFiles1)
-        CreateAlbum1()
-    file := TempFolder1 . "\screen1_" . (AlbumFiles1.MaxIndex() + 1) . ".png"
-    if TakeScreenshot1(file) {
-        AlbumFiles1.Push(file)
-    }
-}
-
-FinishAlbum1() {
-    global AlbumFiles1, ImgChestToken1
-    if !IsObject(AlbumFiles1)
-        CreateAlbum1()
-    if AlbumFiles1.MaxIndex() = 0
-        return ""
-    link := UploadAlbumPost1(AlbumFiles1, ImgChestToken1)
-    AlbumFiles1 := []
-    return link
-}
-
-; ================== ВЕРСИЯ 2 ==================
-
-; === Токен для загрузки Вызова 2 ===  
-global ImgChestToken2 := "7B1PNek8jf80Il1YR8iAeTnsObZ451pYTXk5S5MT7fecdcf0"
-
-; === Папка для скринов Вызова 2 ===
-global TempFolder2 := A_Temp . "\screenshots2"
-FileCreateDir, %TempFolder2%
-
-; === Массив для хранения файлов Вызова 2 ===
-global AlbumFiles2 := []
-
-; === Функция для скриншотов Вызова 2 ===
-
-TakeScreenshot2(filePath) {
-    ; Ждём активного окна GTA:SA
-    WinWaitActive, ahk_exe gta_sa.exe
-    if !WinExist("ahk_exe gta_sa.exe")
-        return false
-
-    ; ===== Блокируем Alt+Tab, Win и Ctrl+Esc =====
-    Hotkey, !Tab, BlockKeysHandler, On
-    Hotkey, LWin, BlockKeysHandler, On
-    Hotkey, RWin, BlockKeysHandler, On
-    Hotkey, ^Esc, BlockKeysHandler, On
-
-    ; Берём координаты и размеры активного окна
-    WinGetPos, X, Y, W, H, ahk_exe gta_sa.exe
-
-    ; Формируем команду PowerShell для скриншота только этого окна
-    psCmd := "Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; "
-    psCmd .= "$bmp = New-Object Drawing.Bitmap(" . W . "," . H . "); "
-    psCmd .= "$gfx = [Drawing.Graphics]::FromImage($bmp); "
-    psCmd .= "$gfx.CopyFromScreen(" . X . ", " . Y . ", 0, 0, $bmp.Size); "
-    psCmd .= "$bmp.Save('" . filePath . "', [System.Drawing.Imaging.ImageFormat]::Png)"
-
-    ; Запускаем PowerShell
-    RunWait, %ComSpec% /C powershell -NoProfile -Command "%psCmd%",, Hide
-
-    ; ===== Снимаем блокировку после скрина =====
-    Hotkey, !Tab, Off
-    Hotkey, LWin, Off
-    Hotkey, RWin, Off
-    Hotkey, ^Esc, Off
-
-    ; Проверяем, что файл создан
-    IfExist, %filePath%
-        return true
-    else
-        return false
-}
-
-
-UploadAlbumPost2(filesArray, token) {
-    curlCmd := "curl -s -H ""Authorization: Bearer " . token . """" 
-    for index, file in filesArray
-        curlCmd .= " -F ""images[]=@""" . file . """""" 
-    curlCmd .= " https://api.imgchest.com/v1/post"
-    RunWait, %ComSpec% /C %curlCmd% > "%A_Temp%\imgchest_response.json",, Hide
-    FileRead, resp, %A_Temp%\imgchest_response.json
-    if RegExMatch(resp, """link"":\s*""([^""]+)""", m) {
-        link := m1
-        StringReplace, link, link, \, /, All
-        if !RegExMatch(link, "^https?://")
-            link := "https://" link
-        return link
-    } else
-        return ""
-}
-
-CreateAlbum2() {
-    global AlbumFiles2
-    AlbumFiles2 := []
-}
-
-AddScreenshot2() {
-    global AlbumFiles2, TempFolder2
-    if !IsObject(AlbumFiles2)
-        CreateAlbum2()
-    file := TempFolder2 . "\screen2_" . (AlbumFiles2.MaxIndex() + 1) . ".png"
-    if TakeScreenshot2(file) {
-        AlbumFiles2.Push(file)
-    }
-}
-
-FinishAlbum2() {
-    global AlbumFiles2, ImgChestToken2
-    if !IsObject(AlbumFiles2)
-        CreateAlbum2()
-    if AlbumFiles2.MaxIndex() = 0
-        return ""
-    link := UploadAlbumPost2(AlbumFiles2, ImgChestToken2)
-    AlbumFiles2 := []
-    return link
-}
-
-
-
-
-
-
 
 CheckProcessMinimized() {
     global MaxMinutes, ProcessName, SoundFile
@@ -1570,8 +1371,6 @@ CheckLastLine(filePath) {
 
     if (lastLine != lastFound) {
         if (InStr(lastLine, notif1) || InStr(lastLine, notif2)) {
-            AddScreenshot1()
-            FinishAlbum1()
         }
         else if (InStr(lastLine, notif3)) {
             ; Статус AFK
@@ -1592,13 +1391,6 @@ CheckLastLine(filePath) {
         lastFound := lastLine
     }
 }
-
-
-
-
-
-
-
 
 ; === Рядом термины ===
 GetRandomWord() {
@@ -2314,13 +2106,6 @@ SendTemplate(type, num) {
     hasSozdatAlbom := InStr(content, "%SozdatAlbom%")
     hasDobavitSkrin := InStr(content, "%DobavitSkrin%")
     hasZagruzitAlbom := InStr(content, "%ZagruzitAlbom%")
-	hasSozdatAlbom1 := InStr(content, "%SozdatAlbom1%")
-    hasDobavitSkrin1 := InStr(content, "%DobavitSkrin1%")
-    hasZagruzitAlbom1 := InStr(content, "%ZagruzitAlbom1%")
-	hasSozdatAlbom2 := InStr(content, "%SozdatAlbom2%")
-    hasDobavitSkrin2 := InStr(content, "%DobavitSkrin2%")
-    hasZagruzitAlbom2 := InStr(content, "%ZagruzitAlbom2%")
-
 
     ; --- Подстановка переменных ---
 	
@@ -2335,14 +2120,7 @@ SendTemplate(type, num) {
 	content := StrReplace(content, "%Post%", Post)
 	content := StrReplace(content, "%Patrol%", Patrol)
 	content := StrReplace(content, "%to%", to)
-	content := StrReplace(content, "%SozdatAlbom1%", SozdatAlbom1)
-	content := StrReplace(content, "%DobavitSkrin1%", DobavitSkrin1)
-	content := StrReplace(content, "%ZagruzitAlbom1%", ZagruzitAlbom1)
-	content := StrReplace(content, "%SozdatAlbom2%", SozdatAlbom2)
-	content := StrReplace(content, "%DobavitSkrin2%", DobavitSkrin2)
-	content := StrReplace(content, "%ZagruzitAlbom2%", ZagruzitAlbom2)
 
-	
     content := StrReplace(content, "%Name%", Name)
     content := StrReplace(content, "%Surname%", Surname)
     content := StrReplace(content, "%Bol_ro_1%", Bol_ro_1)
@@ -2357,7 +2135,6 @@ SendTemplate(type, num) {
 	content := StrReplace(content, "%WorkoutMZ1%", WorkoutMZ1)
 	content := StrReplace(content, "%MPMZ%", MPMZ)
 	content := StrReplace(content, "%MPMZ1%", MPMZ1)
-	
 	
 	content := StrReplace(content, "%SurnameGIBDD7%", SurnameGIBDD7)
     content := StrReplace(content, "%rankGIBDD7%", rankGIBDD7)
@@ -2380,19 +2157,7 @@ SendTemplate(type, num) {
     if hasDobavitSkrin
         content := StrReplace(content, "%DobavitSkrin%", "")
     if hasZagruzitAlbom
-        content := StrReplace(content, "%ZagruzitAlbom%", "")
-	if hasSozdatAlbom1
-        content := StrReplace(content, "%SozdatAlbom1%", "")
-    if hasDobavitSkrin1
-        content := StrReplace(content, "%DobavitSkrin1%", "")
-    if hasZagruzitAlbom1
-        content := StrReplace(content, "%ZagruzitAlbom1%", "")	
-	if hasSozdatAlbom2
-        content := StrReplace(content, "%SozdatAlbom2%", "")
-    if hasDobavitSkrin2
-        content := StrReplace(content, "%DobavitSkrin2%", "")
-    if hasZagruzitAlbom2
-        content := StrReplace(content, "%ZagruzitAlbom2%", "")		
+        content := StrReplace(content, "%ZagruzitAlbom%", "")	
 
 
     ; --- Разделяем на строки и отправляем ---
@@ -2410,18 +2175,6 @@ SendTemplate(type, num) {
         DobavitSkrin := AddScreenshot()
     if hasZagruzitAlbom
         ZagruzitAlbom := FinishAlbum()
-	if hasSozdatAlbom1
-        SozdatAlbom1 := CreateAlbum1()
-    if hasDobavitSkrin1
-        DobavitSkrin1 := AddScreenshot1()
-    if hasZagruzitAlbom1
-        ZagruzitAlbom1 := FinishAlbum1()
-	if hasSozdatAlbom2
-        SozdatAlbom2 := CreateAlbum2()
-    if hasDobavitSkrin2
-        DobavitSkrin2 := AddScreenshot2()
-    if hasZagruzitAlbom2
-        ZagruzitAlbom2 := FinishAlbum2()	
 }
 
 
