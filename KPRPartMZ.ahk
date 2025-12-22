@@ -5919,7 +5919,7 @@ Gui, 3:Add, Picture, x450 y190 w48 h48 +BackgroundTrans gSelectKPRPMZ413,C:\Prog
 Gui, 3:Add, Picture, x520 y190 w48 h48 +BackgroundTrans gNotebookKPRPMZ413,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 3:Add, Picture, x450 y250 w48 h48 +BackgroundTrans gSelectKPRPMZ673,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 3:Add, Picture, x520 y250 w48 h48 +BackgroundTrans gNotebookKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
-Gui, 3:Add, Picture, x450 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ6422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
+Gui, 3:Add, Picture, x450 y310 w48 h48 +BackgroundTrans gSelectKPRPMZ422,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 3:Add, Picture, x520 y310 w48 h48 +BackgroundTrans gNotebookKPRPMZ674,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
 Gui, 3:Add, Picture, x450 y370 w48 h48 +BackgroundTrans gSelectKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PapkaMZ_dobavit.png
 Gui, 3:Add, Picture, x520 y370 w48 h48 +BackgroundTrans gNotebookKPRPMZ675,C:\ProgramData\KPRP\KPRP-main\KPRPPNG\FolderMZ_file.png
