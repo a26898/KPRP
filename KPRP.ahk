@@ -1014,7 +1014,7 @@ else
 
 Menu, Tray, NoStandard
 Menu, Tray, Add, Group
-Menu, Tray, Rename, Group, КПРП © 2019-2025
+Menu, Tray, Rename, Group, КПРП © 2019-2026
 Menu, Tray, Add
 Menu, Tray, Add, Help
 Menu, Tray, Rename, Help, Техническая поддержка
@@ -1853,7 +1853,7 @@ SendRU(text) {
     While !(GetKeyState("Ctrl", "P") && GetKeyState("V", "P"))
         Sleep, 100
     ToolTip
-    Sleep, 2000
+    Sleep, 100
 }
 
 
