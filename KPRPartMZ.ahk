@@ -2280,7 +2280,7 @@ Return
 
 
 :?:/МК_06::
-    SendTemplate("KPRPMZ", 419)
+    SendTemplate("KPRPMZ", 674)
 
 Return
 
