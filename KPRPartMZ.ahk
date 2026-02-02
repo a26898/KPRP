@@ -3585,15 +3585,16 @@ Return
 :?:/работа::
     SendPlay {Enter}
     Gui, +AlwaysOnTop -Caption +LastFound -SysMenu +ToolWindow -DPIScale
-    Gui, Color, 12345
+    Gui, Color, 15433
     Gui, Font, s25
 
     startTime := A_TickCount
 
     SetTimer, 1UpdateTime, 1000
-
+	yellowColor := "FFFF00"
+	
     WinSet, TransColor, %CustomColor3% 215
-    Gui, Add, Text, vTimerText c%Tsvet_3% Center, 00:00:00
+    Gui, Add, Text, vTimerText c%yellowColor% Center, 00:00:00
     Gui, Show, NoActivate xCenter y0 w200 h70
 Return
 
