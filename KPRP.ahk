@@ -1851,9 +1851,9 @@ SendRU(text) {
     
     ToolTip, Готово. Откройте F8 нажмите Ctrl+V и Enter...
     While !(GetKeyState("Ctrl", "P") && GetKeyState("V", "P"))
-        Sleep, 100
+        Sleep, 200
     ToolTip
-    Sleep, 100
+    Sleep, 200
 }
 
 

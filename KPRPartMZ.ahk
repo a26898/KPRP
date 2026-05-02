@@ -8,47 +8,15 @@ Gui, 5:Tab, 1
 parentHWND := WinExist()
 
 ; Добавляем вкладки
-Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab gTabChanged, КПРП|Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП|Журнал активности
+Gui, 5:Add, Tab2, x0 y0 w1290 h25 c%Tsvet% +BackgroundTrans vMyTab, Общее|ПМП|Проверки|Процедуры|Хирургия|Травматология|Препараты|МП
 
 ; --- Вкладка 1 ---
 
 Gui, 5:Show, center h650 w1200, Министерство здравоохранения | Работаем на коммунизм!
 
+
+; --- Вкладка 1 — добавляем картинки и кнопки ---
 Gui, 5:Tab, 1
-
-
-; Объявляем константы для стилей один раз
-GWL_STYLE := -16
-WS_CHILD := 0x40000000
-
-; --- Запускаем KPRP.exe для вкладки 1 ---
-appPath1 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\KPRP.exe"
-Run, %appPath1%, , , pid1
-WinWait, ahk_pid %pid1%
-WinGet, hwndApp1, ID, ahk_pid %pid1%
-
-DllCall("SetParent", "Ptr", hwndApp1, "Ptr", parentHWND)
-DllCall("SetWindowLongPtr", "Ptr", hwndApp1, "Int", GWL_STYLE, "Ptr", WS_CHILD)
-DllCall("SetWindowPos", "Ptr", hwndApp1, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
-DllCall("RedrawWindow", "Ptr", hwndApp1, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
-
-; --- Запускаем Journal.exe для вкладки 10 ---
-appPath10 := "C:\ProgramData\KPRP\KPRP-main\Telegramkprp\Journal.exe"
-Run, %appPath10%, , , pid10
-WinWait, ahk_pid %pid10%
-WinGet, hwndApp10, ID, ahk_pid %pid10%
-
-DllCall("SetParent", "Ptr", hwndApp10, "Ptr", parentHWND)
-DllCall("SetWindowLongPtr", "Ptr", hwndApp10, "Int", GWL_STYLE, "Ptr", WS_CHILD)
-DllCall("SetWindowPos", "Ptr", hwndApp10, "Ptr", 0, "Int", 0, "Int", 24, "Int", 1200, "Int", 626, "UInt", 0x0040)
-DllCall("RedrawWindow", "Ptr", hwndApp10, "Ptr", 0, "Ptr", 0, "UInt", 0x85)
-
-; Скрываем окно журнала, показываем только окно КПРП
-WinShow, ahk_id %hwndApp1%
-WinHide, ahk_id %hwndApp10%
-
-; --- Вкладка 2 — добавляем картинки и кнопки ---
-Gui, 5:Tab, 2
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -91,7 +59,7 @@ Gui, 5:Add, Picture, x1000 y370 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\
 Gui, 5:Add, Picture, x1000 y190 w150 h150 +BackgroundTrans, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\KPRP.png
 
 
-Gui, 5: Tab, 3
+Gui, 5: Tab, 2
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -134,7 +102,7 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gPMP10, C:\ProgramData\
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gPMP11, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Otkrytyy_PMP.png
 
 
-Gui, 5:Tab, 4
+Gui, 5:Tab, 3
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -176,7 +144,7 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine32, C:\Program
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine16, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Temperatura.png
 
 
-Gui, 5:Tab, 5
+Gui, 5:Tab, 4
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -255,7 +223,7 @@ Gui, 5:Add, Picture, x1090 y370 w128 w96 +BackgroundTrans gMedicine121, C:\Progr
 Gui, 5:Add, Picture, x1090 y480 w128 w96 +BackgroundTrans gMedicine122, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Test_KPRPMZennos.png
 
 
-Gui, 5:Tab, 6
+Gui, 5:Tab, 5
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -317,7 +285,7 @@ Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine40, C:\Program
 Gui, 5:Add, Picture, x1090 y40 w128 w96  +BackgroundTrans gMedicine11, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Hysteroscopy.png
 
 
-Gui, 5:Tab, 7
+Gui, 5:Tab, 6
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -354,7 +322,7 @@ Gui, 5:Add, Picture, x850 y40 w128 w96  +BackgroundTrans gMedicine80, C:\Program
 Gui, 5:Add, Picture, x970 y40 w128 w96  +BackgroundTrans gMedicine24, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Quo.png
 
 
-Gui, 5:Tab, 8
+Gui, 5:Tab, 7
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -431,7 +399,7 @@ Gui, 5:Add, Picture, x250  y260 w128 w96 +BackgroundTrans gLekarstva21, C:\Progr
 Gui, 5:Add, Picture, x10   y150 w128 w96 +BackgroundTrans gLekarstva22, C:\ProgramData\KPRP\KPRP-main\KPRPPNG\Reduced.png
 
 
-Gui, 5:Tab, 9
+Gui, 5:Tab, 8
 if (FonVybor != "ERROR" && FonVybor != "") {
     Gui, 5:Add, Picture, x0 y24 w1300 h700 +BackgroundTrans, %FonVybor%
 }
@@ -459,21 +427,6 @@ Gui, 5:Add, Picture, x130 y40  w128 w96 +BackgroundTrans gMedicine108,  C:\Progr
 Gui, 5:Add, Picture, x130 y150  w128 w96 +BackgroundTrans gMedicine109,  C:\ProgramData\KPRP\KPRP-main\KPRPPNG\PCD.png
 return
 
-; --- Обработчик смены вкладок ---
-TabChanged:
-GuiControlGet, ActiveTab,, MyTab
-
-if (ActiveTab = "КПРП") {
-    WinShow, ahk_id %hwndApp1%
-    WinHide, ahk_id %hwndApp10%
-} else if (ActiveTab = "Журнал активности") {
-    WinShow, ahk_id %hwndApp10%
-    WinHide, ahk_id %hwndApp1%
-} else {
-    WinHide, ahk_id %hwndApp1%
-    WinHide, ahk_id %hwndApp10%
-}
-return
 
 ; --- Обработчик изменения размера окна GUI ---
 GuiSize:
