@@ -5847,8 +5847,8 @@ Gui, 3:Add, Text, x70 y85 h500 w370 +BackgroundTrans, [Начало медкар
 Gui, 3:Add, Text, x70 y145 h500 w370 +BackgroundTrans, [Пошлина (гражд)]
 Gui, 3:Add, Text, x70 y205 h500 w370 +BackgroundTrans, [Термины РП]
 Gui, 3:Add, Text, x70 y260 h500 w370 +BackgroundTrans, [Термины НОНРП ]
-Gui, 3:Add, Text, x70 y325 h500 w370 +BackgroundTrans, [Продолжение медкарта (гражд)]
-Gui, 3:Add, Text, x70 y385 h500 w370 +BackgroundTrans, [Выдать медкарту (гражд)]
+Gui, 3:Add, Text, x70 y325 h500 w370 +BackgroundTrans, [Выдать медкарту (гражд)]
+Gui, 3:Add, Text, x70 y385 h500 w370 +BackgroundTrans, [Отказ]
 
 
 Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [Попросить показать УДО(сотрудники)]
