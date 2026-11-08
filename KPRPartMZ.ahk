@@ -5851,14 +5851,14 @@ Gui, 3:Add, Text, x70 y325 h500 w370 +BackgroundTrans, [Выдать медка�
 Gui, 3:Add, Text, x70 y385 h500 w370 +BackgroundTrans, [Отказ]
 
 
-Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [Попросить показать УДО(сотрудники)]
-Gui, 3:Add, Text, x680 y85 h500 w370 +BackgroundTrans, [Попросить передать паспорт(сотрудники)]
-Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Отыгровки паспорта(сотрудники)]
-Gui, 3:Add, Text, x680 y205 h500 w370 +BackgroundTrans, [Мяч(сотрудники)]
-Gui, 3:Add, Text, x680 y260 h500 w370 +BackgroundTrans, [Рост,вес(сотрудники)]
-Gui, 3:Add, Text, x680 y325 h500 w370 +BackgroundTrans, [Рост,вес(сотрудники)]
-Gui, 3:Add, Text, x680 y385 h500 w370 +BackgroundTrans, [Выдать медкарту(сотрудники)]
-Gui, 3:Add, Text, x680 y445 h500 w370 +BackgroundTrans, [Отказ 2/2(сотрудники)]
+Gui, 3:Add, Text, x680 y25 h500 w370 +BackgroundTrans, [ФИО (гражд)]
+Gui, 3:Add, Text, x680 y85 h500 w370 +BackgroundTrans, [Попросить УДО]
+Gui, 3:Add, Text, x680 y145 h500 w370 +BackgroundTrans, [Начало медкарта(сотрудники)]
+Gui, 3:Add, Text, x680 y205 h500 w370 +BackgroundTrans, [Градусник(сотрудники)]
+Gui, 3:Add, Text, x680 y260 h500 w370 +BackgroundTrans, [Термины(сотрудники)]
+Gui, 3:Add, Text, x680 y325 h500 w370 +BackgroundTrans, [Продолжение медкарта(сотрудники)]
+Gui, 3:Add, Text, x680 y385 h500 w370 +BackgroundTrans, [Возвращение градусника(сотрудники)]
+Gui, 3:Add, Text, x680 y445 h500 w370 +BackgroundTrans, [Пошлина и Выдача медкарты(сотрудники)]
 
 
 
